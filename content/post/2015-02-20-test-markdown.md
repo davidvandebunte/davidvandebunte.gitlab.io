@@ -25,6 +25,9 @@ How about a yummy crepe?
 
 ![Crepe](http://s3-media3.fl.yelpcdn.com/bphoto/cQ1Yoa75m2yUFFbY2xwuqw/348s.jpg)
 
+Here is an image of two boxes local to the site:
+![Two boxes](/two-boxes.svg)
+
 Here's a code chunk with syntax highlighting:
 
 ```javascript
