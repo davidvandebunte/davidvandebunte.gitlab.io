@@ -26,3 +26,8 @@ defined in [`.gitlab-ci.yml`](.gitlab-ci.yml).
 ## GitLab User or Group Pages
 
 Read more about [user/group Pages][userpages] and [project Pages][projpages].
+
+[ci]: https://about.gitlab.com/gitlab-ci/
+[hugo]: https://gohugo.io
+[userpages]: http://doc.gitlab.com/ee/pages/README.html#user-or-group-pages
+[projpages]: http://doc.gitlab.com/ee/pages/README.html#project-pages
