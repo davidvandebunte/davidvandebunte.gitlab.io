@@ -1,6 +1,6 @@
 ---
 title: "Decision: Why take notes in plain text?"
-date: 2019-05-05T09:57:59-05:00
+date: 2019-05-16
 tags: ["notes"]
 ---
 
