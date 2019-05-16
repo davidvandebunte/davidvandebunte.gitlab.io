@@ -2,7 +2,7 @@ baseurl = "https://davidvandebunte.gitlab.io/shared-notes/"
 contentdir    = "content"
 layoutdir     = "layouts"
 publishdir    = "public"
-title = "Beautiful Hugo"
+title = "Shared Notes"
 canonifyurls  = true
 
 DefaultContentLanguage = "en"
@@ -10,18 +10,20 @@ theme = "beautifulhugo"
 metaDataFormat = "yaml"
 pygmentsUseClasses = true
 pygmentCodeFences = true
-#disqusShortname = "XXX"
-#googleAnalytics = "XXX"
+
+disqusShortname = "https-davidvandebunte-gitlab-io-shared-notes"
+googleAnalytics = "UA-140340779-1"
 
 [Params]
-  subtitle = "Hugo Blog Template for GitLab Pages"
+  subtitle = "On Software Development"
   logo = "img/avatar-icon.png"
   favicon = "img/favicon.ico"
   dateFormat = "January 2, 2006"
   commit = false
   rss = true
   comments = true
-#  gcse = "012345678901234567890:abcdefghijk" # Get your code from google.com/cse. Make sure to go to "Look and Feel" and change Layout to "Full Width" and Theme to "Classic"
+  # Code from google.com/cse. Make sure to go to "Look and Feel" and change Layout to "Full Width" and Theme to "Classic"
+  gcse = "004003376500551729789:ng6sui-ihxu"
 
 [[Params.bigimg]]
   src = "img/triangle.jpg"
@@ -34,25 +36,25 @@ pygmentCodeFences = true
   desc = "Hexagon"
 
 [Author]
-  name = "Some Person"
-  email = "youremail@domain.com"
-  facebook = "username"
-  googleplus = "+username" # or xxxxxxxxxxxxxxxxxxxxx
-  gitlab = "username"
-  github = "username"
-  twitter = "username"
-  reddit = "username"
-  linkedin = "username"
-  xing = "username"
-  stackoverflow = "users/XXXXXXX/username"
-  snapchat = "username"
-  instagram = "username"
-  youtube = "user/username" # or channel/channelname
-  soundcloud = "username"
-  spotify = "username"
-  bandcamp = "username"
-  itchio = "username"
-  keybase = "username"
+  name = "David James VandeBunte"
+  email = "davidvandebunte@gmail.com"
+  # facebook = "username"
+  # googleplus = "+username" # or xxxxxxxxxxxxxxxxxxxxx
+  gitlab = "davidvandebunte"
+  github = "davidvandebunte"
+  # twitter = "username"
+  # reddit = "username"
+  linkedin = "davidvandebunte"
+  # xing = "username"
+  stackoverflow = "users/622049/davidvandebunte"
+  # snapchat = "username"
+  # instagram = "username"
+  # youtube = "user/username" # or channel/channelname
+  # soundcloud = "username"
+  # spotify = "username"
+  # bandcamp = "username"
+  # itchio = "username"
+  # keybase = "username"
 
 
 [[menu.main]]
