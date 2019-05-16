@@ -4,9 +4,10 @@ date: 2019-05-05T09:57:59-05:00
 tags: ["notes"]
 ---
 
-Modern writers can take notes in Microsoft Word, Google Docs, and other
-capable WYSIWYG editors. Why take notes in plain text (e.g. CommonMark,
-reStructuredText) instead?
+We spend a dramatic portion of our life writing and committing content to a
+particular format. Modern writers can take notes in Microsoft Word, Google
+Docs, and other capable WYSIWYG editors. Why take notes in plain text (e.g.
+CommonMark, reStructuredText) instead?
 
 ## Executive Summary
 
