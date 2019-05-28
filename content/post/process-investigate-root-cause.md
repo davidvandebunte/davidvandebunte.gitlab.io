@@ -46,22 +46,24 @@ savings / time cost ratio.
 Put likelihoods on all theories proposed to help decide whether to continue to
 develop theories or start to test them.
 
-Some claim "given enough eyeballs, all defects are shallow" (see [Linus's
-Law][1]). It's probably to limit your interruptions to 2-4 other developers.
-Discover who was working in an area recently with git. A fresh mind may be
-better than the one that designed the system.
+Eric Raymond claims "given enough eyeballs, all defects are shallow" (see
+[Linus's Law][1]). It is probably enough to limit your interruptions to 2-4
+other developers. Suggestions:
 
-```bash
-$ git log --grep="Sine" --grep="COLA" --all-match
-<suspicious commits>
-```
+- Discover who was working in an area recently with git. A fresh mind may be
+  better than the one that designed the system:
 
-It may also be helpful to pull in developers who review widely (someone knows
-someone else who submitted code in an area recently).
+  ```bash
+  $ git log --grep="Sine" --grep="COLA" --all-match
+  <suspicious commits>
+  ```
 
-Even if the developer leading the investigation isn't familiar with the code at
-fault, we may still be able to generate hypotheses when we see new data because
-others understand the domain.
+- Pull in developers who review widely; you may find someone knows someone else
+  who submitted code in an area recently.
+
+The developer leading the investigation does not need to be intimately familiar
+with the code at fault. The team may still be able to generate hypotheses when
+we see new data because others understand the domain.
 
 ### Standard hypothesis: The defect is a regression
 
@@ -101,6 +103,8 @@ Potential time savings:
   Eventually, someone needs to understand the code no one available
   understands. Stop beating around the bush and understand code the team has
   ownership of.
+- It is often better to be reading code than writing it. You only learn when
+  you are reading, unless the writing quickly leads to validated learning.
 
 Process:
 
