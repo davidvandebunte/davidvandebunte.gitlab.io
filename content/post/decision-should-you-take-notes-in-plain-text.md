@@ -38,10 +38,11 @@ In order of importance:
         - case Email(email, title, _) =>
         - …
 1. It’s easy to use open source tools.
-    - Inkscape SVGs are easy to edit inline in CommonMark. It's a major pain
+    - Inkscape SVGs are easy to edit inline in CommonMark. It is a major pain
       to edit an SVG inline in Google Docs.
-    - Search notes faster, completely from the command line (with git). Plain
-      text history with git. Resolve merge conflicts the standard way.
+    - Search notes faster from the command line (with git). Plain text history
+      with git. Resolve merge conflicts in a standard way. Review changes with
+      "git diff" before pushing them (to catch accidental changes).
     - You can more easily convert plain text formats with tools like pandoc
       and nbconvert.
 1. Plain text notes convert to programming language comments faster.
