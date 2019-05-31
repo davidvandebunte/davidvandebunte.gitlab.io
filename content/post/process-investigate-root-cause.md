@@ -109,16 +109,21 @@ Potential time savings:
 Process:
 
 - Read code so far identified as the source of the defect at a higher level
-  for the big picture.
+  for a bigger picture.
 
 ### Establish a timeline
+
+Debugging of functional code is easier because state/context is easier to get
+(root cause analysis).
+
+In functional programs, the context is visible all the way up the call stack.
+You don't have state scattered all over.
 
 Potential time savings:
 
 - Causal reasoning is based in time; so establish a timeline (or sequence of
-  events) with the observed symptoms. The causal graph will quickly follow.
-
-#### Process
+  events) with the observed symptoms. The causal graph will often quickly
+  follow.
 
 Is the defect a regression? Diff the current logs with past successful logs
 to determine when and how the behavior went off track.
@@ -126,23 +131,32 @@ to determine when and how the behavior went off track.
 The amount of time passed is sometimes relevant. Did the executable crash
 immediately after the last log statement, or run for a few more seconds?
 
-Combine the insights of multiple tools to build a coherent timeline:
+#### Decision: Prefer logging to debugging?
+
+##### Advantages
+
+- The choice between logging and debugging is an example of the space-time
+  tradeoff. Logging takes more space; debugging takes more time. In most cases
+  time is more valuable than computer resources (space).
 
 #### Logs
 
-Is logging vs debugging the classic space-time tradeoff? Logging takes more
-space; debugging takes more time. Context logging is another way to divide
-the space up, it gives you the equivalent of a table you can parse in a
-non-time approach (context logging adds another column to the table).
-
-Turn up logging levels temporarily (-v, -vvv, --verbose). A log with timestamps
-is a timeline:
+A log with timestamps is a timeline:
 
 ```bash
 Wed Mar 07 12:27:28 2012: Everything appears fine.
 Wed Mar 07 12:27:29 2012: What does this mean?
 Wed Mar 07 12:27:30 2012: Error!
 ```
+
+Add context logging. Context logging makes logs a table, with an additional
+column for every kind of context. Common columns:
+
+- Function name. Use vim's :ta to jump straight to the function from the
+  name.
+
+Turn up logging levels temporarily (-v, -vvv, --verbose). Consider logs other
+than the application's (strace, /var/log). 
 
 Prefer log statements so you get permanent code changes? Argument for logging
 over debugging: http://logging.apache.org/log4j/1.2/manual.html
@@ -188,14 +202,16 @@ To test whether the cause is a particular commit, revert and experiment. To
 test whether the cause is somewhere in a range of commits, attempt a git bisect
 (many experiments).
 
-### Reproduce with less human effort
+### Reproduce faster
 
-In general, reproduce with less manual effort (not just faster for the
+#### Human time cost
+
+In general, reproduce with less human effort (not just faster for the
 computer). We could confirm that one cause is as we expect, but if takes
 significant manual effort to perform the experiment we are better off just
 understanding what could lead to the problem before we experiment again.
 
-### Reproduce faster
+#### Computer delay
 
 If you can come up with root cause from just the exception message, you can try
 a local experiment to reproduce the issue and save a ton of time iterating.
