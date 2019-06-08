@@ -216,6 +216,11 @@ understanding what could lead to the problem before we experiment again.
 If you can come up with root cause from just the exception message, you can try
 a local experiment to reproduce the issue and save a ton of time iterating.
 
+You don't need to reproduce the issue in a local environment, you need to
+reproduce it in a debug environment. That is, if you can reproduce the issue in
+the cloud in a debug environment (where you can quickly change code and running
+the executable again, or run gdb) then you're just as good as local.
+
 It’s really not about being able to reproduce faster, it’s about being able to
 answer your “why” questions faster. Sometimes you can reproduce quickly, but
 you can’t get more debug messages to figure out what is going on because there
