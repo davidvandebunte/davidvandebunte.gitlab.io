@@ -47,46 +47,50 @@ git log master -- path/to/broken-library
 Ask a maintainer or developers who review widely. If they do not know, they
 know who to ask.
 
-### Establish a timeline
+### Establish a sequence of events
 
 In [Root cause analysis][3] the goal is to build a causal graph between the
-root cause and the defect. For example:
+root cause and the defect. Download this template causal graph:
 
 ![RCA sequence of events](/rca-sequence-of-events.svg)
 
-Causal reasoning is based in time; so establish a timeline (sequence of events)
-with the observed symptoms marked. The causal graph often quickly follows.
+Causal reasoning is intrinsically based in time, so it is usually helpful to
+establish a timeline. Start with a sequence of events including the observed
+symptoms:
 
-#### Inspect Logs
+1. The job starts.
+1. A warning is printed.
+1. An exception is thrown.
 
-A log with timestamps is a timeline:
+Add timestamps to build a timeline later. Logs are an automatically built
+sequence of events.
 
-```bash
-Wed Mar 07 12:27:28 2012: Everything appears fine.
-Wed Mar 07 12:27:29 2012: What does this mean?
-Wed Mar 07 12:27:30 2012: Error!
-```
+#### Inspect logs
+
+Manual inspection ideas:
+
+- If you have the source, search for the last or recently logged statements. What
+logging statements were not printed?
+- Diff broken logs with successful logs to determine when and how the behavior
+went off track. Do you have successful logs from earlier commits or variations
+on the same scenario?
 
 Check for logs other than the application's (`strace`, `/var/log`).
 
-Interpret logs with context as a parseable table with an additional column for
-every kind of context. Common columns:
+#### Parse logs
 
-- Function name. Use vim's `:ta` to jump straight to the function from the
-  name.
-- Thread ID. In multi-threaded environments, messages from different threads
-  should be split up.
+Parse logs with context as a table with a column for every kind of context.
+Helpful columns:
 
-Diff broken logs with successful logs to determine when and how the behavior
-went off track. Do you have successful logs from earlier commits or variations
-on the same scenario?
+| Column | Description |
+| ------ | ----------- |
+| Function name | Use vim's `:ta` to jump to the function. |
+| Thread ID | Critical to separate threads in multi-threaded environments. |
 
 ### Inspect program state
 
 Is a running program still available? Connect to it in the debugger, dump call
 stacks, and disconnect again quickly to keep the state intact.
-
-### Inspect a core dump
 
 If the defect is an uncaught exception or segfault, do you have a core dump?
 Dump the call stack.
@@ -101,7 +105,7 @@ Re-run with more detailed logging levels:
 As you design experiments, should you prefer logging to debugging to answer
 your questions?
 
-##### Advantages
+#### Advantages
 
 From [Apache log4j 1.2 - Short introduction to log4j][5]:
 
@@ -112,15 +116,12 @@ The choice between logging and debugging is an example of the space-time
 tradeoff. Logging takes more space; debugging takes more time. In most cases
 time is more valuable than computer resources (space).
 
-##### Disadvantages
+#### Disadvantages
 
 - Excessive logging pollutes the code base with unhelpful comments.
 - The call stack (context) at an exception is easier to digest than verbose logs.
 
 ### Research underlying systems
-
-In open source code, download the source and search for the last or recently
-logged statements. What logging statements were not printed?
 
 Until at least one individual understands the code at fault, there can be no
 continuing hypothesis development. That is, no easy answer is available to a
@@ -130,13 +131,17 @@ team stuck in a situation like the following:
 
 As you read, continue to design experiments to achieve validated learning.
 
-### Standard hypotheses: Reject assumptions
+### Standard hypotheses
+
+Common starting points for developing testable predictions.
+
+#### Reject assumptions
 
 Assumptions are theories formed by rejecting a statement you expect to be true.
 Using your team's knowledge of the system, produce a variety of statements you
 expect to be true.
 
-### Standard hypothesis: The defect is a regression
+#### The defect is a regression
 
 Was there any point in the past when the feature worked as expected? Narrow the
 range of commits in which the regression was introduced with `git bisect`. Ask
