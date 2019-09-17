@@ -45,7 +45,9 @@ git log master -- path/to/broken-library
 ```
 
 Ask a maintainer or developers who review widely. If they do not know, they
-know who to ask.
+know who to ask. Formulating a written question may help you organize your
+thoughts and find a solution. Submit your question to StackOverflow or a
+mailing list.
 
 ### Establish a sequence of events
 

@@ -46,7 +46,10 @@ In order of importance:
     - You can more easily convert plain text formats with tools like pandoc
       and nbconvert.
 1. Plain text notes convert to programming language comments faster.
-1. Linux doesn't have good WYSIWYG equation editors.
+1. You can not close your browser (and your laptop) when Google Docs is
+   syncing. You are forced to "Stay on Page" for as long as it needs, which can
+   sometimes be minutes.
+1. Linux does not have good WYSIWYG equation editors.
     - Microsoft Word isn’t available on Ubuntu (a decent program for writing
       equations).
 
