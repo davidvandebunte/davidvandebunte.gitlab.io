@@ -341,7 +341,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -525,27 +525,27 @@
        id="rect4356"
        width="18.709814"
        height="16.063988"
-       x="88.144043"
+       x="92.906548"
        y="21.077387" />
     <text
        id="text4362"
        y="27.843159"
-       x="97.270096"
+       x="102.03261"
        style="font-style:normal;font-weight:normal;font-size:4.93888855px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        xml:space="preserve"><tspan
          style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
          y="27.843159"
-         x="97.270096"
+         x="102.03261"
          sodipodi:role="line"
          id="tspan4358">Plain</tspan><tspan
          id="tspan4360"
          style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
          y="34.016769"
-         x="97.270096"
+         x="102.03261"
          sodipodi:role="line">Text</tspan></text>
     <path
        style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.30000001;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker1546);paint-order:normal"
-       d="M 64.293751,44.663078 85.27143,34.268739"
+       d="M 64.293751,44.663078 90.18512,34.268739"
        id="path4364"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
@@ -781,17 +781,17 @@
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
        id="path9154"
-       d="M 57.981554,25.235114 H 85.19583"
+       d="M 62.744057,25.235114 H 89.958333"
        style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.30000001;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker9162);paint-order:normal" />
     <text
        id="text9158"
        y="24.025623"
-       x="59.342262"
+       x="64.104767"
        style="font-style:normal;font-weight:normal;font-size:2.82222223px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        xml:space="preserve"><tspan
          style="stroke-width:0.26458332"
          y="24.025623"
-         x="59.342262"
+         x="64.104767"
          id="tspan9156"
          sodipodi:role="line">Focused Work</tspan></text>
     <path
@@ -810,5 +810,17 @@
          x="134.54465"
          y="108.30809"
          style="stroke-width:0.26458332">Redact</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:2.82222223px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="46.790962"
+       y="63.10651"
+       id="text940"
+       transform="rotate(-20.852458)"><tspan
+         sodipodi:role="line"
+         id="tspan938"
+         x="46.790962"
+         y="63.10651"
+         style="stroke-width:0.26458332">Focused Work</tspan></text>
   </g>
 </svg>
