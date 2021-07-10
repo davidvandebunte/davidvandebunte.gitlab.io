@@ -4,5 +4,6 @@ subtitle: The "Shared Notes" Project
 comments: false
 ---
 
-Please provide feedback on the articles you read; consider this your payment in
-exchange for what you learn from them.
+All content is shared under [GPL v3][gplv3].
+
+[gplv3]: https://www.gnu.org/licenses/gpl-3.0.html
