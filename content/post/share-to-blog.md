@@ -37,7 +37,7 @@ update the date so you can easily find what you're publishing on the front page.
 You don't have to get your articles to show up in Google or DuckDuckGo; get a larger website to do
 the SEO for you by linking from them. For example, link to your articles from an SO question so you
 can find it in search later. With this approach you'll just have a single level of indirection after
-you search. 
+you search.
 
 For example, this profile links to this blog:
 - https://github.com/davidvandebunte
