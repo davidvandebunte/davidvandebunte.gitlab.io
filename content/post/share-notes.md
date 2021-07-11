@@ -31,7 +31,9 @@ In order of value.
 [oss]: https://en.wikipedia.org/wiki/Open-source_software
 
 More people are surprised by what they learn from sharing software designs before implementing. Why
-not your thoughts? See a clear example in the comments on [this StackOverflow answer][ts].
+not your thoughts? See a clear example in the comments on [this StackOverflow answer][ts]. Why are
+so many organizations based around teams? Presumably, peer review by smart people produces better
+results faster.
 
 In short, share your mental functions to get help from others in fixing them. Others are motivated
 to fix your mental functions for the same reason you're motivated to fix theirs; so you have a
@@ -60,8 +62,8 @@ share a PDF) to get feedback.
 
 Prefer the term "share" to publicize and publish. The terms publicize and publish assume you have
 existing content you need to convert between formats to publish. Much of the time, your thoughts can
-go straight into one of the mediums listed above (share mental notes). Live openly and you can avoid
-conversions.
+go straight into one of the mediums listed above (interpret "share notes" as sharing mental notes,
+i.e. sharing your thoughts). Live openly and you can avoid conversions.
 
 ## Credit
 
