@@ -68,9 +68,10 @@ conversions.
 Open source contributions look good on a resume. Have you ever searched for someone on LinkedIn,
 StackOverflow, or elsewhere before interviewing them?
 
-To get anything done at work, you have to publicize it from your personal notes. You can also work
-directly in your work's systems, but then you may lose some thoughts when you move companies. Run a
-lunch and learn to raise your own visibility and your code's visibility.
+To get anything done on a team you must share your thoughts. You can work directly in your
+employer's systems, but then you may lose notes when you move companies. Run a lunch and learn to
+raise your own visibility or your code's visibility. At the least, share your opinions with your
+individual coworkers, spouse, or kids.
 
 ## Web Linking
 
