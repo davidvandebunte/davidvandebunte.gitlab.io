@@ -1,6 +1,6 @@
 ---
 title: "Share Comment"
-date: 2020-12-13T14:35:05-06:00
+date: 2021-07-23T14:35:05-06:00
 tags: ['share']
 ---
 
@@ -8,18 +8,18 @@ tags: ['share']
 
 Generalizes [Share Notes][sn].
 
-# Difference
+## Test
 
 Comment on other articles, [StackExchange][se], or by writing an article that is essentially a large
 comment on another article.
 
 [se]: https://stackexchange.com/
 
-# Value
+## Value
 
 You'll likely get a response from the original author.
 
-# Cost
+## Cost
 
 Comments can usually be deleted or directed to a smaller audience (even one person).
 
