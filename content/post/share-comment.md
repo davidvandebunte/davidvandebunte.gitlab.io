@@ -1,12 +1,12 @@
 ---
 title: "Share Comment"
-date: 2021-07-23T14:35:05-06:00
+date: 2021-07-24
 tags: ['share']
 ---
 
 [sn]: {{< relref "share-notes.md" >}}
 
-Generalizes [Share Notes][sn].
+Specializes [Share Notes][sn].
 
 ## Test
 

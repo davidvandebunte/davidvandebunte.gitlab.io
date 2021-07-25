@@ -1,6 +1,6 @@
 ---
 title: "Share Notes"
-date: 2020-03-28
+date: 2021-07-24
 tags: ['notes', 'share']
 ---
 
@@ -15,7 +15,7 @@ Generalizes:
 - [Share to Wikimedia][stw]
 - [Share to Blog][stb]
 
-# Difference
+# Test
 
 Share personal content to a (more) public medium. There are multiple levels of public. For example,
 you can publish your personal thoughts publicly within a team, or within your whole company (inner

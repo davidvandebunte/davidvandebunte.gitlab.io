@@ -8,7 +8,7 @@ tags: ['share']
 
 Generalizes [Share Notes][sn].
 
-# Cost
+## Cost
 
 You'll need to reformulate your comments as a question. Is this so bad? You can fit almost any
 content you want to share into the question format.
