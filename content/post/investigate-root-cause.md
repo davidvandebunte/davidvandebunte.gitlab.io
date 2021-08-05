@@ -1,6 +1,6 @@
 ---
 title: "Investigate root cause"
-date: 2021-07-23
+date: 2021-08-05
 tags: ["debug"]
 ---
 
@@ -33,6 +33,7 @@ observations.
 #### Logs
 
 [dmesg]: https://en.wikipedia.org/wiki/Dmesg
+[ltr]: https://pythonspeed.com/articles/measuring-memory-python/
 
 Causal reasoning is intrinsically based in time, so it is usually helpful to collect a timeline.
 Parse a sequence of events (a log without timestamps) that includes the observed symptoms. For
@@ -43,7 +44,7 @@ example:
 1. An exception was thrown.
 
 Collect logs from the system:
-- `strace`
+- `strace` (based on `ptrace`), [`ltrace`][ltr]
 - `/var/log`
 - [`dmesg`][dmesg]
 
@@ -118,6 +119,24 @@ When you're debugging training (Bayesian inference) consider the dataset history
 and weight initialization. For example, to reproduce model performance from random initialization,
 consider whether you should first reproduce performance (no increase in loss) with known good
 model weights.
+
+#### Out of memory
+
+[dfs]: https://pythonspeed.com/articles/python-out-of-memory/
+[stt]: https://en.wikipedia.org/wiki/Space%E2%80%93time_tradeoff
+[pmt]: {{< relref "prescribe-computing-metrics.md" >}}
+
+See [Dying, fast and slow: OOM crashes in Python][dfs] for examples of how out of memory issues
+display in Python.
+
+In the [Space-time tradeoff][stt], we'd ideally like to achieve the green curve below. That is, we
+want to use all the space we have to finish as quickly as possible (so we need less time). In
+practice, often all we can achieve is the blue curve, filling an in-memory concurrent pipeline (see
+[Prescribe computing metrics][pmt]) ASAP from disk. If we're `O(n)` in memory or in general our
+memory consumption is a function of the input (rather than the chunk size adjusting to the input
+size), then we'll crash on larger inputs. That is, memory consumption should be configurable.
+
+![OOM](/oom.svg)
 
 #### Missing variables
 
