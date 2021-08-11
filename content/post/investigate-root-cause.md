@@ -4,6 +4,8 @@ date: 2021-08-05
 tags: ["debug"]
 ---
 
+[doe]: https://en.wikipedia.org/wiki/Design_of_experiments
+
 # Value
 
 Save time debugging.
@@ -99,6 +101,13 @@ Draw several [Causal diagrams][cd] (models) between the root cause and the defec
 There may be multiple causes of the primary symptom, but most of the time you can expect a Pareto
 distribution and rely on the [Pareto principle][pp].
 
+Drawing a DAG forces reasoning in at least some observable quantities (the bubbles/covariates). In
+the language of the scientific process, causal reasoning should force the user to make testable
+predictions. Usually it encourages measuring not for its own sake (e.g. setting up instrumentation
+hoping new data inspires hypotheses) but for the sake of verifying a hypothesis as cheaply as
+possible. The better your theory and the more likely hypotheses you are considering, the more
+cheaply you can measure and experiment (see [Design of experiments][doe] below).
+
 The number of alternative hypotheses you should develop before moving on to new data collection will
 depend on the network, your prior network understanding, the stage of your investigation (including
 how much data you've collected), the cost of measurement (analysis), and the cost of
@@ -106,7 +115,7 @@ experimentation. Call this `H` (number of hypotheses).
 
 ### Specialize standard hypotheses
 
-Common starting points for developing testable predictions.
+Common starting points for developing testable predictions; many of these come with an example DAG.
 
 #### Review changes
 
@@ -123,18 +132,22 @@ model weights.
 #### Out of memory
 
 [dfs]: https://pythonspeed.com/articles/python-out-of-memory/
+[mmit]: https://pythonspeed.com/articles/measuring-memory-python/
 [stt]: https://en.wikipedia.org/wiki/Space%E2%80%93time_tradeoff
 [pmt]: {{< relref "prescribe-computing-metrics.md" >}}
 
 See [Dying, fast and slow: OOM crashes in Python][dfs] for examples of how out of memory issues
-display in Python.
+display in Python, and the related article [Measuring memory usage in Python: it’s tricky!][mmit]
+for a discussion of resident memory. Almost every covariate in this DAG is observable:
+
+![DAG-OOM](/dag-oom.svg)
 
 In the [Space-time tradeoff][stt], we'd ideally like to achieve the green curve below. That is, we
 want to use all the space we have to finish as quickly as possible (so we need less time). In
-practice, often all we can achieve is the blue curve, filling an in-memory concurrent pipeline (see
-[Prescribe computing metrics][pmt]) ASAP from disk. If we're `O(n)` in memory or in general our
-memory consumption is a function of the input (rather than the chunk size adjusting to the input
-size), then we'll crash on larger inputs. That is, memory consumption should be configurable.
+practice, all we achieve is the blue curve, filling an in-memory concurrent pipeline (see [Prescribe
+computing metrics][pmt]) as soon as possible from disk. If we're `O(n)` in memory or in general our
+memory consumption is a function of the input (that is, we do not have a chunk size adjusting to the
+environment's memory), then we'll crash on larger `n`:
 
 ![OOM](/oom.svg)
 
@@ -175,8 +188,6 @@ git log master -- path/to/broken-library
 ```
 
 ## Design experiments
-
-[doe]: https://en.wikipedia.org/wiki/Design_of_experiments
 
 Read [Design of experiments][doe]. Assign likelihood estimates to hypotheses to help you decide
 which to run expensive testing for. For example:
