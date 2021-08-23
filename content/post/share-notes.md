@@ -81,6 +81,8 @@ individual coworkers, spouse, or kids.
 
 ## Politick
 
+[tb]: https://en.wikipedia.org/wiki/Textbook
+
 Politicians and celebrities have no privacy. What they get in exchange is the ability to get others
 to value their opinion. Similarly, scientists who publish widely are affecting the language that is
 used to describe findings, and are determining which hypotheses are most likely to be confirmed or
@@ -88,7 +90,8 @@ denied next. If you think of "work" as collecting data to confirm or deny a hypo
 prominent researchers are determining the tasks other researchers work on.
 
 Said in a more pessimistic way, publishing can be a way to push your opinions or desires on others
-in the same way spam email or advertising does.
+in the same way spam email or advertising does. Are all the questions at the end of a [Textbook][tb]
+worth answering?
 
 ## Web Linking
 
