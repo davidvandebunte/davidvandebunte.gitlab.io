@@ -1,6 +1,6 @@
 ---
 title: "Share Notes"
-date: 2021-07-24
+date: 2021-08-23
 tags: ['notes', 'share']
 ---
 
@@ -69,6 +69,23 @@ For the special case of working through a textbook sharing your answers lets oth
 answers against yours. This lets you self-grade against theirs if they also publish or comment on
 your answers.
 
+### Computers
+
+[aei]: https://docs.gitlab.com/ee/ci/yaml/#artifactsexpire_in
+[odaz]: https://azure.microsoft.com/en-us/services/open-datasets/#overview
+[odam]: https://aws.amazon.com/opendata/
+
+A special case of the benefits of publishing for correction is the free computing resources you get
+from e.g. GitLab. If you're willing to commit to a particular CI/CD system (like GitLab) every
+commit you publish will get computer feedback.
+
+It's more rare, but if you have a large amount of data you can sometimes get more space for it if
+you're willing to make it public. In GitLab you can store job artifacts for [30 days][aei] (not
+seeing a size limit). At least two cloud providers offer to store significant open source datasets
+for free:
+- [Open Datasets | Microsoft Azure][odaz]
+- [Open Data on AWS][odam]
+
 ## Credit
 
 Open source contributions look good on a resume. Have you ever searched for someone on LinkedIn,
@@ -91,7 +108,7 @@ prominent researchers are determining the tasks other researchers work on.
 
 Said in a more pessimistic way, publishing can be a way to push your opinions or desires on others
 in the same way spam email or advertising does. Are all the questions at the end of a [Textbook][tb]
-worth answering?
+worth answering? Is the whole book worth reading?
 
 ## Web Linking
 
