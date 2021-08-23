@@ -65,6 +65,10 @@ existing content you need to convert between formats to publish. Much of the tim
 go straight into one of the mediums listed above (interpret "share notes" as sharing mental notes,
 i.e. sharing your thoughts). Live openly and you can avoid conversions.
 
+For the special case of working through a textbook sharing your answers lets others self-grade their
+answers against yours. This lets you self-grade against theirs if they also publish or comment on
+your answers.
+
 ## Credit
 
 Open source contributions look good on a resume. Have you ever searched for someone on LinkedIn,
@@ -74,6 +78,17 @@ To get anything done on a team you must share your thoughts. You can work direct
 employer's systems, but then you may lose notes when you move companies. Run a lunch and learn to
 raise your own visibility or your code's visibility. At the least, share your opinions with your
 individual coworkers, spouse, or kids.
+
+## Politick
+
+Politicians and celebrities have no privacy. What they get in exchange is the ability to get others
+to value their opinion. Similarly, scientists who publish widely are affecting the language that is
+used to describe findings, and are determining which hypotheses are most likely to be confirmed or
+denied next. If you think of "work" as collecting data to confirm or deny a hypothesis, then
+prominent researchers are determining the tasks other researchers work on.
+
+Said in a more pessimistic way, publishing can be a way to push your opinions or desires on others
+in the same way spam email or advertising does.
 
 ## Web Linking
 
