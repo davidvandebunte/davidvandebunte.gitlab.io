@@ -127,7 +127,9 @@ causes (not in the warning message)?
 When you're debugging training (Bayesian inference) consider the dataset history, the code history,
 and weight initialization. For example, to reproduce model performance from random initialization,
 consider whether you should first reproduce performance (no increase in loss) with known good
-model weights.
+model weights. An example DAG:
+
+![DAG-OOM](/dag-supervised-learning.svg)
 
 #### Out of memory
 
