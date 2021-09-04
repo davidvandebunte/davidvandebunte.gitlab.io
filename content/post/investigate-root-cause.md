@@ -1,28 +1,37 @@
 ---
 title: "Investigate root cause"
-date: 2021-08-23
+date: 2021-09-04
 tags: ["debug"]
 ---
 
 [doe]: https://en.wikipedia.org/wiki/Design_of_experiments
 
+# Test
+
+Restore system to previously achieved performance; a record must exist of previous performance.
+
 # Value
 
-Save time debugging.
+Difference between present and historical performance.
 
 # Cost
 
 [sm]: https://en.wikipedia.org/w/index.php?title=Scientific_method&oldid=897409401#Process
+[cs]: https://en.wikipedia.org/wiki/Computer_science
 
-Follow the [Scientific process][sm] (computer "science"). Sufficiently complex software is often as
-difficult to mentally model as the natural world, especially if it is driven by stochastic
-processes.
+Follow the [Scientific process][sm] (see also [Computer science][cs]). Sufficiently complex software
+is often as difficult to mentally model as the natural world.
 
 ## Compress data
 
-Consolidate symptoms in a single version-controlled document (e.g. on back pain). Agonize over all
-the data you've collected: exception messages, logs, call stacks, etc. Identify the known input,
-intermediate, and output dimensions.
+[covt]: https://en.wikipedia.org/wiki/Dependent_and_independent_variables#Statistics_synonyms
+
+Consolidate symptoms ([covariates][covt]) in a single version-controlled document or DAG. Agonize
+over all the presently known covariates:
+- Exception messages
+- Logging statements
+- Call stacks
+- Failed tests
 
 ### Run Analysis
 
@@ -78,6 +87,18 @@ threads/processes), and disconnect again quickly to keep the state intact. Consi
 attach.
 
 If the defect is an uncaught exception or segfault, find the core dump.
+
+#### Automatic tests
+
+Prefer automatic tests to tooling and instrumentation (requiring manual intervention). If you can
+say that some behavior is better than other behavior rather than simply statistically associated
+with a particular defect, you should write a test indicating your interest in maintaining the
+behavior.
+
+The debate over whether to invest in an automatic test comes down to whether you both care about the
+behavior and whether behavior is likely to regress. The defect you are presently fixing is one
+sample indicating the behavior is likely to regress; the fact you are interested in fixing it
+indicates you care.
 
 ## Develop hypotheses
 
