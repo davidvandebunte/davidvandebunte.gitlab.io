@@ -1,21 +1,19 @@
 ---
 title: "Statistical Rethinking"
-date: 2021-09-03
+date: 2021-09-04
 subtitle: "2nd Edition"
 tags: []
 ---
 
-[rh]: https://davidvandebunte.gitlab.io/-/sr2/-/jobs/1562404823/artifacts/html/work/review.html
-[ph]: https://davidvandebunte.gitlab.io/-/sr2/-/jobs/1562404823/artifacts/html/work/practice.html
+[rh]: https://davidvandebunte.gitlab.io/-/rethinking/-/jobs/1562594218/artifacts/html/work/review.html
+[ph]: https://davidvandebunte.gitlab.io/-/rethinking/-/jobs/1562594218/artifacts/html/work/practice.html
+[drh]: https://github.com/davidvandebunte/rethinking
+[pdrl]: https://gitlab.com/davidvandebunte/rethinking/-/pipelines
 
-This content is built from my fork of the author's GitHub repository:
-- https://github.com/davidvandebunte/rethinking
+For a review of the book, see [review.html][rh]. For answers to the practice questions, see
+[practice.html][ph].
 
-Using GitLab CI:
-- https://gitlab.com/davidvandebunte/rethinking
-
-If you're familiar with docker you may find the environment (the docker image) useful if you're new
-to the book and don't want to figure out a working setup.
-
-For a review of the book, see the [review.html][rh] artifact. For answers to the practice questions,
-see the [practice.html][ph] artifact.
+This content is built from the code in [davidvandebunte/rethinking: GitHub][drh], using continuous
+integration (CI) running in [GitLab][pdrl]. If you're familiar with docker you may find the
+environment (the docker image) useful if you're new to the book and don't want to figure out a
+working setup.
