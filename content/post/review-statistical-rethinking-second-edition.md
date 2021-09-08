@@ -5,8 +5,8 @@ subtitle: "2nd Edition"
 tags: []
 ---
 
-[rh]: https://davidvandebunte.gitlab.io/-/rethinking/-/jobs/1562594218/artifacts/html/work/review.html
-[ph]: https://davidvandebunte.gitlab.io/-/rethinking/-/jobs/1562594218/artifacts/html/work/practice.html
+[rh]: https://davidvandebunte.gitlab.io/-/rethinking/-/jobs/1569432601/artifacts/html/work/review.html
+[ph]: https://davidvandebunte.gitlab.io/-/rethinking/-/jobs/1569432601/artifacts/html/work/practice.html
 [drh]: https://github.com/davidvandebunte/rethinking
 [pdrl]: https://gitlab.com/davidvandebunte/rethinking/-/pipelines
 
