@@ -18,8 +18,23 @@ In order of cost.
 [pm]: https://stackoverflow.com/questions/4315948/git-partial-merge-not-whole-branch/4316039#4316039
 
 Expect to follow a merge workflow. That is, you will need to backport the commits you want to a more
-public domain (see [Backporting][backport]). See also [git partial merge, not whole branch - Stack
-Overflow][pm].
+public domain (see [Backporting][backport]). Typically you start by identifying what changes you
+could publish:
+
+```sh
+git diff --diff-filter=ad public/master private/master
+```
+
+If there's something to do, you switch to the public branch and pull in what you can:
+
+```bash
+git checkout -p private/master -- content/post/example.md
+```
+
+Finally, you review the diff and the rendered version of your notes.
+
+See also:
+- [git partial merge, not whole branch - Stack Overflow][pm].
 
 ## Update Publication Date
 
