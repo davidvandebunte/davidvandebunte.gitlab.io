@@ -1,4 +1,4 @@
-baseurl = "https://davidvandebunte.gitlab.io/shared-notes/"
+baseurl = "https://davidvandebunte.gitlab.io/"
 contentdir    = "content"
 layoutdir     = "layouts"
 publishdir    = "public"
