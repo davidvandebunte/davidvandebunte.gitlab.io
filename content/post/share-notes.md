@@ -1,6 +1,6 @@
 ---
 title: "Share Notes"
-date: 2021-08-23
+date: 2021-12-21
 tags: ['notes', 'share']
 ---
 
@@ -8,6 +8,7 @@ tags: ['notes', 'share']
 [stse]: {{< relref "share-to-stack-exchange.md" >}}
 [stw]: {{< relref "share-to-wikimedia.md" >}}
 [stb]: {{< relref "share-to-blog.md" >}}
+[rd]: {{< relref "redact.md" >}}
 
 Generalizes:
 - [Share Comment][sc]
@@ -36,12 +37,11 @@ so many organizations based around teams? Presumably, peer review by smart peopl
 results faster.
 
 In short, share your mental functions to get help from others in fixing them. Others are motivated
-to fix your mental functions for the same reason you're motivated to fix theirs; so you have a
-single source of correct (or at least consistent) notes only one person needs to maintain. You want
-to make incremental comments on other people's work (in separate repos, if need be) for the same
-reason that you don't want to maintain your own FasterRCNN implementation; because publishing lets
-you avoid maintaining the notes/code yourself. Learn code (and notes) that you can use at any job;
-open source code is also often written by smart people.
+to fix your mental functions for the same reason you're motivated to fix theirs; so we all have a
+single source of correct (or at least consistent) notes. You want to make incremental comments on
+other people's work (in separate repos, if need be) for the same reason that you don't want to
+maintain your own FasterRCNN implementation; because publishing lets you avoid maintaining the
+notes/code yourself.
 
 See comments on privatization vs. open-sourcing in [Open-source software][oss]. You want to
 "open-source" your thoughts to reduce the maintenance burden associated with them (e.g. organizing
@@ -69,7 +69,7 @@ For the special case of working through a textbook sharing your answers lets oth
 answers against yours. This lets you self-grade against theirs if they also publish or comment on
 your answers.
 
-### Computers
+### Correction by Computers
 
 [aei]: https://docs.gitlab.com/ee/ci/yaml/#artifactsexpire_in
 [odaz]: https://azure.microsoft.com/en-us/services/open-datasets/#overview
@@ -77,7 +77,9 @@ your answers.
 
 A special case of the benefits of publishing for correction is the free computing resources you get
 from e.g. GitLab. If you're willing to commit to a particular CI/CD system (like GitLab) every
-commit you publish will get computer feedback.
+commit you publish will get computer feedback. On the other hand, these free CI/CD machines are
+usually small (e.g. 2 GB of RAM and 1 CPU). In practice, you often have to provide or buy your
+computing resources for faster feedback.
 
 It's more rare, but if you have a large amount of data you can sometimes get more space for it if
 you're willing to make it public. In GitLab you can store job artifacts for [30 days][aei] (not
@@ -89,12 +91,14 @@ for free:
 ## Credit
 
 Open source contributions look good on a resume. Have you ever searched for someone on LinkedIn,
-StackOverflow, or elsewhere before interviewing them?
+StackOverflow, or elsewhere before interviewing them? In fact, a blog is like a resume. Is what
+you're posting better than nothing?
 
 To get anything done on a team you must share your thoughts. You can work directly in your
 employer's systems, but then you may lose notes when you move companies. Run a lunch and learn to
 raise your own visibility or your code's visibility. At the least, share your opinions with your
-individual coworkers, spouse, or kids.
+individual coworkers, spouse, or kids. To "publish" code is to release it to production, in the
+context of your job (continuous deployment).
 
 ## Politick
 
@@ -123,18 +127,25 @@ long-term recommended reading list you or some other site maintain.
 
 ## Simplified Searching
 
-Prefer sharing to personal notes so you have one place to search: the web.
+Prefer sharing to personal notes so you have one place to search: the web. One way to think about
+sharing notes is as organizing notes by deleting them from your private repositories if they don't
+need to be private. In a similar way, reading anything is effectively making it your notes, taking
+"notes" to mean natural language you can use to quickly recall a concept. If you define note
+efficiency (pedagogical efficiency) as the speed at which the notes help you recall a concept, these
+notes will be less efficient only if you use different internal language than the average English
+speaker.
 
 ## Transparency
 
 [stow]: https://en.wikipedia.org/wiki/Security_through_obscurity#Obscurity_in_architecture_vs._technique
 
 Obscurity is a limited way to achieve personal and communal security; see [Security through
-obscurity][stow].
+obscurity][stow]. For the advantages of security through obscurity, see [Redact][rd].
 
 Who are you already sharing with? Do you take notes in Google Docs? Public notes are better than
-notes you share with Google in Docs because other major companies (Amazon, Apple) will have access
-to the same information.
+notes you share with Google (in Docs) because other major companies (Amazon, Apple) will have access
+to the same information. If you're backing up your notes in the cloud, you're likely sharing them
+with someone.
 
 Sharing spreads power out. It’s unlikely you’ll share an idea and have it suddenly lead to huge
 changes; it would have to get spread and experimented with first. By that point everyone would have
@@ -146,6 +157,6 @@ group of people monopolize power.
 
 In order of cost.
 
-## [Redact]({{< relref "redact.md" >}})
+## [Redact][rd]
 
 ## [Select License]({{< relref "select-license.md" >}})
