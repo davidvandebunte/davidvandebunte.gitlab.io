@@ -4,5 +4,8 @@ docker run --rm \
     --mount type=bind,source=$(pwd),target=/home/jovyan \
     jln \
     jupyter-book build content/post/mynewbook --path-output public/tmp
+if [ $? -ne 0 ]; then
+    exit 1
+fi
 mv public/tmp/_build/html public/executable-book
 rm -rf public/tmp
