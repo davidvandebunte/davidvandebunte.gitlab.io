@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+mkdir -p public
+docker run --rm \
+    --mount type=bind,source=$(pwd)/content/post,target=/home/jovyan/post \
+    --mount type=bind,source=$(pwd)/public,target=/home/jovyan/public \
+    jln \
+    jupyter-book build post/mynewbook --path-output public/tmp
+mv public/tmp/_build/html public/executable-book
