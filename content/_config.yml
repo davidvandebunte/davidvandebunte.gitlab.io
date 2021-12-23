@@ -17,5 +17,6 @@ repository:
 
 # See jupyterbook.org/customize/config.html#add-a-link-to-your-repository
 html:
+  favicon: executable-notes-mini.svg
   use_issues_button: true
   use_repository_button: true
