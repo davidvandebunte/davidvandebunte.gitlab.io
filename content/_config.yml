@@ -4,6 +4,7 @@
 title: Executable Notes
 author: David VandeBunte
 logo: executable-notes.svg
+only_build_toc_files: true
 
 # See jupyterbook.org/content/execute.html
 execute:
