@@ -16,8 +16,8 @@ googleAnalytics = "UA-140340779-1"
 
 [Params]
   subtitle = "On Software Development"
-  logo = "img/avatar-icon.png"
-  favicon = "img/favicon.ico"
+  logo = "meta/shared-notes.svg"
+  favicon = "meta/shared-notes.svg"
   dateFormat = "January 2, 2006"
   commit = false
   rss = true
