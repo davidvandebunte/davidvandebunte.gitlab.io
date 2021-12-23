@@ -8,5 +8,6 @@ docker run --rm \
 if [ $? -ne 0 ]; then
     exit 1
 fi
+rm -rf public/executable-notes
 mv public/tmp/_build/html public/executable-notes
 rm -rf public/tmp
