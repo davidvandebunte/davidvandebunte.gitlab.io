@@ -1,3 +1,4 @@
 public/
 .cache
 .ipython
+.hugo_build.lock

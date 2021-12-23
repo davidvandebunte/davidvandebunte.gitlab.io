@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+mkdir -p public
+docker run --rm \
+    --mount type=bind,source=$(pwd),target=/src \
+    registry.gitlab.com/pages/hugo:latest \
+    hugo -d public/shared-notes
