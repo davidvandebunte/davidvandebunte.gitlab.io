@@ -11,7 +11,7 @@ execute:
 
 repository:
   url: https://gitlab.com/davidvandebunte/davidvandebunte.gitlab.io
-  path_to_book: content/post
+  path_to_book: content
   branch: master
 
 # See jupyterbook.org/customize/config.html#add-a-link-to-your-repository
