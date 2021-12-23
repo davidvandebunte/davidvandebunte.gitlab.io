@@ -1,6 +1,7 @@
 #!/usr/bin/env sh
 mkdir -p public
 docker run --rm \
+    --user $(id -u) \
     --mount type=bind,source=$(pwd),target=/home/jovyan \
     jln \
     jupyter-book build content/post/mynewbook --path-output public/tmp
