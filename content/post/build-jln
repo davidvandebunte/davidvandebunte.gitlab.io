@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+DOCKER_TAG="jln"
+SCRIPTPATH="$( cd "$(dirname "$0")" ; pwd -P )"
+docker build --tag "$DOCKER_TAG" - < "$SCRIPTPATH"/Dockerfile
