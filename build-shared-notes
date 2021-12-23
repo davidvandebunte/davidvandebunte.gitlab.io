@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 mkdir -p public
 docker run --rm \
     --mount type=bind,source=$(pwd),target=/src \
