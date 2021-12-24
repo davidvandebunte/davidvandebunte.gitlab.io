@@ -1,9 +1,7 @@
 # All available Hugo versions are listed here: https://gitlab.com/pages/hugo/container_registry
-image: registry.gitlab.com/pages/hugo:latest
-
 .dind_login: &dind_login
   image:
-    name: docker:19.03.12
+    name: registry.gitlab.com/davidvandebunte/cicd:latest
   services:
     - docker:19.03.12-dind
   before_script:
