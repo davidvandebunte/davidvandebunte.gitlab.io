@@ -1,4 +1,5 @@
-# All available Hugo versions are listed here: https://gitlab.com/pages/hugo/container_registry
+---
+
 .dind_login: &dind_login
   image:
     name: registry.gitlab.com/davidvandebunte/cicd:latest
@@ -13,20 +14,20 @@ variables:
 test:
   <<: *dind_login
   script:
-  - ./build-shared-notes
-  - ./content/post/build-jln
-  - ./build-executable-notes
+    - ./build-shared-notes
+    - ./content/post/build-jln
+    - ./build-executable-notes
   except:
-  - master
+    - master
 
 pages:
   <<: *dind_login
   script:
-  - ./build-shared-notes
-  - ./content/post/build-jln
-  - ./build-executable-notes
+    - ./build-shared-notes
+    - ./content/post/build-jln
+    - ./build-executable-notes
   artifacts:
     paths:
-    - public
+      - public
   only:
-  - master
+    - master
