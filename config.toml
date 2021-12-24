@@ -27,10 +27,13 @@ googleAnalytics = "UA-140340779-1"
 
 [[Params.bigimg]]
   src = "img/triangle.jpg"
+  desc = "Triangle"
 [[Params.bigimg]]
   src = "img/sphere.jpg"
+  desc = "Sphere"
 [[Params.bigimg]]
   src = "img/hexagon.jpg"
+  desc = "Hexagon"
 
 [Author]
   name = "David James VandeBunte"

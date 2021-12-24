@@ -4,7 +4,7 @@ docker run --rm \
     --user $(id -u) \
     --mount type=bind,source=$(pwd),target=/home/jovyan \
     jln \
-    jupyter-book build content --path-output public/tmp
+    jupyter-book build content/post --path-output public/tmp
 if [ $? -ne 0 ]; then
     exit 1
 fi

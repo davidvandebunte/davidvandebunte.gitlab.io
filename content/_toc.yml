@@ -1,8 +1,0 @@
----
-
-# See jupyterbook.org/customize/toc.html
-format: jb-book
-root: page/about
-chapters:
-  - file: markdown
-  - file: notebooks
