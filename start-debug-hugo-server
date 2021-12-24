@@ -1,8 +1,6 @@
 #!/usr/bin/env sh
-
-# TODO: Add `--enableGitInfo` after installing `git` in the hugo image
-mkdir -p public
 docker run --rm \
+    -p 1313:1313 \
     --mount type=bind,source=$(pwd),target=/src \
     registry.gitlab.com/pages/hugo:latest \
-    hugo -d public/shared-notes
+    hugo server -D --bind=0.0.0.0 -b http://192.168.0.104/
