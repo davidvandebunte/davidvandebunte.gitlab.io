@@ -3,4 +3,4 @@ mkdir -p public
 docker run --rm \
     --mount type=bind,source=$(pwd),target=/src \
     registry.gitlab.com/pages/hugo:latest \
-    hugo --debug -d public/shared-notes
+    hugo -d public/shared-notes
