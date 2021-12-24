@@ -1,4 +1,13 @@
 #!/usr/bin/env sh
-DOCKER_TAG="jln"
 SCRIPTPATH="$( cd "$(dirname "$0")" ; pwd -P )"
-docker build --tag "$DOCKER_TAG" - < "$SCRIPTPATH"/Dockerfile
+
+echo "${CI_REGISTRY_IMAGE:=registry.gitlab.com/davidvandebunte/davidvandebunte.gitlab.io}"
+REF_IMG=$CI_REGISTRY_IMAGE:jln
+
+docker pull "$REF_IMG" || true
+DOCKER_BUILDKIT=1 docker build --progress=plain \
+    --cache-from "$REF_IMG$" \
+    --build-arg BUILDKIT_INLINE_CACHE=1 \
+    --tag jln - < "$SCRIPTPATH"/Dockerfile
+docker tag jln "$REF_IMG"
+docker push $REF_IMG
