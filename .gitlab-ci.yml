@@ -16,7 +16,7 @@ test:
   <<: *dind_login
   script:
     - ./build-shared-notes
-    - ./content/post/build-jln
+    - ./content/build-jln
     - ./build-executable-notes
   except:
     - master
@@ -25,7 +25,7 @@ pages:
   <<: *dind_login
   script:
     - ./build-shared-notes
-    - ./content/post/build-jln
+    - ./content/build-jln
     - ./build-executable-notes
   artifacts:
     paths:
