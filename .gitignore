@@ -1,4 +1,7 @@
-public/
+.bash_history
 .cache
-.ipython
 .hugo_build.lock
+.ipython/
+.jupyter/
+.local/
+public/
