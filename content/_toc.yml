@@ -7,4 +7,3 @@ parts:
   - caption: Visual Group Theory
     chapters:
       - file: markdown
-      - file: notebooks
