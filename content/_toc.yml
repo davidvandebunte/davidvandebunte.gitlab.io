@@ -3,6 +3,8 @@
 # See jupyterbook.org/customize/toc.html
 format: jb-book
 root: page/about
-chapters:
-  - file: markdown
-  - file: notebooks
+parts:
+  - caption: Visual Group Theory
+    chapters:
+      - file: markdown
+      - file: notebooks
