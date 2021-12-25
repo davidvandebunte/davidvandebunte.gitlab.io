@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+./build-shared-notes
+./content/build-jln
+./build-executable-notes

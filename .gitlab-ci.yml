@@ -15,18 +15,14 @@ variables:
 test:
   <<: *dind_login
   script:
-    - ./build-shared-notes
-    - ./content/build-jln
-    - ./build-executable-notes
+    - ./build-notes
   except:
     - master
 
 pages:
   <<: *dind_login
   script:
-    - ./build-shared-notes
-    - ./content/build-jln
-    - ./build-executable-notes
+    - ./build-notes
   artifacts:
     paths:
       - public
