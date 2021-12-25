@@ -4,7 +4,7 @@ SCRIPTPATH="$( cd "$(dirname "$0")" ; pwd -P )"
 echo "${CI_REGISTRY_IMAGE:=registry.gitlab.com/davidvandebunte/davidvandebunte.gitlab.io}"
 REF_IMG=$CI_REGISTRY_IMAGE:jln
 
-docker pull "$REF_IMG" || true
+time docker pull "$REF_IMG" || true
 DOCKER_BUILDKIT=1 docker build --progress=plain \
     --cache-from "$REF_IMG" \
     --build-arg BUILDKIT_INLINE_CACHE=1 \
