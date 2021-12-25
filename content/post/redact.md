@@ -1,6 +1,6 @@
 ---
 title: "Redact"
-date: 2021-07-10T13:39:47-05:00
+date: 2021-12-24
 tags: ['notes', 'share']
 ---
 
@@ -12,10 +12,13 @@ Part of [Share Notes][sn].
 
 [pd]: https://en.wikipedia.org/wiki/Personal_data
 [dra]: https://en.wikipedia.org/wiki/Data_re-identification
+[da]: https://en.wikipedia.org/wiki/Data_anonymization
 
 Protect [Personal data][pd], to reduce the effectiveness of the [Data re-identification][dra]
 algorithms targeting you on the dark web. If they can identify you as an individual, they can start
-to build up a network of information about you in order to hack one of your accounts.
+to build up a network of information about you in order to hack one of your accounts. Remove the
+names of individuals you work with or know when telling a story, as if you had to follow HIPAA; see
+also [Data anonymization][da].
 
 Your username is one example of PII. If someone has your username on one website and your password
 on that website, they can use it to try to get into your account on other websites (if your username

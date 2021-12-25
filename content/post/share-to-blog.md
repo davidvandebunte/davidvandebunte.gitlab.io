@@ -1,6 +1,6 @@
 ---
 title: "Share to Blog"
-date: 2020-12-07T11:19:25-06:00
+date: 2021-12-24
 tags: ['share']
 ---
 
@@ -15,7 +15,6 @@ In order of cost.
 ## Backport
 
 [backport]: https://en.wikipedia.org/wiki/Backporting
-[pm]: https://stackoverflow.com/questions/4315948/git-partial-merge-not-whole-branch/4316039#4316039
 
 Expect to follow a merge workflow. That is, you will need to backport the commits you want to a more
 public domain (see [Backporting][backport]). Typically you start by identifying what changes you
@@ -27,14 +26,15 @@ git diff --diff-filter=ad public/master private/master
 
 If there's something to do, you switch to the public branch and pull in what you can:
 
-```bash
-git checkout -p private/master -- content/post/example.md
+```sh
+git restore -p -s private/master content/post/example.md
 ```
 
-Finally, you review the diff and the rendered version of your notes.
+Next review the diff, and finally review the rendered version.
 
 See also:
-- [git partial merge, not whole branch - Stack Overflow][pm].
+- [How to get just one file from another branch? - SO](https://stackoverflow.com/a/2364223/622049)
+- [A detailed answer on `git restore` - SO](https://stackoverflow.com/a/60855504/622049)
 
 ## Update Publication Date
 
