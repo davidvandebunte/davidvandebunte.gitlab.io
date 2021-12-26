@@ -16,24 +16,29 @@ In order of cost.
 
 [backport]: https://en.wikipedia.org/wiki/Backporting
 
-Expect to follow a merge workflow. That is, you will need to backport the commits you want to a more
-public domain (see [Backporting][backport]). Start by identifying what changes you could publish:
+Expect to follow a merge workflow. That is, you will need to backport the content you want to
+publish to a more public domain (see [Backporting][backport]). Start by identifying what changes you
+could publish:
 
 ```sh
 git diff --diff-filter=ad public/master private/main
 ```
 
-If there's something to do, switch to the public repository and pull in what you can:
+If there's something you'd like to publish, review the rendered version in the private repository
+and make any last minute changes so you don't need to do any work in your repository.
+
+Next, switch to the public repository and pull it in:
 
 ```sh
 git switch master
 git restore -p -s main content/post/example.md
+# (or cherry-pick if you have connect content isolated in a single commit)
 ```
 
-Next review the diff, finally review the rendered version, then push.
+Next review the diff, perhaps review the rendered version again, and push.
 
 The public repository should only pull prepared content from the private repository. If you create
-new content on the public repository you have to backport it to the private repository, and do so
+new content in the public repository you have to backport it to the private repository, and do so
 immediately. If you don't, you may forget which repository has the latest version of an article (the
 implicit assumption is the private repository always has the latest).
 
