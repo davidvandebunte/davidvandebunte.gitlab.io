@@ -1,0 +1,115 @@
+---
+jupytext:
+  cell_metadata_filter: -all
+  formats: md:myst
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.11.2
+kernelspec:
+  display_name: Python 3 (ipykernel)
+  language: python
+  name: python3
+---
+
+# Push for feedback
+
+## Test
+
+[glab]: https://github.com/profclems/glab
+[lab]: https://github.com/zaquestion/lab
+[hub]: https://github.com/github/hub
+
+Push to GitLab, GitHub, etc. and use [`glab`][glab], [`lab`][lab], [`hub`][hub], or a similar tool
+to check for test results, if not the CI/CD web interface.
+
+## Value
+
+[gli]: https://docs.gitlab.com/ee/user/project/integrations/overview.html
+[ns]: https://askubuntu.com/questions/187022/how-can-i-send-a-custom-desktop-notification
+[zn]: https://unix.stackexchange.com/a/144925/233125
+
+Pushing for feedback permits more focused work, letting developers move on to another task or
+cleanup rather than constantly check on a running experiment. For example, let's say you start a
+test on a remote machine by `ssh`'ing into it and pressing go, whatever that means. Typically, there
+isn't a standard way to get a notification if the experiment fails after 10 minutes when you
+expected it to run for two hours. When you're pushing to GitLab or GitHub, you can easily set up
+notifications with e.g. Slack or Discord. See [Integrations | GitLab][gli].
+
+It's easier to get notifications for local scripts with a tool like [`notify-send`][ns] or
+[`zenity`][zn], but these still need to be set up for every script rather than needing to be
+configured only once per project.
+
+Pushing for feedback keeps a developer closer to publishing in general, since you can share your
+results from e.g. GitLab with others without rerunning it on GitLab. Even if you don't share your
+results, it can be incredibly helpful to have organized logs from the past few days for your own
+sake.
+
+Push for feedback on a machine that doesn't have the resources necessary to run a test. For example,
+write code remotely that requires an expensive GPU to run, or that relies on data that is only
+available inside a company network (and is too slow to fetch over a VPN). Said another way, make
+your remote machine a more thin client. Relying on a remote developer's machine is in general
+unreliable if a test consumes most of the machine's resources, since Firefox can take 10 GB of RAM
+in itself and prevent the job from completing.
+
+If a developer ever needs to run more than one test in parallel that requires most of an individiual
+machine's resources, this approach makes it easy to start the second job.
+
+## Cost
+
+You will have to set up the machine you would otherwise `ssh` into as a static runner with GitLab,
+or do the GitHub equivalent.
+
+Pushing code and pulling it down on a static or shared CI/CD runner almost always adds a few seconds
+of overhead. It rarely makes sense to push for feedback on tests that only run for a few seconds,
+such as linters or a REPL that doesn't need anything loaded in memory. The benefits become clearer
+for "long" experiments where this overhead is insignificant, perhaps more than 3-4 minutes.
+
+### Halting problem
+
+[hp]: https://en.wikipedia.org/wiki/Halting_problem
+[srs]: https://slack.com/help/articles/208423427-Set-a-reminder
+
+An ironic consequence of no longer needing to spend time polling running experiments is that you may
+not notice as quickly if it is no longer making progress (the [Halting problem][hp]). GitLab,
+Jenkins, and other tools usually have a way to set a timeout on jobs to avoid wasting computing
+resources, but it's arguably more useful to use this setting to fail fast when progress stops. It's
+critical to get feedback when progress has stopped or you may find yourself creating commits going
+off on a secondary task (or a wrong follow-up task) for hours when your primary path needs fixing;
+you need to be pulled back into focused work.
+
+We typically decide that progress has stopped based on whether the program is still producing logs.
+In fact, we add progress bars and logging statements in areas of code that typically take a long
+time to run. It's unfortunate that GitLab only lets you specify how long you expect the whole
+experiment to take, rather than the longest you expect the program to go without producing any
+output.
+
+Unless you have hard real-time requirements and are writing in a special programming language, it's
+unlikely you know how long execution should take. In many cases, you can set a low project-level
+timeout that holds for 90% of your experiments. You'll get cut off once in a while when you forget
+to increase the timeout for a longer experiment, but this is a price worth paying for staying
+focused. Consider it a punishment for both forgetting to increase the timeout and only being to
+think of an experiment that takes much longer than normal (slow feedback for you, and spending more
+computing resources). You were willing to wait a long time for the experiment, so it's likely the
+timeout's overhead is small relative to the length of the experiment.
+
+Another non-killing option is to set a reminder to check on the experiment about when you expect it
+to complete. See [Set a reminder - Slack][srs]. The major disadvantage to this approach is that it
+will ping you even if the experiment fails early for some other reason (not being aware of what
+experiment it is connected to). Still, this tool is useful if you have an experiment you expect to
+take 20 minutes total you want to check in on after 5 minutes.
+
+This is analogous to asking yourself to assign an estimate to a project but at the most granular
+level; it's often hard to know with much certainty how long projects will take. Still, it's hard to
+deny the value of a project estimate. In Scrum you re-evaluate at sprint boundaries and decide
+whether to continue (this is like the halting problem for humans). Ideally, GitLab could also add an
+option to get notified when an experiment has run for longer than an expected amount without also
+killing the experiment.
+
+### Notification settings
+
+The Slack and Discord integrations for GitLab have a variety of checkboxes you can configure. My
+preference is to leave everything on their defaults, which is a "no news is good news" configuration
+where the user is not notified of passing pipelines. That is, if you get a notification you know you
+need to do something, besides the acknowledgment notification you get immediately after a push.
