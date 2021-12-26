@@ -17,20 +17,33 @@ In order of cost.
 [backport]: https://en.wikipedia.org/wiki/Backporting
 
 Expect to follow a merge workflow. That is, you will need to backport the commits you want to a more
-public domain (see [Backporting][backport]). Typically you start by identifying what changes you
-could publish:
+public domain (see [Backporting][backport]). Start by identifying what changes you could publish:
 
 ```sh
-git diff --diff-filter=ad public/master private/master
+git diff --diff-filter=ad public/master private/main
 ```
 
-If there's something to do, you switch to the public branch and pull in what you can:
+If there's something to do, switch to the public repository and pull in what you can:
 
 ```sh
-git restore -p -s private/master content/post/example.md
+git switch master
+git restore -p -s main content/post/example.md
 ```
 
-Next review the diff, and finally review the rendered version.
+Next review the diff, finally review the rendered version, then push.
+
+The public repository should only pull prepared content from the private repository. If you create
+new content on the public repository you have to backport it to the private repository, and do so
+immediately. If you don't, you may forget which repository has the latest version of an article (the
+implicit assumption is the private repository always has the latest).
+
+Whenever you switch back from the public to the private repository, acknowledge that the private
+repository has the latest content with a trivial merge:
+
+```sh
+git switch main
+git merge -s ours public/master
+```
 
 See also:
 - [How to get just one file from another branch? - SO](https://stackoverflow.com/a/2364223/622049)
