@@ -10,3 +10,7 @@ parts:
   - caption: Notes
     chapters:
       - file: notes/push-for-feedback.md
+      - file: notes/memoize-artifact.md
+      - file: notes/memoize-docker-image.md
+      - file: notes/switch-to-conda.md
+      - file: notes/update-dependencies.md
