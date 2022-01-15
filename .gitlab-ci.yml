@@ -2,7 +2,7 @@
 
 .dind_login: &dind_login
   image:
-    name: registry.gitlab.com/davidvandebunte/cicd:latest
+    name: docker:19.03.12
   services:
     - docker:19.03.12-dind
   before_script:
