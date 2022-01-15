@@ -53,6 +53,12 @@ googleAnalytics = "UA-140340779-1"
   # itchio = "username"
   # keybase = "username"
 
+[markup]
+  defaultMarkdownHandler = "goldmark"
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
 
 [[menu.main]]
     name = "Blog"
