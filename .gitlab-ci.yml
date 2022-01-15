@@ -19,7 +19,7 @@ test:
   except:
     - master
   tags:
-    laptop
+    - laptop
 
 pages:
   <<: *dind_login
@@ -30,3 +30,5 @@ pages:
       - public
   only:
     - master
+  tags:
+    - laptop
