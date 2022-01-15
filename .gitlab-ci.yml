@@ -18,6 +18,8 @@ test:
     - ./build-notes
   except:
     - master
+  tags:
+    laptop
 
 pages:
   <<: *dind_login
