@@ -1,7 +1,9 @@
 .bash_history
+bazel-*
 .cache
 .hugo_build.lock
 .ipython/
 .jupyter/
 .local/
 public/
+start-local-brc
