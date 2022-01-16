@@ -65,6 +65,3 @@ container_pull(
   repository = "pages/hugo:latest",
   digest = "sha256:f05b69fb734ee9bca2e29d48493a38dc4eb84f2bb8b8a94be5ae09d5fe213e7f",
 )
-
-# TODO: Should you create a separate directory (with a separate BUILD) for the hugo project? I'd say
-# so. Use the config.toml to decide what needs to go into it. You can duplicate the about.md file.
