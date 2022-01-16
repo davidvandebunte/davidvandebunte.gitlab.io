@@ -1,4 +1,8 @@
 #!/usr/bin/env sh
+
+DOCKER_CONFIG=/tmp/.ci_docker
+export DOCKER_CONFIG
+
 mkdir -p public
 echo "${CI_PROJECT_NAME:=personal-notes}"
 time docker run --rm \
