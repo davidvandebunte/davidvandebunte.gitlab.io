@@ -1,7 +1,6 @@
 baseurl = "https://davidvandebunte.gitlab.io/shared-notes"
 contentdir    = "content"
 layoutdir     = "layouts"
-publishdir    = "public"
 title = "Shared Notes"
 canonifyurls  = true
 
