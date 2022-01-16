@@ -26,35 +26,50 @@ to check for test results, if not the CI/CD web interface.
 
 ## Value
 
+### Fast computer feedback
+
 [gli]: https://docs.gitlab.com/ee/user/project/integrations/overview.html
 [ns]: https://askubuntu.com/questions/187022/how-can-i-send-a-custom-desktop-notification
 [zn]: https://unix.stackexchange.com/a/144925/233125
 
-Pushing for feedback permits more focused work, letting developers move on to another task or
-cleanup rather than constantly check on a running experiment. For example, let's say you start a
-test on a remote machine by `ssh`'ing into it and pressing go, whatever that means. Typically, there
-isn't a standard way to get a notification if the experiment fails after 10 minutes when you
-expected it to run for two hours. When you're pushing to GitLab or GitHub, you can easily set up
-notifications with e.g. Slack or Discord. See [Integrations | GitLab][gli].
+Pushing for feedback permits more focused work, letting developers move on to another task (or
+better, cleanup) rather than constantly check on a running experiment. For example, let's say you
+start a test on a remote machine by `ssh`'ing into it and pressing go, whatever that means.
+Typically, there isn't a standard way to get a notification if the experiment fails after 10 minutes
+when you expected it to run for two hours. When you're pushing to GitLab or GitHub, you can easily
+set up notifications with e.g. Slack or Discord. See [Integrations | GitLab][gli].
 
 It's easier to get notifications for local scripts with a tool like [`notify-send`][ns] or
 [`zenity`][zn], but these still need to be set up for every script rather than needing to be
 configured only once per project.
 
-Pushing for feedback keeps a developer closer to publishing in general, since you can share your
-results from e.g. GitLab with others without rerunning it on GitLab. Even if you don't share your
-results, it can be incredibly helpful to have organized logs from the past few days for your own
-sake.
+### Faster human feedback
 
-Push for feedback on a machine that doesn't have the resources necessary to run a test. For example,
-write code remotely that requires an expensive GPU to run, or that relies on data that is only
+Pushing for feedback keeps a developer closer to publishing in general, since you can share your
+results from e.g. GitLab with others without rerunning it on GitLab.
+
+### Organized record of successes and failures
+
+Pushing for feedback necessarily implies committing for feedback, though the latter doesn't strictly
+imply the former.
+
+Even if you don't share your results, it can be incredibly helpful to have organized logs from the
+past few days for your own sake as well. What happened the last time that this worked?
+
+If you don't commit for feedback, it's easy to forget that you've already tried something and
+couldn't get it to work.
+
+### Insufficient local resources
+
+If a developer ever needs to run more than one test in parallel that requires most of an individiual
+machine's resources, this approach makes it easy to start the second job. That is, this is a
+strategy to work around insufficient local resources.
+
+Write code remotely that requires an expensive GPU to run, or that relies on data that is only
 available inside a company network (and is too slow to fetch over a VPN). Said another way, make
 your remote machine a more thin client. Relying on a remote developer's machine is in general
 unreliable if a test consumes most of the machine's resources, since Firefox can take 10 GB of RAM
 in itself and prevent the job from completing.
-
-If a developer ever needs to run more than one test in parallel that requires most of an individiual
-machine's resources, this approach makes it easy to start the second job.
 
 ## Cost
 

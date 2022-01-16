@@ -13,7 +13,10 @@ kernelspec:
   name: python3
 ---
 
-# Memoize docker image
+# Memoize Docker image
+
+Specializes:
+- [](./memoize-artifact.md)
 
 ## Value
 
@@ -41,18 +44,9 @@ print(total_cost.to(ureg.hours))
 
 ## Cost
 
-Two common methods are to use the docker cache, or to "cache" the image in a repository.
+In order of correctness:
 
-### Docker cache
-
-[uddi]: https://docs.gitlab.com/ee/ci/docker/using_docker_build.html#docker-caching-example
-
-Docker-based caching lets you cache any stage in the image, not just the whole image. This makes
-working on the Dockerfile fast, as well as regular work.
-
-For an example of how to do this, see [Use Docker to build Docker images | GitLab][uddi].
-
-### Registry cache
+### Sorta Correct: Registry cache
 
 It's extremely easy to create a separate project for a docker image in GitLab, build your image
 there, then push the image to a container repository you can reach from another project. If you're
@@ -65,3 +59,19 @@ For developers who aren't working on the docker image, this can save them a few 
 waiting for the docker caching system to confirm nothing has changed. Still, this is only a second
 or maybe two; most of the time docker is taking is for pulling the image which they'll need to do
 anyways.
+
+### Almost Correct: Docker cache
+
+[uddi]: https://docs.gitlab.com/ee/ci/docker/using_docker_build.html#docker-caching-example
+
+Docker-based caching lets you cache any stage in the image, not just the whole image. This makes
+working on the Dockerfile fast, as well as regular work.
+
+For an example of how to do this, see [Use Docker to build Docker images | GitLab][uddi].
+
+### Correct: `rules_docker`
+
+[bdr]: https://github.com/bazelbuild/rules_docker
+
+See:
+- [bazelbuild/rules_docker: Rules for building and handling Docker images with Bazel][bdr]
