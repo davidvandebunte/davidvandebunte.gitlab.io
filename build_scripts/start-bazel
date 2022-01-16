@@ -30,7 +30,7 @@ start_bazel() {
 }
 
 # We take the same approach of mounting a directory in /tmp in order to push images.
-./populate-cli-config
+./build_scripts/populate-cli-config
 
 if [ -z "$(docker ps -q -f name=bazel-server)" ]; then
   start_bazel
