@@ -2,9 +2,7 @@
 set -o errexit -o nounset
 
 docker exec --tty --workdir "$(pwd)" \
-    bazel-server bazel build //content:extract_build_book
-
-build_path=$(find -H bazel-bin -path "*extract_build_book/tmp/jb")
+    bazel-server bazel build //jb:extract_build_book
 
 mkdir -p public
-cp -r "$build_path/_build/html" public/executable-notes
+cp -r "bazel-bin/jb/extract_build_book/tmp/jb/_build/html" public/executable-notes

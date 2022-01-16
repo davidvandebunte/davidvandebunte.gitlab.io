@@ -3,5 +3,5 @@ set -o errexit -o nounset -o xtrace
 
 echo "${CI_PROJECT_NAME:=personal-notes}"
 docker exec --tty --workdir "$(pwd)" \
-    bazel-server bazel build --define project=${CI_PROJECT_NAME} //content:push_jln
-./bazel-bin/content/push_jln
+    bazel-server bazel build --define project=${CI_PROJECT_NAME} //jb:push_jln
+./bazel-bin/jb/push_jln
