@@ -16,17 +16,16 @@ start_bazel() {
   # will we have access to the home directory?
   mkdir -p /tmp/output_user_root
 
-  echo "${CI_PROJECT_NAME:=personal-notes}"
   docker run --detach --tty \
     --name bazel-server \
     --network=host \
     -e USER="$(id -u)" \
     -u "$(id -u):$(id -g)" \
     -v /certs/client:/certs/client:ro \
-    -v "$(pwd)":/${CI_PROJECT_NAME} \
+    -v "$(pwd)":/workspace \
     -v /tmp/output_user_root:/tmp/output_user_root \
     -v /tmp/.ci_docker:/tmp/.ci_docker \
-    -w /${CI_PROJECT_NAME} \
+    -w /workspace \
     --entrypoint /bin/bash \
     registry.gitlab.com/davidvandebunte/continuous-integration:4.2.2
 }
