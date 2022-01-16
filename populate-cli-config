@@ -1,0 +1,13 @@
+#!/usr/bin/env sh
+set -o errexit -o xtrace
+
+DOCKER_CONFIG=/tmp/.ci_docker
+export DOCKER_CONFIG
+
+echo "${CI_REGISTRY_USER:=davidvandebunte}"
+echo "${CI_REGISTRY:=registry.gitlab.com}"
+if [ -n "$CI_REGISTRY_PASSWORD" ]; then
+    echo "$CI_REGISTRY_PASSWORD" | docker login -u "$CI_REGISTRY_USER" --password-stdin "$CI_REGISTRY"
+else
+    docker login -u "$CI_REGISTRY_USER" --password-stdin "$CI_REGISTRY" < "${HOME}"/local-pat
+fi

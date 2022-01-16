@@ -1,0 +1,28 @@
+#!/usr/bin/env sh
+set -o errexit -o nounset
+
+start_brc() {
+  # We create a directory in our home directory for the bazel-remote cache. We can't create a
+  # directory in the repository working directory because it is cleaned between GitLab jobs by
+  # default. We can't use a docker volume because the contents are only writable by root, and this
+  # container is started as our user.
+  mkdir -p "${HOME}/bazel_remote_cache"
+  docker run --detach \
+    --network host \
+    --name brc \
+    -u "$(id -u)":"$(id -g)" \
+    -v "${HOME}/bazel_remote_cache":/data \
+    buchgr/bazel-remote-cache \
+    --s3.auth_method=access_key \
+    --s3.access_key_id "$AWS_ACCESS_KEY_ID" \
+    --s3.secret_access_key "$AWS_SECRET_ACCESS_KEY" \
+    --s3.bucket=davidvandebunte-bazel-pn \
+    --s3.endpoint=s3.us-east-1.amazonaws.com \
+    --max_size=5
+}
+
+if [ -z "$(docker ps -q -f name=brc)" ]; then
+  start_brc
+else
+  echo "bazel-remote server already started."
+fi

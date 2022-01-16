@@ -1,0 +1,41 @@
+#!/usr/bin/env sh
+set -o errexit -o nounset -o xtrace
+
+start_bazel() {
+  # We create a directory in /tmp for the bazel output user root. We can't create a directory in the
+  # repository working directory because it is cleaned between GitLab jobs by default, and
+  # rebuilding the cache would be slow. We can't use a docker volume because the contents are only
+  # writable by root, and this container is started as our user. We don't use our home directory so
+  # that the path can be the same inside and outside the container; this makes local `bazel-*`
+  # symbolic links valid.
+  #
+  # TODO: It would be nice to use our $HOME directory so that the cache was not cleaned between
+  # reboots. This approach is complicated by the fact that the `vandebun` user and `gitlab-runner`
+  # user do not have the same home directory, and have different `id`. We should probably move to
+  # using `gitlab-runner` (push for feedback) on vandebun-home, anyways. On remote shared runners,
+  # will we have access to the home directory?
+  mkdir -p /tmp/output_user_root
+
+  DOCKER_TLS_CERTDIR="/certs"
+  docker run --detach --tty \
+    --name bazel-server \
+    --network=host \
+    -e USER="$(id -u)" \
+    -u "$(id -u):$(id -g)" \
+    -v "$DOCKER_TLS_CERTDIR"/client:/certs/client:ro \
+    -v "$(pwd)":/workspace \
+    -v /tmp/output_user_root:/tmp/output_user_root \
+    -v /tmp/.ci_docker:/tmp/.ci_docker \
+    -w /workspace \
+    --entrypoint /bin/bash \
+    registry.gitlab.com/davidvandebunte/continuous-integration:4.2.2
+}
+
+# We take the same approach of mounting a directory in /tmp in order to push images.
+./populate-cli-config
+
+if [ -z "$(docker ps -q -f name=bazel-server)" ]; then
+  start_bazel
+else
+  echo "Bazel server already started."
+fi

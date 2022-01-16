@@ -1,4 +1,10 @@
 #!/usr/bin/env sh
+set -o errexit -o nounset -o xtrace
+
+./start-brc
+./start-dind
+./start-bazel
+./build-bazel
+./push-hugo
 ./build-shared-notes
-./content/build-jln
-./build-executable-notes
+./push-jln

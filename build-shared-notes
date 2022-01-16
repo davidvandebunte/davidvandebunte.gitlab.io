@@ -1,8 +1,8 @@
 #!/usr/bin/env sh
-
-# TODO: Add `--enableGitInfo` after installing `git` in the hugo image
 mkdir -p public
-docker run --rm \
-    --mount type=bind,source=$(pwd),target=/src \
-    registry.gitlab.com/pages/hugo:latest \
-    hugo -d public/shared-notes
+echo "${CI_PROJECT_NAME:=personal-notes}"
+time docker run --rm \
+    -u "$(id -u)":"$(id -g)" \
+    --mount type=bind,source="$(pwd)",target=/src \
+    registry.gitlab.com/davidvandebunte/${CI_PROJECT_NAME}:user_hugo \
+    hugo --enableGitInfo -d public/shared-notes
