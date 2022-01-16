@@ -1,7 +1,8 @@
 #!/usr/bin/env sh
 set -o errexit -o nounset
 
-docker exec --tty bazel-server bazel build //content:extract_build_book
+docker exec --tty --workdir "$(pwd)" \
+    bazel-server bazel build //content:extract_build_book
 
 build_path=$(find -H bazel-bin -path "*extract_build_book/tmp/jb")
 

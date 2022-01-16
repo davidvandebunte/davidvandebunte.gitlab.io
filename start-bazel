@@ -22,10 +22,9 @@ start_bazel() {
     -e USER="$(id -u)" \
     -u "$(id -u):$(id -g)" \
     -v /certs/client:/certs/client:ro \
-    -v "$(pwd)":/workspace \
+    -v /home:/home \
     -v /tmp/output_user_root:/tmp/output_user_root \
     -v /tmp/.ci_docker:/tmp/.ci_docker \
-    -w /workspace \
     --entrypoint /bin/bash \
     registry.gitlab.com/davidvandebunte/continuous-integration:4.2.2
 }
