@@ -45,7 +45,7 @@ container_image(
     name = "better_scipy_notebook",
     base = ":install_conda_pip_commit.tar",
     directory = "/home/jovyan/work",
-    tars = ["//jb:jupyter_book_tar"],
+    tars = [":jupyter_book_tar"],
 )
 
 load("@io_bazel_rules_docker//docker/util:run.bzl", "container_run_and_extract")
