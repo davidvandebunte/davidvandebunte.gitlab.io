@@ -14,7 +14,7 @@ def push_dvc_dpath(out_dpath: Path, in_dpath: Path):
     repo = Repo(".")
     print(in_dpath.resolve())
     print(out_dpath.resolve())
-    push_dpath = shutil.copytree(in_dpath.resolve(), out_dpath.resolve())
+    push_dpath = shutil.copytree(in_dpath.resolve(), out_dpath.resolve(), dirs_exist_ok=True)
     repo.add(str(push_dpath))
     tag_name = "job-" + str(push_dpath.name) + "-" + datetime.now().strftime("%Y%m%d-%H%M%S")
     subprocess.check_output(["git", "add", str(push_dpath.parent)])
