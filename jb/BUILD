@@ -8,27 +8,27 @@ container_run_and_commit(
   image = "@scipy_notebook//image",
 )
 
-load("@rules_pkg//:mappings.bzl", "pkg_files", "strip_prefix")
-# pkg_files(
-#     name = "raw_cache",
-#     srcs = glob(["jupyter_execute/**"]),
-#     strip_prefix = strip_prefix.from_pkg(),
-# )
+load("@rules_pkg//:mappings.bzl", "pkg_files")
+pkg_files(
+    name = "raw_cache",
+    srcs = glob(["jupyter_cache/**"]),
+    strip_prefix = "jupyter_cache",
+)
 
 load("@rules_pkg//:pkg.bzl", "pkg_tar")
-# pkg_tar(
-#     name = "cache_tar",
-#     srcs = [":raw_cache"],
-#     owner = "1000.100",
-# )
+pkg_tar(
+    name = "cache_tar",
+    srcs = [":raw_cache"],
+    owner = "1000.100",
+)
 
 load("@io_bazel_rules_docker//container:container.bzl", "container_image")
-# container_image(
-#     name = "scipy_with_cache",
-#     base = ":install_conda_pip_commit.tar",
-#     directory = "/tmp/_build",
-#     tars = [":cache_tar"],
-# )
+container_image(
+    name = "scipy_with_cache",
+    base = ":install_conda_pip_commit.tar",
+    directory = "/tmp/_build/.jupyter_cache",
+    tars = [":cache_tar"],
+)
 
 pkg_tar(
     name = "notes_tar",
@@ -61,7 +61,7 @@ pkg_tar(
 )
 container_image(
     name = "scipy_with_source",
-    base = ":install_conda_pip_commit.tar",
+    base = ":scipy_with_cache.tar",
     directory = "/home/jovyan/work",
     tars = [":jupyter_book_tar"],
 )
