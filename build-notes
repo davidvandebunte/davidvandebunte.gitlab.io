@@ -1,6 +1,17 @@
 #!/usr/bin/env sh
 set -o errexit -o nounset -o xtrace
 
+env
+docker system info
+
+url_host=$(git remote get-url origin | sed -e "s/https:\/\/gitlab-ci-token:.*@//g")
+git remote set-url origin "https://gitlab-ci-token:${CI_TAG_UPLOAD_TOKEN}@${url_host}"
+git config --global user.email "${GITLAB_USER_EMAIL}"
+git config --global user.name 'GitLab (bot)'
+python3 -m dvc config --local cache.dir /tmp/dvc-cache
+python3 -m dvc remote modify --local aws access_key_id "$AWS_ACCESS_KEY_ID"
+python3 -m dvc remote modify --local aws secret_access_key "$AWS_SECRET_ACCESS_KEY"
+
 ./build_scripts/start-brc
 ./build_scripts/start-dind
 ./build_scripts/start-bazel

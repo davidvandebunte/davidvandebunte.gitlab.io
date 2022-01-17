@@ -5,9 +5,6 @@
     name: docker:19.03.12
   services:
     - docker:19.03.12-dind
-  before_script:
-    - env
-    - docker system info
 
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
