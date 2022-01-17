@@ -3,3 +3,4 @@ startup --output_user_root=/tmp/output_user_root
 build --subcommands
 build --verbose_failures
 build --remote_cache=grpc://localhost:9092
+build --output_filter=
