@@ -1,4 +1,27 @@
+load("@io_bazel_rules_docker//docker/util:run.bzl", "container_run_and_commit")
+container_run_and_commit(
+  name = "install_conda_pip",
+  commands = [
+      "conda install jira pint uncertainties",
+      "pip install jupyter-book xlsx2csv==0.7.7 tables",
+  ],
+  image = "@scipy_notebook//image",
+)
+
 load("@rules_pkg//:pkg.bzl", "pkg_tar")
+pkg_tar(
+    name = "cache_tar",
+    srcs = glob(["jupyter_execute/**"]),
+    owner = "1000.100",
+)
+
+load("@io_bazel_rules_docker//container:container.bzl", "container_image")
+container_image(
+    name = "scipy_with_cache",
+    base = ":install_conda_pip_commit.tar",
+    directory = "/tmp/_build",
+    tars = [":cache_tar"],
+)
 
 pkg_tar(
     name = "notes_tar",
@@ -29,21 +52,9 @@ pkg_tar(
     deps = [":notes_tar", ":vgt_tar", ":page_tar"],
     owner = "1000.100",
 )
-
-load("@io_bazel_rules_docker//docker/util:run.bzl", "container_run_and_commit")
-container_run_and_commit(
-  name = "install_conda_pip",
-  commands = [
-      "conda install jira pint uncertainties",
-      "pip install jupyter-book xlsx2csv==0.7.7 tables"
-  ],
-  image = "@scipy_notebook//image",
-)
-
-load("@io_bazel_rules_docker//container:container.bzl", "container_image")
 container_image(
-    name = "better_scipy_notebook",
-    base = ":install_conda_pip_commit.tar",
+    name = "scipy_with_source",
+    base = ":scipy_with_cache.tar",
     directory = "/home/jovyan/work",
     tars = [":jupyter_book_tar"],
 )
@@ -54,13 +65,13 @@ container_run_and_extract(
     commands = ["mkdir -p /tmp/_build/jupyter_execute",
                 "jupyter-book build work --path-output /tmp >/tmp/_build/jupyter_execute/out.txt 2>&1"],
     extract_file = "/tmp/_build",
-    image = ":better_scipy_notebook.tar",
+    image = ":scipy_with_source.tar",
 )
 
 load("@io_bazel_rules_docker//container:container.bzl", "container_push")
 container_push(
    name = "push_jln",
-   image = "better_scipy_notebook",
+   image = "scipy_with_source",
    format = "Docker",
    registry = "registry.gitlab.com",
    repository = "davidvandebunte/$(project)",
