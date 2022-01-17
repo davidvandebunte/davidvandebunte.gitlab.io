@@ -69,8 +69,8 @@ container_image(
 load("@io_bazel_rules_docker//docker/util:run.bzl", "container_run_and_extract")
 container_run_and_extract(
     name = "extract_build_book",
-    commands = ["mkdir -p /tmp/_build/jupyter_execute",
-                "jupyter-book build work --path-output /tmp >/tmp/_build/jupyter_execute/out.txt 2>&1"],
+    commands = ["mkdir -p /tmp/_build",
+                "jupyter-book build work --path-output /tmp >/tmp/_build/out.txt 2>&1"],
     extract_file = "/tmp/_build",
     image = ":scipy_with_source.tar",
 )
