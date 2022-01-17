@@ -5,4 +5,6 @@ docker exec --tty --workdir "$(pwd)" \
     bazel-server bazel build //jb:extract_build_book
 
 mkdir -p public
-cp -r "bazel-bin/jb/extract_build_book/tmp/jb/_build/html" public/executable-notes
+cp -r "bazel-bin/jb/extract_build_book/tmp/_build/html" public/executable-notes
+./build_scripts/push-dvc-dpath \
+    jb/jupyter_execute bazel-bin/jb/extract_build_book/tmp/_build/jupyter_execute/
