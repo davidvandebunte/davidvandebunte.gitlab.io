@@ -18,7 +18,11 @@ def push_dvc_dpath(out_dpath: Path, in_dpath: Path):
     repo.add(str(push_dpath))
     tag_name = "job-" + str(push_dpath.name) + "-" + datetime.now().strftime("%Y%m%d-%H%M%S")
     subprocess.check_output(["git", "add", str(push_dpath.parent)])
-    subprocess.check_output(["git", "commit", "-m", f"{push_dpath.name}: Add .gitignore and .dvc"])
+    git_status = subprocess.check_output(["git", "status", "--short"])
+    print("$ git status --short")
+    print(git_status)
+    if git_status:
+        subprocess.check_output(["git", "commit", "-m", f"{push_dpath.name}: Add dvc edits"])
     subprocess.check_output(["git", "tag", tag_name])
     repo.push(str(push_dpath) + ".dvc")
     subprocess.check_output(["git", "push", "-o", "ci.skip", "origin", tag_name])
