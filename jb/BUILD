@@ -64,5 +64,6 @@ container_push(
    format = "Docker",
    registry = "registry.gitlab.com",
    repository = "davidvandebunte/$(project)",
+   skip_unchanged_digest = True,
    tag = "jln",
 )
