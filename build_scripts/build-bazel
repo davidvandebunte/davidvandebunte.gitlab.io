@@ -4,7 +4,7 @@ set -o errexit -o nounset
 docker exec --tty --workdir "$(pwd)" \
     bazel-server bazel build //jb:extract_build_book
 
-mkdir -p public
-cp -r "bazel-bin/jb/extract_build_book/tmp/_build/html" public/executable-notes
+./build_scripts/push-dvc-dpath \
+    public/executable-notes bazel-bin/jb/extract_build_book/tmp/_build/html/
 ./build_scripts/push-dvc-dpath \
     jb/jupyter_cache bazel-bin/jb/extract_build_book/tmp/_build/.jupyter_cache/

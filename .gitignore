@@ -5,5 +5,3 @@ bazel-*
 .ipython/
 .jupyter/
 .local/
-public/
-start-local-brc
