@@ -78,7 +78,7 @@ of overhead. It rarely makes sense to push for feedback on tests that only run f
 such as linters or a REPL that doesn't need anything loaded in memory. The benefits become clearer
 for "long" experiments where this overhead is insignificant, perhaps more than 3-4 minutes.
 
-### Local resources
+### Accessible computing resources
 
 It's critical (for fast feedback) to use local (controlled) resources to run tests. That is, try to
 to set up the machine you would otherwise `ssh` into as a static runner with GitLab, or do the
@@ -95,19 +95,23 @@ check the state of a machine when it fails a build. That is, you need be able to
 feedback you are not yet pushing back to a shared location with the person writing the code (e.g.
 `/etc/log/syslog`).
 
+It's perfectly possible to debug (e.g. start pdb) a docker container started on a remote machine;
+this has the additional benefit of recording the debugging session once you connect to it. It's
+extremely difficult to debug a halted program without having ssh access to the machine where the
+program has stalled.
+
 With ssh access, you'll be able to monitor whatever performance metrics you are interested in with
 e.g. tmux (see also [GitLab Runner monitoring |
 GitLab](https://docs.gitlab.com/runner/monitoring/index.html)).
 
-It's extremely difficult to debug a halted program without having ssh access to the machine where
-the program has stalled.
-
-It's perfectly possible to debug (e.g. start pdb) a docker container started on a remote machine;
-this has the additional benefit of recording the debugging session once you connect to it.
-
-The "free" cloud resources you get for open source projects from e.g. GitLab are terrible, anyways.
+The "free" cloud resources you get for open source projects from e.g. GitLab are usually terrible.
 At the time of writing these runners have only 2 GB of RAM, 1 CPU, and only 20 GB or so of disk
 space. GitLab isn't going to pay for a dedicated machine that stays up all the time for its users.
+
+What continuous deployment means depends on the context. If you're publishing nothing but a static
+webpage, continuous deployment might only mean running `nginx` on whatever machine happened to be
+assigned a job. If your static content is build with Jupyter, it may be better to run Jupyter Lab on
+whatever machine was assigned the job.
 
 ### Halting problem
 
