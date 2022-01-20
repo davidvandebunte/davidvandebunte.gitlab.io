@@ -73,13 +73,41 @@ in itself and prevent the job from completing.
 
 ## Cost
 
-You will have to set up the machine you would otherwise `ssh` into as a static runner with GitLab,
-or do the GitHub equivalent.
-
 Pushing code and pulling it down on a static or shared CI/CD runner almost always adds a few seconds
 of overhead. It rarely makes sense to push for feedback on tests that only run for a few seconds,
 such as linters or a REPL that doesn't need anything loaded in memory. The benefits become clearer
 for "long" experiments where this overhead is insignificant, perhaps more than 3-4 minutes.
+
+### Local resources
+
+It's critical (for fast feedback) to use local (controlled) resources to run tests. That is, try to
+to set up the machine you would otherwise `ssh` into as a static runner with GitLab, or do the
+GitHub equivalent. See [GitLab Runner | GitLab](https://docs.gitlab.com/runner/).
+
+Tools like `bazel`, `dvc`, and `docker` rely on large caches for efficiency. No matter how powerful
+the cloud resources e.g. your company provides, it's often hard to manage these caches in the cloud.
+For example, pulling the docker image you use to run your experiments can add an unavoidable several
+seconds per experiment. Bazel is much faster when it already has all its caches loaded into volatile
+memory.
+
+It's also critical to have ssh access to debug issues faster. That is, it is often necessary to
+check the state of a machine when it fails a build. That is, you need be able to collect the
+feedback you are not yet pushing back to a shared location with the person writing the code (e.g.
+`/etc/log/syslog`).
+
+With ssh access, you'll be able to monitor whatever performance metrics you are interested in with
+e.g. tmux (see also [GitLab Runner monitoring |
+GitLab](https://docs.gitlab.com/runner/monitoring/index.html)).
+
+It's extremely difficult to debug a halted program without having ssh access to the machine where
+the program has stalled.
+
+It's perfectly possible to debug (e.g. start pdb) a docker container started on a remote machine;
+this has the additional benefit of recording the debugging session once you connect to it.
+
+The "free" cloud resources you get for open source projects from e.g. GitLab are terrible, anyways.
+At the time of writing these runners have only 2 GB of RAM, 1 CPU, and only 20 GB or so of disk
+space. GitLab isn't going to pay for a dedicated machine that stays up all the time for its users.
 
 ### Halting problem
 
@@ -127,4 +155,4 @@ killing the experiment.
 The Slack and Discord integrations for GitLab have a variety of checkboxes you can configure. My
 preference is to leave everything on their defaults, which is a "no news is good news" configuration
 where the user is not notified of passing pipelines. That is, if you get a notification you know you
-need to do something, besides the acknowledgment notification you get immediately after a push.
+need to do something.
