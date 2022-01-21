@@ -199,9 +199,13 @@ option is simply edit the code that calls Bazel to specify target patterns. An o
 involve permanent code changes is `git` push options; see [Push Options |
 GitLab](https://docs.gitlab.com/ee/user/project/push_options.html).
 
-Some tools automatically record the dependency tree. In PyTorch, Theano, Tensorflow, etc. you can
-see the net activations as artifacts, and the backpropagation graph as a record of how all the
-artifacts connect.
+Some tools automatically record or reconstruct dependency trees. In PyTorch, Theano, Tensorflow,
+etc. you can see the net activations as artifacts, and the backpropagation graph as a record of how
+all the artifacts connect. The `import` and `#include` statements in python and C++, respectively,
+are essentially a record of dependencies between files. These dependencies are typically parsed by
+tools from C++, but not in python. Some languages are designed to make parsing these dependencies
+faster; see for example [performance - How does Go compile so quickly? - Stack
+Overflow](https://stackoverflow.com/questions/2976630).
 
 (record-dependencies)=
 ### Record Dependencies
