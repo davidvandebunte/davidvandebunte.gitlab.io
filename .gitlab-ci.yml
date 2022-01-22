@@ -21,7 +21,7 @@ test:
   # stackoverflow.com/a/58402821/622049
   environment:
     name: Develop
-    url: "https://$CI_PROJECT_NAMESPACE.gitlab.io/-/$CI_PROJECT_NAME/-/jobs/$CI_JOB_ID/artifacts/public/executable-notes"
+    url: "https://$CI_PROJECT_NAMESPACE.gitlab.io/-/$CI_PROJECT_NAME/-/jobs/$CI_JOB_ID/artifacts/public/executable-notes/page/about.html"
   tags:
     - laptop
 
