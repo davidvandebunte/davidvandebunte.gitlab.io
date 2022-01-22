@@ -8,6 +8,15 @@ docker exec --tty --workdir "$(pwd)" \
     bazel-server bazel run --define project=${CI_PROJECT_NAME} //jb:push_jln
 
 cp -r "bazel-bin/jb/extract_build_book/tmp/_build/html" public/executable-notes
-rm -f bazel-bin/jb/extract_build_book/tmp/_build/.jupyter_cache/global.db
-./build_scripts/push-dvc-dpath \
-    bazel-bin/jb/extract_build_book/tmp/_build/.jupyter_cache/ jb/jupyter_cache
+
+# TODO: This file is both timestamped and required for caching to work:
+# bazel-bin/jb/extract_build_book/tmp/_build/.jupyter_cache/global.db
+#
+# For now, uncomment these two lines when you want to update the cache once the time to build the
+# jupyter book becomes large relative to other overhead. Ideally, we'd come up with a solution that
+# only creates a new tag and pushes when any file besides global.db change.
+#
+# We could uncomment these lines and always do a push of the new global.db on every commit, but a
+# push to S3 and a git push are relatively slow operations relative to the rest of the build.
+# ./build_scripts/push-dvc-dpath \
+#     bazel-bin/jb/extract_build_book/tmp/_build/.jupyter_cache/ jb/jupyter_cache
