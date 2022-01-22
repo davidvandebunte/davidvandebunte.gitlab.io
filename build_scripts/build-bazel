@@ -7,8 +7,7 @@ docker exec --tty --workdir "$(pwd)" \
 docker exec --tty --workdir "$(pwd)" \
     bazel-server bazel run --define project=${CI_PROJECT_NAME} //jb:push_jln
 
-./build_scripts/push-dvc-dpath \
-    public/executable-notes bazel-bin/jb/extract_build_book/tmp/_build/html/
+cp -r "bazel-bin/jb/extract_build_book/tmp/_build/html" public/executable-notes
 rm -f bazel-bin/jb/extract_build_book/tmp/_build/.jupyter_cache/global.db
 ./build_scripts/push-dvc-dpath \
     jb/jupyter_cache bazel-bin/jb/extract_build_book/tmp/_build/.jupyter_cache/
