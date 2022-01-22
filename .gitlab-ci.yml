@@ -13,6 +13,9 @@ test:
   <<: *dind_login
   script:
     - ./build-notes
+  artifacts:
+    paths:
+      - public
   except:
     - master
   tags:
