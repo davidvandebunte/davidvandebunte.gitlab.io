@@ -1,6 +1,7 @@
 #!/usr/bin/env sh
 set -o errexit -o nounset -o xtrace
 
+date
 env
 docker system info
 
@@ -11,7 +12,10 @@ git config --global user.name 'GitLab (bot)'
 python3 -m dvc config --local cache.dir /tmp/dvc-cache
 python3 -m dvc remote modify --local aws access_key_id "$AWS_ACCESS_KEY_ID"
 python3 -m dvc remote modify --local aws secret_access_key "$AWS_SECRET_ACCESS_KEY"
+
+date
 python3 -m dvc pull jb/jupyter_cache
+date
 
 ./build_scripts/start-brc
 ./build_scripts/start-dind
