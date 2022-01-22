@@ -1,8 +1,11 @@
 #!/usr/bin/env sh
 set -o errexit -o nounset
 
+echo "${CI_PROJECT_NAME:=personal-notes}"
 docker exec --tty --workdir "$(pwd)" \
-    bazel-server bazel build //jb:extract_build_book
+    bazel-server bazel build --define project=${CI_PROJECT_NAME} //jb:extract_build_book
+docker exec --tty --workdir "$(pwd)" \
+    bazel-server bazel run --define project=${CI_PROJECT_NAME} //jb:push_jln
 
 ./build_scripts/push-dvc-dpath \
     public/executable-notes bazel-bin/jb/extract_build_book/tmp/_build/html/

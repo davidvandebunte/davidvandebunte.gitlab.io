@@ -19,4 +19,3 @@ python3 -m dvc pull jb/jupyter_cache
 ./build_scripts/build-bazel
 ./build_scripts/push-hugo
 ./build-shared-notes
-./build_scripts/push-jln
