@@ -9,13 +9,13 @@ from datetime import datetime
 
 from dvc.repo import Repo
 
-def push_dvc_dpath(out_dpath: Path, in_dpath: Path):
+def push_dvc_dpath(in_dpath: Path, out_dpath: Path):
     "Push a dvc directory to a git branch"
     repo = Repo(".")
-    print(in_dpath.resolve())
-    print(out_dpath.resolve())
-    shutil.rmtree(out_dpath.resolve())
-    push_dpath = shutil.copytree(in_dpath.resolve(), out_dpath.resolve())
+    print(in_dpath)
+    print(out_dpath)
+    shutil.rmtree(out_dpath)
+    push_dpath = shutil.copytree(in_dpath, out_dpath)
     repo.add(str(push_dpath))
     tag_name = "job-" + str(push_dpath.name) + "-" + datetime.now().strftime("%Y%m%d-%H%M%S")
     subprocess.check_output(["git", "add", str(push_dpath.parent)])
@@ -32,10 +32,10 @@ def push_dvc_dpath(out_dpath: Path, in_dpath: Path):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("out_dpath", type=Path)
     parser.add_argument("in_dpath", type=Path)
+    parser.add_argument("out_dpath", type=Path)
     args = parser.parse_args()
-    return push_dvc_dpath(args.out_dpath, args.in_dpath)
+    return push_dvc_dpath(args.in_dpath.resolve(), args.out_dpath.resolve())
 
 
 if __name__ == "__main__":
