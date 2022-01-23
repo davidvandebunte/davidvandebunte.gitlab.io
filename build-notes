@@ -24,4 +24,4 @@ date
 ./build_scripts/push-hugo
 ./build-shared-notes
 cd public
-tree -H '.' --prune -P '*.html' --noreport --charset utf-8 . > index.html
+tree -H '.' --prune -P 'index.html' -L 2 --noreport --charset utf-8 . > index.html
