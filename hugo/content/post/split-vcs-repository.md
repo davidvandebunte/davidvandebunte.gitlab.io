@@ -62,18 +62,27 @@ increases. What if you limit your search to a directory, though?
 
 Pulls. How long does it take to pull the repository to a new developer's machine?
 
-See also:
-- "VCS Scalability" in [Monorepos: Please don’t!][mpdn]
-- "Tooling" in [Multirepo vs Monorepo][mvm]
-- "Scalability Challenges" in `!w Monorepo`
+See also "VCS Scalability" in [Monorepos: Please don’t!][mpdn], "Tooling" in [Multirepo vs
+Monorepo][mvm], and "Scalability Challenges" in `!w Monorepo`.
 
 ## Publication
 
 [sn]: {{< relref "share-notes.md" >}}
 
-See all your reasons to [Share Notes][sn]. You often need to split across the public/private divide.
-You can do this without splitting repositories; as you first did in your shared/personal notes repos
-you should be able fork the public repository and create a private "backup" repository to push to.
+See [Share Notes][sn]. We often need to split across the public/private divide. You can do this
+without splitting repositories; instead fork the public repository and create a private "backup"
+repository to push to.
+
+The downside is if you are regularly using your fork/branch, you'll be constantly rebasing that code
+on the upstream until it is merged. To reduce this pain, you can add one of these tags to the front
+of commits you want to keep on your branch:
+- `wip:`
+- `temp:`
+- `exp:`
+- `hack:`
+
+Alternatively, write commits you know you will need to move to the public branch using whatever
+standard you use on the public branch (e.g. starting with a filename).
 
 # Cost
 
