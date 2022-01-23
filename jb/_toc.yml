@@ -14,3 +14,10 @@ parts:
       - file: notes/memoize-docker-image.md
       - file: notes/switch-to-conda.md
       - file: notes/update-dependencies.md
+      - file: notes/share-comment.md
+      - file: notes/share-notes.md
+      - file: notes/share-to-wikimedia.md
+      - file: notes/share-to-blog.md
+      - file: notes/redact.md
+      - file: notes/select-license.md
+      - file: notes/share-to-stack-exchange.md
