@@ -24,6 +24,7 @@ date
 ./build_scripts/push-hugo
 ./build-shared-notes
 
+# TODO: What about a redirect at the root, once you are down to only the jupyter book project?
 cd public
 tree -H '.' --prune -P 'index.html' -L 2 --noreport --charset utf-8 . > out.html
 mv out.html index.html
