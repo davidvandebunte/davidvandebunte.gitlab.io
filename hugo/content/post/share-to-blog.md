@@ -65,7 +65,9 @@ As the author of a blog, when you go to the front page of your blog, can you fin
 looking for? If you want stay in focused work on your most recently published work, you should
 update the date so you can easily find what you're publishing on the front page.
 
-## Optimize for Search Engines
+## Optimize for Search Engines (SEO)
+
+[sb]: https://ahrefs.com/blog/seo-basics/
 
 You don't have to get your articles to show up in Google or DuckDuckGo; get a larger website to do
 the SEO for you by linking from them. For example, link to your articles from an SO question so you
@@ -74,3 +76,13 @@ you search.
 
 For example, this profile links to this blog:
 - https://github.com/davidvandebunte
+
+See "Skyscraper technique" on [ahrefs: SEO Basics][sb]. If you're reviewing a book, find someone
+else with solutions online, and ask them to link to your page from theirs. They may even give you
+direct feedback, which is what you were looking for in the first place. When you are going through
+the answers of others, give them feedback on their solutions, and perhaps they'll do the same for
+you.
+
+For the sake of SEO, you should generally speaking only be linking to drawings on your own website.
+For example, if you link to an SVG you host on your blog from Stack Overflow, your blog will likely
+show up higher in search engine results.
