@@ -19,8 +19,14 @@ Generalizes:
 # Test
 
 Share personal content to a (more) public medium. There are multiple levels of public. For example,
-you can publish your personal thoughts publicly within a team, or within your whole company (inner
-source). How big is your bubble?
+you can publish to:
+- Your team
+- Your company (inner source)
+- The internet (open source)
+
+How open should you be with your thoughts?
+
+![x](/more-public-domain.svg)
 
 # Value
 
@@ -152,6 +158,32 @@ changes; it would have to get spread and experimented with first. By that point 
 the idea and have a chance to catch up. It's also difficult to keep an idea hidden long. The more
 people we have who understand a particular concept, the less likely we are to have one person or
 group of people monopolize power.
+
+## Organization
+
+To publish notes is to organize notes. Organized notes are easy to publish, and published notes must
+already be organized. Considering others is considering yourself.
+
+An imaginary reader helps you delete notes you don't know you should delete. For example, you
+often need to copy your thoughts to an SO answer to remove a bunch of documentation or links that
+are obvious (that you could get from a quick web search). You naturally don't want to be too verbose
+in a text conversation with certain (distractable) people, because they may not respond if you send
+them a wall of text. To get a response, you naturally cut down your content. You don't read your own
+notes for the same reason: too much text you don't have in working memory. If you want to read your
+own notes (get any value out of them) you should cut them down, most effectively by sharing them.
+
+If people (including yourself) are bored sick by your articles then they're not going to get read.
+That is, sometimes the "value" in the article is not only the changes it makes to your mental model,
+etc. but a laugh in the present.
+
+Why share your notes and ideas? You remember when you share something, much better than if you
+simply write it down. You want to be able to perform many tasks without needing to refer to your
+notes, or only refer them to lightly. Your notes need to be organized at some minimal level for you
+to be able to remember what notes you need to refer to perform tasks.
+
+A PhD is one way to force yourself to organize a large amount of notes in a coherent way. Either
+that, or a book. If you're motivated by others or a personal commitment to organize notes then it is
+more likely to happen.
 
 # Cost
 
