@@ -32,7 +32,7 @@ container_image(
 
 pkg_tar(
     name = "notes_tar",
-    srcs = glob(["notes/*.md"]),
+    srcs = glob(["notes/*"]),
     package_dir = "notes",
     owner = "1000.100",
 )
