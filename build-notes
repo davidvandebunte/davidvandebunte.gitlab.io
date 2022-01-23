@@ -23,6 +23,8 @@ date
 ./build_scripts/build-bazel
 ./build_scripts/push-hugo
 ./build-shared-notes
+
 cd public
 tree -H '.' --prune -P 'index.html' -L 2 --noreport --charset utf-8 . > out.html
 mv out.html index.html
+./build_scripts/start-nginx
