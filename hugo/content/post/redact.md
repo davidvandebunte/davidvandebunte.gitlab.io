@@ -66,6 +66,46 @@ From a company’s perspective, ideas don’t have to be ground-breaking (or oft
 worth keeping private. The IP system (patents) was intended to protect against competition, while
 still encouraging sharing.
 
+## Broken links (and dependencies)
+
+[lc]: https://en.wikipedia.org/wiki/Linker_%28computing%29
+
+Think about dependendencies between projects of notes similar to dependencies between code projects.
+You don't want a circular dependency between e.g. two itertools projects or you wouldn't be able to
+load either. Really, this is a technical issue. If you could load both projects into memory at once
+(knowing they had circular dependencies) and then link them, you could call back and forth between
+them. In practice you have to load one into memory, then link to the other (compiling and linking).
+Even if this is a technical limitation, it helps to see linking on the web analogously to linking
+code (see [Linker (computing)][lc]).
+
+You have a fundamental conflict between the need to link in one direction for privacy, and in
+another direction for the sake of recording training examples (equivalently, what a process or
+action specializes). For the sake of privacy, you need links to only point from private to work to
+public notes (or directly from private to public notes). Many work actions are specializations of
+more general actions; you'd like to be able to link back from these general actions to the training
+data (work actions) that helped you learn how to perform them. That is, a link to what the action
+specializes. Unfortunately, for privacy reasons, you need to throw these links away.
+
+It makes less sense to invest in "specializes" links for this reason, because at some point you're
+going to have to throw them away. It's typically more general actions that make it into public notes
+first. Obviously you hide all your hidden motivations for why you now consider these general actions
+important; some of them may go back to your childhood. If general actions are what go into public
+notes first, and they tend to go in incrementally, then you're going to have to throw away the
+"specializes" links anyways as you move the notes unless you move large chunks over at once. This
+suggests you should only add "specializes" links in the context of your public notes, only to avoid
+temporary work. You'll always have the other half of the double link (generalizes and specializes)
+if you really need to build some kind of map.
+
+Code is only going to link in the generalizes direction. It'd be really nice for library authors to
+understand who is using their code (they try), but this is often nearly impossible to figure out. If
+your notes eventually become code, you'll also have to drop the "specializes" half of the double
+link.
+
+This is similar to the process of depersonalization that any company must go through with all the
+data it collects and uses. Lots of personal data needs to be thrown away in order to come up with
+something more generally useful, that is, a tool that isn't a security risk to a person or a
+company.
+
 # TODo
 
 Search for "TODo" in your notes to confirm you aren't publishing incomplete work. That final o is
