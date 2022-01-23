@@ -113,6 +113,15 @@ created. That is, if running a clean build does not produce the same result as a
 We'll use Correct (with a capital C) to capture this concept of perfect (or pinned) reproducibility.
 For more on perfect reproducibility, see [](record-dependencies).
 
+Reproducibility is not always important; sometimes it is sufficient to save history. Many (valuable)
+published papers don't include every step necessary to reproduce figures. Once books are published
+and the author is gone, it's likely difficult for anyone to reproduce the content. In the case of
+recursive artifacts mentioned above, it's often not worth the effort to save every historical
+version of e.g. a compiler. Museums don't record how many of the artifacts they store were produced.
+If you don't care that much about being able to execute your code anymore, it's likely no one else
+cares either. It'd be nice to be able to run it, sure, but the value in being able to run the code
+can be much lower than maintaining the dependencies that are required to be able to run it.
+
 #### Estimation
 
 How do you put a numerical estimate on the value of reproducibility? The first step is to estimate
