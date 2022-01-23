@@ -73,6 +73,8 @@ In order of importance:
       that organizers can tell which documents link to the document being
       renamed (not possible with Google Docs). When is it ever OK to delete
       a Google Doc?.
+1. There's a larger barrier to entry for plain text notes; unlike a wiki page or Google document,
+   users may need to fork a repository to make edits.
 
 [1]: https://stackoverflow.com/editing-help
 [2]: https://www.ericholscher.com/blog/2016/mar/15/dont-use-markdown-for-technical-docs/:w
