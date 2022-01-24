@@ -1,0 +1,21 @@
+#!/usr/bin/env sh
+FILES="hugo/content/post/share-comment.md
+    hugo/content/post/share-notes.md
+    hugo/content/post/share-to-wikimedia.md
+    hugo/content/post/share-to-blog.md
+    hugo/content/post/redact.md
+    hugo/content/post/select-license.md
+    hugo/content/post/share-to-stack-exchange.md"
+echo $FILES
+cp $FILES jb/notes
+RENAMED_FILES=$(git ls-files -o  --exclude-standard)
+cp hugo/static/more-public-domain.svg jb/notes
+git add .
+git commit -m "Copy share-*.md files to jb directory"
+for md_file in $RENAMED_FILES; do
+    git restore -s main "$md_file"
+done
+git add .
+git commit -m "Restore converted files on sharing notes"
+
+# TODO: Manually delete the md files and svgs you leave behind.
