@@ -1,14 +1,25 @@
 ---
-title: "Redact"
-date: 2021-12-24
-tags: ['notes', 'share']
+jupytext:
+  cell_metadata_filter: -all
+  formats: md:myst
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.11.2
+kernelspec:
+  display_name: Python 3 (ipykernel)
+  language: python
+  name: python3
 ---
 
-[sn]: {{< relref "share-notes.md" >}}
+# Redact
+
+[sn]: ./share-notes.md
 
 Part of [Share Notes][sn].
 
-# Personal data
+## Personal data
 
 [pd]: https://en.wikipedia.org/wiki/Personal_data
 [dra]: https://en.wikipedia.org/wiki/Data_re-identification
@@ -29,7 +40,7 @@ Many websites still rely on a security model that depends on security questions.
 Facebook and find out the answers to these typical questions: In what city was your high school?
 What was your childhood nickname?
 
-# Jargon
+## Jargon
 
 [mtau]: https://en.wikipedia.org/wiki/Wikipedia:Make_technical_articles_understandable
 
@@ -45,7 +56,7 @@ explain to grandmother when you would otherwise only have to have explained to:
 Keep technical levels high so you don't make your notes more verbose and therefore less useful to
 you. See also [Wikipedia: Make technical articles understandable][mtau].
 
-# Team data
+## Team data
 
 [stow]: https://en.wikipedia.org/wiki/Security_through_obscurity#Obscurity_in_architecture_vs._technique
 [oac]: https://openai.com/charter/
@@ -66,7 +77,7 @@ From a company’s perspective, ideas don’t have to be ground-breaking (or oft
 worth keeping private. The IP system (patents) was intended to protect against competition, while
 still encouraging sharing.
 
-## Broken links (and dependencies)
+### Broken links (and dependencies)
 
 [lc]: https://en.wikipedia.org/wiki/Linker_%28computing%29
 
@@ -106,7 +117,9 @@ data it collects and uses. Lots of personal data needs to be thrown away in orde
 something more generally useful, that is, a tool that isn't a security risk to a person or a
 company.
 
-# TODo
+## TODo
 
 Search for "TODo" in your notes to confirm you aren't publishing incomplete work. That final o is
 lowercase so this doesn't show up.
+
+% TODO: https://docs.google.com/document/d/1a8qLqYxei1aF0biI2fxe_xcnUWZiC2bm59C5PMtSWTw/edit

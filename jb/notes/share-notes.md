@@ -1,22 +1,39 @@
 ---
-title: "Share Notes"
-date: 2021-12-21
-tags: ['notes', 'share']
+jupytext:
+  cell_metadata_filter: -all
+  formats: md:myst
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.11.2
+kernelspec:
+  display_name: Python 3 (ipykernel)
+  language: python
+  name: python3
 ---
 
-[sc]: {{< relref "share-comment.md" >}}
-[stse]: {{< relref "share-to-stack-exchange.md" >}}
-[stw]: {{< relref "share-to-wikimedia.md" >}}
-[stb]: {{< relref "share-to-blog.md" >}}
-[rd]: {{< relref "redact.md" >}}
+# Share Notes
+
+[sc]: ./share-comment.md
+[stse]: ./share-to-stack-exchange.md
+[stw]: ./share-to-wikimedia.md
+[stb]: ./share-to-blog.md
+[stjh]: ./share-to-jupyter-html.md
+[stjb]: ./share-to-jupyter-book.md
+[stjira]: ./share-to-jira.md
+[rd]: ./redact.md
 
 Generalizes:
 - [Share Comment][sc]
 - [Share to Stack Exchange][stse]
 - [Share to Wikimedia][stw]
 - [Share to Blog][stb]
+% - [Share to Jupyter HTML][stjh]
+% - [Share to Jupyter Book][stjb]
+% - [Share to JIRA][stjira]
 
-# Test
+## Test
 
 Share personal content to a (more) public medium. There are multiple levels of public. For example,
 you can publish to:
@@ -26,13 +43,13 @@ you can publish to:
 
 How open should you be with your thoughts?
 
-![x](/more-public-domain.svg)
+![x](./more-public-domain.svg)
 
-# Value
+## Value
 
 In order of value.
 
-## Correction
+### Correction
 
 [ts]: https://stackoverflow.com/a/6556453/622049
 [oss]: https://en.wikipedia.org/wiki/Open-source_software
@@ -75,7 +92,7 @@ For the special case of working through a textbook sharing your answers lets oth
 answers against yours. This lets you self-grade against theirs if they also publish or comment on
 your answers.
 
-### Correction by Computers
+#### Correction by Computers
 
 [aei]: https://docs.gitlab.com/ee/ci/yaml/#artifactsexpire_in
 [odaz]: https://azure.microsoft.com/en-us/services/open-datasets/#overview
@@ -94,7 +111,7 @@ for free:
 - [Open Datasets | Microsoft Azure][odaz]
 - [Open Data on AWS][odam]
 
-## Credit
+### Credit
 
 Open source contributions look good on a resume. Have you ever searched for someone on LinkedIn,
 StackOverflow, or elsewhere before interviewing them? In fact, a blog is like a resume. Is what
@@ -106,7 +123,7 @@ raise your own visibility or your code's visibility. At the least, share your op
 individual coworkers, spouse, or kids. To "publish" code is to release it to production, in the
 context of your job (continuous deployment).
 
-## Politick
+### Politick
 
 [tb]: https://en.wikipedia.org/wiki/Textbook
 
@@ -120,7 +137,7 @@ Said in a more pessimistic way, publishing can be a way to push your opinions or
 in the same way spam email or advertising does. Are all the questions at the end of a [Textbook][tb]
 worth answering? Is the whole book worth reading?
 
-## Web Linking
+### Web Linking
 
 Do you want to link to your notes from e.g. Google Calendar reminders? If you publish them you can
 read them on your phone rather than needing to be at your computer to start rereading your own
@@ -131,7 +148,7 @@ your phone on a trip, for example. What do you look up on your phone when you've
 time? What if you reviewed your last blog post? This keeps you in focused work, better than a
 long-term recommended reading list you or some other site maintain.
 
-## Simplified Searching
+### Simplified Searching
 
 Prefer sharing to personal notes so you have one place to search: the web. One way to think about
 sharing notes is as organizing notes by deleting them from your private repositories if they don't
@@ -141,7 +158,7 @@ efficiency (pedagogical efficiency) as the speed at which the notes help you rec
 notes will be less efficient only if you use different internal language than the average English
 speaker.
 
-## Transparency
+### Transparency
 
 [stow]: https://en.wikipedia.org/wiki/Security_through_obscurity#Obscurity_in_architecture_vs._technique
 
@@ -159,7 +176,9 @@ the idea and have a chance to catch up. It's also difficult to keep an idea hidd
 people we have who understand a particular concept, the less likely we are to have one person or
 group of people monopolize power.
 
-## Organization
+### Organization
+
+% See also [Organize notes](./organize-notes.md)
 
 To publish notes is to organize notes. Organized notes are easy to publish, and published notes must
 already be organized. Considering others is considering yourself.
@@ -185,10 +204,12 @@ A PhD is one way to force yourself to organize a large amount of notes in a cohe
 that, or a book. If you're motivated by others or a personal commitment to organize notes then it is
 more likely to happen.
 
-# Cost
+## Cost
 
 In order of cost.
 
-## [Redact][rd]
+### [Redact][rd]
 
-## [Select License]({{< relref "select-license.md" >}})
+### [Select License](./select-license.md)
+
+% TODO: improve-share-notes.md

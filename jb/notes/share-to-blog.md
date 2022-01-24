@@ -1,18 +1,29 @@
 ---
-title: "Share to Blog"
-date: 2021-12-24
-tags: ['share']
+jupytext:
+  cell_metadata_filter: -all
+  formats: md:myst
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.11.2
+kernelspec:
+  display_name: Python 3 (ipykernel)
+  language: python
+  name: python3
 ---
 
-[sn]: {{< relref "share-notes.md" >}}
+# Share to Blog
+
+[sn]: ./share-notes.md
 
 Part of [Share Notes][sn].
 
-# Cost
+## Cost
 
 In order of cost.
 
-## Backport
+### Backport
 
 [backport]: https://en.wikipedia.org/wiki/Backporting
 
@@ -54,7 +65,7 @@ See also:
 - [How to get just one file from another branch? - SO](https://stackoverflow.com/a/2364223/622049)
 - [A detailed answer on `git restore` - SO](https://stackoverflow.com/a/60855504/622049)
 
-## Update Publication Date
+### Update Publication Date
 
 Readers (including the author) like to see the date that content was posted. The older the content,
 the less likely it is to be useful (most people check the year on blog posts). For example, when was
@@ -65,7 +76,7 @@ As the author of a blog, when you go to the front page of your blog, can you fin
 looking for? If you want stay in focused work on your most recently published work, you should
 update the date so you can easily find what you're publishing on the front page.
 
-## Optimize for Search Engines (SEO)
+### Optimize for Search Engines (SEO)
 
 [sb]: https://ahrefs.com/blog/seo-basics/
 

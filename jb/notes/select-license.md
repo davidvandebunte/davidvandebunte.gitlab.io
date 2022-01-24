@@ -1,10 +1,21 @@
 ---
-title: "Select License"
-date: 2020-12-02T12:46:04-06:00
-tags: ['code', 'notes']
+jupytext:
+  cell_metadata_filter: -all
+  formats: md:myst
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.11.2
+kernelspec:
+  display_name: Python 3 (ipykernel)
+  language: python
+  name: python3
 ---
 
-[sn]: {{< relref "share-notes.md" >}}
+# Select License
+
+[sn]: ./share-notes.md
 
 Part of [Share Notes][sn].
 
