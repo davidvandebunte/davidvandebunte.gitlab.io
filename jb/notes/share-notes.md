@@ -52,25 +52,28 @@ In order of value.
 ### Correction
 
 [ts]: https://stackoverflow.com/a/6556453/622049
+[ref]: https://unix.stackexchange.com/questions/688195/
 [oss]: https://en.wikipedia.org/wiki/Open-source_software
 
 More people are surprised by what they learn from sharing software designs before implementing. Why
-not your thoughts? See a clear example in the comments on [this StackOverflow answer][ts]. Why are
-so many organizations based around teams? Presumably, peer review by smart people produces better
-results faster.
+not your thoughts? See a clear example in the comments on [Template specialization for types
+providing a traits class - Stack Overflow][ts]. The feedback you get online can be incredibly fast,
+and continue to improve your design for days beyond your initial query; see for example [Reset ext4
+filesystem without changing the filesystem UUID - Unix & Linux Stack Exchange][ref].
 
-In short, share your mental functions to get help from others in fixing them. Others are motivated
-to fix your mental functions for the same reason you're motivated to fix theirs; so we all have a
-single source of correct (or at least consistent) notes. You want to make incremental comments on
-other people's work (in separate repos, if need be) for the same reason that you don't want to
-maintain your own FasterRCNN implementation; because publishing lets you avoid maintaining the
-notes/code yourself.
+At best, strangers online are motivated to fix your mental functions for the same reason you're
+motivated to fix theirs; so we all have a single source of correct (or at least consistent) notes.
+If they aren't motivated by the greater good, lots of reputation on Stack Overflow is easy to link
+to from a resume and is often taken by employers as a good proxy for a candidate's ability. As part
+of a set of other proxies like academic degrees and interview performance, this is not unreasonable.
 
-See comments on privatization vs. open-sourcing in [Open-source software][oss]. You want to
-"open-source" your thoughts to reduce the maintenance burden associated with them (e.g. organizing
-them, resolving conflicts while merging upstream thoughts). The same happens when a big company like
-Google or Facebook takes a library or tool they're maintaining (PyTorch, Kubernetes) and open
-sources it.
+You want to make incremental comments on other people's work (in separate repos, if need be) for the
+same reason that you don't want to maintain your own FasterRCNN implementation; because publishing
+lets you avoid maintaining the notes/code yourself. See comments on privatization vs. open-sourcing
+in [Open-source software][oss]. Said another way, you want to "open-source" your thoughts to reduce
+the maintenance burden associated with them (e.g. organizing them, resolving conflicts while merging
+upstream thoughts). The same happens when a big company like Google or Facebook takes a library or
+tool they're maintaining (PyTorch, Kubernetes) and open sources it.
 
 Open sourcing works because you (as an individual, or outsider) suddenly gain "ownership" in the
 tool that is now in the public domain. That is, you can use Wikipedia as a place to store your own
@@ -87,6 +90,9 @@ Prefer the term "share" to publicize and publish. The terms publicize and publis
 existing content you need to convert between formats to publish. Much of the time, your thoughts can
 go straight into one of the mediums listed above (interpret "share notes" as sharing mental notes,
 i.e. sharing your thoughts). Live openly and you can avoid conversions.
+
+Why are so many organizations based around teams? Presumably, peer review by smart people produces
+better results faster.
 
 For the special case of working through a textbook sharing your answers lets others self-grade their
 answers against yours. This lets you self-grade against theirs if they also publish or comment on
