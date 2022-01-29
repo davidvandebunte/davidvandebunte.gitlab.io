@@ -216,7 +216,7 @@ question to StackOverflow, a mailing list, a chat channel, etc. See also [Share 
 
 Look for names in git:
 
-```{code-cell}
+```bash
 git log --grep="log" --grep="thread" --all-match
 git log master -- path/to/broken-library
 ```
