@@ -1,0 +1,43 @@
+#!/usr/bin/env sh
+set -eux
+
+FILES="hugo/content/post/split-vcs-repository.md
+    hugo/content/post/investigate-root-cause.md
+    hugo/content/post/prescribe-computing-metrics.md
+    hugo/content/post/containerize-application.md"
+echo $FILES
+cp $FILES jb/notes
+RENAMED_FILES=$(git ls-files -o  --exclude-standard)
+git add .
+git commit -m "Copy *.md files to jb directory"
+git mv hugo/static/rca-sequence-of-events.svg jb/notes
+git mv hugo/static/dag-supervised-learning.svg jb/notes
+git mv hugo/static/dag-oom.svg jb/notes
+git mv hugo/static/oom.svg jb/notes
+git mv hugo/static/rca-incomplete-domain-knowledge.svg jb/notes
+git mv hugo/static/rca-experiment-only.svg jb/notes
+git add .
+git commit -m "Move associated .*svg files to jb directory"
+for md_file in $RENAMED_FILES; do
+    sed -i 's/^#/##/' "$md_file"
+    sed -i 's/{{< relref "\(.*\)" >}}/.\/\1/' "$md_file"
+    sed -i '/^---/d' "$md_file"
+    sed -i '/^tags: /d' "$md_file"
+    sed -i '/^date: /d' "$md_file"
+    sed -i 's/^title: "\(.*\)"/# \1/' "$md_file"
+    sed -i 's|/\(.*\.svg\)|./\1|' "$md_file"
+    jb myst init "$md_file"
+done
+git add .
+git commit -m "Partially convert *.md files automatically"
+
+# Manually:
+# 1. Confirm the md list is complete; search for `md` in the conversion diff. All external
+#    references must either be in the list or separated in a way that they can be percent-symbol
+#    commented out.
+# 1. Confirm the svg list is complete by searching for `svg` in the same diff.
+# 1. Review all `code-cell` conversions. Should/will they run?
+# 1. Review the (buggy) automatic conversion for errors.
+# 1. Add the new files to the TOC.
+# 1. Comment out references to md files that were not converted.
+# 1. Delete the md files you left behind.
