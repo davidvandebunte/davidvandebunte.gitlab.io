@@ -53,10 +53,10 @@ load(
 )
 
 container_pull(
-  name = "scipy_notebook",
+  name = "datascience_notebook",
   registry = "index.docker.io",
-  repository = "jupyter/scipy-notebook",
-  digest = "sha256:7513d8ece39dea46fe9e5f371dc6f664b0eae9b5e100ba47a7cf0c544109d323",
+  repository = "jupyter/datascience-notebook",
+  digest = "sha256:69f9bcbed7cc2b1143e744ea028cd48cda93f1fd93bf96d0a9e1a5b3bf3cf71b",
 )
 
 container_pull(
