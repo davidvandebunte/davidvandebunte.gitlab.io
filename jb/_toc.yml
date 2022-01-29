@@ -7,11 +7,13 @@ parts:
   - caption: Visual Group Theory
     chapters:
       - file: notes/chp8-q32.md
+  - caption: Memoize
+    chapters:
+      - file: notes/memoize-artifact.md
+      - file: notes/memoize-docker-image.md
   - caption: Notes
     chapters:
       - file: notes/push-for-feedback.md
-      - file: notes/memoize-artifact.md
-      - file: notes/memoize-docker-image.md
       - file: notes/switch-to-conda.md
       - file: notes/update-dependencies.md
       - file: notes/containerize-application.md
