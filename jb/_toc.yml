@@ -14,14 +14,16 @@ parts:
       - file: notes/memoize-docker-image.md
       - file: notes/switch-to-conda.md
       - file: notes/update-dependencies.md
-      - file: notes/share-comment.md
-      - file: notes/share-notes.md
-      - file: notes/share-to-wikimedia.md
-      - file: notes/share-to-blog.md
-      - file: notes/redact.md
-      - file: notes/select-license.md
-      - file: notes/share-to-stack-exchange.md
       - file: notes/containerize-application.md
       - file: notes/split-vcs-repository.md
       - file: notes/investigate-root-cause.md
       - file: notes/prescribe-computing-metrics.md
+  - caption: Share
+    chapters:
+      - file: notes/redact.md
+      - file: notes/select-license.md
+      - file: notes/share-comment.md
+      - file: notes/share-notes.md
+      - file: notes/share-to-blog.md
+      - file: notes/share-to-stack-exchange.md
+      - file: notes/share-to-wikimedia.md
