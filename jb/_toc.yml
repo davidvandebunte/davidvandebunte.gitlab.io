@@ -21,3 +21,7 @@ parts:
       - file: notes/redact.md
       - file: notes/select-license.md
       - file: notes/share-to-stack-exchange.md
+      - file: notes/containerize-application.md
+      - file: notes/split-vcs-repository.md
+      - file: notes/investigate-root-cause.md
+      - file: notes/prescribe-computing-metrics.md
