@@ -6,7 +6,7 @@ root: page/about
 parts:
   - caption: Visual Group Theory
     chapters:
-      - file: vgt/chp8-q32.md
+      - file: notes/chp8-q32.md
   - caption: Notes
     chapters:
       - file: notes/push-for-feedback.md
