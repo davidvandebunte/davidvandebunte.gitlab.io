@@ -2,11 +2,11 @@
 
 # See jupyterbook.org/customize/toc.html
 format: jb-book
-root: page/about
+root: notes/about
 parts:
   - caption: Visual Group Theory
     chapters:
-      - file: vgt/chp8-q32.md
+      - file: notes/chp8-q32.md
   - caption: Notes
     chapters:
       - file: notes/push-for-feedback.md
