@@ -17,7 +17,7 @@ def push_dvc_dpath(in_dpath: Path, out_dpath: Path):
     shutil.rmtree(out_dpath)
     push_dpath = shutil.copytree(in_dpath, out_dpath)
     repo.add(str(push_dpath))
-    tag_name = "job-" + str(push_dpath.name) + "-" + datetime.now().strftime("%Y%m%d-%H%M%S")
+    tag_name = "test-" + str(push_dpath.name) + "-" + datetime.now().strftime("%Y%m%d-%H%M%S")
     subprocess.check_output(["git", "add", str(push_dpath.parent)])
     git_status = subprocess.check_output(["git", "status", "--short"])
     print("$ git status --short")
