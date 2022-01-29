@@ -2,7 +2,7 @@
 
 # See jupyterbook.org/customize/toc.html
 format: jb-book
-root: page/about
+root: notes/about
 parts:
   - caption: Visual Group Theory
     chapters:

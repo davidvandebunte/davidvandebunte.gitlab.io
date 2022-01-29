@@ -37,12 +37,6 @@ pkg_tar(
     owner = "1000.100",
 )
 pkg_tar(
-    name = "page_tar",
-    srcs = glob(["page/*.md"]),
-    package_dir = "page",
-    owner = "1000.100",
-)
-pkg_tar(
     name = "jupyter_book_tar",
     srcs = [
         "_config.yml",
@@ -50,7 +44,7 @@ pkg_tar(
         "executable-notes.svg",
         "executable-notes-mini.svg",
     ],
-    deps = [":notes_tar", ":page_tar"],
+    deps = [":notes_tar"],
     owner = "1000.100",
 )
 container_image(
