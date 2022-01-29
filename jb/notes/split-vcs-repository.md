@@ -30,6 +30,7 @@ Examples of the most closely-related (default) repository:
 Any of your personal or public repositories:
 - https://gitlab.com/davidvandebunte
 - https://github.com/davidvandebunte
+% - https://main.gitlab.in.here.com/vandebun
 
 If you feel uncertain about what your non-split options are, consider:
 - `!glab`
@@ -139,6 +140,8 @@ See "Simplified organization" in [Advantages of monorepos][aom]. When you want t
 boundaries or "projects" in general you can do so without going to GitLab or GitHub. Consider the
 value in organizing notes.
 
+% See also [Organize notes](./organize-notes.md)
+
 ### Forced Collaboration
 
 [mpd]: https://medium.com/@adamhjk/monorepo-please-do-3657e08a4b70
@@ -157,3 +160,10 @@ the team did in a sprint.
 Wikipedia is a great example of how you can avoid splitting your thoughts (it's similar to a
 monorepo of notes) and still work on the public side of the line; the downside is how it can be hard
 to contribute to because it has so many "conceptual" dependencies.
+
+% ### vim
+
+% In a manyrepo setup you should have one vim instance per repo, in a monorepo setup you have a vim
+% instance per directory.
+
+% TODO: improve-split-vcs-repository.md

@@ -117,6 +117,8 @@ validated learning and deliver to customers.
 
 #### Attract Developers
 
+% See also [Transform Docker Image](./transform-docker-image.md)
+
 A stable environment is also quick to set up. Docker builds automate manual setup documented in
 notes and wiki pages. That is, it moves these notes to code to make them more maintainable and
 faster. Running code is much faster than following a wiki page. You save time from faster setup
@@ -282,3 +284,12 @@ The Jupyter docker stacks images border on unstable, but are also incredibly use
 of these even more unstable community stacks:
 - https://jupyter-docker-stacks.readthedocs.io/en/latest/using/selecting.html#community-stacks
 - https://github.com/iot-salzburg/gpu-jupyter/
+
+% ## Additional Training Data
+
+% In the process of moving:
+% - https://docs.google.com/document/d/1KYjO-U5KfYfm9UBZPr-gGQaR7XFe48yGnaNYTolcR6w/edit#
+
+% See also:
+% - https://docs.google.com/document/d/1qzyv1aOJ_whoW0ttKTOOQpH8yF-SyfOCRItI6hXKiFc/edit
+% - https://docs.google.com/document/d/16N1KZXDwutqH0jQ0i_s7bBB9ctGp47ZKhQsQBTHklSc/edit

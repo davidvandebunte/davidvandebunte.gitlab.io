@@ -283,6 +283,10 @@ If it is not easy to test more than one theory in parallel, reproduce in multipl
 
 Reduce delay in performing experiments.
 
+% See [Shorten Wall Clock Execution Time][swcet].
+
+% [swcet]: ./shorten-wall-clock-execution-time.md
+
 ##### Human time cost
 
 Reproduce with less manual human time investment. It is easy to become focused on confirming a
@@ -342,3 +346,7 @@ debugging tools at the same time you solve your problem.
 Of course, you may learn to debug faster if you try to debug the defect (e.g. learn how to use some
 tool better). That is often going to be a more general skill than a specific codebase. Still, you'll
 learn the language better if you read code and how the writer thinks.
+
+% ## Additional Training Data
+
+% See improve-investigate-root-cause.md
