@@ -19,18 +19,18 @@ kernelspec:
 
 Specializes [Share Notes][sn].
 
-### Test
+## Test
 
 Comment on other articles, [StackExchange][se], or by writing an article that is essentially a large
 comment on another article.
 
 [se]: https://stackexchange.com/
 
-### Value
+## Value
 
 You'll likely get a response from the original author.
 
-### Cost
+## Cost
 
 Comments can usually be deleted or directed to a smaller audience (even one person).
 
