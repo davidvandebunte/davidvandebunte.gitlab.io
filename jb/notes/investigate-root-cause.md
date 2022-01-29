@@ -1,20 +1,31 @@
 ---
-title: "Investigate root cause"
-date: 2021-09-04
-tags: ["debug"]
+jupytext:
+  cell_metadata_filter: -all
+  formats: md:myst
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.11.5
+kernelspec:
+  display_name: Python 3 (ipykernel)
+  language: python
+  name: python3
 ---
+
+# Investigate root cause
 
 [doe]: https://en.wikipedia.org/wiki/Design_of_experiments
 
-# Test
+## Test
 
 Restore system to previously achieved performance; a record must exist of previous performance.
 
-# Value
+## Value
 
 Difference between present and historical performance.
 
-# Cost
+## Cost
 
 [sm]: https://en.wikipedia.org/w/index.php?title=Scientific_method&oldid=897409401#Process
 [cs]: https://en.wikipedia.org/wiki/Computer_science
@@ -22,7 +33,7 @@ Difference between present and historical performance.
 Follow the [Scientific process][sm] (see also [Computer science][cs]). Sufficiently complex software
 is often as difficult to mentally model as the natural world.
 
-## Compress data
+### Compress data
 
 [covt]: https://en.wikipedia.org/wiki/Dependent_and_independent_variables#Statistics_synonyms
 
@@ -33,7 +44,7 @@ over all the presently known covariates:
 - Call stacks
 - Failed tests
 
-### Run Analysis
+#### Run Analysis
 
 Use open source analysis tools to get the most out of the data you already have. Depending on the
 cost of experimentation, develop your own model comparison tools to compress big data into a single
@@ -41,7 +52,7 @@ variable you can e.g. add to tables. To automate data collection, generate repor
 files) that represent one row (i.e. observation / experiment) or that can compare a few
 observations.
 
-#### Logs
+##### Logs
 
 [dmesg]: https://en.wikipedia.org/wiki/Dmesg
 [ltr]: https://pythonspeed.com/articles/measuring-memory-python/
@@ -77,7 +88,7 @@ For every symptom in the logs, try to find an equivalent manifestation of it in 
 where you can see the symptoms clearly and where you aren’t sure it has started. That is, backprop
 to intermediate variables and add these new dimensions to your table.
 
-#### Program state
+##### Program state
 
 [procfs]: https://en.wikipedia.org/wiki/Procfs#Linux
 
@@ -88,7 +99,7 @@ attach.
 
 If the defect is an uncaught exception or segfault, find the core dump.
 
-#### Automatic tests
+##### Automatic tests
 
 Prefer automatic tests to tooling and instrumentation (requiring manual intervention). If you can
 say that some behavior is better than other behavior rather than simply statistically associated
@@ -100,7 +111,7 @@ behavior and whether behavior is likely to regress. The defect you are presently
 sample indicating the behavior is likely to regress; the fact you are interested in fixing it
 indicates you care.
 
-## Develop hypotheses
+### Develop hypotheses
 
 [cai]: https://en.wikipedia.org/wiki/Causal_inference
 [cd]: https://en.wikipedia.org/wiki/Causal_model#Causal_diagram
@@ -117,7 +128,7 @@ Using both the data and your priors, develop causal theories. See:
 Draw several [Causal diagrams][cd] (models) between the root cause and the defect with
 [DAGitty][dgtty]. This static example attempts to use similar syntax:
 
-![RCA sequence of events](/rca-sequence-of-events.svg)
+![RCA sequence of events](./rca-sequence-of-events.svg)
 
 There may be multiple causes of the primary symptom, but most of the time you can expect a Pareto
 distribution and rely on the [Pareto principle][pp].
@@ -134,11 +145,11 @@ depend on the network, your prior network understanding, the stage of your inves
 how much data you've collected), the cost of measurement (analysis), and the cost of
 experimentation. Call this `H` (number of hypotheses).
 
-### Specialize standard hypotheses
+#### Specialize standard hypotheses
 
 Common starting points for developing testable predictions; many of these come with an example DAG.
 
-#### Review changes
+##### Review changes
 
 It seems basic, but start by asking what is different (include being run later, at a new timestamp).
 What are you doing in your application that is unique about how you're using this library? For
@@ -150,20 +161,20 @@ and weight initialization. For example, to reproduce model performance from rand
 consider whether you should first reproduce performance (no increase in loss) with known good
 model weights. An example DAG:
 
-![DAG-OOM](/dag-supervised-learning.svg)
+![DAG-OOM](./dag-supervised-learning.svg)
 
-#### Out of memory
+##### Out of memory
 
 [dfs]: https://pythonspeed.com/articles/python-out-of-memory/
 [mmit]: https://pythonspeed.com/articles/measuring-memory-python/
 [stt]: https://en.wikipedia.org/wiki/Space%E2%80%93time_tradeoff
-[pmt]: {{< relref "prescribe-computing-metrics.md" >}}
+[pmt]: ./prescribe-computing-metrics.md
 
 See [Dying, fast and slow: OOM crashes in Python][dfs] for examples of how out of memory issues
 display in Python, and the related article [Measuring memory usage in Python: it’s tricky!][mmit]
 for a discussion of resident memory. Almost every covariate in this DAG is observable:
 
-![DAG-OOM](/dag-oom.svg)
+![DAG-OOM](./dag-oom.svg)
 
 In the [Space-time tradeoff][stt], we'd ideally like to achieve the green curve below. That is, we
 want to use all the space we have to finish as quickly as possible (so we need less time). In
@@ -172,28 +183,28 @@ computing metrics][pmt]) as soon as possible from disk. If we're `O(n)` in memor
 memory consumption is a function of the input (that is, we do not have a chunk size adjusting to the
 environment's memory), then we'll crash on larger `n`:
 
-![OOM](/oom.svg)
+![OOM](./oom.svg)
 
-#### Missing variables
+##### Missing variables
 
 What logging statements were not printed? Infer a program's control flow without adding new logging
 statements by checking what was NOT printed as well as what was printed.
 
-#### Reject assumptions
+##### Reject assumptions
 
 Form hypotheses by rejecting statements you expect to be true. Produce a variety of statements you
 expect to be true, ordered by confidence.
 
-#### Assume a regression
+##### Assume a regression
 
 Was there any point in the past when the feature worked as expected? Narrow the range of commits in
 which the regression was introduced with `git bisect`. Ask developers on commits between the broken
 and working commits for help developing theories.
 
-### Share hypotheses
+#### Share hypotheses
 
 [linus]: https://en.wikipedia.org/wiki/Linus%27s_Law
-[sn]: {{< relref "share-notes.md" >}}
+[sn]: ./share-notes.md
 
 Eric Raymond claims "given enough eyeballs, all defects are shallow" ([Linus's Law][linus]). Who can
 you brainstorm with? Ask local developers for closed source. Ask a maintainer or developers who
@@ -205,17 +216,17 @@ question to StackOverflow, a mailing list, a chat channel, etc. See also [Share 
 
 Look for names in git:
 
-```bash
+```{code-cell}
 git log --grep="log" --grep="thread" --all-match
 git log master -- path/to/broken-library
 ```
 
-## Design experiments
+### Design experiments
 
 Read [Design of experiments][doe]. Assign likelihood estimates to hypotheses to help you decide
 which to run expensive testing for. For example:
 
-![RCA sequence of events](/rca-incomplete-domain-knowledge.svg)
+![RCA sequence of events](./rca-incomplete-domain-knowledge.svg)
 
 Some data will rule out certain hypotheses. Other times, data will only make certain hypotheses less
 likely. In Bayesian inference, we estimate parameters from the data. In this case, we're ranking
@@ -224,13 +235,13 @@ models based on data (and priors).
 For the most likely hypotheses, design experiments that will either falsify or continue to confirm
 them.
 
-### New data: Unobservable variables
+#### New data: Unobservable variables
 
 Variables can be observable because they are unavailable in the raw data, because they have not been
 extracted from the raw data, or both. Sometimes you need to add "permanent instrumentation" i.e.
 both extract the data and compress it in your analysis tools in one step.
 
-### New data: Log vs. Debug
+#### New data: Log vs. Debug
 
 [log4j]: http://logging.apache.org/log4j/1.2/manual.html
 
@@ -250,12 +261,12 @@ computer resources (space). From [Apache log4j 1.2 - Short introduction to log4j
 On the other hand, excessive logging pollutes the code base with unhelpful comments. The call stack
 (context) at an exception is easier to digest than verbose logs.
 
-## Test hypotheses
+### Test hypotheses
 
 Testing and experimentation doesn't change the real-world model, it only collects more training
 examples from it.
 
-### Reproduce in new environments
+#### Reproduce in new environments
 
 Reproduce the issue in a more flexible or more easily accessible environment (e.g. locally). A cloud
 debug environment can be as good as a local environment, depending on what you need to test. The
@@ -268,21 +279,21 @@ get more data to figure out what is going on. For example:
 
 If it is not easy to test more than one theory in parallel, reproduce in multiple environments.
 
-### Reproduce faster
+#### Reproduce faster
 
 Reduce delay in performing experiments.
 
-#### Human time cost
+##### Human time cost
 
 Reproduce with less manual human time investment. It is easy to become focused on confirming a
 single cause. We often have many causes to discover before we reach the root (it is often better to
 invest long-term).
 
-#### Computer delay
+##### Computer delay
 
 Finding the root cause will take too much wall clock time if a reproducible problem has a long cycle
 time. Imagine discovering an issue that takes hours to reproduce to test hypotheses:
-![RCA naive experiments](/rca-experiment-only.svg)
+![RCA naive experiments](./rca-experiment-only.svg)
 
 When feedback is slow and single-thread, ask yourselves: If we did this and it was as expected, what
 would we do next? If it takes 3 hours to reproduce you must think of several "why" questions to ask
@@ -307,7 +318,7 @@ To reduce context/state so you can reproduce faster:
 The final result of reproducing with a smaller amount of context and less wall clock time is a unit
 test.
 
-### Reproduce related/previous behavior
+#### Reproduce related/previous behavior
 
 To test whether the cause is somewhere in a range of commits, attempt a git bisect (many
 experiments). Notice a git bisect assumes the state causing the defect is in the code.

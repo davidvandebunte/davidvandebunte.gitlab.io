@@ -1,24 +1,35 @@
 ---
-title: "Prescribe computing metrics"
-date: 2021-08-05
-tags: []
+jupytext:
+  cell_metadata_filter: -all
+  formats: md:myst
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.11.5
+kernelspec:
+  display_name: Python 3 (ipykernel)
+  language: python
+  name: python3
 ---
+
+# Prescribe computing metrics
 
 [pcp]: https://en.wikipedia.org/wiki/Profiling_(computer_programming)#Use_of_profilers
 [wsf]: https://serverfault.com/questions/446956/
 [dso]: https://stackoverflow.com/questions/41725613/
 
-# Value
+## Value
 
 Many generic terms are heavily overloaded (reused) in the context of measurement in computing. This
 article attempts to restore meaning to these terms based on as many external references as possible,
 to at least achieve consistency in the context of this blog.
 
-# Cost
+## Cost
 
 Define a list of terms.
 
-## Pipeline
+### Pipeline
 
 [pc]: https://en.wikipedia.org/wiki/Pipeline_(computing)
 
@@ -47,7 +58,7 @@ work is a visualization of model performance. Intermediate products are a datase
 the results of evaluation inference, and plain text evaluation results. Another example is the
 pipelines defined in a `.gitlab-ci.yml` file.
 
-## Process
+### Process
 
 [process]: https://en.wikipedia.org/wiki/Process
 [mtpm]: https://en.wikipedia.org/wiki/Process_(computing)#Multitasking_and_process_management
@@ -67,7 +78,7 @@ identified with the main process). See:
 - [Parent process](https://en.wikipedia.org/wiki/Parent_process)
 - [Child process](https://en.wikipedia.org/wiki/Child_process)
 
-## Trace
+### Trace
 
 [ts]: https://en.wikipedia.org/wiki/Tracing_(software)
 [twkt]: https://en.wiktionary.org/wiki/trace
@@ -82,7 +93,7 @@ trace is small (or detailed) because the phrase "didn't leave a trace" implies i
 The confusion in the term likely originates from the fact that you can use "past evidence" to help
 you "draw out" how something works. See [trace - Wiktionary][twkt].
 
-### Past evidence
+#### Past evidence
 
 [elvt]: https://en.wikipedia.org/wiki/Tracing_(software)#Event_logging_versus_tracing
 [ttw]: https://stackoverflow.com/tags/trace/info
@@ -98,13 +109,13 @@ than a log? See the guidelines in [Event logging versus tracing][elvt].
 For example, `strace` provides a specialized log (of system calls), and `ltrace` a specialized log
 of library calls.
 
-### Draw out
+#### Draw out
 
 See "Desk checking" and "Live debugging" in [What's difference between monitoring, tracing and
 profiling? - Server Fault][wsf]. Don't use the term this way; prefer "sketch" or "draw" to avoid the
 conflict in terms.
 
-## Profile
+### Profile
 
 Profiling is the process of running a profiler (on an application, system, or process). A profiler
 is a tool, and every profiler measures something different (see this [Definition of debugging,
@@ -115,7 +126,7 @@ When a profiler collects numerical/statistical data, it is called a "profile" of
 profiler collects plain text it will be called a "trace" or a log (see [Profiling (computer
 programming)][pcp]).
 
-### Deterministic (Event-based) Profiling
+#### Deterministic (Event-based) Profiling
 
 [ebp]: https://en.wikipedia.org/wiki/Profiling_(computer_programming)#Event-based_profilers
 [oca]: http://www.brendangregg.com/offcpuanalysis.html
@@ -125,7 +136,7 @@ Analysis][oca], this concept seems to be known as "Application Tracing". See the
 explanation of the fundamental difference between this approach and CPU sampling better. In
 particular, it explains some of the upsides and downsides of cProfile in Python.
 
-### Statistical Profiling
+#### Statistical Profiling
 
 [sp]: https://en.wikipedia.org/wiki/Profiling_(computer_programming)#Statistical_profilers
 

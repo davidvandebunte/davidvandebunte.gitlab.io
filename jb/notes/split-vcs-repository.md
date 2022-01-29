@@ -1,10 +1,21 @@
 ---
-title: "Split VCS Repository"
-date: "2021-12-23"
-tags: ['git', 'docker', 'share', 'code', 'notes']
+jupytext:
+  cell_metadata_filter: -all
+  formats: md:myst
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.11.5
+kernelspec:
+  display_name: Python 3 (ipykernel)
+  language: python
+  name: python3
 ---
 
-# Test
+# Split VCS Repository
+
+## Test
 
 A new version control repository exists, with code/notes split out from another repository. Implicit
 in starting a new project is making a decision whether to create a new repository or work in a new
@@ -24,13 +35,13 @@ If you feel uncertain about what your non-split options are, consider:
 - `!glab`
 - `!gh`
 
-# Value
+## Value
 
 In general, this approach encourages independence and isolation.
 
-## Dependency Management
+### Dependency Management
 
-[ca]: {{< relref "containerize-application.md" >}}
+[ca]: ./containerize-application.md
 
 See the reasons you split docker images in [Containerize Application][ca]; but splitting images does
 not strictly require splitting repositories. Conversely, it makes little sense to split repositories
@@ -40,7 +51,7 @@ for code that has nearly zero special dependencies. For example:
 - git
 - python (without packages)
 
-## Simpler CI/CD
+### Simpler CI/CD
 
 Ironically, not not splitting repositories (i.e. splitting repositories) saves you time by letting
 you work with "standard" CI/CD processes. Said another way, splitting repositories (taking the
@@ -52,7 +63,7 @@ directory, regardless of whether it's relevant. Is this so bad, though? It's not
 builds to a directory in .gitlab-ci.yml files (or likely any other CI/CD language). You don't really
 mind building too much, either, because external services can affect the stability of builds.
 
-## Speed
+### Speed
 
 [mpdn]: https://medium.com/@mattklein123/monorepos-please-dont-e9a279be011b
 [mvm]: https://chengl.com/multirepo-vs-monorepo/
@@ -65,9 +76,9 @@ Pulls. How long does it take to pull the repository to a new developer's machine
 See also "VCS Scalability" in [Monorepos: Please don’t!][mpdn], "Tooling" in [Multirepo vs
 Monorepo][mvm], and "Scalability Challenges" in `!w Monorepo`.
 
-## Publication
+### Publication
 
-[sn]: {{< relref "share-notes.md" >}}
+[sn]: ./share-notes.md
 
 See [Share Notes][sn]. We often need to split across the public/private divide. You can do this
 without splitting repositories; instead fork the public repository and create a private "backup"
@@ -84,18 +95,18 @@ of commits you want to keep on your branch:
 Alternatively, write commits you know you will need to move to the public branch using whatever
 standard you use on the public branch (e.g. starting with a filename).
 
-# Cost
+## Cost
 
 [aom]: https://danluu.com/monorepo/
 
 In general, this approach encourages shared responsibility and centralization.
 
-## Search
+### Search
 
 For example, so you can search only your personal notes repo for some thought you had. A web search
 is much less effective and flexible than `git grep` (even if you know which site to search).
 
-## Modularization Premium
+### Modularization Premium
 
 [smb]: https://martinfowler.com/articles/microservice-trade-offs.html#boundaries
 [mp]: https://martinfowler.com/bliki/MicroservicePremium.html
@@ -114,7 +125,7 @@ See also [Strong Module Boundaries][smb] and its discussions of [MonolithFirst][
 repositories often means a split into separate microservices. Consider the [MicroservicePremium][mp]
 specifically as well.
 
-## Cross-Project CI/CD
+### Cross-Project CI/CD
 
 [mmm]: https://notes.burke.libbey.me/metarepo/
 
@@ -122,26 +133,26 @@ See "Tooling" in [Monorepo, Manyrepo, Metarepo][mmm] and [Advantages of monorepo
 unmentioned advantage is the manyrepo approach potentially lets you use only git rather than the
 cross-project options offered by GitLab and GitHub (tying you to their platforms).
 
-## Simpler Reorganization
+### Simpler Reorganization
 
 See "Simplified organization" in [Advantages of monorepos][aom]. When you want to reorganize docker
 boundaries or "projects" in general you can do so without going to GitLab or GitHub. Consider the
 value in organizing notes.
 
-## Forced Collaboration
+### Forced Collaboration
 
 [mpd]: https://medium.com/@adamhjk/monorepo-please-do-3657e08a4b70
 
 See [Monorepo: please do!][mpd].
 
-## Simpler Retrospective
+### Simpler Retrospective
 
 If you only have one or a few repos, it's much easier to review all the commits that one person or
 the team did in a sprint.
 
-# Training Data
+## Training Data
 
-## Wikipedia
+### Wikipedia
 
 Wikipedia is a great example of how you can avoid splitting your thoughts (it's similar to a
 monorepo of notes) and still work on the public side of the line; the downside is how it can be hard

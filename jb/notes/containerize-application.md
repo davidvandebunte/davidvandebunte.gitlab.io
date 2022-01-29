@@ -1,23 +1,34 @@
 ---
-title: "Containerize Application"
-date: "2021-12-23"
-tags: ['docker', 'share']
+jupytext:
+  cell_metadata_filter: -all
+  formats: md:myst
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.11.5
+kernelspec:
+  display_name: Python 3 (ipykernel)
+  language: python
+  name: python3
 ---
 
-# Estimate action output improvement
+# Containerize Application
+
+## Estimate action output improvement
 
 Either containerize an application you only have uncontainerized (e.g. on your local machine) or a
 split an existing container into two. You don't have to see these as different if you see your host
 machine as one large container (environment).
 
-# Estimate improvement value
+## Estimate improvement value
 
 Do you think about containerization too much? For your specific action, estimate the value in time
 savings using the general guidelines below (specialize your action to your situation).
 
-## Stability
+### Stability
 
-[irc]: {{< relref "investigate-root-cause.md" >}}
+[irc]: ./investigate-root-cause.md
 [mfmt]: https://martinfowler.com/articles/microservice-trade-offs.html
 
 What does it mean for an environment to be unstable? You know it when you see it:
@@ -56,7 +67,7 @@ Common system-level dependencies:
 - What happens when you need to update NVIDIA drivers and CUDA? It’s not easy.
 - Updating to Ubuntu 20.04 (the next LTS release) will be trivial (in a year).
 
-### Complexity
+#### Complexity
 
 [ddda]: https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#decouple-applications
 [hpak]: https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/
@@ -93,7 +104,7 @@ package, and git history is long enough you don’t want to look.
 
 Are there separate docker images because of separate teams or technical reasons?
 
-### Focused work
+#### Focused work
 
 Stability issues (what docker fixes) are especially important because they reduce predictability,
 and they take us out of focused work.
@@ -104,7 +115,7 @@ or you have a production job that can't run until the build system is fixed (out
 affected), or a delayed production job or delayed experiment ultimately delays how fast we can do
 validated learning and deliver to customers.
 
-### Attract Developers
+#### Attract Developers
 
 A stable environment is also quick to set up. Docker builds automate manual setup documented in
 notes and wiki pages. That is, it moves these notes to code to make them more maintainable and
@@ -130,7 +141,7 @@ Easily return to code you don’t visit often. If you build a project infrequent
 able to restart quickly. As long as someone is maintaining the dependencies while you're gone, it's
 likely containerization will help you get started again quickly.
 
-### Experimentation
+#### Experimentation
 
 A stable environent is easier to change. Dockerfiles let you easily share the process to set up a
 machine for an experiment. They make testing that you (or another team member) can remove a
@@ -143,7 +154,7 @@ changing a script and not screwing up anything on your machine.
 You need to easily run on Amazon Linux (amazonlinux) to test new packages built there (such as for
 machine learning).
 
-### Required for CI/CD
+#### Required for CI/CD
 
 Because CI/CD needs a stable environment, it will almost always be using containers.
 
@@ -151,14 +162,14 @@ Time savings from having a consistent dev/test build environment. You can test c
 before assuming they work in Jenkins, GitLab, etc. Dockerfiles let you use the same environment for
 development and test.
 
-### Required for production
+#### Required for production
 
 Because production needs a stable environment, it will almost always be using containers.
 
 Time savings from having a consistent dev/prod build environment. Consistent local and production
 environments.
 
-## Host Isolation
+### Host Isolation
 
 Do you even know how to run Jupyter outside a docker image? You wouldn't want to install it outside
 perhaps you use it for so many applications; you wouldn't know which version the host should be on.
@@ -191,13 +202,13 @@ Keep your host clean so it can last forever and you feel free to reinstall the o
 upgrade hardware. Eliminate the need to reinstall your operating system on a regular basis when it
 gets so unstable and you really need an upgrade to do your work. Run your Linux programs on Windows.
 
-### Limit hardware resources
+#### Limit hardware resources
 
 When you are running inference in a docker container it is trivial to limit the amount of memory the
 process had access to. If you didn't, in one case, you were getting an OOM error that kicked you out
 of SSH and made it impossible to log back into your machine for 20 or more minutes.
 
-### Learn fewer dependency isolation tools
+#### Learn fewer dependency isolation tools
 
 Use multiple language versions without having to resort to all the hacks for your language. See:
 - https://medium.com/better-programming/why-and-how-to-use-docker-for-development-a156c1de3b24
@@ -220,12 +231,12 @@ If you continue to use virtualenv you'll also be able to have a development envi
 outside of docker that are roughly symmetrical (critical to test for differences). See also:
 - https://pythonspeed.com/articles/multi-stage-docker-python/
 
-# Estimate improvement cost
+## Estimate improvement cost
 
 Docker packaging is complex and time consuming:
 - https://pythonspeed.com/docker/
 
-## Isolation
+### Isolation
 
 Separate instances of applications often can’t interact with their siblings through global
 variables. Will you be able to get to the OS clipboard from within vim? What about shared global vim
@@ -243,9 +254,9 @@ It’s not easy for arbitrary applications to interact with each other except th
 
 You’ve put them all in separate boxes (by definition you want one concern per image).
 
-## Comparison to monorepos
+### Comparison to monorepos
 
-[svr]: {{< relref "split-vcs-repository.md" >}}
+[svr]: ./split-vcs-repository.md
 
 You may need to update your CI/CD system and split repositories. See [Split VCS Repositories][svr].
 
