@@ -6,7 +6,7 @@ root: notes/about
 parts:
   - caption: Statistical Rethinking
     chapters:
-      - file: notes/sr-review.md
+      - file: notes/sr2-review.md
   - caption: Visual Group Theory
     chapters:
       - file: notes/chp8-q32.md

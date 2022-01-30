@@ -1,18 +1,28 @@
-library(IRdisplay)
-suppressPackageStartupMessages(library(rethinking))
-source("iplot.R")
+---
+jupytext:
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.11.5
+kernelspec:
+  display_name: R
+  language: R
+  name: ir
+---
 
-display_markdown("
-# Summary
+# Review
+
+## Summary
 
 [err]: https://github.com/rmcelreath/rethinking/blob/master/ERRATA.md
 [iss]: https://github.com/rmcelreath/rethinking/issues
 
 There are a *lot* of typos and errors in the second edition. Take the attitude of ignoring these
-early on or finding a way to only mark them for your own sake. In the more detailed review below, you
-will see obvious errors marked with **ERROR**. This list is largely incomplete; it misses many minor
-errors (i.e. typos) later in the book as they become too tiresome to collect. If you don't believe
-me, see all the unresolved [open issues][iss] in the author's GitHub repository.
+early on or finding a way to only mark them for your own sake. In the more detailed review below,
+you will see obvious errors marked with **ERROR**. This list is largely incomplete; it misses many
+minor errors (i.e. typos) later in the book as they become too tiresome to collect. If you don't
+believe me, see all the unresolved [open issues][iss] in the author's GitHub repository.
 
 The [ERRATA][err] is empty because (of course) GitHub issues are not being addressed. The absolute
 number of errors is probably also part of the problem. This is a shame because even an incomplete
@@ -20,7 +30,7 @@ errata makes reading a book easier; you should often keep an errata open when yo
 avoid puzzling over an issue someone else has already identified and explained. If a book doesn't
 have an errata, either the author never makes mistakes or they don't have the time.
 
-## VitalSource
+### VitalSource
 
 [vs]: https://www.vitalsource.com/
 
@@ -46,7 +56,7 @@ All external links are broken in the VitalSource version of this book. That is, 
 paste links rather than click on them. That is, the blue links internal to the book are functional,
 but blue links to external websites are broken.
 
-## Strengths
+### Strengths
 
 [we]: https://en.wikipedia.org/wiki/Worked-example_effect#Worked_example
 [bda3]: http://www.stat.columbia.edu/~gelman/book/
@@ -62,7 +72,7 @@ without being directly executable. Unfortunately not being executable means the 
 actually run without a number of fixes. The advantage to this approach is users can work in a plain
 text editor rather than a browser, but this doesn't in itself imply the code shouldn't be runnable.
 
-# Personal Workflow
+## Personal Workflow
 
 Start by getting models working with MCMC (`ulam`), which provides a lot more debugging information
 and is capable of estimating non-Gaussian posteriors. Once you're happy with the results, check that
@@ -70,11 +80,9 @@ and is capable of estimating non-Gaussian posteriors. Once you're happy with the
 
 Prefer to `source` R files from the shell rather than running the publish script when you're
 debugging issues. Many errors/warnings are swallowed by papermill.
-")
 
-display_markdown("# Chapters")
+## 2.3. Components of the model
 
-display_markdown(r"(
 ### 2.3.2. Definitions
 
 By far the most confusing definition given here is for the likelihood. In this book, a 'likelihood'
@@ -88,21 +96,19 @@ it is a function, of course, because any probability distribution is a function.
 In non-Bayesian statistics and in particular on Wikipedia the definition of the likelihood function
 is completely different and denoted with $\mathcal{L}$. See the author's footnote and [Likelihood
 function][lf].
-)")
 
-display_markdown("(
-[aap]: https://en.wikipedia.org/wiki/Accuracy_and_precision
+## 4.3. Gaussian model of height
 
 ### 4.3.1. The data
+
+[aap]: https://en.wikipedia.org/wiki/Accuracy_and_precision
 
 > We can also use `rethinking`'s `precis` summary function, which we'll use to summarize posterior
 distributions later on:
 
 This function is not introduced or documented well; it will be taught by example. The name refers to
 precision as in [Accuracy and precision][aap].
-")
 
-display_markdown(r"(
 ### 4.4.3. Interpreting the posterior distribution
 
 [si]: https://en.wikipedia.org/wiki/Statistical_inference
@@ -119,9 +125,7 @@ then compute $\mu$ for each case in the data.
 
 The function `sim` is equivalent to inference (see [Statistical inference][si]) in machine learning,
 but on the training data.
-)")
 
-display_markdown("
 #### 4.4.3.5. Prediction intervals.
 
 [319]: https://github.com/rmcelreath/rethinking/issues/319
@@ -140,14 +144,14 @@ It should be (see [Issue #319][319]):
 # draw PI region for line
 shade( mu.PI , weight.seq )
 ```
-")
 
-display_markdown("
+## 4.5. Curves from lines
+
+### 4.5.1. Polynomial regression.
+
 [ns]: https://en.wikipedia.org/wiki/Normalization_(statistics)
 [fs]: https://en.wikipedia.org/wiki/Feature_scaling
 [sr]: https://stackoverflow.com/questions/20256028
-
-## 4.5.1. Polynomial regression.
 
 It is standard practice to **STANDARDIZE** variables but the explanation given here isn't
 particularly helpful. Consider `scale` provided by the R language. When should you set `center` to
@@ -184,20 +188,16 @@ See also this comment in section **14.3**:
 
 > We standardized the variables, so we can use our default priors for standardized linear
 > regression.
-")
 
-display_markdown("
-# 5.1. Spurious assocation
+## 5.1. Spurious assocation
 
 **ERROR:**
 
 > we can use extract.prior and link as in the previous chapter.
 
 (extract.prior has only been mentioned in the preface)
-")
 
-display_markdown("
-# 5.1.3. Multiple regression notation
+### 5.1.3. Multiple regression notation
 
 **ERROR:**
 
@@ -205,26 +205,26 @@ display_markdown("
 
 (actually using M for marriage rate)
 
-# 5.1.4. Approximating the posterior
+### 5.1.4. Approximating the posterior
 
 **ERROR:**
 
 > with plenty of probability of [sic] both sides of zero.
 
-# 5.2. Masked relationship
+## 5.2. Masked relationship
 
 **ERROR:**
 
 > we can do better by both [sic] tightening the α prior so that it sticks closer to zero.
 
-# 5.3.1. Binary categories
+### 5.3.1. Binary categories
 
 **ERROR:**
 
 > Vector (and matrix) parameters are hidden by `precies` [sic] by default, because
-")
 
-display_markdown("
+## 6.3. Collider bias
+
 ### 6.3.1. Collider of false sorrow.
 
 **ERROR:** See:
@@ -246,9 +246,9 @@ Said yet another way, consider Figure 6.4. From age 20 to 30, the average of the
 about 1. At age 60, the average of the blue bubbles is closer to zero. Now consider the white
 bubbles. From 20 to 30, the average of the white bubbles is close to zero. At age 60, the average
 is closer to -1.
-")
 
-display_markdown(r"(
+## 7.2. Entropy and accuracy
+
 ### 7.2.3. From entropy to accuracy.
 
 If we're going from Earth to Mars, we're an Earthling with certain priors (vice versa, a Martian).
@@ -263,9 +263,7 @@ the $log(q_i)$ terms (in particular, the sum of the terms will definitely be red
 guaranteed to reduce the cross entropy (and therefore the KL divergence) though, because by
 increasing the entropy of $q$ we may be making it dissimilar to $p$ in a way that increases a term
 where $p_i$ is large. Read question **7H3** for a numerical example.
-)")
 
-display_markdown(r"(
 ### 7.2.4. Estimating divergence.
 
 Mnemonics: Notice that *p* is the real thing, the 'true' model. The *p* stands for probability; the
@@ -287,20 +285,16 @@ $$
 A log-probability score (or the lppd) estimates the cross entropy.
 
 These concepts on a number line:
-)")
 
-display_svg(file="compare_cross_entropy.svg", width=20, height=20)
+![x](./compare_cross_entropy.svg)
 
-display_markdown(r"(
 ### 7.2.5. Scoring the right data
 
 The true model has three parameters: $ \mu_{i}, \beta_1, \beta_2 $
 
 **ERROR:** The 'Overthinking' box refers to `sim.train.test`, which is from the first version of the
 book.
-)")
 
-display_markdown(r"(
 ## 7.3. Golem taming: regularization
 
 The term 'regularization' in this context doesn't refer to the kind of regularization common in
@@ -310,9 +304,7 @@ values that weights can take on, enforced by an addition to the loss term.
 See [Regularization (mathematics)][reg].
 
 [reg]: https://en.wikipedia.org/wiki/Regularization_(mathematics)
-)")
 
-display_markdown(r"(
 ## 7.4. Predicting predictive accuracy
 
 ### 7.4.1. Cross-validation
@@ -324,16 +316,12 @@ outlier warnings.
 
 **ERROR:**
 > dominate AIC is [sic] every context
-)")
 
-display_markdown(r"(
 ### 7.4.3. Comparing CV, PSIS, and WAIC
 
 **ERROR:**
 > The bottom row shows 1000 simulations with N = 1000 [sic, should be N = 100].
-)")
 
-display_markdown(r"(
 ## 8.2. Symmetry of interactions
 
 To relate these equations to the form of the equations in section 8.3, where equations have four
@@ -353,44 +341,34 @@ See also answer 8E3 (scenario 2).
 
 If we are exactly at the average ruggedness, we still need to know we are at the average ruggedness
 to predict how switching a nation to Africa will affect prediction.
-)")
 
-display_markdown("
 ## 8.3. Continuous interactions
 
 **ERROR:**
 > When we have two variable, [sic]
-")
 
-display_markdown(
-"## 9.3. Hamiltonian Monte Carlo
+## 9.3. Hamiltonian Monte Carlo
 
 **ERROR:** The definition of `U_gradient` uses different symbols (`a`, `b`, `k`, `d`) leading to Gaussian
 distributions with a standard deviation of `1.0` rather than `0.5`.
-")
 
-display_markdown("
 ## 10.1. Maximum entropy
 
 [mepd]: https://en.wikipedia.org/wiki/Maximum_entropy_probability_distribution
 
 For a list of maximum entropy distributions see [Maximum entropy probability distribution][mepd].
-")
 
-display_markdown("
 ## 10.2. Generalized linear models
 
 [lf]: https://en.wikipedia.org/wiki/Generalized_linear_model#Link_function
 
 For a list of common link functions see [Link function][lf].
 
-## 10.2.3. Omitted variable bias again
+### 10.2.3. Omitted variable bias again
 
 An example would seriously help this explanation. You'll see an example of exactly this situation in
 section **15.2.1.** (perhaps what the author is thinking of as he writes this).
-")
 
-display_markdown("
 ## 11.1. Binomial regression
 
 > We'll work some examples using quap
@@ -408,17 +386,13 @@ expensive than MLE, you may not have a choice.
 If you have the time, you can `compare` a `quap` and `ulam` fit to confirm `quap` is good enough. If
 there is no difference in inference, then clearly it doesn't matter. Another major advantage of
 `ulam` over `quap` is it will report errors when you're struggling to fit.
-")
 
-display_markdown("
 ### 11.1.1 Logistic regression: Prosocial chimpanzees
 
 [xtab]: https://duckduckgo.com/?q=!w+crosstab
 
 If you're not familiar with `xtab`, duck [!w crosstab][xtab].
-")
 
-display_markdown(r"(
 ### 11.1.2. Relative shark and absolute deer.
 
 [or]: https://en.wikipedia.org/wiki/Odds_ratio
@@ -438,9 +412,7 @@ to:
 $$
 (2/100)/(1 + 2/100) \approx 0.0196
 $$
-)")
 
-display_markdown(r"(
 ### 11.1.3. Aggregated binomial: Chimpanzees again, condensed.
 
 **ERROR:**
@@ -449,9 +421,7 @@ display_markdown(r"(
 
 These are definitely not the results for the first two chimpanzees; they're the results for the
 first treatment.
-)")
 
-display_markdown("
 ### 11.1.4. Aggregated binomial: Graduate school admissions
 
 **ERROR:**
@@ -459,9 +429,9 @@ display_markdown("
 > The function `coerce_index` can do this for us, using the `dept` factor as input.
 
 The R code box never uses this function.
-")
 
-display_markdown("
+## 11.2. Poisson regression
+
 ### 11.2.1. Example: Oceanic tool complexity.
 
 **ERROR:** The subplot titles in Figure 11.8 are confused. In the bottom two subplots, the titles
@@ -477,13 +447,10 @@ scale. To understand this, consider this code to reproduce the bottom-left subpl
 changes `xlim` and `ylim` in **R code 11.42** rather than switching to the more complicated approach
 in **R code 11.43**:
 
-```R
-plot(NULL, xlim = c(5, 12), ylim = c(0, 500),
-   main='Figure 11.8: Bottom-left subplot',
-   xlab='log population', ylab='total tools')
-for (i in 1:N) curve(exp(a[i] + b[i] * x), add = TRUE, col = grau())
-```
-")
+```{code-cell} r
+library(IRdisplay)
+suppressPackageStartupMessages(library(rethinking))
+source("iplot.R")
 
 ## R code 11.42
 set.seed(10)
@@ -495,8 +462,8 @@ iplot(function() {
        xlab='log population', ylab='total tools')
   for (i in 1:N) curve(exp(a[i] + b[i] * x), add = TRUE, col = grau())
 })
+```
 
-display_markdown("
 The `a` and `b` priors are being selected for a standardized log population scale. You can't use
 them with a log population scale, or you would have to change them. One of the reasons we like to
 standardize variables is so that it's easier to select priors; if you don't standardize variables
@@ -507,8 +474,8 @@ plot isn't particularly interesting; it's the top-right subplot with a new (but 
 x-axis. Notice that in both these plots, because the prior for `b` is equally likely to produce
 negative as well as positive values, you see some trends where increasing population decreases the
 expected total tools.
-")
 
+```{code-cell} r
 iplot(function() {
   par(mfrow=c(1,2))
   x_seq <- seq(from = log(100), to = log(200000), length.out = 100)
@@ -527,8 +494,8 @@ iplot(function() {
   )
   for (i in 1:N) lines(exp(x_seq), lambda[i, ], col = grau(), lwd = 1.5)
 })
+```
 
-display_markdown(r"(
 The right plot above shows the same diminishing returns on population discussed in the text, even
 though the curves now bend both ways. It's unfortunate the author chose to introduce this concept of
 diminishing returns in the context of the Poisson model, as if there's something special about it,
@@ -565,8 +532,8 @@ That is, this will only happen when $\beta$ is inferred to about equal one. The 
 reproduces this situation. The code to produce this plot does not standardize `x` because doing so
 would scale the logarithmic axis (based on the natural logarithm) by the standard deviation of the
 data, making it harder to produce straight lines.
-)")
 
+```{code-cell} r
 N <- 100
 a <- rnorm(N, 0.0, 0.1)
 b <- rnorm(N, 1.0, 0.1)
@@ -580,8 +547,8 @@ iplot(function() {
   )
   for (i in 1:N) lines(exp(x_seq), lambda[i, ], col = grau(), lwd = 1.5)
 })
+```
 
-display_markdown("
 ## 11.4. Summary
 
 > It is important to never convert counts to proportions before analysis, because doing so destroys
@@ -590,25 +557,19 @@ display_markdown("
 The author indirectly touches at this through the `UCBadmit` example; the whole-school proportions
 don't match the department-level proportions. He also indirectly touches at it in question **11H5**.
 But he never really makes this point directly.
-")
 
-display_markdown("
 ## 12.3. Ordered categorical outcomes
 
 **ERROR:**
 > It is very common in the social sciences, and occasional [sic] in the natural sciences
-")
 
-display_markdown(r"(
-## 12.3.2. Describing an ordered distribution with intercepts
+### 12.3.2. Describing an ordered distribution with intercepts
 
 The author switches between $\alpha_k$ and $\kappa_k$ for the log-cumulative-odds intercept
 (cutpoint) in this section. It looks like this is the result of a partial conversion to $\kappa$
 (for alliteration with cutpoint) rather than $\alpha$.
-)")
 
-display_markdown(r"(
-## 12.3.3. Adding predictor variables
+### 12.3.3. Adding predictor variables
 
 It would help to describe the log-cumulative-odds of each response k ($\alpha_k$) as a 'cutpoint' at
 the start of this section to help the reader get more intuition into why decreasing $\alpha_k$
@@ -629,13 +590,11 @@ From 1 to 6; the author makes the same mistake a few sentences later.
 > In the upper-right [sic], `action` is now set to one.
 
 Should be upper-middle; similar mistakes are made throughout this paragraph.
-)")
-
-display_markdown(r"(
-[bd]: https://en.wikipedia.org/wiki/Beta_distribution
-[dd]: https://en.wikipedia.org/wiki/Dirichlet_distribution
 
 ## 12.4. Ordered categorical predictors
+
+[bd]: https://en.wikipedia.org/wiki/Beta_distribution
+[dd]: https://en.wikipedia.org/wiki/Dirichlet_distribution
 
 > Now the sum of every $\delta_j$ is 1, and we can
 
@@ -663,9 +622,7 @@ The easiest way to do this is to use `pairs`:
 > Is it is only Some College (SCol) that seems to have only
 
 It is only Some College (SCol) that seems to have only
-)")
 
-display_markdown(r"(
 ### 14.1.1. Simulate the population
 
 **ERROR:**
@@ -686,12 +643,14 @@ many times. Perhaps this section was part of other material and not reviewed.
 In the code, there is no clear way to specify the standard deviation among slopes and the standard
 deviation among intercepts separately. If you check `precis` you'll see a vector, however.
 
-## 14.3.
+## 14.3. Instruments and causal design
 
 > Of course sometimes it won’t be possible to close all of the non-causal paths or rule of (sic)
 > unobserved confounds.
 
-## 14.5.1. Example: Spatial autocorrelation in Oceanic tools.
+## 14.5. Continuous categories and the Gaussian process
+
+### 14.5.1. Example: Spatial autocorrelation in Oceanic tools.
 
 > This will allow us to estimate varying intercepts for each society that account for
 > non-independence in tools as a function of their geographical similarly.
@@ -724,13 +683,15 @@ It's true that `k` is on the log-count scale, but `a` is not.
 ### 14.5.2. Example: Phylogenetic distance.
 
 > Species, like islands, are more or less distance (sic) from one another.
-)")
 
-display_markdown(r"(
+## 15.1. Measurement error
+
 ### 15.1.2. Error on the outcome
 
 Both the caption of Figure 15.2 and the text describing it expect a blue line and shading for the
 new regression (on the right figure). These do not exist.
+
+## 15.2. Missing data
 
 ### 15.2.1. DAG ate my homework
 
@@ -754,21 +715,17 @@ eating homework. Presumably the models were renamed at some point.
 
 This is incorrect, the figure caption is correct.
 
+## 15.3. Categorical errors and discrete absences
+
 ### 15.3.1. Discrete cats
 
 > Take a look at the posterior of `m15.6` and verify that
 
 The author almost surely meant `m15.8`
-)")
 
-display_markdown(r"(
 ## 16.3. Ordinary differential nut cracking
 
 > The duration pf (sic) the bout in seconds
-
-## 16.4 Population dynamics
-
-> not that the distance (sic) past can influence the present.
 
 ### 16.3.1. Scientific model
 
@@ -791,8 +748,8 @@ The author uses $\alpha_H$, $\beta_H$, $\alpha_L$, and $\beta_L$ in the model un
 but never defines them. These are new relative to the model in [Predator-Prey Population Dynamics:
 the Lotka-Volterra model in Stan][pps] so it's not surprising they were missed. If you check the
 code, we are using what the text called a "strong prior" for $p$:
-)")
 
+```{code-cell} r
 data(Lynx_Hare_model)
 cat(Lynx_Hare_model)
 flush.console()
@@ -815,17 +772,16 @@ pl.beta <- function(a,b, asp = if(isLim) 1, ylim = if(isLim) c(0,1.1)) {
          col=1:3, lty=1:3, bty = "n")
   invisible(cbind(x, fx))
 }
+```
 
-display_markdown("
-<br/>
 Here's a plot of that prior:
-")
 
+```{code-cell} r
 iplot(function() {
   pl.beta(40, 200)
 })
+```
 
-display_markdown("
 [betas]: https://mc-stan.org/docs/2_28/functions-reference/beta-distribution.html
 [betaw]: https://en.wikipedia.org/wiki/Beta_distribution
 
@@ -833,4 +789,7 @@ As discussed elsewhere, there are multiple beta distribution parameterizations. 
 using the correct one, see:
 - [20.1 Beta distribution | Stan Functions Reference][betas]
 - [Beta distribution - Wikipedia][betaw]
-")
+
+## 16.4 Population dynamics
+
+> not that the distance (sic) past can influence the present.
