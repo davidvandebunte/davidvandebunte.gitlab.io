@@ -456,18 +456,15 @@ in **R code 11.43**:
 ```{code-cell} r
 library(IRdisplay)
 suppressPackageStartupMessages(library(rethinking))
-source("iplot.R")
 
 ## R code 11.42
 set.seed(10)
 N <- 100
 a <- rnorm(N, 3, 0.5)
 b <- rnorm(N, 0, 0.2)
-iplot(function() {
-  plot(NULL, xlim = c(5, 12), ylim = c(0, 500), main='Figure 11.8: Bottom-left subplot',
-       xlab='log population', ylab='total tools')
-  for (i in 1:N) curve(exp(a[i] + b[i] * x), add = TRUE, col = grau())
-})
+plot(NULL, xlim = c(5, 12), ylim = c(0, 500), main='Figure 11.8: Bottom-left subplot',
+   xlab='log population', ylab='total tools')
+for (i in 1:N) curve(exp(a[i] + b[i] * x), add = TRUE, col = grau())
 ```
 
 The `a` and `b` priors are being selected for a standardized log population scale. You can't use
@@ -482,24 +479,22 @@ negative as well as positive values, you see some trends where increasing popula
 expected total tools.
 
 ```{code-cell} r
-iplot(function() {
-  par(mfrow=c(1,2))
-  x_seq <- seq(from = log(100), to = log(200000), length.out = 100)
-  x_seq_std = scale(x_seq)
-  lambda <- sapply(x_seq_std, function(x) exp(a + b * x))
-  plot(NULL,
-    xlim = range(x_seq), ylim = c(0, 100),
-    main='a ~ dnorm(3, 0.5), b ~ dnorm(0, 0.2)',
-    xlab = "log population", ylab = "total tools"
-  )
-  for (i in 1:N) lines(x_seq, lambda[i, ], col = grau(), lwd = 1.5)
-  plot(NULL,
-    xlim = range(exp(x_seq)), ylim = c(0, 100),
-    main='a ~ dnorm(3, 0.5), b ~ dnorm(0, 0.2)',
-    xlab = "population", ylab = "total tools"
-  )
-  for (i in 1:N) lines(exp(x_seq), lambda[i, ], col = grau(), lwd = 1.5)
-})
+par(mfrow=c(1,2))
+x_seq <- seq(from = log(100), to = log(200000), length.out = 100)
+x_seq_std = scale(x_seq)
+lambda <- sapply(x_seq_std, function(x) exp(a + b * x))
+plot(NULL,
+xlim = range(x_seq), ylim = c(0, 100),
+main='a ~ dnorm(3, 0.5), b ~ dnorm(0, 0.2)',
+xlab = "log population", ylab = "total tools"
+)
+for (i in 1:N) lines(x_seq, lambda[i, ], col = grau(), lwd = 1.5)
+plot(NULL,
+xlim = range(exp(x_seq)), ylim = c(0, 100),
+main='a ~ dnorm(3, 0.5), b ~ dnorm(0, 0.2)',
+xlab = "population", ylab = "total tools"
+)
+for (i in 1:N) lines(exp(x_seq), lambda[i, ], col = grau(), lwd = 1.5)
 ```
 
 The right plot above shows the same diminishing returns on population discussed in the text, even
@@ -543,16 +538,14 @@ data, making it harder to produce straight lines.
 N <- 100
 a <- rnorm(N, 0.0, 0.1)
 b <- rnorm(N, 1.0, 0.1)
-iplot(function() {
-  x_seq <- seq(from = log(100), to = log(200000), length.out = 100)
-  lambda <- sapply(x_seq, function(x) exp(a + b * x))
-  plot(NULL,
-    xlim = range(exp(x_seq)), ylim = c(0, 200000),
-    main='a ~ dnorm(0.0, 0.1), b ~ dnorm(1.0, 0.1)',
-    xlab = "population", ylab = "total tools"
-  )
-  for (i in 1:N) lines(exp(x_seq), lambda[i, ], col = grau(), lwd = 1.5)
-})
+x_seq <- seq(from = log(100), to = log(200000), length.out = 100)
+lambda <- sapply(x_seq, function(x) exp(a + b * x))
+plot(NULL,
+xlim = range(exp(x_seq)), ylim = c(0, 200000),
+main='a ~ dnorm(0.0, 0.1), b ~ dnorm(1.0, 0.1)',
+xlab = "population", ylab = "total tools"
+)
+for (i in 1:N) lines(exp(x_seq), lambda[i, ], col = grau(), lwd = 1.5)
 ```
 
 ## 11.4. Summary
@@ -783,9 +776,7 @@ pl.beta <- function(a,b, asp = if(isLim) 1, ylim = if(isLim) c(0,1.1)) {
 Here's a plot of that prior:
 
 ```{code-cell} r
-iplot(function() {
-  pl.beta(40, 200)
-})
+pl.beta(40, 200)
 ```
 
 [betas]: https://mc-stan.org/docs/2_28/functions-reference/beta-distribution.html
