@@ -8,6 +8,29 @@ container_run_and_commit(
   image = "@datascience_notebook//image",
 )
 
+load("@io_bazel_rules_docker//container:container.bzl", "container_image")
+container_image(
+    name = "root_ds_image",
+    base = ":install_conda_pip_commit.tar",
+    user = "root",
+)
+
+load("@io_bazel_rules_docker//docker/package_managers:download_pkgs.bzl", "download_pkgs")
+download_pkgs(
+    name = "system_pkgs",
+    image_tar = ":root_ds_image.tar",
+    packages = ["less"],
+)
+
+load("@io_bazel_rules_docker//docker/package_managers:install_pkgs.bzl", "install_pkgs")
+install_pkgs(
+    name = "system_pkgs_image",
+    image_tar = ":root_ds_image.tar",
+    installables_tar = ":system_pkgs.tar",
+    installation_cleanup_commands = "rm -rf /var/lib/apt/lists/*",
+    output_image_name = "system_pkgs_image",
+)
+
 load("@rules_pkg//:mappings.bzl", "pkg_files")
 pkg_files(
     name = "raw_cache",
@@ -52,11 +75,11 @@ container_layer(
     tars = [":jupyter_book_tar"],
 )
 
-load("@io_bazel_rules_docker//container:container.bzl", "container_image")
 container_image(
     name = "datascience_with_source",
-    base = ":install_conda_pip_commit.tar",
+    base = ":system_pkgs_image.tar",
     layers = [":cache_layer", ":source_layer"],
+    user = "jovyan",
 )
 
 load("@io_bazel_rules_docker//docker/util:run.bzl", "container_run_and_extract")
