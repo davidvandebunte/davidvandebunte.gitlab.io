@@ -22,10 +22,9 @@ pkg_tar(
     owner = "1000.100",
 )
 
-load("@io_bazel_rules_docker//container:container.bzl", "container_image")
-container_image(
-    name = "datascience_with_cache",
-    base = ":install_conda_pip_commit.tar",
+load("@io_bazel_rules_docker//container:container.bzl", "container_layer")
+container_layer(
+    name="cache_layer",
     directory = "/tmp/_build/.jupyter_cache",
     tars = [":cache_tar"],
 )
@@ -47,11 +46,17 @@ pkg_tar(
     deps = [":notes_tar"],
     owner = "1000.100",
 )
-container_image(
-    name = "datascience_with_source",
-    base = ":datascience_with_cache.tar",
+container_layer(
+    name="source_layer",
     directory = "/home/jovyan/work",
     tars = [":jupyter_book_tar"],
+)
+
+load("@io_bazel_rules_docker//container:container.bzl", "container_image")
+container_image(
+    name = "datascience_with_source",
+    base = ":install_conda_pip_commit.tar",
+    layers = [":cache_layer", ":source_layer"],
 )
 
 load("@io_bazel_rules_docker//docker/util:run.bzl", "container_run_and_extract")
