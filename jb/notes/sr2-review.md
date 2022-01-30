@@ -276,10 +276,13 @@ divergence and deviance.
 > of both q and r.
 
 The term of 'most of' should be removed, this is clearly a complete cancellation:
+
 $$
-D_{KL}(p,q) = H(p,q) - H(p) \\
-D_{KL}(p,r) = H(p,r) - H(p) \\
-D_{KL}(p,q) - D(p,r) = H(p,q) - H(p,r)
+\begin{align}
+D_{KL}(p,q) & = H(p,q) - H(p) \\
+D_{KL}(p,r) & = H(p,r) - H(p) \\
+D_{KL}(p,q) - D(p,r) & = H(p,q) - H(p,r) \\
+\end{align}
 $$
 
 A log-probability score (or the lppd) estimates the cross entropy.
@@ -326,12 +329,15 @@ outlier warnings.
 
 To relate these equations to the form of the equations in section 8.3, where equations have four
 terms:
+
 $$
-\mu_i = (2 - CID_i)(\alpha_1 + \beta_1\left(r_i - \bar{r}\right)) + \
+\begin{align}
+\mu_i & = (2 - CID_i)(\alpha_1 + \beta_1\left(r_i - \bar{r}\right)) + \
         (CID_i - 1)(\alpha_2 + \beta_2\left(r_i - \bar{r}\right)) \\
-\mu_i = (2\alpha_1 - \alpha_2) + (\alpha_2 - \alpha_1)CID_i + \
+\mu_i & = (2\alpha_1 - \alpha_2) + (\alpha_2 - \alpha_1)CID_i + \
         (2\beta_1 - \beta_2)\left(r_i - \bar{r}\right) + \
         (\beta_2 - \beta_1)CID_{i}\left(r_i - \bar{r}\right)
+\end{align}
 $$
 
 See also answer 8E3 (scenario 2).
