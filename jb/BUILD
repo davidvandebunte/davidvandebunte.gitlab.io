@@ -5,7 +5,30 @@ container_run_and_commit(
       "conda install jira pint uncertainties",
       "pip install jupyter-book xlsx2csv==0.7.7 tables",
   ],
-  image = "@scipy_notebook//image",
+  image = "@datascience_notebook//image",
+)
+
+load("@io_bazel_rules_docker//container:container.bzl", "container_image")
+container_image(
+    name = "root_ds_image",
+    base = ":install_conda_pip_commit.tar",
+    user = "root",
+)
+
+load("@io_bazel_rules_docker//docker/package_managers:download_pkgs.bzl", "download_pkgs")
+download_pkgs(
+    name = "system_pkgs",
+    image_tar = ":root_ds_image.tar",
+    packages = ["less"],
+)
+
+load("@io_bazel_rules_docker//docker/package_managers:install_pkgs.bzl", "install_pkgs")
+install_pkgs(
+    name = "system_pkgs_image",
+    image_tar = ":root_ds_image.tar",
+    installables_tar = ":system_pkgs.tar",
+    installation_cleanup_commands = "rm -rf /var/lib/apt/lists/*",
+    output_image_name = "system_pkgs_image",
 )
 
 load("@rules_pkg//:mappings.bzl", "pkg_files")
@@ -22,10 +45,9 @@ pkg_tar(
     owner = "1000.100",
 )
 
-load("@io_bazel_rules_docker//container:container.bzl", "container_image")
-container_image(
-    name = "scipy_with_cache",
-    base = ":install_conda_pip_commit.tar",
+load("@io_bazel_rules_docker//container:container.bzl", "container_layer")
+container_layer(
+    name="cache_layer",
     directory = "/tmp/_build/.jupyter_cache",
     tars = [":cache_tar"],
 )
@@ -47,11 +69,17 @@ pkg_tar(
     deps = [":notes_tar"],
     owner = "1000.100",
 )
-container_image(
-    name = "scipy_with_source",
-    base = ":scipy_with_cache.tar",
+container_layer(
+    name="source_layer",
     directory = "/home/jovyan/work",
     tars = [":jupyter_book_tar"],
+)
+
+container_image(
+    name = "datascience_with_source",
+    base = ":system_pkgs_image.tar",
+    layers = [":cache_layer", ":source_layer"],
+    user = "jovyan",
 )
 
 load("@io_bazel_rules_docker//docker/util:run.bzl", "container_run_and_extract")
@@ -60,13 +88,13 @@ container_run_and_extract(
     commands = ["mkdir -p /tmp/_build",
                 "jupyter-book build work --path-output /tmp >/tmp/_build/out.txt 2>&1"],
     extract_file = "/tmp/_build",
-    image = ":scipy_with_source.tar",
+    image = ":datascience_with_source.tar",
 )
 
 load("@io_bazel_rules_docker//container:container.bzl", "container_push")
 container_push(
    name = "push_jln",
-   image = "scipy_with_source",
+   image = "datascience_with_source",
    format = "Docker",
    registry = "registry.gitlab.com",
    repository = "davidvandebunte/$(project)",
