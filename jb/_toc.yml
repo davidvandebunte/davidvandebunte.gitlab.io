@@ -7,21 +7,25 @@ parts:
   - caption: Visual Group Theory
     chapters:
       - file: notes/chp8-q32.md
-  - caption: Notes
+  - caption: Memoize
     chapters:
-      - file: notes/push-for-feedback.md
       - file: notes/memoize-artifact.md
       - file: notes/memoize-docker-image.md
-      - file: notes/switch-to-conda.md
-      - file: notes/update-dependencies.md
-      - file: notes/share-comment.md
-      - file: notes/share-notes.md
-      - file: notes/share-to-wikimedia.md
-      - file: notes/share-to-blog.md
-      - file: notes/redact.md
-      - file: notes/select-license.md
-      - file: notes/share-to-stack-exchange.md
+  - caption: Notes
+    chapters:
       - file: notes/containerize-application.md
-      - file: notes/split-vcs-repository.md
       - file: notes/investigate-root-cause.md
       - file: notes/prescribe-computing-metrics.md
+      - file: notes/push-for-feedback.md
+      - file: notes/split-vcs-repository.md
+      - file: notes/switch-to-conda.md
+      - file: notes/update-dependencies.md
+  - caption: Share
+    chapters:
+      - file: notes/redact.md
+      - file: notes/select-license.md
+      - file: notes/share-comment.md
+      - file: notes/share-notes.md
+      - file: notes/share-to-blog.md
+      - file: notes/share-to-stack-exchange.md
+      - file: notes/share-to-wikimedia.md
