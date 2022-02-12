@@ -9,6 +9,7 @@ container_run_and_commit(
   image = "@datascience_notebook//image",
 )
 
+# Construct a tar with the rethinking package
 load("@rules_pkg//:mappings.bzl", "pkg_files")
 load("@rules_pkg//:pkg.bzl", "pkg_tar")
 pkg_files(
@@ -28,6 +29,7 @@ pkg_tar(
     owner = "1000.100",
 )
 
+# Construct an image with the rethinking dependency
 load("@io_bazel_rules_docker//container:container.bzl", "container_image")
 container_image(
     name = "root_ds_image",
@@ -58,6 +60,7 @@ container_run_and_commit(
     image = ":install_R_dependencies_commit.tar",
 )
 
+# Construct a tar with the jupyter book cache
 pkg_files(
     name = "raw_cache",
     srcs = glob(["jupyter_cache/**"]),
