@@ -1,3 +1,4 @@
+# Construct an image with basic conda and pip dependencies
 load("@io_bazel_rules_docker//docker/util:run.bzl", "container_run_and_commit")
 container_run_and_commit(
   name = "install_conda_pip",
@@ -68,6 +69,7 @@ pkg_tar(
     owner = "1000.100",
 )
 
+# Construct a layer with the jupyter book cache
 load("@io_bazel_rules_docker//container:container.bzl", "container_layer")
 container_layer(
     name="cache_layer",
@@ -75,6 +77,7 @@ container_layer(
     tars = [":cache_tar"],
 )
 
+# Construct a tar with the jupyter book md, yml, etc. sources
 pkg_tar(
     name = "notes_tar",
     srcs = glob(["notes/*"]),
@@ -92,12 +95,15 @@ pkg_tar(
     deps = [":notes_tar"],
     owner = "1000.100",
 )
+
+# Construct a layer with the jupyter book md, yml, etc. sources
 container_layer(
     name="source_layer",
     directory = "/home/jovyan/work",
     tars = [":jupyter_book_tar"],
 )
 
+# Construct an image with the jupyter cache and jupyter book sources
 container_image(
     name = "datascience_with_source",
     base = ":install_rethinking_commit.tar",
