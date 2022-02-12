@@ -1,3 +1,4 @@
+# Construct an image with basic conda and pip dependencies
 load("@io_bazel_rules_docker//docker/util:run.bzl", "container_run_and_commit")
 container_run_and_commit(
   name = "install_conda_pip",
@@ -8,27 +9,67 @@ container_run_and_commit(
   image = "@datascience_notebook//image",
 )
 
+load("@rules_pkg//:mappings.bzl", "pkg_files")
+load("@rules_pkg//:pkg.bzl", "pkg_tar")
+pkg_files(
+    name = "raw_rethinking",
+    srcs = glob([
+        "rethinking/R/**",
+        "rethinking/data/**",
+        "rethinking/install/**",
+        "rethinking/man/**",
+        "rethinking/tests/**",
+        ]) + ["rethinking/DESCRIPTION", "rethinking/NAMESPACE"],
+    strip_prefix = "rethinking",
+)
+pkg_tar(
+    name = "rethinking_tar",
+    srcs = [":raw_rethinking"],
+    owner = "1000.100",
+)
+
 load("@io_bazel_rules_docker//container:container.bzl", "container_image")
 container_image(
     name = "root_ds_image",
     base = ":install_conda_pip_commit.tar",
     user = "root",
+    directory = "/rethinking",
+    tars = [":rethinking_tar"],
+)
+container_run_and_commit(
+    name = "install_rstan",
+    commands = [
+        "R -f /rethinking/install/rstan.R",
+    ],
+    image = ":root_ds_image.tar",
+)
+container_run_and_commit(
+    name = "install_R_dependencies",
+    commands = [
+        "R -f /rethinking/install/dependencies.R",
+    ],
+    image = ":install_rstan_commit.tar",
+)
+container_run_and_commit(
+    name = "install_rethinking",
+    commands = [
+        "R -f /rethinking/install/rethinking.R",
+    ],
+    image = ":install_R_dependencies_commit.tar",
 )
 
-load("@rules_pkg//:mappings.bzl", "pkg_files")
 pkg_files(
     name = "raw_cache",
     srcs = glob(["jupyter_cache/**"]),
     strip_prefix = "jupyter_cache",
 )
-
-load("@rules_pkg//:pkg.bzl", "pkg_tar")
 pkg_tar(
     name = "cache_tar",
     srcs = [":raw_cache"],
     owner = "1000.100",
 )
 
+# Construct a layer with the jupyter book cache
 load("@io_bazel_rules_docker//container:container.bzl", "container_layer")
 container_layer(
     name="cache_layer",
@@ -36,6 +77,7 @@ container_layer(
     tars = [":cache_tar"],
 )
 
+# Construct a tar with the jupyter book md, yml, etc. sources
 pkg_tar(
     name = "notes_tar",
     srcs = glob(["notes/*"]),
@@ -53,15 +95,18 @@ pkg_tar(
     deps = [":notes_tar"],
     owner = "1000.100",
 )
+
+# Construct a layer with the jupyter book md, yml, etc. sources
 container_layer(
     name="source_layer",
     directory = "/home/jovyan/work",
     tars = [":jupyter_book_tar"],
 )
 
+# Construct an image with the jupyter cache and jupyter book sources
 container_image(
     name = "datascience_with_source",
-    base = ":root_ds_image.tar",
+    base = ":install_rethinking_commit.tar",
     layers = [":cache_layer", ":source_layer"],
     user = "jovyan",
 )

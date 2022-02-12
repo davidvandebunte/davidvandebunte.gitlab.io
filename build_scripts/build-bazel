@@ -7,8 +7,8 @@ docker exec --tty --workdir "$(pwd)" \
 
 # TODO: This push is relatively slow; only enable it if you need to debug an issue with the build.
 # Notice the warning associated with pushing the hugo image; could this be faster?
-docker exec --tty --workdir "$(pwd)" \
-    bazel-server bazel run --define project=${CI_PROJECT_NAME} //jb:push_jln
+# docker exec --tty --workdir "$(pwd)" \
+#    bazel-server bazel run --define project=${CI_PROJECT_NAME} //jb:push_jln
 
 cp -r "bazel-bin/jb/extract_build_book/tmp/_build/html" public/executable-notes
 
