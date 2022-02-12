@@ -1,9 +1,20 @@
 #!/usr/bin/env sh
+set -o errexit -o nounset -o xtrace
+
 echo "${CI_PROJECT_NAME:=personal-notes}"
+DOCKER_CONFIG=/tmp/.ci_docker
+export DOCKER_CONFIG
+docker pull registry.gitlab.com/davidvandebunte/${CI_PROJECT_NAME}:user_hugo
+
+if [ "$CI_PROJECT_NAME" = "personal-notes" ]; then
+    BASE_URL="https://$CI_PROJECT_NAMESPACE.gitlab.io/-/$CI_PROJECT_NAME/-/jobs/$CI_JOB_ID/artifacts/public/shared-notes"
+fi
 time docker run --rm \
     -u "$(id -u)":"$(id -g)" \
     --mount type=bind,source="$(pwd)",target=/src \
     --workdir /src/hugo \
     registry.gitlab.com/davidvandebunte/${CI_PROJECT_NAME}:user_hugo \
-    hugo --enableGitInfo -d shared-notes
+    hugo --enableGitInfo \
+    ${BASE_URL:+ --baseURL="$BASE_URL"} \
+    -d shared-notes
 cp -r hugo/shared-notes public
