@@ -56,7 +56,7 @@ container_pull(
   name = "datascience_notebook",
   registry = "index.docker.io",
   repository = "jupyter/datascience-notebook",
-  digest = "sha256:69f9bcbed7cc2b1143e744ea028cd48cda93f1fd93bf96d0a9e1a5b3bf3cf71b",
+  digest = "sha256:61cd2db1748f3573367bd4cef2ea342a5757f2e6e86b04afaa30e289976c53d7",
 )
 
 container_pull(
