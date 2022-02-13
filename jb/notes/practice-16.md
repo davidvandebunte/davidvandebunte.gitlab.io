@@ -712,7 +712,7 @@ that implies you must also rescale the parameters.
 
 **Answer.** Let's start by inspecting the data.
 
-```{code-cell} r
+```{code-cell}
 load.mites <- function() {
   data(Mites)
   display_markdown("The `Mites` data:")
@@ -722,7 +722,7 @@ load.mites <- function() {
 d <- load.mites()
 ```
 
-```{code-cell} r
+```{code-cell}
 mites.simple.model <- r"(
 Notice the observations are usually 6-7 days apart. For modeling simplicity, we'll assume the
 observations are evenly spaced. The raw data with this simpler x-axis is:
@@ -754,7 +754,7 @@ plot.mites(d)
 
 The cyclical trend is less clear than in the Lynx-Hare data (compare to Figure 16.6).
 
-```{code-cell} r
+```{code-cell}
 plot.mite.prior <- function(init, theta) {
   iplot(function() {
     par(mar = c(4.0, 4.0, 0.2, 0.2))
@@ -775,7 +775,7 @@ plot.mite.prior <- function(init, theta) {
 
 Let's select Mites priors starting from the Lynx-Hare model priors:
 
-```{code-cell} r
+```{code-cell}
 theta <- list(bPrey=1, mPrey=0.05, bPred=0.05, mPred=1)
 init <- list(initPred=10, initPrey=10)
 plot.mite.prior(init, theta)
@@ -789,7 +789,7 @@ this, let's reduce the two parameters associated with the coupling between the p
 $m_{Prey}$ and $b_{Pred}$. If we were to decrease these parameters to zero we would completely
 decouple the populations; we'll pick something less extreme:
 
-```{code-cell} r
+```{code-cell}
 theta <- list(bPrey=1, mPrey=0.02, bPred=0.02, mPred=1)
 plot.mite.prior(init, theta)
 ```
@@ -797,7 +797,7 @@ plot.mite.prior(init, theta)
 We've recovered more normal cycles, but the prediction scale is still low. Let's increase birth
 rates to further increase the implied predictions:
 
-```{code-cell} r
+```{code-cell}
 theta <- list(bPrey=5, mPrey=0.02, bPred=0.02, mPred=5)
 plot.mite.prior(init, theta)
 ```
@@ -815,12 +815,12 @@ equations. Using the variable names on [Lotka-Volterra equations][lve], we want 
 $dx/dt$ and $dy/dt$. These rates are direct functions of all four parameters; to decrease them we
 can decrease our four main parameters:
 
-```{code-cell} r
+```{code-cell}
 theta <- list(bPrey=0.5, mPrey=0.002, bPred=0.002, mPred=0.5)
 plot.mite.prior(init, theta)
 ```
 
-```{code-cell} r
+```{code-cell}
 english.select.mites.prior.uncertainties <- r"(
 <br/>
 We've selected reasonable location parameters for our priors. Selecting the scale parameters is less
@@ -848,7 +848,7 @@ sim.mites.priors <- function() {
 sim.mites.priors()
 ```
 
-```{code-cell} r
+```{code-cell}
 english.plot.mites.together <- r"(
 <br/>
 If we plot many posterior predictions (pairs of predator/prey traces) on a single plot as in the
