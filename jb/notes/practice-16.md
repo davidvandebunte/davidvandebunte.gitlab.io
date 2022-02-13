@@ -457,8 +457,6 @@ fit.panda.nut.example.with.individual.differences()
 
 There's a lot of individual variation; the 9th chimpanzee is a standout even with regularization.
 
-```{code-cell}
-ask.one.lag.variable <- r"(
 **16H3.** The chapter asserts that a typical, geocentric time series model might be one that uses
 lag variables. Here you’ll fit such a model and compare it to the ODE model in the chapter. An
 autoregressive time series uses earlier values of the state variables to predict new values of the
@@ -474,7 +472,6 @@ dat_ar1 <- list(
  H = Lynx_Hare$Hare[2:21],
  H_lag1 = Lynx_Hare$Hare[1:20] )
 ```
-<br/>
 
 Now you can use `L_lag1` and `H_lag1` as predictors of the outcomes `L` and `H`. Like this:
 
@@ -493,7 +490,8 @@ autoregressive model to the ODE model in the chapter. How do the predictions dif
 why, using the structures of the models?
 
 **Answer.** First, let's review the data and reproduce some results from the text.
-)"
+
+```{code-cell}
 display.lh.df <- function() {
   data(Lynx_Hare)
   display_markdown("The entirety of the `Lynx_Hare` data.frame:")
@@ -503,6 +501,10 @@ display.lh.df <- function() {
   cat(Lynx_Hare_model)
   flush.console()
 }
+display.lh.df()
+```
+
+```{code-cell}
 plot.lh.posterior <- function(x, hare_pred, lynx_pred, Lynx_Hare, name) {
   pelts <- Lynx_Hare[, 2:3]
   iplot(function() {
@@ -542,8 +544,10 @@ reproduce.lh.model <- function() {
   display_markdown("The posterior predictions from the text:")
   plot.lh.posterior(1:21, hare_pred, lynx_pred, Lynx_Hare, "m16.5")
 }
+reproduce.lh.model()
+```
 
-english.compare.models <- r"(
+```{code-cell}
 Let's compare the mathematical form of the models side-by-side. The core of the ODE model:
 $$
 \begin{align}
@@ -585,7 +589,9 @@ positive and negative. In the one-lag AR model, we would expect $\beta_{HH}$ to 
 hares give birth to more hares, and $\beta_{HL}$ to be negative because lynx eat hares. It gets
 harder to make simple prior decisions like this with two lag variables because we can't strictly
 interpret the $\beta$ parameters as birth and death rates.
-)"
+```
+
+```{code-cell}
 fit.one.lag.variable <- function() {
   data(Lynx_Hare)
   dat_ar1 <- list(
@@ -624,29 +630,23 @@ fit.one.lag.variable <- function() {
   }, dat_ar1$H_lag1, dat_ar1$L_lag1)
   plot.lh.posterior(2:21, mu_H, mu_L, Lynx_Hare, "m.one.lag")
 }
-english.predictions.differ <- r"(
+fit.one.lag.variable()
+```
+
 We skip the influence of $\sigma$ in the previous plot to make it easier to interpret. The AR model
 generally performs worse than the ODE model, in particular in areas with extreme transitions.
 Because the AR model is looking at such a more local scale when it updates parameters, it seems to
 dismiss these extreme cases as outliers in order to fit the majority of the data more closely. That
 is, it can't see these cases as the result of a larger trend going back several steps.
-)"
-ask.answer.one.lag.variable <- function() {
-  display_markdown(ask.one.lag.variable)
-  display.lh.df()
-  reproduce.lh.model()
-  display_markdown(english.compare.models)
-  fit.one.lag.variable()
-  display_markdown(english.predictions.differ)
-}
-ask.answer.one.lag.variable()
 
-ask.two.lag.variable <- r"(
 **16H4.** Adapt the autoregressive model to use a two-step lag variable. This means that $L_{t–2}$ and
 $H_{t–2}$, in addition to $L_{t–1}$ and $H_{t–1}$, will appear in the equation for $\mu$. This
 implies that prediction depends upon not only what happened just before now, but also on what
 happened two time steps ago. How does this model perform, compared to the ODE model?
-)"
+
+**Answer.** We'll extend the previous question's model in a straightforward way.
+
+```{code-cell}
 fit.two.lag.variable <- function() {
   data(Lynx_Hare)
   dat_ar2 <- list(
@@ -691,22 +691,13 @@ fit.two.lag.variable <- function() {
   }, dat_ar2$H_lag1, dat_ar2$L_lag1, dat_ar2$H_lag2, dat_ar2$L_lag2)
   plot.lh.posterior(3:21, mu_H, mu_L, Lynx_Hare, "m.two.lag")
 }
-two.lag.vs.ode <- r"(
+fit.two.lag.variable()
+```
+
 The two-step lag model performs similarly the one-step lag model, with more uncertainty associated
 with extra parameters that only give the model general flexibility, not the right kind of
 flexibility for this problem.
-)"
-ask.answer.two.lag.variable <- function() {
-  display_markdown(ask.two.lag.variable)
-  display_markdown("**Answer.** We'll extend the previous question's model in a straightforward way.")
-  fit.two.lag.variable()
-  display_markdown(two.lag.vs.ode)
-}
-ask.answer.two.lag.variable()
-```
 
-```{code-cell}
-ask.mites <- r"(
 **16H5.** Population dynamic models are typically very difficult to fit to empirical data. The
 lynx-hare example in the chapter was easy, partly because the data are unusually simple and partly
 because the chapter did the difficult prior selection for you. Here’s another data set that will
@@ -718,14 +709,20 @@ of individuals, not just their pelts. You will need to adapt the Stan code in
 variables are on a different scale. Prior predictive simulation will help. Keep in mind as well that
 the time variable and the birth and death parameters go together. If you rescale the time dimension,
 that implies you must also rescale the parameters.
-)"
 
+**Answer.** Let's start by inspecting the data.
+
+```{code-cell} r
 load.mites <- function() {
   data(Mites)
   display_markdown("The `Mites` data:")
   display(Mites)
   return(Mites)
 }
+d <- load.mites()
+```
+
+```{code-cell} r
 mites.simple.model <- r"(
 Notice the observations are usually 6-7 days apart. For modeling simplicity, we'll assume the
 observations are evenly spaced. The raw data with this simpler x-axis is:
@@ -752,9 +749,12 @@ plot.mites <- function(d) {
     points(1:N, d$predator, col = rangi2, pch = 16)
   })
 }
-english.mite.plot <- r"(
+plot.mites(d)
+```
+
 The cyclical trend is less clear than in the Lynx-Hare data (compare to Figure 16.6).
-)"
+
+```{code-cell} r
 plot.mite.prior <- function(init, theta) {
   iplot(function() {
     par(mar = c(4.0, 4.0, 0.2, 0.2))
@@ -771,20 +771,37 @@ plot.mite.prior <- function(init, theta) {
     lines(t, z[, 1], col = rangi2, lwd = 2)
   }, ar=2)
 }
-english.mites.decouple.pop <- r"(
-<br/>
+```
+
+Let's select Mites priors starting from the Lynx-Hare model priors:
+
+```{code-cell} r
+theta <- list(bPrey=1, mPrey=0.05, bPred=0.05, mPred=1)
+init <- list(initPred=10, initPrey=10)
+plot.mite.prior(init, theta)
+init <- list(initPred=100, initPrey=100)
+display_markdown("Scaling initial values:")
+plot.mite.prior(init, theta)
+```
+
 The two populations are starting to hit extreme values, unacceptable in a population model. To fix
 this, let's reduce the two parameters associated with the coupling between the populations,
 $m_{Prey}$ and $b_{Pred}$. If we were to decrease these parameters to zero we would completely
 decouple the populations; we'll pick something less extreme:
-)"
-english.mite.birth.rates <- r"(
-<br/>
+
+```{code-cell} r
+theta <- list(bPrey=1, mPrey=0.02, bPred=0.02, mPred=1)
+plot.mite.prior(init, theta)
+```
+
 We've recovered more normal cycles, but the prediction scale is still low. Let's increase birth
 rates to further increase the implied predictions:
-)"
-english.mite.cycles <- r"(
-<br/>
+
+```{code-cell} r
+theta <- list(bPrey=5, mPrey=0.02, bPred=0.02, mPred=5)
+plot.mite.prior(init, theta)
+```
+
 [nr]: https://en.wikipedia.org/wiki/Nyquist_rate
 [lve]: https://en.wikipedia.org/w/index.php?title=Lotka%E2%80%93Volterra_equations&oldid=1057972095
 
@@ -797,26 +814,13 @@ To decrease the rate at which the populations change, let's inspect the original
 equations. Using the variable names on [Lotka-Volterra equations][lve], we want to decrease both
 $dx/dt$ and $dy/dt$. These rates are direct functions of all four parameters; to decrease them we
 can decrease our four main parameters:
-)"
 
-sel.mite.priors <- function(d) {
-  display_markdown("Let's select Mites priors starting from the Lynx-Hare model priors:")
-  theta <- list(bPrey=1, mPrey=0.05, bPred=0.05, mPred=1)
-  init <- list(initPred=10, initPrey=10)
-  plot.mite.prior(init, theta)
-  init <- list(initPred=100, initPrey=100)
-  display_markdown("Scaling initial values:")
-  plot.mite.prior(init, theta)
-  display_markdown(english.mites.decouple.pop)
-  theta <- list(bPrey=1, mPrey=0.02, bPred=0.02, mPred=1)
-  plot.mite.prior(init, theta)
-  display_markdown(english.mite.birth.rates)
-  theta <- list(bPrey=5, mPrey=0.02, bPred=0.02, mPred=5)
-  plot.mite.prior(init, theta)
-  display_markdown(english.mite.cycles)
-  theta <- list(bPrey=0.5, mPrey=0.002, bPred=0.002, mPred=0.5)
-  plot.mite.prior(init, theta)
-}
+```{code-cell} r
+theta <- list(bPrey=0.5, mPrey=0.002, bPred=0.002, mPred=0.5)
+plot.mite.prior(init, theta)
+```
+
+```{code-cell} r
 english.select.mites.prior.uncertainties <- r"(
 <br/>
 We've selected reasonable location parameters for our priors. Selecting the scale parameters is less
@@ -841,6 +845,10 @@ sim.mites.priors <- function() {
     plot.mite.prior(init, theta)
   }
 }
+sim.mites.priors()
+```
+
+```{code-cell} r
 english.plot.mites.together <- r"(
 <br/>
 If we plot many posterior predictions (pairs of predator/prey traces) on a single plot as in the
@@ -903,20 +911,8 @@ fit.mites.model <- function(d) {
   display_markdown(english.plot.mites.separate)
   plot.separate.mites.posteriors(d, prey_pred, pred_pred)
 }
-english.mites.summary <- r"(
+fit.mites.model(d)
+```
+
 As expected, the Lotka-Volterra model doesn't fit nearly as well to this data as it did to the
 Lynx-Hare data.
-)"
-ask.answer.mites <- function() {
-  display_markdown(ask.mites)
-  display_markdown("**Answer.** Let's start by inspecting the data.")
-  d <- load.mites()
-  plot.mites(d)
-  display_markdown(english.mite.plot)
-  sel.mite.priors(d)
-  sim.mites.priors()
-  fit.mites.model(d)
-  display_markdown(english.mites.summary)
-}
-ask.answer.mites()
-```
