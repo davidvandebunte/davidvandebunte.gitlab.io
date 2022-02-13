@@ -321,16 +321,14 @@ We've replaced the `k` and `p` parameters, which were previously non-identifiabl
 one another, with a single parameter. With this change the number of effective samples has improved
 dramatically, but the posterior predictions are essentially the same.
 
-```{code-cell}
-ask.modify.panda.nut.example.with.sex.predictor <- r"(
 **16H1.** Modify the Panda nut opening model so that male and female chimpanzees have different
 maximum adult body mass. The `sex` variable in `data(Panda_nuts)` provides the information you need.
 Be sure to incorporate the fact that you know, prior to seeing the data, that males are on average
 larger than females at maturity.
-)"
-answer.modify.panda.nut.example.with.sex.predictor <- r"(
+
 **Answer.** First, let's reproduce results from the chapter:
-)"
+
+```{code-cell}
 load.panda.nut.data <- function() {
   data(Panda_nuts)
   Panda_nuts$sex_int <- as.integer(ifelse(Panda_nuts$sex == 'm', 2, 1))
@@ -357,6 +355,50 @@ fit.panda.nut.example <- function() {
   )
   display_precis(m16.4, "m16.4", ar=4.0)
 }
+fit.panda.nut.example()
+d <- load.panda.nut.data()
+```
+
+[wiki_chimps]: https://en.wikipedia.org/w/index.php?title=Chimpanzee&oldid=1055948132
+
+To include the sex predictor, let's reconsider the following equation from the text:
+
+$$
+\lambda = \alpha S_t^{\theta} = \alpha (\beta M_{max}(1 - exp(-k t)))^{\theta}
+$$
+
+We'd like to make $M_{max}$ depend on sex:
+
+$$
+\lambda = \alpha (\beta M_{max,sex}(1 - exp(-k t)))^{\theta}
+$$
+
+We can still scale the $M$ predictors, but with the new understanding that we are now scaling by the
+maximum male body size rather than just a general maximum. We can then expect that $M_{max,male}$
+to be one after scaling. We can treat $M_{max,female}$ as a parameter we expect to be less than one.
+For our prior we can use information from [Chimpanzee][wiki_chimps]: a male chimp averages 55 kg at
+maturity and a female chimp averages about 40 kg.
+
+Merging several non-identifiable parameters similarly to the text, we have:
+
+$$
+\lambda = \phi_{sex} (1 - exp(-k t))^{\theta}
+$$
+
+We can use the same priors from the text, other than for $\phi_{sex}$. Because we continued to scale
+the $M$ predictors, however, we can reuse the $\phi_{male}$ prior and effectively only add one new
+parameter for the female sex:
+
+$$
+\begin{align}
+\phi_{male} & \sim LogNormal \left( log(1), 0.1 \right) \\
+\phi_{female} & \sim LogNormal \left( log(\frac{40}{55}), 0.1) \right)
+\end{align}
+$$
+
+For simplicity, we'll set the same prior and learn the minor difference from the data:
+
+```{code-cell}
 fit.panda.nut.example.with.sex.predictor <- function(d) {
   dat_list <- list(
     n = as.integer(d$nuts_opened),
@@ -376,53 +418,10 @@ fit.panda.nut.example.with.sex.predictor <- function(d) {
   )
   display_precis(m.with.sex.predictor, "m.with.sex.predictor", ar=4.0)
 }
-english.rework.panda.nut.scientific.model.with.sex.predictor <- r"(
-[wiki_chimps]: https://en.wikipedia.org/w/index.php?title=Chimpanzee&oldid=1055948132
-
-To include the sex predictor, let's reconsider the following equation from the text:
-$$
-\lambda = \alpha S_t^{\theta} = \alpha (\beta M_{max}(1 - exp(-k t)))^{\theta}
-$$
-
-We'd like to make $M_{max}$ depend on sex:
-$$
-\lambda = \alpha (\beta M_{max,sex}(1 - exp(-k t)))^{\theta}
-$$
-
-We can still scale the $M$ predictors, but with the new understanding that we are now scaling by the
-maximum male body size rather than just a general maximum. We can then expect that $M_{max,male}$
-to be one after scaling. We can treat $M_{max,female}$ as a parameter we expect to be less than one.
-For our prior we can use information from [Chimpanzee][wiki_chimps]: a male chimp averages 55 kg at
-maturity and a female chimp averages about 40 kg.
-
-Merging several non-identifiable parameters similarly to the text, we have:
-$$
-\lambda = \phi_{sex} (1 - exp(-k t))^{\theta}
-$$
-
-We can use the same priors from the text, other than for $\phi_{sex}$. Because we continued to scale
-the $M$ predictors, however, we can reuse the $\phi_{male}$ prior and effectively only add one new
-parameter for the female sex:
-$$
-\begin{align}
-\phi_{male} & \sim LogNormal \left( log(1), 0.1 \right) \\
-\phi_{female} & \sim LogNormal \left( log(\frac{40}{55}), 0.1) \right)
-\end{align}
-$$
-
-For simplicity, we'll set the same prior and learn the minor difference from the data:
-)"
-modify.panda.nut.example.with.sex.predictor <- function() {
-  display_markdown(ask.modify.panda.nut.example.with.sex.predictor)
-  display_markdown(answer.modify.panda.nut.example.with.sex.predictor)
-  fit.panda.nut.example()
-  d <- load.panda.nut.data()
-  display_markdown(english.rework.panda.nut.scientific.model.with.sex.predictor)
-  fit.panda.nut.example.with.sex.predictor(d)
-  display_markdown(r"(The new model learns significantly different $\phi$ parameters.)")
-}
-# modify.panda.nut.example.with.sex.predictor()
+fit.panda.nut.example.with.sex.predictor(d)
 ```
+
+The new model learns significantly different $\phi$ parameters.
 
 **16H2.** Now return to the Panda nut model and try to incorporate individual differences. There are
 two parameters, $\phi$ and $k$, which plausibly vary by individual. Pick one of these, allow it to
