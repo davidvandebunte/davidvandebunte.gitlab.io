@@ -15,7 +15,7 @@ kernelspec:
 
 # Practice: Chp. 16
 
-```{code-cell} r
+```{code-cell}
 source("iplot.R")
 suppressPackageStartupMessages(library(rethinking))
 ```
@@ -47,7 +47,7 @@ model. How do they differ from those of `m16.1`?
 
 **Answer.** First, let's reproduce results for `m16.1`:
 
-```{code-cell} r
+```{code-cell}
 load.d16m1 <- function() {
   data(Howell1)
   d <- Howell1
@@ -92,7 +92,7 @@ m16.1 <- fm16m1(d)
 
 Fitting the new model with a parameterized exponent:
 
-```{code-cell} r
+```{code-cell}
 fm3exp <- function(d) {
   m3exp <- ulam(
     alist(
@@ -124,7 +124,7 @@ do you suggest?
 
 We're predicting weight, so the author likely meant reasonable weight distributions.
 
-```{code-cell} r
+```{code-cell}
 pp16m2 <- function(p_sim, k_sim) {
   h_seq <- seq(from=0, to=1.0, length.out=30)
   iplot(function() {
@@ -169,7 +169,7 @@ $$
 
 Set `k` to 32 and use a LogNormal prior to produce a better simulation:
 
-```{code-cell} r
+```{code-cell}
 s16m2a <- function() {
   set.seed(7)
   N <- 20
@@ -185,7 +185,8 @@ in the chapter. Which population dynamics do these produce? Can you suggest any 
 priors, on the basis of your simulations?
 
 "**Answer.** Sampling only ten simulations from the priors:"
-```{code-cell} r
+
+```{code-cell}
 sim.pred.prey <- function(n_steps, init, theta, dt = 0.002) {
   # Euler method; exactly the same as `sim_lynx_hare` in the text.
   Pred <- rep(NA, n_steps)
@@ -227,6 +228,7 @@ s16m2a <- function() {
 }
 s16m2a()
 ```
+
 Clearly, these priors produce extreme observations. In some cases populations vary from nearly zero
 individuals to tens of millions. In any real ecosystem this would not happen; species would go
 extinct if they hit an extreme population bottleneck.
@@ -234,7 +236,7 @@ extinct if they hit an extreme population bottleneck.
 A simple solution is to assume a species's birth and death rates are not several orders of magnitude
 off from each other, and to reduce the magnitude of dispersion parameters (standard deviations).
 
-```{code-cell} r
+```{code-cell}
 s16m2b <- function() {
   set.seed(7)
   N <- 10
@@ -249,7 +251,8 @@ s16m2b <- function() {
 }
 s16m2b()
 ```
-```{code-cell} r
+
+```{code-cell}
 e16m4 <- r"(
 **16M4.** Modify the cylinder height model to use a sphere instead of a cylinder. What choices do
 you have to make now? Is this a better model, on a predictive basis? Why or why not?
@@ -317,12 +320,15 @@ q16m4 <- function() {
 }
 q16m4()
 ```
-```{code-cell} r
+
+```{code-cell}
 source('practice-panda-nut.R')
 ```
-```{code-cell} r
+
+```{code-cell}
 source('practice-autoregressive.R')
 ```
-```{code-cell} r
+
+```{code-cell}
 source('practice-mites.R')
 ```
