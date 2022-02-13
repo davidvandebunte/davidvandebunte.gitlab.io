@@ -547,8 +547,8 @@ reproduce.lh.model <- function() {
 reproduce.lh.model()
 ```
 
-```{code-cell}
 Let's compare the mathematical form of the models side-by-side. The core of the ODE model:
+
 $$
 \begin{align}
 H_1 & \sim LogNormal(log(10), 1) \\
@@ -559,6 +559,7 @@ L_{T>1} & = L_1 + \int\limits_1^T L_t (b_L H_t - m_L) dt
 $$
 
 The AR model:
+
 $$
 \begin{align}
 H_t \sim LogNormal(log(\mu_{H,t}), \sigma_H) \\
@@ -589,7 +590,6 @@ positive and negative. In the one-lag AR model, we would expect $\beta_{HH}$ to 
 hares give birth to more hares, and $\beta_{HL}$ to be negative because lynx eat hares. It gets
 harder to make simple prior decisions like this with two lag variables because we can't strictly
 interpret the $\beta$ parameters as birth and death rates.
-```
 
 ```{code-cell}
 fit.one.lag.variable <- function() {
