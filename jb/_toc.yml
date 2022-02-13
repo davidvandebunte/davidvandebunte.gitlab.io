@@ -7,6 +7,7 @@ parts:
   - caption: Statistical Rethinking
     chapters:
       - file: notes/sr2-review.md
+      - file: notes/practice-16.md
   - caption: Visual Group Theory
     chapters:
       - file: notes/chp8-q32.md
