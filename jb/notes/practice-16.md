@@ -158,11 +158,13 @@ this, use a LogNormal distribution instead.
 
 Another part of the reason is that we were not careful selecting the `k` prior. Returning to the
 equation we used to pick `k` in the text:
+
 $$
 1 = k \pi p^2 1^3
 $$
 
 Solving for `k` and assuming we set p to 0.1:
+
 $$
 k = \frac{1}{\pi p^2} = \frac{1}{\pi \cdot 0.1^2} \approx 31.8
 $$
@@ -271,22 +273,26 @@ maximums improves our ability to interpret model internals like the priors, whic
 interpret again as the posterior.
 
 The explicitly stated model:
+
 $$
 W = kV = k \cdot \frac{4}{3} \pi r^3
 $$
 
 Using $h = 2r$:
+
 $$
 W = k \cdot \frac{\pi}{6} h^3
 $$
 
 We'll use a similar equation to the one in the text (based on maximums) to select the prior for `k`
 in this scenario:
+
 $$
 1 = k \cdot \frac{\pi}{6} 1^3
 $$
 
 Solving for `k`:
+
 $$
 k = \frac{6}{\pi}
 $$
