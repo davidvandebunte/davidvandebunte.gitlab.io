@@ -18,12 +18,12 @@ variables:
 
 test:
   <<: *dind_login
-  except:
-    - master
   # stackoverflow.com/a/58402821/622049
   environment:
     name: Develop
     url: "https://$CI_PROJECT_NAMESPACE.gitlab.io/-/$CI_PROJECT_NAME/-/jobs/$CI_JOB_ID/artifacts/public/index.html"
+  except:
+    - master
 
 pages:
   <<: *dind_login
