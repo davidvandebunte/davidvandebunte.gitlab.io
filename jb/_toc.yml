@@ -14,6 +14,7 @@ parts:
     chapters:
       - file: notes/memoize-artifact.md
       - file: notes/memoize-docker-image.md
+      - file: notes/memoize-jupyter-book.md
   - caption: Notes
     chapters:
       - file: notes/containerize-application.md
