@@ -5,34 +5,27 @@
     name: docker:19.03.12
   services:
     - docker:19.03.12-dind
+  script:
+    - ./build-notes
+  artifacts:
+    paths:
+      - public
+  tags:
+    - notes
 
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
 
 test:
   <<: *dind_login
-  script:
-    - ./build-notes
-  artifacts:
-    paths:
-      - public
   except:
     - master
   # stackoverflow.com/a/58402821/622049
   environment:
     name: Develop
     url: "https://$CI_PROJECT_NAMESPACE.gitlab.io/-/$CI_PROJECT_NAME/-/jobs/$CI_JOB_ID/artifacts/public/index.html"
-  tags:
-    - notes
 
 pages:
   <<: *dind_login
-  script:
-    - ./build-notes
-  artifacts:
-    paths:
-      - public
   only:
     - master
-  tags:
-    - notes
