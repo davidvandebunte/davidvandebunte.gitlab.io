@@ -252,14 +252,16 @@ s16m2b <- function() {
 s16m2b()
 ```
 
-```{code-cell}
-e16m4 <- r"(
 **16M4.** Modify the cylinder height model to use a sphere instead of a cylinder. What choices do
 you have to make now? Is this a better model, on a predictive basis? Why or why not?
 
 **Answer.** Fitting the previous model, for reference:
-)"
-e16m4a <- r"(
+
+```{code-cell}
+d <- load.d16m1()
+m16.1 <- fm16m1(d)
+```
+
 A spherical man (or cow) doesn't seem as helpful for selecting intelligent priors like `p`. On the
 other hand, even the cyclinder model required us to pick a prior for `k` that was based on a fit to
 maximums in the data rather than introducing more helpful independent information from our
@@ -290,7 +292,8 @@ k = \frac{6}{\pi}
 $$
 
 Fitting the new model:
-)"
+
+```{code-cell}
 fmsph <- function(d) {
   msph <- ulam(
     alist(
@@ -305,21 +308,12 @@ fmsph <- function(d) {
   vcpp(msph, d)
   return(msph)
 }
-e16m4b <- r"(
+msph <- fmsph(d)
+```
+
 We've replaced the `k` and `p` parameters, which were previously non-identifiable with respect to
 one another, with a single parameter. With this change the number of effective samples has improved
 dramatically, but the posterior predictions are essentially the same.
-)"
-q16m4 <- function() {
-  display_markdown(e16m4)
-  d <- load.d16m1()
-  m16.1 <- fm16m1(d)
-  display_markdown(e16m4a)
-  msph <- fmsph(d)
-  display_markdown(e16m4b)
-}
-q16m4()
-```
 
 ```{code-cell}
 source('practice-panda-nut.R')
