@@ -18,6 +18,7 @@ parts:
   - caption: Notes
     chapters:
       - file: notes/containerize-application.md
+      - file: notes/convert-to-plain-text.md
       - file: notes/investigate-root-cause.md
       - file: notes/prescribe-computing-metrics.md
       - file: notes/push-for-feedback.md

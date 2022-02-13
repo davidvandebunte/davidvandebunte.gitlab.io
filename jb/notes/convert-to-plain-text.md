@@ -1,16 +1,27 @@
 ---
-title: "Convert to plain text"
-date: 2019-05-16
-tags: ["notes"]
+jupytext:
+  cell_metadata_filter: -all
+  formats: md:myst
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.11.2
+kernelspec:
+  display_name: Python 3 (ipykernel)
+  language: python
+  name: python3
 ---
 
-# Test
+# Convert to plain text
+
+## Test
 
 We spend a dramatic portion of our life writing and committing content to a particular format.
 Modern writers can take notes in Microsoft Word, Google Docs, and other capable WYSIWYG editors. Why
 convert (or take) notes in plain text (e.g. CommonMark, reStructuredText) instead?
 
-# Value
+## Value
 
 [1]: https://stackoverflow.com/editing-help
 [2]: https://www.ericholscher.com/blog/2016/mar/15/dont-use-markdown-for-technical-docs/
@@ -48,7 +59,7 @@ You can not close your browser (and your laptop) when Google Docs is syncing. Yo
 Linux does not have good WYSIWYG equation editors. Microsoft Word isn’t available on Ubuntu (a
 decent program for writing equations).
 
-# Cost
+## Cost
 
 You’re forced to wrap at 80 or 100 characters manually. What command line tools do this well
 automatically? In VIM, use `gq`. See [word wrap - vim command to restructure/force text to 80
@@ -68,6 +79,6 @@ being renamed (not possible with Google Docs). When is it ever OK to delete a Go
 There's a larger barrier to entry for plain text notes; unlike a wiki page or Google document, users
 may need to fork a repository to make edits.
 
-# Additional Training Data
+% ## Additional Training Data
 
-- https://docs.google.com/document/d/1DpOP6-CuIn5OQVholgF91vI4l2Fs8FJqs7qGREqW7aI/edit
+% - https://docs.google.com/document/d/1DpOP6-CuIn5OQVholgF91vI4l2Fs8FJqs7qGREqW7aI/edit
