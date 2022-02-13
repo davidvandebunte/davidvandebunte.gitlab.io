@@ -1,7 +1,6 @@
 library(rethinking)
 
 source('iplot.R')
-source('practice-lynx-hare-prior-predictive.R')
 
 ask.mites <- r"(
 **16H5.** Population dynamic models are typically very difficult to fit to empirical data. The
