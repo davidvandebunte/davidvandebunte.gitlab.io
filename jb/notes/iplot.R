@@ -1,5 +1,11 @@
 library(IRdisplay)
 
+# TODO: Replace implementation of iplot with one based on `option` to change the aspect ratio. See:
+# - https://stackoverflow.com/a/60196822/622049
+#
+# This approach should make it easier to convert future documents as well. In fact, could you change
+# nothing and simply add `;` to suppress the NULL you dislike?
+#
 # Prefer a standard width (24*45 = 1080) in images, so that they render decently on e.g. a width
 # 1080 screen. Set only `ar` (aspect_ratio, fraction width/height) in most calls to this function.
 iplot <- function(plot_func, scale=24, x_scale=45, ar=1.4) {

@@ -186,7 +186,7 @@ s16m2a()
 in the chapter. Which population dynamics do these produce? Can you suggest any improvements to the
 priors, on the basis of your simulations?
 
-"**Answer.** Sampling only ten simulations from the priors:"
+**Answer.** Sampling only ten simulations from the priors:
 
 ```{code-cell}
 sim.pred.prey <- function(n_steps, init, theta, dt = 0.002) {
