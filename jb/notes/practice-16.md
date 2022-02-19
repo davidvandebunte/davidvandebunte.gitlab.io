@@ -15,7 +15,7 @@ kernelspec:
 
 # Practice: Chp. 16
 
-```{code-cell}
+```{code-cell} r
 source("iplot.R")
 suppressPackageStartupMessages(library(rethinking))
 ```
@@ -47,7 +47,7 @@ model. How do they differ from those of `m16.1`?
 
 **Answer.** First, let's reproduce results for `m16.1`:
 
-```{code-cell}
+```{code-cell} r
 load.d16m1 <- function() {
   data(Howell1)
   d <- Howell1
@@ -92,7 +92,7 @@ m16.1 <- fm16m1(d)
 
 Fitting the new model with a parameterized exponent:
 
-```{code-cell}
+```{code-cell} r
 fm3exp <- function(d) {
   m3exp <- ulam(
     alist(
@@ -124,7 +124,7 @@ do you suggest?
 
 We're predicting weight, so the author likely meant reasonable weight distributions.
 
-```{code-cell}
+```{code-cell} r
 pp16m2 <- function(p_sim, k_sim) {
   h_seq <- seq(from=0, to=1.0, length.out=30)
   iplot(function() {
@@ -171,7 +171,7 @@ $$
 
 Set `k` to 32 and use a LogNormal prior to produce a better simulation:
 
-```{code-cell}
+```{code-cell} r
 s16m2a <- function() {
   set.seed(7)
   N <- 20
@@ -188,7 +188,7 @@ priors, on the basis of your simulations?
 
 **Answer.** Sampling only ten simulations from the priors:
 
-```{code-cell}
+```{code-cell} r
 sim.pred.prey <- function(n_steps, init, theta, dt = 0.002) {
   # Euler method; exactly the same as `sim_lynx_hare` in the text.
   Pred <- rep(NA, n_steps)
@@ -238,7 +238,7 @@ extinct if they hit an extreme population bottleneck.
 A simple solution is to assume a species's birth and death rates are not several orders of magnitude
 off from each other, and to reduce the magnitude of dispersion parameters (standard deviations).
 
-```{code-cell}
+```{code-cell} r
 s16m2b <- function() {
   set.seed(7)
   N <- 10
@@ -259,7 +259,7 @@ you have to make now? Is this a better model, on a predictive basis? Why or why 
 
 **Answer.** Fitting the previous model, for reference:
 
-```{code-cell}
+```{code-cell} r
 d <- load.d16m1()
 m16.1 <- fm16m1(d)
 ```
@@ -299,7 +299,7 @@ $$
 
 Fitting the new model:
 
-```{code-cell}
+```{code-cell} r
 fmsph <- function(d) {
   msph <- ulam(
     alist(
@@ -328,7 +328,7 @@ larger than females at maturity.
 
 **Answer.** First, let's reproduce results from the chapter:
 
-```{code-cell}
+```{code-cell} r
 load.panda.nut.data <- function() {
   data(Panda_nuts)
   Panda_nuts$sex_int <- as.integer(ifelse(Panda_nuts$sex == 'm', 2, 1))
@@ -398,7 +398,7 @@ $$
 
 For simplicity, we'll set the same prior and learn the minor difference from the data:
 
-```{code-cell}
+```{code-cell} r
 fit.panda.nut.example.with.sex.predictor <- function(d) {
   dat_list <- list(
     n = as.integer(d$nuts_opened),
@@ -430,7 +430,7 @@ vary by individual, and use partial pooling to avoid overfitting. The variable `
 
 **Answer.** Pick the $\phi$ parameter to vary by individual:
 
-```{code-cell}
+```{code-cell} r
 fit.panda.nut.example.with.individual.differences <- function() {
   data(Panda_nuts)
   dat_list <- list(
@@ -491,7 +491,7 @@ why, using the structures of the models?
 
 **Answer.** First, let's review the data and reproduce some results from the text.
 
-```{code-cell}
+```{code-cell} r
 display.lh.df <- function() {
   data(Lynx_Hare)
   display_markdown("The entirety of the `Lynx_Hare` data.frame:")
@@ -504,7 +504,7 @@ display.lh.df <- function() {
 display.lh.df()
 ```
 
-```{code-cell}
+```{code-cell} r
 plot.lh.posterior <- function(x, hare_pred, lynx_pred, Lynx_Hare, name) {
   pelts <- Lynx_Hare[, 2:3]
   iplot(function() {
@@ -591,7 +591,7 @@ hares give birth to more hares, and $\beta_{HL}$ to be negative because lynx eat
 harder to make simple prior decisions like this with two lag variables because we can't strictly
 interpret the $\beta$ parameters as birth and death rates.
 
-```{code-cell}
+```{code-cell} r
 fit.one.lag.variable <- function() {
   data(Lynx_Hare)
   dat_ar1 <- list(
@@ -646,7 +646,7 @@ happened two time steps ago. How does this model perform, compared to the ODE mo
 
 **Answer.** We'll extend the previous question's model in a straightforward way.
 
-```{code-cell}
+```{code-cell} r
 fit.two.lag.variable <- function() {
   data(Lynx_Hare)
   dat_ar2 <- list(
@@ -712,7 +712,7 @@ that implies you must also rescale the parameters.
 
 **Answer.** Let's start by inspecting the data.
 
-```{code-cell}
+```{code-cell} r
 load.mites <- function() {
   data(Mites)
   display_markdown("The `Mites` data:")
@@ -722,7 +722,7 @@ load.mites <- function() {
 d <- load.mites()
 ```
 
-```{code-cell}
+```{code-cell} r
 mites.simple.model <- r"(
 Notice the observations are usually 6-7 days apart. For modeling simplicity, we'll assume the
 observations are evenly spaced. The raw data with this simpler x-axis is:
@@ -754,7 +754,7 @@ plot.mites(d)
 
 The cyclical trend is less clear than in the Lynx-Hare data (compare to Figure 16.6).
 
-```{code-cell}
+```{code-cell} r
 plot.mite.prior <- function(init, theta) {
   iplot(function() {
     par(mar = c(4.0, 4.0, 0.2, 0.2))
@@ -775,7 +775,7 @@ plot.mite.prior <- function(init, theta) {
 
 Let's select Mites priors starting from the Lynx-Hare model priors:
 
-```{code-cell}
+```{code-cell} r
 theta <- list(bPrey=1, mPrey=0.05, bPred=0.05, mPred=1)
 init <- list(initPred=10, initPrey=10)
 plot.mite.prior(init, theta)
@@ -789,7 +789,7 @@ this, let's reduce the two parameters associated with the coupling between the p
 $m_{Prey}$ and $b_{Pred}$. If we were to decrease these parameters to zero we would completely
 decouple the populations; we'll pick something less extreme:
 
-```{code-cell}
+```{code-cell} r
 theta <- list(bPrey=1, mPrey=0.02, bPred=0.02, mPred=1)
 plot.mite.prior(init, theta)
 ```
@@ -797,7 +797,7 @@ plot.mite.prior(init, theta)
 We've recovered more normal cycles, but the prediction scale is still low. Let's increase birth
 rates to further increase the implied predictions:
 
-```{code-cell}
+```{code-cell} r
 theta <- list(bPrey=5, mPrey=0.02, bPred=0.02, mPred=5)
 plot.mite.prior(init, theta)
 ```
@@ -815,12 +815,12 @@ equations. Using the variable names on [Lotka-Volterra equations][lve], we want 
 $dx/dt$ and $dy/dt$. These rates are direct functions of all four parameters; to decrease them we
 can decrease our four main parameters:
 
-```{code-cell}
+```{code-cell} r
 theta <- list(bPrey=0.5, mPrey=0.002, bPred=0.002, mPred=0.5)
 plot.mite.prior(init, theta)
 ```
 
-```{code-cell}
+```{code-cell} r
 english.select.mites.prior.uncertainties <- r"(
 <br/>
 We've selected reasonable location parameters for our priors. Selecting the scale parameters is less
@@ -848,7 +848,7 @@ sim.mites.priors <- function() {
 sim.mites.priors()
 ```
 
-```{code-cell}
+```{code-cell} r
 english.plot.mites.together <- r"(
 <br/>
 If we plot many posterior predictions (pairs of predator/prey traces) on a single plot as in the
