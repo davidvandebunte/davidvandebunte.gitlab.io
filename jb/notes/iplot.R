@@ -17,7 +17,7 @@ iplot <- function(plot_func, scale=24, x_scale=45, ar=1.4) {
     x = plot_func()
     dev.off()
     display_png(file="/tmp/plot.png")
-    return (x)
+    return (invisible(x))
 }
 
 display_precis <- function(m, name, ar) {
