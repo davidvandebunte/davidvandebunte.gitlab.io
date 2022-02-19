@@ -491,17 +491,19 @@ why, using the structures of the models?
 
 **Answer.** First, let's review the data and reproduce some results from the text.
 
+The entirety of the `Lynx_Hare` data.frame:
+
 ```{code-cell} r
-display.lh.df <- function() {
-  data(Lynx_Hare)
-  display_markdown("The entirety of the `Lynx_Hare` data.frame:")
-  display(Lynx_Hare)
-  display_markdown("The model proposed by the author:")
-  data(Lynx_Hare_model)
-  cat(Lynx_Hare_model)
-  flush.console()
-}
-display.lh.df()
+data(Lynx_Hare)
+display(Lynx_Hare)
+```
+
+The model proposed by the author:
+
+```{code-cell} r
+data(Lynx_Hare_model)
+cat(Lynx_Hare_model)
+flush.console()
 ```
 
 ```{code-cell} r
