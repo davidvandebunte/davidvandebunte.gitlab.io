@@ -4,6 +4,9 @@
 format: jb-book
 root: notes/about
 parts:
+  - caption: Book of Why
+    chapters:
+      - file: notes/bow-review.md
   - caption: Statistical Rethinking
     chapters:
       - file: notes/sr2-review.md
