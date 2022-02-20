@@ -366,9 +366,9 @@ For a list of maximum entropy distributions see [Maximum entropy probability dis
 
 ## 10.2. Generalized linear models
 
-[lf]: https://en.wikipedia.org/wiki/Generalized_linear_model#Link_function
+[linkf]: https://en.wikipedia.org/wiki/Generalized_linear_model#Link_function
 
-For a list of common link functions see [Link function][lf].
+For a list of common link functions see [Link function][linkf].
 
 ### 10.2.3. Omitted variable bias again
 
