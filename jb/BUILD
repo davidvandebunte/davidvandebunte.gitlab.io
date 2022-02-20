@@ -118,7 +118,7 @@ load("@io_bazel_rules_docker//docker/util:run.bzl", "container_run_and_extract")
 container_run_and_extract(
     name = "extract_build_book",
     commands = ["mkdir -p /tmp/_build",
-                "jupyter-book build --warningiserror work --path-output /tmp >/tmp/_build/out.txt 2>&1"],
+                "jupyter-book build --warningiserror work --path-output /tmp"],
     extract_file = "/tmp/_build",
     image = ":datascience_with_source.tar",
 )
