@@ -1,6 +1,6 @@
 # Add user to hugo image
-load("@io_bazel_rules_docker//docker/util:run.bzl", "container_run_and_commit")
-container_run_and_commit(
+load("@io_bazel_rules_docker//docker/util:run.bzl", "container_run_and_commit_layer")
+container_run_and_commit_layer(
   name = "user_hugo",
   commands = [
       "apk add git",
@@ -13,7 +13,8 @@ container_run_and_commit(
 load("@io_bazel_rules_docker//container:container.bzl", "container_image")
 container_image(
     name = "user_hugo_img",
-    base = ":user_hugo_commit.tar",
+    base = "@base_hugo//image",
+    layers = [":user_hugo"],
 )
 
 # You can change the `registry` and `repository` arguments to arbitrary strings (without removing
