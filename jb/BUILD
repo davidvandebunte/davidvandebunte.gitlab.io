@@ -81,9 +81,14 @@ container_layer(
 )
 
 # Construct a tar with the jupyter book md, yml, etc. sources
+pkg_files(
+    name = "raw_notes",
+    srcs = glob(["notes/**"]),
+    strip_prefix = "notes",
+)
 pkg_tar(
     name = "notes_tar",
-    srcs = glob(["notes/*"]),
+    srcs = [":raw_notes"],
     package_dir = "notes",
     owner = "1000.100",
 )
