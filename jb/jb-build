@@ -3,3 +3,6 @@ mkdir -p /tmp/_build
 jupyter-book build --warningiserror \
     work --path-output /tmp \
     > >(tee /tmp/_build/stdout.log) 2> >(tee /tmp/_build/stderr.log >&2)
+last_error=$?
+find /tmp/_build/html/ -name '*.log' -type f -print0 | xargs -0 -I{} sh -c 'echo {}; cat {}'
+exit $last_error
