@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+mkdir -p /tmp/_build
+jupyter-book build --warningiserror \
+    work --path-output /tmp \
+    > >(tee /tmp/_build/stdout.log) 2> >(tee /tmp/_build/stderr.log >&2)
