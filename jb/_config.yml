@@ -11,13 +11,6 @@ execute:
   execute_notebooks: cache
   timeout: -1
 
-repository:
-  url: https://gitlab.com/davidvandebunte/davidvandebunte.gitlab.io
-  path_to_book: jb
-  branch: master
-
 # See jupyterbook.org/customize/config.html#add-a-link-to-your-repository
 html:
   favicon: executable-notes-mini.svg
-  use_issues_button: true
-  use_repository_button: true
