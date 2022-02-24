@@ -122,6 +122,11 @@ If you don't care that much about being able to execute your code anymore, it's 
 cares either. It'd be nice to be able to run it, sure, but the value in being able to run the code
 can be much lower than maintaining the dependencies that are required to be able to run it.
 
+Defining the boundaries of how much is enough for something to be considered reproducible is an
+agreement that groups of developers often need to make when they work together. If you didn't change
+any of the code in a particular area of a shared codebase, can you merge your code before waiting
+for a long-running test covering with the untouched code?
+
 #### Estimation
 
 How do you put a numerical estimate on the value of reproducibility? The first step is to estimate
@@ -158,6 +163,16 @@ you haven't specified dependencies you may be wasting an hour of computing resou
 unrelated test that runs when you push to CI. Not only is this wasteful, you may not get automated
 feedback if you [](./push-for-feedback) because e.g. GitLab won't push a pass/fail notification to
 Slack until the hour-long test has passed.
+
+Long waits for automatic feedback are detrimental to forward progress even when all your tests are
+passing. If you don't know that a long-running test is going to pass, or you do but haven't recorded
+your dependencies properly in Bazel or some other system, you'll be waiting for the build to finish
+to start on your next branch on top of a presumed automatically-merged merge request. Either that,
+or you end up building on the same branch indefinitely with new branch names. When multiple
+developers are submitting code at the same time, this problem gets significantly worse.
+
+A system for easy management of dependencies often encourages developers to create more checkpoints
+(more artifacts) for faster feedback, besides making your existing system faster.
 
 #### Estimation
 
