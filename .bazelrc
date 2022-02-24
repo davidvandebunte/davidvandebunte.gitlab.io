@@ -2,7 +2,16 @@ startup --output_user_root=/tmp/output_user_root
 
 build --subcommands
 build --verbose_failures
+
+# TODO: How much does it slow down Bazel to write results to S3? For these 5GB docker images, it
+# seems like this would be significant. To test, comment out this line.
+#
+# Perhaps you should look into using bazel-remote locally instead of through S3. That is, have it
+# running on a local Kubernetes cluster, or your home network, accessible by all machines in
+# the network. If you don't have DNS on your home network then perhaps you can use Kubernetes to
+# provide this.
 build --remote_cache=grpc://localhost:9092
+
 build --output_filter=
 build --show_timestamps
 build --sandbox_debug
