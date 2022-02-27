@@ -6,7 +6,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.11.2
+    jupytext_version: 1.11.5
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
@@ -289,7 +289,7 @@ dependencies less frequently (e.g. once a month), but invest more time in the up
 you will continue to be able to develop in the environment you are creating (e.g. bug fixing, in a
 production environment).
 
-```{code-cell}
+```{code-cell} ipython3
 import pint
 ureg = pint.UnitRegistry()
 
@@ -310,7 +310,7 @@ numbers).
 Companies like Google, Facebook, and Amazon provide web services without explicit versioning.
 Assuming we want the cost per month:
 
-```{code-cell}
+```{code-cell} ipython3
 upgrade_freq = 1 * ureg.month
 upgrade_cost = 1 * ureg.day
 
