@@ -16,6 +16,9 @@ kernelspec:
 # Practice: Chp. 15
 
 ```{code-cell} r
+library(cmdstanr)
+set_cmdstan_path("/opt/conda/bin/cmdstan")
+
 source("iplot.R")
 suppressPackageStartupMessages(library(rethinking))
 ```
