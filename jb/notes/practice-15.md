@@ -114,7 +114,7 @@ m_milk_beta <- ulam(
     p ~ dunif(0, 1),
     theta ~ dunif(0, 1000),
     sigma ~ dexp(1)
-  ), data=dat_list, chains=4, cores=4, start=list(B_impute=rep(0.7,12))
+  ), cmdstan=TRUE, data=dat_list, chains=4, cores=4, start=list(B_impute=rep(0.7,12))
 )
 ```
 
@@ -184,7 +184,7 @@ m15.1 <- ulam(
     bM ~ dnorm(0, 0.5),
     sigma ~ dexp(1)
   ),
-  data = dlist, chains = 4, cores = 4
+  cmdstan = TRUE, data = dlist, chains = 4, cores = 4
 )
 display(precis(m15.1, depth=3), mimetypes="text/plain")
 iplot(function() {
@@ -211,7 +211,7 @@ m15.2 <- ulam(
     bM ~ dnorm(0, 0.5),
     sigma ~ dexp(1)
   ),
-  data = dlist, chains = 4, cores = 4
+  cmdstan = TRUE, data = dlist, chains = 4, cores = 4
 )
 display(precis(m15.2, depth=3), mimetypes="text/plain")
 iplot(function() {
@@ -241,7 +241,7 @@ m.double.se.1 <- ulam(
     bM ~ dnorm(0, 0.5),
     sigma ~ dexp(1)
   ),
-  data = dlist, chains = 4, cores = 4
+  cmdstan = TRUE, data = dlist, chains = 4, cores = 4
 )
 display(precis(m.double.se.1, depth=3), mimetypes="text/plain")
 iplot(function() {
@@ -268,7 +268,7 @@ m.double.se.2 <- ulam(
     bM ~ dnorm(0, 0.5),
     sigma ~ dexp(1)
   ),
-  data = dlist, chains = 4, cores = 4
+  cmdstan = TRUE, data = dlist, chains = 4, cores = 4
 )
 display(precis(m.double.se.2, depth=3), mimetypes="text/plain")
 iplot(function() {
@@ -322,7 +322,7 @@ m_confound <- ulam(
     mu <- a + bX*X + bZ*Z,
     c(a, bX, bZ) ~ dnorm(0, 1),
     sigma ~ dexp(1)
-  ), data=dat_list, chains=4, cores=4
+  ), cmdstan = TRUE, data=dat_list, chains=4, cores=4
 )
 
 display(precis(m_confound, depth=3), mimetypes="text/plain")
@@ -383,7 +383,7 @@ m15.9 <- ulam(
     gq > vector[N]:lpC1 <- log(k) + poisson_lpmf(notes[i] | exp(a + b)),
     gq > vector[N]:lpC0 <- log(1 - k) + poisson_lpmf(notes[i] | exp(a))
   ),
-  data = dat, chains = 4, cores = 4
+  cmdstan = TRUE, data = dat, chains = 4, cores = 4
 )
 display(precis(m15.9, depth=3), mimetypes="text/plain")
 iplot(function() {
@@ -456,7 +456,7 @@ check_co <- function(d, name) {
       logit(p) <- a + bS*S,
       a ~ dnorm(0, 1),
       bS ~ dnorm(0, 1)
-    ), data=dat.co, cores=4, chains=4
+    ), cmdstan = TRUE, data=dat.co, cores=4, chains=4
   )
   display(precis(m.dog.co, depth=2), mimetypes="text/plain")
   iplot(function() {
@@ -485,7 +485,7 @@ check_cc <- function(d, name) {
       logit(p) <- a + bS*S,
       a ~ dnorm(0, 1),
       bS ~ dnorm(0, 1)
-    ), data=dat.cc, cores=4, chains=4
+    ), cmdstan = TRUE, data=dat.cc, cores=4, chains=4
   )
   display(precis(m.dog.cc, depth=2), mimetypes="text/plain")
   iplot(function() {
@@ -597,7 +597,7 @@ q15.h1.a <- function(d) {
       lambda <- exp(a + bA*A),
       a ~ dnorm(0, 1),
       bA ~ dnorm(0, 1)
-    ), data=dat, cores = 4, chains = 4, log_lik = TRUE
+    ), cmdstan = TRUE, data=dat, cores = 4, chains = 4, log_lik = TRUE
   )
   display_precis(m15.h1.a, "m15.h1.a", 4.0)
   return(m15.h1.a)
@@ -619,7 +619,7 @@ q15.h1.b <- function(d, error=5.0) {
       vector[N]:A_true ~ dnorm(0, 1),
       a ~ dnorm(0, 1),
       bA ~ dnorm(0, 1)
-    ), data=dat, cores = 4, chains = 4, log_lik = TRUE
+    ), cmdstan = TRUE, data=dat, cores = 4, chains = 4, log_lik = TRUE
   )
   display_precis(m15.h1.b, "m15.h1.b", 0.8)
   return(m15.h1.b)
@@ -711,7 +711,7 @@ q.15.h3.a <- function(d) {
       mu <- a + b*X,
       c(a, b) ~ dnorm(0, 1),
       sigma ~ dnorm(0, 1)
-    ), data=dat, cores=4, chains=4, log_lik=TRUE
+    ), cmdstan = TRUE, data=dat, cores=4, chains=4, log_lik=TRUE
   )
   display_precis(m15.h3.a, "m15.h3.a", 4.5)
   return(m15.h3.a)
@@ -734,7 +734,7 @@ q.15.h3.b <- function(d) {
       X ~ dnorm(0, 1),
       c(a, b) ~ dnorm(0, 1),
       sigma ~ dexp(1)
-    ), data=dat, cores=4, chains=4, log_lik=TRUE
+    ), cmdstan = TRUE, data=dat, cores=4, chains=4, log_lik=TRUE
   )
   display_precis(m15.h3.b, "m15.h3.b", 4.0)
   return(m15.h3.b)
@@ -808,7 +808,7 @@ m15H4 <- ulam(
   a ~ normal(0,1),
   b ~ normal(0,1),
   sigma ~ exponential(1)
- ) , data=dat_list )
+ ) , cmdstan = TRUE, data=dat_list )
 ```
 
 Your job is to add the measurement errors to this model. Use the divorce/marriage example in the
@@ -875,7 +875,7 @@ q.15.h4.a <- function(d) {
       a ~ normal(0, 1),
       b ~ normal(0, 1),
       sigma ~ exponential(1)
-    ), data=dat_list, chains=4, cores=4
+    ), cmdstan = TRUE, data=dat_list, chains=4, cores=4
   )
   display_precis(m15H4, "m15H4", 4.0)
   return(m15H4)
@@ -900,7 +900,7 @@ q.15.h4.b <- function(d) {
       a ~ normal(0, 1),
       b ~ normal(0, 1),
       sigma ~ exponential(1)
-    ), data=dat_list, chains=4, cores=4, log_lik=TRUE
+    ), cmdstan = TRUE, data=dat_list, chains=4, cores=4, log_lik=TRUE
   )
   display_precis(m.15.h4.b, "m.15.h4.b", 0.2)
   return(m.15.h4.b)
@@ -1011,7 +1011,7 @@ q15h5a <- function(d) {
       D ~ dbinom(1, p),
       logit(p) <- a + bM*M,
       c(a, bM) ~ dnorm(0, 1)
-    ), data=dat, cores=4, chains=4
+    ), cmdstan = TRUE, data=dat, cores=4, chains=4
   )
   display_precis(m15h5a, "m15h5a", ar=4.0)
   display_markdown(e15h5a)
@@ -1030,7 +1030,7 @@ q15h5b <- function(d) {
       a ~ normal(0, 1),
       b ~ normal(0, 1),
       sigma ~ exponential(1)
-    ), data=dat, cores=4, chains=4, start=list( B_impute=rep(0.5,56) )
+    ), cmdstan=TRUE, data=dat, cores=4, chains=4, start=list( B_impute=rep(0.5,56) )
   )
   display_precis(m15h5b, "m15h5b", ar=0.7)
   return(m15h5b)
@@ -1046,7 +1046,7 @@ q15h5cc <- function(d) {
       a ~ normal(0, 1),
       b ~ normal(0, 1),
       sigma ~ exponential(1)
-    ), data=dat, chains=4, cores=4
+    ), cmdstan=TRUE, data=dat, chains=4, cores=4
   )
   display_precis(m15H4cc, "m15H4cc", 4.0)
   return(m15H4cc)
@@ -1105,7 +1105,7 @@ a15h6a <- function(dat) {
       bM ~ dnorm(0, 0.5),
       sigma ~ dexp(1)
     ),
-    data = dat, chains = 4, cores = 4
+    cmdstan = TRUE, data = dat, chains = 4, cores = 4
   )
   display_precis(m15.2, "m15.2", ar=0.4)
   return(m15.2)
@@ -1127,7 +1127,7 @@ q15h6b <- function(dat) {
       bAM ~ dnorm(0, 0.5),
       sigma ~ dexp(1)
     ),
-    data = dat, chains = 4, cores = 4
+    cmdstan = TRUE, data = dat, chains = 4, cores = 4
   )
   display_precis(m15h6, "m15h6", ar=0.4)
   return(m15h6)
