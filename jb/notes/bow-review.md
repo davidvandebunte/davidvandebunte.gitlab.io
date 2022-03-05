@@ -20,7 +20,7 @@ the audiobook and the book fall apart. Judea Pearl provides an errata you can re
 bad; see [Book of Why - Errata Pages](
 http://bayes.cs.ucla.edu/WHY/errata-pages-PearlMackenzie_BookofWhy_Final.pdf).
 
-This review is based on the audibook, print book, and:
+This review is based on the audiobook, print book, and:
 - [The Book of Why, The New Science of Cause and Effect - Google Play Books](
 https://play.google.com/books/reader?id=9H0dDQAAQBAJ&pg=GBS.PP1&printsec=frontcover).
 
