@@ -629,7 +629,7 @@ differences? Take note of any change in the mean $\alpha$ as well.
 the `R code 13.22` box and elsewhere, we'll print the raw output of `precis` for a model before its
 plots:
 
-[comment]: under_score
+[com1]: under_score
 
 ```{code-cell} r
 data(reedfrogs)
@@ -879,7 +879,7 @@ and similarities in shrinkage in terms of the properties of these distributions?
 **Answer.** This model produces some but fewer divergent transitions, likely because of deviates
 coming from the thick tails:
 
-[comment]: under_score
+[com2]: under_score
 
 ```{code-cell} r
 m_tank_student_t <- ulam(
@@ -934,7 +934,7 @@ Compare this model to `m13.4`. What has including $\gamma$ done?
 
 **Answer.** First, let's reproduce the relevant plots from the chapter:
 
-[comment]: under_score
+[com3]: under_score
 
 ```{code-cell} r
 data(chimpanzees)
