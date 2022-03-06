@@ -139,7 +139,7 @@ with a prior that is completely non-symmetric. It may pick either the left or th
 prior to optimize from.
 ")
 
-source('load-chimp-models.R')
+source('practice11/load-chimp-models.R')
 flush.console()
 
 m11.4_flat_prior <- ulam(
@@ -162,7 +162,7 @@ iplot(function() {
   plot(compare(m11.4, m11.4_quap, m11.4_flat_prior, m11.4_quap_flat_prior))
 }, ar=3)
 
-source('practice-kline-islands.R')
+source('practice11/practice-kline-islands.R')
 
 display_markdown("
 **11H1.** Use WAIC to compare the chimpanzee model that includes a unique intercept for each actor,
@@ -177,7 +177,7 @@ iplot(function() {
   plot(compare(m11.1, m11.2, m11.3, m11.4))
 }, ar=3)
 
-source('practice-count-salmon-pirating-attempts.R')
-source('practice-count-salamanders.R')
-source('practice-nwo-grants.R')
-source('practice-count-social-learning.R')
+source('practice11/practice-count-salmon-pirating-attempts.R')
+source('practice11/practice-count-salamanders.R')
+source('practice11/practice-nwo-grants.R')
+source('practice11/practice-count-social-learning.R')

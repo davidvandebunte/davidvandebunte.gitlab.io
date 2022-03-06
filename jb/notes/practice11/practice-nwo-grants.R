@@ -168,17 +168,17 @@ association between `G` and `A`. This association could cancel out any direct ca
 # disc_to_award_log_odds <- c(0, 0)
 # p_award <- inv_logit(gender_to_award_log_odds[gid] + U + disc_to_award_log_odds[disc_id])
 # awards <- rbinom(n, 1, p_award)
-# 
+#
 # display_markdown("
 # Imagine there are only two disciplines. Researchers with more scholarly experience tend to work in
 # the second discipline, and females tend to work in the second discipline. If we know you're in the
 # second discipline, and you got an award, then it's likely you got the award because you're
 # experienced.
-# 
-# 
+#
+#
 # We're assuming that discipline has no influence on award in this case; this assumption is not
 # necessary for conditioning on discipline to connect (d-connect) gender and scholarly experience.
-# 
+#
 # G D U
 # m 1 2
 # f 1
