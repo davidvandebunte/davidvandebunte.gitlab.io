@@ -1,10 +1,25 @@
-library(rethinking)
-library(IRdisplay)
+---
+jupytext:
+  cell_metadata_filter: -all
+  formats: md:myst
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.11.5
+kernelspec:
+  display_name: R
+  language: R
+  name: ir
+---
+
+# Practice: Chp. 13
+
+```{code-cell} r
 source("iplot.R")
+suppressPackageStartupMessages(library(rethinking))
+```
 
-display_markdown("## 13.7. Practice")
-
-display_markdown(r"(
 **13E1.** Which of the following priors will produce more *shrinkage* in the estimates?
 
 (a) $\alpha_{tank} \sim Normal(0,1)$
@@ -45,9 +60,7 @@ question **13M5**.
 
 In both interpretations, prior (a) will produce more shrinkage because it is more regularizing. It
 has a smaller standard deviation and therefore expects less variability.
-)")
 
-display_markdown(r"(
 **13E2.** Rewrite the following model as a multilevel model.
 
 $$
@@ -72,9 +85,7 @@ logit(p_i) & = \alpha_{group[i]} + \beta x_i \\
 \beta & \sim Normal(0, 0.5)
 \end{align}
 $$
-)")
 
-display_markdown(r"(
 **13E3.** Rewrite the following model as a multilevel model.
 
 $$
@@ -100,9 +111,7 @@ y_i & \sim Normal(\mu_i,\sigma_1) \\
 \sigma_1 & \sim Exponential(1)
 \end{align}
 $$
-)")
 
-display_markdown(r"(
 **13E4.** Write a mathematical model formula for a Poisson regression with varying intercepts.
 
 $$
@@ -114,9 +123,7 @@ log(\lambda) & = \alpha_{group[i]} \\
 \sigma & \sim Exponential(1)
 \end{align}
 $$
-)")
 
-display_markdown(r"(
 **13E5.** Write a mathematical model formula for a Poisson regression with two different kinds of
 varying intercepts, a cross-classified model.
 
@@ -131,9 +138,7 @@ log(\lambda) & = \alpha_{x[i]} + \alpha_{y[i]} \\
 \sigma_y & \sim Exponential(1)
 \end{align}
 $$
-)")
 
-display_markdown(r"(
 **13M1.** Revisit the Reed frog survival data, `data(reedfrogs)`, and add the `predation` and `size`
 treatment variables to the varying intercept model. Consider models with either main effect alone,
 both main effects, as well as a model including both and their interaction. Instead of focusing on
@@ -169,32 +174,58 @@ We could treat **13H4** as a separate question that expands on **13M1** by addin
 but this answer will combine the two.
 
 **Answer.** First, let's reproduce results from model `m13.2` in the chapter:
-)")
 
-source('load-reed-frog-model.R')
+```{code-cell} r
+data(reedfrogs)
+rf_df <- reedfrogs
+rf_df$tank <- 1:nrow(rf_df)
+
+rf_dat <- list(
+  S = rf_df$surv,
+  N = rf_df$density,
+  tank = rf_df$tank
+)
+
+## R code 13.3
+m13.2 <- ulam(
+  alist(
+    S ~ dbinom(N, p),
+    logit(p) <- a[tank],
+    a[tank] ~ dnorm(a_bar, sigma),
+    a_bar ~ dnorm(0, 1.5),
+    sigma ~ dexp(1)
+  ),
+  data = rf_dat, chains = 4, cores = 4, log_lik = TRUE
+)
 
 iplot(function() {
   plot(precis(m13.2, depth=2), main='m13.2')
 }, ar=1.0)
-display_markdown("Raw data (preceding plot):")
+```
+
+Raw data (preceding plot):
+
+```{code-cell} r
 display(precis(m13.2, depth = 2), mimetypes="text/plain")
 
 rf_df$Predator <- as.integer(as.factor(rf_df$pred))
 rf_df$Size <- as.integer(as.factor(rf_df$size))
 rf_df$Treatment <- 1 + ifelse(rf_df$Predator == 1, 0, 1) + 2*ifelse(rf_df$Size == 1, 0, 1)
+```
 
-display_markdown(r"(
-<br/>
 The `reedfrogs` data.frame is small enough to show in its entirety. Notice several new preprocessed
 variables (columns) this solution will introduce later as they are used in models:
-)")
 
+```{code-cell} r
 display(rf_df)
+```
 
-display_markdown(r"(<br/>The `help` is also short:)")
+The `help` is also short:
+
+```{code-cell} r
 display(help(reedfrogs))
+```
 
-display_markdown(r"(
 Our first model will add the `pred` predictor on only the first level:
 
 $$
@@ -254,8 +285,8 @@ logit(p_i) & = \alpha_{tank[i]} + \beta_{pred[i]} \\
 $$
 
 See more comments on this tight $\bar{\alpha}$ prior below.
-)")
 
+```{code-cell} r
 rf_dat <- list(
   S = rf_df$surv,
   N = rf_df$density,
@@ -278,23 +309,26 @@ m_rf_pred_orig <- ulam(
 iplot(function() {
   plot(precis(m_rf_pred_orig, depth=2), main='m_rf_pred_orig')
 }, ar=1.0)
-display_markdown("Raw data (preceding plot):")
-display(precis(m_rf_pred_orig, depth = 2), mimetypes="text/plain")
+```
 
-display_markdown("
-<br/>
+Raw data (preceding plot):
+
+```{code-cell} r
+display(precis(m_rf_pred_orig, depth = 2), mimetypes="text/plain")
+```
+
 As explained above, this model struggles to sample. We've managed to avoid the warnings and achieve
 decent mixing by tightening a prior:
-")
 
+```{code-cell} r
 iplot(function() {
   traceplot(m_rf_pred_orig, pars=c("a[41]", "a[30]", "a_bar", "sigma", "bPredator[1]", "bPredator[2]"))
 }, ar=2)
 iplot(function() {
   trankplot(m_rf_pred_orig, pars=c("a[41]", "a[30]", "a_bar", "sigma", "bPredator[1]", "bPredator[2]"))
 }, ar=2)
+```
 
-display_markdown(r"(
 Why are we struggling to sample? To debug this, let's go back to the chapter on debugging MCMC, in
 particular section **9.5.4.** on non-identifiable parameters. If non-identifiable parameters are a
 cause of this symptom, what could we check for? Going even further back, to the end of section
@@ -313,8 +347,8 @@ logit(p_i) & = \alpha_{tank[i]} + \beta_{pred[i]} \\
 \beta_j & \sim Normal(0, 1.5), j = 1..2
 \end{align}
 $$
-)")
 
+```{code-cell} r
 m_rf_pred_shift <- ulam(
   alist(
     S ~ dbinom(N, p),
@@ -332,9 +366,8 @@ iplot(function() {
 }, ar=1.0)
 display_markdown("Raw data (preceding plot):")
 display(precis(m_rf_pred_shift, depth = 2), mimetypes="text/plain")
+```
 
-display_markdown(r"(
-<br/>
 The $\bar{\alpha}$ prior remains unchanged even after being shifted. Notice that the predator
 parameters are the ones that have responded (and unsuprisingly, all the `a` parameters). Previously
 the model had inferred a 'lack of predator' drastically helps survival and a predator has no effect
@@ -354,8 +387,8 @@ logit(p_i) & = \alpha_{tank[i]} + \beta P_i \\
 \beta & \sim Normal(0, 1.5)
 \end{align}
 $$
-)")
 
+```{code-cell} r
 rf_dat <- list(
   S = rf_df$surv,
   N = rf_df$density,
@@ -374,15 +407,13 @@ m_rf_pred_indicator <- ulam(
   data = rf_dat, chains = 4, cores = 4, log_lik = TRUE, iter=4000
 )
 
-
 iplot(function() {
   plot(precis(m_rf_pred_indicator, depth=2), main='m_rf_pred_indicator')
 }, ar=1.0)
 display_markdown("Raw data (preceding plot):")
 display(precis(m_rf_pred_indicator, depth = 2), mimetypes="text/plain")
+```
 
-display_markdown(r"(
-<br/>
 Notice in the last model we've been able to widen the $\bar{\alpha}$ prior and actually learn it
 from the data, that is, the prior changes in the posterior.
 
@@ -403,8 +434,8 @@ logit(p_i) & = \alpha_{tank[i]} + \beta_{pred[i]} \\
 \beta_j & \sim Normal(0, 1.5), j = 1..2
 \end{align}
 $$
-)")
 
+```{code-cell} r
 rf_dat <- list(
   S = rf_df$surv,
   N = rf_df$density,
@@ -427,9 +458,8 @@ iplot(function() {
 }, ar=1.0)
 display_markdown("Raw data (preceding plot):")
 display(precis(m_rf_df_pred, depth = 2), mimetypes="text/plain")
+```
 
-display_markdown(r"(
-<br/>
 Let's fit a similar model with only the `size` predictor:
 
 $$
@@ -441,8 +471,8 @@ logit(p_i) & = \alpha_{tank[i]} + \beta_{size[i]} \\
 \beta_j & \sim Normal(0, 1.5), j = 1..2
 \end{align}
 $$
-)")
 
+```{code-cell} r
 rf_dat <- list(
   S = rf_df$surv,
   N = rf_df$density,
@@ -465,9 +495,8 @@ iplot(function() {
 }, ar=1.0)
 display_markdown("Raw data (preceding plot):")
 display(precis(m_rf_df_size, depth = 2), mimetypes="text/plain")
+```
 
-display_markdown(r"(
-<br/>
 Finally, lets model an interaction term. We've already added a 'treatment' index variable in
 preprocessing; see the data.frame near the start of this question.
 
@@ -480,8 +509,8 @@ logit(p_i) & = \alpha_{tank[i]} + \beta_{Treatment[i]} \\
 \beta_j & \sim Normal(0, 1.5), j = 1..4
 \end{align}
 $$
-)")
 
+```{code-cell} r
 rf_dat <- list(
   S = rf_df$surv,
   N = rf_df$density,
@@ -504,9 +533,8 @@ iplot(function() {
 }, ar=1.0)
 display_markdown("Raw data (preceding plot):")
 display(precis(m_rf_df_interaction, depth = 2), mimetypes="text/plain")
+```
 
-display_markdown(r"(
-<br/>
 Let's go back to the original question:
 
 > Instead of focusing on inferences about these two predictor variables, focus on the inferred
@@ -550,9 +578,7 @@ MetaSurv -> TadpoleSize <- LarvSurv
 ```
 
 The species (apparently) has to tradeoff size to survive both stages.
-)")
 
-display_markdown("
 **13M2.** Compare the models you fit just above, using WAIC. Can you reconcile the differences in
 WAIC with the posterior distributions of the models?
 
@@ -564,8 +590,8 @@ predictor of whether the tadpole will survive to metamorphosis.
 
 In general there are not large differences between these models, however, considering the error bars
 produced by both WAIC and PSIS.
-")
 
+```{code-cell} r
 iplot(function() {
   plot(compare(m13.2, m_rf_df_pred, m_rf_df_size, m_rf_df_interaction))
 }, ar=3.5)
@@ -579,8 +605,9 @@ iplot(function() {
 display_markdown("Raw data (preceding plot):")
 display(p_comp, mimetypes="text/plain")
 
-source('practice-tank-cluster-priors.R')
-source('practice-extra-parameter-chimpanzees.R')
-source('practice-prior-data-conflict.R')
-source('practice-bengali-contraception.R')
+## source('practice-tank-cluster-priors.R')
+## source('practice-extra-parameter-chimpanzees.R')
+## source('practice-prior-data-conflict.R')
+## source('practice-bengali-contraception.R')
 # source('practice-multilevel-trolley.R')
+```
