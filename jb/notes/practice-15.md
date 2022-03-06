@@ -15,10 +15,39 @@ kernelspec:
 
 # Practice: Chp. 15
 
+The answers to the questions in this chapter were originally developed with `rstan`, but running all
+the cells at once would consistently produce a crash (greater than half the time). The error was
+similar to:
+
+```
+ *** caught segfault ***
+address 0x7fd4069fa9d0, cause 'memory not mapped'
+An irrecoverable exception occurred. R is aborting now ...
+```
+
+Stan developers advise moving to CmdStan to avoid these crashes:
+- [Segfault when installing rstan 2.21.2 in R-4.0.3 on RHEL-7 · Issue #888 · stan-dev/rstan](
+https://github.com/stan-dev/rstan/issues/888#issuecomment-749761669)
+- [Getting started with CmdStanR • cmdstanr](
+https://mc-stan.org/cmdstanr/articles/cmdstanr.html#comparison-with-rstan-1)
+
+Installation instructions for `cmdstan` and `cmdstanr`:
+- [1 CmdStan Installation | CmdStan User’s Guide](
+https://mc-stan.org/docs/2_29/cmdstan-guide/cmdstan-installation.html)
+- [R Interface to CmdStan • cmdstanr](https://mc-stan.org/cmdstanr/)
+
+This environment includes `cmdstan` in `conda`:
+
 ```{code-cell} r
 library(cmdstanr)
 set_cmdstan_path("/opt/conda/bin/cmdstan")
+```
 
+After switching to CmdStan, the crashes completely went away. For more details on the process, see
+the commits near this change. The warning messages you see in this chapter may look otherwise
+unfamiliar.
+
+```{code-cell} r
 source("iplot.R")
 suppressPackageStartupMessages(library(rethinking))
 ```
