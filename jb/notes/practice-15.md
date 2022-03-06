@@ -783,8 +783,10 @@ Mse <- M*0.1
 Let’s model these variables with this relationship:
 
 $$
-B_i \sim LogNormal(\mu_i, \sigma) \\
-\mu_i = \alpha + \beta log M_i
+\begin{align}
+B_i   & \sim LogNormal(\mu_i, \sigma) \\
+\mu_i & = \alpha + \beta log M_i
+\end{align}
 $$
 
 This says that brain volume is a log-normal variable, and the mean on the log scale is given by
