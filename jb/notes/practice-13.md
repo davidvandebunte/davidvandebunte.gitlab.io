@@ -604,10 +604,764 @@ iplot(function() {
 }, ar=3.5)
 display_markdown("Raw data (preceding plot):")
 display(p_comp, mimetypes="text/plain")
+```
 
-## source('practice-tank-cluster-priors.R')
-## source('practice-extra-parameter-chimpanzees.R')
-## source('practice-prior-data-conflict.R')
-## source('practice-bengali-contraception.R')
+**13M3.** Re-estimate the basic Reed frog varying intercept model, but now using a Cauchy
+distribution in place of the Gaussian distribution for the varying intercepts. That is, fit this
+model:
+
+$$
+\begin{align}
+S_i & \sim Binomial(N_i,p_i) \\
+logit(p_i) & = \alpha_{tank[i]} \\
+\alpha_{tank} & \sim Cauchy(\alpha, \sigma), tank = 1..48 \\
+\alpha & \sim Normal(0, 1) \\
+\sigma & \sim Exponential(1) \\
+\end{align}
+$$
+
+(You are likely to see many divergent transitions for this model. Can you figure out why? Can you
+fix them?) Compare the posterior means of the intercepts, $\alpha_{tank}$, to the posterior means
+produced in the chapter, using the customary Gaussian prior. Can you explain the pattern of
+differences? Take note of any change in the mean $\alpha$ as well.
+
+**Answer.** First, let's reproduce some of the plots from the chapter. Similar to the approach in
+the `R code 13.22` box and elsewhere, we'll print the raw output of `precis` for a model before its
+plots:
+
+[comment]: under_score
+
+```{code-cell} r
+data(reedfrogs)
+rf_df <- reedfrogs
+rf_df$tank <- 1:nrow(rf_df)
+
+rf_dat <- list(
+  S = rf_df$surv,
+  N = rf_df$density,
+  tank = rf_df$tank
+)
+
+## R code 13.3
+m13.2 <- ulam(
+  alist(
+    S ~ dbinom(N, p),
+    logit(p) <- a[tank],
+    a[tank] ~ dnorm(a_bar, sigma),
+    a_bar ~ dnorm(0, 1.5),
+    sigma ~ dexp(1)
+  ),
+  data = rf_dat, chains = 4, cores = 4, log_lik = TRUE
+)
+
+plot_means <- function(post, plot_main) {
+  # compute mean intercept for each tank
+  # also transform to probability with logistic
+  rf_df$propsurv.est <- logistic(apply(post$a, 2, mean))
+
+  iplot(function() {
+    # display raw proportions surviving in each tank
+    plot(rf_df$propsurv,
+      ylim = c(0, 1), pch = 16, xaxt = "n",
+      xlab = "tank", ylab = "proportion survival", col = rangi2,
+      main=plot_main
+    )
+    axis(1, at = c(1, 16, 32, 48), labels = c(1, 16, 32, 48))
+
+    # overlay posterior means
+    points(rf_df$propsurv.est)
+
+    # mark posterior mean probability across tanks
+    abline(h = mean(inv_logit(post$a_bar)), lty = 2)
+
+    # draw vertical dividers between tank densities
+    abline(v = 16.5, lwd = 0.5)
+    abline(v = 32.5, lwd = 0.5)
+    text(8, 0, "small tanks")
+    text(16 + 8, 0, "medium tanks")
+    text(32 + 8, 0, "large tanks")
+  })
+}
+
+display(precis(m13.2, depth = 2), mimetypes="text/plain")
+iplot(function() {
+  plot(precis(m13.2, depth=2), main='m13.2')
+}, ar=1.0)
+post <- extract.samples(m13.2)
+plot_means(post, "m13.2")
+```
+
+As promised, sampling from the model produces divergent transitions:
+
+```{code-cell} r
+m_tank_cauchy_orig <- ulam(
+  alist(
+    S ~ dbinom(N, p),
+    logit(p) <- a[tank],
+    a[tank] ~ dcauchy(a_bar, sigma),
+    a_bar ~ dnorm(0, 1),
+    sigma ~ dexp(1)
+  ),
+  data = rf_dat, chains = 4, cores = 4, log_lik = TRUE
+)
+```
+
+Adjusting `adapt_delta` does little to reduce the number of divergent transitions:
+
+```{code-cell} r
+m_tank_cauchy <- ulam(
+  alist(
+    S ~ dbinom(N, p),
+    logit(p) <- a[tank],
+    a[tank] ~ dcauchy(a_bar, sigma),
+    a_bar ~ dnorm(0, 1),
+    sigma ~ dexp(1)
+  ),
+  data = rf_dat, chains = 4, cores = 4, log_lik = TRUE, control=list(adapt_delta=0.99)
+)
+```
+
+Let's examine the `pairs()` plot suggested in the warning message (for only a few parameters):
+
+```{code-cell} r
+sel_pars = c("a_bar", "sigma", "a[41]", "a[38]")
+iplot(function() {
+  pairs(m_tank_cauchy@stanfit, pars=sel_pars)
+})
+iplot(function() {
+  traceplot(m_tank_cauchy, pars=sel_pars)
+}, ar=2)
+```
+
+For comparison, these are the same plots for the Devil's Funnel (i.e. Neal's Funnel):
+
+```{code-cell} r
+m13.7 <- ulam(
+  alist(
+    v ~ normal(0, 3),
+    x ~ normal(0, exp(v))
+  ),
+  data = list(N = 1), chains = 4
+)
+display(precis(m13.7), mimetypes="text/plain")
+iplot(function() {
+  plot(precis(m13.7), main='m13.7')
+}, ar=4.5)
+```
+
+This model produces warnings even producing the `pairs()` plot:
+
+```{code-cell} r
+iplot(function() {
+  pairs(m13.7@stanfit)
+})
+iplot(function() {
+  traceplot(m13.7)
+}, ar=2)
+```
+
+[qf]: https://en.wikipedia.org/wiki/Quantile_function
+[nd]: https://en.wikipedia.org/wiki/Normal_distribution
+[cd]: https://en.wikipedia.org/wiki/Cauchy_distribution
+
+Unlike the `pairs()` plot from the Funnel, the divergent transitions produced by the Cauchy
+distribution are not associated with steep contours.
+
+Let's at least attempt to reparameterize the model to confirm whether or not it will help. One way
+to think about reparameterizing a model is as factoring the quantile function. As explained in
+[Quantile function][qf], a sample from a given distribution may be obtained in principle by applying
+its quantile function to a sample from a uniform distribution. The quantile function for the [Normal
+distribution][nd] is:
+
+$$
+Q(p, \mu, \sigma) = \mu + \sigma \sqrt{2} \cdot erf^{-1} (2p - 1)
+$$
+
+So for the standard normal:
+$$
+Q_s(p) = \sqrt{2} \cdot erf^{-1} (2p - 1)
+$$
+
+Imagining `p` comes from a uniform distribution in both cases, we can write:
+$$
+Q(p, \mu, \sigma) = \mu + \sigma Q_s(p)
+$$
+
+Starting from the quantile function for the [Cauchy distribution][cd]:
+$$
+Q(p, x_0, \gamma) = x_0 + \gamma \tan[\pi(p - \frac{1}{2})]
+$$
+
+Define the standard Cauchy distribution quantile function as:
+$$
+Q_s(p) = \tan[\pi(p - \frac{1}{2})]
+$$
+
+So that:
+$$
+Q(p, x_0, \gamma) = x_0 + \gamma Q_s(p)
+$$
+
+Finally, define a new non-centered model:
+$$
+\begin{align}
+S_i & \sim Binomial(N_i,p_i) \\
+logit(p_i) & = \alpha + \sigma \cdot a_{tank[i]} \\
+a_{tank} & \sim Cauchy(0, 1), tank = 1..48 \\
+\alpha & \sim Normal(0, 1) \\
+\sigma & \sim Exponential(1) \\
+\end{align}
+$$
+
+Unfortunately, this model produces the same divergent transitions:
+
+```{code-cell} r
+m_tank_noncen_cauchy <- ulam(
+  alist(
+    S ~ dbinom(N, p),
+    logit(p) <- a_bar + sigma * std_c[tank],
+    std_c[tank] ~ dcauchy(0, 1),
+    a_bar ~ dnorm(0, 1),
+    sigma ~ dexp(1)
+  ),
+  data = rf_dat, chains = 4, cores = 4, log_lik = TRUE
+)
+```
+
+What's more likely going on here is that the energy sanity checks in MCMC are too tight for the
+extreme deviates produced by the Cauchy distribution. Consider the quantile function for the Cauchy
+distribution above, defined based on the trigonometric `tan` function. This definition leads to
+extreme negative or positive deviates when `p` is near either zero or one; notice this term
+approaches negative infinity as `p` approaches zero and positive infinity as it approaches one.
+
+Notice in the `pairs()` plot above, the trace plot, and in the number of effective samples that
+larger parameters like `a[38]` are harder to sample than `a[41]`. Part of the reason for this may
+be that these samples would get rejected as divergent transitions, even when we rarely happen to
+sample from this part of the posterior.
+
+In the posterior distributions parameter `a[38]` is much less certain than `a[41]`. In the original
+and Cauchy model, parameter 38 is inferred to be larger than 41. All large parameters are going to
+be more uncertain with the Cauchy distribution and in fact for all distributions with a thick tail;
+getting a sample of a large value implies a rather large deviate from the distribution and a
+specific large deviate is relatively unlikely relative to other large deviates (the long tail is
+relatively flat). Additionally, a large observation could be explained by applying a larger range of
+parameters to a distribution because every parameterization has large tails that allow for the
+observation. The same observation could be made of the Student-t inferences in the next question.
+The increase in uncertainty for larger parameters exists even in model `m13.2` but is much more
+significant for thick-tailed distributions.
+
+```{code-cell} r
+display(precis(m_tank_cauchy, depth = 2), mimetypes="text/plain")
+iplot(function() {
+  plot(precis(m_tank_cauchy, depth=2), main='m_tank_cauchy')
+}, ar=1.0)
+```
+
+The same trends in shrinkage exist in this model as the original model. Because of the thicker
+tails, the model doesn't apply as much shrinkage to extreme observations. Because of the difficulty
+in sampling, the shrinkage is more variable.
+
+```{code-cell} r
+post <- extract.samples(m_tank_cauchy)
+plot_means(post, "m_tank_cauchy")
+```
+
+**13M4.** Now use a Student-t distribution with $\nu = 2$ for the intercepts:
+
+$$
+\alpha_{tank} \sim Student(2, \alpha, \sigma)
+$$
+
+Refer back to the Student-t example in Chapter 7 (page 234), if necessary. Compare the resulting
+posterior to both the original model and the Cauchy model in 13M3. Can you explain the differences
+and similarities in shrinkage in terms of the properties of these distributions?
+
+**Answer.** This model produces some but fewer divergent transitions, likely because of deviates
+coming from the thick tails:
+
+[comment]: under_score
+
+```{code-cell} r
+m_tank_student_t <- ulam(
+  alist(
+    S ~ dbinom(N, p),
+    logit(p) <- a[tank],
+    a[tank] ~ dstudent(2, a_bar, sigma),
+    a_bar ~ dnorm(0, 1),
+    sigma ~ dexp(1)
+  ),
+  data = rf_dat, chains = 4, cores = 4, log_lik = TRUE
+)
+```
+
+Although we won't address these divergent transitions, let's at least check how much mixing is
+occurring:
+
+```{code-cell} r
+iplot(function() {
+  pairs(m_tank_cauchy@stanfit, pars=sel_pars)
+})
+iplot(function() {
+  traceplot(m_tank_cauchy, pars=sel_pars)
+}, ar=2)
+
+display(precis(m_tank_student_t, depth = 2), mimetypes="text/plain")
+iplot(function() {
+  plot(precis(m_tank_student_t, depth=2), main='m_tank_student_t')
+}, ar=1.0)
+```
+
+Similar trends in shrinkage exist in this model. Because of the thicker tails, the model doesn't
+apply as much shrinkage to extreme observations. Improved sampling relative to the Cauchy
+distribution seems to have produced slightly more consistent shrinkage.
+
+```{code-cell} r
+post <- extract.samples(m_tank_student_t)
+plot_means(post, "m_tank_student_t")
+```
+
+**13M5.** Modify the cross-classified chimpanzees model `m13.4` so that the adaptive prior for
+blocks contains a parameter $\gamma$ for its mean:
+
+$$
+\begin{align}
+\gamma_j & \sim Normal(\bar{\gamma}, \sigma_{\gamma}) \\
+\bar{\gamma} & \sim Normal(0, 1.5)
+\end{align}
+$$
+
+Compare this model to `m13.4`. What has including $\gamma$ done?
+
+**Answer.** First, let's reproduce the relevant plots from the chapter:
+
+[comment]: under_score
+
+```{code-cell} r
+data(chimpanzees)
+d <- chimpanzees
+d$treatment <- 1 + d$prosoc_left + 2 * d$condition
+
+dat_list <- list(
+  pulled_left = d$pulled_left,
+  actor = d$actor,
+  block_id = d$block,
+  treatment = as.integer(d$treatment)
+)
+
+set.seed(13)
+m13.4 <- ulam(
+  alist(
+    pulled_left ~ dbinom(1, p),
+    logit(p) <- a[actor] + g[block_id] + b[treatment],
+    b[treatment] ~ dnorm(0, 0.5),
+    ## adaptive priors
+    a[actor] ~ dnorm(a_bar, sigma_a),
+    g[block_id] ~ dnorm(0, sigma_g),
+    ## hyper-priors
+    a_bar ~ dnorm(0, 1.5),
+    sigma_a ~ dexp(1),
+    sigma_g ~ dexp(1)
+  ),
+  data = dat_list, chains = 4, cores = 4, log_lik = TRUE
+)
+
+display(precis(m13.4, depth = 2), mimetypes="text/plain")
+iplot(function() {
+  plot(precis(m13.4, depth=2), main='m13.4')
+}, ar=2.0)
+```
+
+When we add the new parameter, the number of divergent transitions increase:
+
+```{code-cell} r
+m13.4_extra_param <- ulam(
+  alist(
+    pulled_left ~ dbinom(1, p),
+    logit(p) <- a[actor] + g[block_id] + b[treatment],
+    b[treatment] ~ dnorm(0, 0.5),
+    ## adaptive priors
+    a[actor] ~ dnorm(a_bar, sigma_a),
+    g[block_id] ~ dnorm(g_bar, sigma_g),
+    ## hyper-priors
+    a_bar ~ dnorm(0, 1.5),
+    g_bar ~ dnorm(0, 1.5),
+    sigma_a ~ dexp(1),
+    sigma_g ~ dexp(1)
+  ),
+  data = dat_list, chains = 4, cores = 4, log_lik = TRUE
+)
+```
+
+We also see many HDPI increase:
+
+```{code-cell} r
+display(precis(m13.4_extra_param, depth = 2), mimetypes="text/plain")
+iplot(function() {
+  plot(precis(m13.4_extra_param, depth=2), main='m13.4_extra_param')
+}, ar=2.0)
+```
+
+Notice the previously specified prior for the new parameter $\bar{\gamma}$ did not change
+significantly in the posterior. Let's change the prior to:
+$$
+\bar{\gamma} \sim Normal(5, 4)
+$$
+
+With this change, we can come up with significantly different inferences:
+
+```{code-cell} r
+m13.4_extra_param_new_prior <- ulam(
+  alist(
+    pulled_left ~ dbinom(1, p),
+    logit(p) <- a[actor] + g[block_id] + b[treatment],
+    b[treatment] ~ dnorm(0, 0.5),
+    ## adaptive priors
+    a[actor] ~ dnorm(a_bar, sigma_a),
+    g[block_id] ~ dnorm(g_bar, sigma_g),
+    ## hyper-priors
+    a_bar ~ dnorm(0, 1.5),
+    g_bar ~ dnorm(5, 1.5),
+    sigma_a ~ dexp(1),
+    sigma_g ~ dexp(1)
+  ),
+  data = dat_list, chains = 4, cores = 4, log_lik = TRUE
+)
+
+display(precis(m13.4_extra_param_new_prior, depth = 2), mimetypes="text/plain")
+iplot(function() {
+  plot(precis(m13.4_extra_param_new_prior, depth=2), main='m13.4_extra_param_new_prior')
+}, ar=2.0)
+```
+
+All these symptoms are indicative of a non-identifiable parameter, as discussed in the chapter at
+the start of section **13.3.1**. We encountered the same issue in question **13M1**.
+
+**ERROR:**
+> Likewise, the tails of distributions strongly influence can (sic) outliers are shrunk or not
+towards the mean.
+
+Likewise, the tails of distributions strongly influence whether outliers are shrunk towards the
+mean.
+
+**13M6.** Sometimes the prior and the data (through the likelihood) are in conflict, because they
+concentrate around different regions of parameter space. What happens in these cases depends a lot
+upon the shape of the tails of the distributions. Likewise, the tails of distributions strongly
+influence can outliers are shrunk or not towards the mean. I want you to consider four different
+models to fit to one observation at $y = 0$. The models differ only in the distributions assigned to
+the likelihood and the prior. Here are the four models:
+
+Model NN:
+$$
+\begin{align}
+y & \sim Normal(\mu, 1) \\
+\mu & \sim Normal(10, 1)
+\end{align}
+$$
+
+Model TN:
+$$
+\begin{align}
+y & \sim Student(2, \mu, 1) \\
+\mu & \sim Normal(10, 1)
+\end{align}
+$$
+
+Model NT:
+$$
+\begin{align}
+y & \sim Normal(\mu, 1) \\
+\mu & \sim Student(2, 10, 1)
+\end{align}
+$$
+
+Model TT:
+$$
+\begin{align}
+y & \sim Student(2, \mu, 1) \\
+\mu & \sim Student(2, 10, 1)
+\end{align}
+$$
+
+Estimate the posterior distributions for these models and compare them. Can you explain the results,
+using the properties of the distributions?
+
+**Answer.** Fit model NN:
+
+```{code-cell} r
+m_nn <- ulam(
+  alist(
+    y ~ dnorm(mu, 1),
+    mu ~ dnorm(10, 1)
+  ),
+  data = list(y = 0), chains = 4
+)
+flush.console()
+```
+
+Output of `precis` for model NN:
+
+```{code-cell} r
+display(precis(m_nn), mimetypes="text/plain")
+```
+
+Fit model TN:
+
+```{code-cell} r
+m_tn <- ulam(
+  alist(
+    y ~ dstudent(2, mu, 1),
+    mu ~ dnorm(10, 1)
+  ),
+  data = list(y = 0), chains = 4
+)
+flush.console()
+```
+
+Output of `precis` for model TN:
+
+```{code-cell} r
+display(precis(m_tn), mimetypes="text/plain")
+```
+
+Fit model NT:
+
+```{code-cell} r
+m_nt <- ulam(
+  alist(
+    y ~ dnorm(mu, 1),
+    mu ~ dstudent(2, 10, 1)
+  ),
+  data = list(y = 0), chains = 4
+)
+flush.console()
+```
+
+Output of `precis` for model NT:
+
+```{code-cell} r
+display(precis(m_nt), mimetypes="text/plain")
+```
+
+Fit model NN:
+
+```{code-cell} r
+m_tt <- ulam(
+  alist(
+    y ~ dstudent(2, mu, 1),
+    mu ~ dstudent(2, 10, 1)
+  ),
+  data = list(y = 0), chains = 4
+)
+flush.console()
+```
+
+Output of `precis` for model TT:
+
+```{code-cell} r
+display(precis(m_tt), mimetypes="text/plain")
+```
+
+[rr]: https://en.wikipedia.org/wiki/Robust_regression
+[rp]: https://en.wikipedia.org/wiki/Regularization_(mathematics)
+
+These four models are best understood in terms of [Robust regression][rr] (section **7.5.2**) and
+[Regularizing priors][rp] (section **7.3**).
+
+Try not to assume a right answer in these inferences. The $y = 0$ data point is definitely an
+outlier with respect to the four priors centered at $\mu = 10$, but are the priors or the data point
+correct? It may be that most observations are at $y = 10$ and this sample is truly an outlier, or
+that most observations are at $y = 0$ and the human building the model made a mistake in stating a
+prior centered on $\mu = 10$.
+
+Let's consider regularizing priors. The normal priors on $\mu$ in the first and second models are
+much more regularizing than the Student-t priors. A regularizing prior in this and any other model
+means a prior that prevents the model from getting overly excited by the data. Said another way, a
+regularizing prior is a strong statement about prior beliefs that should override the data to some
+extent. The term *regularizing* is generally a positive one, but a regularizing prior is more
+generally a neutral concept of preference for the prior to the data. In these first two models we
+see the inference for $\mu$ is generally closer to the prior than to the data. That is, $\mu \sim 5$
+and $\mu \sim 10$ are closer to the prior of $\mu = 10$ than the models with less regularizing
+Student-t distributions, with inferences of $\mu \sim 0$ and $\mu \sim 5$.
+
+Equally as important to the final inferences are the likelihood functions. The Student-t likelihoods
+in the second and fourth models are much more robust to outliers than the noormal likelihoods. We
+say we are doing robust regression when we pick a likelihood function that is not easily surprised
+by the data such as a Student-t distribution. Again, the term *robust* is generally a positive one,
+but a robust regression is more generally a neutral concept of preference against getting excited by
+any single data point. With one data point, this translates to preference for the prior. In the second
+and fourth models we see the inference for $\mu$ is generally closer to the prior than to the data.
+That is, $\mu \sim 10$ and $\mu \sim 5$ are closer to the prior of $\mu = 10$ than the models with
+less robust normal likelihoods, with inferences of $\mu \sim 5$ and $\mu \sim 0$.
+
+Interestingly, the flat prior on model TT has led to some divergent transitions. See section
+**9.5.3** for how a weakly informative prior such as the normal prior in model TN could address this
+issue. If you look at the `pairs()` plot and traceplot below, you'll see the sampling process can't
+decide whether the data or the likelihood is correct. That is, the histogram for `mu` produces a
+large number of samples at both $\mu = 0$ and $\mu = 10$. The Student-t likelihood doesn't strongly
+rule out the possibility that the Student-t prior is correct, and the Student-t prior doesn't
+strongly rule out the possibility that the data, through the Student-t likelihood, is correct.
+
+```{code-cell} r
+iplot(function() {
+  pairs(m_tt@stanfit)
+})
+iplot(function() {
+  traceplot(m_tt)
+}, ar=2)
+```
+
+**13H1.** In 1980, a typical Bengali woman could have 5 or more children in her lifetime. By the
+year 2000, a typical Bengali woman had only 2 or 3. You’re going to look at a historical set of
+data, when contraception was widely available but many families chose not to use it. These data
+reside in `data(bangladesh)` and come from the 1988 Bangladesh Fertility Survey. Each row is one of
+1934 women. There are six variables, but you can focus on two of them for this practice problem:
+
+1. `district`: ID number of administrative district each woman resided in
+2. `use.contraception`: An indicator (0/1) of whether the woman was using contraception
+
+The first thing to do is ensure that the cluster variable, `district`, is a contiguous set of
+integers. Recall that these values will be index values inside the model. If there are gaps, you’ll
+have parameters for which there is no data to inform them. Worse, the model probably won’t run. Look
+at the unique values of the `district` variable:
+
+R code 13.40
+
+```
+> sort(unique(d$district))
+
+[1] 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25
+[26] 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50
+[51] 51 52 53 55 56 57 58 59 60 61
+```
+
+District 54 is absent. So `district` isn’t yet a good index variable, because it’s not contiguous.
+This is easy to fix. Just make a new variable that is contiguous. This is enough to do it:
+
+R code 13.41
+
+```
+> d$district_id <- as.integer(as.factor(d$district))
+> sort(unique(d$district_id))
+
+[1] 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25
+[26] 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50
+[51] 51 52 53 54 55 56 57 58 59 60
+```
+
+Now there are 60 values, contiguous integers 1 to 60. Now, focus on predicting `use.contraception`,
+clustered by `district_id`. Fit both (1) a traditional fixed-effects model that uses an index
+variable for district and (2) a multilevel model with varying intercepts for district. Plot the
+predicted proportions of women in each district using contraception, for both the fixed-effects
+model and the varying-effects model. That is, make a plot in which district ID is on the horizontal
+axis and expected proportion using contraception is on the vertical. Make one plot for each model,
+or layer them on the same plot, as you prefer. How do the models disagree? Can you explain the
+pattern of disagreement? In particular, can you explain the most extreme cases of disagreement, both
+why they happen where they do and why the models reach different inferences?
+
+**Answer.** The `help` for the `bangladesh` data.frame, to confirm we aren't missing anything:
+
+```{code-cell} r
+data(bangladesh)
+display(help(bangladesh))
+
+bc_df <- bangladesh
+bc_df$district_id <- as.integer(as.factor(bc_df$district))
+sort(unique(bc_df$district_id))
+```
+
+The `head` of the `bangladesh` data.frame, with the new variable suggested by the author:
+
+```{code-cell} r
+display(head(bc_df))
+```
+
+A `summary` of the `bangladesh` data.frame:
+
+```{code-cell} r
+display(summary(bc_df))
+```
+
+Sampling from the fixed effects model:
+
+```{code-cell} r
+bc_dat <- list(
+  UseContraception = bc_df$use.contraception,
+  DistrictId = bc_df$district_id
+)
+
+m_bc_fe <- ulam(
+  alist(
+    UseContraception ~ dbinom(1, p),
+    logit(p) <- a[DistrictId],
+    a[DistrictId] ~ dnorm(0, 1.5)
+  ),
+  data = bc_dat, chains = 4, cores = 4, log_lik = TRUE
+)
+display(precis(m_bc_fe, depth=2), mimetypes="text/plain")
+iplot(function() {
+  plot(precis(m_bc_fe, depth=2), main='m_bc_fe')
+}, ar=0.8)
+```
+
+Sampling from the varying effects model:
+
+```{code-cell} r
+m_bc_ve <- ulam(
+  alist(
+    UseContraception ~ dbinom(1, p),
+    logit(p) <- a[DistrictId],
+    a[DistrictId] ~ dnorm(a_bar, sigma),
+    a_bar ~ dnorm(0, 1.5),
+    sigma ~ dexp(1)
+  ),
+  data = bc_dat, chains = 4, cores = 4, log_lik = TRUE
+)
+display(precis(m_bc_ve, depth=2), mimetypes="text/plain")
+iplot(function() {
+  plot(precis(m_bc_ve, depth=2), main='m_bc_ve')
+}, ar=0.8)
+
+post_fe <- extract.samples(m_bc_fe)
+post_ve <- extract.samples(m_bc_ve)
+p_fe_c <- logistic(apply(post_fe$a, 2, mean))
+p_ve_c <- logistic(apply(post_ve$a, 2, mean))
+```
+
+The plot suggested by the author in the question:
+
+```{code-cell} r
+iplot(function() {
+  plot(p_fe_c,
+    ylim = c(0, 1), pch = 16, xaxt = "n",
+    xlab = "district ID", ylab = "proportion using contraception", col = rangi2,
+    main="Predicted proportion using contraception"
+  )
+  axis(1, at = seq(1, 60, by=2), las=2)
+
+  # overlay posterior means
+  points(p_ve_c)
+
+  # mark posterior mean probability across districts
+  abline(h = mean(inv_logit(post_ve$a_bar)), lty = 2)
+})
+```
+
+The number of observations (women) in every district:
+
+```{code-cell} r
+iplot(function() {
+  barplot(setNames(table(bc_df$district_id), sort(unique(bc_df$district_id))))
+})
+```
+
+There are two factors affecting shrinkage, as discussed under Figure 13.1 in the text. The first is
+the number of observations in the district; notice that district 3 (with only a few observations)
+shrinks much more towards the weighted cluster mean (the dashed line) than any other district. The
+second is the distance from the dashed line. The estimate for district 35, which still has a
+reasonable number of observations, shrinks significantly towards the dashed line because it starts
+far from the mean. District 14 starts from a similar distance to the dashed line but shrinks less
+because it has so many observations.
+
+```{code-cell} r
 # source('practice-multilevel-trolley.R')
 ```
