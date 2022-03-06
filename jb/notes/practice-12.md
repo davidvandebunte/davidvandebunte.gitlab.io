@@ -1,7 +1,25 @@
-source('iplot.R')
-library(rethinking)
+---
+jupytext:
+  cell_metadata_filter: -all
+  formats: md:myst
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.11.5
+kernelspec:
+  display_name: R
+  language: R
+  name: ir
+---
 
-display_markdown("
+# Practice: Chp. 12
+
+```{code-cell} r
+source("iplot.R")
+suppressPackageStartupMessages(library(rethinking))
+```
+
 [bt]: https://en.wikipedia.org/wiki/Blood_type
 [cv]: https://en.wikipedia.org/wiki/Categorical_variable
 [ls]: https://en.wikipedia.org/wiki/Likert_scale
@@ -32,9 +50,9 @@ induce which kind of inferential error?
 **Answer.** A 'zero' means that nothing happened; nothing can happen either because the rate of
 events is low because the process that generates events failed to get started. We may incorrectly
 infer the rate of events is lower than it is in reality, when in fact it never got started.
-")
 
-display_markdown("
++++
+
 [ovd]: https://en.wikipedia.org/wiki/Overdispersion
 
 **12E4.** Over-dispersion is common in count data. Give an example of a natural process that might
@@ -57,18 +75,18 @@ university in a certain year, the numbers of employees receiving each rating wer
 36, 7, 41. Compute the log cumulative odds of each rating.
 
 **Answer.** As a list:
-")
 
+```{code-cell} r
 freq_prod <- c(12, 36, 7, 41)
 pr_k <- freq_prod / sum(freq_prod)
 cum_pr_k <- cumsum(pr_k)
 lco = list(log_cum_odds = logit(cum_pr_k))
 display(lco)
+```
 
-display_markdown("
 **12M2.** Make a version of Figure 12.5 for the employee ratings data given just above.
-")
 
+```{code-cell} r
 iplot(function() {
   off <- 0.04
   plot(
@@ -80,8 +98,8 @@ iplot(function() {
   for (j in 1:4) lines(c(j,j), c(0,cum_pr_k[j]), lwd=3, col="gray")
   for (j in 1:4) lines(c(j,j)+off, c(if (j==1) 0 else cum_pr_k[j-1],cum_pr_k[j]), lwd=3, col=rangi2)
 })
+```
 
-display_markdown(r"(
 **12M3.** Can you modify the derivation of the zero-inflated Poisson distribution (ZIPoisson) from
 the chapter to construct a zero-inflated binomial distribution?
 
@@ -105,13 +123,14 @@ Pr(k | k>0,p_z,n,p_b) & = (1-p_z)Pr(k|n,p_b) \\
 $$
 
 To construct a GLM, use a logit link with $p_z$ and $p_b$ (in the typical case where $n$ is known).
-)")
 
-source('practice-hurricanes-poisson.R')
-source('practice-hurricanes-gamma-poisson.R')
-source('practice-hurricanes-interaction.R')
-source('practice-hurricanes-log-damage.R')
-source('practice-women-care-contact.R')
-source('practice-fish.R')
-source('practice-trolley-education.R')
-source('practice-trolley-gender.R')
+```{code-cell} r
+# source('practice-hurricanes-poisson.R')
+# source('practice-hurricanes-gamma-poisson.R')
+# source('practice-hurricanes-interaction.R')
+# source('practice-hurricanes-log-damage.R')
+# source('practice-women-care-contact.R')
+# source('practice-fish.R')
+# source('practice-trolley-education.R')
+# source('practice-trolley-gender.R')
+```
