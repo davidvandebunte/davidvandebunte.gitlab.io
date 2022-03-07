@@ -10,6 +10,7 @@ parts:
   - caption: Statistical Rethinking
     chapters:
       - file: notes/sr2-review.md
+      - file: notes/practice-11.md
       - file: notes/practice-12.md
       - file: notes/practice-13.md
       - file: notes/practice-14.md
