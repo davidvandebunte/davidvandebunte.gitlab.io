@@ -8,7 +8,7 @@ the models. What changes do you observe?
 the answer. The 'outlier' is relevant to what we conclude for both low and high contact cultures.
 ")
 
-source('load-basic-islands-model.R')
+source('practice11/load-basic-islands-model.R')
 
 d_drop_hawaii <- subset(d, culture!='Hawaii')
 
