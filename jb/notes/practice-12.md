@@ -199,11 +199,11 @@ iplot(function() {
 }, ar=4.5)
 ```
 
-[od]: https://en.wikipedia.org/wiki/Overdispersion
+[ovd2]: https://en.wikipedia.org/wiki/Overdispersion
 
 The model is not accurate when it attempts to retrodict the death toll on storms with many deaths.
 The predictions it makes are less dispersed than the data, that is, the data are overdispersed
-relative to the predictions ([Overdispersion][od]).
+relative to the predictions ([Overdispersion][ovd2]).
 
 ```{code-cell} r
 iplot(function() {
