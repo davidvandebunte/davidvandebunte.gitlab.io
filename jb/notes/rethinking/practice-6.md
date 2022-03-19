@@ -53,8 +53,10 @@ The Descendant is similar to the Collider. It still has $X \perp Y$ unconditiona
 additional conditional dependencies:
 
 $$
+\begin{align}
 X \perp \!\!\! \perp D | Z \\
 Y \perp \!\!\! \perp D | Z
+\end{align}
 $$
 
 Notice `X -> Z -> D` and `Y -> Z -> D` are Pipes in themselves.
