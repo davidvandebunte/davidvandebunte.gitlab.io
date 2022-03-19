@@ -38,7 +38,7 @@ So that:
 $$
 \begin{align}
 \frac{\partial g(p, k, n)}{\partial p} & = 0 + k/p + \frac{\partial z}{\partial y}\frac{\partial y}{\partial p} \\
-\frac{\partial g(p, k, n)}{\partial p} & = k/p + \frac{n - k}{p - 1} 
+\frac{\partial g(p, k, n)}{\partial p} & = k/p + \frac{n - k}{p - 1}
 \end{align}
 $$
 

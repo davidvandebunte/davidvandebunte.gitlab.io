@@ -205,4 +205,3 @@ pg <- with(dat_list, sapply(1:6, function(k) {
 rownames(pg) <- c("male", "female")
 colnames(pg) <- unique(d$dept)
 round(pg, 2)
-

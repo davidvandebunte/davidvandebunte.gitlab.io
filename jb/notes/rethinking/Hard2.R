@@ -98,7 +98,7 @@ Pr(testA|A) = Pr(testA, A) / P(A) = 0.8 * 0.5 / 0.5 = 0.8
 Pr(testA|B) = 0.35
 Pr(testB|A) = 0.2
 Pr(testB|B) = 0.65
-Pr(A|testA) = 
+Pr(A|testA) =
 ```
 ")
 
