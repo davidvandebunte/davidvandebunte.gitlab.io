@@ -74,12 +74,16 @@ text editor rather than a browser, but this doesn't in itself imply the code sho
 
 ## Personal Workflow
 
+[drh]: https://github.com/davidvandebunte/rethinking
+
 Start by getting models working with MCMC (`ulam`), which provides a lot more debugging information
 and is capable of estimating non-Gaussian posteriors. Once you're happy with the results, check that
 `quap` provides the same answer and switch to it so scripts run faster.
 
 Prefer to `source` R files from the shell rather than running the publish script when you're
-debugging issues. Many errors/warnings are swallowed by papermill.
+debugging issues. Many errors/warnings are swallowed otherwise.
+
+See also [davidvandebunte/rethinking: GitHub][drh].
 
 ## 2.3. Components of the model
 
