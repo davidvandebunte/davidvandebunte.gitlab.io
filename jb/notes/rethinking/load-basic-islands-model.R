@@ -38,18 +38,18 @@ iplot(function() {
     col = rangi2, pch = ifelse(dat$cid == 1, 1, 16), lwd = 2,
     ylim = c(0, 75), cex = 1 + normalize(k)
   )
-  
+
   # set up the horizontal axis values to compute predictions at
   ns <- 100
   P_seq <- seq(from = -1.4, to = 3, length.out = ns)
-  
+
   # predictions for cid=1 (low contact)
   lambda <- link(m11.10, data = data.frame(P = P_seq, cid = 1))
   lmu <- apply(lambda, 2, mean)
   lci <- apply(lambda, 2, PI)
   lines(P_seq, lmu, lty = 2, lwd = 1.5)
   shade(lci, P_seq, xpd = TRUE)
-  
+
   # predictions for cid=2 (high contact)
   lambda <- link(m11.10, data = data.frame(P = P_seq, cid = 2))
   lmu <- apply(lambda, 2, mean)
@@ -63,19 +63,19 @@ iplot(function() {
     col = rangi2, pch = ifelse(dat$cid == 1, 1, 16), lwd = 2,
     ylim = c(0, 75), cex = 1 + normalize(k)
   )
-  
+
   ns <- 100
   P_seq <- seq(from = -5, to = 3, length.out = ns)
   # 1.53 is sd of log(population)
   # 9 is mean of log(population)
   pop_seq <- exp(P_seq * 1.53 + 9)
-  
+
   lambda <- link(m11.10, data = data.frame(P = P_seq, cid = 1))
   lmu <- apply(lambda, 2, mean)
   lci <- apply(lambda, 2, PI)
   lines(pop_seq, lmu, lty = 2, lwd = 1.5)
   shade(lci, pop_seq, xpd = TRUE)
-  
+
   lambda <- link(m11.10, data = data.frame(P = P_seq, cid = 2))
   lmu <- apply(lambda, 2, mean)
   lci <- apply(lambda, 2, PI)

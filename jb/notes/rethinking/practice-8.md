@@ -1,9 +1,25 @@
-source('iplot.R')
-library(rethinking)
+---
+jupytext:
+  cell_metadata_filter: -all
+  formats: md:myst
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.11.5
+kernelspec:
+  display_name: R
+  language: R
+  name: ir
+---
 
-display_markdown("## 8.5. Practice")
+# Practice: Chp. 8
 
-display_markdown("
+```{code-cell} r
+source("iplot.R")
+suppressPackageStartupMessages(library(rethinking))
+```
+
 **8E1.** For each of the causal relationships below, name a hypothetical third variable that would
 lead to an interaction effect.
 1. Bread dough rises because of yeast.
@@ -20,9 +36,9 @@ the category of the degree (medicine, engineering, art, language).
 
 Interpret 'go' in 3 to mean the distance the car can travel. The kilometers traveled per liter will
 depend on the car model (e.g. treat the model as a categorical variable).
-")
 
-display_markdown("
++++
+
 **8E2.**  Which of the following explanations invokes an interaction?
 
 1. Caramelizing onions requires cooking over low heat and making sure the onions do not dry out.
@@ -58,42 +74,56 @@ imagine some kind of interaction occurring. For example, a need to understand so
 improve graph-based intelligence, and a need to manipulate objects may improve spatial intelligence,
 and reaching a certain level in each of these areas may enable some new skill based on combining the
 skills.
-")
 
-display_markdown(r"(
++++
+
 **8E3.**  For each of the explanations in 8E2, write a linear model that expresses the stated
 relationship.
 
 **Answer.**
 
 For 1, where C = caramelization, H = heat, and T = cooking time:
+
 $$
-C_i = Normal(\mu_i, \sigma) \\
-\mu_i = \alpha + \beta_{H}H_i + \beta_{T}T_i + \beta_{HT}H_{i}T_{i}
+\begin{align}
+C_i   & = Normal(\mu_i, \sigma) \\
+\mu_i & = \alpha + \beta_{H}H_i + \beta_{T}T_i + \beta_{HT}H_{i}T_{i}
+\end{align}
 $$
 
 For 2, where S = speed, C = cylinders, and F = fuel injector:
+
 $$
-S_i = Normal(\mu_i, \sigma) \\
-\mu_i = \alpha_{FID[i]} + \beta_{FID[i]}C_i \\
+\begin{align}
+S_i & = Normal(\mu_i, \sigma) \\
+\mu_i & = \alpha_{FID[i]} + \beta_{FID[i]}C_i \\
+\end{align}
 $$
 
 For 3, where B = political belief, P = parents political belief, and F = friends political belief:
+
 $$
-B_i = Normal(\mu_i, \sigma) \\
-\mu_i = P_{i}\gamma_i + F_{i}(1 - \gamma_i) \\
-\gamma_i = Bernoulli(p) \\
-p = Uniform(0, 1)
+\begin{align}
+B_i & = Normal(\mu_i, \sigma) \\
+\mu_i & = P_{i}\gamma_i + F_{i}(1 - \gamma_i) \\
+\gamma_i & = Bernoulli(p) \\
+p & = Uniform(0, 1)
+\end{align}
 $$
 
 For 4, where I = intelligence, S = sociality score, and M = manipulative appendages score:
-$$
-I_i = Normal(\mu_i, \sigma) \\
-\mu_i = \alpha + \beta_{S}S_i + \beta_{M}M_i + \beta_{SM}S_{i}M_{i}
-$$
-)")
 
-display_markdown(r"(
+$$
+\begin{align}
+I_i & = Normal(\mu_i, \sigma) \\
+\mu_i & = \alpha + \beta_{S}S_i + \beta_{M}M_i + \beta_{SM}S_{i}M_{i}
+\end{align}
+$$
+
+[n1]: under_score
+
++++
+
 **8M1.** Recall the tulips example from the chapter. Suppose another set of treatments adjusted the
 temperature in the greenhouse over two levels: cold and hot. The data in the chapter were collected
 at the cold temperature. You find none of the plants grown under the hot temperature developed any
@@ -114,13 +144,18 @@ display_markdown(r"(
 temperature is hot?
 
 **Answer.** Using an Iverson bracket, where T is temperature:
-$$
-B_i = Normal(\mu_i, \sigma)[T_i = cold]  \\
-\mu_i = \alpha + \beta_{W}W_i + \beta_{S}S_i + \beta_{WS}W_{i}S_{i}
-$$
-)")
 
-display_markdown(r"(
+$$
+\begin{align}
+B_i & = Normal(\mu_i, \sigma)[T_i = cold]  \\
+\mu_i & = \alpha + \beta_{W}W_i + \beta_{S}S_i + \beta_{WS}W_{i}S_{i}
+\end{align}
+$$
+
+[n2]: under_score
+
++++
+
 **8M3.** In parts of North America, ravens depend upon wolves for their food. This is because ravens
 are carnivorous but cannot usually kill or open carcasses of prey. Wolves however can and do kill
 and tear open animals, and they tolerate ravens co-feeding at their kills. This species relationship
@@ -134,10 +169,15 @@ the raven population. If there aren't any wolves, there won't be any open carcas
 to consume.
 
 The regression equation:
+
 $$
-R_i = Normal(\mu_i, \sigma) \\
-\mu_i = \alpha + \beta_{F}F_i + \beta_{W}W_i + \beta_{FW}F_{i}W_{i}
+\begin{align}
+R_i & = Normal(\mu_i, \sigma) \\
+\mu_i & = \alpha + \beta_{F}F_i + \beta_{W}W_i + \beta_{FW}F_{i}W_{i}
+\end{align}
 $$
+
+[n3]: under_score
 
 Assume F and W are both non-negative indicators of the number of wolf prey and wolves, scaled by the
 maximum observed value.
@@ -145,8 +185,8 @@ maximum observed value.
 It seems unlikely the interaction would be linear. Doubling the number of wolves with a set amount
 of food once would likely have more of an effect on the raven population than doubling it again with
 the same amount of food.
-)")
 
+```{code-cell} r
 set.seed(24071847)
 
 alpha = 0.1
@@ -181,8 +221,8 @@ display_markdown("Sanity check of a model fit to the hypothetical data:")
 iplot(function() {
   plot(precis(m_ravens, depth=3), main="precis: m_ravens")
 }, ar=3)
+```
 
-display_markdown(r"(
 **8M4.** Repeat the tulips analysis, but this time use priors that constrain the effect of water to
 be positive and the effect of shade to be negative. Use prior predictive simulation. What do these
 prior assumptions mean for the interaction prior, if anything?
@@ -201,8 +241,10 @@ e.g. how the association between blooms and water depends on shade. I'd argue (t
 about this) that we do have common sense knowledge that this association decreases with greater
 shade, implying $\beta_{WS}$ should be negative. This is despite our previous choice to keep it
 centered at zero, and not related to the change in the other priors.
-)")
 
+[n4]: under_score
+
+```{code-cell} r
 source("load-tulip-models.R")
 
 m_tulips <- quap(
@@ -231,13 +273,14 @@ iplot(function() {
     title(paste("s =", s))
   }
 }, ar=3.0)
+```
 
-display_markdown(r"(
 **8H1.** Return to the data(tulips) example in the chapter. Now include the bed variable as a
 predictor in the interaction model. Don’t interact bed with the other predictors; just include it as
 a main effect. Note that bed is categorical. So to use it properly, you will need to either
 construct dummy variables or rather an index variable, as explained in Chapter 5.
-)")
+
+```{code-cell} r
 d$bed_id <- as.integer(d$bed)
 m_bed <- quap(
   alist(
@@ -254,8 +297,8 @@ m_bed <- quap(
 iplot(function() {
   plot(precis(m_bed, depth=3), main="precis: m_bed")
 }, ar=3)
+```
 
-display_markdown(r"(
 **8H2.** Use WAIC to compare the model from 8H1. to a model that omits bed. What do you infer from
 this comparison? Can you reconcile the WAIC results with the posterior distribution of the bed
 coefficients?
@@ -264,12 +307,13 @@ coefficients?
 different in their predictive ability. Looking at both the posterior distribution of the bed
 coefficients (from the last answer) and these results, it may be that the first bed had some issues
 that made it produce fewer blooms. Still, this should probably be investigated further.
-)")
+
+```{code-cell} r
 iplot(function() {
   plot(compare(m_bed, m8.5))
 }, ar=4)
+```
 
-display_markdown("
 **8H3.** Consider again the `data(rugged)` data on economic development and terrain ruggedness,
 examined in this chapter. One of the African countries in that example, Seychelles, is far outside
 the cloud of other nations, being a rare country with both relatively high GDP and high ruggedness.
@@ -282,8 +326,8 @@ the results? Are there other nations that are relatively influential? If so, can
 
 **ERROR**: This question should refer to `m8.3` rather than `m8.5`. See also the error on the 'R
 code 8.14' box.
-")
 
+```{code-cell} r
 source("load-rugged-models.R")
 PSIS_m8.3 <- PSIS(m8.3, pointwise=TRUE)
 WAIC_m8.3 <- WAIC(m8.3, pointwise=TRUE)
@@ -299,22 +343,22 @@ iplot(function() {
 display_markdown("Outliers where PSIS Pareto k > 0.4 or WAIC penalty > 0.4:")
 rp_df = data.frame(psis_k=PSIS_m8.3$k, waic_penalty=WAIC_m8.3$penalty, country=dd$country)
 display(rp_df[rp_df$psis_k > 0.4 | rp_df$waic_penalty > 0.4,])
+```
 
-display_markdown("
 Switzerland is likely an outlier because it is in central Europe surrounded by affluent countries.
 It's not as clear why Lesotho is an outlier; similar to Switzerland it may gain an advantage from
 being able to rely on the surrounding states (or state) for services such as defense.
-")
 
-display_markdown(r"(
++++
+
 (b) Now use robust regression, as described in the previous chapter. Modify `m8.5` (sic) to use a
 Student-t distribution with $\nu = 2$. Does this change the results in a substantial way?
 
 **Answer.** Compare these plots to those in chapter. The model has picked up more from the data,
 increasing the association between log GDP and ruggedness (especially in non-African nations). In
 general, though, the results haven't changed in a material way.
-)")
 
+```{code-cell} r
 m_rugged_student <- quap(
   alist(
     log_gdp_std ~ dstudent(2, mu, sigma),
@@ -359,8 +403,8 @@ iplot(function() {
   shade(mu_ci, rugged_seq)
   mtext("Non-African nations")
 })
+```
 
-display_markdown(r"(
 **8H4.** The values in `data(nettle)` are data on language diversity in 74 nations. The meaning of
 each column is given below.
 
@@ -381,7 +425,6 @@ outcome:
 ```
 d$lang.per.cap <- d$num.lang / d$k.pop
 ```
-<p/>
 
 Use the logarithm of this new variable as your regression outcome. (A count model would be better
 here, but you’ll learn those later, in Chapter 11.) This problem is open ended, allowing you to
@@ -401,7 +444,8 @@ minimum to maximum (it has a range of about 9).
 
 For the $\beta_{log.area}$ prior, assume again the range of the output (9) can be completely covered
 by the range of the input (in this case, about 16 rather than 12).
-)")
+
+```{code-cell} r
 data(nettle)
 ndf <- nettle
 
@@ -421,8 +465,8 @@ m_mean_grow <- quap(
   ),
   data = ndf
 )
+```
 
-display_markdown("
 [aliad]: https://en.wikipedia.org/wiki/A_language_is_a_dialect_with_an_army_and_navy
 
 We include `log.area` in the regression so we also condition on it. Language diversity per capita is
@@ -438,13 +482,13 @@ decrease because of larger social networks?
 
 The model supports the hypothesis that language diversity increases with the length of the growing
 season, though not strongly.
-")
 
+```{code-cell} r
 iplot(function() {
   plot(precis(m_mean_grow), main="precis: m_mean_grow")
 }, ar=3)
+```
 
-display_markdown(r"(
 (b) Now evaluate the hypothesis that language diversity is negatively associated with the standard
 deviation of length of growing season, `sd.growing.season`. This hypothesis follows from uncertainty
 in harvest favoring social insurance through larger social networks and therefore fewer languages.
@@ -452,8 +496,10 @@ Again, consider `log(area)` as a covariate (not an interaction). Interpret your 
 
 **Answer.** For the $\beta_{sd.growing.season}$ prior, assume again the range of the output (~9) can
 be completely covered by the range of the input (~6).
-)")
 
+[n5]: under_score
+
+```{code-cell} r
 m_sd_grow <- quap(
   alist(
     log.lang.per.cap <- dnorm(mu, sigma),
@@ -465,28 +511,29 @@ m_sd_grow <- quap(
   ),
   data = ndf
 )
+```
 
-display_markdown("
 The model supports the hypothesis that language diversity decreases with variation in the length of
 the growing season.
-")
 
+```{code-cell} r
 iplot(function() {
   plot(precis(m_sd_grow), main="precis: m_sd_grow")
 }, ar=3)
+```
 
-display_markdown("
 (c) Finally, evaluate the hypothesis that `mean.growing.season` and `sd.growing.season` interact to
 synergistically reduce language diversity. The idea is that, in nations with longer average growing
 seasons, high variance makes storage and redistribution even more important than it would be
 otherwise. That way, people can cooperate to preserve and protect windfalls to be used during the
 droughts.
-")
 
+```{code-cell} r
 m_grow <- quap(
   alist(
     log.lang.per.cap <- dnorm(mu, sigma),
-    mu <- a + bmgs * mean.growing.season + bsdgs * sd.growing.season + bla * log.area + bms * mean.growing.season * sd.growing.season,
+    mu <- a + bmgs * mean.growing.season + bsdgs * sd.growing.season + bla * log.area + bms *
+mean.growing.season * sd.growing.season,
     a <- dnorm(-5, 2),
     bmgs <- dnorm(0, 0.5*9/12),
     bsdgs <- dnorm(0, 0.5*9/6),
@@ -496,120 +543,23 @@ m_grow <- quap(
   ),
   data = ndf
 )
+```
 
-display_markdown("
 The model supports the hypothesis that language diversity decreases when both the mean and variance
 of the growing season increases, though not strongly. Unfortunately it seems to contradict the
 previous hypothesis that variance in the length of the growing season negatively affects language
 diversity.
-")
 
+```{code-cell} r
 iplot(function() {
   plot(precis(m_grow), main="precis: m_grow")
 }, ar=3)
+```
 
-display_markdown("
-**8H5.** Consider the `data(Wines2012)` data table. These data are expert ratings of 20 different
-French and American wines by 9 different French and American judges. Your goal is to model `score`,
-the subjective rating assigned by each judge to each wine. I recommend standardizing it. In this
-problem, consider only variation among judges and wines. Construct index variables of `judge` and
-`wine` and then use these index variables to construct a linear regression model. Justify your
-priors. You should end up with 9 judge parameters and 20 wine parameters. How do you interpret the
-variation among individual judges and individual wines? Do you notice any patterns, just by plotting
-the differences? Which judges gave the highest/lowest ratings? Which wines were rated worst/best on
-average?
+```{code-cell} r
+source("practice-model-interactions.R")
+```
 
-**Answer.** Because we've centered and scaled `score`, both the `aj` and `aw` priors are also
-centered at zero with a standard deviation of one. About 95% of the range of the output is within
-two standard deviations of the mean, and since SD=1, we want to cover an absolute output range of
-about 4. To allow selecting a wine or judge to select any score in this most probable output range,
-we allow the intercepts to sit anywhere in this most probable output range.
-
-John Foy gave the highest scores; Robert Hodgson gave the lowest. The white wine B2 got the highest
-scores and the red wine I2 got the lowest.
-")
-
-data(Wines2012)
-wines <- Wines2012
-wines$jid <- as.integer(factor(wines$judge))
-wines$wid <- as.integer(factor(wines$wine))
-wines$score_std <- standardize(wines$score)
-
-m_judges_wines <- quap(
-  alist(
-    score_std ~ dnorm(mu, sigma),
-    mu ~ aj[jid] + aw[wid],
-    aj[jid] ~ dnorm(0, 1),
-    aw[wid] ~ dnorm(0, 1),
-    sigma ~ dexp(1)
-  ),
-  data = wines
-)
-
-lab1 <- paste("aj[", 1:9, "]: ", levels(wines$judge), sep="")
-lab2 <- paste("aw[", 1:20, "]: ", levels(wines$wine), sep="")
-iplot(function() {
-  plot(
-    precis(m_judges_wines, depth=2),
-    main="precis: m_judges_wines",
-    labels=c(lab1, lab2, "sigma"),
-    xlab="expected score (std)"
-  )
-})
-
-display_markdown("
-**8H6.** Now consider three features of the wines and judges:
-
-1. `flight`: Whether the wine is red or white.
-2. `wine.amer`: Indicator variable for American wines.
-3. `judge.amer`: Indicator variable for American judges.
-
-Use indicator or index variables to model the influence of these features on the scores. Omit the
-individual judge and wine index variables from Problem 1. Do not include interaction effects yet.
-Again justify your priors. What do you conclude about the differences among the wines and judges?
-Try to relate the results to the inferences in the previous problem.
-
-**Answer.** Priors were selected as in the previous problem, to cover the range of the output.
-
-There is minor support for the hypothesis that American judges slightly prefer American wines, or
-that French judges slightly prefer French wines. There is also minor support for the hypothesis that
-French wines generally do better, suggesting the French judges prefer French wines.
-
-John Foy and Linda Murphy gave the highest scores and were also American, so the bias may be coming
-from their general optimism if they also preferred American wines. The highest scoring wines (B2 and
-J2) were both French, and the lowest scoring was American (I2) so it may come down to individual
-wines as well.
-")
-
-wines$fid <- as.integer(factor(wines$flight))
-wines$awid <- as.integer(factor(wines$wine.amer))
-wines$ajid <- as.integer(factor(wines$judge.amer))
-
-m_flight_amer <- quap(
-  alist(
-    score_std ~ dnorm(mu, sigma),
-    mu ~ af[fid] + aaw[awid] + aaj[ajid],
-    af[fid] ~ dnorm(0, 1),
-    aaw[awid] ~ dnorm(0, 1),
-    aaj[ajid] ~ dnorm(0, 1),
-    sigma ~ dexp(1)
-  ),
-  data = wines
-)
-
-lab1 <- paste("af[", 1:2, "]: ", levels(wines$flight), sep="")
-lab2 <- paste("aaw[", 1:2, "]: ", as.integer(levels(factor(wines$wine.amer))), sep="")
-lab3 <- paste("aaj[", 1:2, "]: ", as.integer(levels(factor(wines$judge.amer))), sep="")
-iplot(function() {
-  plot(
-    precis(m_flight_amer, depth=2),
-    main="precis: m_flight_amer",
-    labels=c(lab1, lab2, lab3, "sigma"),
-    xlab="expected score (std)"
-  )
-}, ar=3.2)
-
-display_markdown(r"(
 **8H7.** Now consider two-way interactions among the three features. You should end up with three
 different interaction terms in your model. These will be easier to build, if you use indicator
 variables. Again justify your priors. Explain what each interaction means. Be sure to interpret the
@@ -638,8 +588,10 @@ wine.
 
 There is some support for the hypothesis that being both American and a white wine is associated
 with an extra boost in performance.
-)")
 
+[n6]: under_score
+
+```{code-cell} r
 wines$wwi = wines$fid - 1
 m_wine_inter <- quap(
   alist(
@@ -662,3 +614,4 @@ iplot(function() {
     xlab="expected score (std)"
   )
 }, ar=2.8)
+```
