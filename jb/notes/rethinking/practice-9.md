@@ -261,6 +261,7 @@ f(p, k, n) = \binom{n}{k}p^k(1-p)^{n-k}
 $$
 
 Taking the logarithm:
+
 $$
 \begin{align}
 g(p, k, n) & = log(f(p, k, n)) = log\left(\binom{n}{k}p^k(1-p)^{n-k}\right) \\
@@ -269,6 +270,7 @@ g(p, k, n) & = log\left(\binom{n}{k}\right) + k·log(p) + (n-k)·log(1-p)
 $$
 
 And the derivative with respect to $p$:
+
 $$
 \begin{align}
 \frac{\partial g(p, k, n)}{\partial p} & = \frac{\partial log\left(\binom{n}{k}\right)}{\partial p} + \frac{\partial k·log(p)}{\partial p} + \frac{\partial z(p,k,n)}{\partial p} \\
@@ -278,6 +280,7 @@ y(p) & = 1 - p \\
 $$
 
 Notice that:
+
 $$
 \begin{align}
 \frac{\partial z(p, k, n)}{\partial y} & = \frac{n -k}{y} \\
@@ -286,6 +289,7 @@ $$
 $$
 
 So that:
+
 $$
 \begin{align}
 \frac{\partial g(p, k, n)}{\partial p} & = 0 + k/p + \frac{\partial z}{\partial y}\frac{\partial y}{\partial p} \\
