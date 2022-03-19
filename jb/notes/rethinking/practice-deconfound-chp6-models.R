@@ -98,8 +98,11 @@ Y.
 4. Only A, which is otherwise a 'Fork' confounder (an ancestor of both X and Y).
 
 See also:
-- http://dagitty.net/learn/graphs/roles.html
-- http://dagitty.net/learn/graphs/table2-fallacy.html")
+- [Terminology in Causal Diagrams: Covariate Roles](
+http://dagitty.net/learn/graphs/roles.html)
+- [Causal Intepretation of Multiple Regression: The Table 2 Fallacy](
+http://dagitty.net/learn/graphs/table2-fallacy.html)
+")
 
 set.seed(100)
 
