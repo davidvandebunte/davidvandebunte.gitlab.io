@@ -1,55 +1,6 @@
 source('iplot.R')
 library(rethinking)
 
-display_markdown(r"(
-**9H7.** Can you write your own Hamiltonian Monte Carlo algorithm for the globe tossing data, using
-the R code in the chapter? You will have to write your own functions for the likelihood and
-gradient, but you can use the `HMC2` function.
-
-**Answer.** The probability mass function for the binomial distribution is defined as:
-$$
-f(p, k, n) = \binom{n}{k}p^k(1-p)^{n-k}
-$$
-
-Taking the logarithm:
-$$
-g(p, k, n) = log(f(p, k, n)) = log\left(\binom{n}{k}p^k(1-p)^{n-k}\right) \\
-g(p, k, n) = log\left(\binom{n}{k}\right) + k·log(p) + (n-k)·log(1-p)
-$$
-
-And the derivative with respect to $p$:
-$$
-\begin{align}
-\frac{\partial g(p, k, n)}{\partial p} & = \frac{\partial log\left(\binom{n}{k}\right)}{\partial p} + \frac{\partial k·log(p)}{\partial p} + \frac{\partial z(p,k,n)}{\partial p} \\
-z(p, k, n) & = (n -k)·log(y) \\
-y(p) & = 1 - p \\
-\end{align}
-$$
-
-Notice that:
-$$
-\begin{align}
-\frac{\partial z(p, k, n)}{\partial y} & = \frac{n -k}{y} \\
-\frac{\partial y(p)}{\partial p} & = -1
-\end{align}
-$$
-
-So that:
-$$
-\begin{align}
-\frac{\partial g(p, k, n)}{\partial p} & = 0 + k/p + \frac{\partial z}{\partial y}\frac{\partial y}{\partial p} \\
-\frac{\partial g(p, k, n)}{\partial p} & = k/p + \frac{n - k}{p - 1}
-\end{align}
-$$
-
-To partially verify the above in sympy:
-```python
-p, n, k = symbols('p n k')
-diff(log(p**k) - log((1-p)**(n-k)), p)
-```
-
-)")
-
 set.seed(7)
 Water <- 6
 Land <- 3
