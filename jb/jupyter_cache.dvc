@@ -1,5 +1,5 @@
 outs:
-- md5: 663fc1f7c928b307511d2d4d140e84ba.dir
-  size: 19024761
-  nfiles: 14
+- md5: e64abc32cf341fbd88509e33c9002bd3.dir
+  size: 20532923
+  nfiles: 18
   path: jupyter_cache
