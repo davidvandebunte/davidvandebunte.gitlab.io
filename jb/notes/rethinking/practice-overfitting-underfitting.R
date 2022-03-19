@@ -3,7 +3,6 @@ library(IRdisplay)
 
 source("iplot.R")
 
-display_markdown("## 7.7. Practice")
 display_markdown(r"(
 **7E1.** State the three motivating criteria that define information entropy. Try to express each in
 your own words.
