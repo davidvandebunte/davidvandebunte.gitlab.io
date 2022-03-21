@@ -5,4 +5,3 @@ bazel-*/
 .ipython/
 .jupyter/
 .local/
-untracked-notes.md
