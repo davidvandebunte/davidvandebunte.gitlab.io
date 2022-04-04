@@ -13,7 +13,7 @@ kernelspec:
   name: python3
 ---
 
-# Containerize Application
+# Containerize application
 
 ## Estimate action output improvement
 
