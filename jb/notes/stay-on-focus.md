@@ -154,6 +154,10 @@ all possible actions, or only doing what you know? You not only need to "execute
 possible a part of the function/network as you can to make sure you're seeing the big picture on
 what needs improvement, you need to consider actions that aren't regular for you.
 
+On at least some of these documents, we say the task is valuable because we spend so much time on
+it. Spending time on something doesn't make it valuable; making it faster to do something we do
+regularly is important but only if we are doing important things regularly.
+
 ## Assumes one possible way
 
 Let's say you are working on some coding task and see some other code that "needs" cleaning up. That
