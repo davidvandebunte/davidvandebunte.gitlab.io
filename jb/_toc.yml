@@ -47,6 +47,9 @@ parts:
       - file: notes/share-to-blog.md
       - file: notes/share-to-stack-exchange.md
       - file: notes/share-to-wikimedia.md
+  - caption: Learn
+    chapters:
+      - file: notes/learn-r.md
   - caption: Plan
     chapters:
       - file: notes/plan-personal-week.md
