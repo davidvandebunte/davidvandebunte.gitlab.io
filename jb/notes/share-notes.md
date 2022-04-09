@@ -13,7 +13,7 @@ kernelspec:
   name: python3
 ---
 
-# Share Notes
+# Share notes
 
 [sc]: ./share-comment.md
 [stse]: ./share-to-stack-exchange.md

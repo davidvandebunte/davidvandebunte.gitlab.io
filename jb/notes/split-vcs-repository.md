@@ -13,7 +13,7 @@ kernelspec:
   name: python3
 ---
 
-# Split VCS Repository
+# Split VCS repository
 
 ## Test
 
