@@ -49,8 +49,8 @@ See [](./define-values.md) for a comparison between values and goals. When you a
 specific goal, your value estimation function should include *both* the value in the specific goal
 and the value you put in acquiring the knowledge that the solution requires. Call the first direct
 value, and the second "transfer" value; see:
-- [Transfer of learning - Wikipedia](https://en.wikipedia.org/wiki/Transfer_of_learning)
-- [Transfer learning](https://en.wikipedia.org/wiki/Transfer_learning).
+- [Transfer of learning](https://en.wikipedia.org/wiki/Transfer_of_learning)
+- [Transfer learning](https://en.wikipedia.org/wiki/Transfer_learning)
 
 ## Teach a computer
 
@@ -86,7 +86,7 @@ task is equal to the multiplication of:
 1. How your life goals are affected by the outputs of this function (thoughts).
 2. How the outputs of this function are affected by your mental sub-network.
 
-## Time Value
+## Transfer Value, Time Metric
 
 How much does the mental function affect your current reality? This determines:
 

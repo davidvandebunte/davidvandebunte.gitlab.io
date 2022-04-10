@@ -42,6 +42,8 @@ themselves and teach computers.
 
 ### Learning values
 
+[learning]: https://en.wikipedia.org/wiki/Learning
+
 Should you let yourself "learn" values (see the first paragraph of [Learning][learning])? We do
 learn values from each other, even in adulthood. When someone tries to shame you for focusing on one
 topic rather than another, they are essentially ask you to shift your values (assuming theirs are
@@ -55,6 +57,11 @@ functions is one way of "taking ownership" which has historically been an effect
 to achieve goals (e.g. through ownership of a company).
 
 ## Prefer values to goals
+
+It's hard to say whether our values are derived from our goals, or vice-versa. In some ways, what we
+value in an abstract sense decides what we choose to work on. In other ways, we are what we work on
+i.e. the projects we freely choose to work on are a better indicator of our true values than our
+stated values.
 
 ### Value
 
@@ -76,15 +83,15 @@ other contexts should transfer to the new projects.
 ### Cost
 
 A set of personal learning values (research interests) essentially defines the set of specific
-projects you would want to pursue. At the same time, you need to continually push yourself into new
-areas to achieve some transfer learning. You may not have the words to describe yet what you need to
+projects you would want to pursue. But, you may not have the words to describe yet what you need to
 achieve the major life goals you are most interested in, preventing you from writing them in a list
-of research interests.
+of research interests. Does it matter what words we use in the end, it it works? At the same time,
+you need to continually push yourself to understand the words of others that have proved valuable
+(and to communicate).
 
 We seem to have a natural tendency to prefer major projects to sets of abstract values; e.g. see the
-article [Meaning of life](https://en.wikipedia.org/wiki/Meaning_of_life). Since our values are
-essentially derived from our goals, a generally-stated goal might help us replace a more abstract
-system of values. We often find that people who disagree on the meaning of life (e.g. Christians and
-Atheists) nevertheless have many common values that allow them to work together in e.g. a business.
-Similarly, people with differences in life goals may still have a large set of of shared subgoals
-(projects).
+article [Meaning of life](https://en.wikipedia.org/wiki/Meaning_of_life). A generally-stated goal
+might help us replace a more abstract system of values. We often find that people who disagree on
+the meaning of life (e.g. Christians and Atheists) nevertheless have many common values that allow
+them to work together in e.g. a business. Similarly, people with differences in life goals may still
+have a large set of of shared subgoals (projects).
