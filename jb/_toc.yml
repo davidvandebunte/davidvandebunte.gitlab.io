@@ -51,6 +51,7 @@ parts:
     chapters:
       - file: notes/define-learn.md
       - file: notes/learn-r.md
+      - file: notes/estimate-improvement-value.md
   - caption: Plan
     chapters:
       - file: notes/plan-personal-week.md
