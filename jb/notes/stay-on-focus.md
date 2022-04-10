@@ -84,6 +84,15 @@ As we get older we're able to recall farther into history than a child can; we n
 have more history (we can recall to e.g. ten years ago). Perhaps we trade off this ability for
 plasticity.
 
+### Practical considerations
+
+You shouldn’t be reading a book on one topic and doing a computer project on something totally
+unrelated. It's more important to work on the same thing continuously than to be doing it all at the
+computer (a phone is OK if it extends work on a desktop computer).
+
+If you already have topics that are focal/important at work, you should seriously consider
+continuing to work on those in your free time.
+
 # Cost
 
 In short:
