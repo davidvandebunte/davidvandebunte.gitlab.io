@@ -50,6 +50,7 @@ parts:
   - caption: Learn
     chapters:
       - file: notes/define-learn.md
+      - file: notes/define-values.md
       - file: notes/learn-r.md
       - file: notes/estimate-improvement-value.md
   - caption: Plan

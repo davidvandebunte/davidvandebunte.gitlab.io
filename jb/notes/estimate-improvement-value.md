@@ -20,22 +20,43 @@ An estimate of the value of an action.
 # Estimate improvement value
 
 You can't estimate the value of estimating value, in general. Eventually you need a base case, or
-this recursive function of estimating value is going to run forever. When you're talking about a
-specific situation, then yes, you can talk about the various higher-level reasons that you are doing
-what you do. This breaks down the higher-level you get, similar to how a child asking "why"
-endlessly usually ends with the parent saying that God asked us to do it in a certain way (that is,
-God serves as the base case).
+the recursive value-estimation function is not going to halt. When you're talking about a specific
+situation, then yes, you can talk about the various higher-level reasons that you are doing what you
+do. This breaks down the higher-level you get, similar to how a child asking "why" endlessly usually
+ends with the parent saying that God asked us to do it in a certain way, sometimes without
+consulting with God. That is, God serves as the base case.
+
+## Planning
 
 You may be tempted to say that this process inherits value from planning documents; that it helps
 prioritization. While it's true that you will be more decisive and opinionated if you understand
 your own values clearly and concisely, you can't say that this is valuable in itself. Is it better
 to know what you value and make quick decisions, or be willing to go with the flow?
 
+## Consistency
+
 Use reference class forecasting; how "accurate" have your estimates been in this domain in the past?
-That is (an equivalent statement), how consistent have they been over the course of your life? If
-your own values are a moving target, then it may be better to let others define them for you (so you
-can e.g. make more money). If you don't make one topic "your thing" though, you risk not building
-(effective, efficient) deep mental networks that are valuable to others.
+In your personal life, how consistent have your values been? In a business setting, how consistent
+is the market? How often do [KPI]( https://en.wikipedia.org/wiki/Performance_indicator) change?
+
+If your own values are a moving target, then it may be better to let others define them for you (so
+you can e.g. make more money). If you don't make one topic "your thing" though, you risk not
+building (effective, efficient) deep mental networks that are valuable to others.
+
+## Values and goals
+
+See [](./define-values.md) for a comparison between values and goals. When you are working on a
+specific goal, your value estimation function should include *both* the value in the specific goal
+and the value you put in acquiring the knowledge that the solution requires. Call the first direct
+value, and the second "transfer" value; see:
+- [Transfer of learning - Wikipedia](https://en.wikipedia.org/wiki/Transfer_of_learning)
+- [Transfer learning](https://en.wikipedia.org/wiki/Transfer_learning).
+
+## Teach a computer
+
+Despite values being quite uncertain, and therefore the value of a specific project or major goal
+being even more uncertain, it helps to try to think precisely about them to potentially teach a
+computer how to achieve larger goals.
 
 # Estimate improvement cost
 

@@ -19,7 +19,7 @@ kernelspec:
 [sl]: https://en.wikipedia.org/wiki/Supervised_learning
 [ul]: https://en.wikipedia.org/wiki/Unsupervised_learning
 
-# Define "Learn"
+# Define learn
 
 ## Test
 
@@ -100,9 +100,10 @@ what you learned from the professor on some real environment (e.g. a lab-based c
 
 #### Life goals
 
-Should you be thinking about your life goals with every step you take? Should you let yourself
-"learn" values (see the first paragraph of [Learning][learning])? For an extended discussion, see
-[](./estimate-improvement-value.md).
+Should you be thinking about your life goals with every step you take? For an extended discussion,
+see:
+- [](./estimate-improvement-value.md).
+- [](./define-values.md).
 
 ### Unsupervised learning
 
