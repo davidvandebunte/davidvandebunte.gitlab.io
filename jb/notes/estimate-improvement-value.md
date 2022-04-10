@@ -13,11 +13,11 @@ kernelspec:
   name: python3
 ---
 
-# Estimate Output Improvement
+# Estimate output improvement
 
 An estimate of the value of an action.
 
-# Estimate Improvement Value
+# Estimate improvement value
 
 You can't estimate the value of estimating value, in general. Eventually you need a base case, or
 this recursive function of estimating value is going to run forever. When you're talking about a
@@ -37,7 +37,7 @@ your own values are a moving target, then it may be better to let others define 
 can e.g. make more money). If you don't make one topic "your thing" though, you risk not building
 (effective, efficient) deep mental networks that are valuable to others.
 
-# Estimate Improvement Cost
+# Estimate improvement cost
 
 ## Training Data
 
@@ -82,6 +82,7 @@ $$
 $$
 
 Combining these equations:
+
 $$
 \frac{\partial Value}{\partial MentalModel} =
 \left(\frac{\partial Value}{\partial FutureStates}
@@ -98,6 +99,7 @@ For example, if you are measuring value in time:
 | Would execution take two rather than three days with a ∂MentalModel? | ∂MentalSpeed/∂MentalModel | 1 day/ex.   |
 
 Then ∂Value for the ∂MentalModel is:
+
 $$
 = \left(1 * \frac{2 days}{\frac{1 day}{execution}}\right) * \frac{1 day}{execution} = 2 days
 $$

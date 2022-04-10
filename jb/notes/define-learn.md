@@ -13,17 +13,17 @@ kernelspec:
   name: python3
 ---
 
+[learning]: https://en.wikipedia.org/wiki/Learning
 [ml]: https://en.wikipedia.org/wiki/Machine_learning
-[ul]: https://en.wikipedia.org/wiki/Unsupervised_learning
 [rl]: https://en.wikipedia.org/wiki/Reinforcement_learning
 [sl]: https://en.wikipedia.org/wiki/Supervised_learning
+[ul]: https://en.wikipedia.org/wiki/Unsupervised_learning
 
 # Define "Learn"
 
 ## Test
 
 [learn]: https://en.wiktionary.org/wiki/learn
-[learning]: https://en.wikipedia.org/wiki/Learning
 [mla]: https://en.wikipedia.org/wiki/Machine_learning#Approaches
 
 What does it mean to [learn][learn] (see also [Learning][learning])?
@@ -58,18 +58,16 @@ We'll continue to use TPE to decide what fits in at least this definition of mac
 
 ### Learn for credit
 
-[br]: https://en.wikipedia.org/wiki/Basic_research
-[ci]: https://en.wikipedia.org/wiki/Causal_inference
-[why]: https://en.wikipedia.org/wiki/Why
-
-Is it redundant to say we learn for credit? Should you be thinking about your life goals with every
-step you take? Should you let yourself "learn" values (see the first paragraph of
-[Learning][learning])?
-
 If you take "performance" as a synonym for "credit" then this phrase is also insufficient to
 describe machine learning (according to the TPE definition), since it lacks a definition of `E`.
+However, most people would argue this phrase implies some kind of test; few people would bother to
+argue that a "read" or "learn" task without acceptance criteria is equivalent to getting paid to do
+nothing.
 
 ### Why
+
+[ci]: https://en.wikipedia.org/wiki/Causal_inference
+[why]: https://en.wikipedia.org/wiki/Why
 
 The word [Why][why] is used (confusingly) in both [Causal inference][ci] and to query the value
 behind an action. Does a toaster warm up bread because it's hot or because that makes it delicious?
@@ -99,6 +97,12 @@ professor's mental networks exactly (learn to think the way they think, includin
 say), or get good grades (perhaps based on your own understanding of a topic), or at least get the
 final degree (avoid failing grades). A more flexible reinforcement learning based model would test
 what you learned from the professor on some real environment (e.g. a lab-based course).
+
+#### Life goals
+
+Should you be thinking about your life goals with every step you take? Should you let yourself
+"learn" values (see the first paragraph of [Learning][learning])? For an extended discussion, see
+[](./estimate-improvement-value.md).
 
 ### Unsupervised learning
 
