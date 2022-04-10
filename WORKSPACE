@@ -52,11 +52,12 @@ load(
     "container_pull",
 )
 
+# https://hub.docker.com/layers/datascience-notebook/jupyter/datascience-notebook/latest/images/sha256-d0fc04d56f2baf930395cf8fa48a3fcf64022924decf049dac847d392e0b2591?context=explore
 container_pull(
   name = "datascience_notebook",
   registry = "index.docker.io",
   repository = "jupyter/datascience-notebook",
-  digest = "sha256:61cd2db1748f3573367bd4cef2ea342a5757f2e6e86b04afaa30e289976c53d7",
+  digest = "sha256:d0fc04d56f2baf930395cf8fa48a3fcf64022924decf049dac847d392e0b2591",
 )
 
 container_pull(
