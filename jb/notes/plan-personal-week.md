@@ -27,7 +27,7 @@ Smaller and more detailed action items to:
 # Value
 
 This process promises value in weight differences from reordering items. Include uncertainties on
-weight estimates to help you decide wnen to move your "focus" to a nearby area instead (or start
+weight estimates to help you decide when to move your "focus" to a nearby area instead (or start
 again from the top).
 
 To add weights to new actions you would theoretically need a static:

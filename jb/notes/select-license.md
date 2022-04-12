@@ -13,7 +13,7 @@ kernelspec:
   name: python3
 ---
 
-# Select License
+# Select license
 
 [sn]: ./share-notes.md
 

@@ -13,7 +13,7 @@ kernelspec:
   name: python3
 ---
 
-# Share to Blog
+# Share to blog
 
 [sn]: ./share-notes.md
 

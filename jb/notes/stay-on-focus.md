@@ -84,6 +84,15 @@ As we get older we're able to recall farther into history than a child can; we n
 have more history (we can recall to e.g. ten years ago). Perhaps we trade off this ability for
 plasticity.
 
+### Practical considerations
+
+You shouldn’t be reading a book on one topic and doing a computer project on something totally
+unrelated. It's more important to work on the same thing continuously than to be doing it all at the
+computer (a phone is OK if it extends work on a desktop computer).
+
+If you already have topics that are focal/important at work, you should seriously consider
+continuing to work on those in your free time.
+
 # Cost
 
 In short:
@@ -153,6 +162,10 @@ first in any other domain). But, are you executing the most important functions?
 all possible actions, or only doing what you know? You not only need to "execute" as large as
 possible a part of the function/network as you can to make sure you're seeing the big picture on
 what needs improvement, you need to consider actions that aren't regular for you.
+
+On at least some of these documents, we say the task is valuable because we spend so much time on
+it. Spending time on something doesn't make it valuable; making it faster to do something we do
+regularly is important but only if we are doing important things regularly.
 
 ## Assumes one possible way
 
