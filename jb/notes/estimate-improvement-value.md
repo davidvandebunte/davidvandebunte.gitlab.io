@@ -13,11 +13,11 @@ kernelspec:
   name: python3
 ---
 
-# Estimate output improvement
+# Estimate improvement value
 
 An estimate of the value of an action.
 
-# Estimate improvement value
+# Value
 
 You can't estimate the value of estimating value, in general. Eventually you need a base case, or
 the recursive value-estimation function is not going to halt. When you're talking about a specific
@@ -58,7 +58,7 @@ Despite values being quite uncertain, and therefore the value of a specific proj
 being even more uncertain, it helps to try to think precisely about them to potentially teach a
 computer how to achieve larger goals.
 
-# Estimate improvement cost
+# Cost
 
 ## Training Data
 
@@ -135,3 +135,33 @@ Do you have any notes on the mental function you are trying to improve?
 % # Additional Training Data
 
 % See `improve-estimate-improvement-value.md`.
+
+## Include value (as SLA) of generalizability/reproducibility in every "value" section
+
+These are closely related concepts, where reproducibility is generalizability across time. If
+literally nothing changed (we reproduced the state of the world at the exact time the test passed
+the one time it did) then it would pass again. If results are not reproducible, then something
+changed. Nothing in life is fully reproducible, so you will always need to define an SLA.
+
+What are common causes? Said another way, what about your dependency system changed? This is a
+special case of the problem considered in [](./investigate-root-cause.md), where you've seen
+something work at least once in the past (a regression). Even more than that, though, it allows for
+probabilistic causes outside your service's (e.g. build service's) control.
+
+% TODO 9.8: Integrate with `investigate-root-cause.md`
+
+Network services often go down. See [Fallacies of distributed computing](
+https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing). In the modern world, writing
+defensive network code is critical to get tests to pass reliably. If a service you rely on only
+promises 99.9% uptime, that is an upper bound on the SLA you can promise for your own service.
+
+External services aren't the only issue, though. What if your data center goes down? If you could
+control all external services, and in fact the whole universe, then you could always find the root
+cause and fix it and provide a 100% SLA. You can increase your SLA based on how far you've dug into
+not only your your software dependency chain, but also your hardware dependencies, the supply chain
+that builds your hardware, and the likely availability of your network engineers at midnight.
+
+You can even think of the computer sitting in front of you as a service. For the "service" that is
+your local desktop machine, what if the power goes out? What if a tornado hits the building you're
+in now and throws it out the window? What if the cat bites a power cable? What has happened in the
+past?
