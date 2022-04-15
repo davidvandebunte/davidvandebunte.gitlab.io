@@ -1,5 +1,7 @@
 #!/usr/bin/env sh
 
+# TODO 9.6: Eliminate dind solution and communicate with docker over a unix socket.
+# See `transform-docker-image.md` for reasoning.
 start_dind() {
   # These commands are based on the instructions here:
   # - https://hub.docker.com/_/docker/
