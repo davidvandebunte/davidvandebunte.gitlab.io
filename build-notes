@@ -18,7 +18,6 @@ python3 -m dvc pull jb/jupyter_cache
 date
 
 ./build_scripts/start-brc
-./build_scripts/start-dind
 ./build_scripts/start-bazel
 ./build_scripts/build-bazel
 ./build_scripts/push-hugo
