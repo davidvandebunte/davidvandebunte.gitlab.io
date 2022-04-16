@@ -62,7 +62,7 @@ or relationships more than others. At the same time, taking on an identity throu
 functions is one way of "taking ownership" which has historically been an effective way for people
 to achieve goals (e.g. through ownership of a company).
 
-## Prefer values to goals
+## Prefer goals to values
 
 It's hard to say whether our values are derived from our goals, or vice-versa. In some ways, what we
 value in an abstract sense decides what we choose to work on. In other ways, we are what we work on
@@ -70,23 +70,6 @@ i.e. the projects we freely choose to work on are a better indicator of our true
 stated values.
 
 ### Value
-
-It's tempting to dedicate yourself or a team to a major project, such as self-driving cars or a
-robot maid. As with any project, we can only estimate the cost upfront. When goals get too large, we
-hedge our bets and instead choose a set of values (driving our learning) that will help us achieve
-what are likely the lowest-hanging fruit in the set of major projects we are interested in.
-
-Said another way, our values are a way of driving learning (i.e. mental refactoring) to
-incrementally reach an important goal we may not even know exists yet. Everyone is invested in their
-own mental networks, and hedging your bets is generally speaking the safer option with respect to
-them.
-
-Many TODo can go stale when the projects you care about most change, such as when you switch
-employers. That is, you need to start from the top again and re-analyze everything with the new
-changes in projects of interest. If your values are relatively stable, then what you've learned in
-other contexts should transfer to the new projects.
-
-### Cost
 
 We seem to have a natural tendency to prefer major projects to sets of abstract values; e.g. see the
 article [Meaning of life](https://en.wikipedia.org/wiki/Meaning_of_life). A generally-stated goal
@@ -129,3 +112,20 @@ you can hopefully find an answer without rediscovering it yourself.
 Wikipedia often defines topics a certain way (such as a Likelihood function) that may need to be
 redefined in some context to do more useful work. You can't rely on Wikipedia for all definitions
 not because it is necessarily wrong, but because what "right" may mean may depend on your goals.
+
+### Cost
+
+It's tempting to dedicate yourself or a team to a major project, such as self-driving cars or a
+robot maid. As with any project, we can only estimate the cost upfront. When goals get too large, we
+hedge our bets and instead choose a set of values (driving our learning) that will help us achieve
+what are likely the lowest-hanging fruit in the set of major projects we are interested in.
+
+Said another way, our values are a way of driving learning (i.e. mental refactoring) to
+incrementally reach an important goal we may not even know exists yet. Everyone is invested in their
+own mental networks, and hedging your bets is generally speaking the safer option with respect to
+them.
+
+Many TODo can go stale when the projects you care about most change, such as when you switch
+employers. That is, you need to start from the top again and re-analyze everything with the new
+changes in projects of interest. If your values are relatively stable, then what you've learned in
+other contexts should transfer to the new projects.
