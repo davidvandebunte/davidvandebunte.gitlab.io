@@ -15,15 +15,18 @@ start_bazel() {
   # using `gitlab-runner` (push for feedback) on vandebun-home, anyways. On remote shared runners,
   # will we have access to the home directory?
   mkdir -p /tmp/output_user_root
+  docker_group_id=$(getent group docker | cut -d: -f3)
 
   docker run --detach --tty \
     --name bazel-server \
     --network=host \
     -e USER="$(id -u)" \
-    -u "$(id -u):$(id -g)" \
-    -v /certs/client:/certs/client:ro \
+    -u "$(id -u):$docker_group_id" \
+    -v /etc/passwd:/etc/passwd \
+    -v /etc/group:/etc/group \
     -v /home:/home \
     -v /tmp/output_user_root:/tmp/output_user_root \
+    -v /var/run/docker.sock:/var/run/docker.sock \
     -v /tmp/.ci_docker:/tmp/.ci_docker \
     --entrypoint /bin/bash \
     registry.gitlab.com/davidvandebunte/continuous-integration:4.2.2

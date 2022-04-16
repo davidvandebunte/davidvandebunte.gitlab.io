@@ -25,12 +25,7 @@ load(
 docker_toolchain_configure(
   name = "docker_config",
   docker_flags = [
-    "--tls",
     "--log-level=info",
-    "-H=tcp://docker:2376",
-    "--tlscacert=/certs/client/ca.pem",
-    "--tlscert=/certs/client/cert.pem",
-    "--tlskey=/certs/client/key.pem",
   ],
   client_config="/tmp/.ci_docker",
 )
