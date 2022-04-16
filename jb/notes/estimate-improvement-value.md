@@ -132,21 +132,39 @@ Do you have any notes on the mental function you are trying to improve?
 
 % See also `organize-notes.md`.
 
-% # Additional Training Data
+## Reproducibility Value
 
-% See `improve-estimate-improvement-value.md`.
+The calculations above assume once we know how to do something we won't forget how to do it, and
+what we need to perform the task won't change. For example, do you only need to be able to perform
+the task once? Is it worth the cost of learning something if you're only going to need to perform it
+once, when the next time you may need to follow it will be years from now, and may require a mostly
+different process to get the same result?
 
-## Include value (as SLA) of generalizability/reproducibility in every "value" section
+In the case of a unit test in a build service, where the value in the test is often only to a
+developer or developers, we more often need to make hard decisions about whether to even keep
+certain tests.
 
-These are closely related concepts, where reproducibility is generalizability across time. If
-literally nothing changed (we reproduced the state of the world at the exact time the test passed
-the one time it did) then it would pass again. If results are not reproducible, then something
-changed. Nothing in life is fully reproducible, so you will always need to define an SLA.
+Let's define reproducibility as generalizability across time. If literally nothing changed, that is,
+we reproduced the state of the world at the exact time a test passed, the one time it did, then it
+would pass again. If results are not reproducible, then something changed. Nothing in life is fully
+reproducible, so you will always need to define a minimum e.g. SLA in the definition of the task
+(estimated output improvement). For example, this test will need to pass once a build indefinitely.
 
-What are common causes? Said another way, what about your dependency system changed? This is a
-special case of the problem considered in [](./investigate-root-cause.md), where you've seen
-something work at least once in the past (a regression). Even more than that, though, it allows for
-probabilistic causes outside your service's (e.g. build service's) control.
+You can define a minimum SLA in the task, but sometimes you may need to revisit the target SLA as
+you discover more about the problem and instead think about the different amounts of value you will
+deliver for different levels of reproducibility. That is, there may be different value estimates for
+different SLA levels. If it's easy to get the test to pass 99/100 times but 10x more work to get it
+to 999/1000 times, then you might want to either drop it altogether or not require it to pass on
+every build of the software (e.g. cache the passed test). If you have 1000 tests in your build, then
+99% reproducibility is not enough. If you [](./regularly-stress-test.md) you can monitor what
+fraction of the time the test passes and notice if e.g. it drops to 0/10 times. Feedback will be
+slower, but you won't have to stop running the test.
+
+What are common causes of intermittent build failures? Said another way, what about your dependency
+system changed between the passes and failures? This is a special case of the problem considered in
+[](./investigate-root-cause.md), where you've seen something work at least once in the past (a
+regression). Even more than that, though, it allows for probabilistic causes outside your service's
+(e.g. build service's) control.
 
 % TODO 9.8: Integrate with `investigate-root-cause.md`
 
@@ -165,3 +183,7 @@ You can even think of the computer sitting in front of you as a service. For the
 your local desktop machine, what if the power goes out? What if a tornado hits the building you're
 in now and throws it out the window? What if the cat bites a power cable? What has happened in the
 past?
+
+% # Additional Training Data
+
+% See `improve-estimate-improvement-value.md`.
