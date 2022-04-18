@@ -64,7 +64,7 @@ However, most people would argue this phrase implies some kind of test; few peop
 argue that a "read" or "learn" task without acceptance criteria is equivalent to getting paid to do
 nothing.
 
-### Why
+#### Why
 
 [ci]: https://en.wikipedia.org/wiki/Causal_inference
 [why]: https://en.wikipedia.org/wiki/Why
@@ -75,12 +75,21 @@ It's likely this is because we have functions to estimate value in our heads, an
 on those value estimation functions we reuse the same word we would use for any mental function
 backpropagation.
 
+#### Life goals
+
+Should you be thinking about your life goals with every step you take? For an extended discussion on
+how to learn for credit, see:
+- [](./estimate-improvement-value.md)
+- [](./define-values.md)
+
 ### Learn by example
 
 Generally speaking, the phrase "learn by example" is associated with [Supervised learning][sl]. An
 example defines "truth" (the `P`) and more examples (`E`) should improve performance, so an
 algorithm that will "learn by example" should generally be considered a machine learning example by
-the TPE definition.
+the TPE definition. You can consider this a special case of learning for credit, if you assume that
+the truth is good. This is sensible and [Normative](https://en.wikipedia.org/wiki/Normativity); see
+[Truth - Folk Beliefs](https://en.wikipedia.org/wiki/Truth#Folk_beliefs)).
 
 Supervised learning is related to [Reinforcement learning][rl], though it's hard to say that either
 is a special case of the other. In SL the value signal is defined in a static way (e.g. through a
@@ -97,13 +106,6 @@ professor's mental networks exactly (learn to think the way they think, includin
 say), or get good grades (perhaps based on your own understanding of a topic), or at least get the
 final degree (avoid failing grades). A more flexible reinforcement learning based model would test
 what you learned from the professor on some real environment (e.g. a lab-based course).
-
-#### Life goals
-
-Should you be thinking about your life goals with every step you take? For an extended discussion,
-see:
-- [](./estimate-improvement-value.md).
-- [](./define-values.md).
 
 ### Unsupervised learning
 
@@ -123,9 +125,11 @@ statistics:
 > Statistics draws population inferences from a sample, while machine learning finds generalizable
 > predictive patterns.
 
-The "Book of Why" would argue that this is the difference between causal inference and statistical
-inference, making causal inference equivalent to machine learning (and defined more precisely, in
-general).
+See [](./bow-review.md). This author would argue that this is the difference between causal
+inference and statistical inference, making causal inference equivalent to machine learning (and
+defined more precisely, in general). You'll see the same argument all over [Statistical
+Rethinking](./sr2-review.md). Statistics is about correlation, and correlation does not imply
+causation.
 
 ### Compression
 

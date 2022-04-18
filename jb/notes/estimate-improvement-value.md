@@ -142,6 +142,33 @@ every build of the software (e.g. cache the passed test). If you have 1000 tests
 fraction of the time the test passes and notice if e.g. it drops to 0/10 times. Feedback will be
 slower, but you won't have to stop running the test.
 
+## Accidental Value
+
+Humans and other animals have curiosity, a desire to learn that is often independent of any value
+system. What we are naturally curious about often ends up being closely related to valuable skills,
+but it's hard to attribute the drive to that alone.
+
+Should we should support [Basic research](https://en.wikipedia.org/wiki/Basic_research) with
+government funding? This kind of research isn't driven to *alter* or control our environment and
+therefore isn't likely in itself to be able to bring value (which almost involves control or
+change). That is, should we support full time curiosity?
+
+Many of the most important discoveries humans have made have been accidental; see [Role of chance in
+scientific discoveries](https://en.wikipedia.org/wiki/Role_of_chance_in_scientific_discoveries).
+It's likely many researchers have come up with estimates for what percent of our most valuable
+discoveries came about by chance; this calculation should be possible based on a definition a
+"valuable" specific to a person or society. If you believe this number is high, then you'd fund more
+basic research.
+
+Many once [Unsolved problems in mathematics](
+https://en.wikipedia.org/wiki/List_of_unsolved_problems_in_mathematics) were solved because of
+someone's natural curiosity. In the modern world charities sometimes provide funds to motivate
+solutions to basic mathematical questions (though these sometimes have known practical value). See:
+- [Millennium Prize Problems](https://en.wikipedia.org/wiki/Millennium_Prize_Problems)
+- [Fermat's Last Theorem - Wikipedia](https://en.wikipedia.org/wiki/Fermat%27s_Last_Theorem)
+
+That is, take the phrase "necessity is the mother of the invention" with a grain of salt.
+
 ### Examples
 
 A refactoring task is a TODo that typically has time value (saving developer time), a form of
