@@ -275,3 +275,9 @@ instructional material you aren't going to forget.
 
 To summarize, you're looking for instructional material provided by someone in education, who has
 spent time actively working with modern students (similar to yourself) and seeing their struggles.
+
+% Additional training data
+
+[dbwa]: https://docs.google.com/document/d/1EYSFyGvPETr4wHeYOoEI1N_x1VMexlebklI790rxnPU/edit#
+
+% [Decision: Do you prefer books to web articles?][dbwa]
