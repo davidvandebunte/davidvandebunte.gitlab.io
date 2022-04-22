@@ -17,7 +17,7 @@ kernelspec:
 
 ## Estimate action output improvement
 
-Either containerize an application you only have uncontainerized (e.g. on your local machine) or a
+Either containerize an application you only have uncontainerized (e.g. on your local machine) or
 split an existing container into two. You don't have to see these as different if you see your host
 machine as one large container (environment).
 
