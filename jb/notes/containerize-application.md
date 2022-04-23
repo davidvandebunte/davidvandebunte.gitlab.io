@@ -15,13 +15,13 @@ kernelspec:
 
 # Containerize application
 
-## Estimate action output improvement
+## Test
 
 Either containerize an application you only have uncontainerized (e.g. on your local machine) or
 split an existing container into two. You don't have to see these as different if you see your host
 machine as one large container (environment).
 
-## Estimate improvement value
+## Value
 
 Do you think about containerization too much? For your specific action, estimate the value in time
 savings using the general guidelines below (specialize your action to your situation).
@@ -233,14 +233,11 @@ If you continue to use virtualenv you'll also be able to have a development envi
 outside of docker that are roughly symmetrical (critical to test for differences). See also:
 - https://pythonspeed.com/articles/multi-stage-docker-python/
 
-## Estimate improvement cost
-
-Docker packaging is complex and time consuming:
-- https://pythonspeed.com/docker/
+## Cost
 
 ### Isolation
 
-Separate instances of applications often can’t interact with their siblings through global
+Separate instances of applications often can't interact with their siblings through global
 variables. Will you be able to get to the OS clipboard from within vim? What about shared global vim
 history? Some vim history is in shareable configuration files. `vim` is going to interact with
 almost everything; what if you need vim to interact with gdb?
@@ -256,34 +253,81 @@ It’s not easy for arbitrary applications to interact with each other except th
 
 You’ve put them all in separate boxes (by definition you want one concern per image).
 
-### Comparison to monorepos
+Most desktop machines are useful quite unstable. If you had a docker image with everything in it
+(even tmux) you could work from it everywhere; it might be unstable for a docker image but it’s more
+stable than your desktop machine, only because you know the instructions you used to build it.
+Unfortunately, this would require a lot of dind and manual forwarding of e.g. X resources.
 
-[svr]: ./split-vcs-repository.md
+### Fast experimentation
 
-You may need to update your CI/CD system and split repositories. See [Split VCS Repositories][svr].
+Docker packaging is complex and time consuming:
+- [Production-ready Docker packaging for Python developers](https://pythonspeed.com/docker/)
 
-Most desktop machines are useful, but also quite unstable and not really reusable. If you had a
-docker image with everything in it (even tmux) you could work from it everywhere; it might be
-unstable for a docker image but it’s more stable than your desktop machine, and it’s usable
-everywhere. There’s a tradeoff between being useful/customized and being stable/reusable.
+Docker is a special case of dependency pinning, at a deeper level than e.g. many language-specific
+tools. It takes time to pin dependencies, even if you know how to do it. If you don't know that you
+will do something twice, it's likely not worth writing down how you did it. Your desktop
+installations (apt packages, conda packages, etc.) should be quickly resettable to whatever new
+configuration you want to play with on a one-time basis (or most likely to be one time). That is, it
+should be flexible and effectively have no dependents. Said another way, do you need reusability?
+
+Docker is more than dependency pinning as well, it's also process isolation. You need to forward
+e.g. the filesystem, network ports, and X resources properly, all of which you have to figure out on
+a case-by-case basis.
+
+### Container orchestration
 
 A single docker image to rule them all is like a monorepo. Practically speaking, it would be nice to
 do everything from one docker image without needing to worry about orchestration. For example,
 separate container environments require you to do a lot of orchestration work when you could have
-kept everything in one image. What if you want to draw a graph of a PyTorch or other model with
-graphviz in an evaluation container? You'd likely need to install the same version of PyTorch or
-whatever else in both images. You'd like to be able to visualize and train at the same time. See
-an example of this in:
-- https://docs.pymc.io/en/stable/pymc-examples/examples/pymc3_howto/data_container.html
+kept everything in one image. No need to use anything but language interfaces, no need to mount the
+correct paths, no need to pass everything as files or over the network (rather than in memory).
+
+Arguably the hardest about container orchestration is defining stable file system formats. Often
+it's helpful to have these formats anyways, though, to e.g. provide checkpoints. Don't invent file
+system formats for the sake of isolation, but consider breaking container boundaries at existing
+serialization checkpoints.
+
+### Developer image
+
+What if you want to draw a graph of a PyTorch or other model with `graphviz` in an evaluation
+container? You'd likely need to install the same version of PyTorch or whatever else in both images.
+You'd like to be able to visualize and train at the same time. See an example of this in:
+- [Using shared variables (Data container adaptation) — PyMC3 3.11.5 documentation](
+https://docs.pymc.io/en/stable/pymc-examples/examples/pymc3_howto/data_container.html)
 
 In your experience developing with PyMC3 you put everything in an "evaluation" image, and it was
 quite convenient to work with. The tools you needed for training and evaluation were commonly
-installed together, so stable configurations with all the tools you needed were available.
+installed together elsewhere in the wild, so stable configurations with all the tools you needed
+were available.
 
-The Jupyter docker stacks images border on unstable, but are also incredibly useful. Consider some
-of these even more unstable community stacks:
-- https://jupyter-docker-stacks.readthedocs.io/en/latest/using/selecting.html#community-stacks
-- https://github.com/iot-salzburg/gpu-jupyter/
+Why do we put unit tests in a developer docker image, and evaluation outside of it? Or put other
+developer testing tools like pylint and yapf inside, but evaluation outside of it? Or compilers?
+Evaluation is a special case of testing; it's confirming that we have a good mental model of what a
+component is doing so that we can isolate what it provides from other components. Often the "test"
+it provides isn't a simple yes/no (e.g. precision and recall) but it's not hard to turn soft metrics
+into tests by setting a line (i.e. a KPI). Often this line is current production performance (do
+better than what we did before).
+
+You have also worked with Tensorflow frameworks that put evaluation inside the developer image, next
+to e.g. the training code. Consider in particular tensorboard; you'd want to use the same version to
+pull up evaluations as you used to write evaluations.
+
+### Stability islands
+
+Are you working with an ecosystem of closely related tools, where (despite the absolute number of
+packages) they are likely to have been tested together by others? In particular, are you working in
+the same language in both docker images? It's more likely different languages will require
+conflicting dependencies than a single language.
+
+The Jupyter docker stacks images border on unstable, but are also incredibly useful. These stacks
+are not only a good island to work off of, they likely drive what bugs are fixed in the included
+packages. Consider some of these even more unstable community stacks:
+- [Selecting an Image — Docker Stacks documentation](
+https://jupyter-docker-stacks.readthedocs.io/en/latest/using/selecting.html#community-stacks)
+- [🤗 Transformers](https://huggingface.co/docs/transformers/index)
+- [iot-salzburg/gpu-jupyter](https://github.com/iot-salzburg/gpu-jupyter/)
+
+% TODO 9.8: Use these notebooks to learn e.g. Transformer models.
 
 % ## Additional Training Data
 

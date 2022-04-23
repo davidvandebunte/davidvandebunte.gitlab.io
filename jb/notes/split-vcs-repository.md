@@ -52,18 +52,6 @@ for code that has nearly zero special dependencies. For example:
 - git
 - python (without packages)
 
-### Simpler CI/CD
-
-Ironically, not not splitting repositories (i.e. splitting repositories) saves you time by letting
-you work with "standard" CI/CD processes. Said another way, splitting repositories (taking the
-manyrepo/polyrepo approach) allows for simpler tools.
-
-Your CI/CD pipeline can run on every commit. If you have multiple docker images in a single
-repository, you'll be unnecessarily rebuilding all of them every time a change is made in any
-directory, regardless of whether it's relevant. Is this so bad, though? It's not hard to limit
-builds to a directory in .gitlab-ci.yml files (or likely any other CI/CD language). You don't really
-mind building too much, either, because external services can affect the stability of builds.
-
 ### Speed
 
 [mpdn]: https://medium.com/@mattklein123/monorepos-please-dont-e9a279be011b
