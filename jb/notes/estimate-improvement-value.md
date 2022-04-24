@@ -52,7 +52,7 @@ If your own values are a moving target, then it may be better to let others defi
 you can e.g. make more money). If you don't make one topic "your thing" though, you risk not
 building (effective, efficient) deep mental networks that are valuable to others.
 
-## Source of Value
+## Ultimate Source
 
 Let's borrow two terms from philosophy: intrinsic and instrumental value. For a definition of these
 terms, see [Value (ethics and social sciences)](
@@ -97,6 +97,11 @@ terms of trust, should we trust that the people who are giving us dollars are ev
 "good" things with what we give them back? Many people believe that behind every great fortune lies
 an even greater crime. Who provides the dollars you are earning, that is, who are you serving?
 
+Ideally, dollars would represent the average opinion of other people about how valuable something
+is. If a democratic, fair (good) society is printing the dollars, then this should be closer to
+true. What's great about dollars for optimization is they provide a metric people care about when
+otherwise there might be none.
+
 Do you trust that those giving you dollars providing goods and services that are "good" with respect
 to your values? See [Socially responsible investing](
 https://en.wikipedia.org/wiki/Socially_responsible_investing).
@@ -113,13 +118,25 @@ acquiring the knowledge that the solution requires. Call what you learn as part 
 Transfer value is a specific kind of instrumental value, scored based on the set of projects you
 expect to work on in the future.
 
-## Reproducibility Value
+Transfer value is the value of a commit in source code; not the value of running the source code.
+See the end of [](evaluate-pedagogical-tool.md) for this extended analogy. Said another way, it's
+the value in running training for longer rather than running inference. For a learning task, the
+cost is how long we will need to run training (or generate commits), and the value is how the time
+we put into that investment pays off in terms of in terms of improved outputs (translated to the
+value metric).
 
-The calculations above assume once we know how to do something we won't forget how to do it, and
-what we need to perform the task won't change. For example, do you only need to be able to perform
-the task once? Is it worth the cost of learning something if you're only going to need to perform it
-once, when the next time you may need to follow it will be years from now, and may require a mostly
-different process to get the same result?
+## Significant terms
+
+To eventually estimate the cost of an effort numerically (e.g. in time), we often need more details
+about the objective function.
+
+### Value in Reproducibility
+
+Many calculations assume once we know how to do something we won't forget how to do it, and what we
+need to perform the task won't change. Let's say there's no value in reproducibility, i.e. you only
+need to be able to perform the task once. Is it worth the cost of learning something if you're only
+going to need to perform it once, when the next time you may need to follow it will be years from
+now, and may require a mostly different process to get the same result?
 
 In the case of a unit test in a build service, where the value in the test is often only to a
 developer or developers, we more often need to make hard decisions about whether to even keep
@@ -142,7 +159,7 @@ every build of the software (e.g. cache the passed test). If you have 1000 tests
 fraction of the time the test passes and notice if e.g. it drops to 0/10 times. Feedback will be
 slower, but you won't have to stop running the test.
 
-## Accidental Value
+### Anticipated Accidental Value
 
 Humans and other animals have curiosity, a desire to learn that is often independent of any value
 system. What we are naturally curious about often ends up being closely related to valuable skills,
@@ -169,18 +186,27 @@ solutions to basic mathematical questions (though these sometimes have known pra
 
 That is, take the phrase "necessity is the mother of the invention" with a grain of salt.
 
-### Examples
+This kind of value isn't impossible in software; developers often find easy features just by reading
+through a section of code. For example, that save hundreds of thousands of dollars in production
+costs by removing unnecessary code that was running but actually not required.
+
+## Examples
 
 A refactoring task is a TODo that typically has time value (saving developer time), a form of
 instrumental value among the whole project. A "story" TODo typically has intrinsic or trusted
 instrumental value given by a company-external customer (value measured in dollars) or
-company-internal customer (value requiring a company-internal metric). Both may include transfer
-value (hard to metricate, but see below); confirm your coworkers (code reviewers, feedback
-providers) are interested in learning about the associated topics. Both kinds of tasks should come
-with new tests for the build service that have an SLA negotiated as part of the work (or defined
-prior to the work, for a more accurate cost estimate).
+company-internal customer (value requiring a company-internal metric).
 
-## Mental function
+Both refactoring and feature tasks may include transfer value (hard to metricate, but see below).
+Confirm your coworkers (code reviewers, feedback providers) are interested in learning about the
+associated topics.
+
+Both kinds of tasks should come with new tests for the build service that have an SLA negotiated as
+part of the work (or defined prior to the work, for a more accurate cost estimate). For tasks on the
+opposite end of the spectrum, you may need to guess how much accidental value will come from it
+using reference class forecasting.
+
+### Mental function
 
 [nc]: https://en.wikipedia.org/wiki/Neural_circuit
 [lsbn]: https://en.wikipedia.org/wiki/Large-scale_brain_networks
@@ -206,7 +232,7 @@ task is equal to the multiplication of:
 1. How your life goals are affected by the outputs of this function (thoughts).
 2. How the outputs of this function are affected by your mental sub-network.
 
-### Transfer Value, Time Metric
+#### Transfer Value, Time Metric
 
 How much does the mental function affect your current reality? This determines:
 
