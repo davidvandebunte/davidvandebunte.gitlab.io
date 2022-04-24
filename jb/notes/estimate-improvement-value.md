@@ -106,6 +106,31 @@ Do you trust that those giving you dollars providing goods and services that are
 to your values? See [Socially responsible investing](
 https://en.wikipedia.org/wiki/Socially_responsible_investing).
 
+### Shifting Sources
+
+It’s OK to have knowledge acquisition stories, but it should be in the form of spikes, prototypes,
+etc. (validated learning rather than extensive planning). Similarly, some people like two stories
+for defects, one to investigate the root cause of the defect, and a separate story to decide what to
+do about it. Once the first story is done, a few people (or even just two) can get together to talk
+about the proper solution, rather than just having the first person who found the root cause come up
+with a solution. Of course there may only be one obvious solution, or it may be so urgent to fix the
+bug that we need to understand the root cause and then interrupt another developer to ask them about
+potential solutions.
+
+In general, it's easy to convert one "large" task with e.g. intrinsic value into multiple with
+instrumental value by simply taking the first thing you think you need to do for the large task and
+separating it into it's own task. Large companies do this when they have an architect break down a
+customer feature into many services (whether driven by software services or manually by teams of
+people providing a service in the service economy).
+
+Don't get hung up on the distinction between a story and a task in Scrum or on Kanban boards; it's
+better to use the philosophical terms (they provide a larger and older, more standard language).
+Everyone already knows we should consider what is shown at the sprint review (items with intrinsic
+or trusted instrumental value, i.e. relevant to those outside the team). Simply show progress at the
+sprint review, even if it's not going to make a difference to your team's service's API (e.g.
+whether people want to update). Present those items at the sprint review as well, but more
+importantly include them in release notes.
+
 ### Future Goals
 
 See [](./define-values.md) for a comparison between values and goals. When you are working on a
@@ -129,6 +154,40 @@ value metric).
 
 To eventually estimate the cost of an effort numerically (e.g. in time), we often need more details
 about the objective function.
+
+### Societal Values
+
+See [](./define-values.md) for a discussion of societal values and how they influence us. Although
+these may seem arbitrary and imprecise, they get slightly more interesting if you consider how you
+would metricate them in a machine.
+
+In particular, it's important to keep track of these values because they can be major sources of
+uncertainty. If the story the team is going to work on next becomes primarily a matter of politics
+(like passing laws from a shared backlog) then you need to move on.
+
+#### Normativity
+
+One common societal value is [Normativity](https://en.wikipedia.org/wiki/Normativity); we regularly
+influence the opinions of others through [Normative statements](
+https://en.wikipedia.org/wiki/Normative_statement).
+
+For example, why do you send a greeting card to a sick relative? If you're doing it because you have
+heard that all your other siblings are doing it, then you are acting in response to normative value.
+
+Notice this can be both a positive and negative term. If you will likely be attacked for e.g.
+failing to fit in, then the value is negative. If you are instead acting out of a genuine desire to
+put value on the opinions of others rather than yourself (putting trust in them) then this is
+arguably positive. In some sense, a preference for normativity is a preference for democracy.
+
+A preference for using the language of others rather than your own is normative, and also lets you
+pull their thoughts into your own mental networks.
+
+#### Know thyself
+
+In some ways, this is a societal value similar to the more commonly known value we put on
+self-expression (in the western world). Unfortunately, it's hard to metricate this. Many people are
+likely pulled into "neural networks" because the name promises to help them both understand
+themselves and teach computers.
 
 ### Value in Reproducibility
 
@@ -158,6 +217,31 @@ every build of the software (e.g. cache the passed test). If you have 1000 tests
 99% reproducibility is not enough. If you [](./regularly-stress-test.md) you can monitor what
 fraction of the time the test passes and notice if e.g. it drops to 0/10 times. Feedback will be
 slower, but you won't have to stop running the test.
+
+### Value in Expediency
+
+Also called the "cost of delay" in other material. It may be that a story is becoming less valuable
+with time (which makes it harder to schedule, of course).
+
+If there is no or little cost of delay, you should consider doing the story whenever it is
+convenient to do; e.g. at the same time as other stories in the same area.
+
+For people, who not only lose mental plasticity with time but have a limited lifespan, the benefits
+of learning a particular skill decrease with time. For example, we typically don't have people go
+back to college in their 50s and 60s to learn a completely new career (though there's nothing wrong
+with this, since the investment can pay back even in this timeframe depending on what they are
+currently doing).
+
+This kind of value is also related to the explore-exploit problem; see [Multi-armed bandit](
+https://en.wikipedia.org/wiki/Multi-armed_bandit).
+
+When will your time be saved? If a process improvement insight saves you 3 minutes a day for the
+rest of your life, then it only costs 6 minutes to delay implementation for two weeks. Don't waste
+time working on something until you've thought about it for a bit, and you're sure it’s going to
+save time (your priors are more certain). Said another way, when do you pay back your initial
+investment? If it's long, you many need to consider the time value of money. In the same way you
+don’t just buy something from Amazon when you think of it, you don’t work on something until you’ve
+reflected on its value.
 
 ### Anticipated Accidental Value
 
@@ -234,7 +318,8 @@ task is equal to the multiplication of:
 
 #### Transfer Value, Time Metric
 
-How much does the mental function affect your current reality? This determines:
+How much does the mental function affect your current reality? Let's say you only produce the same
+`Thought`, but faster. Then you would affect your future possible worlds by simply saving time:
 
 $$
 \frac{\partial Value}{\partial MentalModel} =
@@ -244,16 +329,16 @@ $$
 
 $$
 \frac{\partial Value}{\partial MentalSpeed} =
-\frac{\partial Value}{\partial FutureStates}
-\frac{\partial FutureStates}{\partial MentalSpeed}
+\frac{\partial Value}{\partial FutureWorld}
+\frac{\partial FutureWorld}{\partial MentalSpeed}
 $$
 
 Combining these equations:
 
 $$
 \frac{\partial Value}{\partial MentalModel} =
-\left(\frac{\partial Value}{\partial FutureStates}
-\frac{\partial FutureStates}{\partial MentalSpeed}\right)
+\left(\frac{\partial Value}{\partial FutureWorld}
+\frac{\partial FutureWorld}{\partial MentalSpeed}\right)
 \frac{\partial MentalSpeed}{\partial MentalModel}
 $$
 
@@ -261,8 +346,8 @@ For example, if you are measuring value in time:
 
 | Explanation                          | Variable               | Value       |
 | ---                                  | ---                    | ---         |
-| Would all the time you save on this function come back to you? | ∂Value/∂FutureStates | 1 |
-| How much schedule would you free per increase in thought speed? | ∂FutureStates/∂MentalSpeed | 2 days/unit |
+| Would all the time you save on this function come back to you? | ∂Value/∂FutureWorld | 1 |
+| How much schedule would you free per increase in thought speed? | ∂FutureWorld/∂MentalSpeed | 2 days/unit |
 | Would execution take two rather than three days with a ∂MentalModel? | ∂MentalSpeed/∂MentalModel | 1 day/ex.   |
 
 Then ∂Value for the ∂MentalModel is:
@@ -270,11 +355,6 @@ Then ∂Value for the ∂MentalModel is:
 $$
 = \left(1 * \frac{2 days}{\frac{1 day}{execution}}\right) * \frac{1 day}{execution} = 2 days
 $$
-
-Use reference class forecasting; how have you achieved the greatest value in this area in the past?
-Is this the same kind of action?
-
-Do you have any notes on the mental function you are trying to improve?
 
 % See also `organize-notes.md`.
 

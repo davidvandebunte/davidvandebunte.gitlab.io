@@ -39,13 +39,6 @@ Do you agree with this statement? That is, is the purpose of science only to ach
 interests, or is it good to learn in itself? If it's not good in itself, you have only intrinsic and
 instrumental values.
 
-### Know thyself
-
-In some ways, this is a societal value similar to the more commonly known value we put on
-self-expression (in the western world). Unfortunately, it's hard to metricate this. Many people are
-likely pulled into "neural networks" because the name promises to help them both understand
-themselves and teach computers.
-
 ### Learning values
 
 [learning]: https://en.wikipedia.org/wiki/Learning
@@ -55,7 +48,7 @@ learn values from each other, even in adulthood. When someone tries to shame you
 topic rather than another, they are essentially ask you to shift your values (assuming theirs are
 better).
 
-## Identity, ownership, and investment
+### Identity, ownership, and investment
 
 It's easy to mix up your value estimation functions with your identity; e.g. some people value money
 or relationships more than others. At the same time, taking on an identity through value estimation

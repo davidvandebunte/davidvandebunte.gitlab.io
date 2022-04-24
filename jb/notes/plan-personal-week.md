@@ -62,7 +62,7 @@ The process of planning should be the process of aggressively pushing down the i
 you do not think are critical. It's avoiding becoming a slave to yourself and your own notes; the
 notes in your email and the notes that are focal (that you've scored highly because they are focal).
 That is, it's the process of *stopping* work and saying no to yourself, critical to delivering more
-value.
+value. See also [](./stay-on-focus.md).
 
 Don't spend half your weekend "copying" notes (i.e. reading and improving email notes on their way
 to plain text). Copying like this is often shallow work; you're covering many topics and focusing on
@@ -91,14 +91,11 @@ priority to the reciprocal of the frequency (in days) to remain consistent.
 
 ## Review Discretionary Spending Budget
 
-[sg]: https://www.scrumguides.org/scrum-guide.html#events-planning
-
 Estimate schedulable time (assuming some interruptive work) from your calendar. Decide how long you
-want to refine weight estimates before starting. Write your timebox duration down if it's more than
-an hour. Use as an anchor a 5% timebox, based on [Sprint Planning | Scrum Guide][sg]:
-
-> Sprint Planning is time-boxed to a maximum of eight hours for a one-month Sprint. For shorter
-> Sprints, the event is usually shorter.
+want to refine weight estimates before starting, or whether the time you have should only be spent
+thinking about priorities. Perhaps the best indicator of whether you should spend more time "doing"
+(building or modifying specific nets) or "planning" (backpropagating on your values) is whether you
+feel confident the action you are taking next is what you want.
 
 ## Generate Actions
 
