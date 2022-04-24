@@ -38,6 +38,13 @@ enough that someone does it or you get the green light to assign it to someone. 
 [Pre-Suasion, A Revolutionary Way to Influence and Persuade - Google Play Books](
 https://play.google.com/books/reader?id=RmOdCwAAQBAJ&printsec=frontcover&pg=GBS.PA367.w.2.0.161).
 
+There are many examples of this in the workplace. In my experience, when you plan a meeting, people
+will come; I've had 40 people show up to a meeting even though most were optional when I was
+expecting only a few. The issue is that in many environments developers feel like they can't say no,
+or they won't look like a team player. It's incredibly easy to abuse this feeling; instead
+developers need to develop priors about the quality of the content that every individiual coworker
+typically presents (and be willing to say no).
+
 ## Curiosity
 
 Curiosity is overlearning; you're not being driven by any "value" error signal but only an error
