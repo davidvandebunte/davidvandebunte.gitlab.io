@@ -40,9 +40,7 @@ affect your values, and then (if all went well) make the change.
 
 Notice that your life's computational graph is a recursive artifact, best captured in the current
 state of your notes. Every step you take (whether a commit you make while planning, improving
-specific notes, or code) is presumably an incremental one in a better direction. The primary
-difference is that when you're planning, you're typically taking a view from closer to the top (or
-higher levels, avoiding details).
+specific notes, or code) is presumably an incremental one in a better direction.
 
 Said another way, it is often the case that low-cost higher-level actions can help you accept or
 reject lower-level high-cost actions without incurring the whole cost. This process suggests
@@ -50,6 +48,28 @@ low-cost higher-level actions (effectively heuristics). Call these high-cost act
 actions to be clear, or simply high-cost actions.
 
 # Cost
+
+## Consolidate (convert) new notes
+
+In plain text, for example by copying and pasting emails to yourself. All notes are TODo, even those
+in email. They are all begging to be read. For example, if they're statements (training data), then
+you can treat them as a reminder TODo. If they're large tasks (additional training data), you can
+treat them as a traditional story (where even reading the story is a reminder of the details of a
+potential improvement). If they're a question, then there's implied value in being able to answer
+the question (effectively a story again).
+
+The process of planning should be the process of aggressively pushing down the importance of tasks
+you do not think are critical. It's avoiding becoming a slave to yourself and your own notes; the
+notes in your email and the notes that are focal (that you've scored highly because they are focal).
+That is, it's the process of *stopping* work and saying no to yourself, critical to delivering more
+value.
+
+Don't spend half your weekend "copying" notes (i.e. reading and improving email notes on their way
+to plain text). Copying like this is often shallow work; you're covering many topics and focusing on
+none (even though you are organizing notes, which you consider "good" in general). Instead, copy the
+notes as quickly as possible (get them in version control and plain text) putting the same TODo
+score on all of them (your current highest). Only then clean them up (i.e. read them in detail).
+Some notes you may never read while they on their way to plain text; just copy and paste.
 
 ## Measure Error
 
@@ -95,8 +115,8 @@ of your public notes will be links to other's notes.
 
 ## Refine Actions
 
-Refine action weight estimates by searching for TODo and tackling the highest weight (bottom-up, low
-cost).
+Refine action weight estimates by searching for score TODo and tackling the highest weight
+(bottom-up, low cost).
 
 % See improve-implement-feature.md for the details of this system.
 
