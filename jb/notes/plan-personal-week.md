@@ -77,7 +77,7 @@ Some notes you may never read while they on their way to plain text; just copy a
 
 [Retrospect][rl] (measure scheduling and software error) on your last week.
 
-## Review Mandatory Spending
+## Mandatory Spending
 
 [gcw]: https://calendar.google.com/calendar/r/week
 
@@ -89,7 +89,7 @@ If you have a weekly reminder and don't want to make it less frequent, it's by d
 important to you than less frequent reminders. Publish it before other reminders; set the TODo
 priority to the reciprocal of the frequency (in days) to remain consistent.
 
-## Review Discretionary Spending Budget
+## Discretionary Spending
 
 Estimate schedulable time (assuming some interruptive work) from your calendar. Decide how long you
 want to refine weight estimates before starting, or whether the time you have should only be spent
