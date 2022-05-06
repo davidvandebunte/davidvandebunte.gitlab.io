@@ -356,7 +356,7 @@ $$
 = \left(1 * \frac{2 days}{\frac{1 day}{execution}}\right) * \frac{1 day}{execution} = 2 days
 $$
 
-% See also `organize-notes.md`.
+See a similar example in [](./organize-notes.md).
 
 % # Additional Training Data
 

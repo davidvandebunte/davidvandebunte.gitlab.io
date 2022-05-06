@@ -32,7 +32,7 @@ have an errata, either the author never makes mistakes or they don't have the ti
 
 ### VitalSource
 
-[vs]: https://www.vitalsource.com/
+[vs]: https://bookshelf.vitalsource.com/reader/books/9780429639142
 
 The ebook format ([VitalSource][vs]) is quite limited. The VitalSource pages are painfully slow to
 load; I would load several chapters in different tabs at once (in Firefox, use `Alt-D` then

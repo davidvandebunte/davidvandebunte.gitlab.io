@@ -77,7 +77,7 @@ Some notes you may never read while they on their way to plain text; just copy a
 
 [Retrospect][rl] (measure scheduling and software error) on your last week.
 
-## Review Mandatory Spending
+## Mandatory Spending
 
 [gcw]: https://calendar.google.com/calendar/r/week
 
@@ -89,7 +89,7 @@ If you have a weekly reminder and don't want to make it less frequent, it's by d
 important to you than less frequent reminders. Publish it before other reminders; set the TODo
 priority to the reciprocal of the frequency (in days) to remain consistent.
 
-## Review Discretionary Spending Budget
+## Discretionary Spending
 
 Estimate schedulable time (assuming some interruptive work) from your calendar. Decide how long you
 want to refine weight estimates before starting, or whether the time you have should only be spent
@@ -121,9 +121,8 @@ Refine action weight estimates by searching for score TODo and tackling the high
 
 In the end, you must have a global view to optimize (neither top-down or bottom-up is enough). That
 is, you must regularly make a tough decision on whether to pull from the bottom or push from the
-top.
-
-% See organize-notes.md for the importance of a clean life network for the sake of prioritization.
+top. See [](./organize-notes.md) for the relative importance of a clean life network for the sake of
+prioritization.
 
 Try to focus on one subnetwork (if in JIRA, one epic) to support a large batchsize. Note this
 network as the focus of your sprint (sprint goal).
