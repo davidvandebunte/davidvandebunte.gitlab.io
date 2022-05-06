@@ -272,7 +272,7 @@ them now because you'll be starting cold when you get back to them and every tim
 them. If you use them regularly, there's more value to be gained from organizing them. If the notes
 aren't important at all, you shouldn't have organized them.
 
-% TODO 9.8: Remove all notes once you are removing more than 80% of what you read.
+% TODO 2.1: Reminder: Remove all notes once you are removing more than 80% of what you read.
 
 ## More unnecessary recall
 

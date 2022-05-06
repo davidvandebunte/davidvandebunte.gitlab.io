@@ -41,7 +41,13 @@ computer how to achieve larger goals.
 
 # Cost
 
-## Include Uncertainty
+## Unit of measurement
+
+Typically measured in units of dollars or time, or in any [Store of value](
+https://en.wikipedia.org/wiki/Store_of_value). Conversion between forms can be expensive; you pay
+taxes when e.g. you convert your time to money.
+
+## Include uncertainty
 
 Use reference class forecasting; how "accurate" (consistent) have your estimates been in this domain
 in the past? In your personal life, how consistent have your values been? In a business setting, how
@@ -51,6 +57,14 @@ change?
 If your own values are a moving target, then it may be better to let others define them for you (so
 you can e.g. make more money). If you don't make one topic "your thing" though, you risk not
 building (effective, efficient) deep mental networks that are valuable to others.
+
+If we were all perfectly consistent, then how we spend our time and money would reflect our values.
+That is, if you wanted to know what someone valued, you could check what they do and their credit
+card statements. It can help to review these to understand yourself. What do you "value" in
+practice?
+
+% See this list of personal opportunity costs:
+% https://docs.google.com/document/d/1zqG-vNESbVLhbceU22UKO6L8hDUbLmMtooLM_M9_txs/edit
 
 ## Ultimate Source
 
@@ -164,6 +178,12 @@ would metricate them in a machine.
 In particular, it's important to keep track of these values because they can be major sources of
 uncertainty. If the story the team is going to work on next becomes primarily a matter of politics
 (like passing laws from a shared backlog) then you need to move on.
+
+#### Relationships
+
+There is value in relationships. Compliment other people. That is, if someone does something good
+for you then you should do something good for them, or they'll stop helping you out (tit for tat). A
+salesperson can put dollars on the value of many relationships.
 
 #### Normativity
 
