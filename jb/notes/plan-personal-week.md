@@ -121,9 +121,8 @@ Refine action weight estimates by searching for score TODo and tackling the high
 
 In the end, you must have a global view to optimize (neither top-down or bottom-up is enough). That
 is, you must regularly make a tough decision on whether to pull from the bottom or push from the
-top.
-
-% See organize-notes.md for the importance of a clean life network for the sake of prioritization.
+top. See [](./organize-notes.md) for the relative importance of a clean life network for the sake of
+prioritization.
 
 Try to focus on one subnetwork (if in JIRA, one epic) to support a large batchsize. Note this
 network as the focus of your sprint (sprint goal).

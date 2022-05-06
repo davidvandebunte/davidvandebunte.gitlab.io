@@ -126,9 +126,7 @@ cross-project options offered by GitLab and GitHub (tying you to their platforms
 
 See "Simplified organization" in [Advantages of monorepos][aom]. When you want to reorganize docker
 boundaries or "projects" in general you can do so without going to GitLab or GitHub. Consider the
-value in organizing notes.
-
-% See also [Organize notes](./organize-notes.md)
+value in organizing notes in general; see [](./organize-notes.md).
 
 ### Forced Collaboration
 

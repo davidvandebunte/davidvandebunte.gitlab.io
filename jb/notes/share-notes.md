@@ -184,10 +184,9 @@ group of people monopolize power.
 
 ### Organization
 
-% See also [Organize notes](./organize-notes.md)
-
 To publish notes is to organize notes. Organized notes are easy to publish, and published notes must
-already be organized. Considering others is considering yourself.
+already be organized. Considering others is considering yourself. See similar thoughts in
+[](./organize-notes.md).
 
 An imaginary reader helps you delete notes you don't know you should delete. For example, you
 often need to copy your thoughts to an SO answer to remove a bunch of documentation or links that

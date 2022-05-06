@@ -269,9 +269,7 @@ material that essentially duplicates what your instructor wrote to teach you (dr
 Better, rely on others to provide materials that you take from your memorized state to the state
 you've been to once in the past, only appending your own notes on the instructor's notes. To try to
 forget only what you want to forget, you should also aggressively clean up your notes and throw away
-instructional material you aren't going to forget.
-
-% See more in `organize-notes.md`
+instructional material you aren't going to forget. For more details, see [](./organize-notes.md).
 
 To summarize, you're looking for instructional material provided by someone in education, who has
 spent time actively working with modern students (similar to yourself) and seeing their struggles.
