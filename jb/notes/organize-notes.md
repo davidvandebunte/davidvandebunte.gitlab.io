@@ -149,6 +149,15 @@ finding the answer on SO. The issue is that you often don't have the words until
 notes how to succintly find what you're looking for online. Still, you can start every `Question`
 TODo with a web search and iterate on the question wording.
 
+When all your thoughts are connected and your notes are clean, every project becomes less risky in
+terms of whether you're going to fail to learn anything long-term. If you take on a project where
+you don't understand all the justifications for what you're doing, not only are you going to be more
+likely to fail to get it to work, you're not going to remember what you did learn if you don't get
+it to work (because you'll assume what you learned wasn't helpful, and won't know what you missed).
+If you build up your thoughts based on other thoughts in your notes, then even if you fail farther
+downstream you'll still have built up some knowledge. In some sense, this is encouraging the "small"
+in INVEST strategy.
+
 ### Avoid duplicate learning
 
 You should pursue difficult goals, so that you don’t get lost in simple online classes (that you’ve
@@ -392,6 +401,13 @@ considered connected and disconnected in file changes (e.g. moving part of file 
 It's also obviously a little work.
 
 ## Don't reinvent
+
+Let's say that you could get a bunch of programmers (or computers) working for you, experimenting
+with a bunch of models to see which ones produced the best results. Would you want to see all the
+failed experiments, or learn only from the best ones? You do care about the model search (about the
+failed experiments) but only to the extent that those experiments teach a lesson that you are not
+aware of, that will be important in future tasks. It's less likely that failed experiments have
+these lessons than successful ones (though all include lessons).
 
 When do you stop organizing your notes? Often, when you believe there is some external resource that
 will help you organize them faster than you would be able to yourself. That is, when you believe
