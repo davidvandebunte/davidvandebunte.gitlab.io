@@ -156,6 +156,13 @@ changing a script and not screwing up anything on your machine.
 You need to easily run on Amazon Linux (amazonlinux) to test new packages built there (such as for
 machine learning).
 
+Have you ever hacked something into working, and forgotten what you did? You can always use the
+`history` command to review how you changed machine state to get to the working "island" that you're
+on. With docker, the `history` command is naturally limited to the hacks you did to get your
+specific problem working (not all commands across the system). These commands are the `actions` you
+took to control the state to where you wanted it; now you can cut down on that history just like you
+cut down on the actions in a git history (removing back and forth i.e. compressing).
+
 #### Required for CI/CD
 
 Because CI/CD needs a stable environment, it will almost always be using containers.
