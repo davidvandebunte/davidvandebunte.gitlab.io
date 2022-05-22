@@ -41,16 +41,152 @@ computer how to achieve larger goals.
 
 # Cost
 
-## Include Uncertainty
+## Unit of measurement
+
+Typically measured in units of dollars, another currency, or in general in any [Store of value](
+https://en.wikipedia.org/wiki/Store_of_value). See also:
+- [Money](https://en.wikipedia.org/wiki/Money)
+- [Currency](https://en.wikipedia.org/wiki/Currency)
+
+All value measurements must have units; they are not unitless. They cannot be unitless, because they
+must be measurable (directly or indirectly) in a state space. Although a state space search may
+target a change in anything, i.e. any [Asset](https://en.wikipedia.org/wiki/Asset), it will not be
+possible to compare possible worlds with everything measured in different units (hence the invention
+of money).
+
+There's no such thing as money that makes money, because e.g. silver can't "multiply of its own"
+(see [Interest](https://en.wikipedia.org/wiki/Interest)). Said another way, money under a mattress
+isn't making money. Money must be converted to another form to make money; even storing money in a
+checking account is making it slightly less liquid (in theory) than having it in your hand.
+
+A cost to one person is a return to another. That is, specifying value separately from cost lets us
+abstract the "how" from the "why" we are pursuing a goal (the "what"). It gives us independent
+opinions about what is valuable; the person making a good obviously thinks it is valuable. For a
+person working alone, it lets them get into focused work on thinking about value, then focused work
+on thinking about cost (separately). See also:
+- [Cost](https://en.wikipedia.org/wiki/Cost)
+- [Price](https://en.wikipedia.org/wiki/Price)
+
+### Time is not money
+
+The phrase "time is money" comes from Benjamin Franklin. See [Time is money (aphorism)](
+https://en.wikipedia.org/wiki/Time_is_money_(aphorism)).
+
+Ben is clear to point out that he assumes the young tradesman spends the whole half-day on nothing
+but diversion and idleness, but this is a major assumption. For a more detailed treatment along
+these lines, see [Time is money, but money can't buy time - The Physician Philosopher](
+https://thephysicianphilosopher.com/time-is-money/). The claim that "time is money" implies that
+time can buy money and that money can buy time; both these ideas are too simple for sufficiently
+complex problems.
+
+#### Time can buy money
+
+The claim that "time is money" implies that time can buy money, and was used in the only training
+example Ben provided. While this is a side effect of labor, it ignores a million other side effects.
+When you earn money, are you completely not enjoying your time? Are you not contributing to the
+world (changing it) in a way that you also find valuable? Find a job you love, and you'll never
+"work" a day in your life.
+
+#### Money can't buy time
+
+The claim that "time is money" implies that money can buy time. In many ways, this is a more
+imprecise assumption. A clearer (and longer) statement might be that money can save you managing
+state that you've already committed to managing by out-sourcing it to another company, person, or
+machine you trust.
+
+Any "tool" can "buy" time, but only in the sense of getting you to a goal state faster or without
+your personal involvement. I'm referring here to automatic vacuum cleaners, self-driving cars, fast
+computers, fast phones, moving companies, restaurants, teachers (to learn faster), and your
+sister-in-law when she watches your kid.
+
+It's equivalently imprecise to say money can "save" you time. Let's say you hire someone to mow the
+lawn at your second home. Are you saving time by doing so? What if you didn't have the second home?
+Did you spend time by buying the second home that you now need to buy back? If you fly rather than
+drive to save time, did you spend time by choosing to travel?
+
+Time is never fully lost, which is what "save" implies (as if it was money). You'll get a lot more
+time to talk and work on other tasks while you're traveling if you drive rather than fly. Are you
+going to go into a coma for the three hours that you drive (completely lose the time)? The only way
+to compare driving to flying is to consider the two possible worlds, and all the complexity
+involved.
+
+You can trivially change the world state to advance time, if that's what you value and is included
+in all your goal states. It happens without your control. Traveling to the future would be possible
+if we were only able to stop the aging process and you had a lot of money for someone to watch over
+your body. A computer program can [`sleep`](https://en.wikipedia.org/wiki/Sleep_(command)) to reach
+the future.
+
+It's also not precise to say that "time is more valuable than money" if you don't accept that it can
+be bought. It's what you do with the time that's valuable, not the time. You can go on vacation to
+the most beautiful place in the world, but if you don't go with the right attitude or an
+understanding of what you are going for (temporary warm weather, relationships) it won't be a good
+time.
+
+Shaking the idea that time is money may inspire you to clear your calendar:
+- [Warren Buffett taught Bill Gates by sharing his blank calendar](
+https://www.cnbc.com/2018/09/07/warren-buffett-taught-bill-gates-about-time-management-by-sharing-his-blank-calendar.html)
+
+#### Practical standpoint
+
+[oafw]: https://en.wikipedia.org/wiki/OpenAI_Five
+
+It's hard to continue to maintain the time is money model as you attempt to solve more complex
+problems. Most machine learning models (see [OpenAI Five][oafw]) include time as separate from the
+goal states, and if you want to use them, the time is money model isn't going to work. In fact, no
+independent variable can affect time. See [](./practice-12.md) (12H7 and 12H8) for a detailed
+example.
+
+[inv]: https://en.wikipedia.org/wiki/Investment
+[oc]: https://en.wikipedia.org/wiki/Opportunity_cost
+[roi]: https://en.wikipedia.org/wiki/Return_on_investment
+
+Similarly, most economic models keep time separate from value measurements in imagined worlds. An
+[Opportunity cost][oc] is calculated based on the consideration of 2 possible worlds (a binary
+decision) with respect to a spending action, with a separately configurable time period. A
+[Cost–benefit analysis](https://en.wikipedia.org/wiki/Cost%E2%80%93benefit_analysis) is similar. A
+[Return on investment (ROI)][roi] is calculated based on the consideration of 2 or more possible
+worlds with respect to an [Investment][inv] action, with a separately configurable time period.
+
+For the sake of scheduling (fitting items where they fit in your schedule e.g. if they are small)
+it's not desirable to absorb time estimates into weight estimates (unless they are also reported
+independently). See:
+- [Scheduling (computing)](https://en.wikipedia.org/wiki/Scheduling_(computing))
+
+#### Time is money model
+
+Despite it not being the normal basis for the logic used in these articles, the time is money model
+is still a good approximation in some circumstances. It's equivalent to imagining two possible
+future worlds, assigning zero value to one, and assigning value in the regular way to the other.
+
+Benjamin Franklin was encouraging someone to avoid a truly "lazy" activity, equivalent to going into
+a coma or watching television. This is only an approximation; many activities that add "zero value"
+may actually deserve a negative score because of e.g. the dependency or our memory to degrade or
+because we're hurting ourself as part of the process.
+
+We are necessarily making a judgement (assigning value to how time is spent) when we convert it to
+money. For Ben's subject, and e.g. someone watching television, it may be that they do it for
+nothing but the temporary happiness. That is, their activity is an end goal in the context of their
+life, a goal state they have been reaching for in all their other activities. They may be scoring
+their life in terms of how much time they spend of it in their goal state.
+
+## Include uncertainty
 
 Use reference class forecasting; how "accurate" (consistent) have your estimates been in this domain
 in the past? In your personal life, how consistent have your values been? In a business setting, how
-consistent is the market? How often do [KPI]( https://en.wikipedia.org/wiki/Performance_indicator)
+consistent is the market? How often do [KPI](https://en.wikipedia.org/wiki/Performance_indicator)
 change?
 
 If your own values are a moving target, then it may be better to let others define them for you (so
 you can e.g. make more money). If you don't make one topic "your thing" though, you risk not
 building (effective, efficient) deep mental networks that are valuable to others.
+
+If we were all perfectly consistent, then how we spend our time and money would reflect our values.
+That is, if you wanted to know what someone valued, you could check what they do and their credit
+card statements. It can help to review these to understand yourself. What do you "value" in
+practice?
+
+% See this list of personal opportunity costs:
+% https://docs.google.com/document/d/1zqG-vNESbVLhbceU22UKO6L8hDUbLmMtooLM_M9_txs/edit
 
 ## Ultimate Source
 
@@ -81,9 +217,16 @@ You trust your past self when you respect the number on a scored TODo you put on
 or notes. Although these scores are often produced based on an estimate of both value and cost, we
 often forget to update them as we start working on the task and discover more about cost.
 
-Many people see money as having intrinsic value, which is why the monetary system is so effective.
-That is, we don't back money by gold or anything else that is intrinsically valuable (e.g. food) but
-we all still want it as an end in itself, i.e. because other people want it.
+We might say that people see money as having intrinsic value, which is why the monetary system is so
+effective. That is, we don't back money by gold or anything else that is intrinsically valuable
+(e.g. food) but we all still want it as an end in itself, i.e. because other people want it. It's
+probably more accurate to say that money has trusted instrumental value; we assume we are helping
+others by collecting it (which has intrinsic value). Of course, gold doesn't fundamentally have
+intrinsic value to many people either (we just dig it up and bury it again). We could back money by
+livestock, but that doesn't have instrinsic value either. We could use livestock to e.g. produce
+food, but what kind? And is food the end goal of all our lives, to accumulate it in huge quantities?
+Which food? Should we back money by relationships? We could find a way to measure it, even if it'd
+be quite uncertain.
 
 #### Cost
 
@@ -105,6 +248,52 @@ otherwise there might be none.
 Do you trust that those giving you dollars providing goods and services that are "good" with respect
 to your values? See [Socially responsible investing](
 https://en.wikipedia.org/wiki/Socially_responsible_investing).
+
+##### Personal Currency
+
+To help avoid optimizing for some world state that don't match your "true" values, you could define
+your own measure of value and use it in calculations. Similar to a cryptocurrency, it would have
+value only because you declared (to yourself) that it has value. It'll be easy to win any games you
+define using it, because you define whether you are winning.
+
+Plenty of guides exist online to create your own cryptocurrency, which might be (theoretically)
+useful if you need machines to optimize on some task for you. For other examples, see:
+- [How to Start Your Own Private Currency - The Atlantic](
+https://www.theatlantic.com/business/archive/2011/04/how-to-start-your-own-private-currency/73327/)
+
+Try defining your own personal currency, e.g. Personal dollars, roughly equivalent to an hour of
+your time. In practice you'll likely mismanage the currency (leading to hyperinflation), only
+because you are not going to live forever and you'll spend the "money" too fast. You probably won't
+need to adjust for the [Time value of money](https://en.wikipedia.org/wiki/Time_value_of_money)
+anytime soon.
+
+[fer]: https://en.wikipedia.org/wiki/Floating_exchange_rate
+
+Estimating the value of a Personal dollar at an hour of your time is *not* to say that time is
+money; there is a [Floating exchange rate][fer] between Personal dollars and an hour of your time.
+That is, you may be willing to accept two Personal dollars to spend three hours on a task you enjoy,
+but will ask for four Personal dollars to spend three hours on a task when e.g. you're busy.
+Similarly, there is a floating exchange rate between Personal dollars and US dollars. This
+relationship will hold between anyone you give Personal dollars and between your future and past
+self. By giving someone Personal dollars, you are essentially committing your future self to a task
+(money is an IOU).
+
+To encourage this way of thinking, it may be helpful to start your personal dollars at some random
+number of minutes between 5 and 60 minutes. If you tell someone how much you think a Personal dollar
+is worth (in your time) then they are going to take that as a promise that you are pegging the
+dollar to that amount of your time. In the end, you should start to define value in terms of world
+states rather than time (in terms of the Personal dollar itself), and a starting time value is only
+to help you personally bootstrap the system.
+
+Developers often accidentally fall into thinking of a "story point" in Scrum as a kind of local
+currency, similar to Ithaca HOURs. This attitude usually leads to runaway inflation (see e.g. [Stop
+Using Story Points](https://www.industriallogic.com/blog/stop-using-story-points/)) because the
+"currency" isn't being managed by any central bank. A story point measures effort, not value. The
+product owner or stakeholders would need to come up with a separate measure of value and and e.g.
+divide value by cost to come up with a priority order. In theory it would be possible to do this,
+though (assuming value measure in dollars) the priority scores would be in the strange units of
+dollars divided by story points. It's not ideal, but the stories could still be prioritized with a
+simple sort of this score.
 
 ### Shifting Sources
 
@@ -164,6 +353,13 @@ would metricate them in a machine.
 In particular, it's important to keep track of these values because they can be major sources of
 uncertainty. If the story the team is going to work on next becomes primarily a matter of politics
 (like passing laws from a shared backlog) then you need to move on.
+
+#### Relationships
+
+There is value in relationships. Compliment other people. That is, if someone does something good
+for you then you should do something good for them, or they'll stop helping you out (tit for tat). A
+salesperson can put dollars on the value of many relationships. Money can't buy you love. Many
+people rate their successes on how their family will view them.
 
 #### Normativity
 
