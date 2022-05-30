@@ -59,8 +59,9 @@ parts:
   - caption: Plan
     chapters:
       - file: notes/flatten-plan.md
-      - file: notes/refine-plan.md
-      - file: notes/plan-personal-week.md
-      - file: notes/retrospect-on-life.md
       - file: notes/handle-interruption.md
+      - file: notes/identify-resource.md
+      - file: notes/plan-personal-week.md
+      - file: notes/refine-plan.md
+      - file: notes/retrospect-on-life.md
       - file: notes/stay-on-focus.md
