@@ -64,4 +64,7 @@ parts:
       - file: notes/plan-personal-week.md
       - file: notes/refine-plan.md
       - file: notes/retrospect-on-life.md
+      - file: notes/set-goal.md
+      - file: notes/set-deep-goal.md
+      - file: notes/set-wide-goal.md
       - file: notes/stay-on-focus.md
