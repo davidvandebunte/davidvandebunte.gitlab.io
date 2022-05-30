@@ -71,6 +71,17 @@ your remote machine a more thin client. Relying on a remote developer's machine 
 unreliable if a test consumes most of the machine's resources, since Firefox can take 10 GB of RAM
 in itself and prevent the job from completing.
 
+### Centralized source code
+
+For an individual, there's little advantage to decentralized source code management. Editing source
+code on your local machine is faster than editing it over ssh (which always has some delay). It's
+when you're editing source code that you most want to avoid the interruptions and annoyances of a
+slow network connection.
+
+Editing source code on a remote machine is also inherently risky. If the machine goes down for some
+reason, you may lose your recent writing on a subject. At the least, you will pay in terms of
+needing to bring the code back to your local machine at some point.
+
 ## Cost
 
 Pushing code and pulling it down on a static or shared CI/CD runner almost always adds a few seconds

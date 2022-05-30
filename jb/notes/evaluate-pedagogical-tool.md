@@ -15,7 +15,10 @@ kernelspec:
 
 # Evaluate pedagogical tool
 
-A score for a learning resource relative to similar resources on the same topic.
+A score for a learning resource relative to similar resources on the same topic. The score for a
+particular learning resource should theoretically be based on the slope of the [Learning curve](
+https://en.wikipedia.org/wiki/Learning_curve) for the set of actions you want to able to do after
+finishing learning. A *steeper* slope would theoretically produce a higher score.
 
 # Value
 
