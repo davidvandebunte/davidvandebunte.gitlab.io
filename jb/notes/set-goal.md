@@ -17,10 +17,6 @@ kernelspec:
 
 Add a single goal to a "future" git graph, either wide or deep.
 
-# Value
-
-Part of `estimate-subplan-weight.md`.
-
 # Cost
 
 ## Negotiate the goal(s)
@@ -34,7 +30,7 @@ estimate how much money you will make. Said yet another way, V drives your imagi
 worlds). See also the NT in [INVEST (mnemonic)](https://en.wikipedia.org/wiki/INVEST_(mnemonic)).
 
 If the T is just given to you with intrinsic value (or trusted instrumental value), you can only
-imagine through subplans. See `estimate-improvement-value.md` for comments on these terms.
+imagine through subplans. See [](./estimate-improvement-value.md) for comments on these terms.
 
 Before any metrication or quantification, we must imagine possible worlds. These are theories in the
 context of the scientific method, and T in the context of INVEST. From this initial VT you can

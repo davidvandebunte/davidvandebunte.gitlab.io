@@ -58,6 +58,7 @@ parts:
       - file: notes/evaluate-pedagogical-tool.md
   - caption: Plan
     chapters:
+      - file: notes/estimate-subplan-weight.md
       - file: notes/flatten-plan.md
       - file: notes/handle-interruption.md
       - file: notes/identify-resource.md

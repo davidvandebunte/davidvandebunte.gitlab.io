@@ -21,4 +21,4 @@ than one way to make money (or achieve value, in general).
 
 # Cost
 
-See `set-goal.md`.
+See [](./set-goal.md).

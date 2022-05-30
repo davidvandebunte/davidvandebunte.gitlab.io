@@ -87,4 +87,4 @@ value of money](https://en.wikipedia.org/wiki/Time_value_of_money).
 
 ## Set goal
 
-See `set-goal.md`.
+See [](./set-goal.md).
