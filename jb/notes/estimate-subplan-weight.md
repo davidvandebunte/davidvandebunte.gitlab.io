@@ -44,7 +44,7 @@ $R_a$ (rewards) associated with the orange squiggly lines in the drawing in [Mar
 process](https://en.wikipedia.org/wiki/Markov_decision_process):
 
 ![MDP](
-https://en.wikipedia.org/wiki/Markov_decision_process#/media/File:Markov_Decision_Process.svg)
+https://upload.wikimedia.org/wikipedia/commons/a/ad/Markov_Decision_Process.svg)
 
 ## Graph example
 
@@ -79,7 +79,7 @@ applications](https://www.gitops.tech/)).
 * a: Initial commit: 2017-07-07 12PM $80
 ```
 
-Notice we assign scores (in $) to every world state. Putting $ values on spending time with your
+Notice we assign scores (in \$) to every world state. Putting \$ values on spending time with your
 kids and a mowed lawn clearly allows for every kind of [Intangible asset](
 https://en.wikipedia.org/wiki/Intangible_asset). These won't show up in your bank account, but they
 can still make you the "richest man in town" if they're what you want to measure (see [It's a
@@ -88,11 +88,11 @@ Wonderful Life](https://en.wikipedia.org/wiki/It%27s_a_Wonderful_Life)).
 Notice world states are marked with what goals they achieve (e.g. B, K, L). The set of goal states
 associated with L is {e, g} in this example. L can be specified in greater detail elsewhere, such as
 grass in some acceptable height range. Often (not always) a reasonable sanity check is that the same
-goal adds the same value (in $) at every point in the graph.
+goal adds the same value (in \$) at every point in the graph.
 
 We'll use capital letters for states we want to emphasize in general, not just goal states. In this
 example S represents a subscription to a lawn moving service. When this state is true, we may pay
-e.g. $20/week to get our lawn mowed. We can use this system to describe the administration of other
+e.g. \$20/week to get our lawn mowed. We can use this system to describe the administration of other
 significant resources as well, such as employees ("human resources") or computers ("computing
 resources").
 
