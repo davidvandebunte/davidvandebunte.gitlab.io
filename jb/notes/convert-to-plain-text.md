@@ -77,7 +77,14 @@ it. An upside to this solution is that organizers can tell which documents link 
 being renamed (not possible with Google Docs). When is it ever OK to delete a Google Doc?.
 
 There's a larger barrier to entry for plain text notes; unlike a wiki page or Google document, users
-may need to fork a repository to make edits.
+may need to fork a repository to make edits. However, see [Web IDE | GitLab](
+https://docs.gitlab.com/ee/user/project/web_ide/). Tools like this one let a user edit e.g. .md
+files directly in their browser without doing anything on the command line (even creating and
+merging commits) as if it was a wiki page. This tool is especially valuable for e.g. testing the
+features supported by [GitLab Flavored Markdown (GLFM) | GitLab](
+https://docs.gitlab.com/ee/user/markdown.html). GitHub provides nearly the same feature for testing
+GHFM. It's critical to be using a build system like `bazel` if you're using these tools to avoid
+long builds for nothing but documentation changes.
 
 % ## Additional Training Data
 
