@@ -75,36 +75,11 @@ container_layer(
     tars = [":cache_tar"],
 )
 
-# Construct a tar with the jupyter book md, yml, etc. sources
-pkg_files(
-    name = "raw_notes",
-    srcs = glob(["notes/**"]),
-    strip_prefix = "notes",
-)
-pkg_tar(
-    name = "notes_tar",
-    srcs = [":raw_notes"],
-    package_dir = "notes",
-    owner = "1000.100",
-)
-pkg_tar(
-    name = "jupyter_book_tar",
-    srcs = [
-        "_config.yml",
-        "_toc.yml",
-        "executable-notes.svg",
-        "executable-notes-mini.svg",
-        "jb-build",
-    ],
-    deps = [":notes_tar"],
-    owner = "1000.100",
-)
-
 # Construct a layer with the jupyter book md, yml, etc. sources
 container_layer(
     name="source_layer",
     directory = "/home/jovyan/work",
-    tars = [":jupyter_book_tar"],
+    tars = ["//jb/tar:jb_tar"],
 )
 
 # Construct an image with the jupyter cache and jupyter book sources, with user jovyan
