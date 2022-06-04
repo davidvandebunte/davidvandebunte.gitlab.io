@@ -17,8 +17,11 @@ start_bazel() {
   mkdir -p /tmp/output_user_root
   docker_group_id=$(getent group docker | cut -d: -f3)
 
+  # Run privileged to get `linux-sandbox` rather than `processwrapper-sandbox`. See:
+  # - https://bazel.build/docs/sandboxing#sandboxing-strategies
   docker run --detach --tty \
     --name bazel-server \
+    --privileged \
     --network=host \
     -e USER="$(id -u)" \
     -u "$(id -u):$docker_group_id" \
