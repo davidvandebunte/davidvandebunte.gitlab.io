@@ -101,6 +101,17 @@ In non-Bayesian statistics and in particular on Wikipedia the definition of the 
 is completely different and denoted with $\mathcal{L}$. See the author's footnote and [Likelihood
 function][lf].
 
+## 3.3. Sampling to simulate prediction
+
+### 3.3.1. Dummy data
+
+> In this way, Bayesian models are always generative, capable of simulating predictions.
+
+Bayesian models are always generative, capable of simulating *observations*.
+
+If you search for *generative* you'll see the author "defines" it again at the start of section
+3.3.2 (correctly this time). See also [](./define-generative-model.md).
+
 ## 4.3. Gaussian model of height
 
 ### 4.3.1. The data
