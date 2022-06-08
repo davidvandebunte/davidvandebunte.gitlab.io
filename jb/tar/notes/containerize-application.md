@@ -334,8 +334,6 @@ https://jupyter-docker-stacks.readthedocs.io/en/latest/using/selecting.html#comm
 - [🤗 Transformers](https://huggingface.co/docs/transformers/index)
 - [iot-salzburg/gpu-jupyter](https://github.com/iot-salzburg/gpu-jupyter/)
 
-% TODO 9.8: Use these notebooks to learn e.g. Transformer models.
-
 % ## Additional Training Data
 
 % In the process of moving:

@@ -126,6 +126,18 @@ Shaking the idea that time is money may inspire you to clear your calendar:
 - [Warren Buffett taught Bill Gates by sharing his blank calendar](
 https://www.cnbc.com/2018/09/07/warren-buffett-taught-bill-gates-about-time-management-by-sharing-his-blank-calendar.html)
 
+#### Time can't buy time
+
+Let's say you see some task that will "save" you more time than it will cost you. What prevents you
+from taking the task on? It's effectively a "guaranteed" win, if you have an infinite time horizon.
+It's easy to pursure these tasks if you round "the rest of your life" out to infinite.
+
+This approach does not consider the endgame (see [Chess endgame](
+https://en.wikipedia.org/wiki/Chess_endgame)). To some people, this may mean trying to run out of
+money before they die (unless you care about the lives of e.g. your children or friends). Learning
+investments (in your own biologial neural network) will not survive your death. Ideally, you teach
+everything you know to others before you die (or document in a place you know will be read).
+
 #### Practical standpoint
 
 [oafw]: https://en.wikipedia.org/wiki/OpenAI_Five

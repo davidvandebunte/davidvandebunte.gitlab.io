@@ -51,6 +51,7 @@ parts:
       - file: notes/share-to-wikimedia.md
   - caption: Learn
     chapters:
+      - file: notes/define-generative-model.md
       - file: notes/define-learn.md
       - file: notes/define-values.md
       - file: notes/learn-r.md

@@ -15,6 +15,61 @@ kernelspec:
 
 # Estimate subplan weight
 
+Why do we plan? Trying to assign a numerical value estimate from first principles is mostly a waste
+of time, because what you'd need to measure is by definition everything you've decided not to
+measure (assuming you're only considering the value of planning, not doing it). That is, you can't
+inspect the evolution of the world's values and costs (tools) beyond your own notes and thoughts
+(that would be planning). You also can't expand on and think through your own notes on the topic
+(that would be planning). It's possible to provide a numerical estimate of value only from reference
+class forecasting, that is, experience in a particular domain.
+
+Said another way, you have two options for estimating the value of planning. First, schedule a small
+planning session (i.e. a planning subplan) and see how much value you get out of it. That is, did
+you change what you are most likely to work on next? Are you likely to be able to reuse the plans
+you did create? Did the rescheduling improvements on the items you will do make up for the cost of
+planning? Second, you can try to remember how continued planning in a particular area (a "domain")
+paid off in the past (i.e. without collecting new data).
+
+The frequency of how often you come back to planning should make you think of the step size in
+machine learning; a step is analogous to a plan and stepping is the experiment. You can e.g.
+accumulate steps and add them up before taking them (build up a plan). It's also a terribly hard
+hyperparameter to tune, except through experience on the model you are trying to train. To pick a
+step size you often have to simply guess and experimentally check if the loss goes down.
+
+Said another way, the value in imagining more possible worlds depends on your domain. How
+experienced are you in it (how much data do you have)? For example, in war the situation is unstable
+and rapidly changing; see the quotations in [Plan](
+https://en.wikipedia.org/wiki/Plan#Quotations). See also:
+- [Cynefin framework](https://en.wikipedia.org/wiki/Cynefin_framework#cite_note-8)
+- [Volatility (finance)](https://en.wikipedia.org/wiki/Volatility_(finance))
+
+If your values are not stable (what your customers are asking for) or your costs are not stable
+(what abstractions or resources you need to solve your problems) then you shouldn't plan as far
+ahead. You can't stop time, and the rest of the world is moving forward. In the terms of a version
+control system, you need to regularly "merge" the thoughts of outsiders (who are making world state
+commits independent of you). These can be both changes in the market (what the world values) and
+changes in tools (what you need to solve a problem).
+
+The noun "plan" is defined in the "Test" section below. We use the verb "plan" to mean any of the
+steps listed in the "Cost" section.
+
+Usually, hitting some subgoal should be a trigger to go back to planning (many people have a habit
+to do so). Usually, the associated decrease in your uncertainties may lead to a change in your
+plans, and even if it doesn't you likely to need to plan out your next steps in more detail. Still,
+this isn't a hard rule. In theory you should compare the estimated weight of a planning subplan
+(based on this document) to the estimated weight of your currently selected subplan.
+
+Humans are good at imagining the future and seem to do so to a fault; we crave stable learning
+environments/domains (with stable values and costs). See also:
+- [Mental time travel](https://en.wikipedia.org/wiki/Mental_time_travel)
+- [Foresight (psychology)](https://en.wikipedia.org/wiki/Foresight_(psychology))
+- [Time perception](https://en.wikipedia.org/wiki/Time_perception)
+- [Free energy principle](https://en.wikipedia.org/wiki/Free_energy_principle)
+- [Prospection](https://en.wikipedia.org/wiki/Prospection)
+- [Planning fallacy](https://en.wikipedia.org/wiki/Planning_fallacy)
+
+# Test
+
 Estimate the weight (give a score to) a subplan, that is, a piece of plan that achieves some
 subgoal. Prefer the term "subgoal" to "intermediate" goal; see the language recommendations in
 [Goal](https://en.wikipedia.org/wiki/Goal). A [Plan](https://en.wikipedia.org/wiki/Plan) is
@@ -143,53 +198,7 @@ under "Applications" in causal language. In causal networks we tend to drop a sp
 from the nodes because we expect it to be reusable in the future. Our plans encode our causal
 theories about the world; what we expect will work to change state in it.
 
-# Value
-
-Trying to define a numerical value estimate from first principles is mostly a waste of time, because
-what you'd need to measure is by definition everything you've decided not to measure (because you're
-only considering the value of planning, not doing it). That is, you can't inspect the evolution
-of the world's values and costs (tools) beyond your own notes and thoughts (that would be planning).
-You also can't expand on and think through your own notes on the topic (that would be planning).
-It's possible to provide a numerical estimate of value only from experience in a particular domain,
-that is, purely through reference class forecasting.
-
-The frequency of how often you come back to planning should make you think of the step size in
-machine learning; a step is analogous to a plan and stepping is the experiment. You can e.g.
-accumulate steps and add them up before taking them. It's also a terribly hard hyperparameter to
-tune, except through experience on the model you are trying to train.
-
-Said another way, the value in imagining more possible worlds depends on your domain. How
-experienced are you in it (how much data do you have)? For example, in war the situation is unstable
-and rapidly changing; see the quotations in [Plan](
-https://en.wikipedia.org/wiki/Plan#Quotations). See also:
-- [Cynefin framework](https://en.wikipedia.org/wiki/Cynefin_framework#cite_note-8)
-- [Volatility (finance)](https://en.wikipedia.org/wiki/Volatility_(finance))
-
-If your values are not stable (what your customers are asking for) or your costs are not stable
-(what abstractions or resources you need to solve your problems) then you shouldn't plan as far
-ahead. You can't stop time, and the rest of the world is moving forward. In terms of a git graph,
-you need to regularly "merge" the thoughts of outsiders (who are making world state commits
-independent of you). These can be both changes in the market (what the world values) and changes in
-tools (what you need to solve a problem).
-
-Humans are good at imagining the future and seem to do so to a fault; we crave stable learning
-environments/domains (with stable values and costs). See also:
-- [Mental time travel](https://en.wikipedia.org/wiki/Mental_time_travel)
-- [Foresight (psychology)](https://en.wikipedia.org/wiki/Foresight_(psychology))
-- [Time perception](https://en.wikipedia.org/wiki/Time_perception)
-- [Free energy principle](https://en.wikipedia.org/wiki/Free_energy_principle)
-- [Prospection](https://en.wikipedia.org/wiki/Prospection)
-- [Planning fallacy](https://en.wikipedia.org/wiki/Planning_fallacy)
-
-We use the verb "plan" (the noun was defined above) to mean any of the steps listed in the "Cost"
-section below.
-
-Usually, hitting some subgoal should be a trigger to go back to planning (many people have a habit
-to do so). Still, this isn't a hard rule. In theory you should compare the estimated weight of a
-planning subplan (based on this document) to the estimated weight of your currently selected
-subplan.
-
-# Cost
+# Estimated cost
 
 If you only considered the "value" in planning then the frequency at which you planned could be
 nearly continuous. That is, you could spend one hour every week, or four hours every month, for a

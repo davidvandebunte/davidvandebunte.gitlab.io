@@ -143,6 +143,19 @@ Said in a more pessimistic way, publishing can be a way to push your opinions or
 in the same way spam email or advertising does. Are all the questions at the end of a [Textbook][tb]
 worth answering? Is the whole book worth reading?
 
+If a term is popular, then you can essentially define it by how it's used. What shows up when you
+search DuckDuckGo? Its algorithm for what a word "means" is likely based on (among other things)
+some predefined authority for websites and a regularly updated count of links to them (backlinks).
+Similarly, traditional academic references (with only e.g. an author and date) are a popularity
+contest as well, though the date of publication is likely given more weight. See for example
+[](./define-generative-model.md).
+
+It's likely this is what drives the unique names used for so many deep learning models. It's easier
+to get a name popular if you use something more unique, it's likely to be more memorable, and it's
+less likely to be reused in the namespace. If Shannon would have used the generic term "uncertainty"
+instead of "entropy" for [Entropy (information theory)](
+https://en.wikipedia.org/wiki/Entropy_(information_theory)) the idea may not have taken off.
+
 ### Web Linking
 
 Do you want to link to your notes from e.g. Google Calendar reminders? If you publish them you can
