@@ -85,9 +85,8 @@ need to consider it in the context of a larger plan, all other plans that pass t
 [rl]: https://en.wikipedia.org/wiki/Reinforcement_learning
 
 An "action" is the smallest (atomic, indivisible) possible subplan; see [Reinforcement
-learning][rl]. These are more relevant when computers are planning. For a high-level overview
-of computer planning, see [Automated planning and scheduling](
-https://en.wikipedia.org/wiki/Automated_planning_and_scheduling).
+learning][rl]. For a high-level overview of computer planning, see [Automated planning and
+scheduling]( https://en.wikipedia.org/wiki/Automated_planning_and_scheduling).
 
 A plan is a set of subplans (paths) that we expect will bring us to any state where some particular
 variable (in the state space) has a particular value (to any state in the set of goal states). See
@@ -98,8 +97,10 @@ rewards that you can achieve from the new state it brings you to. That is, you m
 $R_a$ (rewards) associated with the orange squiggly lines in the drawing in [Markov decision
 process](https://en.wikipedia.org/wiki/Markov_decision_process):
 
-![MDP](
-https://upload.wikimedia.org/wikipedia/commons/a/ad/Markov_Decision_Process.svg)
+![MDP](https://upload.wikimedia.org/wikipedia/commons/a/ad/Markov_Decision_Process.svg)
+
+See also:
+- [Goal setting](https://en.wikipedia.org/wiki/Goal_setting)
 
 ## Graph example
 
@@ -122,7 +123,7 @@ to date automatically (it is only updated as often as you come back to planning)
 detailed definition of GitOps, see [GitOps | GitOps is Continuous Deployment for cloud native
 applications](https://www.gitops.tech/)).
 
-```bash
+```
 * h: Pay bills: B 2017-07-07 4PM $120
 * g: Mow lawn: L 2017-07-07 3PM $100
 * f: Buy a lawn mower: 2017-07-07 1PM $80
@@ -134,13 +135,13 @@ applications](https://www.gitops.tech/)).
 * a: Initial commit: 2017-07-07 12PM $80
 ```
 
-Notice we assign scores (in \$) to every world state. Putting \$ values on spending time with your
-kids and a mowed lawn clearly allows for every kind of [Intangible asset](
+We assign scores (in \$) to every world state. Putting \$ values on spending time with your kids and
+a mowed lawn clearly allows for every kind of [Intangible asset](
 https://en.wikipedia.org/wiki/Intangible_asset). These won't show up in your bank account, but they
-can still make you the "richest man in town" if they're what you want to measure (see [It's a
+can still make you the "richest man in town" if they're what you want to measure (quote from [It's a
 Wonderful Life](https://en.wikipedia.org/wiki/It%27s_a_Wonderful_Life)).
 
-Notice world states are marked with what goals they achieve (e.g. B, K, L). The set of goal states
+World states are marked with what goals they achieve (e.g. B, K, L). The set of goal states
 associated with L is {e, g} in this example. L can be specified in greater detail elsewhere, such as
 grass in some acceptable height range. Often (not always) a reasonable sanity check is that the same
 goal adds the same value (in \$) at every point in the graph.
@@ -165,8 +166,8 @@ rejected plan into the future.
 
 ## VNTE and INVEST
 
-You may notice this article uses VNTE as a synonym for "plan" based on the same three letters in
-[INVEST (mnemonic)](https://en.wikipedia.org/wiki/INVEST_(mnemonic)). The letters SI are addressed
+This article uses VNTE as a synonym for "plan" based on the same three letters in [INVEST
+(mnemonic)](https://en.wikipedia.org/wiki/INVEST_(mnemonic)). The letters SI are addressed
 indirectly. This acronym is useful because it's more specific than the word "plan" (an overloaded
 word) and it summarizes what needs to be considered in creating a goal/plan in the order it needs to
 happen (Value first, Negotiability and Testability second, and Estimation last).
@@ -198,53 +199,121 @@ under "Applications" in causal language. In causal networks we tend to drop a sp
 from the nodes because we expect it to be reusable in the future. Our plans encode our causal
 theories about the world; what we expect will work to change state in it.
 
+## Necessity
+
+In the language of [Types of Plans in Business: Breadth, Time-frame, Specificity & Frequency](
+https://edukedar.com/types-of-plans/) and [Plan](https://en.wikipedia.org/wiki/Plan), we must always
+keep an eye on the "breadth" of our plans. Generally speaking, this is the amount of state we plan
+to manage or create as part of the plan. It's not wise for an individual to execute a plan of high
+breadth directly for a variety of reasons (individual memory limitations, risk of too much theory
+without experimentation, ignoring value in executing faster with a team).
+
 # Estimated cost
-
-If you only considered the "value" in planning then the frequency at which you planned could be
-nearly continuous. That is, you could spend one hour every week, or four hours every month, for a
-total cost of about four hours every month either way. However, planning is a skill that takes you
-out of focused work on your current subgoal, and requires focused work (to some extent) in itself.
-If you are only refining the plan to achieve your current subgoal, then it doesn't take you out of
-focused work. However, planning should be about looking for alternatives to your current subgoal
-(switching focus) and looking beyond your current subgoal (looking farther into the future).
-
-All plans *tend* to reduce uncertainty, at the cost of more planning time (imagining based on what's
-in your head, rather than testing based on what's outside it). An alternative way to reduce
-uncertainty, as mentioned, is to execute only the first step in an existing multi-part plan
-(preferring experimentation to theory).
-
-In practice we need to plan for a certain minimum number of hours, which indirectly determines the
-minimum possible planning frequency we achieve (more frequent is better, and possible with an
-established planning process). This minimum affectively determines the minimum size that your
-subplans can be (the "action" size). In periods where you come back to planning every time you hit a
-subgoal, and your time estimates are accurate, you may notice all subgoals end up being about the
-same size. If so, you can avoid a requirement to regularly come back to planning (timeboxes).
 
 Much of this process has not been automated, but see:
 - [Brainstorming](https://en.wikipedia.org/wiki/Brainstorming)
 - [Computer supported brainstorming](https://en.wikipedia.org/wiki/Computer_supported_brainstorming)
 
-## Update existing plans
+## Limit planning time
 
-You can often restore old plans where you've identified value. The more you plan, the larger this
-body of "old" plans becomes (increasing the cost of planning). Only include incremental changes in
-time on this graph; absolute dates would quickly go stale.
+If you only considered the "value" in planning then the frequency at which you planned could be
+nearly continuous. That is, you could spend one hour every week, or four hours every month, for a
+total cost of about four hours every month either way. However, planning is a skill that takes you
+out of focused work on your current subgoal, and requires focused work (to some extent) in itself.
 
-Many of your TODo should be numbered so you can build them into a "future" git graph. It would be
-more convenient to letter them to help you semantically distinguish them (like variable names), but
-in practice it's much harder to avoid namespace conflicts with this system. Of course, TODo that are
-connected to any other TODo don't need to be in your plan at all (they are clearly a completely
-independent plan).
+All plans *tend* to reduce uncertainty about your action choice, at the cost of more planning time
+(imagining based on what's in your head, rather than testing based on what's outside it). An
+alternative way to reduce uncertainty, as mentioned, is to execute only the first step in an
+existing multi-part plan (preferring experimentation to theory).
+
+In practice we need to plan for a certain minimum number of hours, which indirectly determines the
+minimum possible planning frequency we achieve (more frequent is better, and possible with an
+established planning process). This minimum effectively determines the minimum size that your
+subplans can be (the "action" size). In periods where you come back to planning every time you hit a
+subgoal, and your time estimates are accurate, you may notice all subgoals end up being about the
+same size. If so, you can avoid a requirement to regularly come back to planning (timeboxes).
+
+## Reuse unexecuted plans
+
+You can often restore (rebase) old plans where you've identified value. The more you plan, the
+larger this body of "old" plans becomes (becoming both a burden and a helpful resource). Only
+include incremental changes in time on this graph; absolute dates would quickly go stale.
 
 On a team you could have multiple people explore different ideas in parallel; everyone on a team
 should be coming up with and presenting ideas regularly.
 
-## Identify value
+## Reuse experiences
 
-Search for V. Consider VNTE in widely different parts of the network to start (fewer variations on
-the same VNTE). Once you've identified the parts of the network with high weight tasks, get into
-more focused planning work in that area of the network (effectively prune actions to modify the rest
-of the network).
+Let's say you want to reuse your past experience to get to a friend's house:
+
+```
+* Drive to friend's: ???
+* At home: Fri 11:00
+...
+* Now: Wed 14:00
+...
+* Drive to friend's: Mon 15:30
+* At home: Mon 15:00
+```
+
+You have one experience that should help you achieve the same goal you achieved in the past again.
+As much as your car is a "tool" (a resource, dependency) that will help you achieve the goal, you
+have a process in your head (or notes) that is a "tool" you can use to plan your trip to your
+friend's house. The key here is to use pattern recognition to identify whether many of many possible
+actions you've collected in your head "fit" the new experience.
+
+For example, if you kept track of (can remember i.e. have priors, or wrote down) how long it took to
+do something in the past, you should be able to estimate how long it will take to do in the future.
+If it took 30m to get to your friend's house last time, you can guess it will be about 30m this
+time. If you've been to your friend's house multiple times and you notice it typically takes 30-40m
+to get there, you may be able to more accurately predict it will take 35m to get there.
+
+You have likely generalized the many experiences you've had of driving into a reusable action for
+getting from A to B. Then even if you've never been to your friend's house but know the distance to
+get there, you can "rebase" that action (commit) or subhistory (branch) to your future and use your
+process associated with the plan to make a prediction about e.g. how long it will take.
+
+Said another way, you have many mental (or written) functions that you pattern match against your
+current subplan. You may see multiple fit the goal, in which case you have to choose the best fit
+(e.g. an action to drive from A to B and action to drive to your friend's).
+
+These functions should take as an input a goal, and a function to estimate the increase in value and
+the cost. The first function ("Estimate value") will estimate the increase in value (due to state
+changes) associated with taking the action, given a stable loss function and certain specifics of
+the state the action acts on. The second function ("Estimate cost") will estimate the time cost of
+taking the action given some of the same specifics (e.g. it may be slower on larger inputs). Both
+are compressed forms of all your past experiences taking the action, in order to run faster than
+considering all your experiences (though you may want to save the data).
+
+The "Estimate cost" function is also a good starting point for solving the new problem, if not the
+solution in itself. If you have to fix conflicts in this function when you rebase it to your new
+inputs, you're learning something from a new training example. You can see the "Estimate cost"
+function as producing a sales quote and the "Estimate value" function an advertisement (or sales
+pitch).
+
+In practice, you may need to use your "common sense" to tune the estimates produced by these
+functions as you rebase. Still, your "common sense" can only be based on your past experiences. You
+may simply be adding more recent (or more) of your own experiences to the estimates produced by the
+functions.
+
+A major advantage of having such a library of reusable actions is that, if the actions are small,
+you should be able to combine these old but reusable actions into new subplans. For example, if you
+had broken down the steps to get to your friend's house and your mom's house you may have discovered
+some are repeated (e.g. closing the garage door) and some are easily generalizable (e.g. entering an
+address in an app to get directions).
+
+[fgm]: https://bazel.build/basics/dependencies#using_fine-grained_modules_and_the_111_rule
+
+See [Grok Your Bazel Build: The Action Graph](https://jin.crypt.sg/articles/bazel-action-graph.html)
+for an introduction to actions in Bazel. The action graph is Bazel's "plan" for executing the build,
+constructed from the highly reusable plans encoded in `BUILD` files. A preference for small actions
+is explicitly discussed in [Dependency Management | Bazel][fgm]. In this context, smaller actions
+also make re-executing actions faster (through parallelization and caching).
+
+Do not assume any dependency is necessary or good or bad. See [](./flatten-plan.md) for tips on
+stripping dependencies; see [](./identify-resource.md) for tips on finding them.
+
+## Find value
 
 We write "value" on every VNTE first (hence the order of the acronym). If you don't understand the
 value in a plan, ask the requestor for it. If the value is low, then you don't ever have to go as
@@ -257,14 +326,51 @@ where you understood the costs everywhere, but no indicator of value, no develop
 If you didn't want to e.g. increase or decrease output, the conversation about the plan would never
 have happened.
 
-## Set goals
+So where do you start? As previously discussed, most actions have inputs and outputs. For example,
+to [](./share-comment.md) you need to have a comment ready in your head and a web app to post it on.
+To [](./refine-plan.md) you need a TODO-x to act on. Until we generate at least one idea about how
+to make money, we can't evaluate it (assuming you have no reusable plans or experience).
 
-Consider either [](./set-wide-goal.md) or [](./set-deep-goal.md).
+Said another way, most actions require an imagined world where the input exists as state somewhere
+in it (before you apply the function to it). You might say these actions depend on particular state
+in the world, in the same way that a target in a build system depends on it's dependencies.
 
-## Imagine variations
+Are there any actions that require no input (depend on nothing) or produce no output (don't define a
+target)? If an action didn't produce any output or modify some piece of world state, it couldn't add
+value (though many actions only depend on space to "write" to). Similarly, no actions depend on
+nothing. Everything we do depends on our own existence; see comments in
+[](./update-dependencies.md).
 
-Consider either [](./flatten-plan.md) or [](./identify-resource.md).
+Do any actions take a large part of world state as an input rather than a particular piece of it?
+We generally classify these as an "explore" action in the context of the explore-exploit problem
+(see [Multi-armed bandit](https://en.wikipedia.org/wiki/Multi-armed_bandit)).
 
-## Refine plans
+We could also call these "implicit" actions because they are the first part of the planning subplan
+(and therefore are always an action option), even if you have no reusable life experience or
+reusable plans to go on. In terms of a git graph, they are always there for you to pick:
 
-Consider [](./refine-plan.md).
+```
+...
+| * Implicit action B
+|/
+| * Implicit action A
+|/
+* Now
+```
+
+Search for "V" with these implicit actions. For examples of these kinds of actions, see
+[](./explore-domain.md).
+
+## Contrast subplans
+
+When you're down to e.g. 3-4 subplans you often need to "contrast" (i.e. emphasize the differences)
+between them to help make a final decision among them. See [](./refine-plan.md) to improve all 3-4
+ideas to add more details until you get to a point where there's a clear weight difference among
+them.
+
+Refining the plan on the idea you will end up working on is not a waste of time because you will
+need to do it anyways to come up with a first step. It may be a waste to refine the other 2-3 ideas,
+unless you end up working on them later (ideally you have stable values, so that you do). Avoid a
+bias towards refining the plan on only your currently favored option unless you are willing to make
+changes that will hurt its weight (not just decrease the time cost). That is, emphasize the
+differences in value rather than cost.

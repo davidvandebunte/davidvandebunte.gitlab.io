@@ -6,7 +6,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.11.2
+    jupytext_version: 1.11.5
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
@@ -15,7 +15,50 @@ kernelspec:
 
 # Update dependencies
 
-## Test
+Why update software dependencies? Don't forget that even docker has a dependency on the operating
+system, and the operating system depends on the existence of the computer and its hardware, and the
+hardware exists because it depends on people who manufactured it and put it there. A dependency
+chain has no base case, except perhaps the big bang. The deeper you go the more stable dependencies
+tend to get (the length of time they have been pinned) though this is not a guaranteed or reliable
+rule.
+
+These other dependencies may even update before you update your software. Your hardware is probably
+pinned for 5-8 years, though it depends (unless you e.g. install more RAM, which won't break
+anything). Your operating system is probably only pinned for a few weeks at a time; you need to be
+able to regularly run `sudo apt upgrade` for security reasons and to keep the whole system up to
+date in general. You don't pin system packages because you often need your system for many other
+tasks besides some single application. Consider *all* dependencies, including humans, businesses,
+hardware, operating systems, the docker version, etc.
+
+[py131]: https://pytorch.org/docs/1.3.1/
+
+The major advantage of libraries is that you do not need to write them yourself, effectively
+reinventing the wheel. Reading library code is often more enjoyable than reading your own or your
+team's code, because you know it is more generally useful outside the context of your current job or
+project.
+
+For all the same reasons, you probably want to upgrade regularly so you can work with the same open
+source (more general) software out there on the internet. Going through an upgrade of your
+dependencies often gives you an opportunity to learn about what is happening in the outside world
+rather than chasing after your project's idiosyncratic needs.
+
+More than ever, the software you need to perform a task is being created quickly in an open domain
+on the internet. This is driven not only by an increasing number of software developers, but by the
+simple fact that there has been more time for consumers to replace proprietry with open source
+dependencies. Software developers should spend more and more time evaluating libraries and
+incorporating them than writing their own version, assuming this trend continues.
+
+Sitting on the old side of a library's stable version means you'll always be looking up the old
+documentation online, because you know the "stable" version may be different than what you're using.
+For example, here is a link to [PyTorch 1.3.1][py131]. It's often through accidentally reading the
+stable documentation on a project that we discover there are features we want from it.
+
+To some extent, this a question of whether to understand concepts first in your own words and then
+in the words of others, or to understand the words of others and then incorporate them into your
+own. The latter approach implies staying near the bleeding edge; the former implies staying in
+stable territory longer (and avoiding excessive dependencies).
+
+# Test
 
 A library or package is upgraded to a newer version.
 
@@ -24,7 +67,7 @@ in the end it is often necessary to update a set of libraries at a time to find 
 combination of dependencies. Alternatively, you can adopt a policy of regular updates that ensures
 you have the latest version of a library before you need it.
 
-### Stability
+## Stability
 
 [blbc]: https://softwareengineering.stackexchange.com/questions/12401/be-liberal-in-what-you-accept-or-not
 [rp]: https://en.wikipedia.org/wiki/Robustness_principle
@@ -50,37 +93,7 @@ versions of a dependency. See also:
 - [Robustness principle][rp]
 - [Be liberal in what you accept... or not? - SE][blbc]
 
-## Value
-
-[py131]: https://pytorch.org/docs/1.3.1/
-
-The major advantage of libraries is that you do not need to write them yourself, effectively
-reinventing the wheel. Reading library code is often more enjoyable than reading your own or your
-team's code, because you know it is more generally useful outside the context of your current job or
-project.
-
-For all the same reasons, you probably want to upgrade regularly so you can work with the same open
-source, more general software out there on the internet. Going through an upgrade of your
-dependencies often gives you an opportunity to learn about what is happening in the outside world
-rather than chasing after your project's idiosyncratic needs.
-
-More than ever in the past, the software you need to perform some task is being created quickly and
-in an open domain on the internet. This is driven not only by an increasing number of software
-developers, but by the simple fact that there has been more time for consumers to replace proprietry
-with open source dependencies. Software developers should spend more and more time evaluating
-libraries and incorporating them than writing their own version, assuming this trend continues.
-
-Sitting on the old side of a library's stable version means you'll always be looking up the old
-documentation online, because you know the "stable" version may be different than what you're using.
-For example, here is a link to [PyTorch 1.3.1][py131]. It's often through accidentally reading the
-stable documentation on a project that we discover there are features we want from it.
-
-To some extent, this a question of whether to understand concepts first in your own words and then
-in the words of others, or to understand the words of others and then incorporate them into your
-own. The latter approach implies staying near the bleeding edge; the former implies staying in
-stable territory longer (and avoiding excessive dependencies).
-
-## Cost
+# Estimate cost
 
 [wssp]: https://pythonspeed.com/articles/switch-python-3.10/
 [sm]: https://en.wikipedia.org/wiki/Software_maintenance
@@ -164,12 +177,12 @@ Notice the update is applied to the "bleeding edge" version of Library A. If you
 Library A, your ability to upgrade to the latest version of Library B would depend on how quickly
 Library A was updating.
 
-### Upgrade Strategies
+## Upgrade Strategies
 
 There are (generally speaking) two update strategies: when the need arises, or on a regular
 schedule.
 
-#### Intermittent Updates
+### Intermittent Updates
 
 Let's say the developers of Library A want to update their dependency on Library B, but it has been
 so long that the API has changed in every source file where they used the previous version of the
@@ -217,7 +230,7 @@ described above, Canonical developers are constantly working on keeping the dist
 between releases but only commit to keeping checkpoints that have been given more time (like 20.04)
 stable.
 
-#### Regular Updates
+### Regular Updates
 
 Another strategy is to simply stay on the latest or near the latest version of a library, even if
 you don't immediately need the features provided by it. This creates a stable tunnel rather than
@@ -241,7 +254,7 @@ for the library you are upgrading, you can file an issue and leave time for the 
 dependency to fix it before you upgrade. That is, check if the update is easy, and if it isn't say
 something and go back to what you were doing.
 
-### Dependency Resolvers
+## Dependency Resolvers
 
 [dh]: https://en.wikipedia.org/wiki/Dependency_hell
 [drdc]: https://unix.stackexchange.com/questions/141247/what-is-the-difference-between-a-recursive-dependency-check-and-a-reverse-depend
@@ -256,7 +269,7 @@ checks. See also:
 - [pipdeptree](https://github.com/naiquevin/pipdeptree)
 - [apt-rdepends](https://askubuntu.com/a/447972/612216)
 
-### Dependency Counts
+## Dependency Counts
 
 [cod]: https://en.wikipedia.org/wiki/Curse_of_dimensionality
 [ltlr]: https://pip.pypa.io/en/latest/topics/dependency-resolution/#loosen-your-top-level-requirements
@@ -275,9 +288,9 @@ If you can't remove dependencies, an understanding of them can help you pin them
 gives your dependency resolver more "space" to find a working sample. See [Loosen your top-level
 requirements][ltlr].
 
-### Pin Dependencies
+## Pin Dependencies
 
-#### Pin evenly
+### Pin evenly
 
 Try to pin all packages, or none of them. Version numbers of course always increase together, with
 time. If you pin only one package and not another, one package may continue to get upgraded until
@@ -285,7 +298,7 @@ it's years apart from another (leading to failing tests). Even an existing stabl
 two packages won't help with packages that have never been automatically or manually tested
 together.
 
-#### Pin manually
+### Pin manually
 
 If you pin many packages, you have to manually update all your pins. Tools like `pipenv` and
 `conda-lock` can help, but they often simply upgrade you to the latest version of every dependency.
@@ -301,7 +314,7 @@ take on this cost through repeated manual work or through setting up an automati
 likely best to do the manual work a few times until it becomes clear you'll be doing the work
 indefinitely.
 
-##### Copy-paste pinning
+#### Copy-paste pinning
 
 To take a dependency on a library you can either install a package (with a pin) or copy and paste
 only the source code you need from the library. If you only need one or a few functions from a
@@ -323,7 +336,7 @@ never make it upstream.
 Copy-paste pinning can be partially automated with a script that updates a git branch then copies
 across git branches.
 
-### Function-Level Dependencies
+## Function-Level Dependencies
 
 It's common to take a dependency on a library for one or two functions. If you don't copy and paste
 in only the functions you need, stick to these functions you really care about rather than trying
@@ -337,7 +350,7 @@ from the library that only combine other features from the library. If you do ha
 depends on an older or newer version of the library than you've tested with, it will be more likely
 that your code will work with their version.
 
-### Security Upgrades
+## Security Upgrades
 
 [semver]: https://semver.org/
 
@@ -345,7 +358,7 @@ You should upgrade dependencies that relate to security immediately. If a partic
 using [Semantic Versioning][semver], you often want to leave the last digit unpinned. One exception
 might be production environments that aren't exposed to users outside your company or team.
 
-### Numerical Estimation
+## Numerical Estimation
 
 To produce a numerical estimate of the actual time it will take to perform an upgrade, use reference
 class forecasting. That is, check how long it took to perform the last upgrade or the last few

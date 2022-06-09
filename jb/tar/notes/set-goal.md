@@ -1,23 +1,10 @@
----
-jupytext:
-  cell_metadata_filter: -all
-  formats: md:myst
-  text_representation:
-    extension: .md
-    format_name: myst
-    format_version: 0.13
-    jupytext_version: 1.11.2
-kernelspec:
-  display_name: Python 3 (ipykernel)
-  language: python
-  name: python3
----
-
 # Set goal
 
-Add a single goal to a "future" git graph, either wide or deep.
+Add a single goal/idea to a "future" git graph, either wide or deep. Explicit backlinks:
+- [](./set-wide-goal.md)
+- [](./set-deep-goal.md)
 
-# Cost
+# Estimate cost
 
 ## Negotiate the goal(s)
 
@@ -37,9 +24,6 @@ context of the scientific method, and T in the context of INVEST. From this init
 imagine a second VT (a variation on the first), or estimate an E to go with the first VT (to test
 the theory). Although SNI could come before E, even approximate numerical weight estimation (and
 therefore state space pruning) isn't possible without E.
-
-In the language of [Types of Plans in Business: Breadth, Time-frame, Specificity & Frequency](
-https://edukedar.com/types-of-plans/), understand the specificity of the plan.
 
 Goals should stay negotiable as long as possible. Keeping goals negotiable is the equivalent of
 putting ranges on targets, and using a logical disjunction (OR) as much as possible. It's more work
@@ -69,7 +53,7 @@ probabilistic function of the exact state achieved, but point estimates are a go
 
 Said another way, it should be possible to produce the plan `a..c` as an alternative to `a..b`:
 
-```bash
+```
 * b: G1, S2: 3PM
 | * c: G1, S1: 2PM
 |/

@@ -18,7 +18,7 @@ kernelspec:
 Given a single goal and a less-than-fully-specified plan, expand it into more detailed subplans.
 That is, should you take the time to produce this graph:
 
-```bash
+```
 * b: G1
 * ab: G2
 * a
@@ -26,19 +26,18 @@ That is, should you take the time to produce this graph:
 
 From this graph?
 
-```bash
+```
 * b: G1
 * a
 ```
 
-In the language of [Plan](https://en.wikipedia.org/wiki/Plan), increase the "breadth" of your plan.
-See also [Types of Plans in Business: Breadth, Time-frame, Specificity & Frequency](
-https://edukedar.com/types-of-plans/).
+In the language of [Types of Plans in Business: Breadth, Time-frame, Specificity & Frequency](
+https://edukedar.com/types-of-plans/), increase the specificity of the plan.
 
 # Value
 
-Decrease uncertainty on the weight of the original plan. That is, increase the accuracy of the cost
-estimate on a plan, leading to an update in the weight.
+Decrease uncertainty on the weight of the original plan. That is, increase the accuracy of both the
+value and cost estimates on the plan, leading to an update in the weight.
 
 Get down to a point where you can start working on the goal (a reasonable first step).
 
@@ -63,3 +62,7 @@ ever walk back and forth between two places? Or do you carry what you need with 
 At your computer you can consider all the way down to how you e.g. open and close tabs (browser,
 text editor, tmux), when you use your mouse vs. your keyboard, and how often you need to look at the
 keyboard when you type.
+
+$ See:
+% - edit-plain-text.md
+% - close-window.md

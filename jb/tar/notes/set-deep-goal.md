@@ -1,19 +1,27 @@
-# Set deep goals
+# Set deep goal
 
-In the words of [Plan](https://en.wikipedia.org/wiki/Plan), should you extend the "time frame" of
-your plan? That is, should you take the time to add `c` (and G2) on top of `b` in this graph?
+Part of [](./explore-domain.md). Why look farther into the future?
 
-```bash
-* c: G2
-* b: G1
-* a
-```
+## Future costs affect today
 
-# Value
+Because there is more than one way to solve every problem, you can often find ways to solve two
+problems with one tool (e.g. abstraction). By planning ahead, you can often skip intermediate
+solutions and go straight to what looks like the final solution.
 
-You can push into your dependencies (who you buy from) in one direction, or into your dependents
-(who buys from you). If you push into your dependencies, you'll be able to produce more efficiently
-(lower costs). If you push into your dependents, you'll be able to achieve value more efficiently.
+You may not want to design a perfect solution when a better one is coming. Another person on your
+team or your company or the open source community may be designing a better solution. It's often
+prudent to wait for others to automate and standardize rather than getting into complicated
+businesses while they are still evolving.
+
+### Examples
+
+While it may have added value to write custom code to orchestrate production in 2010, most of your
+code would likely have been eliminated with the advent of containers and Kubernetes.
+
+To dig back into your dependency chain to the hardware could likely only have been done with AWS in
+2015, but by 2020 other tools like Terraform and GKE were providing similar services and stabilizing
+the cloud API. The [MinIO](https://en.wikipedia.org/wiki/MinIO) interface was only created after AWS
+experimented with variations on the s3 API.
 
 ## Future needs affect today
 
@@ -30,21 +38,9 @@ Said another way, if you can predict what will be valuable (have value) in the f
 able to consider it as part of today's plans. Stable values make planning easier because plans can
 be reused, and you're less likely to make errors planning too far ahead.
 
-## Future costs affect today
-
-Because there is more than one way to solve every problem, you can often find ways to solve two
-problems with one tool (e.g. abstraction). By planning ahead, you can often skip intermediate
-solutions and go straight to what looks like the final solution.
-
-You may not want to design a perfect solution when a better one is coming. Another person on your
-team or in your company may be designing a better solution, or the open source community. While it
-may have added value to write custom code to orchestrate production in 2010, most of your code would
-likely have been eliminated with the advent of containers and Kubernetes. To dig back into your
-dependency chain to the hardware could likely only have been done with AWS in 2015, by 2020 other
-tools like Terraform and GKE were providing similar services and stabilizing the cloud API. The
-[MinIO](https://en.wikipedia.org/wiki/MinIO) interface was only created after AWS experimented with
-variations on the s3 API. It's often prudent to wait for others to automate and standardize rather
-than getting into complicated businesses while they are still evolving.
+You can look into your dependencies (who you buy from) in one direction, or into your dependents
+(who buys from you). If you push into your dependencies, you'll be able to produce more efficiently
+(lower costs). If you push into your dependents, you'll be able to achieve value more efficiently.
 
 ## Time to brainstorm
 
@@ -53,7 +49,18 @@ When you eventually actually do work, you will have had many chances to look at 
 in the back of your mind as you work) can help you generate more plans that reach the same state,
 perhaps more cheaply.
 
-# Cost
+# Test
+
+In the words of [Plan](https://en.wikipedia.org/wiki/Plan), extend the "time frame" of your plan.
+That is, take the time to add `c` (and G2) on top of `b` in this graph:
+
+```bash
+* c: G2
+* b: G1
+* a
+```
+
+# Estimate cost
 
 ## Increased uncertainty
 
