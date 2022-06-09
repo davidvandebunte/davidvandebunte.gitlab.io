@@ -13,16 +13,14 @@ kernelspec:
   name: python3
 ---
 
-![bb](https://upload.wikimedia.org/wikipedia/commons/6/6f/CMB_Timeline300_no_WMAP.jpg)
-
 # Update dependencies
 
 Why update software dependencies? Don't forget that even docker has a dependency on the operating
 system, and the operating system depends on the existence of the computer and its hardware, and the
 hardware exists because it depends on people who manufactured it and put it there. A dependency
-chain has no base case, except perhaps the [Big Bang](https://en.wikipedia.org/wiki/Big_Bang). The
-deeper you go the more stable dependencies tend to get (the length of time they have been pinned)
-though this is not a guaranteed or reliable rule.
+chain has no base case, except perhaps the big bang. The deeper you go the more stable dependencies
+tend to get (the length of time they have been pinned) though this is not a guaranteed or reliable
+rule.
 
 These other dependencies may even update before you update your software. Your hardware is probably
 pinned for 5-8 years, though it depends (unless you e.g. install more RAM, which won't break

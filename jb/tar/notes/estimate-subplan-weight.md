@@ -15,9 +15,6 @@ kernelspec:
 
 # Estimate subplan weight
 
-![MDP](
-https://upload.wikimedia.org/wikipedia/commons/a/ad/Markov_Decision_Process.svg)
-
 Why do we plan? Trying to assign a numerical value estimate from first principles is mostly a waste
 of time, because what you'd need to measure is by definition everything you've decided not to
 measure (assuming you're only considering the value of planning, not doing it). That is, you can't
@@ -98,7 +95,9 @@ variable (in the state space) has a particular value (to any state in the set of
 Said another way, to weigh a subplan you need to consider its own weight as well as the expected
 rewards that you can achieve from the new state it brings you to. That is, you must consider the
 $R_a$ (rewards) associated with the orange squiggly lines in the drawing in [Markov decision
-process](https://en.wikipedia.org/wiki/Markov_decision_process).
+process](https://en.wikipedia.org/wiki/Markov_decision_process):
+
+![MDP](https://upload.wikimedia.org/wikipedia/commons/a/ad/Markov_Decision_Process.svg)
 
 See also:
 - [Goal setting](https://en.wikipedia.org/wiki/Goal_setting)

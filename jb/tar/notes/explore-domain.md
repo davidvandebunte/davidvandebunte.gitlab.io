@@ -2,8 +2,6 @@
 
 Part of [](./estimate-subplan-weight.md).
 
-![wa](https://upload.wikimedia.org/wikipedia/commons/4/4e/Georg_August_Wallin_%281811-1852%29%2C_Scandinavian_orientalist_and_explorer.jpg)
-
 # Test
 
 Add a set of goals/ideas to a "future" git graph.
