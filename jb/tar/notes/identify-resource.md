@@ -1,9 +1,9 @@
-# Identify resources
+# Identify resource
 
 Who's help do you need? What resources (e.g. computers) do you need? What resources might make your
 job easier?
 
-## Value
+## Test
 
 Another variation on how to achieve a goal. Said another way, should you take the time to imagine a
 plan `a..c` as an alternative to `a..b`?
@@ -15,7 +15,7 @@ plan `a..c` as an alternative to `a..b`?
 * a: 12PM
 ```
 
-## Cost
+## Estimate cost
 
 To administrate is to impose your values on another, in the same way that to buy from someone is to
 impose your value on them. They trust that your values are "good" when they accept your assets for
