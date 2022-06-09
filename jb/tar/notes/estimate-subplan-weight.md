@@ -122,7 +122,7 @@ to date automatically (it is only updated as often as you come back to planning)
 detailed definition of GitOps, see [GitOps | GitOps is Continuous Deployment for cloud native
 applications](https://www.gitops.tech/)).
 
-```bash
+```
 * h: Pay bills: B 2017-07-07 4PM $120
 * g: Mow lawn: L 2017-07-07 3PM $100
 * f: Buy a lawn mower: 2017-07-07 1PM $80
