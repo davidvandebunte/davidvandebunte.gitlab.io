@@ -15,8 +15,6 @@ kernelspec:
 
 # Organize notes
 
-You've re-read a (pre-determined) section of your notes, modifying it as necessary.
-
 [perw]: https://en.wikipedia.org/wiki/Persistence_%28computer_science%29
 
 Your notes are a more persistent (see [Persistence - Wikipedia][perw]) version of your mental
@@ -30,8 +28,6 @@ All your notes were also not taken at the same time; you likely had different co
 you took all of them (especially if they are in e.g. different files or formats). Therefore there's
 a significant chance that you took notes that "conflict" even in your own mind, when you see them
 next to each other.
-
-# Value
 
 The value in organizing your notes is that you'll be able to "fix" undesirable differences between
 your notes and your BNN.
@@ -78,7 +74,7 @@ notes, you are making it easier to think more deeply the next time you open your
 removing notes you reduce the length of the notes you need to read in every file before you follow a
 link to another file.
 
-### Fewer Unmemorized Networks
+### Fewer unmemorized networks
 
 Your mind has a pointer to your notes. From there, your notes have pointers to other content your
 mind has consumed in the past. Your mind keeps tracks of double and triple pointers to help it get
@@ -120,6 +116,28 @@ common costs and how switching employers may help you achieve your values or low
 you commonly do. If your notes aren't organized, you can't quickly change jobs. This is a major
 risk; your status can change quickly at any job.
 
+Spending more time organizing notes is like using HMC rather than the Metropolis algorithm or Gibbs
+sampling. According to Jayne's principle, spending a little more time thinking about what your next
+step will be can give you dramatically better results.
+
+### Identify 10x credit
+
+Few people consider the double, triple, or 10x credit you can often get in certain areas. For
+example, learning a new math concept or natural language model (abstraction) might be useful in a
+huge number of the future projects you hope to work on in your life. More often we find what feature
+would be most valuable in the component we are looking at in the moment (in the largest context we
+decide to plan within) and pursue that.
+
+It's only after reviewing a huge amount of your notes (which include various e.g. life goals and
+projects) that you'll be able to see if you're getting double or 10x credit from a particular
+abstraction. As you organize your notes more, more of it will become links to external resources as
+you exhaust your own thoughts, or come to questions you know you could answer better with outside
+resources.
+
+In school, professors often trying to encourage a big picture view through projects (e.g. STORBOT).
+This is similar to a PhD, the ultimate school-based project. They want you to see take a bunch of
+coherent notes for the project, even if you don't connect them at a whole life level.
+
 ## More self-discovery
 
 Would you rather discover some concept by building the concept up in your own notes, or by reading
@@ -157,6 +175,10 @@ it to work (because you'll assume what you learned wasn't helpful, and won't kno
 If you build up your thoughts based on other thoughts in your notes, then even if you fail farther
 downstream you'll still have built up some knowledge. In some sense, this is encouraging the "small"
 in INVEST strategy.
+
+An inability to fall asleep from not being able to stop thinking indicates just how important self
+reflection (taking notes) is. If it were optimal for us to lay down and immediately fall asleep,
+many more people would have the ability.
 
 ### Avoid duplicate learning
 
@@ -257,11 +279,16 @@ of e.g. what you were doing and go looking for a snack. We often say that focuse
 but it's nearly impossible to stay focused unless *you* believe what you are doing is important (you
 understand how everything connects).
 
-# Cost
+# Test
+
+You've re-read a (pre-determined) section of your notes, modifying it as necessary.
+
+# Estimate cost
 
 A rough way to estimate how long it will take to organize notes or process documents is how long
 they are; web articles (inaccurately) automatically estimate reading time based on the length of the
-article.
+article. Still, you're always free to skim (see [Speed reading](
+https://en.wikipedia.org/wiki/Speed_reading)).
 
 How much effort it will take to change the process will critically depend on how fast feedback is.
 If feedback is slow, you'll forget what you were working on and e.g. need to schedule calendar
@@ -280,8 +307,6 @@ organizing? If you use the notes rarely (heuristic indicating less valuable), yo
 them now because you'll be starting cold when you get back to them and every time you get back to
 them. If you use them regularly, there's more value to be gained from organizing them. If the notes
 aren't important at all, you shouldn't have organized them.
-
-% TODO 2.1: Reminder: Remove all notes once you are removing more than 80% of what you read.
 
 ## More unnecessary recall
 
@@ -524,3 +549,5 @@ can achieve one hundred percent accuracy. Still, uncertainty can exist in the in
 This article uses the term "organize" rather than "refactor" because the former term is more unique
 to natural language notes. It also prefers "organize" because that's what we'd use colloquially to
 describe what we're doing; you wouldn't tell anyone e.g. you were going to go refactor your notes.
+
+% See backprop-?.md documents for how important it is to organize your mental model in documents.
