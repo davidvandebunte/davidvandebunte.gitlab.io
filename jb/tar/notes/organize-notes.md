@@ -288,7 +288,8 @@ You've re-read a (pre-determined) section of your notes, modifying it as necessa
 A rough way to estimate how long it will take to organize notes or process documents is how long
 they are; web articles (inaccurately) automatically estimate reading time based on the length of the
 article. Still, you're always free to skim (see [Speed reading](
-https://en.wikipedia.org/wiki/Speed_reading)).
+https://en.wikipedia.org/wiki/Speed_reading)); to skim is to "sample" the content for quality or
+novelty.
 
 How much effort it will take to change the process will critically depend on how fast feedback is.
 If feedback is slow, you'll forget what you were working on and e.g. need to schedule calendar
