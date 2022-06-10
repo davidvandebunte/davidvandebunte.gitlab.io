@@ -23,6 +23,15 @@ https://docs.google.com/document/d/1Y0LbIWeP4wnwm09FsC2YejIMFvrG3wfNtiVQVQaG4ew/
 - [HT: Say no - Google Docs](
 https://docs.google.com/document/d/11RWbABvkp0aG9cW-PEEq5i5xUvmnbHnMPRwIW0KbD_U/edit)
 
+This problem is particularly tough because it requires so much common sense. The article on
+negligence goes into great detail on cause; you have to be able to think about all the effects that
+will arise out of an action, not just your intend to causes. Said another way, you have to think
+about side effects. We use functional programming to avoid side effects. See:
+- [Side effect (disambiguation)](https://en.wikipedia.org/wiki/Side_effect_(disambiguation))
+
+In fact, risk mitigation is a major issue involved in releasing major models like GPT-3; it's hard
+to anticipate what might happen with its release.
+
 ## TODO-c: Why convert completed TODo to retrospective TODo (in Training Data)?
 
 Before removing any TODo, review what the actual weight should have been. Only you understand your
