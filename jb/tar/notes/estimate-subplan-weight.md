@@ -275,7 +275,9 @@ process associated with the plan to make a prediction about e.g. how long it wil
 
 Said another way, you have many mental (or written) functions that you pattern match against your
 current subplan. You may see multiple fit the goal, in which case you have to choose the best fit
-(e.g. an action to drive from A to B and action to drive to your friend's).
+(e.g. an action to drive from A to B and action to drive to your friend's). This pattern matching
+can easily fail; all your mental/written functions are tools and if you've only been thinking about
+one recently (i.e. a hammer) then everything will look like a nail.
 
 These functions should take as an input a goal, and a function to estimate the increase in value and
 the cost. The first function ("Estimate value") will estimate the increase in value (due to state
@@ -360,6 +362,29 @@ reusable plans to go on. In terms of a git graph, they are always there for you 
 
 Search for "V" with these implicit actions. For examples of these kinds of actions, see
 [](./explore-domain.md).
+
+## No to negligence
+
+We have a million possible actions we could be taking in every moment. Every action you say yes to
+is a no to a million others. The power of the answer "no" to people making requests of you is that
+you're avoiding tunnel vision on the one action that is focal to both of you (and valuing more than
+only your relationship with the person).
+
+[nglc]: https://en.wikipedia.org/wiki/Neglect
+
+When you say no to these million different "wide" subplans, you are effectively picking the "do
+nothing" plan on the state they target instead. That is, time leads to effects on state. We often
+act only to avoid the consequences of the "do nothing" option (e.g. if you don't take care of the
+lawn, your child, etc.). When does value ever go down? The "no-op" action can be expensive and it's
+important to include it as another implicit action. See also [Neglect][nglc] and [Negligence](
+https://en.wikipedia.org/wiki/Negligence).
+
+It's hard to accept that value can go down. It's also hard to model a world where so many actions
+are happening in parallel, rather than you as the agent selecting a single action (of any duration)
+from many. Two options for dealing with the problem are to use a service to manage the state, or to
+schedule reminders to add actions to update the state.
+
+% TODO-ngl: Is there a better way to avoid neglect than reminders?
 
 ## Contrast subplans
 
