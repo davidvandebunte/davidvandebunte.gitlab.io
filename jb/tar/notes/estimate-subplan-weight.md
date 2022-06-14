@@ -256,11 +256,13 @@ Let's say you want to reuse your past experience to get to a friend's house:
 * At home: Mon 15:00
 ```
 
+[prw]: https://en.wikipedia.org/wiki/Pattern_recognition
+
 You have one experience that should help you achieve the same goal you achieved in the past again.
 As much as your car is a "tool" (a resource, dependency) that will help you achieve the goal, you
 have a process in your head (or notes) that is a "tool" you can use to plan your trip to your
-friend's house. The key here is to use pattern recognition to identify whether many of many possible
-actions you've collected in your head "fit" the new experience.
+friend's house. The key here is to use [Pattern recognition][prw] to identify whether many of many
+possible actions you've collected in your head "fit" the new experience.
 
 For example, if you kept track of (can remember i.e. have priors, or wrote down) how long it took to
 do something in the past, you should be able to estimate how long it will take to do in the future.
@@ -273,9 +275,13 @@ getting from A to B. Then even if you've never been to your friend's house but k
 get there, you can "rebase" that action (commit) or subhistory (branch) to your future and use your
 process associated with the plan to make a prediction about e.g. how long it will take.
 
-Said another way, you have many mental (or written) functions that you pattern match against your
-current subplan. You may see multiple fit the goal, in which case you have to choose the best fit
-(e.g. an action to drive from A to B and action to drive to your friend's).
+[pmw]: https://en.wikipedia.org/wiki/Pattern_matching
+
+Said another way, you have many mental (or written) functions that you [Pattern match][pmw] against
+your current subplan. You may see multiple fit the goal, in which case you have to choose the best
+fit (e.g. an action to drive from A to B and action to drive to your friend's). This pattern
+matching can easily fail; all your mental/written functions are tools and if you've only been
+thinking about one recently (i.e. a hammer) then everything will look like a nail.
 
 These functions should take as an input a goal, and a function to estimate the increase in value and
 the cost. The first function ("Estimate value") will estimate the increase in value (due to state
@@ -360,6 +366,29 @@ reusable plans to go on. In terms of a git graph, they are always there for you 
 
 Search for "V" with these implicit actions. For examples of these kinds of actions, see
 [](./explore-domain.md).
+
+## No to negligence
+
+We have a million possible actions we could be taking in every moment. Every action you say yes to
+is a no to a million others. The power of the answer "no" to people making requests of you is that
+you're avoiding tunnel vision on the one action that is focal to both of you (and valuing more than
+only your relationship with the person).
+
+[nglc]: https://en.wikipedia.org/wiki/Neglect
+
+When you say no to these million different "wide" subplans, you are effectively picking the "do
+nothing" plan on the state they target instead. That is, time leads to effects on state. We often
+act only to avoid the consequences of the "do nothing" option (e.g. if you don't take care of the
+lawn, your child, etc.). When does value ever go down? The "no-op" action can be expensive and it's
+important to include it as another implicit action. See also [Neglect][nglc] and [Negligence](
+https://en.wikipedia.org/wiki/Negligence).
+
+It's hard to accept that value can go down. It's also hard to model a world where so many actions
+are happening in parallel, rather than you as the agent selecting a single action (of any duration)
+from many. Two options for dealing with the problem are to use a service to manage the state, or to
+schedule reminders to add actions to update the state.
+
+% TODO-ngl: Is there a better way to avoid neglect than reminders?
 
 ## Contrast subplans
 

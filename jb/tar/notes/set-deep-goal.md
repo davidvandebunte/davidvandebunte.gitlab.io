@@ -23,6 +23,27 @@ To dig back into your dependency chain to the hardware could likely only have be
 the cloud API. The [MinIO](https://en.wikipedia.org/wiki/MinIO) interface was only created after AWS
 experimented with variations on the s3 API.
 
+RNNs were the best way to solve NLP problems a few years ago, then LSTMs, and now Transformers
+are taking over.
+
+Frequentist statistics was the right way to describe uncertainty through the 60s and 70s, but now
+Bayesian methods are taking over (this is "math" which you assume to be a stable topic to learn
+about).
+
+### Historical perspective
+
+Said another way, it's likely that (given stable human values) we're doing a lot of guessing about
+the right next "step" in a particular domain. For example, we often see many deep learning papers
+based on roughly the same idea come out at about the same time, building on some recent
+breakthrough. These are like a variety of alternative "steps" that could be taken from the
+breakthrough; only time will tell which one is the best. Time may indicate that another step (that
+takes longer to discover) is actually better.
+
+Learning older concepts is not without value, however, in the same way that failed experiments
+contain information (unfortunately there are many more ways to fail than succeed). Many pedagogical
+materials are essentially a compression of history, skipping over "less successful" results in an
+effort to focus on the big improvements (similar to a well-compressed git branch).
+
 ## Future needs affect today
 
 Future features may change the design of the features you implement today. For example, you may
@@ -41,6 +62,10 @@ be reused, and you're less likely to make errors planning too far ahead.
 You can look into your dependencies (who you buy from) in one direction, or into your dependents
 (who buys from you). If you push into your dependencies, you'll be able to produce more efficiently
 (lower costs). If you push into your dependents, you'll be able to achieve value more efficiently.
+
+You need to not only "merge" information from the outside world about costs (e.g. how to solve a
+problem) but also about values. One purpose of Scrum is to make businesses more responsive to a
+changing market.
 
 ## Time to brainstorm
 
@@ -65,7 +90,7 @@ That is, take the time to add `c` (and G2) on top of `b` in this graph:
 ## Increased uncertainty
 
 Should you consider some time past when you are surely gone and completely forgotten, or only to
-your retirement? Should you consdier your impact on future humanity, indirectly through family,
+your retirement? Should you consider your impact on future humanity, indirectly through family,
 coworkers, friends, etc? Year 2200? Or should you use some kind of future discounting? The farther
 in the future you're looking, the more uncertain your estimates of the world will look are going to
 be. If you have less value uncertainty, and less cost uncertainty, then you can look a little
@@ -75,17 +100,6 @@ You really can't plan anything out to 2200 only because you don't know what will
 5 years with much certainty (war, hard AI, family, investments, etc.). I think looking forward 5
 years is good enough for many problems, but with that attitude an undergraduate won't be getting
 e.g. a PhD that takes 6 years.
-
-Recurrent neural nets were the best way to solve NLP problems a few years ago, but now Transformers
-are taking over. Frequentist statistics was the right way to describe uncertainty through the 60s
-and 70s, but now Bayesian methods are taking over (this is "math" which you assume to be a stable
-topic to learn about). The world is changing, and you need to regularly make a decision about when
-to review the research (learn from others, plan big picture) and when to build on your own (in your
-own notes/code). In terms of git history, when do you merge the changes of others?
-
-You need to not only "merge" information from the outside world about costs (e.g. how to solve a
-problem) but also about values. One purpose of Scrum is to make businesses more responsive to a
-changing market.
 
 How much uncertainty do you add looking farther into the future? It depends on the volatility of
 both your market, and the volatility of your dependencies i.e. supply chain (costs). Either way,

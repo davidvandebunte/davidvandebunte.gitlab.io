@@ -96,11 +96,6 @@ them.
 % - [Decision: Do you prefer eBooks to paper?][ep]
 % - [HT: Audiobooks](https://docs.google.com/document/d/1rGyAcdxsoP2eNWfooMjNQxmpUhxuHl1fcqjOh0Zu2aA/edit#)
 
-See also:
-- [Modality effect](https://en.wikipedia.org/wiki/Modality_effect)
-- [Split attention effect](https://en.wikipedia.org/wiki/Split_attention_effect)
-- [Multi-media](https://en.wikipedia.org/wiki/Multimedia)
-
 Is there associated code? Should you start learning from the documentation or the code? You usually
 want to start from the documentation; the natural language documentation (usually) prefers the big
 picture view. Natural language is also often easier to parse since you spend the majority of your
@@ -111,6 +106,11 @@ https://xcelab.net/rm/statistical-rethinking/) has gone through different progra
 
 Still, you may move to the code earlier or initially if you're more familiar with the programming
 language. Many concepts cannot be described or cannot be described precisely in natural language.
+
+Prefer Jupyter notebooks, which avoid the [Split attention effect](
+https://en.wikipedia.org/wiki/Split_attention_effect) when it comes to code and natural language.
+That is, for at least these two modalities the content is kept together. Tools like [Sphinx](
+https://www.sphinx-doc.org/en/master/) are another way to keep these modalities together.
 
 [bda3]: http://www.stat.columbia.edu/~gelman/book/
 
@@ -126,6 +126,10 @@ nearby library when you need the paper copy? It’s likely you'll use it on a ca
 vacation, then never touch it again. If you want the paper version again, you can get it from a
 library again. Once you finish reading a textbook, you rarely refer to anything but an electronic
 version again.
+
+See also:
+- [Modality effect](https://en.wikipedia.org/wiki/Modality_effect)
+- [Multi-media](https://en.wikipedia.org/wiki/Multimedia)
 
 ## Migrate to a single learning focus
 

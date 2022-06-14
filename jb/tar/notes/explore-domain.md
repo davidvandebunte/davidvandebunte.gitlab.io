@@ -144,7 +144,14 @@ When exploration/experimentation/investigation is dangerous or expensive, we use
 to the same restaurant twice and will spend half an hour searching for a new place to eat (despite
 the limited value). If you can't predict it, we like it.
 
-Still, there's likely value in tuning towards curiosity in modern problems. See also:
+Still, there's likely value in tuning towards curiosity in modern problems. The curiosity mechanism
+that OpenAI used in the reference above is quite naive; it puts intrinsic value on novelty when most
+people would say learning only has instrumental value. Said another way, the curiosity mechanism
+doesn't involve any kind of introspection on the part of the model to check whether it's building
+*any* kind of causal (reusable) abstraction/subnet, much less a highly valuable abstraction.
+
+See also:
+- [When should agents explore?](https://openreview.net/pdf?id=dEwfxt14bca)
 - [Deep reinforcement learning - Research - Exploration](
 https://en.wikipedia.org/wiki/Deep_reinforcement_learning#Exploration)
 - [Intrinsic motivation (artificial intelligence)](
