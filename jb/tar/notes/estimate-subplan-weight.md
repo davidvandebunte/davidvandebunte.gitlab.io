@@ -256,11 +256,13 @@ Let's say you want to reuse your past experience to get to a friend's house:
 * At home: Mon 15:00
 ```
 
+[prw]: https://en.wikipedia.org/wiki/Pattern_recognition
+
 You have one experience that should help you achieve the same goal you achieved in the past again.
 As much as your car is a "tool" (a resource, dependency) that will help you achieve the goal, you
 have a process in your head (or notes) that is a "tool" you can use to plan your trip to your
-friend's house. The key here is to use pattern recognition to identify whether many of many possible
-actions you've collected in your head "fit" the new experience.
+friend's house. The key here is to use [Pattern recognition][prw] to identify whether many of many
+possible actions you've collected in your head "fit" the new experience.
 
 For example, if you kept track of (can remember i.e. have priors, or wrote down) how long it took to
 do something in the past, you should be able to estimate how long it will take to do in the future.
@@ -273,11 +275,13 @@ getting from A to B. Then even if you've never been to your friend's house but k
 get there, you can "rebase" that action (commit) or subhistory (branch) to your future and use your
 process associated with the plan to make a prediction about e.g. how long it will take.
 
-Said another way, you have many mental (or written) functions that you pattern match against your
-current subplan. You may see multiple fit the goal, in which case you have to choose the best fit
-(e.g. an action to drive from A to B and action to drive to your friend's). This pattern matching
-can easily fail; all your mental/written functions are tools and if you've only been thinking about
-one recently (i.e. a hammer) then everything will look like a nail.
+[pmw]: https://en.wikipedia.org/wiki/Pattern_matching
+
+Said another way, you have many mental (or written) functions that you [Pattern match][pmw] against
+your current subplan. You may see multiple fit the goal, in which case you have to choose the best
+fit (e.g. an action to drive from A to B and action to drive to your friend's). This pattern
+matching can easily fail; all your mental/written functions are tools and if you've only been
+thinking about one recently (i.e. a hammer) then everything will look like a nail.
 
 These functions should take as an input a goal, and a function to estimate the increase in value and
 the cost. The first function ("Estimate value") will estimate the increase in value (due to state

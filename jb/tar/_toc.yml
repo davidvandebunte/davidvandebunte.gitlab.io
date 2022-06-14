@@ -51,6 +51,7 @@ parts:
       - file: notes/share-to-wikimedia.md
   - caption: Learn
     chapters:
+      - file: notes/add-attention-mechanism.md
       - file: notes/define-generative-model.md
       - file: notes/define-learn.md
       - file: notes/define-values.md
@@ -71,3 +72,7 @@ parts:
       - file: notes/set-deep-goal.md
       - file: notes/set-wide-goal.md
       - file: notes/stay-on-focus.md
+  - caption: Drafts
+    chapters:
+      - file: notes/improve-design-experiments.md
+      - file: notes/improve-estimate-subplan-weight.md
