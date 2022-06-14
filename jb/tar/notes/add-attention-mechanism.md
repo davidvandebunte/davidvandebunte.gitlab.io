@@ -63,6 +63,10 @@ https://en.wikipedia.org/wiki/Focus_(linguistics)), which has some clear paralle
 (machine learning)][aml]. The term [Hyperfocus](https://en.wikipedia.org/wiki/Hyperfocus) is defined
 in terms of attention.
 
+The word concentrate is even less independent of the word focus than attention. In [concentrate -
+Wiktionary](https://en.wiktionary.org/wiki/concentrate), the verb is defined in terms of [focus -
+Wiktionary](https://en.wiktionary.org/wiki/focus) (and vice-versa).
+
 See also:
 - [Visualizing A Neural Machine Translation Model (Mechanics of Seq2seq Models With Attention)](
 https://jalammar.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention/)
