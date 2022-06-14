@@ -2,6 +2,11 @@
 
 Part of [](./explore-domain.md). Why look farther into the future?
 
+Said another way, do you plan to profit from the action in the long-term? That is, will it produce
+something reusable? If so, consider how valuable that value-producing artifact (investment) will be
+over its lifetime and how much it will cost to build. See also a discussion on the value in
+reproducibility in [](./estimate-improvement-value.md).
+
 ## Future costs affect today
 
 Because there is more than one way to solve every problem, you can often find ways to solve two

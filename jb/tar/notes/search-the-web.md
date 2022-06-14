@@ -29,46 +29,82 @@ about how you score documents. Every word you type in your search is a filter in
 in that case the terms can interact. The longer your query, the more likely you'll get what you
 want.
 
+Ate you answering a question? If so, be sure to write out at least all the keywords in the question.
+You can skip generic words like "What" and "Why" if you want, but these do help search.
+
 See the "Search Operators" in [DuckDuckGo Search Syntax | DuckDuckGo Help Pages](
 https://help.duckduckgo.com/duckduckgo-help-pages/results/syntax/) for generic tips for improving
 your results.
 
 #### Search by website
 
-Think about whether you can take part of your search and turn it into a specific website to search.
+Once you've taken the time to build a solid query, reuse it. Use the same query on several websites
+you prefer to work with, listed here in order of preference.
+
 This gives you better search results - results that are more relevant, higher precision (precision
 in the sense of P/R) because you are applying an initial filter down to a higher quality subset of
-the internet.
+the internet. Useful research websites in a rough priority order based on
+[](./evaluate-pedagogical-tool.md):
 
-See [DuckDuckGo !Bang](https://duckduckgo.com/bang) for one way to filter by website. Useful
-research bangs in a rough priority order based on [](./evaluate-pedagogical-tool.md), that also
-lowers the priority of reading existing habits:
+##### Stack Exchange
+
+[egr]: https://ai.stackexchange.com/questions/21810/what-is-a-fully-convolution-network
+[aes]: https://duckduckgo.com/?q=fully+convolutional+network+stackexchange&t=newext&atb=v310-1&ia=web
+
+See [DuckDuckGo !Bang](https://duckduckgo.com/bang) for one way to filter by website. The downside
+to bangs is that they (often) use the scoring method provided by the website, which is typically
+inferior to a general search engine's algorithms (i.e. DuckDuckGo). If you don't want to type out
+`site:` (you must be quite busy) an alternative is to simply add the domain as a search term (e.g.
+[fully convolutional network stackexchange at DuckDuckGo][aes]. For example, try to find [What is a
+fully convolution network? - AISE][egr] using both `!sx` and using the previous search; DuckDuckGo
+helps you find this reasonably high quality resource much faster. Bangs you do not use, for this
+reason:
 
 ```
 !sod (SO with DuckDuckGo) or !ov (SO with it's own search)
-!s2 (semantic scholar's search)
-!pwc (search for paperswithcode.com)
 !sx
-!py
-!wolf
-!sympy
+```
+
+Why stack exchange? It's also editable, and is CC BY-SA like Wikipedia (see [What is the license for
+the content I post? - Help Center - Stack Overflow](https://stackoverflow.com/help/licensing)). It
+also keeps track of your activity to some degree; see my answer in [How can I view vote history from
+all Stack Exchange sites? - Meta Stack Exchange](https://meta.stackexchange.com/a/379518/1208843)
+however. Try to make a comment or some other change to bookmark that you've made a significant
+investment in understanding a question and answer. See the *sxda* bookmark for [User davidvandebunte
+- Stack Exchange - activity](https://stackexchange.com/users/309544/davidvandebunte?tab=activity).
+
+##### Wikipedia
+
+```
 !w
 !wt
-!pytorch
+```
+
+Why Wikipedia? It's editable and CC BY-SA. It also tracks where you've been; see [User contributions
+for Davidvandebunte - Wikipedia](
+https://en.wikipedia.org/wiki/Special:Contributions/Davidvandebunte).
+
+##### Papers with code
+
+```
+!pwc (uses the search built into paperswithcode.com)
 ```
 
 Use [Papers With Code (`pwc`)](https://paperswithcode.com/) to find the SOTA on the benchmark that
 most closely matches your workload. Even if you don't use the SOTA because it's e.g. too expensive,
 the list should include all models evaluated on the dataset.
 
-If you're using semantic scholar (`!s2`) you'll only get articles that aren't behind a paywall:
-- [Semantic Scholar](https://www.semanticscholar.org/)
-- [Semantic Scholar](https://en.wikipedia.org/wiki/Semantic_Scholar)
+##### Programming references
 
-Why stack exchange? It's also editable, and is CC BY-SA like Wikipedia (see [What is the license for
-the content I post? - Help Center - Stack Overflow](https://stackoverflow.com/help/licensing)).
+```
+!py
+!sympy
+!pytorch
+!wolf
+```
 
-Useful personal bangs:
+##### Personal bangs
+
 ```
 !maps
 !gcal
@@ -76,20 +112,6 @@ Useful personal bangs:
 !e
 !a
 ```
-
-[egr]: https://ai.stackexchange.com/questions/21810/what-is-a-fully-convolution-network
-[aes]: https://duckduckgo.com/?q=fully+convolutional+network+stackexchange&t=newext&atb=v310-1&ia=web
-
-The downside to bangs is that they (often) use the scoring method provided by the website, which is
-typically inferior to a general search engine's algorithms (i.e. DuckDuckGo). If you don't want to
-type out `site:` (you must be quite busy) an alternative is to simply add the domain as a search
-term (e.g. [fully convolutional network stackexchange at DuckDuckGo][aes]. For example, try to find
-[What is a fully convolution network? - AISE][egr] using both `!sx` and using the previous search;
-DuckDuckGo helps you find this reasonably high quality resource much faster.
-
-Some websites don't seem searchable via DuckDuckGo; you must go to them specifically. Use [Connected
-Papers](https://www.connectedpapers.com/) to find high-scoring papers that are closely related to a
-topic you are already focusing on.
 
 ### Explore by website
 
@@ -113,7 +135,17 @@ you've already been considering (such as writing source code) and their advertis
 learn new topics (e.g. Transformers). To some extent these sites have earned your priors, like a
 brand.
 
-Helpful resources:
+Semantic scholar (`!s2` uses the search built into semanticscholar.org) only provides articles that
+aren't behind a paywall. This site makes it easier to follow references in papers by turning them
+into links. See:
+- [Semantic Scholar](https://www.semanticscholar.org/)
+- [Semantic Scholar](https://en.wikipedia.org/wiki/Semantic_Scholar)
+
+Some websites don't seem searchable via DuckDuckGo; you must go to them specifically. Use [Connected
+Papers](https://www.connectedpapers.com/) to find high-scoring papers that are closely related to a
+topic you are already focusing on.
+
+Other resources:
 - [DeepMind - Research](https://www.deepmind.com/research)
 - [Meta AI Blog](https://ai.facebook.com/blog/)
 - [OpenAI Blog](https://openai.com/blog/)

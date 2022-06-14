@@ -7,6 +7,8 @@ See:
 - [Attention? Attention! | Lil'Log](https://lilianweng.github.io/posts/2018-06-24-attention/)
 - [Different types of Attention in Neural Networks - gotensor](
 https://gotensor.com/2019/07/06/different-types-of-attention-in-neural-networks/)
+- [what's the difference between "self-attention mechanism" and "full-connection" layer?](
+https://stackoverflow.com/questions/64218678/)
 
 > Its flexibility comes from its role as "soft weights" that can change during runtime, in contrast
 > to standard weights that must remain fixed at runtime.
@@ -100,17 +102,12 @@ e.g. taking a walk.
 Are you "attending to" a child when you're working at home, by having a service that watches him?
 
 Should you commit every two hours, if only to divide out what you can? Review everything else that
-is not done, and make it a WIP commit.
+is not done, and make it a WIP commit. This is the equivalent to checking in for a daily stand-up,
+even if you didn't finish the task you thought you would finish yesterday.
 
 See `close-window.md` for another way you control your focus. To reduce the number of tabs you have
 open in e.g. your browser, you could run `evaluate-pedagogical-tool.md` on them (e.g. close websites
 that aren't open source).
-
-During the day, you should keep track of your attention with your *sxda* bookmark or in general with
-history:
-- https://stackexchange.com/users/309544/davidvandebunte?tab=activity
-- [User contributions for Davidvandebunte - Wikipedia](
-https://en.wikipedia.org/wiki/Special:Contributions/Davidvandebunte)
 
 # TODO-ce: Is "cross-entropy" a useful abstraction?
 
