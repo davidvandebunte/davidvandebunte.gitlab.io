@@ -99,6 +99,9 @@ e.g. taking a walk.
 
 Are you "attending to" a child when you're working at home, by having a service that watches him?
 
+Should you commit every two hours, if only to divide out what you can? Review everything else that
+is not done, and make it a WIP commit.
+
 See `close-window.md` for another way you control your focus. To reduce the number of tabs you have
 open in e.g. your browser, you could run `evaluate-pedagogical-tool.md` on them (e.g. close websites
 that aren't open source).
