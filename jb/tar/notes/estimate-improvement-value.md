@@ -405,9 +405,20 @@ need to be able to perform the task once. Is it worth the cost of learning somet
 going to need to perform it once, when the next time you may need to follow it will be years from
 now, and may require a mostly different process to get the same result?
 
+Said another way, do you need to build something reusable? See the distinction between one-time and
+reusable (causal) plans in [](./estimate-subplan-weight.md). We tend to prefer goals that give us a
+reusable asset (e.g. we learn something, write reusable code) because we can "profit" from the
+action more than once. People are curious; we often value novelty and unpredictability in itself
+(see a discussion in [](./explore-domain.md)). It's likely we have this preference because, all else
+being equal, it's better to learn something new (i.e. something reusable) than do something
+one-time. When you're learning a decent heuristic is to pursue novelty; only you know if you’re
+learning at a rapid or a slow rate on a particular resource. Ironically, learning is often (and
+ideally) a one-time action.
+
 In the case of a unit test in a build service, where the value in the test is often only to a
-developer or developers, we more often need to make hard decisions about whether to even keep
-certain tests.
+developer or developers, we need to make hard decisions about whether to keep certain tests. Tests
+primarily need to be reusable in order to help developers relearn a concept in order to change code.
+Can a test that intermittently fails only be reenabled as needed (commented out)?
 
 Let's define reproducibility as generalizability across time. If literally nothing changed, that is,
 we reproduced the state of the world at the exact time a test passed, the one time it did, then it

@@ -64,6 +64,10 @@ If it isn't possible (e.g. G1 specifies the whole state of the universe at some 
 then it's going to be harder to come up with e.g. 10 ways to solve a problem. If you don't have
 flexibility in generating a solution (later) then a solution is going to be expensive or impossible.
 
+A common message in planning in the context of Scrum is to reduce cost and value uncertainty at the
+same time. If you don't you may find yourself with an extremely costly task (because the goal was
+too rigid) or an extremely unvaluable task (because the goal was too flexible).
+
 ### Objective function
 
 In the end, a value assigned to some goal state is a [Function (mathematics) -
