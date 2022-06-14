@@ -5,7 +5,7 @@
 Should you add an "attention" mechanism to your model? If you're thinking of going "all out" on
 attention mechanisms then a (roughly) equivalent question is: Should you prefer "Transformer"
 models? See my answer in [What makes a transformer a transformer? - Artificial Intelligence Stack
-Exchange](ai.stackexchange.com/a/35892/55112).
+Exchange](https://ai.stackexchange.com/a/35892/55112).
 
 For an argument from the horse's mouth, see the "Why Self-Attention" ([1706.03762.pdf - Why
 Self-Attention](https://arxiv.org/pdf/1706.03762.pdf#section.4)) section of the paper.
