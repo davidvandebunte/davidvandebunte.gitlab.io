@@ -138,6 +138,11 @@ In school, professors often trying to encourage a big picture view through proje
 This is similar to a PhD, the ultimate school-based project. They want you to see take a bunch of
 coherent notes for the project, even if you don't connect them at a whole life level.
 
+You need to regularly organize to compress questions that are essentially equivalent or highly
+related. That is, you can reduce your backlog of open questions by finding nearly equivalent
+questions. If every question has a "target" of value for what it intends to cover, you can expand
+the "target" to cover more questions (get them out of the high-level view).
+
 ## More self-discovery
 
 Would you rather discover some concept by building the concept up in your own notes, or by reading
