@@ -4,6 +4,9 @@
 
 See:
 - [Attention (machine learning)](https://en.wikipedia.org/wiki/Attention_(machine_learning))
+- [Attention? Attention! | Lil'Log](https://lilianweng.github.io/posts/2018-06-24-attention/)
+- [Different types of Attention in Neural Networks - gotensor](
+https://gotensor.com/2019/07/06/different-types-of-attention-in-neural-networks/)
 
 > Its flexibility comes from its role as "soft weights" that can change during runtime, in contrast
 > to standard weights that must remain fixed at runtime.
@@ -15,7 +18,8 @@ Reference 21 from AIAYN:
 - https://arxiv.org/pdf/1703.03130v1.pdf
 
 Otherwise:
-- https://datascience.stackexchange.com/questions/49468
+- [What's the difference between Attention vs Self-Attention? - DSSE](
+https://datascience.stackexchange.com/questions/49468/)
 - [What exactly are keys, queries, and values in attention mechanisms?](
 https://stats.stackexchange.com/questions/421935/)
 - [time series - What are attention mechanisms exactly?](
@@ -23,6 +27,15 @@ https://stats.stackexchange.com/questions/344508/what-are-attention-mechanisms-e
 
 You may not be able to solve this easily without reading through a code implementation of a
 transformer model (like the "Annotated Transformer").
+
+Do you care about versions of attention used with older RNN-based models? You may care about the QKV
+value approach, but is it still being used? Or is it a historical tool? See:
+- [An Overview of Attention | Papers With Code](
+https://paperswithcode.com/methods/category/attention-mechanisms)
+
+Does a search engine conceptually provide attention scores (what you should pay attention to) based
+on e.g. links and other factors? You do the same thing, collecting links to decide how to apply your
+attention (which you usually think of as "time").
 
 # TODO-cnns: Will attention replace CNNs?
 
@@ -149,3 +162,6 @@ And Nvidia:
 
 And Facebook:
 - [Meta AI Blog](https://ai.facebook.com/blog/)
+
+And Cross Validated SE:
+- https://stats.stackexchange.com/questions?tab=votes&page=1
