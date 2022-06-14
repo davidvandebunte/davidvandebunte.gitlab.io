@@ -77,6 +77,12 @@ Web articles usually include a date of publication. All else being equal (e.g. w
 primary or not), a somewhat reliable heuristic is that newer articles are better than older ones.
 Newer textbooks can refer to newer research. When was the last time the source code was edited?
 
+Learning from the original paper is going to be more valuable if you need to reference it; it's
+better to reference the original than secondary sources because secondary sources add unnecessary
+indirection and potentially bias. On Wikipedia it's still acceptable to cite secondary sources
+however; see [Wikipedia:No original research - Primary, secondary, and tertiary sources](
+https://en.wikipedia.org/wiki/Wikipedia:No_original_research#Primary,_secondary_and_tertiary_sources).
+
 ## Prefer primary sources
 
 This usually conflicts with a preference for newer tools, but regardless, an old primary resource is
@@ -164,7 +170,26 @@ When you are a significant way through a book, contact the author with any other
 chapter solutions) you generate so he can link to them. Why not help others? You may even get
 feedback from him/her.
 
-If the material comes with source code, then it's by definition editable.
+### Prefer copyleft licenses
+
+If the material comes with source code, it's usually editable. However, you could copy and paste any
+web article (in e.g. natural language) and edit it. Is the content also have a permissive or
+copyleft license? If not, you won't be able to share your modifications and will need to worry about
+fair use if you e.g. need to reproduce part of the material to review it.
+
+It can be hard to tell if a website is based on open-source content. For example, even open source
+content based sites can require you to log in (though they are less likely to do so). [Dive into
+Deep Learning](https://d2l.ai/) looks like it isn't at first, but you can see GitHub links at the
+top.
+
+Look for "Terms" or "About" at the bottom of the page, most of the time. You can search for
+"opyright" in the Terms for information on how e.g. they own everything you submit to their
+platform. Read the terms before "signing" (in this case by reading the contents of the page, i.e.
+creating a mental link). Another option is to web search for their content license, i.e. "quora
+content license" for the website Quora.
+
+If you can't tell in one minute, block them. Clearly they're not advertising their license, which
+they would if it was focused on their user.
 
 ## Prefer free tools
 

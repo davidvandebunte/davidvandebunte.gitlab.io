@@ -99,8 +99,15 @@ e.g. taking a walk.
 
 Are you "attending to" a child when you're working at home, by having a service that watches him?
 
-During the day, you should keep track of your attention with your *sxda* bookmark:
+See `close-window.md` for another way you control your focus. To reduce the number of tabs you have
+open in e.g. your browser, you could run `evaluate-pedagogical-tool.md` on them (e.g. close websites
+that aren't open source).
+
+During the day, you should keep track of your attention with your *sxda* bookmark or in general with
+history:
 - https://stackexchange.com/users/309544/davidvandebunte?tab=activity
+- [User contributions for Davidvandebunte - Wikipedia](
+https://en.wikipedia.org/wiki/Special:Contributions/Davidvandebunte)
 
 # TODO-ce: Is "cross-entropy" a useful abstraction?
 
@@ -136,32 +143,3 @@ https://datascience.stackexchange.com/questions/9850/neural-networks-which-cost-
 https://datascience.stackexchange.com/questions/20296/cross-entropy-loss-explanation)
 - [machine learning - The cross-entropy error function in neural networks - DSSE](
 https://datascience.stackexchange.com/questions/9302/the-cross-entropy-error-function-in-neural-networks)
-
-# TODO-rr: Should you be reviewing the research OpenAI is doing?
-
-## Estimated value
-
-They are successful because they are taking the time to demo, like you should always be creating a
-demo at the end of sprint. They're learning fast; don't blame them for it. Reading what they're
-doing has been one great way to get you to stop maintaining your own notes; you've often seen them
-doing work you've been thinking a lot about (such as writing source code).
-
-## Estimated cost
-
-Their advertisements are designed to cause you to panic, like they're way ahead or about to hit AGI.
-If you see impressive results investigate how they achieved it, and you'll be less impressed.
-
-Review their blog:
-- [OpenAI Blog](https://openai.com/blog/)
-
-Add DeepMind to the list as well:
-- [Research](https://www.deepmind.com/research)
-
-And Nvidia:
-- [NVIDIA Blog](https://blogs.nvidia.com/)
-
-And Facebook:
-- [Meta AI Blog](https://ai.facebook.com/blog/)
-
-And Cross Validated SE:
-- https://stats.stackexchange.com/questions?tab=votes&page=1
