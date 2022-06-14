@@ -30,6 +30,20 @@ Frequentist statistics was the right way to describe uncertainty through the 60s
 Bayesian methods are taking over (this is "math" which you assume to be a stable topic to learn
 about).
 
+### Historical perspective
+
+Said another way, it's likely that (given stable human values) we're doing a lot of guessing about
+the right next "step" in a particular domain. For example, we often see many deep learning papers
+based on roughly the same idea come out at about the same time, building on some recent
+breakthrough. These are like a variety of alternative "steps" that could be taken from the
+breakthrough; only time will tell which one is the best. Time may indicate that another step (that
+takes longer to discover) is actually better.
+
+Learning older concepts is not without value, however, in the same way that failed experiments
+contain information (unfortunately there are many more ways to fail than succeed). Many pedagogical
+materials are essentially a compression of history, skipping over "less successful" results in an
+effort to focus on the big improvements (similar to a well-compressed git branch).
+
 ## Future needs affect today
 
 Future features may change the design of the features you implement today. For example, you may
