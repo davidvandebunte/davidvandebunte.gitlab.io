@@ -72,3 +72,5 @@ See also:
 https://jalammar.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention/)
 - [The Annotated Transformer](http://nlp.seas.harvard.edu/annotated-transformer/#background)
 - [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)
+- [MultiheadAttention — PyTorch 1.11.0 documentation](
+https://pytorch.org/docs/stable/generated/torch.nn.MultiheadAttention.html)

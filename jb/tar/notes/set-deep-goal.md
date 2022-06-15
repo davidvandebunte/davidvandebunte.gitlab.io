@@ -49,6 +49,9 @@ contain information (unfortunately there are many more ways to fail than succeed
 materials are essentially a compression of history, skipping over "less successful" results in an
 effort to focus on the big improvements (similar to a well-compressed git branch).
 
+Are the tools you want to use still in the latest libraries on the topic, e.g. PyTorch? Library
+writers have a limited resources as well, and only write the most important functions.
+
 ## Future needs affect today
 
 Future features may change the design of the features you implement today. For example, you may
