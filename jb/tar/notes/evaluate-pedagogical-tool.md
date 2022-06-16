@@ -80,7 +80,8 @@ often-not-always better than a nearly as old non-primary resource.
 
 For a textbook, can you get an ebook version? Can you find a DRM-free ebook? Can you get a pdf? Can
 you get an audiobook version? If there are technical terms in the book, you’ll learn to pronounce
-them.
+them. Consider all the modalities used in ML; see also [Perceiver: General Perception with Iterative
+Attention - 2103.03206.pdf](https://arxiv.org/pdf/2103.03206.pdf).
 
 [ega]: https://docs.google.com/document/d/1pvN9a1-wyGytIcureLBqm8zXgtQNCSZ297pZitAce4c/edit#
 [ep]: https://docs.google.com/document/d/1GV8x2JL4cAvQuIycWjeyDYOPq-m6eVmXK2yviz_Y-qE/edit#heading=h.ptg6aneohrgk
