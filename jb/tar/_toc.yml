@@ -60,6 +60,7 @@ parts:
       - file: notes/evaluate-pedagogical-tool.md
   - caption: Focus
     chapters:
+      - file: notes/expand-focus.md
       - file: notes/search-the-web.md
       - file: notes/stay-on-focus.md
   - caption: Plan

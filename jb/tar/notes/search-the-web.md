@@ -2,7 +2,7 @@
 
 ## Estimate value
 
-A specialization of [](./explore-domain.md) specific to the problem of finding external pedagogical
+A specialization of [](./expand-focus.md) specific to the problem of finding external pedagogical
 materials.
 
 ## Design test
