@@ -61,6 +61,7 @@ parts:
   - caption: Focus
     chapters:
       - file: notes/expand-focus.md
+      - file: notes/maintain-focus.md
       - file: notes/search-the-web.md
       - file: notes/stay-on-focus.md
   - caption: Plan
