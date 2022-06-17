@@ -64,6 +64,7 @@ parts:
       - file: notes/stay-on-focus.md
   - caption: Plan
     chapters:
+      - file: notes/avoid-explore-exploit.md
       - file: notes/estimate-subplan-weight.md
       - file: notes/explore-domain.md
       - file: notes/flatten-plan.md
@@ -77,5 +78,6 @@ parts:
       - file: notes/set-wide-goal.md
   - caption: Drafts
     chapters:
+      - file: notes/improve-expand-focus.md
       - file: notes/improve-design-experiments.md
       - file: notes/improve-estimate-subplan-weight.md
