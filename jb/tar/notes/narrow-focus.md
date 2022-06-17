@@ -22,6 +22,23 @@ narrow your focus over the short term, medium term, or long term?
 
 Close your eyes; this avoids exogeneous orienting.
 
+It helps to be able to zoom in more as you get more invested in a webpage. This is similar to how
+math (e.g. numbers) and code is a more compressed version of natural language; variable names are
+often too short. What you gain is the ability to attend to more at once. Prefer to do this on a
+per-site basis to avoid global tweaking; site owners have likely already tweaked their context to
+browser defaults. For now you "Zoom Text only" to avoid tweaking the site owner's image sizes. See
+[Font size and zoom - increase the size of web pages | Firefox Help](
+https://support.mozilla.org/en-US/kb/font-size-and-zoom-increase-size-of-web-pages?redirectslug=Page+Zoom&redirectlocale=en-US)
+and [Change the fonts and colors websites use | Firefox Help](
+https://support.mozilla.org/en-US/kb/change-fonts-and-colors-websites-use).
+
+Your zoom settings are site-specific, unfortunately (not tab-specific). That is, if you set your
+zoom to 90% on one Wikipedia page it will apply to all Wikipedia pages (though not other websites).
+You've zoomed way in by default on your own website (it's easy for you to consume). Your text editor
+should already be "zoomed" to let you fit as much as possible on a screen.
+
+% See TODO-dr for other thoughts on how compression helps you attend to more at once.
+
 Take notes when you want to attend to more weights deeper into your recent thoughts. Notes force
 your focus on a certain train of thought by making it real on your screen (and in front of your
 eyes, regularly forcing the context back into focus through exogeneous orienting). It's a way to
@@ -43,11 +60,15 @@ to open a "reminder tab" in your web browser and move it out of the way.
 
 ### Medium
 
-Close windows, tabs, etc. on your computer.
-
 Keep the `vim` window you want most focal all the way to the left, so it's next to your browser (and
 you can make multi-modal connections across them). See [Vim: Move window left/right? - SO](
-https://stackoverflow.com/questions/4556184/vim-move-window-left-right)
+https://stackoverflow.com/questions/4556184/vim-move-window-left-right). That is, put the "big
+picture" windows to the right (because you should need to visit them less often; they are more
+permanent).
+
+When you need to close windows, tabs, etc. on your computer, generally go from the left to the
+right. Close browser tabs (least permanent), then the leftmost `vim` window, then as many other vim
+windows as you feel is appropriate.
 
 Another way to keep your tabs down is to make it easier to use existing tabs. Use `%` to search open
 tabs rather than opening a new one. See [Search open tabs in Firefox | Firefox

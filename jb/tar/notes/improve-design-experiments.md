@@ -26,7 +26,7 @@ less detail in every item because it's more simplified. For example, a planning 
 tasks that are all drastic simplifications of the full task. Some of the worst aspects of it are
 that you can't really rearrange the items in the graph without understand them in enough detail to
 understand their dependencies. Still, the graph is useful because it lets you see (attend to) more
-at once.
+at once. Said another way, it provides a useful abstraction.
 
 Similarly, to "load" code into your head by reading it is actually to decompress it into natural
 language (increasing dimensionality). You often think of compressing code into natural language,
