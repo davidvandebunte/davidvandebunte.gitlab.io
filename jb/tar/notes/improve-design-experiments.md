@@ -101,3 +101,43 @@ See also:
 - [intuition - What is perplexity? - Cross Validated](
 https://stats.stackexchange.com/questions/10302/what-is-perplexity)
 - [Perplexity - Wikipedia](https://en.wikipedia.org/wiki/Perplexity)
+
+# TODO-unsup: Do you prefer unsupervised to supervised learning?
+
+## Estimate value
+
+You're already quite familiar with the latter, at least relatively speaking. Seek novelty.
+
+You drive improvements to signs based on what you discover in unsupervised learning. Why wouldn't
+you expect a deep learning model to do the same? If you can detect patterns, you can assume some
+kind of structure. If you can assume some kind of structure, you can make a net that is much more
+efficient than a completely general learner (or reuse a net you have based on the same common
+mathematical structure). In fact, you often see solutions that fit the tools you already know. That
+is, you prefer to use dicts and map a lot when you code only because you know them. Similarly,
+people have filter bubbles and try to come up with economic solutions that fit the simple models
+they already know (e.g. laissez-faire is always better).
+
+It's like detecting patterns is the first step in the scientific process; it's how you establish
+i.e. come up with educated guesses or working hypotheses.
+
+You're not the only one thinking like this. The large transformer models are being pretrained on
+unsupervised data before supervised learning. These models scale with more data:
+- https://ai.stackexchange.com/questions/22581
+
+In general, you have a lot more unsupervised training data. It's much cheaper to manage, understand,
+etc. You don't have to rely on another team to get you what you need.
+
+Hinton is deeply suspicious of supervised learning for a reason. See the end of this article for a
+brief summary of his preference for unsupervised learning:
+- https://venturebeat.com/2020/12/16/at-neurips-2020-researchers-proposed-faster-more-efficient-alternatives-to-backpropagation/
+
+Is your role as a developer to do the pattern recognition for a network that can't yet do so for
+itself? If you see an image, you know to model it with a convolutional network. In general, you make
+the decision about how to model a system and make architectural choices based on the mental library
+of model pieces you know may help build a useful mode for your new problem. Is your library
+expanding?
+
+Is unsupervised learning similar to Bayesian statistics? It seems like you can only argue against in
+terms of efficiency:
+- [When (if ever) is a frequentist approach substantively better than a Bayesian? - Cross
+  Validated](https://stats.stackexchange.com/questions/194035/when-if-ever-is-a-frequentist-approach-substantively-better-than-a-bayesian)

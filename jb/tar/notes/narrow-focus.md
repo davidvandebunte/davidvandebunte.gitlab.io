@@ -13,3 +13,8 @@ By closing windows and tabs on your computer, you free up your limited attention
 ## Design test
 
 Attend to a smaller set of weights in your mind, typically a set of shared weights.
+
+## Estimate cost
+
+Run `git grep` for all the key words in question, and use or delete your old thoughts. This is the
+equivalent of querying your own notes.

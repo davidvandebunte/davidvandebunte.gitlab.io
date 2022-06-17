@@ -354,9 +354,12 @@ about the objective function.
 
 ### Societal Values
 
+[hur]: https://en.wikipedia.org/wiki/Human_rights
+
 See [](./define-values.md) for a discussion of societal values and how they influence us. Although
 these may seem arbitrary and imprecise, they get slightly more interesting if you consider how you
-would metricate them in a machine.
+would metricate them in a machine. If you think e.g. the [Human rights][hur] listed in the U.S.
+constitution are valuable, you will eventually need a way to teach them to computers.
 
 In particular, it's important to keep track of these values because they can be major sources of
 uncertainty. If the story the team is going to work on next becomes primarily a matter of politics
