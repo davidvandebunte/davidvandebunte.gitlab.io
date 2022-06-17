@@ -150,6 +150,8 @@ people would say learning only has instrumental value. Said another way, the cur
 doesn't involve any kind of introspection on the part of the model to check whether it's building
 *any* kind of causal (reusable) abstraction/subnet, much less a highly valuable abstraction.
 
+% See TODO-ef for follow-up thoughts.
+
 See also:
 - [When should agents explore?](https://openreview.net/pdf?id=dEwfxt14bca)
 - [Deep reinforcement learning - Research - Exploration](

@@ -67,10 +67,20 @@ The word concentrate is even less independent of the word focus than attention. 
 Wiktionary](https://en.wiktionary.org/wiki/concentrate), the verb is defined in terms of [focus -
 Wiktionary](https://en.wiktionary.org/wiki/focus) (and vice-versa).
 
-See also:
-- [Visualizing A Neural Machine Translation Model (Mechanics of Seq2seq Models With Attention)](
+See also [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/) and
+[Visualizing A Neural Machine Translation Model (Mechanics of Seq2seq Models With Attention)](
 https://jalammar.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention/)
-- [The Annotated Transformer](http://nlp.seas.harvard.edu/annotated-transformer/#background)
-- [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)
-- [MultiheadAttention — PyTorch 1.11.0 documentation](
-https://pytorch.org/docs/stable/generated/torch.nn.MultiheadAttention.html)
+for helpful visualizations.
+
+See [The Annotated Transformer (old version)](
+http://nlp.seas.harvard.edu/2018/04/03/attention.html#applications-of-attention-in-our-model) and
+[The Annotated Transformer (new version)](
+http://nlp.seas.harvard.edu/annotated-transformer/#background) for a helpful multi-modal
+summary of the Transformer's paper. The text in the newer version is too large, but can be zoomed.
+The tutorials [Language Modeling with nn.Transformer and TorchText](
+https://pytorch.org/tutorials/beginner/transformer_tutorial.html) and [Language Translation with
+nn.Transformer and torchtext](https://pytorch.org/tutorials/beginner/translation_transformer.html)
+are more focused on the details of implementing a Transformer model than how or why it works; for
+example they don't describe "attention" in detail and only mention [MultiheadAttention — PyTorch](
+https://pytorch.org/docs/stable/generated/torch.nn.MultiheadAttention.html) rather than use it in
+the code (much less look at its internals).

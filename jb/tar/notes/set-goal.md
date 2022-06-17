@@ -68,6 +68,22 @@ A common message in planning in the context of Scrum is to reduce cost and value
 same time. If you don't you may find yourself with an extremely costly task (because the goal was
 too rigid) or an extremely unvaluable task (because the goal was too flexible).
 
+Even if you're targeting a focused goal there are likely many ways to achieve it (more than one "hot
+path" to it). Should you use a CNN or attention? See also [Solution
+space](https://en.wikipedia.org/wiki/Feasible_region). A more negotiable target gives you a larger
+solution space.
+
+Not only are there multiple possible solutions in your solution space, for every solution there are
+multiple possible interpretations. For example:
+- The Bayesian vs. Frequentist interpretations of statistics
+- Interpreting a CONV layer as a FC layer ([How are 1x1 CONV the same as a FC layer? -
+  DSSE](https://datascience.stackexchange.com/questions/12830))
+
+In general, prefer the term "focused" to "directed" research. The latter implies someone else is
+directing your attention, and we resist being controlled. The term "focus" is more neutral; it's
+sometimes better to reduce our focus to a high-value subject. At other times, it's better to expand
+our focus to attend to more state.
+
 ### Objective function
 
 In the end, a value assigned to some goal state is a [Function (mathematics) -

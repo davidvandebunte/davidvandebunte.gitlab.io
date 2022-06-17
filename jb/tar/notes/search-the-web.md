@@ -7,8 +7,60 @@ materials.
 
 ## Design test
 
-The result of this process should be a list of resources that score highly according to your values
-in this area. See [](./evaluate-pedagogical-tool.md) for the scoring criteria used here.
+[rlv]: https://en.wikipedia.org/wiki/Relevance
+[qb]: https://en.wikipedia.org/wiki/Quality_(business)
+[dq]: https://en.wikipedia.org/wiki/Data_quality
+
+The result of this process should be a list of resources that score highly according to measure of
+both [Relevance][rlv] and quality. See [](./evaluate-pedagogical-tool.md) for the "quality" scoring
+criteria used here. For other potential measures see [Quality (business)][qb] and [Data
+quality][dq]. See also [Relevance (information retrieval)](
+https://en.wikipedia.org/wiki/Relevance_(information_retrieval)).
+
+[prir]: https://en.wikipedia.org/wiki/Precision_and_recall#Definition_(information_retrieval_context)
+
+Said another way (and simplifying to only a binary relevance metric), this process should provide
+higher precision searches because you are applying extra filters down to a higher quality subset of
+the internet. See [Precision and recall - Definition (information retrieval context)][prir]. See
+also [Evaluation measures (information retrieval)](
+https://en.wikipedia.org/wiki/Evaluation_measures_(information_retrieval)).
+
+### Leave negotiability
+
+Should your stopping point be a certain number of documents? It may be better to provide a range,
+so you can stop based on how the search is going. Was the last document you discovered better than
+the previous? How much better? How much extra time did it take to find?
+
+You can't be sure a question, even if it matches your question word for word, is being asked in the
+same context or provides a sufficiently detailed answer. All results are only probabilistic; as you
+work through this limited set of search results you'll need to continue to decide which to focus on.
+
+There's always a balance between finding a resource that perfectly answers your question (high
+relevance), and a resource that is high quality. You should "score" every resource by both its
+relevance and it's general quality. How you weigh relevance and quality should depend on the
+relative confidence you have that the question you're working on is more important than other
+related questions. When you were picking between different potential questions to answer, how did
+the question weights differ? Did you actually come up with the question *because* you noticed an
+article on it somewhere (found an interesting question while exploring)? Said another way, if you
+find a high quality resource that answers a related question, should you be opportunistic and read
+it instead?
+
+How much you favor high-relevance documents to high-quality documents will depend on how focused
+your research is in the moment (more focused rather than basic/exploratory will favor
+high-relevance documents i.e. those you already understand). See [](./set-goal.md). However, a high
+quality resource may still be a cheaper solution only because it provides better documentation.
+
+A perfect system would provide you with a document that exactly answered your query, but that would
+be the equivalent of asking an educated person for the answer (expensive). Not only would the person
+need to address the specific question, they'd have to answer it in words you understand. In some
+sense, they'd be doing your job (sounds good, but rare).
+
+What's the relative value in web searching relative to reading? How much time should you spend
+searching relative to the time you spend reading? You aren't learning much when you web search; it's
+a rather shallow process. You will typically get more from a conversation with a single webpage than
+a conversation with your search engine (i.e. put slightly more weight on high quality documents).
+For example, you're often relieved to go e.g. on vacation and only be able read documents rather
+than weigh them.
 
 ## Estimate cost
 
@@ -41,10 +93,7 @@ your results.
 Once you've taken the time to build a solid query, reuse it. Use the same query on several websites
 you prefer to work with, listed here in order of preference.
 
-This gives you better search results - results that are more relevant, higher precision (precision
-in the sense of P/R) because you are applying an initial filter down to a higher quality subset of
-the internet. Useful research websites in a rough priority order based on
-[](./evaluate-pedagogical-tool.md):
+Useful research websites in a rough priority order based on [](./evaluate-pedagogical-tool.md):
 
 ##### Stack Exchange
 
@@ -70,7 +119,8 @@ the content I post? - Help Center - Stack Overflow](https://stackoverflow.com/he
 also keeps track of your activity to some degree; see my answer in [How can I view vote history from
 all Stack Exchange sites? - Meta Stack Exchange](https://meta.stackexchange.com/a/379518/1208843)
 however. Try to make a comment or some other change to bookmark that you've made a significant
-investment in understanding a question and answer. See the *sxda* bookmark for [User davidvandebunte
+investment in understanding a question and answer. If you have many links you want to provide,
+consider creating your own answer. See the *sxda* bookmark for [User davidvandebunte
 - Stack Exchange - activity](https://stackexchange.com/users/309544/davidvandebunte?tab=activity).
 
 ##### Wikipedia
@@ -146,12 +196,22 @@ Papers](https://www.connectedpapers.com/) to find high-scoring papers that are c
 topic you are already focusing on.
 
 Other resources:
+- [Highest scored questions - CSSE](https://cs.stackexchange.com/questions?tab=Votes)
 - [DeepMind - Research](https://www.deepmind.com/research)
 - [Meta AI Blog](https://ai.facebook.com/blog/)
 - [OpenAI Blog](https://openai.com/blog/)
 - [NVIDIA Blog](https://blogs.nvidia.com/)
 - [Highest scored questions - Cross Validated](https://stats.stackexchange.com/questions?tab=votes&page=1)
 - [Home - colah's blog](https://colah.github.io/)
+
+Limit the number of websites you regularly visit, to make relearning from them easier and focus your
+investments. To learn to use a website is an investment in itself, such as e.g. learning how to
+insert a reference on Wikipedia, where to find activity history, or how to construct links to
+specific answers on SE. If you need to relearn a topic, it will help to be able to relearn from an
+easily accessible website (one that shows up quickly in search). Websites even have certain layouts
+that you get used to and therefore lead to less "surprise" when you go to a completely new page on
+the same site. That is, you'll hit a memory-guided [Saccade](https://en.wikipedia.org/wiki/Saccade)
+more often.
 
 #### Wikipedia
 
