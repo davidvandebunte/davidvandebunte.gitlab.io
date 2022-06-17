@@ -17,6 +17,18 @@ notes, your open browser tabs, the weights in a net being trained, or the weight
 your brain. Imagine you could see your own weights in your brain. What new set of mental weights are
 you attending to with this new text editor or web browser tab?
 
+In the context of the [Attention](https://en.wikipedia.org/wiki/Attention) article, expanding your
+focus to a place of [Simultaneous](https://en.wikipedia.org/wiki/Attention#Simultaneous) attention.
+You will typically be attending to more state through abstractions.
+
+### Divided attention
+
+Expanding your focus is not the same as "Alternating" or "Divided" attention in the model of
+Sohlberg and Mateer. It's also not related to [Human multitasking](
+https://en.wikipedia.org/wiki/Human_multitasking) or [Continuous partial attention](
+https://en.wikipedia.org/wiki/Continuous_partial_attention). In general it's not about switching
+tasks or controlling your attention, but merely about looking at the bigger picture.
+
 ### Find value
 
 See [](./set-wide-goal.md).

@@ -33,3 +33,10 @@ frequentist with bayesian thinking. Hopefully they don't reinvent helpful math a
 Should the learning rate be analogous to how you come back to planning?
 - [machine-learning-articles/getting-out-of-loss-plateaus-by-adjusting-learning-rates.md at main ·
   christianversloot/machine-learning-articles](https://github.com/christianversloot/machine-learning-articles/blob/main/getting-out-of-loss-plateaus-by-adjusting-learning-rates.md)
+
+Eventually add a `switch-focus.md` if there's a need to address multi-tasking, continuous partial
+attention, etc? It may not be necessary, if you only expand your focus to the level of planning and
+then dig back down. See [Attention span](https://en.wikipedia.org/wiki/Attention_span) however; do
+children automatically try a variety of tasks in order to learn faster? When you're training a net
+via transfer learning, should you rapidly switch between tasks to start, then decrease the switch
+rate with time?
