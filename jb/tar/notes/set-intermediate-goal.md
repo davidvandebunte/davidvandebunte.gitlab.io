@@ -13,7 +13,7 @@ kernelspec:
   name: python3
 ---
 
-# Refine plan
+# Set intermediate goal
 
 Given a single goal and a less-than-fully-specified plan, expand it into more detailed subplans.
 That is, should you take the time to produce this graph:

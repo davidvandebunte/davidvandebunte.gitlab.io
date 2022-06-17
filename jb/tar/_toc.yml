@@ -71,10 +71,10 @@ parts:
       - file: notes/handle-interruption.md
       - file: notes/identify-resource.md
       - file: notes/plan-personal-week.md
-      - file: notes/refine-plan.md
       - file: notes/retrospect-on-life.md
       - file: notes/set-goal.md
       - file: notes/set-deep-goal.md
+      - file: notes/set-intermediate-goal.md
       - file: notes/set-wide-goal.md
   - caption: Drafts
     chapters:
