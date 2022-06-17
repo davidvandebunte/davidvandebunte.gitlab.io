@@ -71,12 +71,6 @@ Is there really any difference between an article and a book, besides that the l
 should be able to evaluate many static pedagogical resources the same way, just considering length
 as one factor.
 
-## Prefer newer tools
-
-Web articles usually include a date of publication. All else being equal (e.g. whether the source is
-primary or not), a somewhat reliable heuristic is that newer articles are better than older ones.
-Newer textbooks can refer to newer research. When was the last time the source code was edited?
-
 ## Prefer primary sources
 
 This usually conflicts with a preference for newer tools, but regardless, an old primary resource is
@@ -86,7 +80,8 @@ often-not-always better than a nearly as old non-primary resource.
 
 For a textbook, can you get an ebook version? Can you find a DRM-free ebook? Can you get a pdf? Can
 you get an audiobook version? If there are technical terms in the book, you’ll learn to pronounce
-them.
+them. Consider all the modalities used in ML; see also [Perceiver: General Perception with Iterative
+Attention - 2103.03206.pdf](https://arxiv.org/pdf/2103.03206.pdf).
 
 [ega]: https://docs.google.com/document/d/1pvN9a1-wyGytIcureLBqm8zXgtQNCSZ297pZitAce4c/edit#
 [ep]: https://docs.google.com/document/d/1GV8x2JL4cAvQuIycWjeyDYOPq-m6eVmXK2yviz_Y-qE/edit#heading=h.ptg6aneohrgk
@@ -112,15 +107,6 @@ https://en.wikipedia.org/wiki/Split_attention_effect) when it comes to code and 
 That is, for at least these two modalities the content is kept together. Tools like [Sphinx](
 https://www.sphinx-doc.org/en/master/) are another way to keep these modalities together.
 
-[bda3]: http://www.stat.columbia.edu/~gelman/book/
-
-Examples of the regular conflict between newer and primary resources:
-- Jonathan Hui’s articles on RCNN models and the Faster-RCNN paper
-- [Statistical Rethinking](./sr2-review.md) and [Bayesian Data Analysis][bda3]
-
-Often you need to learn from new, old, primary, and non-primary sources, making up for bad
-explanations in one with better explanations in another.
-
 Can you get an offline (paper) version? To keep your own bookshelf empty, can you get it from a
 nearby library when you need the paper copy? It’s likely you'll use it on a camping trip or
 vacation, then never touch it again. If you want the paper version again, you can get it from a
@@ -130,6 +116,46 @@ version again.
 See also:
 - [Modality effect](https://en.wikipedia.org/wiki/Modality_effect)
 - [Multi-media](https://en.wikipedia.org/wiki/Multimedia)
+
+### Learn from both primary and secondary sources
+
+[bda3]: http://www.stat.columbia.edu/~gelman/book/
+
+Examples of the regular conflict between primary and secondary resources:
+- Jonathan Hui’s articles on RCNN models and the Faster-RCNN paper
+- [Statistical Rethinking](./sr2-review.md) and [Bayesian Data Analysis][bda3]
+
+Web articles usually include a date of publication. All else being equal (e.g. whether the source is
+primary or not), a somewhat reliable heuristic is that newer articles are better than older ones.
+Newer textbooks can refer to newer research, allowing you to skip over historical details. Would you
+start learning from a book where the source code was last edited years ago? The downside to these
+resources is that they are typically secondary (unless you are on the bleeding edge).
+
+Learning from the original paper is going to be more valuable if you need to reference it; it's
+better to reference the original than secondary sources because secondary sources add unnecessary
+indirection and potentially bias. On Wikipedia it's still acceptable to cite secondary sources
+however; see [Wikipedia:No original research - Primary, secondary, and tertiary sources](
+https://en.wikipedia.org/wiki/Wikipedia:No_original_research#Primary,_secondary_and_tertiary_sources).
+
+Instead, prefer neither older nor newer pedagogical material; analyze the original with
+supplementary explanations (use them all, in focused work). Make up for bad explanations in one with
+better explanations in another. In the end, your internal representation will be richer if you learn
+from multiple sources.
+
+If one resource doesn't use language that is easy for you to consume, the other might. In the
+process, you'll likely learn new language when e.g. one resource used more compact (unfamiliar)
+language and another used expanded language you understood. This is similar to how documentation
+makes code more understandable; either representation of the model should be acceptable (if both are
+complete) but it helps to see two versions. Most of the time, you'll have a paper and Wikipedia to
+inspect in parallel; sometimes you'll have SE questions, code, and alternative websites found in a
+web search.
+
+In the same way that multiple resources can help you understand the same concept from multiple
+angles (use them all, not just one) all the answers to a SE question can be helpful. Give them all a
+plus or minus when you get invested in a question. Should SE questions be where you collect all your
+links, rather than Wikipedia? It's almost like Wikipedia is just one high-quality answer in a list
+of possible answers. Multiple resources often include multiple modalities, which allows for
+zero-shot learning.
 
 ## Migrate to a single learning focus
 
@@ -164,7 +190,26 @@ When you are a significant way through a book, contact the author with any other
 chapter solutions) you generate so he can link to them. Why not help others? You may even get
 feedback from him/her.
 
-If the material comes with source code, then it's by definition editable.
+### Prefer copyleft licenses
+
+If the material comes with source code, it's usually editable. However, you could copy and paste any
+web article (in e.g. natural language) and edit it. Is the content also have a permissive or
+copyleft license? If not, you won't be able to share your modifications and will need to worry about
+fair use if you e.g. need to reproduce part of the material to review it.
+
+It can be hard to tell if a website is based on open-source content. For example, even open source
+content based sites can require you to log in (though they are less likely to do so). [Dive into
+Deep Learning](https://d2l.ai/) looks like it isn't at first, but you can see GitHub links at the
+top.
+
+Look for "Terms" or "About" at the bottom of the page, most of the time. You can search for
+"opyright" in the Terms for information on how e.g. they own everything you submit to their
+platform. Read the terms before "signing" (in this case by reading the contents of the page, i.e.
+creating a mental link). Another option is to web search for their content license, i.e. "quora
+content license" for the website Quora.
+
+If you can't tell in one minute, block them. Clearly they're not advertising their license, which
+they would if it was focused on their user.
 
 ## Prefer free tools
 

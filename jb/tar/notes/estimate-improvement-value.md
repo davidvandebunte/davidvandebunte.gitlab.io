@@ -44,9 +44,8 @@ computer how to achieve larger goals.
 ## Unit of measurement
 
 Typically measured in units of dollars, another currency, or in general in any [Store of value](
-https://en.wikipedia.org/wiki/Store_of_value). See also:
-- [Money](https://en.wikipedia.org/wiki/Money)
-- [Currency](https://en.wikipedia.org/wiki/Currency)
+https://en.wikipedia.org/wiki/Store_of_value). See also [Money](https://en.wikipedia.org/wiki/Money)
+and [Currency](https://en.wikipedia.org/wiki/Currency).
 
 All value measurements must have units; they are not unitless. They cannot be unitless, because they
 must be measurable (directly or indirectly) in a state space. Although a state space search may
@@ -63,9 +62,8 @@ A cost to one person is a return to another. That is, specifying value separatel
 abstract the "how" from the "why" we are pursuing a goal (the "what"). It gives us independent
 opinions about what is valuable; the person making a good obviously thinks it is valuable. For a
 person working alone, it lets them get into focused work on thinking about value, then focused work
-on thinking about cost (separately). See also:
-- [Cost](https://en.wikipedia.org/wiki/Cost)
-- [Price](https://en.wikipedia.org/wiki/Price)
+on thinking about cost (separately). See also [Cost](https://en.wikipedia.org/wiki/Cost) and
+[Price](https://en.wikipedia.org/wiki/Price).
 
 ### Time is not money
 
@@ -122,9 +120,9 @@ the most beautiful place in the world, but if you don't go with the right attitu
 understanding of what you are going for (temporary warm weather, relationships) it won't be a good
 time.
 
-Shaking the idea that time is money may inspire you to clear your calendar:
-- [Warren Buffett taught Bill Gates by sharing his blank calendar](
-https://www.cnbc.com/2018/09/07/warren-buffett-taught-bill-gates-about-time-management-by-sharing-his-blank-calendar.html)
+Shaking the idea that time is money may inspire you to clear your calendar; see [Warren Buffett
+taught Bill Gates by sharing his blank calendar](
+https://www.cnbc.com/2018/09/07/warren-buffett-taught-bill-gates-about-time-management-by-sharing-his-blank-calendar.html).
 
 #### Time can't buy time
 
@@ -161,8 +159,7 @@ worlds with respect to an [Investment][inv] action, with a separately configurab
 
 For the sake of scheduling (fitting items where they fit in your schedule e.g. if they are small)
 it's not desirable to absorb time estimates into weight estimates (unless they are also reported
-independently). See:
-- [Scheduling (computing)](https://en.wikipedia.org/wiki/Scheduling_(computing))
+independently). See [Scheduling (computing)](https://en.wikipedia.org/wiki/Scheduling_(computing)).
 
 #### Time is money model
 
@@ -269,9 +266,9 @@ value only because you declared (to yourself) that it has value. It'll be easy t
 define using it, because you define whether you are winning.
 
 Plenty of guides exist online to create your own cryptocurrency, which might be (theoretically)
-useful if you need machines to optimize on some task for you. For other examples, see:
-- [How to Start Your Own Private Currency - The Atlantic](
-https://www.theatlantic.com/business/archive/2011/04/how-to-start-your-own-private-currency/73327/)
+useful if you need machines to optimize on some task for you. For other examples, see [How to Start
+Your Own Private Currency - The Atlantic](
+https://www.theatlantic.com/business/archive/2011/04/how-to-start-your-own-private-currency/73327/).
 
 Try defining your own personal currency, e.g. Personal dollars, roughly equivalent to an hour of
 your time. In practice you'll likely mismanage the currency (leading to hyperinflation), only
@@ -337,9 +334,8 @@ importantly include them in release notes.
 See [](./define-values.md) for a comparison between values and goals. When you are working on a
 specific goal/project, your value estimation function should regularly include the value you put in
 acquiring the knowledge that the solution requires. Call what you learn as part of a project
-"transfer" value; see:
-- [Transfer of learning](https://en.wikipedia.org/wiki/Transfer_of_learning)
-- [Transfer learning](https://en.wikipedia.org/wiki/Transfer_learning)
+"transfer" value; see [Transfer of learning](https://en.wikipedia.org/wiki/Transfer_of_learning) and
+[Transfer learning](https://en.wikipedia.org/wiki/Transfer_learning).
 
 Transfer value is a specific kind of instrumental value, scored based on the set of projects you
 expect to work on in the future.
@@ -405,9 +401,20 @@ need to be able to perform the task once. Is it worth the cost of learning somet
 going to need to perform it once, when the next time you may need to follow it will be years from
 now, and may require a mostly different process to get the same result?
 
+Said another way, do you need to build something reusable? See the distinction between one-time and
+reusable (causal) plans in [](./estimate-subplan-weight.md). We tend to prefer goals that give us a
+reusable asset (e.g. we learn something, write reusable code) because we can "profit" from the
+action more than once. People are curious; we often value novelty and unpredictability in itself
+(see a discussion in [](./explore-domain.md)). It's likely we have this preference because, all else
+being equal, it's better to learn something new (i.e. something reusable) than do something
+one-time. When you're learning a decent heuristic is to pursue novelty; only you know if you’re
+learning at a rapid or a slow rate on a particular resource. Ironically, learning is often (and
+ideally) a one-time action.
+
 In the case of a unit test in a build service, where the value in the test is often only to a
-developer or developers, we more often need to make hard decisions about whether to even keep
-certain tests.
+developer or developers, we need to make hard decisions about whether to keep certain tests. Tests
+primarily need to be reusable in order to help developers relearn a concept in order to change code.
+Can a test that intermittently fails only be reenabled as needed (commented out)?
 
 Let's define reproducibility as generalizability across time. If literally nothing changed, that is,
 we reproduced the state of the world at the exact time a test passed, the one time it did, then it
@@ -455,7 +462,8 @@ reflected on its value.
 
 Humans and other animals have curiosity, a desire to learn that is often independent of any value
 system. What we are naturally curious about often ends up being closely related to valuable skills,
-but it's hard to attribute the drive to that alone.
+but it's hard to attribute the drive to that alone. See [](./explore-domain.md) for more comments on
+curiosity.
 
 Should we should support [Basic research](https://en.wikipedia.org/wiki/Basic_research) with
 government funding? This kind of research isn't driven to *alter* or control our environment and

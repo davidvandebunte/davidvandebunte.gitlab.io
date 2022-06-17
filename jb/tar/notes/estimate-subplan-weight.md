@@ -332,6 +332,15 @@ where you understood the costs everywhere, but no indicator of value, no develop
 If you didn't want to e.g. increase or decrease output, the conversation about the plan would never
 have happened.
 
+What if you were to come to a network where you wanted to improve it without considering any of your
+own values (if e.g. you have none)? You'd have to ask someone who did have values with respect to
+the network. Bill Gates was famous for selling products that never existed; he was an early adopter
+of the vaporware approach. With vaporware, you can query the market for the value of something
+before it even exists or you have any idea how to do it. In issue-tracking systems we often talk
+about TODO-x where x is a number; it's possible to estimate the value of a goal before anyone has
+any precise (e.g. numerical) understanding of how to do it. Of course, no one would have created the
+goal if no one saw value in it.
+
 So where do you start? As previously discussed, most actions have inputs and outputs. For example,
 to [](./share-comment.md) you need to have a comment ready in your head and a web app to post it on.
 To [](./refine-plan.md) you need a TODO-x to act on. Until we generate at least one idea about how

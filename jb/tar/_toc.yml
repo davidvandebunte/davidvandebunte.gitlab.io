@@ -58,8 +58,13 @@ parts:
       - file: notes/learn-r.md
       - file: notes/estimate-improvement-value.md
       - file: notes/evaluate-pedagogical-tool.md
+  - caption: Focus
+    chapters:
+      - file: notes/search-the-web.md
+      - file: notes/stay-on-focus.md
   - caption: Plan
     chapters:
+      - file: notes/avoid-explore-exploit.md
       - file: notes/estimate-subplan-weight.md
       - file: notes/explore-domain.md
       - file: notes/flatten-plan.md
@@ -71,8 +76,9 @@ parts:
       - file: notes/set-goal.md
       - file: notes/set-deep-goal.md
       - file: notes/set-wide-goal.md
-      - file: notes/stay-on-focus.md
   - caption: Drafts
     chapters:
+      - file: notes/improve-add-attention-mechanism.md
+      - file: notes/improve-expand-focus.md
       - file: notes/improve-design-experiments.md
       - file: notes/improve-estimate-subplan-weight.md

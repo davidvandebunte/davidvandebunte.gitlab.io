@@ -2,6 +2,11 @@
 
 Part of [](./explore-domain.md). Why look farther into the future?
 
+Said another way, do you plan to profit from the action in the long-term? That is, will it produce
+something reusable? If so, consider how valuable that value-producing artifact (investment) will be
+over its lifetime and how much it will cost to build. See also a discussion on the value in
+reproducibility in [](./estimate-improvement-value.md).
+
 ## Future costs affect today
 
 Because there is more than one way to solve every problem, you can often find ways to solve two
@@ -43,6 +48,9 @@ Learning older concepts is not without value, however, in the same way that fail
 contain information (unfortunately there are many more ways to fail than succeed). Many pedagogical
 materials are essentially a compression of history, skipping over "less successful" results in an
 effort to focus on the big improvements (similar to a well-compressed git branch).
+
+Are the tools you want to use still in the latest libraries on the topic, e.g. PyTorch? Library
+writers have a limited resources as well, and only write the most important functions.
 
 ## Future needs affect today
 
