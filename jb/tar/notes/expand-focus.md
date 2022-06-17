@@ -33,12 +33,6 @@ tasks or controlling your attention, but merely about looking at the bigger pict
 
 See [](./set-wide-goal.md).
 
-Unorganized notes generally indicate you really want to focus on a topic, but believe there is value
-in a thought you should save for later. You can add these (or any other thoughts) to the set of
-notes you are attending to, without making them show up in `git` as uncommitted changes, by adding
-them to a file in your text editor but not saving the file (e.g. `:w` in `vim`). Another option is
-to open a "reminder tab" in your web browser and move it out of the way.
-
 ### Decrease costs
 
 To analogize to the work that nets do, you're temporarily switching to task A (a different
@@ -58,3 +52,46 @@ net is attempting to perform classification, it is attending to both the weights
 classification and the shared weights used for both classification and detection. It could regularly
 expand its focus to all tasks it can perform, however, and then narrow back into the detection task
 (assuming it was last working on classification).
+
+## Estimate cost
+
+You should be able to provide some estimate of how hard a question is to answer before you expand
+your focus. Is this a quick search or something that will take an hour?
+
+Do a search for a word on your existing tab. It's likely what you see will be more appropriate than
+a global web search.
+
+For estimates of more than 5 minutes, you should write down (in your notes) your question before
+opening a new tab to try to answer the question. This is good evidence that you know the exact
+question you want, and that you're going to use good searching tools e.g. [](./search-the-web.md) to
+answer the question (dependency). It also indicates that you've thought enough about the question to
+believe that it is a strict dependency; you've read alternative explanations and they do not solve
+the problem. There's always more than one way to solve a problem (understand).
+
+For estimates of more than 5 minutes, you should also try to answer the question from your own notes
+(like an open note test) before moving on, because you do have a preference for e.g. Bayesian to
+Frequentist statistics. More importantly, you may be able to skip the step of web searching if you
+already have already collected good pedagogical resources on a topic. You'll be able to learn much
+faster from resources you've already evaluated for quality and skimmed.
+
+For an estimate of more than 5 minutes, you'll also want the question written down in case you get
+interrupted somehow.
+
+In some sense this is a "little failure" because your own language was not enough (with the
+resource) to solve the problem. When you run into a "little success" you naturally go through
+closing tabs and windows that are no longer relevant. You should do the same for little failures;
+serialize what you've learned so you can add a dependency (unfortunately expanding scope).
+
+At the least, you know you've discovered a dependency if you can't answer a question without opening
+another tab. There may be another way to solve the problem, but to understand the problem from the
+particular perspective you are considering this concept is a dependency. You can add the dependency
+to your future git graph, if it's worth it (you aren't finding an alternative solution after web
+searching alongside notes for a few hours) then replan.
+
+In order to avoid spilling notes (see [](./maintain-focus.md), you will need to narrow your focus to
+some degree. See [](./narrow-focus.md)).
+
+### Notes
+
+Run `git grep` for all the key words in question, and use or delete your old thoughts. This is the
+equivalent of querying your own notes.
