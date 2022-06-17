@@ -17,6 +17,29 @@ https://en.wikipedia.org/wiki/Singular_value_decomposition)
 
 Add a reduce-dimensionality.md article.
 
+The model is not the same as the real thing; you almost always simplify the real world to put it
+into a model. So it's almost never a question of whether or not to reduce dimensionality, but
+whether you can afford to reduce it more (for your particular task).
+
+A greater simplification lets you attend to more at once, at the cost of effectively letting you see
+less detail in every item because it's more simplified. For example, a planning git graph has many
+tasks that are all drastic simplifications of the full task. Some of the worst aspects of it are
+that you can't really rearrange the items in the graph without understand them in enough detail to
+understand their dependencies. Still, the graph is useful because it lets you see (attend to) more
+at once.
+
+Similarly, to "load" code into your head by reading it is actually to decompress it into natural
+language (increasing dimensionality). You often think of compressing code into natural language,
+because documentation is often shorter than the code. The reason this isn't "compression" is that
+documentation is also much less complete (detailed) than code. Documentation attends to less, but
+can be more detailed because of that. Watch out for code that throws away details, however, in the
+sense of throwing away long variable names in exchange for single letter names (or even more so,
+when compiling to a binary). Ideally the documentation is in the code so nothing gets lost (avoid
+lossy compression), or at the least you retain links to documentation (as e.g. .md files.
+
+Is a picture worth a thousand words? It depends on the picture, and what kind of task you need to do
+with it. Why aren't you asking about the resolution of the image?
+
 See:
 - [Dimensionality reduction](https://en.wikipedia.org/wiki/Dimensionality_reduction)
 
