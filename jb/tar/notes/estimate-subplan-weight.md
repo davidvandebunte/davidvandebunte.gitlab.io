@@ -357,8 +357,9 @@ nothing. Everything we do depends on our own existence; see comments in
 [](./update-dependencies.md).
 
 In the language of attention, these inputs are what are focal as you work on the task (the state you
-are attending to). When you're planning, you are expanding your focus to your whole life, everything
-you care about. See [](./expand-focus.md).
+are attending to). When you're planning, you are expanding your focus to all the state that is
+necessary to control the state you are interested in changing, which is initially everything you
+care about. See [](./expand-focus.md).
 
 What actions involve expanding your focus to your whole life, everything you care about? We could
 call these "implicit" actions because they are the first part of the planning subplan (and therefore
