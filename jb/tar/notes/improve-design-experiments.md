@@ -5,14 +5,6 @@
 See:
 - [Inductive bias](https://en.wikipedia.org/wiki/Inductive_bias)
 
-# TODO-svd: How can SVD be used to reduce dimensionality?
-
-See both TODO-dr and TODO-snsa. High quality resource:
-- [dimensionality reduction - Relationship between SVD and PCA. How to use SVD to perform PCA? - CV](
-https://stats.stackexchange.com/questions/134282/relationship-between-svd-and-pca-how-to-use-svd-to-perform-pca)
-- [Singular value decomposition - Wikipedia](
-https://en.wikipedia.org/wiki/Singular_value_decomposition)
-
 # TODO-dr: Should you reduce the dimensionality of your inputs?
 
 Add a reduce-dimensionality.md article.
@@ -40,8 +32,19 @@ lossy compression), or at the least you retain links to documentation (as e.g. .
 Is a picture worth a thousand words? It depends on the picture, and what kind of task you need to do
 with it. Why aren't you asking about the resolution of the image?
 
+Could you use PCA to come up with initial weights to help ease the training of a net? That is,
+manually strip out as many variables as you want, use that as the dimensionality of a matrix, and
+then let the net learn to tweak the weights of the projection matrix as well.
+
 See:
 - [Dimensionality reduction](https://en.wikipedia.org/wiki/Dimensionality_reduction)
+
+Tag search on SE: [Highest scored 'dimensionality-reduction' questions - CV](
+https://stats.stackexchange.com/questions/tagged/dimensionality-reduction).
+
+Is multicollinearity really much of a problem as long as you are doing some dimensionality
+reduction anyways? See:
+- https://en.wikipedia.org/wiki/Dimensionality_reduction#Dimension_reduction
 
 This is related to whether you should ever add a new variable to a model. Does the variable matter?
 See also:
@@ -50,8 +53,6 @@ See also:
 https://datascience.stackexchange.com/questions/24452/)
 - [What is dimensionality reduction? Difference between feature selection and extraction? - DSSE](
 https://datascience.stackexchange.com/questions/130/)
-- [pca - Making sense of principal component analysis, eigenvectors & eigenvalues - Cross Validated](
-https://stats.stackexchange.com/questions/2691/making-sense-of-principal-component-analysis-eigenvectors-eigenvalues)
 
 Once you define this better, replace the link to Wikipedia with your own article in your public
 notes (run a git grep to find the link you have now).
@@ -61,6 +62,28 @@ your inputs. Should you always use PCA or an autoencoder to help remove the unne
 If it just learns to ignore the data in the first few layers it's not a big deal, though.
 [1]: https://stats.stackexchange.com/questions/70899/what-correlation-makes-a-matrix-singular-and-what-are-implications-of-singularit
 [2]: https://en.wikipedia.org/wiki/Dimensionality_reduction#Feature_selection
+
+# TODO-rbsap
+
+Commenting on [](./relationship-between-svd-and-pca.md).
+
+Why is `flip_signs` necessary? See also [linear algebra - Calculating SVD by hand: resolving sign
+ambiguities in the range vectors. - Math SE](https://math.stackexchange.com/questions/1805191/).
+
+See point `4.`. What are loadings?
+
+See point `7.`. Why would anyone want to perform PCA on a correlation matrix rather than a
+covariance matrix? Related to [Principal component analysis - Further considerations](
+https://en.wikipedia.org/wiki/Principal_component_analysis#Further_considerations).
+
+See also [Highest scored 'linear-algebra' questions - Math SE](
+https://math.stackexchange.com/questions/tagged/linear-algebra).
+
+# TODO-mspca
+
+See the first answer to [Making sense of principal component analysis, eigenvectors & eigenvalues -
+CV](https://stats.stackexchange.com/a/140579/189415). Missing the [Spectral theorem](
+https://en.wikipedia.org/wiki/Spectral_theorem) dependency.
 
 # TODO-ce: Is "cross-entropy" a useful abstraction?
 
