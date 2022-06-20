@@ -13,7 +13,7 @@ kernelspec:
   name: python3
 ---
 
-# SVD and PCA
+# SVD for PCA
 
 Supplementary material to the answer by `amoeba` to [Relationship between SVD and PCA. How to use
 SVD to perform PCA? - Cross Validated](https://stats.stackexchange.com/a/134283/189415).
@@ -49,8 +49,11 @@ C = np.cov(X, rowvar=False)
 C
 ```
 
-It is a symmetric matrix and so it can be diagonalized: $$\mathbf C = \mathbf V \mathbf L \mathbf
-V^\top$$
+It is a symmetric matrix and so it can be diagonalized:
+
+$$
+\mathbf C = \mathbf V \mathbf L \mathbf V^\top
+$$
 
 The eigenvalues in decreasing order:
 
