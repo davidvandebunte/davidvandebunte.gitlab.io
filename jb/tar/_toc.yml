@@ -25,7 +25,7 @@ parts:
       - file: notes/chp8-q32.md
   - caption: Stack Exchange
     chapters:
-      - file: se/relationship-between-svd-and-pca.md
+      - file: notes/se/relationship-between-svd-and-pca.md
   - caption: Memoize
     chapters:
       - file: notes/memoize-artifact.md
