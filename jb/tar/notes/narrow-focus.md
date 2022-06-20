@@ -36,8 +36,11 @@ attend to some alternative goal.
 ### Medium
 
 Look at how many uncommitted changes you have and get them into a git commit. You often leave
-uncommitted changes as small goal states. That is, to save them off in an "organized" place or at
-the least save them into an "organized" commit.
+uncommitted changes as small goal states. That is, with a goal to save them off in an "organized"
+place or at the least save them into an "organized" commit. Still, to save time when you're
+narrowing your focus it's perfectly fine to many of these miscellaneous additions into an "Add
+miscellaneous notes" commit. The advantage of leaving some content uncommitted is you'll easily be
+able to look it up (though you can also do in `git history`).
 
 ### Long
 

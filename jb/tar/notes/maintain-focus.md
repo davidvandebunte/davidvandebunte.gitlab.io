@@ -51,6 +51,9 @@ Use `%` to search open tabs rather than opening a new one. See [Search open tabs
 Firefox Help](https://support.mozilla.org/en-US/kb/search-open-tabs-firefox). When you use this in a
 new tab, the new tab is automatically removed when you select an existing tab.
 
+Simply click on links rather than Ctrl-click to avoid excessive tabs, as well. Use Ctrl-click when
+you want to expand your scope (see [](./expand-focus.md)), effectively adding a new goal.
+
 ### Zoom out
 
 It helps to be able to zoom in more as you get more invested in a webpage. This is similar to how
@@ -102,6 +105,13 @@ you may be able to skip the step of web searching if you already have already co
 pedagogical resources on a topic. You'll be able to learn much faster from resources you've already
 evaluated for quality and skimmed.
 
+If you're working from both a primary and supplementary article, give more space to the
+supplementary article by putting it in a different browser window and a different monitor. It's not
+easy to rapidly switch back and forth between two tabs and still understand, especially if you need
+to open more tabs once in a while. See [shortcut key to detach a tab in firefox (move tab to new
+window) - SU](https://superuser.com/a/1514487/293032); to re-attach use a similar strategy.
+Alternatively, always keep two Firefox windows open, one leaning SE and one leaning Wikipedia.
+
 #### More than 1 hour
 
 In some sense this is a "little failure" because your own language was not enough (with the
@@ -112,8 +122,29 @@ construct an abstraction. If the estimate is large, then in order to avoid spill
 [](./maintain-focus.md), you will need to narrow your focus to some degree. See
 [](./narrow-focus.md)).
 
+##### Save the dependency
+
 At the least, you know you've discovered a dependency if you can't answer a question without opening
-another tab. There may be another way to solve the problem, but to understand the problem from the
-particular perspective you are considering this concept is a dependency. You can add the dependency
-to your future git graph, if it's worth it (you aren't finding an alternative solution after web
-searching alongside notes for a few hours) then replan.
+another tab. There may be another way to construct your new abstraction, and in the short-term you
+should usually look for alternative solutions. Even if you do so, however, to understand the problem
+from this additional perspective requires this dependency.
+
+Why save the dependency, even if you don't fill it in now? You'd ideally like to understand the
+abstraction from as many perspectives as possible so you don't forget it and so that you can quickly
+relearn the concept from e.g. a different, shorter perspective. If you can rederive the result from
+this new perspective, you may eventually be able to reduce duplication in your mental networks (the
+whole point of math and notes).
+
+Therefore, at the least, add the dependency to a local planning git graph and a link/keyword in the
+notes where you are discussing the problem. You need the link/keyword so you can find the "missing"
+concept later when you are grepping for e.g. mathematical keywords that may be worth learning about.
+You need the local planning graph so you remember why the concept would have been useful. A question
+may not be enough to motivate returning to the dependency.
+
+Another major reason to save off (write down) missing dependencies is it motivates completion. You
+do not need to understand all material from every possible perspective (e.g. frequentist
+interpretations, in some cases); by saving off the missing perspectives you will feel you are able
+to move on. For a SE answer, this is like adding a private comment, one that is not appropriate for
+the public domain because you haven't done sufficient research to answer it on your own (but also
+don't want to). Said another way, you're stripping out minor alternative goals. The result (in your
+notes) is a mix of a reminder TODo and unresolved questions.
