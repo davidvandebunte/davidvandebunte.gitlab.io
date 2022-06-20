@@ -65,7 +65,7 @@ If it just learns to ignore the data in the first few layers it's not a big deal
 
 # TODO-rbsap
 
-Commenting on [](./relationship-between-svd-and-pca.md).
+Commenting on [](./se/relationship-between-svd-and-pca.md).
 
 Why is `flip_signs` necessary? See also [linear algebra - Calculating SVD by hand: resolving sign
 ambiguities in the range vectors. - Math SE](https://math.stackexchange.com/questions/1805191/).
