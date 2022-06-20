@@ -343,7 +343,7 @@ goal if no one saw value in it.
 
 So where do you start? As previously discussed, most actions have inputs and outputs. For example,
 to [](./share-comment.md) you need to have a comment ready in your head and a web app to post it on.
-To [](./set-intermediate-goal.md) you need a TODO-x to act on. Until we generate at least one idea
+To [](./set-subgoal.md) you need a TODO-x to act on. Until we generate at least one idea
 about how to make money, we can't evaluate it (assuming you have no reusable plans or experience).
 
 Said another way, most actions require an imagined world where the input exists as state somewhere
@@ -404,9 +404,9 @@ schedule reminders to add actions to update the state.
 ## Contrast subplans
 
 When you're down to e.g. 3-4 subplans you often need to "contrast" (i.e. emphasize the differences)
-between them to help make a final decision among them. See [](./set-intermediate-goal.md) to improve
-all 3-4 ideas to add more details until you get to a point where there's a clear weight difference
-among them.
+between them to help make a final decision among them. See [](./set-subgoal.md) to improve all 3-4
+ideas to add more details until you get to a point where there's a clear weight difference among
+them.
 
 Refining the plan on the idea you will end up working on is not a waste of time because you will
 need to do it anyways to come up with a first step. It may be a waste to refine the other 2-3 ideas,
