@@ -343,8 +343,8 @@ goal if no one saw value in it.
 
 So where do you start? As previously discussed, most actions have inputs and outputs. For example,
 to [](./share-comment.md) you need to have a comment ready in your head and a web app to post it on.
-To [](./refine-plan.md) you need a TODO-x to act on. Until we generate at least one idea about how
-to make money, we can't evaluate it (assuming you have no reusable plans or experience).
+To [](./set-intermediate-goal.md) you need a TODO-x to act on. Until we generate at least one idea
+about how to make money, we can't evaluate it (assuming you have no reusable plans or experience).
 
 Said another way, most actions require an imagined world where the input exists as state somewhere
 in it (before you apply the function to it). You might say these actions depend on particular state
@@ -356,13 +356,15 @@ value (though many actions only depend on space to "write" to). Similarly, no ac
 nothing. Everything we do depends on our own existence; see comments in
 [](./update-dependencies.md).
 
-Do any actions take a large part of world state as an input rather than a particular piece of it?
-We generally classify these as an "explore" action in the context of the explore-exploit problem
-(see [Multi-armed bandit](https://en.wikipedia.org/wiki/Multi-armed_bandit)).
+In the language of attention, these inputs are what are focal as you work on the task (the state you
+are attending to). When you're planning, you are expanding your focus to all the state that is
+necessary to control the state you are interested in changing, which is initially everything you
+care about. See [](./expand-focus.md).
 
-We could also call these "implicit" actions because they are the first part of the planning subplan
-(and therefore are always an action option), even if you have no reusable life experience or
-reusable plans to go on. In terms of a git graph, they are always there for you to pick:
+What actions involve expanding your focus to your whole life, everything you care about? We could
+call these "implicit" actions because they are the first part of the planning subplan (and therefore
+are always an action option), even if you have no reusable life experience or reusable plans to go
+on. In terms of a git graph, they are always there for you to pick:
 
 ```
 ...
@@ -402,9 +404,9 @@ schedule reminders to add actions to update the state.
 ## Contrast subplans
 
 When you're down to e.g. 3-4 subplans you often need to "contrast" (i.e. emphasize the differences)
-between them to help make a final decision among them. See [](./refine-plan.md) to improve all 3-4
-ideas to add more details until you get to a point where there's a clear weight difference among
-them.
+between them to help make a final decision among them. See [](./set-intermediate-goal.md) to improve
+all 3-4 ideas to add more details until you get to a point where there's a clear weight difference
+among them.
 
 Refining the plan on the idea you will end up working on is not a waste of time because you will
 need to do it anyways to come up with a first step. It may be a waste to refine the other 2-3 ideas,

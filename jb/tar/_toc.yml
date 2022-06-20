@@ -23,6 +23,9 @@ parts:
   - caption: Visual Group Theory
     chapters:
       - file: notes/chp8-q32.md
+  - caption: Stack Exchange
+    chapters:
+      - file: notes/se/relationship-between-svd-and-pca.md
   - caption: Memoize
     chapters:
       - file: notes/memoize-artifact.md
@@ -60,6 +63,9 @@ parts:
       - file: notes/evaluate-pedagogical-tool.md
   - caption: Focus
     chapters:
+      - file: notes/expand-focus.md
+      - file: notes/maintain-focus.md
+      - file: notes/narrow-focus.md
       - file: notes/search-the-web.md
       - file: notes/stay-on-focus.md
   - caption: Plan
@@ -71,10 +77,10 @@ parts:
       - file: notes/handle-interruption.md
       - file: notes/identify-resource.md
       - file: notes/plan-personal-week.md
-      - file: notes/refine-plan.md
       - file: notes/retrospect-on-life.md
       - file: notes/set-goal.md
       - file: notes/set-deep-goal.md
+      - file: notes/set-intermediate-goal.md
       - file: notes/set-wide-goal.md
   - caption: Drafts
     chapters:

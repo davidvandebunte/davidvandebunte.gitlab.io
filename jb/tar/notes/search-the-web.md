@@ -2,7 +2,7 @@
 
 ## Estimate value
 
-A specialization of [](./explore-domain.md) specific to the problem of finding external pedagogical
+A specialization of [](./expand-focus.md) specific to the problem of finding external pedagogical
 materials.
 
 ## Design test
@@ -114,13 +114,20 @@ reason:
 !sx
 ```
 
+You can also search SE by tag. See for example [Highest scored 'dimensionality-reduction'
+questions - CV](https://stats.stackexchange.com/questions/tagged/dimensionality-reduction), or
+[Highest scored 'keyboard-shortcuts+firefox' questions - SU](
+https://superuser.com/questions/tagged/keyboard-shortcuts%2bfirefox?tab=Votes) to search by two
+tags.
+
 Why stack exchange? It's also editable, and is CC BY-SA like Wikipedia (see [What is the license for
-the content I post? - Help Center - Stack Overflow](https://stackoverflow.com/help/licensing)). It
-also keeps track of your activity to some degree; see my answer in [How can I view vote history from
-all Stack Exchange sites? - Meta Stack Exchange](https://meta.stackexchange.com/a/379518/1208843)
-however. Try to make a comment or some other change to bookmark that you've made a significant
-investment in understanding a question and answer. If you have many links you want to provide,
-consider creating your own answer. See the *sxda* bookmark for [User davidvandebunte
+the content I post? - Help Center - SO](https://stackoverflow.com/help/licensing)). It also keeps
+track of your activity to some degree; see my answer in [How can I view vote history from all Stack
+Exchange sites? - MSE](https://meta.stackexchange.com/a/379518/1208843) however. Try to make a
+comment or add a bookmark when you've made a significant investment in understanding a question and
+answer; this way you can close the tab but also get back to it quickly days later if it connects to
+another topic (but otherwise forget it). If you have many links you want to provide, consider
+creating your own answer. See the *sxda* bookmark for [User davidvandebunte
 - Stack Exchange - activity](https://stackexchange.com/users/309544/davidvandebunte?tab=activity).
 
 ##### Wikipedia
@@ -130,9 +137,16 @@ consider creating your own answer. See the *sxda* bookmark for [User davidvandeb
 !wt
 ```
 
-Why Wikipedia? It's editable and CC BY-SA. It also tracks where you've been; see [User contributions
-for Davidvandebunte - Wikipedia](
+Why Wikipedia? It's editable and CC BY-SA. Not only that, it's seen as authoritative. Different
+authors may provide different definitions, and it either picks one or discusses the alternatives.
+When it does pick one, it's likely that you'll see authors converge to Wikipedia's definition, in
+the same way that natural language evolved by "vote" (a word means what it means to others). To
+look up a page you recently edited see [User contributions for Davidvandebunte - Wikipedia](
 https://en.wikipedia.org/wiki/Special:Contributions/Davidvandebunte).
+
+A simple way to improve an article is by adding a citation. If this isn't possible, consider adding
+a [Wikipedia:Citation needed](https://en.wikipedia.org/wiki/Wikipedia:Citation_needed) or a similar
+simple tag.
 
 ##### Papers with code
 
@@ -196,6 +210,7 @@ Papers](https://www.connectedpapers.com/) to find high-scoring papers that are c
 topic you are already focusing on.
 
 Other resources:
+- [Highest scored questions - Math SE](https://math.stackexchange.com/questions?tab=Votes)
 - [Highest scored questions - CSSE](https://cs.stackexchange.com/questions?tab=Votes)
 - [DeepMind - Research](https://www.deepmind.com/research)
 - [Meta AI Blog](https://ai.facebook.com/blog/)
