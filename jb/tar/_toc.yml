@@ -80,7 +80,7 @@ parts:
       - file: notes/retrospect-on-life.md
       - file: notes/set-goal.md
       - file: notes/set-deep-goal.md
-      - file: notes/set-intermediate-goal.md
+      - file: notes/set-subgoal.md
       - file: notes/set-wide-goal.md
   - caption: Drafts
     chapters:

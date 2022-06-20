@@ -3,7 +3,7 @@
 ## Estimate value
 
 Generalizes many processes. To make your mind attend to the same:
-- Large scale goal, see [](./set-intermediate-goal.md).
+- Large scale goal, see [](./set-subgoal.md).
 - Section of your notes, see [](./organize-notes.md).
 
 % Code: `refactor-code.md`
