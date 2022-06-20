@@ -123,42 +123,42 @@ def flip_signs(A, B):
 
 To summarize:
 
-1. If $\mathbf X = \mathbf U \mathbf S \mathbf V^\top$, then columns of $\mathbf V$ are principal
-   directions/axes.
+- If $\mathbf X = \mathbf U \mathbf S \mathbf V^\top$, then columns of $\mathbf V$ are principal
+  directions/axes.
 
 ```{code-cell} ipython3
 assert np.allclose(*flip_signs(V, principal_axes))
 ```
 
-2. Columns of $\mathbf {US}$ are principal components ("scores").
+- Columns of $\mathbf {US}$ are principal components ("scores").
 
 ```{code-cell} ipython3
 assert np.allclose(*flip_signs(U.dot(S), principal_components))
 ```
 
-3. Singular values are related to the eigenvalues of covariance matrix via $\lambda_i =
-   s_i^2/(n-1)$. Eigenvalues $\lambda_i$ show variances of the respective PCs.
+- Singular values are related to the eigenvalues of covariance matrix via $\lambda_i =
+  s_i^2/(n-1)$. Eigenvalues $\lambda_i$ show variances of the respective PCs.
 
 ```{code-cell} ipython3
 assert np.allclose((s ** 2) / (n - 1), l)
 ```
 
-4. Standardized scores are given by columns of $\sqrt{n-1}\mathbf U$ and loadings are given by
-   columns of $\mathbf V \mathbf S/\sqrt{n-1}$. See e.g.
+- Standardized scores are given by columns of $\sqrt{n-1}\mathbf U$ and loadings are given by
+  columns of $\mathbf V \mathbf S/\sqrt{n-1}$. See e.g.
 [here](https://stats.stackexchange.com/questions/125684) and
 [here](https://stats.stackexchange.com/questions/143905) for why "loadings" should not be confused
 with principal directions.
-5. **The above is correct only if $\mathbf X$ is centered.** Only then is covariance matrix equal to
-   $\mathbf X^\top \mathbf X/(n-1)$.
-6. The above is correct only for $\mathbf X$ having samples in rows and variables in columns. If
-   variables are in rows and samples in columns, then $\mathbf U$ and $\mathbf V$ exchange
+- **The above is correct only if $\mathbf X$ is centered.** Only then is covariance matrix equal to
+  $\mathbf X^\top \mathbf X/(n-1)$.
+- The above is correct only for $\mathbf X$ having samples in rows and variables in columns. If
+  variables are in rows and samples in columns, then $\mathbf U$ and $\mathbf V$ exchange
 interpretations.
-7. If one wants to perform PCA on a correlation matrix (instead of a covariance matrix), then
-   columns of $\mathbf X$ should not only be centered, but standardized as well, i.e. divided by
+- If one wants to perform PCA on a correlation matrix (instead of a covariance matrix), then
+  columns of $\mathbf X$ should not only be centered, but standardized as well, i.e. divided by
 their standard deviations.
 
-8. To reduce the dimensionality of the data from $p$ to $k < p$, select $k$ first columns of
-   $\mathbf U$, and $k\times k$ upper-left part of $\mathbf S$. Their product $\mathbf U_k \mathbf
+- To reduce the dimensionality of the data from $p$ to $k < p$, select $k$ first columns of
+  $\mathbf U$, and $k\times k$ upper-left part of $\mathbf S$. Their product $\mathbf U_k \mathbf
 S_k$ is the required $n \times k$ matrix containing first $k$ PCs.
 
 ```{code-cell} ipython3
@@ -168,8 +168,8 @@ US_k = U[:, 0:k].dot(S[0:k, 0:k])
 assert np.allclose(*flip_signs(PC_k, US_k))
 ```
 
-9. Further multiplying the first $k$ PCs by the corresponding principal axes $\mathbf V_k^\top$
-   yields $\mathbf X_k = \mathbf U_k^\vphantom \top \mathbf S_k^\vphantom \top \mathbf V_k^\top$
+- Further multiplying the first $k$ PCs by the corresponding principal axes $\mathbf V_k^\top$
+  yields $\mathbf X_k = \mathbf U_k^\vphantom \top \mathbf S_k^\vphantom \top \mathbf V_k^\top$
 matrix that has the original $n \times p$ size but is *of lower rank* (of rank $k$). This matrix
 $\mathbf X_k$ provides a *reconstruction* of the original data from the first $k$ PCs. It has the
 lowest possible reconstruction error, [see the answer
@@ -184,8 +184,8 @@ Xk
 [la.matrix_rank(X), la.matrix_rank(Xk)]
 ```
 
-10. Strictly speaking, $\mathbf U$ is of $n\times n$ size and $\mathbf V$ is of $p \times p$ size.
-    However, if $n>p$ then the last $n-p$ columns of $\mathbf U$ are arbitrary (and corresponding
+- Strictly speaking, $\mathbf U$ is of $n\times n$ size and $\mathbf V$ is of $p \times p$ size.
+  However, if $n>p$ then the last $n-p$ columns of $\mathbf U$ are arbitrary (and corresponding
 rows of $\mathbf S$ are constant zero); one should therefore use an *economy size* (or *thin*) SVD
 that returns $\mathbf U$ of $n\times p$ size, dropping the useless columns. For large $n\gg p$ the
 matrix $\mathbf U$ would otherwise be unnecessarily huge. The same applies for an opposite situation
