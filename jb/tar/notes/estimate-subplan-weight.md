@@ -414,3 +414,7 @@ unless you end up working on them later (ideally you have stable values, so that
 bias towards refining the plan on only your currently favored option unless you are willing to make
 changes that will hurt its weight (not just decrease the time cost). That is, emphasize the
 differences in value rather than cost.
+
+Once you've picked out an item, you must narrow your focus (see [](./narrow-focus.md)) on it. That
+is, close all your planning documents and everything else that may be a distraction while you dig
+into the topic.

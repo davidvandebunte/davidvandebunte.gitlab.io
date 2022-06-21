@@ -1,6 +1,6 @@
 # Improve expand focus
 
-# TODO-ef: When do you expand your focus?
+# TODO-ef: Automate expanding focus in training
 
 If networks can't evaluate themselves on their own predictive abilities after weight updates, it may
 be hard to incentivize them to explore intelligently (or at least the same way we do).
@@ -8,7 +8,7 @@ be hard to incentivize them to explore intelligently (or at least the same way w
 A good heuristic is to use curiosity, as discussed, but also check whether you're continuing to
 learn any kind of reusable abstraction/subnet (preferably a high-value one, but you only guessed
 when searching in a particular direction). That is, add some kind of feedback from the training
-process that switches the focus of training from one task to another. See related thoughts in
+process that switches the goal of training from one task to another. See related thoughts in
 [](./expand-focus.md).
 
 Why do we not even automate stopping an experiment when the loss is no longer going down? Everyone

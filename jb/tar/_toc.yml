@@ -26,6 +26,7 @@ parts:
   - caption: Stack Exchange
     chapters:
       - file: notes/se/relationship-between-svd-and-pca.md
+      - file: notes/se/what-exactly-are-keys-queries-and-values.md
   - caption: Memoize
     chapters:
       - file: notes/memoize-artifact.md
