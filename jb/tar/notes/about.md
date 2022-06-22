@@ -6,9 +6,7 @@ comments: false
 
 # About
 
-[sn]: https://davidvandebunte.gitlab.io/shared-notes/post/share-notes/
-
-Why publish your thoughts? It's complicated; see [Share notes][sn].
+Why publish your thoughts? It's complicated; see [](./share-notes.md).
 
 ## Commenting
 
