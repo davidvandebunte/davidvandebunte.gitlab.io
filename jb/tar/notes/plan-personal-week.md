@@ -52,14 +52,6 @@ their way to plain text; just copy and paste.
 
 [Retrospect][rl] (measure scheduling and software error) on your last week.
 
-## Mandatory Spending
-
-[gcw]: https://calendar.google.com/calendar/r/week
-
-Open [Week View | Google Calendar][gcw]. Check scheduled plans in the next 2-3 weeks for:
-- Double-bookings
-- Low weight appointments
-
 ## Discretionary Spending
 
 Estimate schedulable time (assuming some interruptive work) from your calendar. Decide how long you

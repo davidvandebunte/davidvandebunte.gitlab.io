@@ -44,5 +44,10 @@ able to look it up (though you can also do in `git history`).
 
 ### Long
 
+[gcw]: https://calendar.google.com/calendar/r/week
+
+Address email snoozed to the near future. Open [Week View | Google Calendar][gcw] and search in the
+next 2-3 weeks for double-bookings and low weight appointments.
+
 Archive code or notes so that you don't see them in a `git grep`. All your code and notes are
 associated with some goal.
