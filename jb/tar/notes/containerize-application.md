@@ -202,6 +202,13 @@ If it’s unstable, put it in a box. How good is the installer? If it’s a pack
 to install it globally on your operating system. Do you really need a docker image for git? Perhaps
 to keep the dotfiles and the binary in one place?
 
+If you don't need your results to be reproducible, then you don't need to put it in a box. Both
+Bazel and docker use process isolation to make results more reproducible, but there's often little
+value in reproducibility before code works. You should be able to uninstall and upgrade system
+packages, treating the system as mutable, for the sake of quick experimentation. Why? Your system
+packages should only used for one-time experiments; if reproducibility was required you would have
+used docker.
+
 You avoid clearing your host (starting at zero) because you're afraid you're going to need to spend
 a day or two setting up your host to continue to do the work you're already doing; you really don't
 care about keeping it up to date to do the kind of work you were doing a year or two ago (e.g. C++).
