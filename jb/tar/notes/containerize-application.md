@@ -341,6 +341,11 @@ https://jupyter-docker-stacks.readthedocs.io/en/latest/using/selecting.html#comm
 - [🤗 Transformers](https://huggingface.co/docs/transformers/index)
 - [iot-salzburg/gpu-jupyter](https://github.com/iot-salzburg/gpu-jupyter/)
 
+From [Stack Overflow Developer Survey 2022](
+https://survey.stackoverflow.co/2022/#section-most-loved-dreaded-and-wanted-other-frameworks-and-libraries):
+
+> Hugging Face Transformers surfaces as the most loved library ...
+
 % ## Additional Training Data
 
 % In the process of moving:
