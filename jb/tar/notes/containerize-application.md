@@ -265,7 +265,15 @@ It’s not easy for arbitrary applications to interact with each other except th
 - IPC
 - REST APIs
 
-You’ve put them all in separate boxes (by definition you want one concern per image).
+You’ve put them all in separate boxes (by definition you want one concern per image). Whether your
+box is a `venv`, conda, or a docker container, it's more difficult (often impossible) for
+interaction to occur between e.g. libraries unless they are all in the same box. Similarly, for the
+linux sandboxing system provided by bazel.
+
+It's much harder to debug when you've put everything in a box. You may need to e.g. get a shell into
+a running container. It's not as easy to see glaring problems such as a misconfigured DNS system
+(e.g. nearly a day on [Timeout pulling 6GB+ docker image · Issue #2114 ·
+bazelbuild/rules_docker](https://github.com/bazelbuild/rules_docker/issues/2114).
 
 Most desktop machines are useful quite unstable. If you had a docker image with everything in it
 (even tmux) you could work from it everywhere; it might be unstable for a docker image but it’s more
