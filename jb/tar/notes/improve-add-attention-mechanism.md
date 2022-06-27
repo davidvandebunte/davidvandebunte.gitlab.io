@@ -54,6 +54,20 @@ information specific to the name "Hans" such as that it's a Germanic name.
 This seems to be an open question that might help you answer the preceding question:
 - https://stats.stackexchange.com/questions/515477/when-calculating-self-attention-for-transformer-ml-architectures-why-do-we-need#comment982038_515552
 
+It looks like the answer is correct, not the commenter. This logic is doing batching at two levels,
+one the normal mini-batch and one across all heads. See:
+- [torch.matmul — PyTorch 1.11.0
+  documentation](https://pytorch.org/docs/stable/generated/torch.matmul.html)
+
+Other implementations make it clearer by using `d_model`, `n_head` * `d_k`:
+- https://github.com/jadore801120/attention-is-all-you-need-pytorch/blob/fec78a687210851f055f792d45300d27cc60ae41/transformer/SubLayers.py#L9
+
+Here's yet another implementation. Also check the PyTorch source code implementation?
+- https://pytorch-lightning.readthedocs.io/en/stable/notebooks/course_UvA-DL/05-transformers-and-MH-attention.html
+
+You should create an Inkscape image with all the annotated transformer classes on top of the diagram
+from the AIAYN paper.
+
 How do attention mechanisms avoid putting all the focus on the same word? It's likely you don't
 understand this because you don't understand why Q and K need to create different spaces:
 - https://stats.stackexchange.com/questions/421935/what-exactly-are-keys-queries-and-values-in-attention-mechanisms#comment1040928_531971
@@ -77,7 +91,19 @@ weighted average of values though; they don't stay discrete.
 
 Can you see this as building a dictionary during training, that you use during inference? It's not
 quite that simple, though, because you're returning weighted results from your dictionary. I'm not
-sure what you would call a dictionary like this.
+sure what you would call a dictionary like this. See several conversations about dictionary learning
+in [Feature learning](https://en.wikipedia.org/wiki/Feature_learning#Principal_component_analysis).
+
+You can see self-attention as a compression of a word in *context*. That is, to understand any
+particular word in a sentence you need to potentially understand what it is referring to (if it's
+e.g. an article, pronoun, adjective, verb), what it is referring to it (e.g. a noun). A word can
+easily refer or be referred to by several words through e.g. conjunctions. Said another way, every
+word has dependencies and dependents (references and referents) of potentially several kinds. You
+also come to every word with your own background, and hopefully use it similarly to other people.
+See also [Part of speech](https://en.wikipedia.org/wiki/Part_of_speech).
+
+Could you make "reviews" actually just another answer? You've regularly seen others comment on other
+answers; few people comment on all of them.
 
 # TODO-cnns: Will attention replace CNNs?
 
