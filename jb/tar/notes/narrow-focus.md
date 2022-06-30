@@ -33,6 +33,14 @@ left to the right. Close browser tabs (least permanent), then the leftmost `vim`
 many other vim windows as you feel is appropriate. You often leave vim windows open as a reminder to
 attend to some alternative goal.
 
+Wear headphones with white noise in the presence of stimuli that are likely to produce exogeneous
+orienting of your attention. Headphones help you avoid hearing anything not worth writing down or
+changing your train of thought, even while going to the bathroom or getting a snack. You often need
+to confirm your headphones are on, and even quiet white noise lets you avoid this nervous check.
+
+% Doc: Should you wear headphones?
+% https://docs.google.com/document/d/11vV6h5TSu8CP5hl7pYL_cQL8jcbLZw81Pewfe7AMo6Q/edit
+
 ### Medium
 
 Look at how many uncommitted changes you have and get them into a git commit. You often leave
