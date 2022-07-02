@@ -32,51 +32,41 @@ Reference 21 from AIAYN:
 Otherwise:
 - [What's the difference between Attention vs Self-Attention? - DSSE](
 https://datascience.stackexchange.com/questions/49468/)
-- [What exactly are keys, queries, and values in attention mechanisms?](
-https://stats.stackexchange.com/questions/421935/)
-- [time series - What are attention mechanisms exactly?](
-https://stats.stackexchange.com/questions/344508/what-are-attention-mechanisms-exactly?rq=1)
 
-You may not be able to solve this easily without reading through a code implementation of a
-transformer model (like the "Annotated Transformer").
+# TODO-kqv: What exactly are keys, queries, and values in attention mechanisms?
 
-Do you care about versions of attention used with older RNN-based models? You may care about the QKV
-value approach, but is it still being used? Or is it a historical tool? It looks like it's still
-being used:
-- [An Overview of Attention | Papers With Code](
-https://paperswithcode.com/methods/category/attention-mechanisms)
-
-You're also particularly interested in QKV attention because it's used in Perceivers. That is, QKV
-lets you easily connect two different modalities because e.g. QK can both be text and V can be an
-image (image search in web browsers). See point `5.` here:
-- https://datascience.stackexchange.com/a/66431/26431
+## Estimate cost
 
 Does a search engine conceptually provide attention scores (what you should pay attention to) based
 on e.g. links and other factors? You do the same thing, collecting links to decide how to apply your
 attention (which you usually think of as "time").
 
-See [What exactly are keys, queries, and values in attention mechanisms? -
-CV](https://stats.stackexchange.com/questions/421935) for a valuable discussion.
+Do they learn to project vectors the same subspace? If they're projecting to the same subspace, from
+the same original space (of X) why can't they be the same matrix? If you're doing language
+translation they couldn't be the same, but it seems like some of these applications are mapping
+English to English. Is it to different types of English words? Search for "pronoun" in Sam's answer;
+if Hans is the query then "he" would be the most-similar key? The word "he" (an X) would be
+translated to a q through the Q matrix that would be much more similar to the key "Hans" translated
+to a k through the K matrix than the word "Mary" translated to a k through the K matrix. The v
+associated with "Hans" would thus get multiplied by a softmax number near one; and it would contain
+information specific to the name "Hans" such as that it's a Germanic name.
 
-How is this an SVD? See this answer for the mention:
-- https://stats.stackexchange.com/a/463320/189415
+This seems to be an open question that might help you answer the preceding question:
+- https://stats.stackexchange.com/questions/515477/when-calculating-self-attention-for-transformer-ml-architectures-why-do-we-need#comment982038_515552
 
-Seeing the SVD as (where U and V are complex unitary matrices):
+It looks like the answer is correct, not the commenter. This logic is doing batching at two levels,
+one the normal mini-batch and one across all heads. See:
+- [torch.matmul — PyTorch 1.11.0
+  documentation](https://pytorch.org/docs/stable/generated/torch.matmul.html)
 
-```
-M = UΣV*
-```
+Other implementations make it clearer by using `d_model`, `n_head` * `d_k`:
+- https://github.com/jadore801120/attention-is-all-you-need-pytorch/blob/fec78a687210851f055f792d45300d27cc60ae41/transformer/SubLayers.py#L9
 
-The author is saying that the Q and K matrices both represent the complex unitary matrix V from the
-equation above. Do they learn to project vectors the same subspace? If they're projecting to the
-same subspace, from the same original space (of X) why can't they be the same matrix? If you're
-doing language translation they couldn't be the same, but it seems like some of these applications
-are mapping English to English. Not quite the same:
-- https://stats.stackexchange.com/questions/515477
-- https://stats.stackexchange.com/questions/498955
+Here's yet another implementation. Also check the PyTorch source code implementation?
+- https://pytorch-lightning.readthedocs.io/en/stable/notebooks/course_UvA-DL/05-transformers-and-MH-attention.html
 
-Is a reference to SVD even necessary here? He cites representation learning in this point `2.` and
-dimensionality reduction in `3.` and it seems like that would have been enough.
+You should create an Inkscape image with all the annotated transformer classes on top of the diagram
+from the AIAYN paper.
 
 How do attention mechanisms avoid putting all the focus on the same word? It's likely you don't
 understand this because you don't understand why Q and K need to create different spaces:
@@ -91,8 +81,29 @@ track of your own saccades. This answer seems to be about single-head attention:
 It looks like there isn't a reason that Q and V can't interact as well:
 - https://arxiv.org/pdf/2010.03766.pdf
 
-Can see the K in a QKV attention as a mapping from keys to the value associated with them (see
+Can you see the K in a QKV attention as a mapping from keys to the value associated with them (see
 comments on recommendation systems in dontloo's answer? Similar to an "Estimate value" function.
+When you're working back from effects to causes, then, you may conceptually put some weight on every
+different theory or approach (if you're also considering costs) for solving the problem. Based on
+the weights you apply to every theory, you pick one to start with (the highest weight). You have all
+kinds of strategies for coming up with task weights. This doesn't quite fit because you're doing a
+weighted average of values though; they don't stay discrete.
+
+Can you see this as building a dictionary during training, that you use during inference? It's not
+quite that simple, though, because you're returning weighted results from your dictionary. I'm not
+sure what you would call a dictionary like this. See several conversations about dictionary learning
+in [Feature learning](https://en.wikipedia.org/wiki/Feature_learning#Principal_component_analysis).
+
+You can see self-attention as a compression of a word in *context*. That is, to understand any
+particular word in a sentence you need to potentially understand what it is referring to (if it's
+e.g. an article, pronoun, adjective, verb), what it is referring to it (e.g. a noun). A word can
+easily refer or be referred to by several words through e.g. conjunctions. Said another way, every
+word has dependencies and dependents (references and referents) of potentially several kinds. You
+also come to every word with your own background, and hopefully use it similarly to other people.
+See also [Part of speech](https://en.wikipedia.org/wiki/Part_of_speech).
+
+Could you make "reviews" actually just another answer? You've regularly seen others comment on other
+answers; few people comment on all of them.
 
 # TODO-cnns: Will attention replace CNNs?
 
@@ -106,55 +117,9 @@ using more "fully convolutional" networks right now. Crappy reference:
 
 # TODO-tra: How should you control your attention?
 
-Notes are tracking attention to some degree. When you're taking notes, you're keeping a train of
-thought, with fewer minor explorations (try to spend a day without taking notes; your tabs expand
-quickly).
-
 What should your atomic action be when you're working on a computer? Typing? Closing a window? All
 of these topics are about controlling your focus (where you mouse pointer or vim cursor is located).
 Is this related to the attention in transformer models? I'd say all of this is related to attention,
-in that sense that you are "focusing" your attention on a narrower set of in puts that you normally
-would (see "Focused attention" in `!w Attention`).
-
-To some extent you can see planning as narrowing your attention. That is, when you're planning at
-the highest level your "attention" is on everything you could possibly be doing (which you maintain
-as a list of questions). When you pick a specific question, you're narrowing your focus. To answer
-that specific question, you should create a list of questions you are going through (dependencies it
-has). You often end up with many (good) side effect questions when you're answering one question.
-Once you answer your primary question (to whatever degree of accuracy you want to) then split out of
-that new document all the side or closely related questions you had (organizing them as much as
-possible). Zoom your attention back out, and pick from your new list of questions. At this point,
-you can decide whether to go deeper into one of your side/alternative questions (stay on focus i.e.
-narrow your focus), or go up a level to a different "topic" (alternating attention). If you commit
-at the end of every day, you'll see all the notes you made during the day and be able to select from
-them for the next day (what looks most promising). This cycle lets you both explore and exploit (on
-and off) in a regular pattern. If you're going to widen your focus, you should serialize all your
-notes. If you're going to narrow it, you should serialize most of your notes (all the side questions
-you rejected). See also `stay-on-focus.md` for how you do this at one level.
-
-You should be thinking about your "plan" on an hour-by-hour basis as well, even if you don't commit
-it to version control. That is, you are almost always trying to answer some question on the way to
-answering your main question (that is in version control). You can "add-wide-goal.md" by opening
-more browser tabs (trying to understand e.g. more SE questions related to your main goal).
-
-You should first close all your browser tabs, serializing what you want to keep (not all of it, for
-the sake of speed) to your notes. Then you should close all your text editor tabs, moving content
-between articles (essentially organize) so that you can create version control commits. *After*
-that, start from the top of your git diff; commit the whole file if you can. If you moved content,
-search for the word "diff" and find independent content first (which can take its own commit). You
-don't have to do this clean up on a daily basis; you only do it "regularly" when you feel you need
-to pick one priority.
-
-Taking notes gets you *out* of focus on random articles and actually makes you reprioritize
-(readjust your attention/focus). It's how you get yourself to think about priorities, more so that
-e.g. taking a walk.
-
-Are you "attending to" a child when you're working at home, by having a service that watches him?
-
-Should you commit every two hours, if only to divide out what you can? Review everything else that
-is not done, and make it a WIP commit. This is the equivalent to checking in for a daily stand-up,
-even if you didn't finish the task you thought you would finish yesterday.
-
-See `close-window.md` for another way you control your focus. To reduce the number of tabs you have
-open in e.g. your browser, you could run `evaluate-pedagogical-tool.md` on them (e.g. close websites
-that aren't open source).
+in that sense that you are "focusing" your attention on a narrower set of inputs that you normally
+would (see "Focused attention" in `!w Attention`). Or are you merely thinking about how to save time
+on actions you do repeatedly when you dig into these topics?

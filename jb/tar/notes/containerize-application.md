@@ -202,6 +202,13 @@ If it’s unstable, put it in a box. How good is the installer? If it’s a pack
 to install it globally on your operating system. Do you really need a docker image for git? Perhaps
 to keep the dotfiles and the binary in one place?
 
+If you don't need your results to be reproducible, then you don't need to put it in a box. Both
+Bazel and docker use process isolation to make results more reproducible, but there's often little
+value in reproducibility before code works. You should be able to uninstall and upgrade system
+packages, treating the system as mutable, for the sake of quick experimentation. Why? Your system
+packages should only used for one-time experiments; if reproducibility was required you would have
+used docker.
+
 You avoid clearing your host (starting at zero) because you're afraid you're going to need to spend
 a day or two setting up your host to continue to do the work you're already doing; you really don't
 care about keeping it up to date to do the kind of work you were doing a year or two ago (e.g. C++).
@@ -258,7 +265,15 @@ It’s not easy for arbitrary applications to interact with each other except th
 - IPC
 - REST APIs
 
-You’ve put them all in separate boxes (by definition you want one concern per image).
+You’ve put them all in separate boxes (by definition you want one concern per image). Whether your
+box is a `venv`, conda, or a docker container, it's more difficult (often impossible) for
+interaction to occur between e.g. libraries unless they are all in the same box. Similarly, for the
+linux sandboxing system provided by bazel.
+
+It's much harder to debug when you've put everything in a box. You may need to e.g. get a shell into
+a running container. It's not as easy to see glaring problems such as a misconfigured DNS system
+(e.g. nearly a day on [Timeout pulling 6GB+ docker image · Issue #2114 ·
+bazelbuild/rules_docker](https://github.com/bazelbuild/rules_docker/issues/2114).
 
 Most desktop machines are useful quite unstable. If you had a docker image with everything in it
 (even tmux) you could work from it everywhere; it might be unstable for a docker image but it’s more
@@ -333,6 +348,11 @@ packages. Consider some of these even more unstable community stacks:
 https://jupyter-docker-stacks.readthedocs.io/en/latest/using/selecting.html#community-stacks)
 - [🤗 Transformers](https://huggingface.co/docs/transformers/index)
 - [iot-salzburg/gpu-jupyter](https://github.com/iot-salzburg/gpu-jupyter/)
+
+From [Stack Overflow Developer Survey 2022](
+https://survey.stackoverflow.co/2022/#section-most-loved-dreaded-and-wanted-other-frameworks-and-libraries):
+
+> Hugging Face Transformers surfaces as the most loved library ...
 
 % ## Additional Training Data
 

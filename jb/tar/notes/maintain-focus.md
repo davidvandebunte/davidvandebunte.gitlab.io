@@ -83,7 +83,9 @@ your focus. Is this a quick search or something that will take an hour?
 Take notes when you want to attend to more weights deeper into your recent thoughts. Notes force
 your focus on a certain train of thought by making it real on your screen (and in front of your
 eyes, regularly forcing the context back into focus through exogeneous orienting). It's a way to
-assist your own limited ability to think deeply into your current context.
+assist your own limited ability to think deeply into your current context. Try to spend a day
+without taking notes; your browser tabs expand quickly as an alternative to keeping track of your
+train of thought (tabs become the tracking system, so they can't be closed).
 
 Said another way, to take notes is not only to serialize your thoughts long-term. It's also to
 serialize them temporarily (e.g. over the next 5 minutes) to force you into focus. Is this a good
