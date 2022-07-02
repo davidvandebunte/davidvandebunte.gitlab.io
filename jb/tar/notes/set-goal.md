@@ -110,3 +110,10 @@ online.
 Said another way, what makes a "variation" on one goal any different than a completely different
 goal? Is there some magical "distance" between the two goals that makes them variations on the same
 goal rather than completely separate goals?
+
+We can't compare models via their loss functions for the same reason we can't compare people who
+disagree about what they regard as valuable. When comparing models, we often come up with some
+"evaluation" function that provides rigid objectivity in the presence of shifting values. It's
+better to make datasets easy to visualize and model predictions easy to interpret, which allows for
+a changing market. It's always possible to come up with at least one number that shows improvement,
+which you can come up with after you are convinced of improvement yourself.
