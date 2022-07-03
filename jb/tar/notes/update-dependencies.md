@@ -22,15 +22,18 @@ chain has no base case, except perhaps the big bang. The deeper you go the more 
 tend to get (the length of time they have been pinned) though this is not a guaranteed or reliable
 rule.
 
+[sc]: https://en.wikipedia.org/wiki/Supply_chain
+
 These other dependencies may even update before you update your software. Your hardware is probably
 pinned for 5-8 years, though it depends (unless you e.g. install more RAM, which won't break
 anything). Your operating system is probably only pinned for a few weeks at a time; you need to be
 able to regularly run `sudo apt upgrade` for security reasons and to keep the whole system up to
 date in general. You don't pin system packages because you often need your system for many other
 tasks besides some single application. Consider *all* dependencies, including humans, businesses,
-hardware, operating systems, the docker version, etc.
+hardware, operating systems, the docker version, etc. That is, try to look beyond the first tier of
+your [Supply chain][sc]:
 
-[py131]: https://pytorch.org/docs/1.3.1/
+![Supply chain]: https://upload.wikimedia.org/wikipedia/commons/8/8a/Supply_and_demand_network_%28en%29.svg
 
 The major advantage of libraries is that you do not need to write them yourself, effectively
 reinventing the wheel. Reading library code is often more enjoyable than reading your own or your
