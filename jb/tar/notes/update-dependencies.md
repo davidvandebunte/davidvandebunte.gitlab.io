@@ -30,10 +30,11 @@ anything). Your operating system is probably only pinned for a few weeks at a ti
 able to regularly run `sudo apt upgrade` for security reasons and to keep the whole system up to
 date in general. You don't pin system packages because you often need your system for many other
 tasks besides some single application. Consider *all* dependencies, including humans, businesses,
-hardware, operating systems, the docker version, etc. That is, try to look beyond the first tier of
-your [Supply chain][sc]:
+and hardware. Software may depend on an operating system, a docker image, system-installed packages,
+manually-installed binaries, user-installed packages, conda packages, pip packages, and shell
+scripts. That is, try to look beyond the first tier of your [Supply chain][sc]:
 
-![Supply chain]: https://upload.wikimedia.org/wikipedia/commons/8/8a/Supply_and_demand_network_%28en%29.svg
+![Supply chain](https://upload.wikimedia.org/wikipedia/commons/8/8a/Supply_and_demand_network_%28en%29.svg)
 
 The major advantage of libraries is that you do not need to write them yourself, effectively
 reinventing the wheel. Reading library code is often more enjoyable than reading your own or your
@@ -50,6 +51,8 @@ on the internet. This is driven not only by an increasing number of software dev
 simple fact that there has been more time for consumers to replace proprietry with open source
 dependencies. Software developers should spend more and more time evaluating libraries and
 incorporating them than writing their own version, assuming this trend continues.
+
+[py131]: https://pytorch.org/docs/1.3.1/
 
 Sitting on the old side of a library's stable version means you'll always be looking up the old
 documentation online, because you know the "stable" version may be different than what you're using.
