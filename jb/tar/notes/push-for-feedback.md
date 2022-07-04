@@ -89,6 +89,25 @@ of overhead. It rarely makes sense to push for feedback on tests that only run f
 such as linters or a REPL that doesn't need anything loaded in memory. The benefits become clearer
 for "long" experiments where this overhead is insignificant, perhaps more than 3-4 minutes.
 
+### Setup
+
+It can take significant time to setup a system where pushing for feedback works. For example, let's
+say you need to manually commit `.dvc` files generated from some process as part of your regular
+workflow. You can automate this in CI/CD, but because it can't make a decision about whether an
+artifact is worth saving you need to save everything. This requires more disk space, and a system to
+regularly clean old `dvc` artifacts (e.g. older than 2 weeks). When artifacts are large (e.g. large
+datasets) this is more of a problem.
+
+Developers should understand that all committed `.dvc` artifacts are prone to deletion with time. If
+a developer wants to keep a particular commit of a `.dvc` file made in CI/CD, they can merge it into
+a branch that they submit for merging into master.
+
+If you allow for some non-reproducible actions that e.g. generate `.dvc` files, you also need to
+come up with a system for running only those tests. One option is simply edit the code that calls
+Bazel to specify target patterns, but then these changes need to be removed if you decide to merge
+the `.dvc` changes. An option that doesn't involve permanent code changes is `git` push options; see
+[Push Options | GitLab](https://docs.gitlab.com/ee/user/project/push_options.html).
+
 ### Accessible computing resources
 
 It's critical (for fast feedback) to use local (controlled) resources to run tests. That is, try to
@@ -123,6 +142,16 @@ What continuous deployment means depends on the context. If you're publishing no
 webpage, continuous deployment might only mean running `nginx` on whatever machine happened to be
 assigned a job. If your static content is build with Jupyter, it may be better to run Jupyter Lab on
 whatever machine was assigned the job.
+
+### Complicated debugging
+
+Ideally, developers should not be *required* to push for feedback. A CI/CD system provides an
+independent verification that code works; if it's the only verification then you've made debugging
+more difficult in exchange for other benefits. If you find yourself regularly logging in as the
+CI/CD user (e.g. `gitlab-runner`) to inspect state because you can't test as your own user on build
+machines, you are paying the regular price of more difficult debugging. Pushing for feedback also
+adds the regular cost of committing changes. Often we making local debugging hard because we only
+want to maintain one system, and if we must pick one it will be the CI/CD runners.
 
 ### Halting problem
 
