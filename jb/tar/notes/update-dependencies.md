@@ -66,7 +66,9 @@ stable territory longer (and avoiding excessive dependencies).
 
 # Test
 
-A library or package is upgraded to a newer version.
+A library or package is upgraded to a newer version. Said another way, you "rebase" your code
+(or logic, in general) onto a newer version of a library or package and all the tests you are
+currently monitoring still pass.
 
 An upgrade is often triggered by the desire for an upgrade in a single library or package, even if
 in the end it is often necessary to update a set of libraries at a time to find a new working
@@ -75,29 +77,18 @@ you have the latest version of a library before you need it.
 
 ## Stability
 
-[blbc]: https://softwareengineering.stackexchange.com/questions/12401/be-liberal-in-what-you-accept-or-not
-[rp]: https://en.wikipedia.org/wiki/Robustness_principle
 [stb]: https://en.wikipedia.org/wiki/Stability
 
-We use the term [Stability][stb] although it is somewhat ambiguous. Most people call an interface
-"stable" if it doesn't change frequently e.g. no one switches the order of arguments. Most people
-would call Ubuntu 20.04 more "stable" than Ubuntu 20.10 in 2021, even if they haven't used 20.10 and
-don't know whether it works perfectly fine for everything they want to do. Many people would call an
-application more "stable" if it pins more dependencies (artifacts) down.
+This article uses the term [Stability][stb] in a specific way; see [](./memoize-artifact.md) for an
+attempt at a more general definition.
 
-We'll use the term "stable" to mean the fraction of tests we expect to pass for our particular
-top-level application (or library) for a given dependency configurations, or the sum of the fraction
-we expect to pass across a range of dependency configurations. Usually this is a belief statement,
-that is, a prior given what we know about a particular library, only because it is too expensive to
-check everything. For example, we assume a dependency labeled "stable" is best for our particular
-application because it apparently passes the largest number of tests for those who evaluate it.
-
-We want to use a library that doesn't change it's API so that our tests are already working with a
-greater range of its versions. Pinning more dependencies down may not be the best way to make our
-application more stable, since we may actually want to write our code to work with several different
-versions of a dependency. See also:
-- [Robustness principle][rp]
-- [Be liberal in what you accept... or not? - SE][blbc]
+We'll use the term "stable" in this article to mean the fraction of tests we expect to pass for our
+particular top-level application (or library) for a given dependency configurations, or the sum of
+the fraction we expect to pass across a range of dependency configurations. Usually this is a belief
+statement, that is, a prior given what we know about a particular library, only because it is too
+expensive to check everything. For example, we assume a dependency labeled "stable" is best for our
+particular application because it apparently passes the largest number of tests for those who
+evaluate it.
 
 # Estimate cost
 
