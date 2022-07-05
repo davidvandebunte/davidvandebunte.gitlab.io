@@ -64,7 +64,7 @@ Sometimes, we use the word "stability" to mean flexible, accepting, or reusable.
 to be more complicated to be more flexible and accepting, and it has to be well thought out to
 continue to be reusable into the far future (e.g. it depends on well-established mathematical
 concepts). See also [Robustness principle][rp], discussed in more detail in [Be liberal in what you
-accept... or not? - SE][blbc]. In the test-based language of [](./update-dependencies.md)), we want
+accept... or not? - SE][blbc]. In the test-based language of [](./update-dependencies.md), we want
 to use a library that doesn't change it's API so that when we rebase our code onto a new version
 most tests are already working with a greater range of its versions.
 
