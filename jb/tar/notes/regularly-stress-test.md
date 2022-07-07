@@ -42,7 +42,7 @@ Knowing how reproducible your results are will help you decide what issues to fi
 fix the most frequent intermittent issues first.
 
 More data on the reproducibility of a problem makes it much easier to work back to the root cause
-(see `investigate-root-cause.md`).
+(see [](./investigate-root-cause.md)).
 
 If e.g. you submit an intermittent issue at 9 AM that gets merged, you'll know by 1 PM or so that it
 only works half the time even if no one else is making changes to regularly trigger the build. You

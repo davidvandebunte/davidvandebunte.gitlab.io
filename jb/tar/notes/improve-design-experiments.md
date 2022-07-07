@@ -29,6 +29,24 @@ sense of throwing away long variable names in exchange for single letter names (
 when compiling to a binary). Ideally the documentation is in the code so nothing gets lost (avoid
 lossy compression), or at the least you retain links to documentation (as e.g. .md files.
 
+Should code have minimal comments so you can avoid conflicts only due to documentation changes? You
+should deal with documentation conflicts separately than code conflicts, even if you are dealing
+with them in the same commit. If you see natural language as compressing to code, and plain text
+code as compressing to binaries, then this is similar to the question of whether to include symbols
+in your binaries. Most of the time, you don't need to. In fact, if you allow different people to
+have a different understanding of the code (e.g. Bayesian vs. Frequentist, or simply based on
+different documentation) then you don't want to include all possible interpretations. What is
+"tricky" (needing comments) may be different to different people. See also Linus' thoughts in
+[a/lt-debugger](https://lwn.net/2000/0914/a/lt-debugger.php3); you found this link in [Forcing
+people to read and understand code instead of using comments, function summaries and debuggers? -
+SESE](https://softwareengineering.stackexchange.com/questions/201657).
+
+Said another way, don't use a fork of the code to make comments. Comment on the code through
+documentation; your fork should only remove and simplify code. You also like that this lets you fit
+more code onto your screen at once (that you've understood). If you do need to make comments inline
+to avoid the split-attention effect, then you can move them out of the code once you understand it
+and you have your first conflict.
+
 Is a picture worth a thousand words? It depends on the picture, and what kind of task you need to do
 with it. Why aren't you asking about the resolution of the image?
 

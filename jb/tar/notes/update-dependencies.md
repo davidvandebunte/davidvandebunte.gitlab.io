@@ -22,15 +22,19 @@ chain has no base case, except perhaps the big bang. The deeper you go the more 
 tend to get (the length of time they have been pinned) though this is not a guaranteed or reliable
 rule.
 
+[sc]: https://en.wikipedia.org/wiki/Supply_chain
+
 These other dependencies may even update before you update your software. Your hardware is probably
 pinned for 5-8 years, though it depends (unless you e.g. install more RAM, which won't break
 anything). Your operating system is probably only pinned for a few weeks at a time; you need to be
 able to regularly run `sudo apt upgrade` for security reasons and to keep the whole system up to
 date in general. You don't pin system packages because you often need your system for many other
 tasks besides some single application. Consider *all* dependencies, including humans, businesses,
-hardware, operating systems, the docker version, etc.
+and hardware. Software may depend on an operating system, a docker image, system-installed packages,
+manually-installed binaries, user-installed packages, conda packages, pip packages, and shell
+scripts. That is, try to look beyond the first tier of your [Supply chain][sc]:
 
-[py131]: https://pytorch.org/docs/1.3.1/
+![Supply chain](https://upload.wikimedia.org/wikipedia/commons/8/8a/Supply_and_demand_network_%28en%29.svg)
 
 The major advantage of libraries is that you do not need to write them yourself, effectively
 reinventing the wheel. Reading library code is often more enjoyable than reading your own or your
@@ -48,6 +52,8 @@ simple fact that there has been more time for consumers to replace proprietry wi
 dependencies. Software developers should spend more and more time evaluating libraries and
 incorporating them than writing their own version, assuming this trend continues.
 
+[py131]: https://pytorch.org/docs/1.3.1/
+
 Sitting on the old side of a library's stable version means you'll always be looking up the old
 documentation online, because you know the "stable" version may be different than what you're using.
 For example, here is a link to [PyTorch 1.3.1][py131]. It's often through accidentally reading the
@@ -60,7 +66,9 @@ stable territory longer (and avoiding excessive dependencies).
 
 # Test
 
-A library or package is upgraded to a newer version.
+A library or package is upgraded to a newer version. Said another way, you "rebase" your code
+(or logic, in general) onto a newer version of a library or package and all the tests you are
+currently monitoring still pass.
 
 An upgrade is often triggered by the desire for an upgrade in a single library or package, even if
 in the end it is often necessary to update a set of libraries at a time to find a new working
@@ -69,29 +77,18 @@ you have the latest version of a library before you need it.
 
 ## Stability
 
-[blbc]: https://softwareengineering.stackexchange.com/questions/12401/be-liberal-in-what-you-accept-or-not
-[rp]: https://en.wikipedia.org/wiki/Robustness_principle
 [stb]: https://en.wikipedia.org/wiki/Stability
 
-We use the term [Stability][stb] although it is somewhat ambiguous. Most people call an interface
-"stable" if it doesn't change frequently e.g. no one switches the order of arguments. Most people
-would call Ubuntu 20.04 more "stable" than Ubuntu 20.10 in 2021, even if they haven't used 20.10 and
-don't know whether it works perfectly fine for everything they want to do. Many people would call an
-application more "stable" if it pins more dependencies (artifacts) down.
+This article uses the term [Stability][stb] in a specific way; see [](./memoize-artifact.md) for an
+attempt at a more general definition.
 
-We'll use the term "stable" to mean the fraction of tests we expect to pass for our particular
-top-level application (or library) for a given dependency configurations, or the sum of the fraction
-we expect to pass across a range of dependency configurations. Usually this is a belief statement,
-that is, a prior given what we know about a particular library, only because it is too expensive to
-check everything. For example, we assume a dependency labeled "stable" is best for our particular
-application because it apparently passes the largest number of tests for those who evaluate it.
-
-We want to use a library that doesn't change it's API so that our tests are already working with a
-greater range of its versions. Pinning more dependencies down may not be the best way to make our
-application more stable, since we may actually want to write our code to work with several different
-versions of a dependency. See also:
-- [Robustness principle][rp]
-- [Be liberal in what you accept... or not? - SE][blbc]
+We'll use the term "stable" in this article to mean the fraction of tests we expect to pass for our
+particular top-level application (or library) for a given dependency configurations, or the sum of
+the fraction we expect to pass across a range of dependency configurations. Usually this is a belief
+statement, that is, a prior given what we know about a particular library, only because it is too
+expensive to check everything. For example, we assume a dependency labeled "stable" is best for our
+particular application because it apparently passes the largest number of tests for those who
+evaluate it.
 
 # Estimate cost
 

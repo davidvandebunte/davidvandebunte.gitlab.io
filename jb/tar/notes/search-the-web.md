@@ -214,6 +214,7 @@ Other resources:
 - [Highest scored questions - CSSE](https://cs.stackexchange.com/questions?tab=Votes)
 - [DeepMind - Research](https://www.deepmind.com/research)
 - [Meta AI Blog](https://ai.facebook.com/blog/)
+- [Overview | CVPR 2022](https://cvpr2022.thecvf.com/overview)
 - [OpenAI Blog](https://openai.com/blog/)
 - [NVIDIA Blog](https://blogs.nvidia.com/)
 - [Highest scored questions - Cross Validated](https://stats.stackexchange.com/questions?tab=votes&page=1)

@@ -27,7 +27,6 @@ Generalizes:
 [asd]: https://en.wikipedia.org/wiki/Artifact_(software_development)
 [bar]: https://docs.bazel.build/versions/4.2.1/glossary.html#artifact
 [cc]: https://en.wikipedia.org/wiki/Cache_(computing)
-[stb]: https://en.wikipedia.org/wiki/Stability
 [ccad]: https://docs.bazel.build/versions/main/build-ref.html#actual_and_declared_dependencies
 
 An "artifact" is stored in a persistent storage medium to avoid recomputation later.
@@ -48,8 +47,53 @@ We prefer the word [Memoization][mz] to [Caching][cc] because the former is a sp
 latter, and we specifically intend to refer to the latter, more special case. That is, we won't
 consider data locality or spatial locality here, only whether to build a data artifact at all.
 
-This article avoids the term [Stability][stb] in most places, but see [](./update-dependencies.md)
-for an attempt at a definition.
+### Stability
+
+[stb]: https://en.wikipedia.org/wiki/Stability
+
+We use the term [Stability][stb] although it is somewhat ambiguous. Most people call an interface
+"stable" if it doesn't change frequently e.g. no one switches the order of arguments. Most people
+would call Ubuntu 20.04 more "stable" than Ubuntu 20.10 in 2021, even if they haven't used 20.10 and
+don't know whether it works perfectly fine for everything they want to do. Many people would call an
+application more "stable" if it pins more dependencies (artifacts) down.
+
+[blbc]: https://softwareengineering.stackexchange.com/questions/12401/be-liberal-in-what-you-accept-or-not
+[rp]: https://en.wikipedia.org/wiki/Robustness_principle
+
+Sometimes, we use the word "stability" to mean flexible, accepting, or reusable. Software often has
+to be more complicated to be more flexible and accepting, and it has to be well thought out to
+continue to be reusable into the far future (e.g. it depends on well-established mathematical
+concepts). See also [Robustness principle][rp], discussed in more detail in [Be liberal in what you
+accept... or not? - SE][blbc]. In the test-based language of [](./update-dependencies.md), we want
+to use a library that doesn't change it's API so that when we rebase our code onto a new version
+most tests are already working with a greater range of its versions.
+
+Other times we use "stability" to mean unchanging; we pin packages so that they don't change under
+us. Pinning more dependencies down may not be the best way to make our application more stable, if
+we're pinning to unreliable code. If we really must take a dependency in this case, it may be better
+to take full ownership of the source. We may also actually want to write our code to work with
+several different versions of a dependency so that more libraries can depend on our library without
+making the job of dependency resolvers nearly impossible (see [](./update-dependencies.md).
+
+We want to depend on the former (reusable) kind of artifact; these are the timeless kinds of
+artifacts. For the sake of reproducibility or company specialization we may need to rely on the
+latter (pinned) kind of artifact.
+
+[pspp]: https://pythonspeed.com/articles/when-update-dependencies/
+[at]: https://en.wikipedia.org/wiki/Attention
+
+As discussed in [Push and pull: when and why to update your dependencies][pspp], there's value in
+the increased stability brought about by pinning packages. The kind of "stability" we're achieving
+is a stable learning environment; we can change "our" code downstream of the pinned dependencies and
+know that any exceptions are (unless previously cached results weren't actually reproducible) "our"
+problem. If a software package we thought was "reusable" and therefore depend on suddenly releases a
+bad version, we'll let others who are actively upgrading handle the issue and catch the next truly
+stable version.
+
+In the language of [Attention][at], we're limiting the amount of state we must attend to if we must
+[](./investigate-root-cause.md). If we want to continue to partially attend to lower-reliability
+(less likely to be reproducible) parts of our build networks, then we can get notifications at e.g.
+night using spare computing resources. See [](./regularly-stress-test.md).
 
 ### Recursive artifacts
 
@@ -218,11 +262,6 @@ Like many algorithms that do [Memoization][mz], Bazel does this by hashing the i
 functions that create artifacts (e.g. [`functools.lru_cache`][flru]). To learn Bazel is effectively
 to learn how to record more of what you relied on to build an artifact.
 
-How can you limit what Bazel executes e.g. if you only want to run a limited set of your tests? One
-option is simply edit the code that calls Bazel to specify target patterns. An option that doesn't
-involve permanent code changes is `git` push options; see [Push Options |
-GitLab](https://docs.gitlab.com/ee/user/project/push_options.html).
-
 Some tools automatically record or reconstruct dependency trees. In PyTorch, Theano, Tensorflow,
 etc. you can see the net activations as artifacts, and the backpropagation graph as a record of how
 all the artifacts connect. The `import` and `#include` statements in python and C++, respectively,
@@ -279,8 +318,6 @@ point in the past. How do we catch up?
 
 #### Estimation
 
-[pspp]: https://pythonspeed.com/articles/when-update-dependencies/
-
 As part of any decision about how much to memoize and how much to let float (unpinned), you should
 estimate the cost of upgrades. For example, let's say in your particular domain you estimate you
 will want to upgrade to the latest versions of packages only rarely, but it's critical that you be
@@ -321,8 +358,5 @@ print(total_cost)
 How long an individual upgrade will take depends on the quality of your tools, how much of the
 process you've automated, and how often you upgrade, among other things. To estimate `upgrade_cost`,
 see [](./update-dependencies.md).
-
-See also:
-- [Push and pull: when and why to update your dependencies][pspp]
 
 % TODO: improve-memoize-artifact.md
