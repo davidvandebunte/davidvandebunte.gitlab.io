@@ -48,7 +48,7 @@ container_image(
 container_run_and_commit_layer(
     name = "install_rethinking",
     commands = [
-        "chmod 777 /tmp && apt-get update && apt-get install -y g++ libfreetype6-dev && apt-get clean",
+        "chmod 777 /tmp && apt-get update && apt-get install -y g++ libfontconfig1-dev libfreetype6-dev && apt-get clean",
         "R -f /rethinking/install/rstan.R",
         "R -f /rethinking/install/dependencies.R",
         "R -f /rethinking/install/rethinking.R",
