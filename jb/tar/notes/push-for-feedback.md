@@ -43,6 +43,17 @@ It's easier to get notifications for local scripts with a tool like [`notify-sen
 [`zenity`][zn], but these still need to be set up for every script rather than needing to be
 configured only once per project.
 
+Another alternative is to use system mail (on Unix) and connect your user account on the machine to
+your email. This requires setting up e.g. `postfix` and must be done per-machine, like installing
+`gitlab-runner`. This setup is often required to get email notifications for RAID array events,
+failed login attempts, and other critical errors that would otherwise only go to the system logs. In
+theory, you could use a separate mailbox if you don't want these to clutter (or be cluttered by)
+your primary email messages.
+
+Another advantage of pushing for feedback (essentially, installing gitlab-runner) is that you can
+check for reproducibility on a schedule; see [](./regularly-stress-test.md). You could do this with
+cron jobs as well, but cron jobs are limited to a single machine.
+
 ### Faster human feedback
 
 Pushing for feedback keeps a developer closer to publishing in general, since you can share your
@@ -51,13 +62,15 @@ results from e.g. GitLab with others without rerunning it on GitLab.
 ### Organized record of successes and failures
 
 Pushing for feedback necessarily implies committing for feedback, though the latter doesn't strictly
-imply the former.
+imply the former. It can be nice to be "forced" to push all your "silly" mistakes; this helps you
+keep track of where time is really going. If you don't commit for feedback, it can be easy to forget
+that you've already tried something and couldn't get it to work.
 
 Even if you don't share your results, it can be incredibly helpful to have organized logs from the
-past few days for your own sake as well. What happened the last time that this worked?
-
-If you don't commit for feedback, it's easy to forget that you've already tried something and
-couldn't get it to work.
+past few days for your own sake as well. What happened the last time that this worked? Still, it may
+be better to save `container.log` files automatically with every experiment, even if the experiment
+is kicked off manually. In GitLab logs get cut off after some time, a limitation you don't run into
+when you save logs yourself.
 
 ### Insufficient local resources
 
@@ -108,7 +121,7 @@ Bazel to specify target patterns, but then these changes need to be removed if y
 the `.dvc` changes. An option that doesn't involve permanent code changes is `git` push options; see
 [Push Options | GitLab](https://docs.gitlab.com/ee/user/project/push_options.html).
 
-### Accessible computing resources
+### Requires accessible computing resources
 
 It's critical (for fast feedback) to use local (controlled) resources to run tests. That is, try to
 to set up the machine you would otherwise `ssh` into as a static runner with GitLab, or do the
@@ -119,6 +132,11 @@ the cloud resources e.g. your company provides, it's often hard to manage these 
 For example, pulling the docker image you use to run your experiments can add an unavoidable several
 seconds per experiment. Bazel is much faster when it already has all its caches loaded into volatile
 memory.
+
+One limitation of `gitlab-runner` is that artifacts (e.g. stored through dvc) is typically on the
+disk with the root filesystem, because gitlab-runner stores repositories in the `gitlab-runner` home
+directory. Unless you store the home directory on a different disk, it isn't easy to take advantage
+of a large secondary disk or RAID devices.
 
 It's also critical to have ssh access to debug issues faster. That is, it is often necessary to
 check the state of a machine when it fails a build. That is, you need be able to collect the
@@ -143,7 +161,12 @@ webpage, continuous deployment might only mean running `nginx` on whatever machi
 assigned a job. If your static content is build with Jupyter, it may be better to run Jupyter Lab on
 whatever machine was assigned the job.
 
-### Complicated debugging
+It's often easier to let machine learning experiments run without a timeout and kill them manually
+(e.g. with docker kill). There's usually (at least a little) value in letting an experiment run
+until you need the machine for something else (it has answered all your questions). If you're taking
+this approach, then you need to log into the machine anyways to kill it.
+
+### Complicates debugging
 
 Ideally, developers should not be *required* to push for feedback. A CI/CD system provides an
 independent verification that code works; if it's the only verification then you've made debugging
@@ -200,3 +223,21 @@ The Slack and Discord integrations for GitLab have a variety of checkboxes you c
 preference is to leave everything on their defaults, which is a "no news is good news" configuration
 where the user is not notified of passing pipelines. That is, if you get a notification you know you
 need to do something.
+
+## Machine specification
+
+It's awkward to try to specify which machine you want to run an experiment on with GitLab. As a
+workaround, you often need to disable machines in your CI/CD settings.
+
+## Inflated history
+
+One disadvantage to pushing for feedback is that your git history can expand unnecessarily. We often
+don't really want to save the history of tuning a batch size to a new machine, for example.
+
+It's not as easy to get a machine incrementally ready to run a new experiment. Let's say you wanted
+to pull a 5G dataset to a machine (e.g. with dvc) in order to run an experiment that you don't quite
+have ready yet. If you were only pushing for feedback, you'd be forced to push a commit that pulled
+that 5G dataset onto the machine early rather than simply going to the machine and pulling it
+without a new commit. Or, you'd have to tell GitLab to run a pipeline on a specific commit; this
+works but requires you to go a web user interface for something that could have been done on the
+command line.
