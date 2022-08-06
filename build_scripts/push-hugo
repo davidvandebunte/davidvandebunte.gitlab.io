@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 set -o errexit -o nounset -o xtrace
 
-echo "${CI_PROJECT_NAME:=personal-notes}"
-docker exec --tty --workdir "$(pwd)" \
-    bazel-server bazel run --define project=${CI_PROJECT_NAME} //hugo:push_hugo_img
+# echo "${CI_PROJECT_NAME:=personal-notes}"
+# docker exec --tty --workdir "$(pwd)" \
+#     bazel-server bazel run --define project=${CI_PROJECT_NAME} //hugo:push_hugo_img
