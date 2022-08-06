@@ -3,7 +3,7 @@ load("@io_bazel_rules_docker//docker/util:run.bzl", "container_run_and_commit_la
 container_run_and_commit_layer(
   name = "install_conda_pip",
   commands = [
-      "conda install jira pint uncertainties cmdstan",
+      "conda install jira pint uncertainties cmdstan r-ragg",
       "pip install jupyter-book xlsx2csv==0.7.7 tables",
   ],
   image = "@datascience_notebook//image",
@@ -48,7 +48,7 @@ container_image(
 container_run_and_commit_layer(
     name = "install_rethinking",
     commands = [
-        "chmod 777 /tmp && apt-get update && apt-get install -y g++ libfontconfig1-dev libfreetype6-dev libharfbuzz-dev libfribidi-dev libtiff-dev && apt-get clean",
+        "chmod 777 /tmp && apt-get update && apt-get install -y g++ libpng-dev libjpeg-dev libfontconfig1-dev libfreetype6-dev libharfbuzz-dev libfribidi-dev libtiff-dev && apt-get clean",
         "R -f /rethinking/install/rstan.R",
         "R -f /rethinking/install/dependencies.R",
         "R -f /rethinking/install/rethinking.R",
