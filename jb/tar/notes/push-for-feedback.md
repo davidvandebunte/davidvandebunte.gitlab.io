@@ -176,6 +176,12 @@ machines, you are paying the regular price of more difficult debugging. Pushing 
 adds the regular cost of committing changes. Often we making local debugging hard because we only
 want to maintain one system, and if we must pick one it will be the CI/CD runners.
 
+It's often much easier to perform one-time tasks in a local environment rather than indirectly on a
+remote machine. If you previously built an artifact automatically and would like to switch to making
+it a static dependency, then if you don't have your local build working you'll be forced to push the
+artifact with e.g. dvc to some shared location before pulling it back down again to your local
+machine to save as a static dependency.
+
 ### Halting problem
 
 [hp]: https://en.wikipedia.org/wiki/Halting_problem
@@ -224,12 +230,12 @@ preference is to leave everything on their defaults, which is a "no news is good
 where the user is not notified of passing pipelines. That is, if you get a notification you know you
 need to do something.
 
-## Machine specification
+### Machine specification
 
 It's awkward to try to specify which machine you want to run an experiment on with GitLab. As a
 workaround, you often need to disable machines in your CI/CD settings.
 
-## Inflated history
+### Inflated history
 
 One disadvantage to pushing for feedback is that your git history can expand unnecessarily. We often
 don't really want to save the history of tuning a batch size to a new machine, for example.
