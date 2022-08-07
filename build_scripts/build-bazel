@@ -2,8 +2,9 @@
 set -o errexit -o nounset
 
 echo "${CI_PROJECT_NAME:=personal-notes}"
-docker exec --tty --workdir "$(pwd)" \
-    bazel-server bazel build --define project=${CI_PROJECT_NAME} //jb:extract_build_book
+# docker exec --tty --workdir "$(pwd)" \
+#     bazel-server
+bazel build --define project=${CI_PROJECT_NAME} //jb:extract_build_book
 
 # TODO: This push is relatively slow; only enable it if you need to debug an issue with the build.
 # Notice the warning associated with pushing the hugo image; could this be faster?
