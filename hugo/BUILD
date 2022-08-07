@@ -16,16 +16,3 @@ container_image(
     base = "@base_hugo//image",
     layers = [":user_hugo"],
 )
-
-# You can change the `registry` and `repository` arguments to arbitrary strings (without removing
-# them) and this build will still work; this target only builds a script.
-load("@io_bazel_rules_docker//container:container.bzl", "container_push")
-container_push(
-   name = "push_hugo_img",
-   image = "user_hugo_img",
-   format = "Docker",
-   registry = "registry.gitlab.com",
-   repository = "davidvandebunte/$(project)",
-   skip_unchanged_digest = True,
-   tag = "user_hugo",
-)

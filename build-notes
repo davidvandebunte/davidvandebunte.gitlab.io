@@ -20,7 +20,6 @@ date
 ./build_scripts/start-brc
 ./build_scripts/start-bazel
 ./build_scripts/build-bazel
-./build_scripts/push-hugo
 ./build-shared-notes
 
 # TODO: What about a redirect at the root, once you are down to only the jupyter book project?
