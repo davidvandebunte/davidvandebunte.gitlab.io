@@ -11,14 +11,14 @@ start_brc() {
     --network host \
     --name brc \
     -u "$(id -u)":"$(id -g)" \
-    -v "${HOME}/bazel_remote_cache":/data \
+    -v "/bazel_remote_cache":/data \
     buchgr/bazel-remote-cache \
     --s3.auth_method=access_key \
     --s3.access_key_id "$AWS_ACCESS_KEY_ID" \
     --s3.secret_access_key "$AWS_SECRET_ACCESS_KEY" \
     --s3.bucket=davidvandebunte-bazel-pn \
     --s3.endpoint=s3.us-east-1.amazonaws.com \
-    --max_size=5
+    --max_size=100
 }
 
 if [ -z "$(docker ps -q -f name=brc)" ]; then
