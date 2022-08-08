@@ -96,14 +96,3 @@ container_run_and_extract(
     extract_file = "/tmp/_build",
     image = ":datascience_with_source.tar",
 )
-
-load("@io_bazel_rules_docker//container:container.bzl", "container_push")
-container_push(
-   name = "push_jln",
-   image = "datascience_with_source",
-   format = "Docker",
-   registry = "registry.gitlab.com",
-   repository = "davidvandebunte/$(project)",
-   skip_unchanged_digest = True,
-   tag = "jln",
-)
