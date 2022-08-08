@@ -9,7 +9,6 @@ build --remote_cache=grpc://localhost:9092
 
 build --output_filter=
 build --show_timestamps
-build --sandbox_debug
 build --experimental_ui_max_stdouterr_bytes=-1
 
 # - https://github.com/buchgr/bazel-remote/issues/241
