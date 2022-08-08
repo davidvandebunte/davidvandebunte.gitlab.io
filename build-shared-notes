@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 set -o errexit -o nounset -o xtrace
 
-docker build -t user_hugo_img - < hugo/Dockerfile
+docker load -i hugo/docker_image/docker_image.tar
 
 echo "${CI_PROJECT_NAME:=personal-notes}"
 if [ "$CI_PROJECT_NAME" = "personal-notes" ]; then
