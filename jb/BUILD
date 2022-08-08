@@ -26,17 +26,11 @@ container_layer(
     tars = [":rethinking_tar"],
 )
 
-load("@io_bazel_rules_docker//container:container.bzl", "container_load")
-container_load(
-  name = "install_conda_pip",
-  file = "docker/image.tar",
-)
-
 # Construct an image with the rethinking dependency
 load("@io_bazel_rules_docker//container:container.bzl", "container_image")
 container_image(
     name = "root_ds_image",
-    base = ":install_conda_pip.tar",
+    base = "@install_conda_pip//image",
     user = "root",
     layers = [":rethinking_layer"],
 )
@@ -81,7 +75,7 @@ container_layer(
 # Construct an image with the jupyter cache and jupyter book sources, with user jovyan
 container_image(
     name = "datascience_with_source",
-    base = ":install_conda_pip.tar",
+    base = "@install_conda_pip//image",
     layers = [":rethinking_layer", ":install_rethinking", ":cache_layer", ":source_layer"],
 )
 
