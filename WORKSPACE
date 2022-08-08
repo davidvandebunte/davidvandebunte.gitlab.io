@@ -54,10 +54,3 @@ container_pull(
   repository = "jupyter/datascience-notebook",
   digest = "sha256:d0fc04d56f2baf930395cf8fa48a3fcf64022924decf049dac847d392e0b2591",
 )
-
-container_pull(
-  name = "base_hugo",
-  registry = "registry.gitlab.com",
-  repository = "pages/hugo:latest",
-  digest = "sha256:f05b69fb734ee9bca2e29d48493a38dc4eb84f2bb8b8a94be5ae09d5fe213e7f",
-)

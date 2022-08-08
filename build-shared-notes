@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 set -o errexit -o nounset -o xtrace
 
-bazel run //hugo:user_hugo_img
+docker build -t user_hugo_img - < hugo/Dockerfile
 
 echo "${CI_PROJECT_NAME:=personal-notes}"
 if [ "$CI_PROJECT_NAME" = "personal-notes" ]; then
@@ -11,7 +11,7 @@ time docker run --rm \
     -u "$(id -u)":"$(id -g)" \
     --mount type=bind,source="$(pwd)",target=/src \
     --workdir /src/hugo \
-    bazel/hugo:user_hugo_img \
+    user_hugo_img \
     hugo --enableGitInfo \
     ${BASE_URL:+ --baseURL="$BASE_URL"} \
     -d shared-notes
