@@ -45,5 +45,5 @@ container_deps()
 load("@io_bazel_rules_docker//container:container.bzl", "container_load")
 container_load(
   name = "install_conda_pip",
-  file = "jb/docker/image.tar",
+  file = "//:jb/docker/image.tar",
 )
