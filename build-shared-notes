@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 set -o errexit -o nounset -o xtrace
 
-dvc pull hugo/docker_image/docker_image.tar
+python3 -m dvc pull hugo/docker_image/docker_image.tar
 docker load -i hugo/docker_image/docker_image.tar
 
 echo "${CI_PROJECT_NAME:=personal-notes}"
