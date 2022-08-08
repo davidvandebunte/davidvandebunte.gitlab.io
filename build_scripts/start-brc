@@ -10,11 +10,14 @@ start_brc() {
   # 1000 user should exist on all machines); other users should have access to the service the
   # container provides on port 9092. We provide a 100GB cache for large docker images; 5GB may not
   # fit even one.
+  CACHE_DIR="/bazel_caches/remote"
+  mkdir -p $CACHE_DIR
+  chmod 777 $CACHE_DIR
   docker run --detach \
     --network host \
     --name brc \
     -u 1000:1000 \
-    -v "/bazel_remote_cache":/data \
+    -v ${CACHE_DIR}:/data \
     buchgr/bazel-remote-cache \
     --s3.auth_method=access_key \
     --s3.access_key_id "$AWS_ACCESS_KEY_ID" \
