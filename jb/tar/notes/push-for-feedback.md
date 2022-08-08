@@ -97,10 +97,15 @@ needing to bring the code back to your local machine at some point.
 
 ## Cost
 
+### Fundamental overhead
+
 Pushing code and pulling it down on a static or shared CI/CD runner almost always adds a few seconds
 of overhead. It rarely makes sense to push for feedback on tests that only run for a few seconds,
 such as linters or a REPL that doesn't need anything loaded in memory. The benefits become clearer
 for "long" experiments where this overhead is insignificant, perhaps more than 3-4 minutes.
+
+Even if a change has no issues, it takes time to form a commit message, push it, find the output you
+should be watching, clear out Slack notification messages, and pull the merged change down.
 
 ### Setup
 
