@@ -4,3 +4,5 @@
 *.Rproj
 .DS_Store
 man/.Rapp.history
+/build.log
+/image.tar

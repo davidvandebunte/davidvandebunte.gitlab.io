@@ -80,6 +80,10 @@ GPU, etc.
 
 ## Cost
 
+You are more prone to bring down machines on an experiments that don't really matter. You don't care
+about the power you spend on running stress tests, but the risk of bringing down a remote machine
+when you don't have physical access is often too great.
+
 The process of moving an idea to production is the process of increasing its generalizability
 (reproducibility) across time, new inputs, etc. You should generalize to all the new inputs you
 expect to see in the next tier (e.g. production) first, then run all stress testing. Otherwise, you

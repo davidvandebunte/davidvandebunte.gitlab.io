@@ -1,14 +1,3 @@
-# Construct a layer with basic conda and pip dependencies
-load("@io_bazel_rules_docker//docker/util:run.bzl", "container_run_and_commit_layer")
-container_run_and_commit_layer(
-  name = "install_conda_pip",
-  commands = [
-      "conda install jira pint uncertainties cmdstan",
-      "pip install jupyter-book xlsx2csv==0.7.7 tables",
-  ],
-  image = "@datascience_notebook//image",
-)
-
 # Construct a tar with the rethinking package
 load("@rules_pkg//:mappings.bzl", "pkg_files")
 load("@rules_pkg//:pkg.bzl", "pkg_tar")
@@ -29,33 +18,6 @@ pkg_tar(
     owner = "1000.100",
 )
 
-# Construct a layer with the jupyter book cache
-load("@io_bazel_rules_docker//container:container.bzl", "container_layer")
-container_layer(
-    name="rethinking_layer",
-    directory = "/rethinking",
-    tars = [":rethinking_tar"],
-)
-
-# Construct an image with the rethinking dependency
-load("@io_bazel_rules_docker//container:container.bzl", "container_image")
-container_image(
-    name = "root_ds_image",
-    base = "@datascience_notebook//image",
-    user = "root",
-    layers = [":install_conda_pip", ":rethinking_layer"],
-)
-container_run_and_commit_layer(
-    name = "install_rethinking",
-    commands = [
-        "chmod 777 /tmp && apt-get update && apt-get install -y g++ && apt-get clean",
-        "R -f /rethinking/install/rstan.R",
-        "R -f /rethinking/install/dependencies.R",
-        "R -f /rethinking/install/rethinking.R",
-    ],
-    image = ":root_ds_image.tar",
-)
-
 # Construct a tar with the jupyter book cache
 pkg_files(
     name = "raw_cache",
@@ -69,6 +31,7 @@ pkg_tar(
 )
 
 # Construct a layer with the jupyter book cache
+load("@io_bazel_rules_docker//container:container.bzl", "container_layer")
 container_layer(
     name="cache_layer",
     directory = "/tmp/_build/.jupyter_cache",
@@ -83,10 +46,11 @@ container_layer(
 )
 
 # Construct an image with the jupyter cache and jupyter book sources, with user jovyan
+load("@io_bazel_rules_docker//container:container.bzl", "container_image")
 container_image(
     name = "datascience_with_source",
-    base = "@datascience_notebook//image",
-    layers = [":install_conda_pip", ":rethinking_layer", ":install_rethinking", ":cache_layer", ":source_layer"],
+    base = "@install_rethinking//image",
+    layers = [":cache_layer", ":source_layer"],
 )
 
 load("@io_bazel_rules_docker//docker/util:run.bzl", "container_run_and_extract")
@@ -95,15 +59,4 @@ container_run_and_extract(
     commands = ["./work/jb-build"],
     extract_file = "/tmp/_build",
     image = ":datascience_with_source.tar",
-)
-
-load("@io_bazel_rules_docker//container:container.bzl", "container_push")
-container_push(
-   name = "push_jln",
-   image = "datascience_with_source",
-   format = "Docker",
-   registry = "registry.gitlab.com",
-   repository = "davidvandebunte/$(project)",
-   skip_unchanged_digest = True,
-   tag = "jln",
 )

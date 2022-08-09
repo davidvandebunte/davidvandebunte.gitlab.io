@@ -11,11 +11,11 @@ http_archive(
 load("@rules_pkg//:deps.bzl", "rules_pkg_dependencies")
 rules_pkg_dependencies()
 
-http_archive(
+load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
+git_repository(
     name = "io_bazel_rules_docker",
-    sha256 = "59536e6ae64359b716ba9c46c39183403b01eabfbd57578e84398b4829ca499a",
-    strip_prefix = "rules_docker-0.22.0",
-    urls = ["https://github.com/bazelbuild/rules_docker/releases/download/v0.22.0/rules_docker-v0.22.0.tar.gz"],
+    remote = "https://github.com/davidvandebunte/rules_docker",
+    commit = "d8e18bc886e8a84d3dca2acd5dacd086e6fab71e",
 )
 
 load(
@@ -27,7 +27,6 @@ docker_toolchain_configure(
   docker_flags = [
     "--log-level=info",
   ],
-  client_config="/tmp/.ci_docker",
 )
 
 load(
@@ -42,22 +41,8 @@ load(
 )
 container_deps()
 
-load(
-    "@io_bazel_rules_docker//container:container.bzl",
-    "container_pull",
-)
-
-# https://hub.docker.com/layers/datascience-notebook/jupyter/datascience-notebook/latest/images/sha256-d0fc04d56f2baf930395cf8fa48a3fcf64022924decf049dac847d392e0b2591?context=explore
-container_pull(
-  name = "datascience_notebook",
-  registry = "index.docker.io",
-  repository = "jupyter/datascience-notebook",
-  digest = "sha256:d0fc04d56f2baf930395cf8fa48a3fcf64022924decf049dac847d392e0b2591",
-)
-
-container_pull(
-  name = "base_hugo",
-  registry = "registry.gitlab.com",
-  repository = "pages/hugo:latest",
-  digest = "sha256:f05b69fb734ee9bca2e29d48493a38dc4eb84f2bb8b8a94be5ae09d5fe213e7f",
+load("@io_bazel_rules_docker//container:container.bzl", "container_load")
+container_load(
+  name = "install_rethinking",
+  file = "//:jb/rethinking/image.tar",
 )

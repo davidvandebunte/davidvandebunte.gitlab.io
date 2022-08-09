@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+set -o errexit -o nounset -o xtrace
+
+docker build --no-cache -t install_conda_pip - < Dockerfile > build.log
+docker save -o image.tar install_conda_pip
+dvc add build.log image.tar
+dvc push
+git ci -m "Build jb docker image on $(hostname)"
