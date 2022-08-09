@@ -27,7 +27,6 @@ docker_toolchain_configure(
   docker_flags = [
     "--log-level=info",
   ],
-  client_config="/tmp/.ci_docker",
 )
 
 load(
