@@ -41,15 +41,8 @@ load(
 )
 container_deps()
 
-load(
-    "@io_bazel_rules_docker//container:container.bzl",
-    "container_pull",
-)
-
-# https://hub.docker.com/layers/datascience-notebook/jupyter/datascience-notebook/latest/images/sha256-d0fc04d56f2baf930395cf8fa48a3fcf64022924decf049dac847d392e0b2591?context=explore
-container_pull(
-  name = "datascience_notebook",
-  registry = "index.docker.io",
-  repository = "jupyter/datascience-notebook",
-  digest = "sha256:d0fc04d56f2baf930395cf8fa48a3fcf64022924decf049dac847d392e0b2591",
+load("@io_bazel_rules_docker//container:container.bzl", "container_load")
+container_load(
+  name = "install_conda_pip",
+  file = "//:jb/docker/image.tar",
 )

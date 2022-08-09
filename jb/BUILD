@@ -1,14 +1,3 @@
-# Construct a layer with basic conda and pip dependencies
-load("@io_bazel_rules_docker//docker/util:run.bzl", "container_run_and_commit")
-container_run_and_commit(
-  name = "install_conda_pip",
-  commands = [
-      "conda install jira pint uncertainties cmdstan r-ragg",
-      "pip install jupyter-book xlsx2csv==0.7.7 tables",
-  ],
-  image = "@datascience_notebook//image",
-)
-
 # Construct a tar with the rethinking package
 load("@rules_pkg//:mappings.bzl", "pkg_files")
 load("@rules_pkg//:pkg.bzl", "pkg_tar")
@@ -41,7 +30,7 @@ container_layer(
 load("@io_bazel_rules_docker//container:container.bzl", "container_image")
 container_image(
     name = "root_ds_image",
-    base = ":install_conda_pip_commit.tar",
+    base = "@install_conda_pip//image",
     user = "root",
     layers = [":rethinking_layer"],
 )
@@ -86,7 +75,7 @@ container_layer(
 # Construct an image with the jupyter cache and jupyter book sources, with user jovyan
 container_image(
     name = "datascience_with_source",
-    base = ":install_conda_pip_commit.tar",
+    base = "@install_conda_pip//image",
     layers = [":rethinking_layer", ":install_rethinking", ":cache_layer", ":source_layer"],
 )
 
