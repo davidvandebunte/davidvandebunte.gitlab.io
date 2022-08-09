@@ -18,34 +18,6 @@ pkg_tar(
     owner = "1000.100",
 )
 
-# Construct a layer with the jupyter book cache
-load("@io_bazel_rules_docker//container:container.bzl", "container_layer")
-container_layer(
-    name="rethinking_layer",
-    directory = "/rethinking",
-    tars = [":rethinking_tar"],
-)
-
-# Construct an image with the rethinking dependency
-load("@io_bazel_rules_docker//container:container.bzl", "container_image")
-container_image(
-    name = "root_ds_image",
-    base = "@install_conda_pip//image",
-    user = "root",
-    layers = [":rethinking_layer"],
-)
-load("@io_bazel_rules_docker//docker/util:run.bzl", "container_run_and_commit_layer")
-container_run_and_commit_layer(
-    name = "install_rethinking",
-    commands = [
-        "chmod 777 /tmp && apt-get update && apt-get install -y g++ libpng-dev libjpeg-dev libfontconfig1-dev libfreetype6-dev libharfbuzz-dev libfribidi-dev libtiff-dev && apt-get clean",
-        "R -f /rethinking/install/rstan.R",
-        "R -f /rethinking/install/dependencies.R",
-        "R -f /rethinking/install/rethinking.R",
-    ],
-    image = ":root_ds_image.tar",
-)
-
 # Construct a tar with the jupyter book cache
 pkg_files(
     name = "raw_cache",
@@ -59,6 +31,7 @@ pkg_tar(
 )
 
 # Construct a layer with the jupyter book cache
+load("@io_bazel_rules_docker//container:container.bzl", "container_layer")
 container_layer(
     name="cache_layer",
     directory = "/tmp/_build/.jupyter_cache",
@@ -73,10 +46,11 @@ container_layer(
 )
 
 # Construct an image with the jupyter cache and jupyter book sources, with user jovyan
+load("@io_bazel_rules_docker//container:container.bzl", "container_image")
 container_image(
     name = "datascience_with_source",
-    base = "@install_conda_pip//image",
-    layers = [":rethinking_layer", ":install_rethinking", ":cache_layer", ":source_layer"],
+    base = "@install_rethinking//image",
+    layers = [":cache_layer", ":source_layer"],
 )
 
 load("@io_bazel_rules_docker//docker/util:run.bzl", "container_run_and_extract")
