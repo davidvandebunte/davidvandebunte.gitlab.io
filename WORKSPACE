@@ -11,6 +11,7 @@ http_archive(
 load("@rules_pkg//:deps.bzl", "rules_pkg_dependencies")
 rules_pkg_dependencies()
 
+load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_archive")
 git_archive(
     name = "io_bazel_rules_docker",
     remote = "https://github.com/davidvandebunte/rules_docker",
