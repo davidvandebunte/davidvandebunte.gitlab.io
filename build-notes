@@ -22,8 +22,5 @@ python3 -m dvc pull jb/jupyter_cache
 ./build_scripts/build-bazel
 ./build-shared-notes
 
-# TODO: What about a redirect at the root, once you are down to only the jupyter book project?
 cd public
-tree -H '.' --prune -P 'index.html' -L 2 --noreport --charset utf-8 . > out.html
-mv out.html index.html
 ./start-nginx
