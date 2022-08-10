@@ -6,7 +6,7 @@ start_nginx() {
         -v "$(pwd)":/usr/share/nginx/html:ro -d nginx
 }
 
-if [ -z "$(docker ps -q -f name=pn-nginx)" ] && [ "$CI_PROJECT_NAME" = "personal-notes" ]; then
+if [ -z "$(docker ps -q -f name=pn-nginx)" ] && [ "${CI_PROJECT_NAME:+x}" = "personal-notes" ]; then
     start_nginx
 else
     echo "nginx server already started."
