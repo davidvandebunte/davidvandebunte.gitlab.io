@@ -5,7 +5,7 @@ python3 -m dvc pull hugo/docker_image/docker_image.tar
 docker load -i hugo/docker_image/docker_image.tar
 
 echo "${CI_PROJECT_NAME:=personal-notes}"
-if [ "$CI_PROJECT_NAME" = "personal-notes" ]; then
+if [ "$CI_PROJECT_NAME" = "personal-notes" ] && [ "${CI_PROJECT_NAMESPACE:+x}" ]; then
     BASE_URL="https://$CI_PROJECT_NAMESPACE.gitlab.io/-/$CI_PROJECT_NAME/-/jobs/$CI_JOB_ID/artifacts/public/shared-notes"
 fi
 time docker run --rm \

@@ -1,16 +1,6 @@
 build --subcommands
 build --verbose_failures
 
-# TODO: How much does it slow down Bazel to write results to S3? For these 5GB docker images, it
-# seems like this would be significant. Should you use a local cache instead? To test, you commented
-# out this line. You saw 4-5 seconds improvement with a corresponding change to one of the jb .md
-# files.
-# build --remote_cache=grpc://localhost:9092
-
 build --output_filter=
 build --show_timestamps
 build --experimental_ui_max_stdouterr_bytes=-1
-
-# - https://github.com/buchgr/bazel-remote/issues/241
-# - https://docs.bazel.build/versions/main/command-line-reference.html#flag--remote_timeout
-# build --remote_timeout=240s

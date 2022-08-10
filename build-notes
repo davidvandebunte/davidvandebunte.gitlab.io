@@ -5,30 +5,22 @@ date
 env
 docker system info
 
-if [ "$GITLAB_USER_EMAIL" ]; then
+if [ "${GITLAB_USER_EMAIL:+x}" ]; then
     url_host=$(git remote get-url origin | sed -e "s/https:\/\/gitlab-ci-token:.*@//g")
     git remote set-url origin "https://gitlab-ci-token:${CI_TAG_UPLOAD_TOKEN}@${url_host}"
     git config --global user.email "${GITLAB_USER_EMAIL}"
     git config --global user.name 'GitLab (bot)'
 fi
 
-if [ "$AWS_ACCESS_KEY_ID" ]; then
+if [ "${AWS_ACCESS_KEY_ID:+x}" ]; then
     python3 -m dvc config --local cache.dir /tmp/dvc-cache
     python3 -m dvc remote modify --local aws access_key_id "$AWS_ACCESS_KEY_ID"
     python3 -m dvc remote modify --local aws secret_access_key "$AWS_SECRET_ACCESS_KEY"
 fi
 
-date
 python3 -m dvc pull jb/jupyter_cache
-date
-
-./build_scripts/start-brc
-./build_scripts/populate-cli-config
 ./build_scripts/build-bazel
 ./build-shared-notes
 
-# TODO: What about a redirect at the root, once you are down to only the jupyter book project?
 cd public
-tree -H '.' --prune -P 'index.html' -L 2 --noreport --charset utf-8 . > out.html
-mv out.html index.html
 ./start-nginx
