@@ -1,2 +1,2 @@
 # https://docs.gitlab.com/ee/user/project/pages/redirects.html
-/index.html /executable-notes/notes/about.html 302
+/ /executable-notes/notes/about.html 302
