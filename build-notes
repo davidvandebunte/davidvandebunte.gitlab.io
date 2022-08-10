@@ -22,7 +22,6 @@ date
 python3 -m dvc pull jb/jupyter_cache
 date
 
-./build_scripts/start-brc
 ./build_scripts/build-bazel
 ./build-shared-notes
 
