@@ -53,6 +53,11 @@ parts:
       - file: notes/share-to-blog.md
       - file: notes/share-to-stack-exchange.md
       - file: notes/share-to-wikimedia.md
+  - caption: Schedule
+    chapters:
+      - file: notes/email-yourself.md
+      - file: notes/add-calendar-reminder.md
+      - file: notes/add-calendar-event.md
   - caption: Learn
     chapters:
       - file: notes/add-attention-mechanism.md
