@@ -36,12 +36,14 @@ accumulate steps and add them up before taking them (build up a plan). It's also
 hyperparameter to tune, except through experience on the model you are trying to train. To pick a
 step size you often have to simply guess and experimentally check if the loss goes down.
 
+[cf]: https://en.wikipedia.org/wiki/Cynefin_framework
+[vf]: https://en.wikipedia.org/wiki/Volatility_(finance)
+
 Said another way, the value in imagining more possible worlds depends on your domain. How
 experienced are you in it (how much data do you have)? For example, in war the situation is unstable
 and rapidly changing; see the quotations in [Plan](
-https://en.wikipedia.org/wiki/Plan#Quotations). See also:
-- [Cynefin framework](https://en.wikipedia.org/wiki/Cynefin_framework#cite_note-8)
-- [Volatility (finance)](https://en.wikipedia.org/wiki/Volatility_(finance))
+https://en.wikipedia.org/wiki/Plan#Quotations). See also [Cynefin framework][cf] and [Volatility
+(finance)][vf].
 
 If your values are not stable (what your customers are asking for) or your costs are not stable
 (what abstractions or resources you need to solve your problems) then you shouldn't plan as far
@@ -50,17 +52,15 @@ control system, you need to regularly "merge" the thoughts of outsiders (who are
 commits independent of you). These can be both changes in the market (what the world values) and
 changes in tools (what you need to solve a problem).
 
-The noun "plan" is defined in the "Test" section below. We use the verb "plan" to mean any of the
-steps listed in the "Cost" section.
-
 Usually, hitting some subgoal should be a trigger to go back to planning (many people have a habit
 to do so). Usually, the associated decrease in your uncertainties may lead to a change in your
 plans, and even if it doesn't you likely to need to plan out your next steps in more detail. Still,
 this isn't a hard rule. In theory you should compare the estimated weight of a planning subplan
 (based on this document) to the estimated weight of your currently selected subplan.
 
-Humans are good at imagining the future and seem to do so to a fault; we crave stable learning
-environments/domains (with stable values and costs). See also:
+The noun "plan" is defined in the **Test** section below. We use the verb "plan" to mean any of the
+steps listed in the "Cost" section. Humans are good at imagining the future and seem to do so to a
+fault; we crave stable learning environments/domains (with stable values and costs). See also:
 - [Mental time travel](https://en.wikipedia.org/wiki/Mental_time_travel)
 - [Foresight (psychology)](https://en.wikipedia.org/wiki/Foresight_(psychology))
 - [Time perception](https://en.wikipedia.org/wiki/Time_perception)
@@ -74,13 +74,13 @@ Estimate the weight (give a score to) a subplan, that is, a piece of plan that a
 subgoal. Prefer the term "subgoal" to "intermediate" goal; see the language recommendations in
 [Goal](https://en.wikipedia.org/wiki/Goal). A [Plan](https://en.wikipedia.org/wiki/Plan) is
 typically associated with one goal (see also [Planning](https://en.wikipedia.org/wiki/Planning)),
-though we use more use it loosely if we intend to [Kill two birds with one stone](
-https://en.wiktionary.org/wiki/kill_two_birds_with_one_stone). It's trivial to define a new goal as
-the logical conjunction (AND) of other goals.
+though we use more use it loosely if we intend to kill two birds with one stone. It's trivial to
+define a new goal as the logical conjunction (AND) of other goals.
 
 To estimate the weight (relative importance) of a subplan (e.g. small enough to do in a day), you
-need to consider it in the context of a larger plan, all other plans that pass the same test
-(achieve the same goal), and all your goals.
+need to consider it in the context of a larger plan (e.g. something that takes a week), all other
+larger plans that pass the same test (achieve the same goal), and all your goals (since it may help
+you achieve multiple goals).
 
 [rl]: https://en.wikipedia.org/wiki/Reinforcement_learning
 
@@ -99,34 +99,30 @@ process](https://en.wikipedia.org/wiki/Markov_decision_process):
 
 ![MDP](https://upload.wikimedia.org/wikipedia/commons/a/ad/Markov_Decision_Process.svg)
 
-See also:
-- [Goal setting](https://en.wikipedia.org/wiki/Goal_setting)
+See also [Goal setting](https://en.wikipedia.org/wiki/Goal_setting).
 
 ## Graph example
 
 In the following git-styled graph, the `*` mark world states. A plan is also denoted git-style with
-e.g. `a..b`. In this example, `a..c` is a subplan of `a..e`.
-
-Historically, DAGs have regularly been used for scheduling. See [Directed acyclic graph -
+e.g. `a..b`. In this example, `a..c` is a subplan of `a..e`. DAGs have long been used for
+scheduling. See [Directed acyclic graph -
 Scheduling](https://en.wikipedia.org/wiki/Directed_acyclic_graph#Scheduling) and [PERT chart](
 https://en.wikipedia.org/wiki/Program_evaluation_and_review_technique). The git style makes it
 easier to draw (in ASCII) and therefore easier to annotate in ways custom to the planning problem.
 
 This approach is analogous to [GitOps](https://en.wikipedia.org/wiki/DevOps#GitOps), where the state
-of a resource (such as a cluster or deployment) is tracked in version control. A major difference of
-this system from GitOps are that it looks forward rather than backwards in time ("imagining"
-commits). There are some equivalencies between feature branches under review as "imagined"
-improvements to the mainline, but this ignores that time cannot be stopped and that the feature is
-already (perhaps partially) implemented (and only under review). Relative to GitOps, this system
-also expands the state under consideration to the world/universe, which means it will never stay up
-to date automatically (it is only updated as often as you come back to planning). For a more
+of a resource (such as a cluster or deployment) is tracked in version control. The first major
+difference of this system from GitOps are that it looks forward rather than backwards in time
+("imagining" commits). That is, it is prescriptive rather than descriptive. Relative to GitOps, this
+system also expands the state under consideration to the world/universe, which means it will never
+stay up to date automatically (it is only updated as often as you come back to planning). For a more
 detailed definition of GitOps, see [GitOps | GitOps is Continuous Deployment for cloud native
 applications](https://www.gitops.tech/)).
 
 ```
-* h: Pay bills: B 2017-07-07 4PM $120
-* g: Mow lawn: L 2017-07-07 3PM $100
-* f: Buy a lawn mower: 2017-07-07 1PM $80
+* h: Pay bills: B 2017-07-07 4PM $110
+* g: Mow lawn: L 2017-07-07 3PM $90
+* f: Buy a lawn mower: 2017-07-07 1PM $70 (immediate $10 deprecation of mower)
 | * e: Lawn service mows lawn: S L 2017-07-07 3PM $120
 | * d: Play with kids: S K 2017-07-07 3PM $100
 | * c: Pay bills: S B 2017-07-07 3PM $80
@@ -152,10 +148,10 @@ e.g. \$20/week to get our lawn mowed. We can use this system to describe the adm
 significant resources as well, such as employees ("human resources") or computers ("computing
 resources").
 
-If we were really using git these detailed states (capital letters) would not likely be recorded in
-the commit messages, but in files. From that perspective, these capital letters can be seen as the
-tree of files in the commit. To generate a short, unique ID (other than a capital letter) you could
-use an [Issue tracking system](https://en.wikipedia.org/wiki/Issue_tracking_system). From that
+If we were really using `git` these detailed states (capital letters) would not likely be recorded
+in the commit messages, but in files. From that perspective, these capital letters can be seen as
+the tree of files in the commit. To generate a short, unique ID (other than a capital letter) you
+could use an [Issue tracking system](https://en.wikipedia.org/wiki/Issue_tracking_system). From that
 perspective, goal states are "features" (or fixed defects) and achieved states in general might be
 "tasks" (e.g. refactors that increase the amount of code that must be managed).
 
@@ -210,9 +206,11 @@ without experimentation, ignoring value in executing faster with a team).
 
 # Estimated cost
 
-Much of this process has not been automated, but see:
-- [Brainstorming](https://en.wikipedia.org/wiki/Brainstorming)
-- [Computer supported brainstorming](https://en.wikipedia.org/wiki/Computer_supported_brainstorming)
+[brs]: https://en.wikipedia.org/wiki/Brainstorming
+[cbrs]: https://en.wikipedia.org/wiki/Computer_supported_brainstorming
+
+Much of this process has not been automated, but see [Brainstorming][brs] and [Computer supported
+brainstorming][cbrs].
 
 ## Limit planning time
 
@@ -221,26 +219,38 @@ nearly continuous. That is, you could spend one hour every week, or four hours e
 total cost of about four hours every month either way. However, planning is a skill that takes you
 out of focused work on your current subgoal, and requires focused work (to some extent) in itself.
 
+Therefore in practice we need to plan for a certain minimum number of hours, which indirectly
+determines the minimum possible planning frequency we achieve (more frequent is better, and possible
+with an established planning process). This minimum effectively determines the minimum size that
+your subplans can be (the "action" size). In periods where you come back to planning every time you
+hit a subgoal, and your time estimates are accurate, you may notice all subgoals end up being about
+the same size. If so, you can avoid a requirement to regularly come back to planning (timeboxes).
+
 All plans *tend* to reduce uncertainty about your action choice, at the cost of more planning time
 (imagining based on what's in your head, rather than testing based on what's outside it). An
 alternative way to reduce uncertainty, as mentioned, is to execute only the first step in an
 existing multi-part plan (preferring experimentation to theory).
 
-In practice we need to plan for a certain minimum number of hours, which indirectly determines the
-minimum possible planning frequency we achieve (more frequent is better, and possible with an
-established planning process). This minimum effectively determines the minimum size that your
-subplans can be (the "action" size). In periods where you come back to planning every time you hit a
-subgoal, and your time estimates are accurate, you may notice all subgoals end up being about the
-same size. If so, you can avoid a requirement to regularly come back to planning (timeboxes).
-
 ## Reuse unexecuted plans
 
 You can often restore (rebase) old plans where you've identified value. The more you plan, the
 larger this body of "old" plans becomes (becoming both a burden and a helpful resource). Only
-include incremental changes in time on this graph; absolute dates would quickly go stale.
+include incremental changes in time on this graph; absolute dates would quickly go stale. On a team
+you could have multiple people explore different ideas in parallel. Everyone on a team should be
+coming up with and presenting ideas regularly, further complicating management of this artifact.
 
-On a team you could have multiple people explore different ideas in parallel; everyone on a team
-should be coming up with and presenting ideas regularly.
+[cits]: https://en.wikipedia.org/wiki/Comparison_of_issue-tracking_systems
+[cpms]: https://en.wikipedia.org/wiki/Comparison_of_project_management_software
+
+One way to look at planning is as a process to let you [](./expand-focus.md) to everything you care
+about; the big picture. If you can see the big picture then you know it is more likely you won't
+"miss" high value (critical) or low cost (opportunistic) tasks. Planning tools and artifacts let you
+see a "compressed" picture of the state you care about to help you plan better. In theory, we expect
+the CEO of a company or the leader of a team to use planning artifacts to see the big picture and
+select the best actions for the group from all available options. These artifacts are small and so
+can easily be converted (on demand, i.e. the subset of tasks that is required) to e.g. the [Jira
+(software)](https://en.wikipedia.org/wiki/Jira_(software)) format. See also [Comparison of
+issue-tracking systems][cits] and [Comparison of project management software][cpms].
 
 ## Reuse experiences
 
@@ -316,8 +326,9 @@ constructed from the highly reusable plans encoded in `BUILD` files. A preferenc
 is explicitly discussed in [Dependency Management | Bazel][fgm]. In this context, smaller actions
 also make re-executing actions faster (through parallelization and caching).
 
-Do not assume any dependency is necessary or good or bad. See [](./flatten-plan.md) for tips on
-stripping dependencies; see [](./identify-resource.md) for tips on finding them.
+Do not assume any dependency is necessary or good or bad. See:
+- [](./flatten-plan.md) for tips on stripping dependencies
+- [](./identify-resource.md) for tips on finding them
 
 ## Find value
 

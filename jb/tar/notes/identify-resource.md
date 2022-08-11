@@ -33,10 +33,10 @@ https://english.stackexchange.com/questions/278113/a-word-for-people-who-work-un
 We use the term administrator (see [Administration](https://en.wikipedia.org/wiki/Administration))
 as a synonym for manager.
 
-Buying a machine (or getting reserved instances) is like getting a salaried employee; renting is
-like getting temporary workers. Many deep learning machines are now significantly more expensive
-than minimum wage; see for example the instances listed under [Amazon EC2 P3 – Ideal for Machine
-Learning and HPC](https://aws.amazon.com/ec2/instance-types/p3/). If you want to use a whole
+Buying a machine (or getting reserved instances) is similar to getting a salaried employee, and
+renting is like getting temporary workers. Many deep learning machines are now significantly more
+expensive than minimum wage; see for example the instances listed under [Amazon EC2 P3 – Ideal for
+Machine Learning and HPC](https://aws.amazon.com/ec2/instance-types/p3/). If you want to use a whole
 cluster, the costs are even more extreme.
 
 As the manager of a team (of either people or computers) executing or comparing plans, you must

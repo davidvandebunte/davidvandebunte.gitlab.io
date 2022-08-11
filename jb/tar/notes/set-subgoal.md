@@ -48,6 +48,6 @@ At your computer you can consider all the way down to how you e.g. open and clos
 text editor, tmux), when you use your mouse vs. your keyboard, and how often you need to look at the
 keyboard when you type.
 
-$ See:
+% See:
 % - edit-plain-text.md
 % - close-window.md

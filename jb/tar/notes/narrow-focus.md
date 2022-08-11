@@ -46,16 +46,19 @@ to confirm your headphones are on, and even quiet white noise lets you avoid thi
 Look at how many uncommitted changes you have and get them into a git commit. You often leave
 uncommitted changes as small goal states. That is, with a goal to save them off in an "organized"
 place or at the least save them into an "organized" commit. Still, to save time when you're
-narrowing your focus it's perfectly fine to many of these miscellaneous additions into an "Add
-miscellaneous notes" commit. The advantage of leaving some content uncommitted is you'll easily be
-able to look it up (though you can also do in `git history`).
+narrowing your focus it's perfectly fine to collect many of these miscellaneous additions into an
+"Add miscellaneous notes" commit. The advantage of leaving some content uncommitted is you'll easily
+be able to look it up (though you could do the same with git logs).
 
 ### Long
 
+[sne]: https://mail.google.com/mail/u/0/#snoozed
 [gcw]: https://calendar.google.com/calendar/r/week
 
-Address email snoozed to the near future. Open [Week View | Google Calendar][gcw] and search in the
-next 2-3 weeks for double-bookings and low weight appointments.
+Go through [snoozed emails][sne]. Open [Week View | Google Calendar][gcw] and search in the next 2-3
+weeks for double-bookings and low weight appointments.
 
-Archive code or notes so that you don't see them in a `git grep`. All your code and notes are
-associated with some goal.
+Archive code or notes so that you don't see them in a `git grep`. All your code and notes should be
+associated with some goal. It's often easier to actually search for notes you may be able to remove
+as you work on a canonical process; see comments in [](./expand-focus.md) associated with searching
+for terms as you start work on improving a process.

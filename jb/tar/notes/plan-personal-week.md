@@ -15,7 +15,12 @@ kernelspec:
 
 # Plan personal week
 
-It's what we choose to say yes (and no) to that largely determines our success.
+It's what we choose to say yes (and no) to that largely determines our success. This process
+specializes [](./estimate-subplan-weight.md) to the duration of a week and batches the process to
+e.g. 3-4 subplans you consider important. Planning at the scale of a week is about taking a slightly
+longer view (e.g. 2-3 weeks) so that you don't need to go into as much planning detail on a daily
+basis.
+
 
 # Test
 
@@ -50,7 +55,8 @@ their way to plain text; just copy and paste.
 
 [rl]: ./retrospect-on-life.md
 
-[Retrospect][rl] (measure scheduling and software error) on your last week.
+[Retrospect][rl] (measure scheduling and software error) on your last week. It's tempting to do this
+while you're copying notes to plain text; it's better to do this once everything is converted.
 
 ## Discretionary Spending
 
@@ -79,10 +85,6 @@ In the end, you must have a global view to optimize (neither top-down or bottom-
 is, you must regularly make a tough decision on whether to pull from the bottom or push from the
 top. See [](./organize-notes.md) for the relative importance of a clean life network for the sake of
 prioritization.
-
-See [](./estimate-subplan-weight.md) for a more general view of planning. Planning at the scale of a
-week is about taking a slightly longer view (e.g. 2-3 weeks) so that you don't need to go into as
-much planning detail on a daily basis.
 
 Try to focus on one subnetwork (if in JIRA, one epic) to support a large batchsize. Note this
 network as the focus of your sprint (sprint goal). The first step in planning is to pick this
