@@ -2,14 +2,10 @@
 
 ## Estimate value
 
-Generalizes many processes. To make your mind attend to more:
-- Large scale goals, see [](./set-wide-goal.md) or [](./set-deep-goal.md).
-
 You can expand your focus with the purpose of either decreasing costs or finding value. That is,
-either considering how you can share code/weights/ideas between two tasks you must do, or mining for
-value.
-
-Build better internal representations in order to make solving future problems more efficient.
+either considering how you can share code/weights/ideas between two tasks you must do (build better
+internal representations in order to make solving future problems more efficient), or mining for
+value (see [](./set-wide-goal.md) and [](./set-deep-goal.md)).
 
 ## Design test
 

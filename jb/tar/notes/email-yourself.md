@@ -44,8 +44,8 @@ deleting your notes.
 It's possible to see this as both an advantage and a disadvantage. In a world before writing and
 reminders it wouldn't have been possible for your past self to impose on your present like this;
 you'd naturally forget about unimportant notes. You should only delete notes when there's an
-associated cost in readability or searches; see [What are the pros and cons of deleting unused code?
-- Stack Overflow](https://stackoverflow.com/a/47824954/622049).
+associated cost in readability or searches; see [Pros and cons of deleting unused code? - SO](
+https://stackoverflow.com/a/47824954/622049).
 
 That is, you should probably only be deleting notes when you've decided to organize them, on a
 larger scale. What if your past self isn't right about what your current priorities should be?

@@ -73,7 +73,6 @@ parts:
       - file: notes/maintain-focus.md
       - file: notes/narrow-focus.md
       - file: notes/search-the-web.md
-      - file: notes/stay-on-focus.md
   - caption: Plan
     chapters:
       - file: notes/avoid-explore-exploit.md

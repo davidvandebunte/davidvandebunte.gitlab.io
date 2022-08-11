@@ -80,9 +80,8 @@ Measure (acknowledge) where time was spent so you're aware of problems; don't fo
 do. Record your time costs as expected value (in time savings) on a new or existing task to prevent
 the interruption.
 
-Did you properly handle interruptions, staying on focus?
+Did you properly handle interruptions, staying on focus? See [](./maintain-focus.md).
 - [](./handle-interruption.md)
-- [](./stay-on-focus.md)
 
 ## Backprop Errors
 

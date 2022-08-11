@@ -1,2 +1,3 @@
 # https://docs.gitlab.com/ee/user/project/pages/redirects.html
 / /executable-notes/notes/about.html 302
+/executable-notes/notes/stay-on-focus.html /executable-notes/notes/maintain-focus.html 301
