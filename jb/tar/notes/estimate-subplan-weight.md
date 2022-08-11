@@ -237,7 +237,8 @@ You can often restore (rebase) old plans where you've identified value. The more
 larger this body of "old" plans becomes (becoming both a burden and a helpful resource). Only
 include incremental changes in time on this graph; absolute dates would quickly go stale. On a team
 you could have multiple people explore different ideas in parallel. Everyone on a team should be
-coming up with and presenting ideas regularly, further complicating management of this artifact.
+coming up with and presenting ideas regularly, further complicating management of this artifact. For
+an example, see [](./select-subplan.md).
 
 [cits]: https://en.wikipedia.org/wiki/Comparison_of_issue-tracking_systems
 [cpms]: https://en.wikipedia.org/wiki/Comparison_of_project_management_software
