@@ -37,14 +37,12 @@ took? In your case your function is the planning function you used at the start 
 a sort of E[**V**]/E[**E**] on all the actions you were aware of at the start of your timebox (right
 now, based on a search for TODo).
 
-Run a `git grep` for the TODo you removed in the last sprint (filter to e.g. one week ago).
-
-Every completed TODo will generate a statistical error (or disturbance); see [Errors and residuals -
+Run a `git grep` for the TODo you removed in the last sprint (filter to e.g. one week ago). Every
+completed TODo will generate a statistical error (or disturbance); see [Errors and residuals -
 Wikipedia](https://en.wikipedia.org/wiki/Errors_and_residuals#Introduction) applicable to your
 estimation functions. If you don't know yet whether a TODo was a good investment, then snooze an
-email reminder for when you think you'll know (or add a calendar reminder).
-
-All of these errors can be vectors or tensors, not just scalars.
+email reminder for when you think you'll know (or add a calendar reminder). All of these errors can
+be vectors or tensors, not just scalars.
 
 ## Generate Actions Error
 
@@ -82,9 +80,8 @@ Measure (acknowledge) where time was spent so you're aware of problems; don't fo
 do. Record your time costs as expected value (in time savings) on a new or existing task to prevent
 the interruption.
 
-Did you properly handle interruptions, staying on focus?
+Did you properly handle interruptions, staying on focus? See [](./maintain-focus.md).
 - [](./handle-interruption.md)
-- [](./stay-on-focus.md)
 
 ## Backprop Errors
 

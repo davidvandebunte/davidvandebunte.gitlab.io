@@ -199,6 +199,10 @@ it a static dependency, then if you don't have your local build working you'll b
 artifact with e.g. dvc to some shared location before pulling it back down again to your local
 machine to save as a static dependency.
 
+The independent verification provided by a CI/CD system is valuable but not required. If you're
+working alone in a highly risky direction (a spike, where there may be no success in the end), it
+may not be worth the effort until you've shown you can get results.
+
 ### Halting problem
 
 [hp]: https://en.wikipedia.org/wiki/Halting_problem

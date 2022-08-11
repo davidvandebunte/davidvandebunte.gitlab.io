@@ -45,35 +45,40 @@ Or attempt to flatten G1 into parallel tasks?
 
 # Value
 
-## Avoid work
+## Maximize work not done
 
-See:
-- [New to agile? INVEST in good user stories – Agile for All](
-https://agileforall.com/new-to-agile-invest-in-good-user-stories/)
-- [Essential Scrum - Google Books](
-https://books.google.com/books?id=3vGEcOfCkdwC&lpg=PA87&dq=sprintable+user+story&source=bl&ots=-BC9smev3k&sig=e80MdZj7HJN8DDPjj2O2E4gKuuI&hl=en&sa=X&output=reader&pg=GBS.PA88.w.18.0.48)
+[afa]: https://agileforall.com/new-to-agile-invest-in-good-user-stories/
+[esgb]: https://books.google.com/books?id=3vGEcOfCkdwC&lpg=PA87&dq=sprintable+user+story&source=bl&ots=-BC9smev3k&sig=e80MdZj7HJN8DDPjj2O2E4gKuuI&hl=en&sa=X&output=reader&pg=GBS.PA88.w.18.0.48
 
-These resources make essentially the same point; when dependencies come into play it may not be
-possible to implement a valuable story without implementing other much less valuable stories.
+See [New to agile? INVEST in good user stories – Agile for All][afa] and [Essential Scrum - Google
+Books][esgb]. These resources make essentially the same point; when dependencies come into play it
+may not be possible to implement a valuable story without implementing other much less valuable
+stories.
+
+From [Principles behind the Agile Manifesto](http://agilemanifesto.org/principles.html):
+
+> Simplicity -- the art of maximizing the amount of work not done -- is essential.
 
 % For example: You think it is necessary to get airflow working to test a change, but it’s possible
 % by just restarting an existing cluster.
 
 ## Parallelization
 
-You can get stories done faster (in parallel) when they are more independent.
+You can get stories done faster (in parallel) when they are more independent. Typically you need to
+do this when faster execution (on a team) is more important than efficiency. This is obviously less
+desirable than not doing the work at all.
 
-## Focused team
-
-If you're working on a team, the team can focus on one topic (sprint goal), which shares knowledge
-and eases reviews. By parallelizing, you essentially created a sprint goal/theme in one space even
-if you previously didn’t have enough independent stories on one topic.
+Parallelization naturally creates one focus for a team (sprint goal), which leads to knowledge
+sharing and eases reviews. By parallelizing, you essentially created a sprint goal/theme in one
+space even if you previously didn’t have enough independent stories on one topic.
 
 # Cost
 
 ## Regularly fails
 
-It's often not possible to remove dependencies; this task may be impossible.
+It's often not possible to remove dependencies; this task may be impossible. Don't force
+parallelization if you feel confident it will actually lead to slower than serial (i.e.
+single-person) execution.
 
 ## Adds inflexiblity
 

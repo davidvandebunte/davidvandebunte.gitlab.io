@@ -6,7 +6,7 @@ start_nginx() {
         -v "$(pwd)":/usr/share/nginx/html:ro -d nginx
 }
 
-if [ "${CI_PROJECT_NAME:+x}" = "personal-notes" ]; then
+if [ "${CI_PROJECT_NAME:-x}" = "personal-notes" ]; then
     tree -H '.' --prune -P 'index.html' -L 2 --noreport --charset utf-8 . > out.html
     mv out.html index.html
     if [ -z "$(docker ps -q -f name=pn-nginx)" ]; then

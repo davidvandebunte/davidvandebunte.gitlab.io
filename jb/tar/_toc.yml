@@ -53,6 +53,11 @@ parts:
       - file: notes/share-to-blog.md
       - file: notes/share-to-stack-exchange.md
       - file: notes/share-to-wikimedia.md
+  - caption: Schedule
+    chapters:
+      - file: notes/email-yourself.md
+      - file: notes/add-calendar-reminder.md
+      - file: notes/add-calendar-event.md
   - caption: Learn
     chapters:
       - file: notes/add-attention-mechanism.md
@@ -68,7 +73,6 @@ parts:
       - file: notes/maintain-focus.md
       - file: notes/narrow-focus.md
       - file: notes/search-the-web.md
-      - file: notes/stay-on-focus.md
   - caption: Plan
     chapters:
       - file: notes/avoid-explore-exploit.md
@@ -79,6 +83,7 @@ parts:
       - file: notes/identify-resource.md
       - file: notes/plan-personal-week.md
       - file: notes/retrospect-on-life.md
+      - file: notes/select-subplan.md
       - file: notes/set-goal.md
       - file: notes/set-deep-goal.md
       - file: notes/set-subgoal.md

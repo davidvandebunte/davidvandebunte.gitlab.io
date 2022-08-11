@@ -15,7 +15,12 @@ kernelspec:
 
 # Plan personal week
 
-It's what we choose to say yes (and no) to that largely determines our success.
+It's what we choose to say yes (and no) to that largely determines our success. This process
+specializes [](./estimate-subplan-weight.md) to the duration of a week and batches the process to
+e.g. 3-4 subplans you consider important. Planning at the scale of a week is about taking a slightly
+longer view (e.g. 2-3 weeks) so that you don't need to go into as much planning detail on a daily
+basis.
+
 
 # Test
 
@@ -26,31 +31,13 @@ More accurate weight (priority) estimates on:
 
 # Estimated cost
 
-## Copy new notes to plain text
-
-For example by copying and pasting emails to yourself. All notes are TODo, even those in email. They
-are all *begging* to be read. For example, if they're statements, then you can treat them as a
-reminder TODo or training data. If they're large tasks, you can treat them as a standard TODo
-(though even reading the story is a reminder of the details of a potential improvement). If they're
-a question, then there's implied value in being able to answer the question (effectively a standard
-TODo). See [](./convert-to-plain-text.md).
-
-The process of planning should be the process of aggressively pushing down the importance of tasks
-you do not think are critical. It's avoiding becoming a slave to yourself and your own notes. That
-is, it's the process of *stopping* work and saying no to yourself, critical to delivering more
-value. See [](./stay-on-focus.md).
-
-Don't spend half your weekend "copying" notes (i.e. not copying but actually reading and improving
-email notes on their way to plain text). This is often shallow work; you're covering many topics and
-focusing on none. Instead, copy the notes as quickly as possible (get them in version control and
-plain text). Only then clean them up (i.e. read them in detail). Some notes you may not improve on
-their way to plain text; just copy and paste.
-
 ## Measure Error
 
 [rl]: ./retrospect-on-life.md
 
-[Retrospect][rl] (measure scheduling and software error) on your last week.
+[Retrospect][rl] (measure scheduling and software error) on your last week. It's tempting to do this
+while you're copying notes to plain text; it's better to do this once everything is converted. In
+general, try to [](./narrow-focus.md) to get away from focal work (focal is important).
 
 ## Discretionary Spending
 
@@ -79,10 +66,6 @@ In the end, you must have a global view to optimize (neither top-down or bottom-
 is, you must regularly make a tough decision on whether to pull from the bottom or push from the
 top. See [](./organize-notes.md) for the relative importance of a clean life network for the sake of
 prioritization.
-
-See [](./estimate-subplan-weight.md) for a more general view of planning. Planning at the scale of a
-week is about taking a slightly longer view (e.g. 2-3 weeks) so that you don't need to go into as
-much planning detail on a daily basis.
 
 Try to focus on one subnetwork (if in JIRA, one epic) to support a large batchsize. Note this
 network as the focus of your sprint (sprint goal). The first step in planning is to pick this

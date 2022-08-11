@@ -22,9 +22,7 @@ you can use reference class forecasting.
 
 # Cost
 
-## Really listen
-
-Don’t assume the worst; really listen.
+Really listen. Don’t assume the worst; really listen.
 
 ## Form a temporary team
 
