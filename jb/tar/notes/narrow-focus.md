@@ -56,7 +56,8 @@ be able to look it up (though you could do the same with git logs).
 [gcw]: https://calendar.google.com/calendar/r/week
 
 Go through [snoozed emails][sne]. Open [Week View | Google Calendar][gcw] and search in the next 2-3
-weeks for double-bookings and low weight appointments.
+weeks for double-bookings and low weight appointments. Convert emails-to-self to plain text as
+described in [](./convert-to-plain-text.md).
 
 Archive code or notes so that you don't see them in a `git grep`. All your code and notes should be
 associated with some goal. It's often easier to actually search for notes you may be able to remove

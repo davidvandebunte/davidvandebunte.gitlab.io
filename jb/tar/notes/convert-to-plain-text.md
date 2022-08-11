@@ -23,14 +23,28 @@ convert (or take) notes in plain text (e.g. CommonMark, reStructuredText) instea
 
 ## Value
 
+### In-line documentation
+
+Documentation can live next to the associated code (change in lock step). Plain text notes convert
+to programming language comments faster. See [Why You Shouldn’t Use "Markdown" for
+Documentation][2]; consider a plain text besides CommonMark.
+
+Search notes faster from the command line (with git). Plain text history with git. Resolve merge
+conflicts in a standard way. Review changes with "git diff" before pushing them (to catch accidental
+changes). You can more easily convert plain text formats with tools like pandoc and nbconvert.
+
+### Markdown
+
 [1]: https://stackoverflow.com/editing-help
 [2]: https://www.ericholscher.com/blog/2016/mar/15/dont-use-markdown-for-technical-docs/
 
 It's easy to publish CommonMark notes. Static site generators almost always accept CommonMark. Stack
 overflow content is CommonMark; see [CommonMark Editing Help - Stack Overflow][1].
 
-Documentation can live next to the associated code (change in lock step). See [Why You Shouldn’t Use
-“Markdown” for Documentation][2]; consider a plain text besides CommonMark.
+Inkscape SVGs are easy to edit inline in CommonMark and other plain text formats. It is a major pain
+to edit an SVG inline in other formats.
+
+### Google Docs
 
 Writers can stay on their keyboard (save time). CommonMark was designed to be readable as plain
 text. In some scenarios, this lets writers enter "flow" faster. Google Docs are hard to use from the
@@ -42,22 +56,8 @@ Another example is copying and pasting code into a list without getting a bunch 
 - case Email(email, title) =>
 - …
 
-Inkscape SVGs are easy to edit inline in CommonMark. It is a major pain to edit an SVG inline in
-Google Docs.
-
-Search notes faster from the command line (with git). Plain text history with git. Resolve merge
-conflicts in a standard way. Review changes with "git diff" before pushing them (to catch accidental
-changes).
-
-You can more easily convert plain text formats with tools like pandoc and nbconvert.
-
-Plain text notes convert to programming language comments faster.
-
-You can not close your browser (and your laptop) when Google Docs is syncing. You are forced to
-"Stay on Page" for as long as it needs, which can sometimes be minutes.
-
-Linux does not have good WYSIWYG equation editors. Microsoft Word isn’t available on Ubuntu (a
-decent program for writing equations).
+Google Docs can be slow. You can not close your browser (and your laptop) when Google Docs is
+syncing. You are forced to "Stay on Page" for as long as it needs, which can sometimes be minutes.
 
 ## Cost
 
@@ -66,15 +66,11 @@ automatically? In VIM, use `gq`. See [word wrap - vim command to restructure/for
 columns](
 https://stackoverflow.com/a/3033455/622049).
 
-You don’t need two screens for both the plain text and rendered versions of content.
+Linux does not have good WYSIWYG equation editors. Microsoft Word isn’t available on Ubuntu (a
+decent program for writing equations). You don’t need two screens for both the plain text and
+rendered versions of content.
 
-A major strengh of Google Docs is natural linking between documents. If plain text notes are
-rendered on the public web, it's easy to link to them. Links in the other direction aren't allowed
-or the public content becomes much less useful.
-
-A solution is to do a global search for files before a rename and manually update all the links to
-it. An upside to this solution is that organizers can tell which documents link to the document
-being renamed (not possible with Google Docs). When is it ever OK to delete a Google Doc?.
+### Barrier to entry
 
 There's a larger barrier to entry for plain text notes; unlike a wiki page or Google document, users
 may need to fork a repository to make edits. However, see [Web IDE | GitLab](
@@ -83,8 +79,23 @@ files directly in their browser without doing anything on the command line (even
 merging commits) as if it was a wiki page. This tool is especially valuable for e.g. testing the
 features supported by [GitLab Flavored Markdown (GLFM) | GitLab](
 https://docs.gitlab.com/ee/user/markdown.html). GitHub provides nearly the same feature for testing
-GHFM. It's critical to be using a build system like `bazel` if you're using these tools to avoid
-long builds for nothing but documentation changes.
+GHFM.
+
+GitLab's Web IDE lets you take notes on even e.g. a tablet. It's critical to be using a build system
+like `bazel` if you're using these tools to avoid long builds for nothing but documentation changes.
+
+### Convert emails to plain text
+
+All notes are TODo, even emails-to-self. They are all *begging* to be read. For example, if they're
+statements, then you can treat them as a reminder TODo or training data. If they're large tasks, you
+can treat them as a standard TODo (though even reading the story is a reminder of the details of a
+potential improvement). If they're a question, then there's implied value in being able to answer
+the question (effectively a standard TODo).
+
+Don't spend significant time "copying" notes (i.e. not copying but actually reading and improving
+email notes on their way to plain text). Instead, copy the notes as quickly as possible (get them in
+version control and plain text). Only then clean them up (i.e. read them in detail) and consider an
+[](./organize-notes.md) action. Whenever possible, just copy and paste!
 
 % ## Additional Training Data
 
