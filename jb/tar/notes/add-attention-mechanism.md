@@ -30,7 +30,7 @@ https://en.wikipedia.org/wiki/Transformer_(machine_learning_model)#Alternatives)
 
 The original authors were probably smart enough to keep it to three points because they know most ML
 practioners have a short [Attention span](https://en.wikipedia.org/wiki/Attention_span), but I'll
-add a fourth goal: Generalizability.
+add a fourth goal for self-attention: Generalizability.
 
 ### Generalizability
 
@@ -43,6 +43,15 @@ but attention has found success in many CV problems. See also:
 https://arxiv.org/pdf/2105.07197.pdf)
 - [2206.03452v1.pdf - Can CNNs Be More Robust Than Transformers?](https://arxiv.org/pdf/2206.03452v1.pdf)
 - [Vision transformer - Wikipedia](https://en.wikipedia.org/wiki/Vision_transformer)
+
+#### Attention vs. Self-Attention
+
+[dasa]: https://datascience.stackexchange.com/a/66431/26431
+
+See `5.` in [What's the difference between Attention vs Self-Attention?][dasa]. The generalizability
+of attention mechanisms means that attention (in contrast to self-attention) can be used to combine
+modalities. See further comments about this application to Perceiver models in
+[](./se/what-exactly-are-keys-queries-and-values.md).
 
 ## Estimated cost
 

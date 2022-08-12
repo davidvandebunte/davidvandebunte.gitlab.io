@@ -61,14 +61,13 @@
 |/
 | * TODO-rb: Move read-book.md to evaluate-pedagogical-tool.md
 |/
-| * Target: TODO-snsa: What is the difference between self-attention and attention?: +4h
-|/
 | * TODO-dr: Should you reduce the dimensionality of your inputs?
 |/
 | * TODO-kqv: What exactly are keys, queries, and values in attention mechanisms?
 |/
-| * TODO-ard: Should you always record dependencies?
+| * Target: TODO-ard: Should you always record dependencies?: +6h
 |/
+* What is the difference between self-attention and attention?: 2022-08-12 13:45
 * How should you control your attention?: 2022-08-12 13:00
 * Explore domain: improve-add-attention-mechanism.md: 2022-08-12 13:00
 * Why do you wear headphones with white noise? See `narrow-focus.md`.

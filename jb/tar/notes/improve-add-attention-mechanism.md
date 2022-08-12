@@ -23,16 +23,6 @@ Said another way, the "Inquiry system" described in this answer is a function th
 (the trained WK and WQ matrices):
 - https://stats.stackexchange.com/a/531971/189415
 
-# TODO-snsa: What is the difference between self-attention and attention?
-
-Reference 21 from AIAYN:
-- https://www.semanticscholar.org/reader/204a4a70428f3938d2c538a4d74c7ae0416306d8
-- https://arxiv.org/pdf/1703.03130v1.pdf
-
-Otherwise:
-- [What's the difference between Attention vs Self-Attention? - DSSE](
-https://datascience.stackexchange.com/questions/49468/)
-
 # TODO-kqv: What exactly are keys, queries, and values in attention mechanisms?
 
 ## Estimate cost

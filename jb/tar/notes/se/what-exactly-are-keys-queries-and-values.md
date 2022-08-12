@@ -8,13 +8,12 @@ in attention mechanisms? - CV](https://stats.stackexchange.com/questions/421935)
 Why is this question important? Many versions of attention are used with older RNN-based models, and
 it's not clear they are being used in practice any more. On the other hand, the KQV (or QKV) method
 seems to still be used extensively. See [An Overview of Attention | Papers With Code](
-https://paperswithcode.com/methods/category/attention-mechanisms).
+https://paperswithcode.com/methods/category/attention-mechanisms). Besides it being common, see
+comments on the value of attention mechanisms in [](./add-attention-mechanism.md).
 
 The QKV attention mechanism is particularly interesting because it's used in Perceivers. That is,
 QKV lets you easily connect two different modalities (i.e. text and image) because e.g. QK can both
-be text and V can be an image (image search in web browsers). See point `5.` in [What's the
-difference between Attention vs
-Self-Attention?](https://datascience.stackexchange.com/a/66431/26431).
+be text and V can be an image (image search in web browsers).
 
 ## Sam's answer
 
