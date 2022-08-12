@@ -66,7 +66,8 @@ Here's yet another implementation. Also check the PyTorch source code implementa
 - https://pytorch-lightning.readthedocs.io/en/stable/notebooks/course_UvA-DL/05-transformers-and-MH-attention.html
 
 You should create an Inkscape image with all the annotated transformer classes on top of the diagram
-from the AIAYN paper.
+from the AIAYN paper. If you ever need to execute it and annotate the annotated transformer, start
+by simply generating the html file and linking to it from your site rather than integrating with jb.
 
 How do attention mechanisms avoid putting all the focus on the same word? It's likely you don't
 understand this because you don't understand why Q and K need to create different spaces:
@@ -102,9 +103,6 @@ word has dependencies and dependents (references and referents) of potentially s
 also come to every word with your own background, and hopefully use it similarly to other people.
 See also [Part of speech](https://en.wikipedia.org/wiki/Part_of_speech).
 
-Could you make "reviews" actually just another answer? You've regularly seen others comment on other
-answers; few people comment on all of them.
-
 # TODO-cnns: Will attention replace CNNs?
 
 I'm not fully convinced that Attention will replace CNNs. A CNN with multiple output channels seems
@@ -115,6 +113,17 @@ Don't invest so much into convolution if it turns out it isn't necessary. It's i
 using more "fully convolutional" networks right now. Crappy reference:
 - https://towardsdatascience.com/transformers-in-computer-vision-farewell-convolutions-f083da6ef8ab
 
+It may be a matter of inductive bias. See:
+- https://iclr.cc/virtual_2020/poster_HJlnC1rKPB.html
+- https://arxiv.org/pdf/1911.03584.pdf
+- https://en.wikipedia.org/wiki/No_free_lunch_in_search_and_optimization
+
+If that is the case, you may want to prefer attention as a starting point on any model because
+(although more computationally expensive) it will be more likely to perform better (with fewer
+assumptions). For example, you should more easily be able to make connections within images. Until
+you understand the inductive biases that CNNs are adding, you shouldn't be taking them on in a
+model. Get it to work first, optimize later.
+
 # TODO-tra: How should you control your attention?
 
 What should your atomic action be when you're working on a computer? Typing? Closing a window? All
@@ -122,4 +131,5 @@ of these topics are about controlling your focus (where you mouse pointer or vim
 Is this related to the attention in transformer models? I'd say all of this is related to attention,
 in that sense that you are "focusing" your attention on a narrower set of inputs that you normally
 would (see "Focused attention" in `!w Attention`). Or are you merely thinking about how to save time
-on actions you do repeatedly when you dig into these topics?
+on actions you do repeatedly when you dig into these topics? I'd say this is an example of
+narrow-focus.md, nothing more.

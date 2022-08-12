@@ -12,8 +12,8 @@ Why publish your thoughts? It's complicated; see [](./share-notes.md).
 
 Jupyter Book has excellent tools for [Commenting and
 annotating](https://jupyterbook.org/en/stable/interactive/comments.html) that are not enabled in
-this book to avoid spam. If you'd like to make a comment email me at davidvandebunte at Google's
-mail.
+this book to avoid spam. If you'd like to make a comment use the "share" button on your device and
+email me at davidvandebunte at Google's mail.
 
 ## Content license
 

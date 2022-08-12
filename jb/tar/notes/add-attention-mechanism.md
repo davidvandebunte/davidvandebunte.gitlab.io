@@ -23,14 +23,14 @@ results.
 
 Many people bash on transformers because they are expensive, but if you're only thinking about
 attention mechanisms then it will only be expensive if you take advantage of their scalability. If
-you don't, they are by design meant to be cheaper (goal #1). The Transformer model itself has a
-scalability (because it has both encoders and decoders) has scalability issues, however. See
-[Transformer (machine learning model) - Alternative](
+you don't, they are by design meant to be cheaper (goal #1). The Transformer model itself (because
+it has both encoders and decoders) has scalability issues, however. See [Transformer (machine
+learning model) - Alternative](
 https://en.wikipedia.org/wiki/Transformer_(machine_learning_model)#Alternatives).
 
 The original authors were probably smart enough to keep it to three points because they know most ML
 practioners have a short [Attention span](https://en.wikipedia.org/wiki/Attention_span), but I'll
-add some other goals behind adopting an attention mechanism.
+add a fourth goal: Generalizability.
 
 ### Generalizability
 
@@ -46,26 +46,25 @@ https://arxiv.org/pdf/2105.07197.pdf)
 
 ## Estimated cost
 
+[wat]: https://en.wikipedia.org/wiki/Attention
 [aml]: https://en.wikipedia.org/wiki/Attention_(machine_learning)
 
-Does [Attention (machine learning)][aml] compress everything the word
-[Attention](https://en.wikipedia.org/wiki/Attention) means to humans? Not yet; much of it remains in
-the modality of natural language rather than code. ML practioners are using "attend to" more often
-though, which they probably got from reading psychologist's theories on attention.
+Does [Attention (machine learning)][aml] compress everything the word [Attention][wat] means to
+humans? Not even close; most of it remains in the modality of natural language. The self-attention
+mechanism can at best be described as a tool to help a model decide what to weigh highly (pay
+"attention" to), given what it is currently processing. ML practioners are using the phrase "attend
+to" more often though.
 
-Still, it appears we are reaching the end of natural language theories in some ways and need to
-start inventing new words. In my opinion there is already little to no distinction between the words
-"attention" and "focus" except perhaps that the former is often treated as a resource; see
-[etymology - Attention, focus, and respect as distributable resources - English Language & Usage
-SE](https://english.stackexchange.com/questions/13899/) and [Attention economy](
+We may need to start inventing new words. In my opinion there is already little to no distinction
+between the words "attention" and "focus" except perhaps that the former is often treated as a
+resource; see [etymology - Attention, focus, and respect as distributable
+resources](https://english.stackexchange.com/questions/13899/) and [Attention economy](
 https://en.wikipedia.org/wiki/Attention_economy). See also [Focus (linguistics)](
 https://en.wikipedia.org/wiki/Focus_(linguistics)), which has some clear parallels to [Attention
 (machine learning)][aml]. The term [Hyperfocus](https://en.wikipedia.org/wiki/Hyperfocus) is defined
-in terms of attention.
-
-The word concentrate is even less independent of the word focus than attention. In [concentrate -
-Wiktionary](https://en.wiktionary.org/wiki/concentrate), the verb is defined in terms of [focus -
-Wiktionary](https://en.wiktionary.org/wiki/focus) (and vice-versa).
+in terms of attention. The word concentrate is even less independent of the word focus than
+attention. In [concentrate - Wiktionary](https://en.wiktionary.org/wiki/concentrate), the verb is
+defined in terms of [focus - Wiktionary](https://en.wiktionary.org/wiki/focus) (and vice-versa).
 
 See also [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/) and
 [Visualizing A Neural Machine Translation Model (Mechanics of Seq2seq Models With Attention)](
@@ -81,6 +80,6 @@ The tutorials [Language Modeling with nn.Transformer and TorchText](
 https://pytorch.org/tutorials/beginner/transformer_tutorial.html) and [Language Translation with
 nn.Transformer and torchtext](https://pytorch.org/tutorials/beginner/translation_transformer.html)
 are more focused on the details of implementing a Transformer model than how or why it works; for
-example they don't describe "attention" in detail and only mention [MultiheadAttention — PyTorch](
+example they don't describe "attention" in detail and only mention [MultiheadAttention - PyTorch](
 https://pytorch.org/docs/stable/generated/torch.nn.MultiheadAttention.html) rather than use it in
 the code (much less look at its internals).

@@ -51,7 +51,7 @@
 |/
 | * TODO-sw: How is attention a form of soft weights?
 |/
-| * TODO-tra: How should you control your attention?
+| * Target: TODO-tra: How should you control your attention?: +1h
 |/
 | * TODO-ef: Automate expanding focus in training
 |/
@@ -69,8 +69,9 @@
 |/
 | * TODO-kqv: What exactly are keys, queries, and values in attention mechanisms?
 |/
-| * Target: Explore domain: improve-add-attention-mechanism.md: +1d
+| * TODO-ard: Should you always record dependencies?
 |/
+* Explore domain: improve-add-attention-mechanism.md: 2022-08-12 13:00
 * Why do you wear headphones with white noise? See `narrow-focus.md`.
 * TODO-svd: How can SVD be used to reduce dimensionality?: 2022-06-20 14:00
 * TODO-pfn: Why do you record any links you share?: 2022-06-20 9:50
