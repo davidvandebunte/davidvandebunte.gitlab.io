@@ -4,10 +4,9 @@ Part of [](./estimate-subplan-weight.md).
 
 # Test
 
-Add a set of goals/ideas to a "future" git graph.
-
-In RL, authors often refer to this process as "action generation" (actions being analogous to
-ideas), with the action generator often being the policy. See for example:
+Add a set of goals/ideas to a "future" git graph. In RL, authors often refer to this process as
+"action generation" (actions being analogous to ideas), with the action generator often being the
+policy. See for example:
 - [A Reinforcement Learning Technique with an Adaptive Action Generator for a Multi-robot System](
 https://link.springer.com/chapter/10.1007/978-3-540-69134-1_25)
 - [Reinforcement Learning Random Action Generator](
@@ -23,7 +22,7 @@ See also:
 ## Pick a direction
 
 Consider VNTE in widely different parts of the network to start, trying to avoid putting too much
-time into variations on the same VNTE (see [](./set-wide-goal.md). Once you've identified the parts
+time into variations on the same VNTE (see [](./set-wide-goal.md)). Once you've identified the parts
 of the network with high weight tasks, get into more focused planning work in that area of the
 network (effectively prune actions to explore the rest of the network). At this point, think beyond
 the "gold" you've already found with [](./set-deep-goal.md). Said another way, look for low hanging
