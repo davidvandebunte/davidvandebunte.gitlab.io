@@ -158,26 +158,32 @@ resource) to solve the problem. When you run into a "little success" you natural
 closing tabs and windows that are no longer relevant. You should do the same for little failures;
 serialize what you've learned so you can add a dependency (unfortunately expanding scope) i.e.
 construct an abstraction. If the estimate is large, then in order to avoid spilling notes you will
-need to narrow your focus to some degree. See [](./narrow-focus.md)).
+need to narrow your focus to some degree; see [](./narrow-focus.md).
 
 ##### Save the dependency
 
-At the least, you know you've discovered a dependency if you can't answer a question without opening
-another tab. There may be another way to construct your new abstraction, and in the short-term you
-should usually look for alternative solutions. Even if you do so, however, to understand the problem
+You've discovered a dependency if you can't answer a question without opening another tab. There may
+be another way to construct your new abstraction without, and in the short-term you should usually
+look for alternative solutions. Even if you find another way, however, to understand the problem
 from this additional perspective requires this dependency.
 
-Why save the dependency, even if you don't fill it in now? You'd ideally like to understand the
+Why save the dependency, even if you don't fill it in now? You'd ideally like to understand the new
 abstraction from as many perspectives as possible so you don't forget it and so that you can quickly
-relearn the concept from e.g. a different, shorter perspective. If you can rederive the result from
-this new perspective, you may eventually be able to reduce duplication in your mental networks (the
-whole point of math and notes).
+relearn the concept from e.g. a different, shorter perspective. If you can rederive the result with
+this new dependency, you may eventually be able to reduce duplication in your mental networks if the
+new dependency ends up being widely useful.
 
-Therefore, at the least, add the dependency to a local planning git graph and a link/keyword in the
-notes where you are discussing the problem. You need the link/keyword so you can find the "missing"
-concept later when you are grepping for e.g. mathematical keywords that may be worth learning about.
-You need the local planning graph so you remember why the concept would have been useful. A question
-may not be enough to motivate returning to the dependency.
+The new dependency may be critical; there may be no other way to build your new abstraction without
+it. You should treat this as adding a subgoal (see [](./set-subgoal.md)), going back to planning,
+and then targeting that new subgoal.
+
+Therefore, at the least, add the dependency to a planning git graph and a link/keyword in the notes
+where you are discussing the problem. The link/keyword is helpful so you can find the "missing"
+concept later when you are grepping for e.g. mathematical keywords that may be worth learning about
+(see comments in [](./expand-focus.md)). The planning graph is helpful so you remember why the
+concept would have been useful if you don't ever `grep` as you should. A single question may not be
+enough to motivate returning to the dependency. See comments in the doubly-linked
+[](./flatten-plan.md) about retaining dependencies.
 
 Another major reason to save off (write down) missing dependencies is it motivates completion. You
 do not need to understand all material from every possible perspective (e.g. frequentist

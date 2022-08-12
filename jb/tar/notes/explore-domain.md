@@ -60,6 +60,13 @@ return to planning (compare the task to at least one other, then commit to the n
 approach also works well with git; it will be obvious in your history when you e.g. renamed files
 and moved content between articles because your changes will be more limited to a rename or move.
 
+You can see this cycle as producing commits in a branch that are limited to one of two types of
+commits. The first is what is typically described as formatting and commenting (non-functional)
+commits, analogous to planning commits. The second is refactoring or feature commits, analogous to
+finishing TODo nodes in the git graph (or giving up on them). You can produce this kind of history
+from the beginning, or rebase your branch several times to make it look "clean" i.e. easier to
+review by others.
+
 #### Net analogy
 
 In a net we literally use random number generation to create ideas; this step is assisted by the

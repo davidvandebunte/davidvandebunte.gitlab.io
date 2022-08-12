@@ -70,7 +70,7 @@ desirable than not doing the work at all.
 
 Parallelization naturally creates one focus for a team (sprint goal), which leads to knowledge
 sharing and eases reviews. By parallelizing, you essentially created a sprint goal/theme in one
-space even if you previously didn’t have enough independent stories on one topic.
+space even if you previously didn't have enough independent stories on one topic.
 
 # Cost
 
@@ -101,3 +101,26 @@ The plan (if everyone finished at the same time) would be to perform some kind o
 This approach is risky (and expensive) because it often requires the parties involved to negotiate
 an interface before they know the details of their implementations. See also [Waterfall model](
 https://en.wikipedia.org/wiki/Waterfall_model).
+
+## Duplicates logic
+
+There's a conflict between learning and producing results. If you want to learn (long-term
+investments), then your plans should include more helpful (rather than critical) dependencies. By
+doing so, you'll end up focusing more on generally usually subgoals such as e.g. mathematical
+concepts that will ultimately reduce duplication across your mental networks (and notes).
+
+If you want to get stuff done as quickly as possible, then you will generally prefer to strip
+dependencies (the relationships between subgoals). This is what often happens when you are trying to
+implement a feature in software; it'd be nice to generalize code but instead you choose to get it
+done the quick and easy way. Long term this can lead to technical debt if no one ever goes back to
+fix the unaddressed duplication.
+
+It's not necessary to understand every topic from all possible perspectives, however (e.g. both the
+Bayesian and Frequentist interpretations). You may actually be *creating* duplication when you write
+down or derive how to solve a problem in more than one way. If the method you are using works, don't
+move on to a more complicated method until there's a need.
+
+Recording dependencies rather than throwing them away is valuable both for understanding all the
+possible ways you solve a problem (all the perspectives you could take, possible dependencies) and
+for understanding all the ways a concept is useful (dependents). See comments in the doubly-linked
+[](./maintain-focus.md) about recording newly-discovered dependencies.

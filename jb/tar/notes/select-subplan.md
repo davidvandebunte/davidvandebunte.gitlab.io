@@ -43,13 +43,12 @@
 |/
 | * TODO-aq: How do you answer a question?
 |/
-| * TODO-rib: When should you reduce inductive bias?
-|/
 | * TODO-cnns: Will attention replace CNNs?
+| * TODO-rib: When should you reduce inductive bias?
 |/
 | * TODO-top: How can topological concepts help you interpret models?
 |/
-| * TODO-sw: How is attention a form of soft weights?
+| * Target: TODO-sw: How is attention a form of soft weights?: +2d
 |/
 | * TODO-ef: Automate expanding focus in training
 |/
@@ -65,8 +64,7 @@
 |/
 | * TODO-kqv: What exactly are keys, queries, and values in attention mechanisms?
 |/
-| * Target: TODO-ard: Should you always record dependencies?: +6h
-|/
+* Should you always record dependencies?: 2022-08-12 15:40
 * What is the difference between self-attention and attention?: 2022-08-12 13:45
 * How should you control your attention?: 2022-08-12 13:00
 * Explore domain: improve-add-attention-mechanism.md: 2022-08-12 13:00
