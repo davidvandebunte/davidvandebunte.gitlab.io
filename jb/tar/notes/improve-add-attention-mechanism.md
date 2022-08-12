@@ -123,13 +123,3 @@ If that is the case, you may want to prefer attention as a starting point on any
 assumptions). For example, you should more easily be able to make connections within images. Until
 you understand the inductive biases that CNNs are adding, you shouldn't be taking them on in a
 model. Get it to work first, optimize later.
-
-# TODO-tra: How should you control your attention?
-
-What should your atomic action be when you're working on a computer? Typing? Closing a window? All
-of these topics are about controlling your focus (where you mouse pointer or vim cursor is located).
-Is this related to the attention in transformer models? I'd say all of this is related to attention,
-in that sense that you are "focusing" your attention on a narrower set of inputs that you normally
-would (see "Focused attention" in `!w Attention`). Or are you merely thinking about how to save time
-on actions you do repeatedly when you dig into these topics? I'd say this is an example of
-narrow-focus.md, nothing more.

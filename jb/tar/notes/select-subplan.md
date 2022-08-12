@@ -51,8 +51,6 @@
 |/
 | * TODO-sw: How is attention a form of soft weights?
 |/
-| * Target: TODO-tra: How should you control your attention?: +1h
-|/
 | * TODO-ef: Automate expanding focus in training
 |/
 | * TODO-vi: Why are "variational inference" methods so popular?
@@ -63,7 +61,7 @@
 |/
 | * TODO-rb: Move read-book.md to evaluate-pedagogical-tool.md
 |/
-| * TODO-snsa: What is the difference between self-attention and attention?
+| * Target: TODO-snsa: What is the difference between self-attention and attention?: +4h
 |/
 | * TODO-dr: Should you reduce the dimensionality of your inputs?
 |/
@@ -71,6 +69,7 @@
 |/
 | * TODO-ard: Should you always record dependencies?
 |/
+* How should you control your attention?: 2022-08-12 13:00
 * Explore domain: improve-add-attention-mechanism.md: 2022-08-12 13:00
 * Why do you wear headphones with white noise? See `narrow-focus.md`.
 * TODO-svd: How can SVD be used to reduce dimensionality?: 2022-06-20 14:00
