@@ -9,7 +9,7 @@ Why is this question important? Many versions of attention are used with older R
 it's not clear they are being used in practice any more. On the other hand, the KQV (or QKV) method
 seems to still be used extensively. See [An Overview of Attention | Papers With Code](
 https://paperswithcode.com/methods/category/attention-mechanisms). Besides it being common, see
-comments on the value of attention mechanisms in [](./add-attention-mechanism.md).
+comments on the value of attention mechanisms in [](../add-attention-mechanism.md).
 
 The QKV attention mechanism is particularly interesting because it's used in Perceivers. That is,
 QKV lets you easily connect two different modalities (i.e. text and image) because e.g. QK can both
