@@ -2,20 +2,15 @@
 
 ## Estimate value
 
-Should you add an "attention" mechanism to your model? If you're thinking of going "all out" on
-attention mechanisms then a (roughly) equivalent question is: Should you prefer "Transformer"
-models? See my answer in [What makes a transformer a transformer? - Artificial Intelligence Stack
-Exchange](https://ai.stackexchange.com/a/35892/55112).
+Should you add an "attention" mechanism to your model? For one argument, see the "Why
+Self-Attention" section of "Attention is All You Need" ([1706.03762.pdf - Why
+Self-Attention](https://arxiv.org/pdf/1706.03762.pdf#section.4)).
 
-For an argument from the horse's mouth, see the "Why Self-Attention" ([1706.03762.pdf - Why
-Self-Attention](https://arxiv.org/pdf/1706.03762.pdf#section.4)) section of the paper.
-
-The authors summarized it well in their three "desiderata" (would the word "desirable" have been
-just as good?) behind self-attention. They wanted a model that was cheaper ("total computational
-complexity per layer"), which they argue they got in Table 1 and Table 2 (via FLOPs). They wanted a
-model that was highly parallelizable ("amount of computation that can be parallelized"), which they
-argue they got in Table 1. And finally, they wanted to minimize the path length between long-range
-dependencies which they argue for in Table 1.
+The authors include three "desiderata" behind self-attention. They wanted a model that was cheaper
+("total computational complexity per layer"), which they argue they got in Table 1 and Table 2 (via
+FLOPs). They wanted a model that was highly parallelizable ("amount of computation that can be
+parallelized"), which they argue they got in Table 1. And finally, they wanted to minimize the path
+length between long-range dependencies which they argue for in Table 1.
 
 The first goal is about reducing costs, the second is about both scale and fast feedback, and the
 third is about model performance. They obviously argue they hit the third goal in their SOTA
@@ -53,16 +48,18 @@ of attention mechanisms means that attention (in contrast to self-attention) can
 modalities. See further comments about this application to Perceiver models in
 [](./se/what-exactly-are-keys-queries-and-values.md).
 
-## Estimated cost
+## Test
 
 [wat]: https://en.wikipedia.org/wiki/Attention
 [aml]: https://en.wikipedia.org/wiki/Attention_(machine_learning)
+[lilaa]: https://lilianweng.github.io/posts/2018-06-24-attention/
 
-Does [Attention (machine learning)][aml] compress everything the word [Attention][wat] means to
-humans? Not even close; most of it remains in the modality of natural language. The self-attention
-mechanism can at best be described as a tool to help a model decide what to weigh highly (pay
-"attention" to), given what it is currently processing. ML practioners are using the phrase "attend
-to" more often though.
+The term "attention" is used in this article following the definition in [Attention (machine
+learning) - Wikipedia][aml]. Does [Attention (machine learning)][aml] compress everything the word
+[Attention][wat] means to humans? Not even close. The self-attention mechanism can at best be
+described as a tool to help a model decide what to weigh highly (pay "attention" to), given what it
+is currently processing. For another simple definition, see the start of [Attention? Attention! |
+Lil'Log][lilaa]. ML practitioners are loving the phrase "attend to" though.
 
 We may need to start inventing new words. In my opinion there is already little to no distinction
 between the words "attention" and "focus" except perhaps that the former is often treated as a
@@ -75,7 +72,47 @@ in terms of attention. The word concentrate is even less independent of the word
 attention. In [concentrate - Wiktionary](https://en.wiktionary.org/wiki/concentrate), the verb is
 defined in terms of [focus - Wiktionary](https://en.wiktionary.org/wiki/focus) (and vice-versa).
 
-See also [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/) and
+The following graph shows the development history of variants of attention mechanisms, linking
+papers that reference each other and removing transitive dependencies. Dates match the original
+publication to Arxiv, not the original publication. The list is roughly based on:
+- [A Family of Attention Mechanisms](
+https://lilianweng.github.io/posts/2018-06-24-attention/#a-family-of-attention-mechanisms)
+- [Attention (machine learning) - Variants](
+https://en.wikipedia.org/wiki/Attention_(machine_learning)#Variants).
+
+```
+*-. Attention Is All You Need: Vaswani, Gomez: 2017-06
+|\ \
+* | | Long Short-Term Memory-Networks for Machine Reading: Cheng: 2016-01
+| * | Show, Attend and Tell: Neural Image Caption Generation with Visual Attention: Xu: 2015-02
+|/  |
+|   * Effective Approaches to Attention-based Neural Machine Translation: Luong, Manning: 2015-08
+|  /
+* / Neural Machine Translation by Jointly Learning to Align and Translate: Bahdanau, Bengio: 2014-09
+|/
+* Sequence to Sequence Learning with Neural Networks: Sutskever: 2014-09
+* Learning Phrase Representations using RNN Encoder–Decoder for ...: Cho, Bahdanau, Bengio: 2014-06
+```
+
+Links to the abstract of every paper in Arxiv (in the same order) to make it easy to get the latest
+(e.g. v7 for some papers) version even if the author adds an update:
+- [Attention Is All You Need](https://arxiv.org/abs/1706.03762)
+- [Long Short-Term Memory-Networks for Machine Reading](https://arxiv.org/abs/1601.06733)
+- [Show, Attend and Tell: Neural Image Caption Generation with Visual ...](https://arxiv.org/abs/1502.03044)
+- [Effective Approaches to Attention-based Neural Machine Translation](https://arxiv.org/abs/1508.04025)
+- [Neural Machine Translation by Jointly Learning to Align and Translate](https://arxiv.org/abs/1409.0473)
+- [Sequence to Sequence Learning with Neural Networks](https://arxiv.org/abs/1409.3215)
+- [Learning Phrase Representations using RNN Encoder–Decoder for ...](https://arxiv.org/abs/1406.1078)
+
+[cpa]: https://www.connectedpapers.com/about
+[cusg]: https://www.connectedpapers.com/main/fa72afa9b2cbc8f0d7b05d52548906610ffbb9c5+204e3073870fae3d05bcbc2f6a8e263d9b72e776+cea967b59209c6be22829699f05b8b1ac4dc092d/Connected-Papers-|-Find-and-explore-academic-papers/graph
+
+See Connected Papers for a denser graph, though CP is not a citation graph (see [Connected Papers |
+About][cpa]). See [this link][cusg] for a custom graph with three of these papers as origins.
+
+## Estimated cost
+
+See [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/) and
 [Visualizing A Neural Machine Translation Model (Mechanics of Seq2seq Models With Attention)](
 https://jalammar.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention/)
 for helpful visualizations.
