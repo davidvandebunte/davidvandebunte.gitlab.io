@@ -183,7 +183,21 @@ terms of efficiency:
 - [When (if ever) is a frequentist approach substantively better than a Bayesian? - Cross
   Validated](https://stats.stackexchange.com/questions/194035/when-if-ever-is-a-frequentist-approach-substantively-better-than-a-bayesian)
 
-## TODO-dagl: Draw a DAG with clickable links
+# TODO-cycl: How is cyclomatic complexity measured?
+
+Should you set a limit on this in pylint? Right now you ignore all those errors, mostly because you
+don't understand the metric.
+
+Cyclomatic complexity is related to Betti numbers:
+- [Cyclomatic complexity - Wikipedia](https://en.wikipedia.org/wiki/Cyclomatic_complexity#Definition)
+
+# TODO-idb: How does one quickly identify the bottleneck in a computer program?
+
+The idea here is to provide a context for studying Turing machines and computability, complexity,
+etc. There are also a lot of notes to move on this subject. So in some sense, it's exploring the
+domain to come up with better questions.
+
+# TODO-dagl: Draw a DAG with clickable links
 
 You've frustrated yourself badly several times (and wasted a lot of time) trying to draw a graph
 with links in Inkscape. It's much easier to add a git graph in plain text and a list of links below;

@@ -47,6 +47,9 @@
 | * TODO-rib: When should you reduce inductive bias?
 |/
 | * TODO-top: How can topological concepts help you interpret models?
+| * TODO-cycl: How is cyclomatic complexity measured?: +8h
+|/
+| * TODO-idb: How does one quickly identify the bottleneck in a computer program?
 |/
 | * Target: TODO-sw: How is attention a form of soft weights?: +2d
 |/
