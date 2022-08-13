@@ -52,6 +52,8 @@
 |/
 | * TODO-ef: Automate expanding focus in training
 |/
+| * TODO-dagl: Draw a DAG with clickable links
+|/
 | * TODO-vi: Why are "variational inference" methods so popular?
 |/
 | * TODO-dss: How would you define "semi-supervised" learning?
