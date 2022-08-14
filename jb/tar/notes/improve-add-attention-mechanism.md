@@ -1,45 +1,13 @@
 # Improve add attention mechanism
 
-# TODO-sw: How is attention a form of soft weights?
-
-See:
-- [Attention (machine learning)](https://en.wikipedia.org/wiki/Attention_(machine_learning))
-- [Attention? Attention! | Lil'Log](https://lilianweng.github.io/posts/2018-06-24-attention/)
-- [Different types of Attention in Neural Networks - gotensor](
-https://gotensor.com/2019/07/06/different-types-of-attention-in-neural-networks/)
-- [what's the difference between "self-attention mechanism" and "full-connection" layer?](
-https://stackoverflow.com/questions/64218678/)
-
-> Its flexibility comes from its role as "soft weights" that can change during runtime, in contrast
-> to standard weights that must remain fixed at runtime.
-
-In terms of QKV attention, the "soft weights" are what are sometimes called the attention weights.
-These are formed by using the WQ and WK matrices (from training) to build Q and K matrices from X,
-which are multiplied (Q by the transpose of K) to produce the attention weights. They're called
-"weights" only because you get a matrix here, and a matrix is what you'd typically need for a FC
-layer (ignoring the b offsets).
-
-Said another way, the "Inquiry system" described in this answer is a function that takes a function
-(the trained WK and WQ matrices):
-- https://stats.stackexchange.com/a/531971/189415
-
-# TODO-snsa: What is the difference between self-attention and attention?
-
-Reference 21 from AIAYN:
-- https://www.semanticscholar.org/reader/204a4a70428f3938d2c538a4d74c7ae0416306d8
-- https://arxiv.org/pdf/1703.03130v1.pdf
-
-Otherwise:
-- [What's the difference between Attention vs Self-Attention? - DSSE](
-https://datascience.stackexchange.com/questions/49468/)
-
 # TODO-kqv: What exactly are keys, queries, and values in attention mechanisms?
 
 ## Estimate cost
 
 Does a search engine conceptually provide attention scores (what you should pay attention to) based
 on e.g. links and other factors? You do the same thing, collecting links to decide how to apply your
-attention (which you usually think of as "time").
+attention (which you usually think of as "time"). You could see a prioritized list of tasks as the
+result of a query of importance across your whole life.
 
 Do they learn to project vectors the same subspace? If they're projecting to the same subspace, from
 the same original space (of X) why can't they be the same matrix? If you're doing language
@@ -66,7 +34,8 @@ Here's yet another implementation. Also check the PyTorch source code implementa
 - https://pytorch-lightning.readthedocs.io/en/stable/notebooks/course_UvA-DL/05-transformers-and-MH-attention.html
 
 You should create an Inkscape image with all the annotated transformer classes on top of the diagram
-from the AIAYN paper.
+from the AIAYN paper. If you ever need to execute it and annotate the annotated transformer, start
+by simply generating the html file and linking to it from your site rather than integrating with jb.
 
 How do attention mechanisms avoid putting all the focus on the same word? It's likely you don't
 understand this because you don't understand why Q and K need to create different spaces:
@@ -102,12 +71,12 @@ word has dependencies and dependents (references and referents) of potentially s
 also come to every word with your own background, and hopefully use it similarly to other people.
 See also [Part of speech](https://en.wikipedia.org/wiki/Part_of_speech).
 
-Could you make "reviews" actually just another answer? You've regularly seen others comment on other
-answers; few people comment on all of them.
-
 # TODO-cnns: Will attention replace CNNs?
 
-I'm not fully convinced that Attention will replace CNNs. A CNN with multiple output channels seems
+The answer is almost surely no, because a specialized model is always best for some applications.
+Will attention mechanisms take a lot of the "market" though?
+
+A CNN with multiple output channels seems
 quite similar to attention with multiple heads; the output vectors in both cases are essentially a
 "feature" describing the receptive field (or word) under it. In the end, both do dot products.
 
@@ -115,11 +84,13 @@ Don't invest so much into convolution if it turns out it isn't necessary. It's i
 using more "fully convolutional" networks right now. Crappy reference:
 - https://towardsdatascience.com/transformers-in-computer-vision-farewell-convolutions-f083da6ef8ab
 
-# TODO-tra: How should you control your attention?
+It may be a matter of inductive bias. See:
+- https://iclr.cc/virtual_2020/poster_HJlnC1rKPB.html
+- https://arxiv.org/pdf/1911.03584.pdf
+- https://en.wikipedia.org/wiki/No_free_lunch_in_search_and_optimization
 
-What should your atomic action be when you're working on a computer? Typing? Closing a window? All
-of these topics are about controlling your focus (where you mouse pointer or vim cursor is located).
-Is this related to the attention in transformer models? I'd say all of this is related to attention,
-in that sense that you are "focusing" your attention on a narrower set of inputs that you normally
-would (see "Focused attention" in `!w Attention`). Or are you merely thinking about how to save time
-on actions you do repeatedly when you dig into these topics?
+If that is the case, you may want to prefer attention as a starting point on any model because
+(although more computationally expensive) it will be more likely to perform better (with fewer
+assumptions). For example, you should more easily be able to make connections within images. Until
+you understand the inductive biases that CNNs are adding, you shouldn't be taking them on in a
+model. Get it to work first, optimize later.

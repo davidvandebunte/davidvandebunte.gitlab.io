@@ -253,6 +253,39 @@ can easily be converted (on demand, i.e. the subset of tasks that is required) t
 (software)](https://en.wikipedia.org/wiki/Jira_(software)) format. See also [Comparison of
 issue-tracking systems][cits] and [Comparison of project management software][cpms].
 
+### Converting plans to history
+
+Obviously if you're seeing the big picture as you work, then your git history (via `git log`) should
+eventually match your plain text git plan. If it doesn't, then you're either bad at predicting the
+future or getting distracted. If you think you're getting distracted, see comments on estimating
+before expanding focus with a new browser tab in [](./expand-focus.md). If your future vision is
+poor in this domain, you still want to retrospect and consciously update your priors.
+
+One approach is to always label an entry with "Target" (analogous to a build target) in your plan.
+This subplan should always including a time estimate (the E in VNTE). When you commit the plan to
+git, you commit to the plan and should aim to hit the goal by the (padded) time estimate added to
+the commit timestamp.
+
+If you don't finish to your satisfaction (roughly, no need for an alarm) return to planning as you
+would if you had finished. Feel free to do so early if you want to quit early, or you discover a
+more valuable goal. Be opportunistic, looking for accidental value.
+
+When you come back to planning, and as you start (e.g. right now), create a new
+[](./explore-domain.md) VNTE as your "Target" with appropriate details. This will include the
+overhead of retrospecting and estimating the subplan weight for at least two goals. It's not wrong
+to create a continuation subplan (because it still seems most valuable despite expanding focus), or
+to not continue (because you've lost focus in going back to planning). See comments on
+execution-based prioritization and focal is important in [](./narrow-focus.md). If you don't pad
+your estimates, the cost is planning overhead (you [](./expand-focus.md) to compare at least two
+ideas).
+
+You should try to hit 60-90% of your estimates, and not take them too seriously when planning. A
+padded estimate is different than a MAP estimate; both should be considered when you weigh subplans.
+It may be even appropriate to talk about a probability distribution as well as point estimates if
+you feel two subplans you are contrasting will have probability distributions with significantly
+different shapes. Can you afford to target a VNTE that includes significant risk of failure given
+your time estimate? See [Risk](https://en.wikipedia.org/wiki/Risk).
+
 ## Reuse experiences
 
 Let's say you want to reuse your past experience to get to a friend's house:

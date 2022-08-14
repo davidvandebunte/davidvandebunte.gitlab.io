@@ -207,7 +207,9 @@ into links. See:
 
 Some websites don't seem searchable via DuckDuckGo; you must go to them specifically. Use [Connected
 Papers](https://www.connectedpapers.com/) to find high-scoring papers that are closely related to a
-topic you are already focusing on.
+topic you are already focusing on. Click on papers to highlight them in the graph; zoom in so nodes
+don't overlap so much. You can only build 5 free custom graphs (with multiple origin papers) on this
+site; see [Connected Papers | Pricing](https://www.connectedpapers.com/pricing).
 
 Other resources:
 - [Highest scored questions - Math SE](https://math.stackexchange.com/questions?tab=Votes)

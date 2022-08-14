@@ -40,3 +40,18 @@ then dig back down. See [Attention span](https://en.wikipedia.org/wiki/Attention
 children automatically try a variety of tasks in order to learn faster? When you're training a net
 via transfer learning, should you rapidly switch between tasks to start, then decrease the switch
 rate with time?
+
+# TODO-ard: Should you always record dependencies?
+
+The advice in `maintain-focus.md` and `flatten-plan.md` seem to conflict. Should you always record
+and pursue dependencies that *might* be helpful, even if they are not strictly necessary?
+
+It seems like this is a conflict between getting stuff done and learning. If you want to learn
+(invest long term), then you should work on adding math, etc. dependencies. That is, you should
+include dependencies that *might* be helpful, even if you could get it done without using any math
+or learning anything new.
+
+If you want to get stuff done as quickly as possible, then you should prefer to strip dependencies.
+This is what often happens when you are trying to implement a feature in software; it'd be nice to
+generalize code but instead you choose to get it down the quick and easy way. Long term this can
+lead to technical debt if no one ever goes back to fix the unaddressed e.g. duplication.

@@ -182,3 +182,74 @@ Is unsupervised learning similar to Bayesian statistics? It seems like you can o
 terms of efficiency:
 - [When (if ever) is a frequentist approach substantively better than a Bayesian? - Cross
   Validated](https://stats.stackexchange.com/questions/194035/when-if-ever-is-a-frequentist-approach-substantively-better-than-a-bayesian)
+
+# TODO-cycl: How is cyclomatic complexity measured?
+
+Should you set a limit on this in pylint? Right now you ignore all those errors, mostly because you
+don't understand the metric.
+
+Cyclomatic complexity is related to Betti numbers:
+- [Cyclomatic complexity - Wikipedia](https://en.wikipedia.org/wiki/Cyclomatic_complexity#Definition)
+
+# TODO-idb: How does one quickly identify the bottleneck in a computer program?
+
+The idea here is to provide a context for studying Turing machines and computability, complexity,
+etc. There are also a lot of notes to move on this subject. So in some sense, it's exploring the
+domain to come up with better questions.
+
+# TODO-dagl: Draw a DAG with clickable links
+
+You've frustrated yourself badly several times (and wasted a lot of time) trying to draw a graph
+with links in Inkscape. It's much easier to add a git graph in plain text and a list of links below;
+see `add-attention-mechanism.md` for an example. You want links inline to avoid the split attention
+effect. For your last frustration, see the graph in [](./add-attention-mechanism.md).
+
+In theory, you could build a graph of all arxiv papers you've read or are interested in reading
+rather than separate these. You could even add links to your [](./select-subplan.md) document if the
+task is essentially only understanding an external resource. See [](./estimate-subplan-weight.md)
+for a summary of all the areas you may use DAGs.
+
+See [Graph · master · David VandeBunte / davidvandebunte.gitlab.io ·
+GitLab](https://gitlab.com/davidvandebunte/davidvandebunte.gitlab.io/-/network/master) for GitLab's
+fancy implementation.
+
+Is the dagitty format the same as the dot format? They are quite similar, except perhaps in the
+first keyword. See:
+- http://dagitty.net/dags.html
+- https://www.graphviz.org/doc/info/lang.html
+- https://renenyffenegger.ch/notes/tools/Graphviz/examples/index
+
+You can draw graphviz plots in Jupyter:
+- https://h1ros.github.io/posts/introduction-to-graphviz-in-jupyter-notebook/
+- https://graphviz.readthedocs.io/en/stable/manual.html#jupyter-notebooks
+- https://graphviz.readthedocs.io/en/stable/examples.html
+- https://graphviz.org/theory/
+
+It'd be helpful to be able to change all your node shapes at once:
+- https://www.graphviz.org/doc/info/shapes.html
+
+Notice that even [Directed acyclic graph -
+Wikipedia](https://en.wikipedia.org/wiki/Directed_acyclic_graph) starts with a graphviz graph. In
+general, graphviz can solve the layout problem for you as well. You are always trying to adjust your
+manual git graph layouts when `git` obviously normally handles this task itself. It would be helpful
+to get into `graphviz` before getting too far into a review of graph theory and topology, as well.
+
+In general, you'd prefer to use graphviz so that you can edit graphs in plain text rather than try
+to tweak Inkscape drawings to get them how you want them, and so that you can changes graphs
+programmatically.
+
+Consider at least both of these options:
+- https://github.com/xflr6/graphviz
+- https://github.com/pygraphviz/pygraphviz
+
+To add a clickable link:
+- https://stackoverflow.com/a/29670382/622049
+
+It can be quite simple if you have `dot` installed:
+- https://stackoverflow.com/questions/18478559
+
+You may also want to make matplotlib clickable:
+- https://duckduckgo.com/?q=matplotlib+clickable&t=newext&atb=v310-1&ia=web
+
+The downside of matlplotlib is that you're again going to be stuck figuring out the layout on your
+own rather than being able to let the tool do it for you. You'll also miss graph theoretic topics.

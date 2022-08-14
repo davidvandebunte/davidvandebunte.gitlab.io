@@ -43,17 +43,17 @@
 |/
 | * TODO-aq: How do you answer a question?
 |/
+| * TODO-cnns: Will attention replace CNNs?
 | * TODO-rib: When should you reduce inductive bias?
 |/
-| * TODO-cnns: Will attention replace CNNs?
-|/
 | * TODO-top: How can topological concepts help you interpret models?
+| * TODO-cycl: How is cyclomatic complexity measured?: +8h
 |/
-| * TODO-sw: How is attention a form of soft weights?
-|/
-| * TODO-tra: How should you control your attention?
+| * TODO-idb: How does one quickly identify the bottleneck in a computer program?
 |/
 | * TODO-ef: Automate expanding focus in training
+|/
+| * TODO-dagl: Draw a DAG with clickable links
 |/
 | * TODO-vi: Why are "variational inference" methods so popular?
 |/
@@ -63,12 +63,15 @@
 |/
 | * TODO-rb: Move read-book.md to evaluate-pedagogical-tool.md
 |/
-| * TODO-snsa: What is the difference between self-attention and attention?
-|/
 | * TODO-dr: Should you reduce the dimensionality of your inputs?
 |/
-| * TODO-kqv: What exactly are keys, queries, and values in attention mechanisms?
+| * Target: TODO-kqv: What exactly are keys, queries, and values in attention mechanisms?: +3d
 |/
+| How is attention a form of soft weights?: 2022-08-14 9:15
+* Should you always record dependencies?: 2022-08-12 15:40
+* What is the difference between self-attention and attention?: 2022-08-12 13:45
+* How should you control your attention?: 2022-08-12 13:00
+* Explore domain: improve-add-attention-mechanism.md: 2022-08-12 13:00
 * Why do you wear headphones with white noise? See `narrow-focus.md`.
 * TODO-svd: How can SVD be used to reduce dimensionality?: 2022-06-20 14:00
 * TODO-pfn: Why do you record any links you share?: 2022-06-20 9:50

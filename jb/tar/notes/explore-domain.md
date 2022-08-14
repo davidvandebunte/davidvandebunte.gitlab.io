@@ -4,10 +4,9 @@ Part of [](./estimate-subplan-weight.md).
 
 # Test
 
-Add a set of goals/ideas to a "future" git graph.
-
-In RL, authors often refer to this process as "action generation" (actions being analogous to
-ideas), with the action generator often being the policy. See for example:
+Add a set of goals/ideas to a "future" git graph. In RL, authors often refer to this process as
+"action generation" (actions being analogous to ideas), with the action generator often being the
+policy. See for example:
 - [A Reinforcement Learning Technique with an Adaptive Action Generator for a Multi-robot System](
 https://link.springer.com/chapter/10.1007/978-3-540-69134-1_25)
 - [Reinforcement Learning Random Action Generator](
@@ -23,7 +22,7 @@ See also:
 ## Pick a direction
 
 Consider VNTE in widely different parts of the network to start, trying to avoid putting too much
-time into variations on the same VNTE (see [](./set-wide-goal.md). Once you've identified the parts
+time into variations on the same VNTE (see [](./set-wide-goal.md)). Once you've identified the parts
 of the network with high weight tasks, get into more focused planning work in that area of the
 network (effectively prune actions to explore the rest of the network). At this point, think beyond
 the "gold" you've already found with [](./set-deep-goal.md). Said another way, look for low hanging
@@ -33,14 +32,42 @@ fruit first but be suspicious of easy answers.
 
 ### Internal
 
+#### Think
+
 To "think" (assuming you can't read or write) would be to make a modification in your own BNN (i.e.
 without going external, something you could do with your eyes closed). Many great ideas come to
 people in their sleep. This action depends on nothing but your own mind (which includes an objective
 function), and targets your own mind.
 
+#### Notes
+
 If you have a large body of personal notes, what ideas have you forgotten about in them? For the
 advantages of exploring your own notes, see [](./organize-notes.md). This action depends on your
 mind and notes, and targets your mind and notes.
+
+You should be able to follow any process from your public notes (e.g. on a car ride); you regularly
+publish all these thoughts. Start from public so you focus on quality first, and you get to see the
+rendered version of articles (easier to follow links, fix easy issues). Following a public process
+also helps you identify what needs to be publicized most, and it helps you see the big picture
+(because of the TOC on the right). If you're only reading your public notes, you'll also only go to
+them when you want to add notes.
+
+You'll almost surely start to open these articles in vim, and you'll see anything that is different
+in your personal notes from your public notes. While you are only exploring, limit yourself to
+fixing minor errors, annotating (i.e. only adding comments), and removing comments. If you want to
+restructure (e.g. move and rename files), create a new TODo, finish your current task early, and
+return to planning (compare the task to at least one other, then commit to the new work). This
+approach also works well with git; it will be obvious in your history when you e.g. renamed files
+and moved content between articles because your changes will be more limited to a rename or move.
+
+You can see this cycle as producing commits in a branch that are limited to one of two types of
+commits. The first is what is typically described as formatting and commenting (non-functional)
+commits, analogous to planning commits. The second is refactoring or feature commits, analogous to
+finishing TODo nodes in the git graph (or giving up on them). You can produce this kind of history
+from the beginning, or rebase your branch several times to make it look "clean" i.e. easier to
+review by others.
+
+#### Net analogy
 
 In a net we literally use random number generation to create ideas; this step is assisted by the
 loss function through the "educated guess" system of backpropagation. Other aspects of the guessing
