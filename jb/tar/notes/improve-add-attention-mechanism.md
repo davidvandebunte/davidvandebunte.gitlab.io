@@ -1,35 +1,13 @@
 # Improve add attention mechanism
 
-# TODO-sw: How is attention a form of soft weights?
-
-See:
-- [Attention (machine learning)](https://en.wikipedia.org/wiki/Attention_(machine_learning))
-- [Attention? Attention! | Lil'Log](https://lilianweng.github.io/posts/2018-06-24-attention/)
-- [Different types of Attention in Neural Networks - gotensor](
-https://gotensor.com/2019/07/06/different-types-of-attention-in-neural-networks/)
-- [what's the difference between "self-attention mechanism" and "full-connection" layer?](
-https://stackoverflow.com/questions/64218678/)
-
-> Its flexibility comes from its role as "soft weights" that can change during runtime, in contrast
-> to standard weights that must remain fixed at runtime.
-
-In terms of QKV attention, the "soft weights" are what are sometimes called the attention weights.
-These are formed by using the WQ and WK matrices (from training) to build Q and K matrices from X,
-which are multiplied (Q by the transpose of K) to produce the attention weights. They're called
-"weights" only because you get a matrix here, and a matrix is what you'd typically need for a FC
-layer (ignoring the b offsets).
-
-Said another way, the "Inquiry system" described in this answer is a function that takes a function
-(the trained WK and WQ matrices):
-- https://stats.stackexchange.com/a/531971/189415
-
 # TODO-kqv: What exactly are keys, queries, and values in attention mechanisms?
 
 ## Estimate cost
 
 Does a search engine conceptually provide attention scores (what you should pay attention to) based
 on e.g. links and other factors? You do the same thing, collecting links to decide how to apply your
-attention (which you usually think of as "time").
+attention (which you usually think of as "time"). You could see a prioritized list of tasks as the
+result of a query of importance across your whole life.
 
 Do they learn to project vectors the same subspace? If they're projecting to the same subspace, from
 the same original space (of X) why can't they be the same matrix? If you're doing language
@@ -95,7 +73,10 @@ See also [Part of speech](https://en.wikipedia.org/wiki/Part_of_speech).
 
 # TODO-cnns: Will attention replace CNNs?
 
-I'm not fully convinced that Attention will replace CNNs. A CNN with multiple output channels seems
+The answer is almost surely no, because a specialized model is always best for some applications.
+Will attention mechanisms take a lot of the "market" though?
+
+A CNN with multiple output channels seems
 quite similar to attention with multiple heads; the output vectors in both cases are essentially a
 "feature" describing the receptive field (or word) under it. In the end, both do dot products.
 

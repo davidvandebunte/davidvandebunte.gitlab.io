@@ -1,5 +1,7 @@
 # Add attention mechanism
 
+[aml]: https://en.wikipedia.org/wiki/Attention_(machine_learning)
+
 ## Estimate value
 
 Should you add an "attention" mechanism to your model? For one argument, see the "Why
@@ -25,18 +27,19 @@ https://en.wikipedia.org/wiki/Transformer_(machine_learning_model)#Alternatives)
 
 The original authors were probably smart enough to keep it to three points because they know most ML
 practioners have a short [Attention span](https://en.wikipedia.org/wiki/Attention_span), but I'll
-add a fourth goal for self-attention: Generalizability.
+add a fourth goal for attention mechanisms: Generalizability.
 
 ### Generalizability
 
 The attention mechanism is useful across both NLP and CV (like e.g. residual connections). They only
 touched on this in [1706.03762.pdf - Conclusion](https://arxiv.org/pdf/1706.03762.pdf#section.7),
 but attention has found success in many CV problems. See also:
+- [Show, Attend and Tell: Neural Image Caption Generation with Visual ...](https://arxiv.org/abs/1502.03044)
 - "General-Purpose Computation" under [On the Opportunities and Risks of Foundation Models -
  2108.07258.pdf - Section 4.1](https://arxiv.org/pdf/2108.07258.pdf#subsection.4.1)
-- [Are Convolutional Neural Networks or Transformers more like human vision? - 2105.07197.pdf](
-https://arxiv.org/pdf/2105.07197.pdf)
-- [2206.03452v1.pdf - Can CNNs Be More Robust Than Transformers?](https://arxiv.org/pdf/2206.03452v1.pdf)
+- [Are Convolutional Neural Networks or Transformers more like human vision?](
+https://arxiv.org/abs/2105.07197)
+- [Can CNNs Be More Robust Than Transformers?](https://arxiv.org/abs/2206.03452)
 - [Vision transformer - Wikipedia](https://en.wikipedia.org/wiki/Vision_transformer)
 
 #### Attention vs. Self-Attention
@@ -48,10 +51,30 @@ of attention mechanisms means that attention (in contrast to self-attention) can
 modalities. See further comments about this application to Perceiver models in
 [](./se/what-exactly-are-keys-queries-and-values.md).
 
+#### Soft weights
+
+From [Attention (machine learning) - Wikipedia][aml]:
+
+> Its flexibility comes from its role as "soft weights" that can change during runtime, in contrast
+> to standard weights that must remain fixed at runtime.
+
+In terms of QKV attention, the "soft weights" are what are sometimes called the attention weights.
+These are formed by using the WQ and WK matrices (from training) to build Q and K matrices from X,
+which are multiplied (Q by the transpose of K) to produce the attention weights. They're called
+"weights" only because you get a matrix here, and a matrix is what you'd typically use in a FC layer
+(ignoring the b offsets).
+
+[matq]: https://stats.stackexchange.com/a/531971/189415
+
+Said another way, the "Inquiry system" described in [mon's answer to - What exactly are keys,
+queries, and values in attention mechanisms?][matq] is a function that takes a function (the trained
+WK and WQ matrices). For another simple explanation, see [what's the difference between
+"self-attention mechanism" and "full-connection" layer?](
+https://stackoverflow.com/questions/64218678/).
+
 ## Test
 
 [wat]: https://en.wikipedia.org/wiki/Attention
-[aml]: https://en.wikipedia.org/wiki/Attention_(machine_learning)
 [lilaa]: https://lilianweng.github.io/posts/2018-06-24-attention/
 
 The term "attention" is used in this article following the definition in [Attention (machine
@@ -59,7 +82,7 @@ learning) - Wikipedia][aml]. Does [Attention (machine learning)][aml] compress e
 [Attention][wat] means to humans? Not even close. The self-attention mechanism can at best be
 described as a tool to help a model decide what to weigh highly (pay "attention" to), given what it
 is currently processing. For another simple definition, see the start of [Attention? Attention! |
-Lil'Log][lilaa]. ML practitioners are loving the phrase "attend to" though.
+Lil'Log][lilaa]. ML practitioners love the phrase "attend to" though.
 
 We may need to start inventing new words. In my opinion there is already little to no distinction
 between the words "attention" and "focus" except perhaps that the former is often treated as a
@@ -75,10 +98,12 @@ defined in terms of [focus - Wiktionary](https://en.wiktionary.org/wiki/focus) (
 The following graph shows the development history of variants of attention mechanisms, linking
 papers that reference each other and removing transitive dependencies. Dates match the original
 publication to Arxiv, not the original publication. The list is roughly based on:
-- [A Family of Attention Mechanisms](
-https://lilianweng.github.io/posts/2018-06-24-attention/#a-family-of-attention-mechanisms)
 - [Attention (machine learning) - Variants](
 https://en.wikipedia.org/wiki/Attention_(machine_learning)#Variants).
+- [A Family of Attention Mechanisms  | Lil'Log](
+https://lilianweng.github.io/posts/2018-06-24-attention/#a-family-of-attention-mechanisms)
+- [Different types of Attention in Neural Networks - gotensor](
+https://gotensor.com/2019/07/06/different-types-of-attention-in-neural-networks/)
 
 ```
 *-. Attention Is All You Need: Vaswani, Gomez: 2017-06

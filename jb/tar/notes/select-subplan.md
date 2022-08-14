@@ -51,8 +51,6 @@
 |/
 | * TODO-idb: How does one quickly identify the bottleneck in a computer program?
 |/
-| * Target: TODO-sw: How is attention a form of soft weights?: +2d
-|/
 | * TODO-ef: Automate expanding focus in training
 |/
 | * TODO-dagl: Draw a DAG with clickable links
@@ -67,8 +65,9 @@
 |/
 | * TODO-dr: Should you reduce the dimensionality of your inputs?
 |/
-| * TODO-kqv: What exactly are keys, queries, and values in attention mechanisms?
+| * Target: TODO-kqv: What exactly are keys, queries, and values in attention mechanisms?: +3d
 |/
+| How is attention a form of soft weights?: 2022-08-14 9:15
 * Should you always record dependencies?: 2022-08-12 15:40
 * What is the difference between self-attention and attention?: 2022-08-12 13:45
 * How should you control your attention?: 2022-08-12 13:00
