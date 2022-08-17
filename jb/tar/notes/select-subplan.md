@@ -65,9 +65,10 @@
 |/
 | * TODO-dr: Should you reduce the dimensionality of your inputs?
 |/
-| * Target: TODO-kqv: What exactly are keys, queries, and values in attention mechanisms?: +3d
+| * Target: TODO-kqv: What exactly are keys, queries, and values in attention mechanisms?: +2d
 |/
-| How is attention a form of soft weights?: 2022-08-14 9:15
+* Partial: What exactly are keys, queries, and values in attention mechanisms?: 2022-08-17 9:15
+* How is attention a form of soft weights?: 2022-08-14 9:15
 * Should you always record dependencies?: 2022-08-12 15:40
 * What is the difference between self-attention and attention?: 2022-08-12 13:45
 * How should you control your attention?: 2022-08-12 13:00
