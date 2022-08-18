@@ -33,7 +33,7 @@ QKV lets you easily connect two different modalities (i.e. text and image) becau
 be text and V can be an image (image search in web browsers).
 
 ```{code-cell}
-%pip install pandas numpy
+%pip install numpy pandas
 ```
 
 ## Attention is All You Need (AIAYN)
@@ -67,6 +67,7 @@ the YouTube paywall (or advertisements) an arguably better resource to learn fro
 image in this answer:
 
 ```{code-cell}
+import numpy as np
 import pandas as pd
 
 X = np.array([ \
@@ -84,7 +85,6 @@ pd.DataFrame(X,
 ```
 
 ```{code-cell}
-import numpy as np
 from numpy import linalg as la
 
 np.set_printoptions(precision=2, suppress=True, floatmode='maxprec_equal')
