@@ -84,7 +84,9 @@ pd.DataFrame(X,
 ```
 
 ```{code-cell}
+import numpy as np
 from numpy import linalg as la
+
 np.set_printoptions(precision=2, suppress=True, floatmode='maxprec_equal')
 
 U, s, Vt = la.svd(X, full_matrices=False)
