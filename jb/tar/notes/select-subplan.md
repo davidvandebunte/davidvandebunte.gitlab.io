@@ -55,6 +55,8 @@
 |/
 | * TODO-dagl: Draw a DAG with clickable links
 |/
+| * TODO-mpd: Move pip and conda dependencies to notebooks
+|/
 | * TODO-vi: Why are "variational inference" methods so popular?
 |/
 | * TODO-dss: How would you define "semi-supervised" learning?
