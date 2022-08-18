@@ -1,6 +1,7 @@
 # Add attention mechanism
 
 [aml]: https://en.wikipedia.org/wiki/Attention_(machine_learning)
+[atnv]: http://nlp.seas.harvard.edu/annotated-transformer/
 
 ## Estimate value
 
@@ -117,17 +118,21 @@ https://gotensor.com/2019/07/06/different-types-of-attention-in-neural-networks/
 |/
 * Sequence to Sequence Learning with Neural Networks: Sutskever: 2014-09
 * Learning Phrase Representations using RNN Encoder–Decoder for ...: Cho, Bahdanau, Bengio: 2014-06
+* Distributed Representations of Words and Phrases and ... (word2vec): Mikolov, Sutskever: 2013-10
 ```
+
+[aiayn]: https://arxiv.org/abs/1706.03762
 
 Links to the abstract of every paper in Arxiv (in the same order) to make it easy to get the latest
 (e.g. v7 for some papers) version even if the author adds an update:
-- [Attention Is All You Need](https://arxiv.org/abs/1706.03762)
+- [Attention Is All You Need][aiayn] (better, [The Annotated Transformer][atnv])
 - [Long Short-Term Memory-Networks for Machine Reading](https://arxiv.org/abs/1601.06733)
 - [Show, Attend and Tell: Neural Image Caption Generation with Visual ...](https://arxiv.org/abs/1502.03044)
 - [Effective Approaches to Attention-based Neural Machine Translation](https://arxiv.org/abs/1508.04025)
 - [Neural Machine Translation by Jointly Learning to Align and Translate](https://arxiv.org/abs/1409.0473)
 - [Sequence to Sequence Learning with Neural Networks](https://arxiv.org/abs/1409.3215)
 - [Learning Phrase Representations using RNN Encoder–Decoder for ...](https://arxiv.org/abs/1406.1078)
+- [Distributed Representations of Words and Phrases and ... (word2vec)](https://arxiv.org/abs/1310.4546)
 
 [cpa]: https://www.connectedpapers.com/about
 [cusg]: https://www.connectedpapers.com/main/fa72afa9b2cbc8f0d7b05d52548906610ffbb9c5+204e3073870fae3d05bcbc2f6a8e263d9b72e776+cea967b59209c6be22829699f05b8b1ac4dc092d/Connected-Papers-|-Find-and-explore-academic-papers/graph
@@ -137,20 +142,5 @@ About][cpa]). See [this link][cusg] for a custom graph with three of these paper
 
 ## Estimated cost
 
-See [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/) and
-[Visualizing A Neural Machine Translation Model (Mechanics of Seq2seq Models With Attention)](
-https://jalammar.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention/)
-for helpful visualizations.
-
-See [The Annotated Transformer (old version)](
-http://nlp.seas.harvard.edu/2018/04/03/attention.html#applications-of-attention-in-our-model) and
-[The Annotated Transformer (new version)](
-http://nlp.seas.harvard.edu/annotated-transformer/#background) for a helpful multi-modal
-summary of the Transformer's paper. The text in the newer version is too large, but can be zoomed.
-The tutorials [Language Modeling with nn.Transformer and TorchText](
-https://pytorch.org/tutorials/beginner/transformer_tutorial.html) and [Language Translation with
-nn.Transformer and torchtext](https://pytorch.org/tutorials/beginner/translation_transformer.html)
-are more focused on the details of implementing a Transformer model than how or why it works; for
-example they don't describe "attention" in detail and only mention [MultiheadAttention - PyTorch](
-https://pytorch.org/docs/stable/generated/torch.nn.MultiheadAttention.html) rather than use it in
-the code (much less look at its internals).
+See [](./se/what-exactly-are-keys-queries-and-values.md) for community-sourced annotations to AIAYN
+and references to code implementations of KQV attention mechanisms.
