@@ -35,3 +35,9 @@ scripts).
 
 This also simplifies the reproducibility problem in general. You may actually need a different
 version of a package to achieve reproducibility in one notebook than another.
+
+Generally speaking, this approach is much more similar to the approach you take in your notes of
+importing a reference (a link) only in the paragraph that you are using it. You can import at either
+the paragraph (cell) level in Jupyter notebooks, or at the top. In many cases, it may be better to
+do so at the paragraph level first and move to the top only after you use the dependency more than
+once (to avoid a duplicate import in the file).

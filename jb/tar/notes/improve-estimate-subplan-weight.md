@@ -67,3 +67,16 @@ to how a hypothesis starts as a question, and ends up as a theory. Even as a the
 "question" in some sense; but we begin to talk in statements as if it's surely true. When you do
 this, you lose the connection between the original question (TODO-x) and the "answer" to the
 question (typically a .md file).
+
+## Measuring unimportance
+
+How do you identify tasks that are actually not important, but still on your list of things to do?
+For example, tasks that were important because they were focal. You could force yourself to limit
+your TODo list (the focal git graph) to a certain size. This has the advantage of requiring you to
+look at a shorter list when you're deciding what to do next. The primary purpose of this approach is
+that you'll be forced to remove items from your list when you aren't doing them because they are
+really only important when you are in focused work (in a certain context). This doesn't mean you
+won't do them, only that they aren't important enough to be your focus. It seems like this is
+similar to `live.md` but now your TODo list is dynamically changing as how you live (what is
+important to you) changes and how your model of how to do it changes. What you already know how to
+do, for example, is not important to you to relearn.

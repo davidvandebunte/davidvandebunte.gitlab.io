@@ -7,6 +7,7 @@
 | * TODO-fb: Do you want to be a feedback provider (teacher) in general?
 |/
 | * TODO-up: What are the "universal properties" of map, fold, and filter?: +2w
+| * TODO-catt: What's a simple high-level summary of category theory?
 |/
 | * Is ResNet a Bayesian net? Is it generative?
 |/
@@ -54,6 +55,8 @@
 | * TODO-ef: Automate expanding focus in training
 |/
 | * TODO-dagl: Draw a DAG with clickable links
+|/
+| * Add a vim/neovim plugin for GhostText. How many significant edits do you make to Wikipedia and SE?
 |/
 | * TODO-mpd: Move pip and conda dependencies to notebooks
 |/

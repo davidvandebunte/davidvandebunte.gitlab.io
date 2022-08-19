@@ -115,7 +115,11 @@ should already be "zoomed" to let you fit as much as possible on a screen.
 ### Estimate first
 
 You should be able to provide some estimate of how hard a question is to answer before you expand
-your focus. Is this a quick search or something that will take an hour?
+your focus. Is this a quick search or something that will take an hour? Said another way, you should
+always have an estimate for when you will close a tab when you open it. You can see open tabs as
+open tasks or questions that you close when the task/question is complete, and therefore opening
+opening a tab as an expansion in scope (necessary or not). Know which tab you are working on; the
+more you have the harder this gets.
 
 #### More than 5 minutes
 
