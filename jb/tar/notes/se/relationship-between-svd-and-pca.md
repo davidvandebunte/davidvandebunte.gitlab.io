@@ -24,8 +24,11 @@ from numpy import linalg as la
 np.random.seed(42)
 ```
 
-Let the data matrix $\mathbf X$ be of $n \times p$ size, where *n* is the number of samples and *p* is the
-number of variables (see [Tidy data](https://tidyr.tidyverse.org/articles/tidy-data.html)).
+[xarr]: https://tutorial.xarray.dev/overview/xarray-in-45-min.html
+[td]: https://tidyr.tidyverse.org/articles/tidy-data.html
+
+Let the data matrix $\mathbf X$ be of $n \times p$ size, where *n* is the number of samples and *p*
+is the number of variables (see [Tidy data][td], [Xarray][xarr]).
 
 ```{code-cell} ipython3
 n, p = 5, 3

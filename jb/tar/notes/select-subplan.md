@@ -67,8 +67,9 @@
 |/
 | * TODO-dr: Should you reduce the dimensionality of your inputs?
 |/
-| * Target: TODO-kqv: What exactly are keys, queries, and values in attention mechanisms?: +2d
+| * Target: TODO-kqs: Do the K and Q matrices learn to project to the same space?: +1d
 |/
+* TODO-kqv: What exactly are keys, queries, and values in attention mechanisms?: 2022-08-19 16:00
 * Partial: What exactly are keys, queries, and values in attention mechanisms?: 2022-08-17 9:15
 * How is attention a form of soft weights?: 2022-08-14 9:15
 * Should you always record dependencies?: 2022-08-12 15:40

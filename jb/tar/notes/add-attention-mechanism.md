@@ -107,6 +107,8 @@ https://lilianweng.github.io/posts/2018-06-24-attention/#a-family-of-attention-m
 https://gotensor.com/2019/07/06/different-types-of-attention-in-neural-networks/)
 
 ```
+* What Does BERT Look At? ...: Clark, Manning: 2019-06
+* BERT: Pre-training of Deep Bidirectional Transformers ...: Devlin: 2018-10
 *-. Attention Is All You Need: Vaswani, Gomez: 2017-06
 |\ \
 * | | Long Short-Term Memory-Networks for Machine Reading: Cheng: 2016-01
@@ -125,6 +127,8 @@ https://gotensor.com/2019/07/06/different-types-of-attention-in-neural-networks/
 
 Links to the abstract of every paper in Arxiv (in the same order) to make it easy to get the latest
 (e.g. v7 for some papers) version even if the author adds an update:
+- [What Does BERT Look At? ...](https://arxiv.org/abs/1906.04341)
+- [BERT: Pre-training of Deep Bidirectional Transformers ...](https://arxiv.org/abs/1810.04805)
 - [Attention Is All You Need][aiayn] (better, [The Annotated Transformer][atnv])
 - [Long Short-Term Memory-Networks for Machine Reading](https://arxiv.org/abs/1601.06733)
 - [Show, Attend and Tell: Neural Image Caption Generation with Visual ...](https://arxiv.org/abs/1502.03044)

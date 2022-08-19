@@ -32,6 +32,8 @@ The QKV attention mechanism is particularly interesting because it's used in Per
 QKV lets you easily connect two different modalities (i.e. text and image) because e.g. QK can both
 be text and V can be an image (image search in web browsers).
 
+## Library versions
+
 ```{code-cell}
 %pip install numpy pandas
 ```
@@ -47,24 +49,14 @@ there's no constraint in the model to enforce this.
 
 ## Sam's answer
 
-In [Sam's answer](https://stats.stackexchange.com/a/463320/189415) he mentions the SVD; it would
-probably improve the answer to reference PCA rather than only the SVD. For more details see
-[](./relationship-between-svd-and-pca.md). You can reinterpet point `2.` as a reference to [Feature
-learning - PCA](https://en.wikipedia.org/wiki/Feature_learning#Principal_component_analysis) and
-`3.` as a reference to [Dimensionality reduction - PCA](
-https://en.wikipedia.org/wiki/Dimensionality_reduction#Principal_component_analysis_(PCA)). See the
-comments following "Feature extraction and dimension reduction can be combined in one step" in
-[Dimensionality reduction - Dimension reduction](
-https://en.wikipedia.org/wiki/Dimensionality_reduction#Dimension_reduction) for other techniques for
-doing both these steps at once.
-
+[sa]: https://stats.stackexchange.com/a/463320/189415
 [lsi]: https://en.wikipedia.org/wiki/Latent_semantic_analysis#Derivation
 
-The YouTube video this answer links to seems to have changed since the author added the reference.
-It also leaves a lot to be desired, only covering the topic for a few minutes. If you want to avoid
-the YouTube paywall (or advertisements) an arguably better resource to learn from is the
-["Derivation" section of Latent semantic analysis - Wikipedia][lsi]. Using the same data from the
-image in this answer:
+The YouTube video [Sam's answer][sa] links to seems to have changed since the author added the
+reference. It also leaves a lot to be desired, only covering the topic for a few minutes. If you
+want to avoid the YouTube paywall (or advertisements) an arguably better resource to learn from is
+the ["Derivation" section of Latent semantic analysis - Wikipedia][lsi]. Using the same data from
+the image in Sam's answer but following the logic in the Wikipedia page on LSA:
 
 ```{code-cell}
 import numpy as np
@@ -160,18 +152,77 @@ cos_sim
 [wlm]: https://en.wikipedia.org/wiki/Linear_map
 
 To try to summarize, the author is saying the $K$ and $Q$ matrices in KQV attention both represent
-something like the $V_k$ matrix of left-singular values above. In KQV attention, however, we use a
-potentially different mapping $K$ and $Q$ to transform ([linear map][wlm]) vectors from their
-original basis to a "semantic" space where we get reasonable values from a similarity measure. In
-latent semantic indexing (LSI) there is only one $Q$ matrix represented above as $V_k$. It
-transforms both the original (P1-P7) and new (P8-P9) terms to the same "semantic" space already.
+something like the $V_k$ matrix of left-singular values above, and where we also disregard the
+\Sigma_k^{-1} term (scaled dot product attention has a scaling term that may perform a similar
+function).
+
+Said another way, in KQV attention we use a potentially different mapping $K$ and $Q$ to transform
+([linear map][wlm]) vectors from their original basis to a "semantic" (or "contextualized") space
+where we get reasonable values from a similarity measure. In latent semantic indexing (LSI) there is
+only one weight matrix represented above as $V_k$ (not two). It transforms both the original (P1-P7)
+and new (P8-P9) terms to the same "semantic" space already.
 
 [pytl]: https://pytorch.org/docs/stable/generated/torch.nn.Linear.html
 
 In KQV attention the loss function is also different; it's not as simple as the Frobenious norm
 because a [torch.nn.Linear][pytl] layer (a linear layer in general) also learns a bias by default
-and because the network's loss function is not always L2. For terminology for deconfusing whether a
-bias term is implied, see [Linear function](https://en.wikipedia.org/wiki/Linear_function).
+and because the network's loss function is not always L2. To avoid confusion over whether a bias
+term is implied, don't use the two words [Linear
+function](https://en.wikipedia.org/wiki/Linear_function) together.
+
+[Sam's answer][sa] mentions the SVD; it would probably improve the answer to reference PCA as well.
+For more details see [](./relationship-between-svd-and-pca.md). You can reinterpet point `2.` as a
+reference to [Feature learning -
+PCA](https://en.wikipedia.org/wiki/Feature_learning#Principal_component_analysis) and `3.` as a
+reference to [Dimensionality reduction - PCA](
+https://en.wikipedia.org/wiki/Dimensionality_reduction#Principal_component_analysis_(PCA)). See the
+comments following "Feature extraction and dimension reduction can be combined in one step" in
+[Dimensionality reduction - Dimension reduction](
+https://en.wikipedia.org/wiki/Dimensionality_reduction#Dimension_reduction) for other techniques for
+doing both these steps at once.
+
+## mon's answer
+
+[mona]: https://stats.stackexchange.com/a/531971/189415
+[pelt]: https://peltarion.com/blog/data-science/self-attention-video
+
+See [mon's answer][mona] for a conversation more focused on the "meaning" of KQV attention rather
+than the mechanics. The answer is relatively high-level, however, and doesn't even try to address
+multi-head attention. It references [Self-attention: step-by-step video | Peltarion][pelt], which
+provides a similar high-level discussion.
+
+[al]: https://en.wikipedia.org/wiki/Anaphora_(linguistics)
+[aia14]: https://arxiv.org/pdf/1706.03762.pdf#page=14
+
+A single-head KQV attention can really only provide a guess at what other words are important to
+include in a "contextualized" embedding of a more generic word. That is, it can really only pick out
+one [Anaphora (linguistics)][al] to consider; see also an anaphora head in [AIAYN - Pg14][aia14].
+Hence, mon's answer simply says K/Q is about finding the "most related" word.
+
+The answer implies single-head attention is about where you *should* look for the most useful word.
+That is, that attention provides a probabilistic estimate of "value" for understanding. Is this
+where our eyes search (guess) in practice? Could we measure our saccades and compare them to the
+results of an attention mechanism? Arguably a search engine provides the same single-head attention
+scores (what you should pay attention to, what's "valuable" for understanding) based on training on
+e.g. web links.
+
+### Multi-headed attention
+
+[wmh]: https://stackoverflow.com/a/66652733/622049
+
+If you have more than one attention head, however, the different heads should be pulling different
+features out of the sentence. See [What Does BERT Look At?](https://arxiv.org/abs/1906.04341). Like
+the features provided by a CNN, only some of the heads provide features interpretable by a human
+being (see [Why use multi-headed attention in Transformers?][wmh]).
+
+[polys]: https://en.wikipedia.org/wiki/Polysemy
+[homy]: https://en.wikipedia.org/wiki/Homonym
+
+The Peltarion author refers to [Polysemy][polys], closely related to [Homonymy][homy]. You need to
+be able to find anaphora with attention in order to distinguish between these kinds of words. If the
+anaphora you need aren't part of your sentence, you're out of luck. You can see attention as
+providing a "feature" on top of your word, to help contextualize it (add information) or
+disambiguate it (change its default meaning).
 
 ## The Annotated Transformer
 
@@ -180,14 +231,16 @@ bias term is implied, see [Linear function](https://en.wikipedia.org/wiki/Linear
 
 See [The Annotated Transformer (old version)][atov] and [The Annotated Transformer (new
 version)][atnv] for a helpful multi-modal summary of the Transformer's paper. The text in the newer
-version is too large, but can be zoomed. A drawing of some of the classes:
+version is too large, but can be zoomed. It also annoyingly doesn't automatically fill anywhere near
+the width of a standard computer monitor; someone should republish it to automatically resize to the
+full width of the screen. A drawing of some of the classes:
 
 ![x](../annotated-transformer-classes.svg)
 
 [nbkq]: https://stats.stackexchange.com/questions/515477/when-calculating-self-attention-for-transformer-ml-architectures-why-do-we-need#comment982038_515552
 
 As mentioned in a comment on [this SE question][nbkq], the implementation of `MultiHeadedAttention`
-is rather strange in this code. Quoting the code:
+is not easy to follow. Quoting the code:
 
 ```python
 class MultiHeadedAttention(nn.Module):
@@ -232,17 +285,61 @@ class MultiHeadedAttention(nn.Module):
         return self.linears[-1](x)
 ```
 
-We expect to see e.g. $W^Q_i \in \mathbb{R}^{d_{model} \times d_k}$ but instead see all four weight
-matrices instantiated at once with `clones`. It's only in `forward` that the first three weight
-matrices are effectively reshaped (in `lin(x).view(nbatches, -1, self.h, self.d_k).transpose(1, 2)`)
-and the fourth is reshaped in `.view(nbatches, -1, self.h * self.d_k)`.
+[nne]: https://pytorch.org/docs/stable/generated/torch.nn.Embedding.html
 
-The first three weights are being reshaped to $N_{batch} \times h \times d_{model} \times d_k$
-(after the transpose) where the second dimension is the number of attention heads and the third is
-the maximum number of words (embedded words) per sentence we are processing. To get to this
-understanding you may need to read through the `attention` implementation. This logic is doing
-batching at two levels, one the normal mini-batch and one across all heads. See the details in
-[torch.matmul](https://pytorch.org/docs/stable/generated/torch.matmul.html):
+We expect to see e.g. $W^Q_i \in \mathbb{R}^{d_{model} \times d_k}$ but instead see four square
+weight matrices instantiated at once with `clones`. Why are these square rather than rectangular?
+We'll focus on the first three which are associated with KQV; the fourth is not the issue here.
+
+Read through `EncoderDecoder`, `EncoderLayer`, `Embeddings`, and [`nn.Embedding`][nne] to confirm
+the `query`, `key`, `value` arguments to the `forward` method are all equal for self-attention and
+of shape $N_{batch} \times n_{words} \times d_{model}$. The second dimension $n_{words}$ is the
+maximum number of words (embedded words) per sentence we are processing.
+
+[nnl]: https://pytorch.org/docs/stable/generated/torch.nn.Linear.html
+
+Look only at the line `lin(x).view(nbatches, -1, self.h, self.d_k).transpose(1, 2)`. Considering
+only dimensions, the [`nn.Linear`][nnl] operation produces a tensor of the same shape as its
+argument (given above) because the weight matrices are square. We then reshape the result to
+$N_{batch} \times h \times n_{words} \times d_k$ (after the transpose) which works because
+$d_{model} = d_k h$ where `h` is the number of attention heads.
+
+[bmm]: https://en.wikipedia.org/wiki/Block_matrix#Block_matrix_multiplication
+
+How is this reshaping justified? What's happening here is probably best understood as [Block matrix
+multiplication][bmm]. The code makes it look like we're working with square matrices, but
+conceptually they're matrices of shape $d_k h \times d_{model}$ (note $d_v = d_k$). Let's imagine
+the operation is $Y = X A^T$ where an embedded word $x$ is on every row of $X$ (along the last
+dimension, the column direction). If A is $m \times n$ the input dimension is $n$ and the output
+dimension is $m$; notice you specify these in the opposite order (the first argument is $n$) to
+[`nn.Linear`][nnl].
+
+Clearly the first row of $Y$ is influenced by all weights but only the first example $x$, and the
+first column of $Y$ is influenced by all examples but only the first column of $A^T$. Extend this to
+a "block" to say the first $d_k$ columns of $Y$ are influenced by all examples but only the first
+$d_k$ columns of $A^T$. Conceptually then we can see $W^Q_i \in \mathbb{R}^{d_{model} \times d_k}$
+fitting in these rows of $A$. Notice we can add offsets `b` that still only influence one head
+rather than across heads.
+
+[rcmo]: https://en.wikipedia.org/wiki/Row-_and_column-major_order
+
+If we want to reinterpret these columns of $Y$ as a matrix then we need to acknowledge that the
+$d_k$ dimension is contiguous; see [Row- and column-major order][rcmo]. Because PyTorch is row-major
+order the `self.d_k` argument is the last to `view`.
+
+[pytl]: https://pytorch-lightning.readthedocs.io/en/stable/notebooks/course_UvA-DL/05-transformers-and-MH-attention.html
+[pymh]: https://github.com/pytorch/pytorch/blob/d589aa531ffc3cb657f9f76d38abf034df474c57/torch/nn/modules/activation.py#L886
+
+Other implementations make all this clearer by using `d_model`, `n_head`, and `d_k`; see
+[attention-is-all-you-need-pytorch/SubLayers.py](https://github.com/jadore801120/attention-is-all-you-need-pytorch/blob/fec78a687210851f055f792d45300d27cc60ae41/transformer/SubLayers.py#L9).
+See also `MultiheadAttention` in [Tutorial 5: Transformers and Multi-Head Attention — PyTorch
+Lightning][pytl] and [pytorch/activation.py · pytorch/pytorch][pymh].
+
+[tmm]: https://pytorch.org/docs/stable/generated/torch.matmul.html
+
+If you want more context note the first three arguments to the `attention` implementation are then
+four-dimensional. This logic is doing batching at two levels, one the normal mini-batch and one
+across all heads. See the "batched" examples in [torch.matmul][tmm]:
 
 ```python
 def attention(query, key, value, mask=None, dropout=None):
@@ -257,18 +354,13 @@ def attention(query, key, value, mask=None, dropout=None):
     return torch.matmul(p_attn, value), p_attn
 ```
 
-Other implementations make this clearer by using `d_model`, `n_head`, and `d_k`; see
-[attention-is-all-you-need-pytorch/SubLayers.py](https://github.com/jadore801120/attention-is-all-you-need-pytorch/blob/fec78a687210851f055f792d45300d27cc60ae41/transformer/SubLayers.py#L9).
-For yet another implementation, see `MultiheadAttention` in [Tutorial 5: Transformers and Multi-Head
-Attention — PyTorch
-Lightning](https://pytorch-lightning.readthedocs.io/en/stable/notebooks/course_UvA-DL/05-transformers-and-MH-attention.html).
-
-% TODO: Check the PyTorch implementation?
-
-% TODO: It might be nice to republish this "Annotated Transformer" html file yourself, their
-% rendering doesn't use the whole width of the page.
+% TODO: It'd be nice to republish full width but you only have one GPU (they use eight) so your
+% results are especially poor. Images also aren't centered unless you use jb.
 
 ## Other annotations
+
+The other answers on this SE question weren't particularly helpful to me (2022-08). See
+[](./about.md) if you want me to review your question if you've significantly changed it.
 
 See [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/) and
 [Visualizing A Neural Machine Translation Model (Mechanics of Seq2seq Models With Attention)](
