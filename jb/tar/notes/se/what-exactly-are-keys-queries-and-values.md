@@ -327,13 +327,13 @@ If we want to reinterpret these columns of $Y$ as a matrix then we need to ackno
 $d_k$ dimension is contiguous; see [Row- and column-major order][rcmo]. Because PyTorch is row-major
 order the `self.d_k` argument is the last to `view`.
 
-[pytl]: https://pytorch-lightning.readthedocs.io/en/stable/notebooks/course_UvA-DL/05-transformers-and-MH-attention.html
+[pytlg]: https://pytorch-lightning.readthedocs.io/en/stable/notebooks/course_UvA-DL/05-transformers-and-MH-attention.html
 [pymh]: https://github.com/pytorch/pytorch/blob/d589aa531ffc3cb657f9f76d38abf034df474c57/torch/nn/modules/activation.py#L886
 
 Other implementations make all this clearer by using `d_model`, `n_head`, and `d_k`; see
 [attention-is-all-you-need-pytorch/SubLayers.py](https://github.com/jadore801120/attention-is-all-you-need-pytorch/blob/fec78a687210851f055f792d45300d27cc60ae41/transformer/SubLayers.py#L9).
 See also `MultiheadAttention` in [Tutorial 5: Transformers and Multi-Head Attention — PyTorch
-Lightning][pytl] and [pytorch/activation.py · pytorch/pytorch][pymh].
+Lightning][pytlg] and [pytorch/activation.py · pytorch/pytorch][pymh].
 
 [tmm]: https://pytorch.org/docs/stable/generated/torch.matmul.html
 
