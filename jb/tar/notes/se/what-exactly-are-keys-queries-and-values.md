@@ -360,7 +360,7 @@ def attention(query, key, value, mask=None, dropout=None):
 ## Other annotations
 
 The other answers on this SE question weren't particularly helpful to me (2022-08). See
-[](./about.md) if you want me to review your question if you've significantly changed it.
+[](../about.md) if you want me to review your question if you've significantly changed it.
 
 See [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/) and
 [Visualizing A Neural Machine Translation Model (Mechanics of Seq2seq Models With Attention)](
