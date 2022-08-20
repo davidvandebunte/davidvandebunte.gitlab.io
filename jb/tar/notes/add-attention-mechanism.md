@@ -124,11 +124,13 @@ https://gotensor.com/2019/07/06/different-types-of-attention-in-neural-networks/
 ```
 
 [aiayn]: https://arxiv.org/abs/1706.03762
+[bert]: https://en.wikipedia.org/wiki/BERT_(language_model)
 
 Links to the abstract of every paper in Arxiv (in the same order) to make it easy to get the latest
 (e.g. v7 for some papers) version even if the author adds an update:
 - [What Does BERT Look At? ...](https://arxiv.org/abs/1906.04341)
-- [BERT: Pre-training of Deep Bidirectional Transformers ...](https://arxiv.org/abs/1810.04805)
+- [BERT: Pre-training of Deep Bidirectional Transformers ...](https://arxiv.org/abs/1810.04805) (or
+  [BERT - Wikipedia][bert])
 - [Attention Is All You Need][aiayn] (better, [The Annotated Transformer][atnv])
 - [Long Short-Term Memory-Networks for Machine Reading](https://arxiv.org/abs/1601.06733)
 - [Show, Attend and Tell: Neural Image Caption Generation with Visual ...](https://arxiv.org/abs/1502.03044)

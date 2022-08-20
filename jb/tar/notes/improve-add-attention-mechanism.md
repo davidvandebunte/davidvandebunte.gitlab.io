@@ -1,16 +1,9 @@
 # Improve add attention mechanism
 
-# TODO-kqs: Do the K and Q matrices learn to project to the same space?
+# TODO-wwv: Why do we need a $W_V$ matrix?
 
-If they're projecting to the same space, from the same original space (of X) why can't they be the
-same matrix? If you're doing language translation they couldn't be the same, but it seems like some
-of these applications are mapping English to English. Is it to different types of English words?
-Search for "pronoun" in Sam's answer; if Hans (proper noun) is the query then "he" (pronoun) would
-be the most-similar key? The word "he" (an X) would be translated to a q through the Q matrix that
-would be much more similar to the key "Hans" translated to a k through the K matrix than the word
-"Mary" translated to a k through the K matrix. The v associated with "Hans" would thus get
-multiplied by a softmax number near one; and it would contain information specific to the name
-"Hans" such as that it's a Germanic name.
+The v associated with "Hans" would thus get multiplied by a softmax number near one; and it would
+contain information specific to the name "Hans" such as that it's a Germanic name.
 
 Said another way, in self-attention you want the proper noun for the pronoun you are currently
 trying to understand to be "included" to some extent in the value V for the word. Let's say the
@@ -87,6 +80,11 @@ kinds of strategies for coming up with task weights. This doesn't quite fit beca
 weighted average of values though; they don't stay discrete. In this case you split your time
 fractionally based on the "probabilities" rather than coming up with a mix. You also expand certain
 tasks to get yourself into focus on them, dropping small fractions. Your Q and K can be the same.
+
+As humans we have mental functions to accomplish certain tasks but use pattern matching (see
+[](./estimate-subplan-weight.md) to decide which mental functions apply in a certain situation. It
+seems like attention heads simply always apply the function; the pronoun head gets applied to every
+input word even if the word is clearly not a pronoun.
 
 # TODO-kqvd: Is KQV attention the same as dictionary learning?
 
