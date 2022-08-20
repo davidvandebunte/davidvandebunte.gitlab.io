@@ -7,6 +7,7 @@
 | * TODO-fb: Do you want to be a feedback provider (teacher) in general?
 |/
 | * TODO-up: What are the "universal properties" of map, fold, and filter?: +2w
+| * TODO-catt: What's a simple high-level summary of category theory?
 |/
 | * Is ResNet a Bayesian net? Is it generative?
 |/
@@ -55,6 +56,10 @@
 |/
 | * TODO-dagl: Draw a DAG with clickable links
 |/
+| * Add a vim/neovim plugin for GhostText. How many significant edits do you make to Wikipedia and SE?
+|/
+| * TODO-mpd: Move pip and conda dependencies to notebooks
+|/
 | * TODO-vi: Why are "variational inference" methods so popular?
 |/
 | * TODO-dss: How would you define "semi-supervised" learning?
@@ -65,9 +70,11 @@
 |/
 | * TODO-dr: Should you reduce the dimensionality of your inputs?
 |/
-| * Target: TODO-kqv: What exactly are keys, queries, and values in attention mechanisms?: +3d
+| * Target: TODO-kqs: Do the K and Q matrices learn to project to the same space?: +1d
 |/
-| How is attention a form of soft weights?: 2022-08-14 9:15
+* TODO-kqv: What exactly are keys, queries, and values in attention mechanisms?: 2022-08-19 16:00
+* Partial: What exactly are keys, queries, and values in attention mechanisms?: 2022-08-17 9:15
+* How is attention a form of soft weights?: 2022-08-14 9:15
 * Should you always record dependencies?: 2022-08-12 15:40
 * What is the difference between self-attention and attention?: 2022-08-12 13:45
 * How should you control your attention?: 2022-08-12 13:00

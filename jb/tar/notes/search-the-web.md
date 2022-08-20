@@ -214,6 +214,7 @@ site; see [Connected Papers | Pricing](https://www.connectedpapers.com/pricing).
 Other resources:
 - [Highest scored questions - Math SE](https://math.stackexchange.com/questions?tab=Votes)
 - [Highest scored questions - CSSE](https://cs.stackexchange.com/questions?tab=Votes)
+- [Category:CS sidebar templates](https://en.wikipedia.org/wiki/Category:Computer_science_sidebar_templates)
 - [DeepMind - Research](https://www.deepmind.com/research)
 - [Meta AI Blog](https://ai.facebook.com/blog/)
 - [Overview | CVPR 2022](https://cvpr2022.thecvf.com/overview)

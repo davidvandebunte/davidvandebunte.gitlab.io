@@ -86,7 +86,9 @@ appropriate than a global web search.
 
 Use `%` to search open tabs rather than opening a new one. See [Search open tabs in Firefox |
 Firefox Help](https://support.mozilla.org/en-US/kb/search-open-tabs-firefox). When you use this in a
-new tab, the new tab is automatically removed when you select an existing tab.
+new tab, the new tab is automatically removed when you select an existing tab. You can start or end
+your search with this character; see other options in [Changing results on the fly | Firefox
+Help](https://support.mozilla.org/en-US/kb/address-bar-autocomplete-firefox#w_changing-results-on-the-fly).
 
 Simply click on links rather than Ctrl-click to avoid excessive tabs, as well. Use Ctrl-click when
 you want to expand your scope (see [](./expand-focus.md)), effectively adding a new goal.
@@ -113,23 +115,25 @@ should already be "zoomed" to let you fit as much as possible on a screen.
 ### Estimate first
 
 You should be able to provide some estimate of how hard a question is to answer before you expand
-your focus. Is this a quick search or something that will take an hour?
+your focus. Is this a quick search or something that will take an hour? Said another way, you should
+always have an estimate for when you will close a tab when you open it. You can see open tabs as
+open tasks or questions that you close when the task/question is complete, and therefore opening
+opening a tab as an expansion in scope (necessary or not). Know which tab you are working on; the
+more you have the harder this gets.
 
 #### More than 5 minutes
 
 Take notes when you want to attend to more weights deeper into your recent thoughts. Notes force
 your focus on a certain train of thought by making it real on your screen (and in front of your
 eyes, regularly forcing the context back into focus through exogeneous orienting). It's a way to
-assist your own limited ability to think deeply into your current context. Try to spend a day
-without taking notes; your browser tabs expand quickly as an alternative to keeping track of your
-train of thought (tabs become the tracking system, so they can't be closed).
+assist your own limited ability to think deeply into your current context. You can take plain-text
+"notes" in a browser tab (e.g. a Jupyter notebook when you're editing mathematics), or by leaving
+tabs unclosed (if so, move important tabs right where new tabs appear).
 
-Said another way, to take notes is not only to serialize your thoughts long-term. It's also to
-serialize them temporarily (e.g. over the next 5 minutes) to force you into focus. Is this a good
-practice? It keeps you on focus, but would make answering verbal questions (keeping your train of
-thought) difficult because you'd be out of practice. You wouldn't be able to think without your
-notes. For estimates of less than 2 minutes, perhaps you should not even use your notes (this
-probably happens naturally, though).
+To take notes is not only to serialize your thoughts long-term. It's also to serialize them
+temporarily (e.g. over the next 5 minutes) to force you into focus. Is this a good practice? It
+keeps you on focus, though it may make answering verbal questions (keeping your train of thought)
+difficult because you'd be missing your crutch.
 
 Notes are also good evidence that you know the exact question you want, and that you're going to use
 good searching tools e.g. [](./search-the-web.md) to answer the question (dependency). It also
@@ -149,7 +153,8 @@ supplementary article by putting it in a different browser window and a differen
 easy to rapidly switch back and forth between two tabs and still understand, especially if you need
 to open more tabs once in a while. See [shortcut key to detach a tab in firefox (move tab to new
 window) - SU](https://superuser.com/a/1514487/293032); to re-attach use a similar strategy.
-Alternatively, always keep two Firefox windows open, one leaning SE and one leaning Wikipedia.
+Alternatively, always keep two Firefox windows open, one leaning SE and one leaning Wikipedia. Most
+of the time, however, you should know your primary resource and follow it.
 
 #### More than 1 hour
 

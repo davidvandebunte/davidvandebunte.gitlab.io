@@ -253,3 +253,140 @@ You may also want to make matplotlib clickable:
 
 The downside of matlplotlib is that you're again going to be stuck figuring out the layout on your
 own rather than being able to let the tool do it for you. You'll also miss graph theoretic topics.
+
+# TODO-catt: What's a simple high-level summary of category theory?
+
+It would have been helpful to have category theory when you were revewing linear algebra while
+trying to understand the projections into a space that the KQ matrices do in KQV attention. Almost
+every concept you were trying to understand had an alternative explanation in terms of category
+theory. You should definitely organize your notes on the topic as part of this effort; perhaps
+that's the first step. Once your own notes are organized, then you "explore domain" by simply
+reading the notes of others (reading e.g. Wikipedia). You don't have to be writing notes to be
+exploring a domain; reading is exploring as long as you are understanding and have a goal.
+
+Math is critical not only because it has already created a large body of language (unique words) to
+describe concepts, but also because it is old and therefore already holds many places in the English
+namespace. You want to understand linear algebra *better* by understanding it from another
+perspective (as well as group theory). I'd say linear algebra is the basis for pretty much all
+machine learning (tensors). You should have a solid understanding in linear algebra before trying to
+generalize it, however. It's also critical because it defines the data structures that we use; focus
+on data structures first. Should you start with an article on the importance of mathematics? When
+exploring, for example, you need some general guidelines about how to explore (prefer math). You
+also see mathematical models apply to an *infinite* number of training examples, rather than a
+natural number (no matter how big). You can't just follow curiosity (the curiosity gradient,
+novelty), unless curiosity is based on the problems you've experienced in the past.
+
+In the past you've experienced being able to answer a question you had on one page of Wikipedia by
+almost randomly following links and then see it show up elsewhere. Because of the connectedness of
+mathematics, many concepts are discussed in multiple places. That is, you don't need to keep track
+of your mental train of questions as much as you would have to with another resource and another
+topic. It's like following links in a consistent set of notes that you hope your own will be
+someday. In fact, if you don't find the answer elsewhere it may not be an important answer.
+
+It seems better to study category theory before topology. You already have two examples (group
+theory and linear algebra) you can generalize from, and you have a lot of background in general. You
+can also use category theory in other places besides math, such as functional programming. It's a
+way to make your brain remember more things:
+- https://mathoverflow.net/a/132490/118552
+
+Understanding category theory is like importing a library dependency, rather than taking
+dependencies on individual functions. In general seeing a "theory" after a name is a good indicator
+that you need to make a concerted effort to learn something, similar to a library.
+
+Wikipedia is an excellent source for learning mathematics. You've read their whole page of caveats
+on the topic, and you agree with it. However, any study of mathematics requires some reference
+material as you work (to go along your primary material), and Wikipedia is excellent in this area.
+For example:
+- https://en.wikipedia.org/wiki/List_of_named_matrices#/media/File:Taxonomy_of_Complex_Matrices.svg
+
+https://en.wikiversity.org/wiki/Introduction_to_Category_Theory
+https://en.wikipedia.org/wiki/Category_( mathematics)#Examples
+https://en.wikibooks.org/wiki/Category_Theory
+https://en.wikipedia.org/wiki/Function_(mathematics)#Other_terms
+https://en.wikipedia.org/wiki/Category_(mathematics)#Examples
+
+Examples of categories:
+- https://en.wikipedia.org/wiki/Category:Categories_in_category_theory
+- https://en.wikipedia.org/wiki/Category_of_sets
+- https://en.wikipedia.org/wiki/Category_of_groups
+- https://en.wikipedia.org/wiki/Category_of_abelian_groups
+- https://en.wikipedia.org/wiki/Functor_category
+
+Distinguish between these slightly different terms:
+- https://en.wikipedia.org/wiki/Homomorphism (morphism i.e. almost category theory)
+- https://en.wikipedia.org/wiki/Homomorphism#Examples
+- https://en.wikipedia.org/wiki/Homeomorphism (topology)
+
+You care about applications to linear algebra:
+- https://en.wikipedia.org/wiki/Linear_map#Algebraic_classifications_of_linear_transformations
+- https://en.wikipedia.org/wiki/Covariance_and_contravariance
+- https://en.wikipedia.org/wiki/Covariance_and_contravariance_of_vectors
+
+See all the examples here:
+- https://en.wikipedia.org/wiki/Function_space
+
+You mostly understand free groups, can you tackle other free objects?
+- https://en.wikipedia.org/wiki/Monad_(functional_programming)#Free_monads
+
+Now that you understand homomorphisms, the relationship between morphisms and
+homomorphisms may be more understandable:
+- https://en.wikipedia.org/wiki/Morphism
+- https://en.wikipedia.org/wiki/Homomorphism
+
+Notice the picture of ab = ba on this page:
+- https://en.wikipedia.org/wiki/Commutative_property
+
+This is the same way that commutativity is described visually in VGT. It's the
+same pattern you see in commutative diagrams as well:
+- https://en.wikipedia.org/wiki/Commutative_diagram
+
+Document how Boolean algebra is a Magma
+
+You understand homomorphisms for groups now, which is part of category theory:
+- https://en.wikipedia.org/wiki/Fundamental_theorem_on_homomorphisms
+
+Universal property example:
+- https://en.wikipedia.org/wiki/Direct_product_of_groups#Universal_property
+
+In VGT a question went over commutators. Can you understand how they are
+functors?
+- https://en.wikipedia.org/wiki/Commutator_subgroup#Abelianization
+
+Binary operation vs binary relation
+https://en.wikipedia.org/wiki/Binary_operation#Binary_operations_as_ternary_relations
+
+https://www.cs.toronto.edu/~sme/presentations/cat101.pdf
+
+https://math.stackexchange.com/questions/312605/what-is-category-theory-useful-for
+
+https://en.wikipedia.org/wiki/Functional_programming
+https://en.wikipedia.org/wiki/Mathematical_logic
+
+Thought you already had this link:
+https://arxiv.org/pdf/1612.09375.pdf
+
+https://cs.stackexchange.com/questions/3028/is-category-theory-useful-for-learning-functional-programming
+
+https://en.wikipedia.org/wiki/Dynamic_dispatch
+- Notice the types in this example - dividend and divisor can be matrices,
+  floats, etc. Work through an example like this (with mathematical sets/types)
+  and relate it to category theory.
+- Also, Nick talks about dispatch a lot in his code.
+- See dispatch methods here:
+  https://docs.python.org/3/library/functools.html#module-functools
+
+https://en.wikipedia.org/wiki/Higher-order_function
+
+## Category theory and design
+
+In any design, draw the category theory diagram first (diagram chasing?) and then think hard about
+the categories of your inputs and outputs. List in? Dict in? Image in? Once these are well defined
+you can use a large math vocabulary to identify what kind of operation you need (e.g. a
+catamorphism) and then you can translate that to the language of functional programming (e.g. Nick
+wanted to use "partition" in a different way based on his math understanding). Large vocab allows
+for a large library of functions you can look up with a web search and then not not need to
+implement yourself. They provide the morphisms, like miniature prebuilt nets.
+
+See also:
+- https://arxiv.org/abs/1803.05316
+- https://www.amazon.com/Invitation-Applied-Category-Theory-Compositionality/dp/1108711820/ref=pd_rhf_d_se_s_bmx_gp_sccl_2_2/146-4077274-9552853?pd_rd_w=ipMxe&content-id=amzn1.sym.a37143c8-fb69-4f07-9e47-0a21fb07ca6d&pf_rd_p=a37143c8-fb69-4f07-9e47-0a21fb07ca6d&pf_rd_r=ZWCW54GJREC3GYW0SH2B&pd_rd_wg=IYx1C&pd_rd_r=eb4b2052-a511-4f6f-b96f-50a5782f0416&pd_rd_i=1108711820&psc=1

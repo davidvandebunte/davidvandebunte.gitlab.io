@@ -6,7 +6,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.11.5
+    jupytext_version: 1.14.1
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
@@ -24,12 +24,15 @@ from numpy import linalg as la
 np.random.seed(42)
 ```
 
-Let the data matrix $\mathbf X$ be of $n \times p$ size, where *n* is the number of samples and *p* is the
-number of variables.
+[xarr]: https://tutorial.xarray.dev/overview/xarray-in-45-min.html
+[td]: https://tidyr.tidyverse.org/articles/tidy-data.html
+
+Let the data matrix $\mathbf X$ be of $n \times p$ size, where *n* is the number of samples and *p*
+is the number of variables (see [Tidy data][td], [Xarray][xarr]).
 
 ```{code-cell} ipython3
 n, p = 5, 3
-X = np.random.rand(n, p)
+X = np.random.randint(0, 8, [n, p]).astype(float)
 X
 ```
 
@@ -41,7 +44,9 @@ X -= np.mean(X, axis=0)
 X
 ```
 
-Then the $p \times p$ covariance matrix $\mathbf C$ is given by $\mathbf C = \mathbf X^\top \mathbf
+[cm]: https://en.wikipedia.org/wiki/Covariance_matrix
+
+Then the $p \times p$ [covariance matrix][cm] $\mathbf C$ is given by $\mathbf C = \mathbf X^\top \mathbf
 X/(n-1)$:
 
 ```{code-cell} ipython3
@@ -49,7 +54,10 @@ C = np.cov(X, rowvar=False)
 C
 ```
 
-It is a symmetric matrix and so it can be diagonalized:
+[edsp]: https://en.wikipedia.org/wiki/Eigendecomposition_of_a_matrix#Decomposition_for_special_matrices
+
+It is a symmetric matrix and so it can be diagonalized (see [Eigendecomposition - Decomposition for
+special matrices][edsp]):
 
 $$
 \mathbf C = \mathbf V \mathbf L \mathbf V^\top
@@ -163,8 +171,8 @@ S_k$ is the required $n \times k$ matrix containing first $k$ PCs.
 
 ```{code-cell} ipython3
 k = 2
-PC_k = principal_components[:, 0:k]
-US_k = U[:, 0:k].dot(S[0:k, 0:k])
+PC_k = principal_components[:, :k]
+US_k = U[:, :k].dot(S[:k, :k])
 assert np.allclose(*flip_signs(PC_k, US_k))
 ```
 
@@ -176,7 +184,7 @@ lowest possible reconstruction error, [see the answer
 here](https://stats.stackexchange.com/questions/130721).
 
 ```{code-cell} ipython3
-Xk = US_k.dot(Vt[0:k, :])
+Xk = US_k.dot(Vt[:k, :])
 Xk
 ```
 
@@ -201,5 +209,7 @@ assert V.shape == (p, p)
 
 - [Principal component analysis - Singular value decomposition - Wikipedia](
 https://en.wikipedia.org/wiki/Principal_component_analysis#Singular_value_decomposition)
+- [Singular value decomposition - Relation to eigenvalue decomposition](https://en.wikipedia.org/wiki/Singular_value_decomposition#Relation_to_eigenvalue_decomposition)
+- [Singular value](https://en.wikipedia.org/wiki/Singular_value)
 
 % See TODO-rbsap

@@ -84,6 +84,13 @@ GHFM.
 GitLab's Web IDE lets you take notes on even e.g. a tablet. It's critical to be using a build system
 like `bazel` if you're using these tools to avoid long builds for nothing but documentation changes.
 
+### Edit in browser
+
+See [Help:Text editor support - Wikipedia](https://en.wikipedia.org/wiki/Help:Text_editor_support)
+for tips on setting up various editors to work on Wikipedia articles. This article suggests
+"GhostText" as a general solution for editing online content in plain text, though this solution
+requires a server running in your text editor.
+
 ### Convert emails to plain text
 
 All notes are TODo, even emails-to-self. They are all *begging* to be read. For example, if they're
