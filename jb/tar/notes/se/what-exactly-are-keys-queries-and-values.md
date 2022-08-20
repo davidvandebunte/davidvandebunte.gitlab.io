@@ -19,8 +19,6 @@ Supplementary material to the questions and answers in [What exactly are keys, q
 in attention mechanisms? - CV](https://stats.stackexchange.com/questions/421935). Indirectly,
 commentary on [Attention is All You Need (AIAYN)](https://arxiv.org/abs/1706.03762).
 
-## Question
-
 Why is this question important? Many versions of attention are used with older RNN-based models, and
 it's not clear they are being used in practice any more. On the other hand, the KQV (or QKV) method
 seems to still be used extensively. See [An Overview of Attention | Papers With Code](
@@ -153,7 +151,7 @@ cos_sim
 
 To try to summarize, the author is saying the $K$ and $Q$ matrices in KQV attention both represent
 something like the $V_k$ matrix of left-singular values above, and where we also disregard the
-\Sigma_k^{-1} term (scaled dot product attention has a scaling term that may perform a similar
+$\Sigma_k^{-1}$ term (scaled dot product attention has a scaling term that may perform a similar
 function).
 
 Said another way, in KQV attention we use a potentially different mapping $K$ and $Q$ to transform
@@ -170,9 +168,9 @@ and because the network's loss function is not always L2. To avoid confusion ove
 term is implied, don't use the two words [Linear
 function](https://en.wikipedia.org/wiki/Linear_function) together.
 
-[Sam's answer][sa] mentions the SVD; it would probably improve the answer to reference PCA as well.
-For more details see [](./relationship-between-svd-and-pca.md). You can reinterpet point `2.` as a
-reference to [Feature learning -
+Sam's answer mentions the SVD; it would probably improve the answer to reference PCA as well.
+For more details see [](./relationship-between-svd-and-pca.md). You interpet point `2.` in Sam's
+answer as a reference to [Feature learning -
 PCA](https://en.wikipedia.org/wiki/Feature_learning#Principal_component_analysis) and `3.` as a
 reference to [Dimensionality reduction - PCA](
 https://en.wikipedia.org/wiki/Dimensionality_reduction#Principal_component_analysis_(PCA)). See the
@@ -180,6 +178,25 @@ comments following "Feature extraction and dimension reduction can be combined i
 [Dimensionality reduction - Dimension reduction](
 https://en.wikipedia.org/wiki/Dimensionality_reduction#Dimension_reduction) for other techniques for
 doing both these steps at once.
+
+[vs]: https://en.wikipedia.org/wiki/Vector_space
+
+Sam's answer provides a decent common-sense explanation in point `1.` for why we need at least one
+of the $W_Q$ or $W_K$ matrices; so that we don't leave our input embeddings (the $x$ in each row of
+$X$) in the same vector space. To use a little cleaner syntax than Sam's answer does, for each head
+we have that:
+
+$$
+K = X W_K \\
+Q = X W_Q
+$$
+
+If we eliminated both the $W_Q$ and $W_K$ matrices then the $Q K^T$ term in the attention
+calculation would be $X X^T$, which is an auto-covariance matrix, which are symmetric, meaning the
+attention weights could only capture information about the similarity of words in the original
+representation. There would be no need for multiple heads (it'd be hard to justify separate $V$ in
+each, the only remaining changeable component) and the mechanism would include no contextualization.
+See further comments about eliminating weight matrices below.
 
 ## mon's answer
 
@@ -194,10 +211,10 @@ provides a similar high-level discussion.
 [al]: https://en.wikipedia.org/wiki/Anaphora_(linguistics)
 [aia14]: https://arxiv.org/pdf/1706.03762.pdf#page=14
 
-A single-head KQV attention can really only provide a guess at what other words are important to
-include in a "contextualized" embedding of a more generic word. That is, it can really only pick out
-one [Anaphora (linguistics)][al] to consider; see also an anaphora head in [AIAYN - Pg14][aia14].
-Hence, mon's answer simply says K/Q is about finding the "most related" word.
+A single-head KQV attention mechanism can really only provide a guess at what other words are
+important to include in a "contextualized" embedding of a more generic word. That is, it can pick
+out only one kind of generic [Anaphora (linguistics)][al] to include; see also an anaphora head in
+[AIAYN - Pg14][aia14]. Hence, mon's answer simply says K/Q is about finding the "most related" word.
 
 The answer implies single-head attention is about where you *should* look for the most useful word.
 That is, that attention provides a probabilistic estimate of "value" for understanding. Is this
@@ -221,8 +238,58 @@ being (see [Why use multi-headed attention in Transformers?][wmh]).
 The Peltarion author refers to [Polysemy][polys], closely related to [Homonymy][homy]. You need to
 be able to find anaphora with attention in order to distinguish between these kinds of words. If the
 anaphora you need aren't part of your sentence, you're out of luck. You can see attention as
-providing a "feature" on top of your word, to help contextualize it (add information) or
-disambiguate it (change its default meaning).
+providing a "feature" on top of your word, to help contextualize it (add or refine information for
+e.g. a polyseme) or disambiguate it (change its default meaning for e.g. a homonym).
+
+### Why do we need both a $W_Q$ and $W_K$ matrix?
+
+Do the $W_K$ and $W_Q$ matrices learn to project to the same "semantic" or "contextualized" vector
+space? If so, perhaps there is no need to keep both of them. Let's say we applied this single matrix
+to both:
+
+$$
+K = X W_{KQ} \\
+Q = X W_{KQ}
+$$
+
+This approach allows for some contextualization, but the product $Q K^T$ will be a symmetric matrix.
+Few word relationships are of this type; e.g. when you want to find the proper noun associated with a
+pronoun you do not want your query to discover pronouns when you look up a proper noun.
+
+What if we only applied the single weight matrix to one of the inputs?
+
+$$
+K = X W_K \\
+Q = X
+$$
+
+This approach only allows for limited contextualization because the $W_K$ matrix will not be able to
+be selected (learned) in a way that produces $k$ and $q$ dot products significantly different than
+those in the original (e.g. word2vec) embedding. That is, because there's no change in $q$ examples,
+there's limited flexibility in creating a new semantic (or "contextualized") space for this
+particular head.
+
+[monsc]: https://stats.stackexchange.com/questions/421935/what-exactly-are-keys-queries-and-values-in-attention-mechanisms#comment1042657_531971
+
+Do the K and Q matrices learn to project to the same "semantic" or "contextualized" space? Yes, but
+because we are interested in building a non-symmetric relationship, they must both exist. I'd
+disagree with [mon's comment][monsc] here.
+
+Just to be clear, let's work through a specific example with pronouns and proper nouns. If he
+(pronoun) is the query then "Hans" (proper noun) may be the most-similar key we want to pull up. The
+word "he" (an $x$ in the $X$ matrix) would hopefully be transformed (if weights are selected
+properly) to a $q$ through the $W_Q$ matrix that would be much more similar to the key "Hans"
+translated to a $k$ through the $W_K$ matrix than the word "Mary" translated to a $k$ through the
+$W_K$ matrix. If not, then the dot-product attention score produced in the attention weights matrix
+produced by the pronoun attention head would not properly identify. We need a "pronoun" semantic (or
+"contextualized") space to get these dot products right.
+
+In this case the $W_Q$ and $W_K$ matrices may need to learn to emphasize gender from the original
+embedding in order to find associated proper nouns (despite the reduction in dimension from
+$d_{model}$ to $d_k$), but only the $K$ matrix would need to learn that e.g. "Hans" is a Germanic
+boy's name that is a proper noun because e.g. it's capitalized (and is *not* a pronoun).
+
+### Why do we need a $W_V$ matrix?
 
 ## The Annotated Transformer
 
@@ -294,7 +361,7 @@ We'll focus on the first three which are associated with KQV; the fourth is not 
 Read through `EncoderDecoder`, `EncoderLayer`, `Embeddings`, and [`nn.Embedding`][nne] to confirm
 the `query`, `key`, `value` arguments to the `forward` method are all equal for self-attention and
 of shape $N_{batch} \times n_{words} \times d_{model}$. The second dimension $n_{words}$ is the
-maximum number of words (embedded words) per sentence we are processing.
+maximum number of words (embedded words) per sentence.
 
 [nnl]: https://pytorch.org/docs/stable/generated/torch.nn.Linear.html
 
@@ -310,7 +377,7 @@ How is this reshaping justified? What's happening here is probably best understo
 multiplication][bmm]. The code makes it look like we're working with square matrices, but
 conceptually they're matrices of shape $d_k h \times d_{model}$ (note $d_v = d_k$). Let's imagine
 the operation is $Y = X A^T$ where an embedded word $x$ is on every row of $X$ (along the last
-dimension, the column direction). If A is $m \times n$ the input dimension is $n$ and the output
+dimension, the column direction). If $A$ is $m \times n$ the input dimension is $n$ and the output
 dimension is $m$; notice you specify these in the opposite order (the first argument is $n$) to
 [`nn.Linear`][nnl].
 
@@ -318,8 +385,8 @@ Clearly the first row of $Y$ is influenced by all weights but only the first exa
 first column of $Y$ is influenced by all examples but only the first column of $A^T$. Extend this to
 a "block" to say the first $d_k$ columns of $Y$ are influenced by all examples but only the first
 $d_k$ columns of $A^T$. Conceptually then we can see $W^Q_i \in \mathbb{R}^{d_{model} \times d_k}$
-fitting in these rows of $A$. Notice we can add offsets `b` that still only influence one head
-rather than across heads.
+fitting in these columns of $A^T$ (rows of $A$). Notice we can add offsets `b` with an influence
+limited to one head.
 
 [rcmo]: https://en.wikipedia.org/wiki/Row-_and_column-major_order
 
@@ -332,8 +399,9 @@ order the `self.d_k` argument is the last to `view`.
 
 Other implementations make all this clearer by using `d_model`, `n_head`, and `d_k`; see
 [attention-is-all-you-need-pytorch/SubLayers.py](https://github.com/jadore801120/attention-is-all-you-need-pytorch/blob/fec78a687210851f055f792d45300d27cc60ae41/transformer/SubLayers.py#L9).
-See also `MultiheadAttention` in [Tutorial 5: Transformers and Multi-Head Attention — PyTorch
-Lightning][pytlg] and [pytorch/activation.py · pytorch/pytorch][pymh].
+See also `MultiheadAttention` in:
+- [Tutorial 5: Transformers and Multi-Head Attention — PyTorch Lightning][pytlg]
+- [pytorch/activation.py · pytorch/pytorch][pymh]
 
 [tmm]: https://pytorch.org/docs/stable/generated/torch.matmul.html
 
@@ -359,9 +427,6 @@ def attention(query, key, value, mask=None, dropout=None):
 
 ## Other annotations
 
-The other answers on this SE question weren't particularly helpful to me (2022-08). See
-[](../about.md) if you want me to review your question if you've significantly changed it.
-
 See [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/) and
 [Visualizing A Neural Machine Translation Model (Mechanics of Seq2seq Models With Attention)](
 https://jalammar.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention/)
@@ -374,3 +439,6 @@ are more focused on the details of implementing a Transformer model than how or 
 example they don't describe "attention" in detail and only mention [MultiheadAttention - PyTorch](
 https://pytorch.org/docs/stable/generated/torch.nn.MultiheadAttention.html) rather than use it in
 the code (much less look at its internals).
+
+The other answers on this SE question weren't particularly helpful to me (2022-08). See
+[](../about.md) if you want me to review your answer again.
