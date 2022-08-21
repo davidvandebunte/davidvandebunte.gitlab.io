@@ -178,8 +178,10 @@ $X$) in the same vector space. To use a little cleaner syntax than Sam's answer 
 we have that:
 
 $$
-K = X W_K \\
-Q = X W_Q
+\begin{align}
+K & = X W_K \\
+Q & = X W_Q
+\end{align}
 $$
 
 If we eliminated both the $W_Q$ and $W_K$ matrices then the $Q K^T$ term in the attention
@@ -239,8 +241,10 @@ space? If so, perhaps there is no need to keep both of them. Let's say we applie
 to both:
 
 $$
-K = X W_{KQ} \\
-Q = X W_{KQ}
+\begin{align}
+K & = X W_{KQ} \\
+Q & = X W_{KQ}
+\end{align}
 $$
 
 This approach allows for some contextualization, but the product $Q K^T$ will be a symmetric matrix.
@@ -250,8 +254,10 @@ pronoun you do not want your query to discover pronouns when you look up a prope
 What if we only applied the single weight matrix to one of the inputs?
 
 $$
-K = X W_K \\
-Q = X
+\begin{align}
+K & = X W_K \\
+Q & = X
+\end{align}
 $$
 
 This approach only allows for limited contextualization because the $W_K$ matrix will not be able to
@@ -293,7 +299,7 @@ Could we skip the $W_V$ matrix if all we are doing is forwarding the original wo
 layer? Once we've identified the word as e.g. a pronoun it seems the attention layer has done its
 job and we can use our attention weights to properly emphasize the word relative to others.
 
-The obvious reason is that our original embedded words of dimension ${d_{model}$ may be in a
+The obvious reason is that our original embedded words of dimension $d_{model}$ may be in a
 different dimension than the $d_v$ we want to use downstream. That is, we may need to do
 dimensionality reduction to avoid an explosion in the size of our representation over the course of
 several layers.
