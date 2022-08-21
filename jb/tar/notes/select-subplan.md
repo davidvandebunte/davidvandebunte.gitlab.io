@@ -6,9 +6,6 @@
 |/
 | * TODO-fb: Do you want to be a feedback provider (teacher) in general?
 |/
-| * TODO-up: What are the "universal properties" of map, fold, and filter?: +2w
-| * TODO-catt: What's a simple high-level summary of category theory?
-|/
 | * Is ResNet a Bayesian net? Is it generative?
 |/
 | * TODO-lstm: Is the LSTM model a useful abstraction?
@@ -69,6 +66,9 @@
 | * TODO-rb: Move read-book.md to evaluate-pedagogical-tool.md
 |/
 | * TODO-dr: Should you reduce the dimensionality of your inputs?
+|/
+| * TODO-up: What are the "universal properties" of map, fold, and filter?: +2w
+| * Target: TODO-catt: What's a simple high-level summary of category theory?
 |/
 * TODO-wwv: Why do we need a $W_V$ matrix? 2022-08-21 15:00
 * TODO-kqs: Do the K and Q matrices learn to project to the same space?: 2022-08-20 13:00
