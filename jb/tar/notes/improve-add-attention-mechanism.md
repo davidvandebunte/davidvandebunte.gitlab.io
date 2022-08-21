@@ -13,6 +13,14 @@ See also [Part of speech](https://en.wikipedia.org/wiki/Part_of_speech).
 Other examples of modifiers in this answer:
 - https://stackoverflow.com/a/66259806/622049
 
+# Ask on SE: Attention is All You Need (AIAYN)
+
+[prla]: https://en.wikipedia.org/wiki/Projection_(linear_algebra)
+
+It's strange that this paper uses the term "projection" for the parameter matrices $W_i^Q$, etc. The
+term projection (see [Projection (linear algebra)][prla]) implies the operation is idempotent when
+there's no constraint in the model to enforce this.
+
 # TODO-apr: Is single-headed attention like a priority list if sorted by probability?
 
 Arguably the links we collect in our notes and TODO-x also help us decide how to apply our attention

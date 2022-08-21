@@ -36,15 +36,6 @@ be text and V can be an image (image search in web browsers).
 %pip install numpy pandas
 ```
 
-## Attention is All You Need (AIAYN)
-
-[prla]: https://en.wikipedia.org/wiki/Projection_(linear_algebra)
-
-It's strange that this paper uses the term "projection" for the parameter matrices $W_i^Q$, etc. The
-term projection (see [Projection (linear algebra)][prla]) implies the operation is idempotent when
-there's no constraint in the model to enforce this.
-
-
 ## Sam's answer
 
 [sa]: https://stats.stackexchange.com/a/463320/189415
