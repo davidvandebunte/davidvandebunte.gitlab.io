@@ -36,15 +36,6 @@ be text and V can be an image (image search in web browsers).
 %pip install numpy pandas
 ```
 
-## Attention is All You Need (AIAYN)
-
-[prla]: https://en.wikipedia.org/wiki/Projection_(linear_algebra)
-
-It's strange that this paper uses the term "projection" for the parameter matrices $W_i^Q$, etc. The
-term projection (see [Projection (linear algebra)][prla]) implies the operation is idempotent when
-there's no constraint in the model to enforce this.
-
-
 ## Sam's answer
 
 [sa]: https://stats.stackexchange.com/a/463320/189415
@@ -151,8 +142,8 @@ cos_sim
 
 To try to summarize, the author is saying the $K$ and $Q$ matrices in KQV attention both represent
 something like the $V_k$ matrix of left-singular values above, and where we also disregard the
-$\Sigma_k^{-1}$ term (scaled dot product attention has a scaling term that may perform a similar
-function).
+$\Sigma_k^{-1}$ term. In optimization we can learn this scaling matrix as part of the weight matrix,
+that is, learn $V_k \Sigma_k^{-1}$ rather than only $V_k$.
 
 Said another way, in KQV attention we use a potentially different mapping $K$ and $Q$ to transform
 ([linear map][wlm]) vectors from their original basis to a "semantic" (or "contextualized") space
@@ -280,16 +271,56 @@ Just to be clear, let's work through a specific example with pronouns and proper
 word "he" (an $x$ in the $X$ matrix) would hopefully be transformed (if weights are selected
 properly) to a $q$ through the $W_Q$ matrix that would be much more similar to the key "Hans"
 translated to a $k$ through the $W_K$ matrix than the word "Mary" translated to a $k$ through the
-$W_K$ matrix. If not, then the dot-product attention score produced in the attention weights matrix
-produced by the pronoun attention head would not properly identify. We need a "pronoun" semantic (or
-"contextualized") space to get these dot products right.
+$W_K$ matrix. We want the dot-product attention score produced in the attention weights matrix
+produced by the pronoun attention head to be high, which requires the vectors to be in the same
+space. We need a "pronoun" semantic (or "contextualized") space.
+
+Because $W_Q$ and $W_K$ are jointly trained they should have time to work out this common
+representation. Remember that it's only at run-time however that we get a specific answer to which
+pronouns are most likely associated with which proper nouns, when you can use these "soft" weights
+as a linear map in itself to convert the newly-remapped $v$ to a single weighted $v$.
 
 In this case the $W_Q$ and $W_K$ matrices may need to learn to emphasize gender from the original
 embedding in order to find associated proper nouns (despite the reduction in dimension from
 $d_{model}$ to $d_k$), but only the $K$ matrix would need to learn that e.g. "Hans" is a Germanic
-boy's name that is a proper noun because e.g. it's capitalized (and is *not* a pronoun).
+boy's name that is a proper noun because e.g. it's capitalized (and is *not* a pronoun). An [Article
+(grammar)](https://en.wikipedia.org/wiki/Article_(grammar)) head may be able to strip gender
+information if the only concern is e.g. the multiplicity of the reference word.
 
 ### Why do we need a $W_V$ matrix?
+
+Could we skip the $W_V$ matrix if all we are doing is forwarding the original word to the next
+layer? Once we've identified the word as e.g. a pronoun it seems the attention layer has done its
+job and we can use our attention weights to properly emphasize the word relative to others.
+
+The obvious reason is that our original embedded words of dimension ${d_{model}$ may be in a
+different dimension than the $d_v$ we want to use downstream. That is, we may need to do
+dimensionality reduction to avoid an explosion in the size of our representation over the course of
+several layers.
+
+Another advantage of a $W_V$ matrix is we'll be able to map the original embedding to a new custom
+("contextualized") embedding coming out of the whole multi-head attention mechanism. Recall that at
+the end of multi-head attention we concatenate the results of every head and then apply another
+weight matrix to build a new embdedding of size $d_{model}$ similar to the $d_{model}$ sized
+original (e.g. word2vec) representations.
+
+Continuing the pronoun example, the $v$ associated with "Hans" would thus get multiplied by an
+attention weight near one. This new representation may contain information specific to the name
+"Hans" such as that it's a Germanic name, but only if that's information that's important to
+downstream layers. Including this information in the word "he" may help future decisions if
+geography is important in the sentence.
+
+The linear map $W_V$ provides does more than just add information to words, however (e.g. to deal
+with a polyseme). It actually completely transforms the original words ("he" and "Hans") so that you
+can potentially change the meaning of words (e.g. to deal with a homonym).
+
+Let's consider an example with adjectives and the word "bank" (actually both a polyseme and
+homonym). If we see the word "river" immediately before bank we know the word has an almost
+completely different meaning than if we see e.g. "savings" before. Remember we can use the
+positional encoding in the word to check if we have e.g. an immediate adjective. If we have an
+attention head that recognizes these particular two-word tuples then it can change the meaning of
+the noun to include the information in the adjective. You could then build up higher level concepts
+like phrases through multiple layers.
 
 ## The Annotated Transformer
 

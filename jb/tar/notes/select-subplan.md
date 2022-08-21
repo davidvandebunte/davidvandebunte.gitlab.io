@@ -70,8 +70,7 @@
 |/
 | * TODO-dr: Should you reduce the dimensionality of your inputs?
 |/
-| * Target: TODO-wwv: Why do we need a $W_V$ matrix?
-|/
+* TODO-wwv: Why do we need a $W_V$ matrix? 2022-08-21 15:00
 * TODO-kqs: Do the K and Q matrices learn to project to the same space?: 2022-08-20 13:00
 * TODO-kqv: What exactly are keys, queries, and values in attention mechanisms?: 2022-08-19 16:00
 * Partial: What exactly are keys, queries, and values in attention mechanisms?: 2022-08-17 9:15

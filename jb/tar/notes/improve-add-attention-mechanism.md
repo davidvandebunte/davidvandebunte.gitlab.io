@@ -1,46 +1,5 @@
 # Improve add attention mechanism
 
-# TODO-wwv: Why do we need a $W_V$ matrix?
-
-The v associated with "Hans" would thus get multiplied by a softmax number near one; and it would
-contain information specific to the name "Hans" such as that it's a Germanic name.
-
-Said another way, in self-attention you want the proper noun for the pronoun you are currently
-trying to understand to be "included" to some extent in the value V for the word. Let's say the
-pronoun-processing attention head needs to consider gender; this seems quite realistic given the
-common pronouns "he" and "she" (ignoring "it"). Other heads (e.g. for articles) may not need to
-transform the representation to include this information in the "semantic" space associated with the
-head. For the pronoun head, however, it will will likely be helpful for both the WQ and WK matrices
-to learn to transform the original word2vec representation to a representation that continues to
-include gender.
-
-This "semantic" space created by the pronoun attention head will take a pronoun in the K field and
-lookup a proper noun in the Q field (not vice versa). It's hard to get too much further into the
-details, except covering special cases. A word that isn't a pronoun will probably have even weights
-across the board. Continuing on the theme of gender, though, the WK will need to learn to transform
-pronouns to include gender, which may be different than the task of transforming proper nouns to
-include gender, as the WQ matrix must learn to do.
-
-The WQ and WK matrices need to work in a common representation ("semantic" space) or the similarity
-measure won't work. They also need to work with different types of inputs, however, so they need to
-be different. It's therefore helpful to have a training process for them to work out this common
-representation. By applying these matrices to a specific sentence (at run-time), you get a specific
-answer to which pronouns are most likely associated with which proper nouns, and you can use these
-"soft" weights as a function to convert a list of values to a single weighted value.
-
-In single-headed attention it may be that the lookup is of the "most important" word other than the
-present word. This isn't as specific as pronoun but it should still be possible to learn to include
-more than the current word; you would expect it to perform better so it should be learnable.
-
-How do attention mechanisms avoid putting all the focus on the same word? It's likely you don't
-understand this because you don't understand why Q and K need to create different spaces:
-- https://stats.stackexchange.com/questions/421935/what-exactly-are-keys-queries-and-values-in-attention-mechanisms#comment1040928_531971
-
-In terms of information retrieval, it's like you're returning a weighted combination of all
-documents (quite strange). Why is the V matrix required at all? Perhaps in the pronoun attention
-head you need to emphasize certain aspects of the word2vec representation that are more relevant to
-pronouns. Or you need to change the value rather than simply add to it.
-
 # Other
 
 You can see self-attention as a compression of a word in *context*. That is, to understand any
@@ -53,6 +12,14 @@ See also [Part of speech](https://en.wikipedia.org/wiki/Part_of_speech).
 
 Other examples of modifiers in this answer:
 - https://stackoverflow.com/a/66259806/622049
+
+# Ask on SE: Attention is All You Need (AIAYN)
+
+[prla]: https://en.wikipedia.org/wiki/Projection_(linear_algebra)
+
+It's strange that this paper uses the term "projection" for the parameter matrices $W_i^Q$, etc. The
+term projection (see [Projection (linear algebra)][prla]) implies the operation is idempotent when
+there's no constraint in the model to enforce this.
 
 # TODO-apr: Is single-headed attention like a priority list if sorted by probability?
 
@@ -82,9 +49,13 @@ fractionally based on the "probabilities" rather than coming up with a mix. You 
 tasks to get yourself into focus on them, dropping small fractions. Your Q and K can be the same.
 
 As humans we have mental functions to accomplish certain tasks but use pattern matching (see
-[](./estimate-subplan-weight.md) to decide which mental functions apply in a certain situation. It
-seems like attention heads simply always apply the function; the pronoun head gets applied to every
-input word even if the word is clearly not a pronoun.
+[](./estimate-subplan-weight.md) to decide which mental functions apply in a certain situation. Can
+you see the dot product as performing pattern matching? That is, it decides whether this particular
+linear map V should apply at all. This allows for V to be more than a linear map, you could put any
+net in there. If attention weights are near zero, could you skip the matrix multiply?
+
+A word that isn't a pronoun will probably get the default treatment of attention weights on the same
+word and simply forwarding the information to the next layer.
 
 # TODO-kqvd: Is KQV attention the same as dictionary learning?
 
@@ -100,7 +71,7 @@ Will attention mechanisms take a lot of the "market" though?
 
 A CNN with multiple output channels seems quite similar to attention with multiple heads; the output
 vectors in both cases are essentially a "feature" describing the receptive field (or word) under it.
-In the end, both do dot products. See also:
+What is the mathematical difference? See also:
 - https://stackoverflow.com/a/66652733/622049
 
 Don't invest so much into convolution if it turns out it isn't necessary. It's ironic you're
