@@ -199,6 +199,10 @@ domain to come up with better questions.
 
 # TODO-dagl: Draw a DAG with clickable links
 
+Perhaps you want to keep the graph in the format of networkx and only convert to the dot format
+later? To keep this task small, though, you could also put this off. See:
+- https://networkx.org/documentation/stable/reference/algorithms/d_separation.html
+
 You've frustrated yourself badly several times (and wasted a lot of time) trying to draw a graph
 with links in Inkscape. It's much easier to add a git graph in plain text and a list of links below;
 see `add-attention-mechanism.md` for an example. You want links inline to avoid the split attention
