@@ -4,7 +4,15 @@ set -o errexit -o nounset -o xtrace
 chmod 777 /tmp
 
 apt-get update && apt-get install -y \
-    g++ libpng-dev libjpeg-dev libfontconfig1-dev libfreetype6-dev libharfbuzz-dev libfribidi-dev libtiff-dev \
+    g++ \
+    graphviz \
+    libfontconfig1-dev \
+    libfreetype6-dev \
+    libfribidi-dev \
+    libharfbuzz-dev \
+    libjpeg-dev \
+    libpng-dev \
+    libtiff-dev \
  && apt-get clean
 
 R -f /rethinking/install/rstan.R
