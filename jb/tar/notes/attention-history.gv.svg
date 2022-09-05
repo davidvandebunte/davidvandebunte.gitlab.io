@@ -13,7 +13,7 @@
 <g id="node1" class="node">
 <title>clark2019</title>
 <g id="a_node1"><a xlink:href="https://arxiv.org/abs/1906.04341" xlink:title="What Does BERT Look At? An Analysis of BERT&#39;s Attention: Clark, Manning: 2019&#45;06">
-<text text-anchor="middle" x="610" y="-589.6" font-family="Times,serif" font-size="18.00" fill="blue">What Does BERT Look At? An Analysis of BERT&#39;s Attention: Clark, Manning: 2019&#45;06</text>
+<text text-anchor="middle" x="610" y="-589.6" font-family="Times,serif" font-size="18.00" fill="#1d8ad1">What Does BERT Look At? An Analysis of BERT&#39;s Attention: Clark, Manning: 2019&#45;06</text>
 </a>
 </g>
 </g>
@@ -21,7 +21,7 @@
 <g id="node2" class="node">
 <title>devlin2018</title>
 <g id="a_node2"><a xlink:href="https://en.wikipedia.org/wiki/BERT_(language_model)" xlink:title="BERT: Pre&#45;training of Deep Bidirectional Transformers for Language Understanding: Devlin: 2018&#45;10">
-<text text-anchor="middle" x="610" y="-517.6" font-family="Times,serif" font-size="18.00" fill="blue">BERT: Pre&#45;training of Deep Bidirectional Transformers for Language Understanding: Devlin: 2018&#45;10</text>
+<text text-anchor="middle" x="610" y="-517.6" font-family="Times,serif" font-size="18.00" fill="#1d8ad1">BERT: Pre&#45;training of Deep Bidirectional Transformers for Language Understanding: Devlin: 2018&#45;10</text>
 </a>
 </g>
 </g>
@@ -35,7 +35,7 @@
 <g id="node3" class="node">
 <title>vaswani2017</title>
 <g id="a_node3"><a xlink:href="https://en.wikipedia.org/wiki/Transformer_(machine_learning_model)" xlink:title="Attention Is All You Need: Vaswani, Gomez: 2017&#45;06">
-<text text-anchor="middle" x="610" y="-445.6" font-family="Times,serif" font-size="18.00" fill="blue">Attention Is All You Need: Vaswani, Gomez: 2017&#45;06</text>
+<text text-anchor="middle" x="610" y="-445.6" font-family="Times,serif" font-size="18.00" fill="#1d8ad1">Attention Is All You Need: Vaswani, Gomez: 2017&#45;06</text>
 </a>
 </g>
 </g>
@@ -49,7 +49,7 @@
 <g id="node4" class="node">
 <title>cheng2016</title>
 <g id="a_node4"><a xlink:href="https://arxiv.org/abs/1601.06733" xlink:title="LSTM&#45;Networks for Machine Reading: Cheng: 2016&#45;01">
-<text text-anchor="middle" x="301" y="-301.6" font-family="Times,serif" font-size="18.00" fill="blue">LSTM&#45;Networks for Machine Reading: Cheng: 2016&#45;01</text>
+<text text-anchor="middle" x="301" y="-301.6" font-family="Times,serif" font-size="18.00" fill="#1d8ad1">LSTM&#45;Networks for Machine Reading: Cheng: 2016&#45;01</text>
 </a>
 </g>
 </g>
@@ -63,12 +63,12 @@
 <g id="node5" class="node">
 <title>xu2015</title>
 <g id="a_node5"><a xlink:href="https://arxiv.org/abs/1502.03044" xlink:title="Show, Attend and Tell: Neural Image Caption Generation with Visual Attention: Xu: 2015&#45;02">
-<text text-anchor="middle" x="610" y="-373.6" font-family="Times,serif" font-size="18.00" fill="blue">Show, Attend and Tell: Neural Image Caption Generation with Visual Attention: Xu: 2015&#45;02</text>
+<text text-anchor="middle" x="610" y="-373.6" font-family="Times,serif" font-size="18.00" fill="#1d8ad1">Show, Attend and Tell: Neural Image Caption Generation with Visual Attention: Xu: 2015&#45;02</text>
 </a>
 </g>
 </g>
 <!-- vaswani2017&#45;&gt;xu2015 -->
-<g id="edge3" class="edge">
+<g id="edge4" class="edge">
 <title>vaswani2017&#45;&gt;xu2015</title>
 <path fill="none" stroke="black" d="M610,-431.7C610,-423.98 610,-414.71 610,-406.11"/>
 <polygon fill="black" stroke="black" points="613.5,-406.1 610,-396.1 606.5,-406.1 613.5,-406.1"/>
@@ -77,12 +77,12 @@
 <g id="node6" class="node">
 <title>luong2015</title>
 <g id="a_node6"><a xlink:href="https://arxiv.org/abs/1508.04025" xlink:title="Effective Approaches to Attention&#45;based NMT: Luong, Manning: 2015&#45;08">
-<text text-anchor="middle" x="991" y="-301.6" font-family="Times,serif" font-size="18.00" fill="blue">Effective Approaches to Attention&#45;based NMT: Luong, Manning: 2015&#45;08</text>
+<text text-anchor="middle" x="991" y="-301.6" font-family="Times,serif" font-size="18.00" fill="#1d8ad1">Effective Approaches to Attention&#45;based NMT: Luong, Manning: 2015&#45;08</text>
 </a>
 </g>
 </g>
 <!-- vaswani2017&#45;&gt;luong2015 -->
-<g id="edge4" class="edge">
+<g id="edge3" class="edge">
 <title>vaswani2017&#45;&gt;luong2015</title>
 <path fill="none" stroke="black" d="M856.14,-432.64C947.19,-424.04 1031.89,-411.93 1046,-396 1063.7,-376.02 1042.95,-349.65 1022.07,-330.81"/>
 <polygon fill="black" stroke="black" points="1024.3,-328.11 1014.44,-324.24 1019.73,-333.42 1024.3,-328.11"/>
@@ -91,7 +91,7 @@
 <g id="node7" class="node">
 <title>bahdanau2014</title>
 <g id="a_node7"><a xlink:href="https://arxiv.org/abs/1409.0473" xlink:title="NMT by Jointly Learning to Align and Translate: Bahdanau, Bengio: 2014&#45;09">
-<text text-anchor="middle" x="417" y="-229.6" font-family="Times,serif" font-size="18.00" fill="blue">NMT by Jointly Learning to Align and Translate: Bahdanau, Bengio: 2014&#45;09</text>
+<text text-anchor="middle" x="417" y="-229.6" font-family="Times,serif" font-size="18.00" fill="#1d8ad1">NMT by Jointly Learning to Align and Translate: Bahdanau, Bengio: 2014&#45;09</text>
 </a>
 </g>
 </g>
@@ -105,7 +105,7 @@
 <g id="node8" class="node">
 <title>sutskever2014</title>
 <g id="a_node8"><a xlink:href="https://arxiv.org/abs/1409.3215" xlink:title="Sequence to Sequence Learning with Neural Networks: Sutskever: 2014&#45;09">
-<text text-anchor="middle" x="609" y="-157.6" font-family="Times,serif" font-size="18.00" fill="blue">Sequence to Sequence Learning with Neural Networks: Sutskever: 2014&#45;09</text>
+<text text-anchor="middle" x="609" y="-157.6" font-family="Times,serif" font-size="18.00" fill="#1d8ad1">Sequence to Sequence Learning with Neural Networks: Sutskever: 2014&#45;09</text>
 </a>
 </g>
 </g>
@@ -125,7 +125,7 @@
 <g id="node9" class="node">
 <title>cho2014</title>
 <g id="a_node9"><a xlink:href="https://arxiv.org/abs/1406.1078" xlink:title="Learning Phrase Representations using RNN Encoder&#45;Decoder for Statistical Machine Translation: Cho, Bahdanau, Bengio: 2014&#45;06">
-<text text-anchor="middle" x="609" y="-85.6" font-family="Times,serif" font-size="18.00" fill="blue">Learning Phrase Representations using RNN Encoder&#45;Decoder for Statistical Machine Translation: Cho, Bahdanau, Bengio: 2014&#45;06</text>
+<text text-anchor="middle" x="609" y="-85.6" font-family="Times,serif" font-size="18.00" fill="#1d8ad1">Learning Phrase Representations using RNN Encoder&#45;Decoder for Statistical Machine Translation: Cho, Bahdanau, Bengio: 2014&#45;06</text>
 </a>
 </g>
 </g>
@@ -139,7 +139,7 @@
 <g id="node10" class="node">
 <title>mikolov2013</title>
 <g id="a_node10"><a xlink:href="https://arxiv.org/abs/1310.4546" xlink:title="Distributed Representations of Words and Phrases and their Compositionality (word2vec): Mikolov, Sutskever: 2013&#45;10">
-<text text-anchor="middle" x="609" y="-13.6" font-family="Times,serif" font-size="18.00" fill="blue">Distributed Representations of Words and Phrases and their Compositionality (word2vec): Mikolov, Sutskever: 2013&#45;10</text>
+<text text-anchor="middle" x="609" y="-13.6" font-family="Times,serif" font-size="18.00" fill="#1d8ad1">Distributed Representations of Words and Phrases and their Compositionality (word2vec): Mikolov, Sutskever: 2013&#45;10</text>
 </a>
 </g>
 </g>
