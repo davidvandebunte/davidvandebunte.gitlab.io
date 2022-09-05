@@ -120,10 +120,14 @@ https://lilianweng.github.io/posts/2018-06-24-attention/#a-family-of-attention-m
 https://gotensor.com/2019/07/06/different-types-of-attention-in-neural-networks/)
 
 ```{code-cell}
-!dot -O -Tsvg -Tcmapx attention-history.gv
+!dot -O -Tsvg attention-history.gv
 ```
 
-<A HREF="attention-history.gv.cmapx"><IMG SRC="attention-history.gv.svg" ismap="ismap" /></A>
+```{image} ./attention-history.gv.svg
+:height: 0px
+```
+
+<object data="../_images/attention-history.svg" type="image/svg+xml"></object>
 
 +++
 
