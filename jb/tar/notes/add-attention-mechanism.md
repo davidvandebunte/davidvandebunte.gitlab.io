@@ -127,7 +127,7 @@ https://gotensor.com/2019/07/06/different-types-of-attention-in-neural-networks/
 :height: 0px
 ```
 
-<object data="../_images/attention-history.svg" type="image/svg+xml"></object>
+<object data="../_images/attention-history.gv.svg" type="image/svg+xml"></object>
 
 +++
 
