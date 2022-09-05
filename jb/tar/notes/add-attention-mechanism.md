@@ -106,39 +106,15 @@ https://lilianweng.github.io/posts/2018-06-24-attention/#a-family-of-attention-m
 - [Different types of Attention in Neural Networks - gotensor](
 https://gotensor.com/2019/07/06/different-types-of-attention-in-neural-networks/)
 
-```
-* What Does BERT Look At? ...: Clark, Manning: 2019-06
-* BERT: Pre-training of Deep Bidirectional Transformers ...: Devlin: 2018-10
-*-. Attention Is All You Need: Vaswani, Gomez: 2017-06
-|\ \
-* | | Long Short-Term Memory-Networks for Machine Reading: Cheng: 2016-01
-| * | Show, Attend and Tell: Neural Image Caption Generation with Visual Attention: Xu: 2015-02
-|/  |
-|   * Effective Approaches to Attention-based Neural Machine Translation: Luong, Manning: 2015-08
-|  /
-* / Neural Machine Translation by Jointly Learning to Align and Translate: Bahdanau, Bengio: 2014-09
-|/
-* Sequence to Sequence Learning with Neural Networks: Sutskever: 2014-09
-* Learning Phrase Representations using RNN Encoder–Decoder for ...: Cho, Bahdanau, Bengio: 2014-06
-* Distributed Representations of Words and Phrases and ... (word2vec): Mikolov, Sutskever: 2013-10
+```python
+!dot -O -Tsvg -Tcmapx attention-history.gv
 ```
 
-[aiayn]: https://arxiv.org/abs/1706.03762
-[bert]: https://en.wikipedia.org/wiki/BERT_(language_model)
+<A HREF="attention-history.gv.cmapx"><IMG SRC="attention-history.gv.svg" ismap="ismap" /></A>
 
-Links to the abstract of every paper in Arxiv (in the same order) to make it easy to get the latest
-(e.g. v7 for some papers) version even if the author adds an update:
-- [What Does BERT Look At? ...](https://arxiv.org/abs/1906.04341)
-- [BERT: Pre-training of Deep Bidirectional Transformers ...](https://arxiv.org/abs/1810.04805) (or
-  [BERT - Wikipedia][bert])
-- [Attention Is All You Need][aiayn] (better, [The Annotated Transformer][atnv])
-- [Long Short-Term Memory-Networks for Machine Reading](https://arxiv.org/abs/1601.06733)
-- [Show, Attend and Tell: Neural Image Caption Generation with Visual ...](https://arxiv.org/abs/1502.03044)
-- [Effective Approaches to Attention-based Neural Machine Translation](https://arxiv.org/abs/1508.04025)
-- [Neural Machine Translation by Jointly Learning to Align and Translate](https://arxiv.org/abs/1409.0473)
-- [Sequence to Sequence Learning with Neural Networks](https://arxiv.org/abs/1409.3215)
-- [Learning Phrase Representations using RNN Encoder–Decoder for ...](https://arxiv.org/abs/1406.1078)
-- [Distributed Representations of Words and Phrases and ... (word2vec)](https://arxiv.org/abs/1310.4546)
+Links default to Wikipedia, where further links can be collected as needed. Otherwise links are to
+the abstract of every paper in Arxiv (in the same order) to make it easy to get the latest (e.g. v7
+for some papers) version even if the author adds an update.
 
 [cpa]: https://www.connectedpapers.com/about
 [cusg]: https://www.connectedpapers.com/main/fa72afa9b2cbc8f0d7b05d52548906610ffbb9c5+204e3073870fae3d05bcbc2f6a8e263d9b72e776+cea967b59209c6be22829699f05b8b1ac4dc092d/Connected-Papers-|-Find-and-explore-academic-papers/graph
