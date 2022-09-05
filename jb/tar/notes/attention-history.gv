@@ -1,8 +1,8 @@
 digraph mainmap {
-  node [shape="box"];
+  node [shape="box", fontcolor=blue];
   {
     clark2019 [
-      label="What Does BERT Look At? ...: Clark, Manning: 2019-06"
+      label="What Does BERT Look At? An Analysis of BERT's Attention: Clark, Manning: 2019-06"
       URL="https://arxiv.org/abs/1906.04341"
     ]
     devlin2018 [
@@ -34,11 +34,11 @@ digraph mainmap {
       URL="https://arxiv.org/abs/1409.3215"
     ]
     cho2014 [
-      label="Learning Phrase Representations using RNN Encoder–Decoder for ...: Cho, Bahdanau, Bengio: 2014-06"
+      label="Learning Phrase Representations using RNN Encoder-Decoder for Statistical Machine Translation: Cho, Bahdanau, Bengio: 2014-06"
       URL="https://arxiv.org/abs/1406.1078"
     ]
     mikolov2013 [
-      label="Distributed Representations of Words and Phrases and ... (word2vec): Mikolov, Sutskever: 2013-10"
+      label="Distributed Representations of Words and Phrases and their Compositionality (word2vec): Mikolov, Sutskever: 2013-10"
       URL="https://arxiv.org/abs/1310.4546"
     ]
   }

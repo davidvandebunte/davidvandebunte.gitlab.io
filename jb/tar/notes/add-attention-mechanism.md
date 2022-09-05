@@ -119,7 +119,7 @@ https://lilianweng.github.io/posts/2018-06-24-attention/#a-family-of-attention-m
 - [Different types of Attention in Neural Networks - gotensor](
 https://gotensor.com/2019/07/06/different-types-of-attention-in-neural-networks/)
 
-```{code-cell} ipython3
+```{code-cell}
 !dot -O -Tsvg -Tcmapx attention-history.gv
 ```
 
@@ -127,9 +127,9 @@ https://gotensor.com/2019/07/06/different-types-of-attention-in-neural-networks/
 
 +++
 
-Links default to Wikipedia, where further links can be collected as needed. Otherwise links are to
-the abstract of every paper in Arxiv (in the same order) to make it easy to get the latest (e.g. v7
-for some papers) version even if the author adds an update.
+The nodes in this graph are clickable links that default to Wikipedia (a collection of links). Otherwise links are to the abstract of every paper in Arxiv (in the same order)
+to make it easy to get the latest (e.g. v7 for some papers) version even if the author adds an
+update.
 
 [cpa]: https://www.connectedpapers.com/about
 [cusg]: https://www.connectedpapers.com/main/fa72afa9b2cbc8f0d7b05d52548906610ffbb9c5+204e3073870fae3d05bcbc2f6a8e263d9b72e776+cea967b59209c6be22829699f05b8b1ac4dc092d/Connected-Papers-|-Find-and-explore-academic-papers/graph
