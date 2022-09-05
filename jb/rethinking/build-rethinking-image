@@ -8,6 +8,6 @@ docker build \
     -f install/Dockerfile \
     --no-cache \
     - < "$tar_fpath" > build.log
-docker save -o image.tar install_conda_pip
+docker save -o image.tar install_rethinking
 dvc add build.log image.tar
 git ci -m "Build install_rethinking docker image on $(hostname)"

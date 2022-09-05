@@ -350,7 +350,8 @@ A major advantage of having such a library of reusable actions is that, if the a
 you should be able to combine these old but reusable actions into new subplans. For example, if you
 had broken down the steps to get to your friend's house and your mom's house you may have discovered
 some are repeated (e.g. closing the garage door) and some are easily generalizable (e.g. entering an
-address in an app to get directions).
+address in an app to get directions). Directing the development of this library is similar to
+directing the direction of your career.
 
 [fgm]: https://bazel.build/basics/dependencies#using_fine-grained_modules_and_the_111_rule
 
