@@ -119,9 +119,8 @@ https://lilianweng.github.io/posts/2018-06-24-attention/#a-family-of-attention-m
 - [Different types of Attention in Neural Networks - gotensor](
 https://gotensor.com/2019/07/06/different-types-of-attention-in-neural-networks/)
 
-```{code-cell}
-!dot -O -Tsvg attention-history.gv
-```
+% To regenerate this file:
+% watch -n0 dot -O -Tsvg jb/tar/notes/attention-history.gv
 
 ```{image} ./attention-history.gv.svg
 :height: 0px
