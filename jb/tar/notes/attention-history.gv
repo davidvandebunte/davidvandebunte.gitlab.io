@@ -44,7 +44,8 @@ digraph mainmap {
   }
   clark2019 -> devlin2018;
   devlin2018 -> vaswani2017;
-  vaswani2017 -> {cheng2016 xu2015 luong2015};
+  vaswani2017 -> {xu2015 luong2015};
+  vaswani2017 -> cheng2016 [minlen=2];
   luong2015 -> sutskever2014;
   cheng2016 -> bahdanau2014;
   bahdanau2014 -> sutskever2014;
