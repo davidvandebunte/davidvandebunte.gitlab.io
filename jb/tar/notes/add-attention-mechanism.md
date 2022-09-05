@@ -1,3 +1,16 @@
+---
+jupytext:
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.14.1
+kernelspec:
+  display_name: Python 3 (ipykernel)
+  language: python
+  name: python3
+---
+
 # Add attention mechanism
 
 [aml]: https://en.wikipedia.org/wiki/Attention_(machine_learning)
@@ -106,11 +119,13 @@ https://lilianweng.github.io/posts/2018-06-24-attention/#a-family-of-attention-m
 - [Different types of Attention in Neural Networks - gotensor](
 https://gotensor.com/2019/07/06/different-types-of-attention-in-neural-networks/)
 
-```python
+```{code-cell}
 !dot -O -Tsvg -Tcmapx attention-history.gv
 ```
 
 <A HREF="attention-history.gv.cmapx"><IMG SRC="attention-history.gv.svg" ismap="ismap" /></A>
+
++++
 
 Links default to Wikipedia, where further links can be collected as needed. Otherwise links are to
 the abstract of every paper in Arxiv (in the same order) to make it easy to get the latest (e.g. v7
