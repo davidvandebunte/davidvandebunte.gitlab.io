@@ -127,6 +127,9 @@ https://gotensor.com/2019/07/06/different-types-of-attention-in-neural-networks/
 :height: 0px
 ```
 
+% Based on the hack suggested here:
+% https://github.com/executablebooks/MyST-Parser/issues/176
+
 <object width="100%" data="../_images/attention-history.gv.svg" type="image/svg+xml"></object>
 
 +++

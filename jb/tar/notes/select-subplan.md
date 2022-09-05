@@ -51,8 +51,6 @@
 |/
 | * TODO-ef: Automate expanding focus in training
 |/
-| * TODO-dagl: Draw a DAG with clickable links
-|/
 | * Add a vim/neovim plugin for GhostText. How many significant edits do you make to Wikipedia and SE?
 |/
 | * TODO-mpd: Move pip and conda dependencies to notebooks
@@ -70,6 +68,7 @@
 | * TODO-up: What are the "universal properties" of map, fold, and filter?: +2w
 | * Target: TODO-catt: What's a simple high-level summary of category theory?
 |/
+* TODO-dagl: Draw a DAG with clickable links: 2022-09-05 15:00
 * TODO-wwv: Why do we need a $W_V$ matrix? 2022-08-21 15:00
 * TODO-kqs: Do the K and Q matrices learn to project to the same space?: 2022-08-20 13:00
 * TODO-kqv: What exactly are keys, queries, and values in attention mechanisms?: 2022-08-19 16:00

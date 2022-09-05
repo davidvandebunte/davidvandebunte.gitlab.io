@@ -1,12 +1,12 @@
 digraph mainmap {
-  node [shape="box", fontcolor=blue];
+  node [shape="none", fontcolor=blue, fontsize=18];
   {
     clark2019 [
       label="What Does BERT Look At? An Analysis of BERT's Attention: Clark, Manning: 2019-06"
       URL="https://arxiv.org/abs/1906.04341"
     ]
     devlin2018 [
-      label="BERT: Pre-training of Deep Bidirectional Transformers ...: Devlin: 2018-10"
+      label="BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding: Devlin: 2018-10"
       URL="https://en.wikipedia.org/wiki/BERT_(language_model)"
     ]
     vaswani2017 [
@@ -14,7 +14,7 @@ digraph mainmap {
       URL="https://en.wikipedia.org/wiki/Transformer_(machine_learning_model)"
     ]
     cheng2016 [
-      label="Long Short-Term Memory-Networks for Machine Reading: Cheng: 2016-01"
+      label="LSTM-Networks for Machine Reading: Cheng: 2016-01"
       URL="https://arxiv.org/abs/1601.06733"
     ]
     xu2015 [
@@ -22,11 +22,11 @@ digraph mainmap {
       URL="https://arxiv.org/abs/1502.03044"
     ]
     luong2015 [
-      label="Effective Approaches to Attention-based Neural Machine Translation: Luong, Manning: 2015-08"
+      label="Effective Approaches to Attention-based NMT: Luong, Manning: 2015-08"
       URL="https://arxiv.org/abs/1508.04025"
     ]
     bahdanau2014 [
-      label="Neural Machine Translation by Jointly Learning to Align and Translate: Bahdanau, Bengio: 2014-09"
+      label="NMT by Jointly Learning to Align and Translate: Bahdanau, Bengio: 2014-09"
       URL="https://arxiv.org/abs/1409.0473"
     ]
     sutskever2014 [
