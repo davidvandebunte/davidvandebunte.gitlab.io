@@ -21,6 +21,7 @@ fi
 python3 -m dvc pull jb/jupyter_cache
 ./build_scripts/build-bazel
 ./build-shared-notes
+./build_scripts/build-graphs
 
 cd public
 ./start-nginx
