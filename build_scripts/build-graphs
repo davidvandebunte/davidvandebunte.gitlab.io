@@ -4,7 +4,7 @@ set -o errexit -o nounset -o xtrace
 cp jb/tar/notes/attention-history.gv public/executable-notes/notes
 cd public/executable-notes/notes
 chmod 777 .
-docker run --rm -it --volume "$(pwd):/work" \
+docker run --rm --volume "$(pwd):/work" \
     docker.io/backplane/graphviz:latest@sha256:ebeb46893a858bfdc50456926b91b97ac2f6c0f0b1127f28d651a13cc978c13a \
     dot -O -Tsvg -Tcmapx attention-history.gv
 cd -
