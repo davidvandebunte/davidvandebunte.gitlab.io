@@ -7,6 +7,9 @@ parts:
   - caption: Book of Why
     chapters:
       - file: notes/bow-review.md
+  - caption: Seven Sketches in Compositionality
+    chapters:
+      - file: notes/review-seven-sketches.md
   - caption: Statistical Rethinking
     chapters:
       - file: notes/sr2-review.md
