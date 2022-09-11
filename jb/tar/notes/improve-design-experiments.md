@@ -248,13 +248,6 @@ https://en.wikibooks.org/wiki/Category_Theory
 https://en.wikipedia.org/wiki/Function_(mathematics)#Other_terms
 https://en.wikipedia.org/wiki/Category_(mathematics)#Examples
 
-Examples of categories:
-- https://en.wikipedia.org/wiki/Category:Categories_in_category_theory
-- https://en.wikipedia.org/wiki/Category_of_sets
-- https://en.wikipedia.org/wiki/Category_of_groups
-- https://en.wikipedia.org/wiki/Category_of_abelian_groups
-- https://en.wikipedia.org/wiki/Functor_category
-
 Distinguish between these slightly different terms:
 - https://en.wikipedia.org/wiki/Homomorphism (morphism i.e. almost category theory)
 - https://en.wikipedia.org/wiki/Homomorphism#Examples
