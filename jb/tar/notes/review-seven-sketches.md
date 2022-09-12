@@ -49,8 +49,8 @@ https://en.wikipedia.org/wiki/Category_(mathematics)#Examples).
 ## Personal workflow
 
 Read [1803.05316.pdf](https://arxiv.org/pdf/1803.05316.pdf) in your browser with two columns up
-(selet "Odd Spreads" or "Even Spreads" in Firefox). Open a second tab scrolled to the solutions.
-Build locally rather than in the cloud.
+(select "Odd Spreads" or "Even Spreads" in Firefox). Open a second tab scrolled to the solutions.
+Close the sidebar. Build locally rather than through GitLab.
 
 Add to the errata: [Seven-Sketches suggestions - Google
 Docs](https://docs.google.com/document/d/160G9OFcP5DWT8Stn7TxdVx83DJnnf7d5GML0_FOD5Wg/edit).
@@ -59,9 +59,7 @@ Docs](https://docs.google.com/document/d/160G9OFcP5DWT8Stn7TxdVx83DJnnf7d5GML0_F
 
 ### 1.1. More than the sum of their parts
 
-#### Exercise 1.1
-
-Some terminology: a function $f$ is said to be:
+*Exercise* 1.1. Some terminology: a function $f$ is said to be:
 
 1. *order-preserving* if $x\leq y$ implies $f(x)\leq f(y)$, for all $x,y\in\mathbb{R}$
 1. *metric-preserving* if $|x-y|=|f(x)-f(y)|$;
@@ -113,3 +111,9 @@ $$
 #### 1.1.1. A first look at generative effects
 
 See [Category of topological spaces](https://en.wikipedia.org/wiki/Category_of_topological_spaces).
+
+#### 1.1.2 Ordering systems
+
+![x](./seven-sketches-exercise-1-6.svg)
+
+*Exercise* 1.7. Only the last (`4.`) is false.
