@@ -10,6 +10,10 @@ parts:
   - caption: Seven Sketches
     chapters:
       - file: notes/review-seven-sketches.md
+      - file: notes/ssc-more-than-the-sum.md
+      - file: notes/ssc-what-is-order.md
+      - file: notes/ssc-meets-and-joins.md
+      - file: notes/ssc-galois-connections.md
   - caption: Statistical Rethinking
     chapters:
       - file: notes/sr2-review.md
