@@ -80,3 +80,10 @@ won't do them, only that they aren't important enough to be your focus. It seems
 similar to `live.md` but now your TODo list is dynamically changing as how you live (what is
 important to you) changes and how your model of how to do it changes. What you already know how to
 do, for example, is not important to you to relearn.
+
+## Use jb labels for TODO
+
+You often want to use markdown headers with a TODO-xxx so that you can jump to them quickly (with
+ctags generation). That's fine to continue to do, but whenever you need a jb-style link between
+article sections you should also use the `todo-xxx` for it. This label will persist before and after
+completion of the task.

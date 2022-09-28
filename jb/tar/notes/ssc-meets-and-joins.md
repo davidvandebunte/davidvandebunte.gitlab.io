@@ -1,0 +1,50 @@
+---
+jupytext:
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.14.1
+kernelspec:
+  display_name: Python 3 (ipykernel)
+  language: python
+  name: python3
+---
+
+# 1.3. Meets and Joins
+
+See also [Join and meet](https://en.wikipedia.org/wiki/Join_and_meet).
+
+*Exercise* 1.80.
+
+1. Because all elements in the set are greater than zero.
+2. Because among the set of all lower bounds, it is the greatest.
+
++++
+
+*Exercise* 1.85.
+
+For `1.`, we have that for all $a \in A$ (only one element) we have $p \leq a$, satisfying the first
+requirement. The second requirement is that for all $q$ such that $q \leq a$ for all $a \in A$, we
+have that $q \leq p$. This requirement allows for other $q$ that are equivalent to $p$.
+
+In `2.` we remove the possibility of equivalent sets of elements  by making the preorder skeletal.
+
+The answer to `3.` is yes.
+
++++
+
+*Exercise* 1.90.
+
+The meet is the greatest common divisor and the join is the least common multiple.
+
++++
+
+*Exercise* 1.94.
+
+There are only two possible worlds to consider; that $a \leq b$ or that $b \leq a$. If the first is
+true, then by the definition of $f$ as a monotone map we have that $a \leq_P b$ implies $f(a) \leq_Q
+f(b)$. This implies the expression $f(a) \vee f(b)$ is equivalent to $f(b)$, which is $\leq$ the
+expression $f(a \vee b) = f(b)$. If the second case ($b \leq a$) is true, then again by the
+definition of a monotone map we have that $b \leq a$ implies $f(b) \leq f(a)$, the left hand
+expression is $f(a)$, and the right hand expression is $f(a \vee b) = f(a)$.

@@ -183,6 +183,18 @@ terms of efficiency:
 - [When (if ever) is a frequentist approach substantively better than a Bayesian? - Cross
   Validated](https://stats.stackexchange.com/questions/194035/when-if-ever-is-a-frequentist-approach-substantively-better-than-a-bayesian)
 
+# TODO-sscb: Should you fork the content of SSC?
+
+It would make coming back to the material later easier (fix errors). That'd make your own answers on
+the topic much cleaner.
+
+Would the authors want to put the source of the book up on GitLab or GitHub so that others can
+suggest edits to the source rather than in a Google Doc? You're also not sure if you're forking an
+old version of the content.
+
+You could get the same effect by simply copying and pasting any updates they make into your own
+build of the pdf. You really only need to copy and paste seven or so files.
+
 # TODO-cycl: How is cyclomatic complexity measured?
 
 Should you set a limit on this in pylint? Right now you ignore all those errors, mostly because you
@@ -190,6 +202,14 @@ don't understand the metric.
 
 Cyclomatic complexity is related to Betti numbers:
 - [Cyclomatic complexity - Wikipedia](https://en.wikipedia.org/wiki/Cyclomatic_complexity#Definition)
+
+# TODO-imprf: How do you automate proofs?
+
+You are bad at proofs (maybe because they are hard, though). You typically start using a result
+(like code) and then only "prove" it (work out the bugs) once you've been using it some time. The
+downside to this approach is that it's not necessary when you're not working with data, but
+definitions. Whenever you're trying to prove something, you should use this list:
+- https://en.wikipedia.org/wiki/Mathematical_proof#Methods_of_proof
 
 # TODO-idb: How does one quickly identify the bottleneck in a computer program?
 
@@ -242,23 +262,7 @@ material as you work (to go along your primary material), and Wikipedia is excel
 For example:
 - https://en.wikipedia.org/wiki/List_of_named_matrices#/media/File:Taxonomy_of_Complex_Matrices.svg
 
-https://en.wikiversity.org/wiki/Introduction_to_Category_Theory
-https://en.wikipedia.org/wiki/Category_( mathematics)#Examples
-https://en.wikibooks.org/wiki/Category_Theory
 https://en.wikipedia.org/wiki/Function_(mathematics)#Other_terms
-https://en.wikipedia.org/wiki/Category_(mathematics)#Examples
-
-Examples of categories:
-- https://en.wikipedia.org/wiki/Category:Categories_in_category_theory
-- https://en.wikipedia.org/wiki/Category_of_sets
-- https://en.wikipedia.org/wiki/Category_of_groups
-- https://en.wikipedia.org/wiki/Category_of_abelian_groups
-- https://en.wikipedia.org/wiki/Functor_category
-
-Distinguish between these slightly different terms:
-- https://en.wikipedia.org/wiki/Homomorphism (morphism i.e. almost category theory)
-- https://en.wikipedia.org/wiki/Homomorphism#Examples
-- https://en.wikipedia.org/wiki/Homeomorphism (topology)
 
 You care about applications to linear algebra:
 - https://en.wikipedia.org/wiki/Linear_map#Algebraic_classifications_of_linear_transformations
@@ -267,14 +271,6 @@ You care about applications to linear algebra:
 
 See all the examples here:
 - https://en.wikipedia.org/wiki/Function_space
-
-You mostly understand free groups, can you tackle other free objects?
-- https://en.wikipedia.org/wiki/Monad_(functional_programming)#Free_monads
-
-Now that you understand homomorphisms, the relationship between morphisms and
-homomorphisms may be more understandable:
-- https://en.wikipedia.org/wiki/Morphism
-- https://en.wikipedia.org/wiki/Homomorphism
 
 Notice the picture of ab = ba on this page:
 - https://en.wikipedia.org/wiki/Commutative_property
@@ -288,27 +284,17 @@ Document how Boolean algebra is a Magma
 You understand homomorphisms for groups now, which is part of category theory:
 - https://en.wikipedia.org/wiki/Fundamental_theorem_on_homomorphisms
 
-Universal property example:
-- https://en.wikipedia.org/wiki/Direct_product_of_groups#Universal_property
-
 In VGT a question went over commutators. Can you understand how they are
 functors?
 - https://en.wikipedia.org/wiki/Commutator_subgroup#Abelianization
-
-Binary operation vs binary relation
-https://en.wikipedia.org/wiki/Binary_operation#Binary_operations_as_ternary_relations
-
-https://www.cs.toronto.edu/~sme/presentations/cat101.pdf
 
 https://math.stackexchange.com/questions/312605/what-is-category-theory-useful-for
 
 https://en.wikipedia.org/wiki/Functional_programming
 https://en.wikipedia.org/wiki/Mathematical_logic
 
-Thought you already had this link:
-https://arxiv.org/pdf/1612.09375.pdf
-
-https://cs.stackexchange.com/questions/3028/is-category-theory-useful-for-learning-functional-programming
+A "Basic category theory" pdf:
+- https://arxiv.org/pdf/1612.09375.pdf
 
 https://en.wikipedia.org/wiki/Dynamic_dispatch
 - Notice the types in this example - dividend and divisor can be matrices,
@@ -319,17 +305,3 @@ https://en.wikipedia.org/wiki/Dynamic_dispatch
   https://docs.python.org/3/library/functools.html#module-functools
 
 https://en.wikipedia.org/wiki/Higher-order_function
-
-## Category theory and design
-
-In any design, draw the category theory diagram first (diagram chasing?) and then think hard about
-the categories of your inputs and outputs. List in? Dict in? Image in? Once these are well defined
-you can use a large math vocabulary to identify what kind of operation you need (e.g. a
-catamorphism) and then you can translate that to the language of functional programming (e.g. Nick
-wanted to use "partition" in a different way based on his math understanding). Large vocab allows
-for a large library of functions you can look up with a web search and then not not need to
-implement yourself. They provide the morphisms, like miniature prebuilt nets.
-
-See also:
-- https://arxiv.org/abs/1803.05316
-- https://www.amazon.com/Invitation-Applied-Category-Theory-Compositionality/dp/1108711820/ref=pd_rhf_d_se_s_bmx_gp_sccl_2_2/146-4077274-9552853?pd_rd_w=ipMxe&content-id=amzn1.sym.a37143c8-fb69-4f07-9e47-0a21fb07ca6d&pf_rd_p=a37143c8-fb69-4f07-9e47-0a21fb07ca6d&pf_rd_r=ZWCW54GJREC3GYW0SH2B&pd_rd_wg=IYx1C&pd_rd_r=eb4b2052-a511-4f6f-b96f-50a5782f0416&pd_rd_i=1108711820&psc=1
