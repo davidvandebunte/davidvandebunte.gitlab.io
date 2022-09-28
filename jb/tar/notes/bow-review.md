@@ -13,7 +13,7 @@ kernelspec:
   name: python3
 ---
 
-# Review: Book of Why
+# Review
 
 The first 8-9 chapters of this book are well-written, and great on an audiobook. Near the end both
 the audiobook and the book fall apart. Judea Pearl provides an errata you can rely on as it gets
