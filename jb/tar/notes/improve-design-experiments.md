@@ -183,6 +183,18 @@ terms of efficiency:
 - [When (if ever) is a frequentist approach substantively better than a Bayesian? - Cross
   Validated](https://stats.stackexchange.com/questions/194035/when-if-ever-is-a-frequentist-approach-substantively-better-than-a-bayesian)
 
+# TODO-sscb: Should you fork the content of SSC?
+
+It would make coming back to the material later easier (fix errors). That'd make your own answers on
+the topic much cleaner.
+
+Would the authors want to put the source of the book up on GitLab or GitHub so that others can
+suggest edits to the source rather than in a Google Doc? You're also not sure if you're forking an
+old version of the content.
+
+You could get the same effect by simply copying and pasting any updates they make into your own
+build of the pdf. You really only need to copy and paste seven or so files.
+
 # TODO-cycl: How is cyclomatic complexity measured?
 
 Should you set a limit on this in pylint? Right now you ignore all those errors, mostly because you
@@ -190,6 +202,14 @@ don't understand the metric.
 
 Cyclomatic complexity is related to Betti numbers:
 - [Cyclomatic complexity - Wikipedia](https://en.wikipedia.org/wiki/Cyclomatic_complexity#Definition)
+
+# TODO-imprf: How do you automate proofs?
+
+You are bad at proofs (maybe because they are hard, though). You typically start using a result
+(like code) and then only "prove" it (work out the bugs) once you've been using it some time. The
+downside to this approach is that it's not necessary when you're not working with data, but
+definitions. Whenever you're trying to prove something, you should use this list:
+- https://en.wikipedia.org/wiki/Mathematical_proof#Methods_of_proof
 
 # TODO-idb: How does one quickly identify the bottleneck in a computer program?
 
