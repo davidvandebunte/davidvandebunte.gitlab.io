@@ -21,16 +21,7 @@ The author likely intends to refer to the appendix.
 
 +++
 
-*Exercise* 1.1. Some terminology: a function $f$ is said to be:
-
-1. *order-preserving* if $x\leq y$ implies $f(x)\leq f(y)$, for all $x,y\in\mathbb{R}$
-1. *metric-preserving* if $|x-y|=|f(x)-f(y)|$;
-1. *addition-preserving* if $f(x+y)=f(x)+f(y)$.
-
-For each of the three properties defined above - call it foo - find an $f$ that is foo-preserving
-and an example of an $f$ that is not foo-preserving.
-
-<hr>
+*Exercise* 1.1.
 
 An order-preserving function, part of the [Category of preordered
 sets](https://en.wikipedia.org/wiki/Category_of_preordered_sets). See also [Order
