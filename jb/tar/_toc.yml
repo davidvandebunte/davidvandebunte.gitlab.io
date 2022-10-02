@@ -14,6 +14,7 @@ parts:
       - file: notes/ssc-what-is-order.md
       - file: notes/ssc-meets-and-joins.md
       - file: notes/ssc-galois-connections.md
+      - file: notes/ssc-symmetric-monoidal-preorders.md
   - caption: Statistical Rethinking
     chapters:
       - file: notes/sr2-review.md
