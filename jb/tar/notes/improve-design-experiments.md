@@ -183,6 +183,33 @@ terms of efficiency:
 - [When (if ever) is a frequentist approach substantively better than a Bayesian? - Cross
   Validated](https://stats.stackexchange.com/questions/194035/when-if-ever-is-a-frequentist-approach-substantively-better-than-a-bayesian)
 
+# TODO-visc: Do visual proofs imply the importance of causality?
+
+Do we learn so much faster with a visual of something because logic is ultimately based on
+causality, and a visual makes it "clear" (faster) how one thing causes another? When you have to
+read, you have to figure out for yourself what the causes are, perhaps by reading a whole paragraph
+or more.
+
+In the same way, a computer program is a much more "compact" (compressed) version of a causal
+diagram (something visual). If you have a visual representation of code, you can "read" it much
+faster.
+
+It seems like you want to prefer natural logic systems to Hilbert style:
+- https://en.wikipedia.org/wiki/Propositional_calculus#Example_2._Natural_deduction_system
+- https://en.wikipedia.org/wiki/Curry%E2%80%93Howard_correspondence#General_formulation
+
+The former (natural) likely fit closer to causual statements that are common to natural language.
+For example, see the counterfactual conditional that starts this topic:
+- https://en.wikipedia.org/wiki/Paradoxes_of_material_implication
+
+In the words of Curry, don't run away from paradoxes.
+
+If you see the human brain as emulating the natural world, then the electrical impulses across
+neurons should roughly correspond to more complicated activity (a compressed version of) what
+happens in the world. This fits causality as being based in local interactions in the physical
+world. We've created computers that emulate the human brain, to some extent, also using electrical
+impulses at the microscopic level.
+
 # TODO-sscb: Should you fork the content of SSC?
 
 It would make coming back to the material later easier (fix errors). That'd make your own answers on
@@ -195,6 +222,13 @@ old version of the content.
 You could get the same effect by simply copying and pasting any updates they make into your own
 build of the pdf. You really only need to copy and paste seven or so files.
 
+# TODO-cuhc: What is a short summary of the Curry-Howard Correspondence?
+
+See:
+- https://duckduckgo.com/?q=curry+howard+correspondence&t=newext&atb=v310-1&ia=web
+- https://courses.cs.cornell.edu/cs3110/2021sp/textbook/adv/curry-howard.html
+- https://cs3110.github.io/textbook/chapters/adv/curry-howard.html
+
 # TODO-cycl: How is cyclomatic complexity measured?
 
 Should you set a limit on this in pylint? Right now you ignore all those errors, mostly because you
@@ -203,13 +237,65 @@ don't understand the metric.
 Cyclomatic complexity is related to Betti numbers:
 - [Cyclomatic complexity - Wikipedia](https://en.wikipedia.org/wiki/Cyclomatic_complexity#Definition)
 
-# TODO-imprf: How do you automate proofs?
+# TODO-prit: How do you prove it?
 
 You are bad at proofs (maybe because they are hard, though). You typically start using a result
 (like code) and then only "prove" it (work out the bugs) once you've been using it some time. The
 downside to this approach is that it's not necessary when you're not working with data, but
 definitions. Whenever you're trying to prove something, you should use this list:
 - https://en.wikipedia.org/wiki/Mathematical_proof#Methods_of_proof
+
+You've avoided proofs (and math) in the past because you feel like all you're doing is symbol
+manipulation, looking for just the right symbols to come together (solving the word problem by
+simple exploration). A computer should be able to quickly present to you all the deductions you can
+come up with from certain facts, it seems. Is the issue that humans typically don't provide it with
+enough facts? We have a lot of knowledge we could forget to share. See also:
+- https://en.wikipedia.org/wiki/Proof_(truth)
+- https://en.wikipedia.org/wiki/Proof_assistant
+- https://en.wikipedia.org/wiki/Interactive_proof_system
+- https://en.wikipedia.org/wiki/Curry%E2%80%93Howard_correspondence
+- https://github.com/coq/coq
+- https://en.wikipedia.org/wiki/Automated_theorem_proving
+- https://paperswithcode.com/task/automated-theorem-proving
+- https://en.wikipedia.org/wiki/Proof_theory
+- https://en.wikipedia.org/wiki/Proof_calculus
+
+Does SymPy provide anything to automate this? No, it looks like it's unrelated.
+
+Notice the curry-howard correspondence has huge implications to how you take notes; you design your
+`.md` files to be functions. Generally speaking you should refine them so that they all "prove"
+something even if only probabilistically (see `!w Bayesian logic`).
+
+Consider this list of which tools have formalized which of many famous theorems to decide which to
+work with. You can also use this list as a way to learn how to do a proof with relevant examples
+(e.g. whatever proofs or topics you are currently learning about):
+- https://www.cs.ru.nl/~freek/100/
+- https://web.archive.org/web/20080105074243/http://personal.stevens.edu/~nkahl/Top100Theorems.html
+
+You should probably start by reviewing propositional calculus, the basis for other logical calculi:
+- https://en.wikipedia.org/wiki/Propositional_calculus
+- https://en.wikipedia.org/wiki/Propositional_calculus#Basic_and_derived_argument_forms
+
+A proof is the process of building a function; we always start from what we know and start this
+search process in the direction of where we think we may find value. You can take your premises and
+randomly combine them to try to discover something new, or take specific premises and combine them
+through educated guesses to try to go in a specific direction of a desired result. A proof is not
+just the process of creating many more true statements (propositions) from old ones; it's about
+generating *valuable* propositions (reusable, achieve human needs). In fact, you should prefer the
+term "operator" to "function" for this purpose; see [Operator (mathematics) -
+Wikipedia](https://en.wikipedia.org/wiki/Operator_(mathematics)). Or should you not? At some point
+you need to be recursive and say either a function that takes a function or an operator that takes
+an operator.
+
+This search was particularly interesting with respect to Execise 2.45, part `2.`. You had to guess
+(as hypotheses) different kinds of functions: addition, polynomial, exponentiation, constant,
+piecewise, etc. In some sense there's creativity here; in another sense you're simply going through
+a list of potential functions (perhaps only those you know). You could see the requirements (of a
+monoidal monotone, in this case) as your constraints or in general a list of relations that must
+hold (like a list of images when training a net). If a neural network can approximate any function,
+how well does it approximate an exponential function? It was the answer here. See also:
+- [Hyperbolic growth](https://en.wikipedia.org/wiki/Hyperbolic_growth)
+- [Rectifier (neural networks)](https://en.wikipedia.org/wiki/Rectifier_(neural_networks))
 
 # TODO-idb: How does one quickly identify the bottleneck in a computer program?
 
@@ -272,13 +358,6 @@ You care about applications to linear algebra:
 See all the examples here:
 - https://en.wikipedia.org/wiki/Function_space
 
-Notice the picture of ab = ba on this page:
-- https://en.wikipedia.org/wiki/Commutative_property
-
-This is the same way that commutativity is described visually in VGT. It's the
-same pattern you see in commutative diagrams as well:
-- https://en.wikipedia.org/wiki/Commutative_diagram
-
 Document how Boolean algebra is a Magma
 
 You understand homomorphisms for groups now, which is part of category theory:
@@ -305,3 +384,36 @@ https://en.wikipedia.org/wiki/Dynamic_dispatch
   https://docs.python.org/3/library/functools.html#module-functools
 
 https://en.wikipedia.org/wiki/Higher-order_function
+
+# TODO-ctca: How do category theory and order theory relate to causality?
+
+See [Causality](https://en.wikipedia.org/wiki/Causality). One could see the lack of preservation of
+joins and meets as a way of losing history in causal DAGs. For example, if you have the number 12
+you can't say for sure if it was generated by 6 * 2 or 3 * 4.
+
+# TODO-cbow: Is composition a binary operation?
+
+See [Binary operation](https://en.wikipedia.org/wiki/Binary_operation), where it clearly seems to be
+one. That is, you should be able to see $\circ$ as a binary operation just like $\ast$ and $+$.
+
+However, the page [Function composition -
+Wikipedia](https://en.wikipedia.org/wiki/Function_composition) makes no link to this other article,
+except at the very bottom where the article is listed under the "Binary operations" category:
+- https://en.wikipedia.org/wiki/Category:Binary_operations
+
+# TODO-cmmd: How do you simply describe commutative diagrams?
+
+Notice the picture of ab = ba on this page:
+- https://en.wikipedia.org/wiki/Commutative_property
+
+This is the same way that commutativity is described visually in VGT. It's the
+same pattern you see in commutative diagrams as well:
+- https://en.wikipedia.org/wiki/Commutative_diagram
+
+A similar simple example of a commutative diagram exists on this page:
+- https://en.wikipedia.org/wiki/Associative_property
+
+See also simple examples of inversion here:
+- https://mathworld.wolfram.com/CommutativeDiagram.html
+
+Perhaps some of these simpler examples should be added under "Examples" on the Wikipedia page.
