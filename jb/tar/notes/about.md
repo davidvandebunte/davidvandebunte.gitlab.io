@@ -15,6 +15,10 @@ annotating](https://jupyterbook.org/en/stable/interactive/comments.html) that ar
 this book to avoid spam. If you'd like to make a comment use the "share" button on your device and
 email me at davidvandebunte at Google's mail. I'm always grateful for feedback, including questions.
 
+Please add suggestions to [Suggestions: Executable Notes - Google
+Docs](https://docs.google.com/document/d/1K7rpdT1A84U5z5p_cg9eG6R25as6ty09REUTJLYO0YI/edit) if you'd
+like to remain anonymous, keep your email private, or are not interested in follow-up questions.
+
 ## Content license
 
 [gplv3]: https://www.gnu.org/licenses/gpl-3.0.html
