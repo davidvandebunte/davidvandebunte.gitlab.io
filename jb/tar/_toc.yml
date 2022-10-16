@@ -4,9 +4,6 @@
 format: jb-book
 root: notes/about
 parts:
-  - caption: Book of Why
-    chapters:
-      - file: notes/bow-review.md
   - caption: Seven Sketches
     chapters:
       - file: notes/review-seven-sketches.md
@@ -28,13 +25,16 @@ parts:
       - file: notes/practice-14.md
       - file: notes/practice-15.md
       - file: notes/practice-16.md
-  - caption: Visual Group Theory
-    chapters:
-      - file: notes/chp8-q32.md
   - caption: Stack Exchange
     chapters:
       - file: notes/se/relationship-between-svd-and-pca.md
       - file: notes/se/what-exactly-are-keys-queries-and-values.md
+  - caption: Visual Group Theory
+    chapters:
+      - file: notes/chp8-q32.md
+  - caption: Book of Why
+    chapters:
+      - file: notes/bow-review.md
   - caption: Memoize
     chapters:
       - file: notes/memoize-artifact.md
