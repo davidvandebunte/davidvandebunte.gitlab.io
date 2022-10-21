@@ -32,7 +32,7 @@ Any of your personal or public repositories:
 - https://github.com/davidvandebunte
 % - https://main.gitlab.in.here.com/vandebun
 
-If you feel uncertain about what your non-split options are, consider:
+If you feel uncertain about what your non-split options are, consider these DuckDuck bangs:
 - `!glab`
 - `!gh`
 
@@ -60,7 +60,9 @@ for code that has nearly zero special dependencies. For example:
 Search. You can expect `git grep` and `git log -G` to slow down as the size of a repository
 increases. What if you limit your search to a directory, though?
 
-Pulls. How long does it take to pull the repository to a new developer's machine?
+Pulls. How long does it take to pull the repository to a new developer's machine? If your `.git`
+directory is large, then it will take a long time. The more repos you merge (the bigger your
+monorepo), the slower this gets. So you have to take more time to think about keeping history small.
 
 See also "VCS Scalability" in [Monorepos: Please don’t!][mpdn], "Tooling" in [Multirepo vs
 Monorepo][mvm], and "Scalability Challenges" in `!w Monorepo`.
@@ -74,15 +76,7 @@ without splitting repositories; instead fork the public repository and create a 
 repository to push to.
 
 The downside is if you are regularly using your fork/branch, you'll be constantly rebasing that code
-on the upstream until it is merged. To reduce this pain, you can add one of these tags to the front
-of commits you want to keep on your branch:
-- `wip:`
-- `temp:`
-- `exp:`
-- `hack:`
-
-Alternatively, write commits you know you will need to move to the public branch using whatever
-standard you use on the public branch (e.g. starting with a filename).
+on the upstream until it is merged.
 
 ## Cost
 
@@ -102,6 +96,7 @@ is much less effective and flexible than `git grep` (even if you know which site
 [mf]: https://martinfowler.com/bliki/MonolithFirst.html
 
 Said another way, it's difficult to iterate quickly on a set of manyrepo (cost to feedback speed).
+This point is made in many ways in [Monorepo Explained](https://monorepo.tools/).
 
 In general, modularizing code has a cost. Even refactoring code takes time, and you shouldn't do it
 earlier than you need to. Slightly larger costs include even defining a simple API (such as an
@@ -114,13 +109,26 @@ See also [Strong Module Boundaries][smb] and its discussions of [MonolithFirst][
 repositories often means a split into separate microservices. Consider the [MicroservicePremium][mp]
 specifically as well.
 
+Wikipedia is a great example of how you can avoid splitting your thoughts (it's similar to a
+monorepo of notes) and still work on the public side of the line; the downside is how it can be hard
+to contribute to because it has so many "conceptual" dependencies.
+
 ### Cross-Project CI/CD
 
 [mmm]: https://notes.burke.libbey.me/metarepo/
 
 See "Tooling" in [Monorepo, Manyrepo, Metarepo][mmm] and [Advantages of monorepos][aom]. An
-unmentioned advantage is the manyrepo approach potentially lets you use only git rather than the
+unmentioned advantage to the monorepo approach potentially lets you use only git rather than the
 cross-project options offered by GitLab and GitHub (tying you to their platforms).
+
+For example, let's say you wanted to enforce a code formatting standard. It's quite easy to set up a
+CI/CD pipeline that enforces coding standards because docker images with these tools are readily
+available. In practice it doesn't happen because no one wants to set this up 10 times for many small
+repositories, or figure out how to deduplicate `.gitlab-ci.yml` content (and still call the same
+content in 10 places).
+
+Worse, one team (thinking of a person, actually) wants to use `yapf`. Another wants to use `black`.
+They have separate repositories so they can have their own code formatting standard.
 
 ### Simpler Reorganization
 
@@ -138,14 +146,6 @@ See [Monorepo: please do!][mpd].
 
 If you only have one or a few repos, it's much easier to review all the commits that one person or
 the team did in a sprint.
-
-## Training Data
-
-### Wikipedia
-
-Wikipedia is a great example of how you can avoid splitting your thoughts (it's similar to a
-monorepo of notes) and still work on the public side of the line; the downside is how it can be hard
-to contribute to because it has so many "conceptual" dependencies.
 
 % ### vim
 
