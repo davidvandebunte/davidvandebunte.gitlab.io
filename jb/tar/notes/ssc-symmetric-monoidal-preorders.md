@@ -13,8 +13,6 @@ kernelspec:
 
 # 2.2. Symmetric monoidal preorders
 
-See also [Enriched category](https://en.wikipedia.org/wiki/Enriched_category).
-
 ## 2.2.1. Definition and first examples
 
 $$
