@@ -23,7 +23,9 @@ $$
 ## 2.3.1. $\mathcal{V}$-categories
 
 A $\cat{V}$-category is a generalization of a category, see [Enriched
-category](https://en.wikipedia.org/wiki/Enriched_category).
+category](https://en.wikipedia.org/wiki/Enriched_category). You can also see enrichment in this
+context as simply labeling the edges of a graph; the *hom-object* is a record of the labels.
+However, this labelling has to be done in a way that respects e.g. the triangle equality.
 
 ## 2.3.2. Preorders as Bool-categories
 
@@ -99,6 +101,18 @@ def prove_v_category(df, mon_prod, preorder_rel):
 
 ![x](./ssc-exercise-2-61.svg)
 
+One way to interpret this is as a preorder that allows for uncertainty in whether two items are
+related. While we are confident that C ≤ B, and that A ≰ B, we are making no claims about whether A
+"covers" B or C.
+
+The first property requires that the diagonal be Y:
+
+$$
+I = yes \leq n(x,x)
+$$
+
+Checking the second property by brute force:
+
 ```{code-cell}
 mdf = pd.DataFrame(
     index=range(3), columns=range(3),
@@ -107,9 +121,19 @@ display(mdf)
 prove_v_category(mdf, min, lambda x,y: x <= y)
 ```
 
++++
+
 *Exercise* 2.62.
 
 ![x](./ssc-exercise-2-62.svg)
+
+The first property requires that the diagonal be {car, boat, foot}:
+
+$$
+I = M = \{car, boat, foot\} \subseteq n(x,x)
+$$
+
+We can check the matrix is an $\mathcal{M}$-category by brute force:
 
 ```{code-cell}
 cbf = set([0,1,2])
@@ -124,7 +148,39 @@ display(sdf)
 prove_v_category(sdf, set.intersection, lambda x,y: x <= y)
 ```
 
+To get a little more intuitive feel, consider the second required property of an
+$\mathcal{M}$-category:
+
+$$
+n(x,y) ∩ n(y,z) \subseteq n(x,z)
+$$
+
+For paths that are only two edges long, you can interpret this as the instructions to:
+
+> take the intersection of the sets labelling the edges in *p*.
+
+For longer paths, you can see this as considering all possible intermediates *y* between *x* and *z*
+where *y* must be precomputed. For this to be true for all intermediates (all *y*) we must:
+
+> take the union of these sets over all paths *p* from *x* to *y*.
+
+Larger sets indicate two nodes are "more connected" but in a boolean sense for every element in the
+set. You could use a graph like this to communicate there are multiple ways to solve a problem as
+well.
+
++++
+
 *Exercise* 2.63.
+
+![x](./ssc-exercise-2-63.svg)
+
+The first property requires that the diagonal be ∞:
+
+$$
+I = ∞ \leq n(x,x)
+$$
+
+Checking the second property by brute force:
 
 ```{code-cell}
 inf = float("inf")
@@ -135,3 +191,31 @@ wdf = pd.DataFrame(
 display(wdf)
 prove_v_category(sdf, min, lambda x,y: x <= y)
 ```
+
+The required second property (with min replaced by ∧):
+
+$$
+n(x,y) ∧ n(y,z) \leq n(x,z)
+$$
+
+For paths that are only two edges long, you can interpret this as the instructions to take the:
+
+> *minimum* edge label in *p*.
+
+For longer paths, you can see this as considering all possible intermediates *y* between *x* and *z*
+where *y* must be precomputed. For this to be true for all intermediates (all *y*) we must take the:
+
+> *maximum* over all paths *p*
+
+You could see enrichment in $\mathcal{W}$ as the opposite of enrichment in **Cost**. In this
+scenario, higher numbers mean two elements are actually *more* rather than less connected. The
+**NMY** and **Bool** enrichments could be seen as special cases of this kind of enrichment, with
+only three and two levels of connectedness respectively (in contrast to an infinite number of
+levels).
+
+If you saw the graph as editable (as in a neural network) or at least "editable" in the sense you
+can turn off connections by setting them to zero, then you could see these levels of connectedness
+as network weights. In some design contexts (e.g. Transformer models) the opposite concept
+(distance) is used, and the network structure is optimized to minimize distance between key nodes.
+One could use the number of edges as a distance as well (assign each a value of one) if network
+weights haven't been assigned yet.
