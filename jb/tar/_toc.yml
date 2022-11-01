@@ -13,6 +13,7 @@ parts:
       - file: notes/ssc-galois-connections.md
       - file: notes/ssc-symmetric-monoidal-preorders.md
       - file: notes/ssc-enrichment.md
+      - file: notes/ssc-constructions-on-v-categories.md
   - caption: Statistical Rethinking
     chapters:
       - file: notes/sr2-review.md
