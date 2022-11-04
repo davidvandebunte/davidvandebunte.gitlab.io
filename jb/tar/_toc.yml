@@ -14,6 +14,7 @@ parts:
       - file: notes/ssc-symmetric-monoidal-preorders.md
       - file: notes/ssc-enrichment.md
       - file: notes/ssc-constructions-on-v-categories.md
+      - file: notes/ssc-computing-presented.md
   - caption: Statistical Rethinking
     chapters:
       - file: notes/sr2-review.md
