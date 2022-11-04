@@ -77,13 +77,18 @@ See ["Observation preserves order but not join" in Applied Category Theory book 
 SE](https://math.stackexchange.com/questions/3290331) for valuable commentary on section `1.1.2`.
 
 [botr]: https://en.wikipedia.org/wiki/Binary_operation#Binary_operations_as_ternary_relations
+[binr]: https://en.wikipedia.org/wiki/Binary_relation
 
 For non-mathematicians this section in particular fails to address the (simple) difference between a
-[Binary relation](https://en.wikipedia.org/wiki/Binary_relation) and a [Binary operation](
-https://en.wikipedia.org/wiki/Binary_operation). Operations are convertible to relations (see
-[Binary operations as ternary relations][botr]) but are in no way the same. As pointed out in a
-comment by John Baez on the Math SE question referenced above, what it means for each to preserve
-structure is rather different.
+[Binary relation][binr] and a [Binary operation](https://en.wikipedia.org/wiki/Binary_operation).
+Operations are convertible to relations (see [Binary operations as ternary relations][botr]) but are
+in no way the same. As pointed out in a comment by John Baez on the Math SE question referenced
+above, what it means for each to preserve structure is rather different.
+
+If you do end up reading through those Wikipedia articles, notice that the [Relation (mathematics)](
+https://en.wikipedia.org/wiki/Relation_(mathematics)) article was started as a copy of the [Binary
+relation][binr] article. Please continue to improve the former article, and be understanding of the
+situation if you decide to read much from it.
 
 [mc]: https://en.wikipedia.org/wiki/Material_conditional
 [lbc]: https://en.wikipedia.org/wiki/Logical_biconditional

@@ -11,7 +11,7 @@ kernelspec:
   name: python3
 ---
 
-# 2.4. Constructions on $\mathcal{V}$-categories
+# 2.4. Constructions on V-categories
 
 $$
 \newcommand{\cat}[1]{\mathcal{#1}} % a generic category

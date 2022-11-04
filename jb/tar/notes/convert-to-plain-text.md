@@ -91,6 +91,8 @@ for tips on setting up various editors to work on Wikipedia articles. This artic
 "GhostText" as a general solution for editing online content in plain text, though this solution
 requires a server running in your text editor.
 
+% TODO: Link to `share-to-wikimedia.md`?
+
 ### Convert emails to plain text
 
 All notes are TODo, even emails-to-self. They are all *begging* to be read. For example, if they're
