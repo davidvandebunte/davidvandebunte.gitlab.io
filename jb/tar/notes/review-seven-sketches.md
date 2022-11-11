@@ -116,8 +116,10 @@ renders as expected. Keep a marker in your notes showing up to which question yo
 up to which you've checked (your rendered version, not .md file) against the appendix. To mark where
 you've read, simply add headings and comments on the material.
 
-Use your 1st monitor for Firefox, 2nd for `zathura`, and 3rd/4th for either plain text notes or
-Inkscape. See also Google Doc "Organized seven sketches errata" with miscellaneous comments.
+When you're writing detailed answers, use your 1st monitor for Firefox, 2nd for `zathura`, and
+3rd/4th for either plain text notes or Inkscape. When you're producing general answers, put a
+different `zathura` instance on all three screens. See also Google Doc "Organized seven sketches
+errata" with miscellaneous comments.
 
 % https://docs.google.com/document/d/1HC_BRM2deHxS7FiIto2bfrM81grKu8vDiI-JgCY5eXU/edit
 
