@@ -230,4 +230,43 @@ In order of cost.
 
 ### [Select License](./select-license.md)
 
+### Avoid indirection
+
+On stack exchange sites, a "link" answer is generally not encouraged. On Wikipedia, you should not
+be referencing your own content. In Confluence (another wiki) users often aren't prepared to follow
+a link to an unfamiliar format. Many users want to see results directly in JIRA rather than
+following yet another link.
+
+In all these scenarios, use the visual editor of the tool (Wikipedia, Confluence, JIRA, etc.) to
+copy and paste in content from Jupyter Book. Surprisingly, this works quite well if you know
+beforehand to limit the richness of your content.
+
+In this context to make the copy/paste safer you'll generally want to use Unicode rather than math
+mode, include SVGs regularly rather than with the `<object>` tag, and keep extra minor edits only at
+the top or bottom of the pasted content.
+
+For the specific case of web links, put them *both* (the one pointing to the source, and the one
+pointing to the copy) at the bottom of the content to avoid distracting from it. If you read all
+your own notes so you'll see you need to worry about a double link even if it's at the bottom.
+
+Ideally you can even avoid double linking; as long as you remember the source (your own notes) there
+may be no need for a link back that you might potentially break and may have little extra detail
+(it's a form of compression to skip this link). In fact, if you don't link back you could "doubly"
+publish to the alternative medium (e.g. JIRA) before publishing to your own format (your own format
+would be the second to be published). There's really no source or copy when you are copy once you're
+done double publishing; and it's only when you put up the second copy that you need to do linking on
+both ends. If you were to add a third copy, then you might want to think about a master (to avoid
+two links out in each, or 6x linking).
+
+Still, it can be worth linking if there's a lot of content or you want to advertise the source. Are
+there enough details in the link to make it worth anyone digging into? Is whoever you are publishing
+to the type to go digging into them?
+
+If you want to double publish/link, you can't push up a comment saying that you doubly published
+before you have actually done so (because you need to first publish the content to html to link to
+it, and you may forget to do so). Instead first publish to html, then only later (once the content
+is up) do the actual double publish. Finally, add a link in your own notes about the double publish
+(so it will show up in a separate commit). It's a three step process, but is manageable if you need
+to do it.
+
 % TODO: improve-share-notes.md
