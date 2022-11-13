@@ -15,6 +15,8 @@ parts:
       - file: notes/ssc-enrichment.md
       - file: notes/ssc-constructions-on-v-categories.md
       - file: notes/ssc-computing-presented.md
+      - file: notes/ssc-what-is-a-database.md
+      - file: notes/ssc-categories.md
   - caption: Statistical Rethinking
     chapters:
       - file: notes/sr2-review.md
