@@ -17,6 +17,7 @@ parts:
       - file: notes/ssc-computing-presented.md
       - file: notes/ssc-what-is-a-database.md
       - file: notes/ssc-categories.md
+      - file: notes/ssc-functors-nt.md
   - caption: Statistical Rethinking
     chapters:
       - file: notes/sr2-review.md
