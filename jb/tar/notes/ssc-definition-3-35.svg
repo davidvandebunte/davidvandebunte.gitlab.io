@@ -1,0 +1,1329 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="335mm"
+   viewBox="0 0 210 335"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2 (1:1.2.1+202207142221+cd75a1ee6d)"
+   sodipodi:docname="ssc-definition-3-35.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.1893044"
+     inkscape:cx="317.83284"
+     inkscape:cy="387.62154"
+     inkscape:window-width="1440"
+     inkscape:window-height="2523"
+     inkscape:window-x="2880"
+     inkscape:window-y="2270"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <marker
+       style="overflow:visible"
+       id="marker9420_Fnone_S-000000"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="TriangleStart"
+       markerWidth="5.3244081"
+       markerHeight="6.155385"
+       viewBox="0 0 5.3244081 6.1553851"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path11923" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker5773_Fnone_S-800000"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="TriangleStart"
+       markerWidth="5.3244081"
+       markerHeight="6.155385"
+       viewBox="0 0 5.3244081 6.1553851"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:#800000;fill-rule:evenodd;stroke:#800000;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path11929" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker5773_Fnone_S-000080"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="TriangleStart"
+       markerWidth="5.3244081"
+       markerHeight="6.155385"
+       viewBox="0 0 5.3244081 6.1553851"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:#000080;fill-rule:evenodd;stroke:#000080;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path11926" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="TriangleStart_Fnone_S-800000"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="TriangleStart"
+       markerWidth="5.3244081"
+       markerHeight="6.155385"
+       viewBox="0 0 5.3244081 6.1553851"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:#800000;fill-rule:evenodd;stroke:#800000;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path11938" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="TriangleStart_Fnone_S-000080"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="TriangleStart"
+       markerWidth="5.3244081"
+       markerHeight="6.155385"
+       viewBox="0 0 5.3244081 6.1553851"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:#000080;fill-rule:evenodd;stroke:#000080;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path11935" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="TriangleStart_Fnone_S-000000"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="TriangleStart"
+       markerWidth="5.3244081"
+       markerHeight="6.155385"
+       viewBox="0 0 5.3244081 6.1553851"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path11932" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <circle
+       style="fill:#000000;stroke:#000000;stroke-width:0.499999;stop-color:#000000"
+       id="path1270"
+       cx="90"
+       cy="36"
+       r="1" />
+    <circle
+       style="fill:#000000;stroke:#000000;stroke-width:0.499999;stop-color:#000000"
+       id="circle1430"
+       cx="90"
+       cy="56"
+       r="1" />
+    <circle
+       style="fill:#000000;stroke:#000000;stroke-width:0.499999;stop-color:#000000"
+       id="circle1432"
+       cx="90"
+       cy="76"
+       r="1" />
+    <path
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleStart_Fnone_S-000000);stop-color:#000000;stop-opacity:1"
+       d="M 90,39 V 52"
+       id="path1497"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleStart_Fnone_S-000000);stop-color:#000000;stop-opacity:1"
+       d="M 90,59 V 72"
+       id="path2576"
+       sodipodi:nodetypes="cc" />
+    <circle
+       style="fill:#000000;stroke:#000000;stroke-width:0.499999;stop-color:#000000"
+       id="circle2582"
+       cx="120"
+       cy="36"
+       r="1" />
+    <circle
+       style="fill:#000000;stroke:#000000;stroke-width:0.499999;stop-color:#000000"
+       id="circle2584"
+       cx="120"
+       cy="56"
+       r="1" />
+    <circle
+       style="fill:#000000;stroke:#000000;stroke-width:0.499999;stop-color:#000000"
+       id="circle2586"
+       cx="120"
+       cy="76"
+       r="1" />
+    <path
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleStart_Fnone_S-000000);stop-color:#000000;stop-opacity:1"
+       d="M 120,39 V 52"
+       id="path2588"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleStart_Fnone_S-000000);stop-color:#000000;stop-opacity:1"
+       d="M 120,59 V 72"
+       id="path2590"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;stop-color:#000000"
+       x="84"
+       y="59"
+       id="text2648"><tspan
+         sodipodi:role="line"
+         id="tspan2646"
+         style="stroke-width:3.77952"
+         x="84"
+         y="59">c₂</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;-inkscape-stroke:none;stop-color:#000000"
+       x="84"
+       y="79"
+       id="text2652"><tspan
+         sodipodi:role="line"
+         id="tspan2650"
+         style="stroke-width:3.77952"
+         x="84"
+         y="79">c₃</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;-inkscape-stroke:none;stop-color:#000000"
+       x="85"
+       y="39"
+       id="text2656"><tspan
+         sodipodi:role="line"
+         id="tspan2654"
+         style="stroke-width:3.77952"
+         x="85"
+         y="39">c</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;-inkscape-stroke:none;stop-color:#000000"
+       x="91"
+       y="47"
+       id="text2718"><tspan
+         sodipodi:role="line"
+         id="tspan2716"
+         style="stroke-width:3.77952"
+         x="91"
+         y="47">f</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;-inkscape-stroke:none;stop-color:#000000"
+       x="91"
+       y="67"
+       id="text2722"><tspan
+         sodipodi:role="line"
+         id="tspan2720"
+         style="stroke-width:3.77952"
+         x="91"
+         y="67">g</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;-inkscape-stroke:none;stop-color:#000000"
+       x="121"
+       y="47"
+       id="text2726"><tspan
+         sodipodi:role="line"
+         id="tspan2724"
+         style="stroke-width:3.77952"
+         x="121"
+         y="47">F(f)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;-inkscape-stroke:none;stop-color:#000000"
+       x="121"
+       y="67"
+       id="text2730"><tspan
+         sodipodi:role="line"
+         id="tspan2728"
+         style="stroke-width:3.77952"
+         x="121"
+         y="67">F(g)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;-inkscape-stroke:none;stop-color:#000000"
+       x="109"
+       y="40"
+       id="text2734"><tspan
+         sodipodi:role="line"
+         id="tspan2732"
+         style="stroke-width:3.77952"
+         x="109"
+         y="40">F(c)</tspan></text>
+    <path
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleStart_Fnone_S-000000);stop-color:#000000;stop-opacity:1"
+       d="m 91,33.775537 4.02004,-7 h -9.894491 l 2.874451,6"
+       id="path2740"
+       sodipodi:nodetypes="cccc" />
+    <text
+       xml:space="preserve"
+       style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;-inkscape-stroke:none;stop-color:#000000"
+       x="87"
+       y="24"
+       id="text2754"><tspan
+         sodipodi:role="line"
+         id="tspan2752"
+         style="stroke-width:3.77952"
+         x="87"
+         y="24">id<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan2750">c</tspan></tspan></text>
+    <path
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleStart_Fnone_S-000000);stop-color:#000000;stop-opacity:1"
+       d="m 121,33.775537 4.02004,-7 h -9.89449 l 2.87445,6"
+       id="path2758"
+       sodipodi:nodetypes="cccc" />
+    <text
+       xml:space="preserve"
+       style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;stop-color:#000000"
+       x="106"
+       y="24"
+       id="text2764"><tspan
+         sodipodi:role="line"
+         id="tspan2762"
+         style="stroke-width:3.77952"
+         x="106"
+         y="24">id<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan2768">F(c) </tspan>=<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan2774"> </tspan>F(id<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan2770">c</tspan>)</tspan></text>
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000080;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;marker-end:url(#marker5773_Fnone_S-000080);stop-color:#000000;stop-opacity:1"
+       d="m 92.38976,75.832707 h 24"
+       id="path3536"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000080;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1, 0.5;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleStart_Fnone_S-000080);stop-color:#000000;stop-opacity:1"
+       d="m 95.38976,30.832707 h 18"
+       id="path3542"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000080;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1, 0.5;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleStart_Fnone_S-000080);stop-color:#000000;stop-opacity:1"
+       d="m 94.38976,45.832707 h 22"
+       id="path4292"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000080;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1, 0.5;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleStart_Fnone_S-000080);stop-color:#000000;stop-opacity:1"
+       d="m 94.38976,65.832707 h 22"
+       id="path4296"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleStart_Fnone_S-000000);stop-color:#000000;stop-opacity:1"
+       d="M 121.93749,37.446419 132,41 v 29.262274 l -8.56449,3.956836"
+       id="path5314"
+       sodipodi:nodetypes="cccc" />
+    <text
+       xml:space="preserve"
+       style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;-inkscape-stroke:none;stop-color:#000000"
+       x="134"
+       y="57"
+       id="text5324"><tspan
+         sodipodi:role="line"
+         id="tspan5322"
+         style="stroke-width:3.77952"
+         x="134"
+         y="57">F(f⨾g)</tspan></text>
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000080;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;marker-end:url(#marker5773_Fnone_S-000080);stop-color:#000000;stop-opacity:1"
+       d="m 92.38976,55.832707 h 24"
+       id="path6312"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000080;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;marker-end:url(#marker5773_Fnone_S-000080);stop-color:#000000;stop-opacity:1"
+       d="m 92.38976,35.832707 h 24"
+       id="path6318"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;stop-color:#000000"
+       x="48"
+       y="53"
+       id="text6530"><tspan
+         sodipodi:role="line"
+         id="tspan6528"
+         style="stroke-width:3.77952"
+         x="48"
+         y="53">Iterate through</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:3.77952"
+         x="48"
+         y="57.999989"
+         id="tspan6532">c₂ anchors</tspan></text>
+    <circle
+       style="fill:#000000;stroke:#000000;stroke-width:0.499999;stop-color:#000000"
+       id="circle6611"
+       cx="90"
+       cy="120"
+       r="1" />
+    <circle
+       style="fill:#000000;stroke:#000000;stroke-width:0.499999;stop-color:#000000"
+       id="circle6613"
+       cx="90"
+       cy="140"
+       r="1" />
+    <circle
+       style="fill:#000000;stroke:#000000;stroke-width:0.499999;stop-color:#000000"
+       id="circle6615"
+       cx="90"
+       cy="160"
+       r="1" />
+    <path
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleStart_Fnone_S-000000);stop-color:#000000;stop-opacity:1"
+       d="m 90,123 v 13"
+       id="path6617"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleStart_Fnone_S-000000);stop-color:#000000;stop-opacity:1"
+       d="m 90,143 v 13"
+       id="path6619"
+       sodipodi:nodetypes="cc" />
+    <circle
+       style="fill:#000000;stroke:#000000;stroke-width:0.499999;stop-color:#000000"
+       id="circle6621"
+       cx="120"
+       cy="120"
+       r="1" />
+    <circle
+       style="fill:#000000;stroke:#000000;stroke-width:0.499999;stop-color:#000000"
+       id="circle6623"
+       cx="120"
+       cy="140"
+       r="1" />
+    <circle
+       style="fill:#000000;stroke:#000000;stroke-width:0.499999;stop-color:#000000"
+       id="circle6625"
+       cx="120"
+       cy="160"
+       r="1" />
+    <path
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleStart_Fnone_S-000000);stop-color:#000000;stop-opacity:1"
+       d="m 120,137.77554 v -13"
+       id="path6627"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleStart_Fnone_S-000000);stop-color:#000000;stop-opacity:1"
+       d="m 120,157.77554 v -13"
+       id="path6629"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;stop-color:#000000"
+       x="84"
+       y="143"
+       id="text6633"><tspan
+         sodipodi:role="line"
+         id="tspan6631"
+         style="stroke-width:3.77952"
+         x="84"
+         y="143">c₂</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;-inkscape-stroke:none;stop-color:#000000"
+       x="84"
+       y="163"
+       id="text6637"><tspan
+         sodipodi:role="line"
+         id="tspan6635"
+         style="stroke-width:3.77952"
+         x="84"
+         y="163">c₃</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;-inkscape-stroke:none;stop-color:#000000"
+       x="85"
+       y="123"
+       id="text6641"><tspan
+         sodipodi:role="line"
+         id="tspan6639"
+         style="stroke-width:3.77952"
+         x="85"
+         y="123">c</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;-inkscape-stroke:none;stop-color:#000000"
+       x="91"
+       y="131"
+       id="text6645"><tspan
+         sodipodi:role="line"
+         id="tspan6643"
+         style="stroke-width:3.77952"
+         x="91"
+         y="131">f</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;-inkscape-stroke:none;stop-color:#000000"
+       x="91"
+       y="151"
+       id="text6649"><tspan
+         sodipodi:role="line"
+         id="tspan6647"
+         style="stroke-width:3.77952"
+         x="91"
+         y="151">g</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;-inkscape-stroke:none;stop-color:#000000"
+       x="121"
+       y="131"
+       id="text6653"><tspan
+         sodipodi:role="line"
+         id="tspan6651"
+         style="stroke-width:3.77952"
+         x="121"
+         y="131">F(f)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;-inkscape-stroke:none;stop-color:#000000"
+       x="121"
+       y="151"
+       id="text6657"><tspan
+         sodipodi:role="line"
+         id="tspan6655"
+         style="stroke-width:3.77952"
+         x="121"
+         y="151">F(g)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;-inkscape-stroke:none;stop-color:#000000"
+       x="109"
+       y="124"
+       id="text6661"><tspan
+         sodipodi:role="line"
+         id="tspan6659"
+         style="stroke-width:3.77952"
+         x="109"
+         y="124">F(c)</tspan></text>
+    <path
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleStart_Fnone_S-000000);stop-color:#000000;stop-opacity:1"
+       d="m 91,117.77554 4.02004,-7 h -9.894491 l 2.874451,6"
+       id="path6663"
+       sodipodi:nodetypes="cccc" />
+    <text
+       xml:space="preserve"
+       style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;-inkscape-stroke:none;stop-color:#000000"
+       x="87"
+       y="108"
+       id="text6669"><tspan
+         sodipodi:role="line"
+         id="tspan6667"
+         style="stroke-width:3.77952"
+         x="87"
+         y="108">id<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan6665">c</tspan></tspan></text>
+    <path
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleStart_Fnone_S-000000);stop-color:#000000;stop-opacity:1"
+       d="m 121,117.77554 4.02004,-7 h -9.89449 l 2.87445,6"
+       id="path6671"
+       sodipodi:nodetypes="cccc" />
+    <text
+       xml:space="preserve"
+       style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;stop-color:#000000"
+       x="106"
+       y="108"
+       id="text6681"><tspan
+         sodipodi:role="line"
+         id="tspan6679"
+         style="stroke-width:3.77952"
+         x="106"
+         y="108">id<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan6673">F(c) </tspan>=<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan6675"> </tspan>F(id<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan6677">c</tspan>)</tspan></text>
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#800000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;marker-end:url(#marker5773_Fnone_S-800000);stop-color:#000000;stop-opacity:1"
+       d="m 92.38976,159.83271 h 24"
+       id="path6683"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#800000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1, 0.5;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleStart_Fnone_S-800000);stop-color:#000000;stop-opacity:1"
+       d="m 95.38976,114.83271 h 18"
+       id="path6685"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#800000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1, 0.5;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleStart_Fnone_S-800000);stop-color:#000000;stop-opacity:1"
+       d="m 94.38976,129.83271 h 22"
+       id="path6687"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#800000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1, 0.5;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleStart_Fnone_S-800000);stop-color:#000000;stop-opacity:1"
+       d="m 94.38976,149.83271 h 22"
+       id="path6689"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleStart_Fnone_S-000000);stop-color:#000000;stop-opacity:1"
+       d="M 121.93749,159.00846 132,155.45488 v -29.26226 l -8.56449,-3.95684"
+       id="path6691"
+       sodipodi:nodetypes="cccc" />
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#800000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;marker-end:url(#marker5773_Fnone_S-800000);stop-color:#000000;stop-opacity:1"
+       d="m 92.38976,139.83271 h 24"
+       id="path6697"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#800000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;marker-end:url(#marker5773_Fnone_S-800000);stop-color:#000000;stop-opacity:1"
+       d="m 92.38976,119.83271 h 24"
+       id="path6699"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleStart_Fnone_S-000000);stop-color:#000000;stop-opacity:1"
+       d="M 83.136191,123.44642 79.073681,125 v 29.26227 l 7.454366,4.17931"
+       id="path6717"
+       sodipodi:nodetypes="cccc" />
+    <text
+       xml:space="preserve"
+       style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;-inkscape-stroke:none;stop-color:#000000"
+       x="67"
+       y="139"
+       id="text6723"><tspan
+         sodipodi:role="line"
+         style="stroke-width:3.77952"
+         x="67"
+         y="139"
+         id="tspan7193">f⨾g =</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:3.77952"
+         x="67"
+         y="144.19315"
+         id="tspan7203">g∘f</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;-inkscape-stroke:none;stop-color:#000000"
+       x="133"
+       y="139"
+       id="text6961"><tspan
+         sodipodi:role="line"
+         id="tspan6959"
+         style="stroke-width:3.77952"
+         x="133"
+         y="139">F(g)⨾F(f) =</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:3.77952"
+         x="133"
+         y="144.19315"
+         id="tspan7195">F(f)∘F(g)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;stop-color:#000000"
+       x="71"
+       y="16"
+       id="text7459"><tspan
+         sodipodi:role="line"
+         id="tspan7457"
+         style="stroke-width:3.77952"
+         x="71"
+         y="16">𝓒</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;-inkscape-stroke:none;stop-color:#000000"
+       x="127"
+       y="16"
+       id="text7463"><tspan
+         sodipodi:role="line"
+         id="tspan7461"
+         style="stroke-width:3.77952"
+         x="127"
+         y="16">𝓓</tspan></text>
+    <rect
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+       id="rect7519"
+       width="54.813042"
+       height="63.929955"
+       x="45.727127"
+       y="19.111029" />
+    <rect
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+       id="rect7521"
+       width="45.813034"
+       height="63.929955"
+       x="103.72713"
+       y="19.111029" />
+    <text
+       xml:space="preserve"
+       style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;stop-color:#000000"
+       x="82"
+       y="100"
+       id="text7525"><tspan
+         sodipodi:role="line"
+         id="tspan7523"
+         style="stroke-width:3.77952"
+         x="82"
+         y="100">𝓒</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;-inkscape-stroke:none;stop-color:#000000"
+       x="132"
+       y="100"
+       id="text7529"><tspan
+         sodipodi:role="line"
+         id="tspan7527"
+         style="stroke-width:3.77952"
+         x="132"
+         y="100">𝓔</tspan></text>
+    <rect
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
+       id="rect7531"
+       width="34.813042"
+       height="63.929955"
+       x="64.727127"
+       y="103.11103" />
+    <rect
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+       id="rect7533"
+       width="56.813034"
+       height="63.929955"
+       x="103.72713"
+       y="103.11103" />
+    <circle
+       style="fill:#000000;stroke:#000000;stroke-width:0.499999;stop-color:#000000"
+       id="circle7805"
+       cx="90"
+       cy="206"
+       r="1" />
+    <circle
+       style="fill:#000000;stroke:#000000;stroke-width:0.499999;stop-color:#000000"
+       id="circle7807"
+       cx="90"
+       cy="226"
+       r="1" />
+    <circle
+       style="fill:#000000;stroke:#000000;stroke-width:0.499999;stop-color:#000000"
+       id="circle7809"
+       cx="90"
+       cy="246"
+       r="1" />
+    <path
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleStart_Fnone_S-000000);stop-color:#000000;stop-opacity:1"
+       d="m 90,223.77554 v -13"
+       id="path7811"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleStart_Fnone_S-000000);stop-color:#000000;stop-opacity:1"
+       d="m 90,243.77554 v -13"
+       id="path7813"
+       sodipodi:nodetypes="cc" />
+    <circle
+       style="fill:#000000;stroke:#000000;stroke-width:0.499999;stop-color:#000000"
+       id="circle7815"
+       cx="120"
+       cy="206"
+       r="1" />
+    <circle
+       style="fill:#000000;stroke:#000000;stroke-width:0.499999;stop-color:#000000"
+       id="circle7817"
+       cx="120"
+       cy="226"
+       r="1" />
+    <circle
+       style="fill:#000000;stroke:#000000;stroke-width:0.499999;stop-color:#000000"
+       id="circle7819"
+       cx="120"
+       cy="246"
+       r="1" />
+    <path
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleStart_Fnone_S-000000);stop-color:#000000;stop-opacity:1"
+       d="m 120,223.77554 v -13"
+       id="path7821"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleStart_Fnone_S-000000);stop-color:#000000;stop-opacity:1"
+       d="m 120,243.77554 v -13"
+       id="path7823"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;stop-color:#000000"
+       x="84"
+       y="229"
+       id="text7827"><tspan
+         sodipodi:role="line"
+         id="tspan7825"
+         style="stroke-width:3.77952"
+         x="84"
+         y="229">c₂</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;-inkscape-stroke:none;stop-color:#000000"
+       x="84"
+       y="249"
+       id="text7831"><tspan
+         sodipodi:role="line"
+         id="tspan7829"
+         style="stroke-width:3.77952"
+         x="84"
+         y="249">c₃</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;-inkscape-stroke:none;stop-color:#000000"
+       x="85"
+       y="209"
+       id="text7835"><tspan
+         sodipodi:role="line"
+         id="tspan7833"
+         style="stroke-width:3.77952"
+         x="85"
+         y="209">c</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;-inkscape-stroke:none;stop-color:#000000"
+       x="91"
+       y="217"
+       id="text7839"><tspan
+         sodipodi:role="line"
+         id="tspan7837"
+         style="stroke-width:3.77952"
+         x="91"
+         y="217">f</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;-inkscape-stroke:none;stop-color:#000000"
+       x="91"
+       y="237"
+       id="text7843"><tspan
+         sodipodi:role="line"
+         id="tspan7841"
+         style="stroke-width:3.77952"
+         x="91"
+         y="237">g</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;-inkscape-stroke:none;stop-color:#000000"
+       x="121"
+       y="217"
+       id="text7847"><tspan
+         sodipodi:role="line"
+         id="tspan7845"
+         style="stroke-width:3.77952"
+         x="121"
+         y="217">F(f)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;-inkscape-stroke:none;stop-color:#000000"
+       x="121"
+       y="237"
+       id="text7851"><tspan
+         sodipodi:role="line"
+         id="tspan7849"
+         style="stroke-width:3.77952"
+         x="121"
+         y="237">F(g)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;-inkscape-stroke:none;stop-color:#000000"
+       x="109"
+       y="210"
+       id="text7855"><tspan
+         sodipodi:role="line"
+         id="tspan7853"
+         style="stroke-width:3.77952"
+         x="109"
+         y="210">F(c)</tspan></text>
+    <path
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleStart_Fnone_S-000000);stop-color:#000000;stop-opacity:1"
+       d="m 91,203.77554 4.02004,-7 h -9.894491 l 2.874451,6"
+       id="path7857"
+       sodipodi:nodetypes="cccc" />
+    <text
+       xml:space="preserve"
+       style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;-inkscape-stroke:none;stop-color:#000000"
+       x="87"
+       y="194"
+       id="text7863"><tspan
+         sodipodi:role="line"
+         id="tspan7861"
+         style="stroke-width:3.77952"
+         x="87"
+         y="194">id<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan7859">c</tspan></tspan></text>
+    <path
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleStart_Fnone_S-000000);stop-color:#000000;stop-opacity:1"
+       d="m 121,203.77554 4.02004,-7 h -9.89449 l 2.87445,6"
+       id="path7865"
+       sodipodi:nodetypes="cccc" />
+    <text
+       xml:space="preserve"
+       style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;stop-color:#000000"
+       x="106"
+       y="194"
+       id="text7875"><tspan
+         sodipodi:role="line"
+         id="tspan7873"
+         style="stroke-width:3.77952"
+         x="106"
+         y="194">id<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan7867">F(c) </tspan>=<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan7869"> </tspan>F(id<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan7871">c</tspan>)</tspan></text>
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000080;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;marker-end:url(#marker5773_Fnone_S-000080);stop-color:#000000;stop-opacity:1"
+       d="m 92.38976,245.83271 h 24"
+       id="path7877"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000080;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1, 0.5;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleStart_Fnone_S-000080);stop-color:#000000;stop-opacity:1"
+       d="m 95.38976,200.83271 h 18"
+       id="path7879"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000080;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1, 0.5;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleStart_Fnone_S-000080);stop-color:#000000;stop-opacity:1"
+       d="m 94.38976,215.83271 h 22"
+       id="path7881"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000080;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1, 0.5;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleStart_Fnone_S-000080);stop-color:#000000;stop-opacity:1"
+       d="m 94.38976,235.83271 h 22"
+       id="path7883"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleStart_Fnone_S-000000);stop-color:#000000;stop-opacity:1"
+       d="M 121.93749,245.00846 132,241.45488 v -29.26226 l -8.56449,-3.95684"
+       id="path7885"
+       sodipodi:nodetypes="cccc" />
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000080;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;marker-end:url(#marker5773_Fnone_S-000080);stop-color:#000000;stop-opacity:1"
+       d="m 92.38976,225.83271 h 24"
+       id="path7887"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000080;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;marker-end:url(#marker5773_Fnone_S-000080);stop-color:#000000;stop-opacity:1"
+       d="m 92.38976,205.83271 h 24"
+       id="path7889"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#marker9420_Fnone_S-000000);stop-color:#000000;stop-opacity:1"
+       d="M 82.136191,209.44642 79.073681,211 v 29.26227 l 8.454366,4.73437"
+       id="path7891"
+       sodipodi:nodetypes="cccc" />
+    <text
+       xml:space="preserve"
+       style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;stop-color:#000000"
+       x="82"
+       y="186"
+       id="text7907"><tspan
+         sodipodi:role="line"
+         id="tspan7905"
+         style="stroke-width:3.77952"
+         x="82"
+         y="186">𝓒ᵒᵖ</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;stop-color:#000000"
+       x="132"
+       y="186"
+       id="text7911"><tspan
+         sodipodi:role="line"
+         id="tspan7909"
+         style="stroke-width:3.77952"
+         x="132"
+         y="186">𝓔</tspan></text>
+    <rect
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
+       id="rect7913"
+       width="35.813042"
+       height="63.929962"
+       x="63.727127"
+       y="189.11102" />
+    <rect
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+       id="rect7915"
+       width="56.813034"
+       height="63.929962"
+       x="103.72713"
+       y="189.11102" />
+    <circle
+       style="fill:#000000;stroke:#000000;stroke-width:0.499999;stop-color:#000000"
+       id="circle8454"
+       cx="90"
+       cy="280"
+       r="1" />
+    <circle
+       style="fill:#000000;stroke:#000000;stroke-width:0.499999;stop-color:#000000"
+       id="circle8456"
+       cx="90"
+       cy="300"
+       r="1" />
+    <circle
+       style="fill:#000000;stroke:#000000;stroke-width:0.499999;stop-color:#000000"
+       id="circle8458"
+       cx="90"
+       cy="320"
+       r="1" />
+    <path
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleStart_Fnone_S-000000);stop-color:#000000;stop-opacity:1"
+       d="m 90,283 v 13"
+       id="path8460"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleStart_Fnone_S-000000);stop-color:#000000;stop-opacity:1"
+       d="m 90,303 v 13"
+       id="path8462"
+       sodipodi:nodetypes="cc" />
+    <circle
+       style="fill:#000000;stroke:#000000;stroke-width:0.499999;stop-color:#000000"
+       id="circle8464"
+       cx="120"
+       cy="280"
+       r="1" />
+    <circle
+       style="fill:#000000;stroke:#000000;stroke-width:0.499999;stop-color:#000000"
+       id="circle8466"
+       cx="120"
+       cy="300"
+       r="1" />
+    <circle
+       style="fill:#000000;stroke:#000000;stroke-width:0.499999;stop-color:#000000"
+       id="circle8468"
+       cx="120"
+       cy="320"
+       r="1" />
+    <path
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleStart_Fnone_S-000000);stop-color:#000000;stop-opacity:1"
+       d="m 120,283 v 13"
+       id="path8470"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleStart_Fnone_S-000000);stop-color:#000000;stop-opacity:1"
+       d="m 120,303 v 13"
+       id="path8472"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;stop-color:#000000"
+       x="84"
+       y="303"
+       id="text8476"><tspan
+         sodipodi:role="line"
+         id="tspan8474"
+         style="stroke-width:3.77952"
+         x="84"
+         y="303">c₂</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;-inkscape-stroke:none;stop-color:#000000"
+       x="84"
+       y="323"
+       id="text8480"><tspan
+         sodipodi:role="line"
+         id="tspan8478"
+         style="stroke-width:3.77952"
+         x="84"
+         y="323">c₃</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;-inkscape-stroke:none;stop-color:#000000"
+       x="85"
+       y="283"
+       id="text8484"><tspan
+         sodipodi:role="line"
+         id="tspan8482"
+         style="stroke-width:3.77952"
+         x="85"
+         y="283">c</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;-inkscape-stroke:none;stop-color:#000000"
+       x="91"
+       y="291"
+       id="text8488"><tspan
+         sodipodi:role="line"
+         id="tspan8486"
+         style="stroke-width:3.77952"
+         x="91"
+         y="291">f</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;-inkscape-stroke:none;stop-color:#000000"
+       x="91"
+       y="311"
+       id="text8492"><tspan
+         sodipodi:role="line"
+         id="tspan8490"
+         style="stroke-width:3.77952"
+         x="91"
+         y="311">g</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;-inkscape-stroke:none;stop-color:#000000"
+       x="121"
+       y="291"
+       id="text8496"><tspan
+         sodipodi:role="line"
+         id="tspan8494"
+         style="stroke-width:3.77952"
+         x="121"
+         y="291">F(f)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;-inkscape-stroke:none;stop-color:#000000"
+       x="121"
+       y="311"
+       id="text8500"><tspan
+         sodipodi:role="line"
+         id="tspan8498"
+         style="stroke-width:3.77952"
+         x="121"
+         y="311">F(g)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;-inkscape-stroke:none;stop-color:#000000"
+       x="109"
+       y="284"
+       id="text8504"><tspan
+         sodipodi:role="line"
+         id="tspan8502"
+         style="stroke-width:3.77952"
+         x="109"
+         y="284">F(c)</tspan></text>
+    <path
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleStart_Fnone_S-000000);stop-color:#000000;stop-opacity:1"
+       d="m 91,277.77554 4.02004,-7 h -9.894491 l 2.874451,6"
+       id="path8506"
+       sodipodi:nodetypes="cccc" />
+    <text
+       xml:space="preserve"
+       style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;-inkscape-stroke:none;stop-color:#000000"
+       x="87"
+       y="268"
+       id="text8512"><tspan
+         sodipodi:role="line"
+         id="tspan8510"
+         style="stroke-width:3.77952"
+         x="87"
+         y="268">id<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan8508">c</tspan></tspan></text>
+    <path
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleStart_Fnone_S-000000);stop-color:#000000;stop-opacity:1"
+       d="m 121,277.77554 4.02004,-7 h -9.89449 l 2.87445,6"
+       id="path8514"
+       sodipodi:nodetypes="cccc" />
+    <text
+       xml:space="preserve"
+       style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;stop-color:#000000"
+       x="106"
+       y="268"
+       id="text8524"><tspan
+         sodipodi:role="line"
+         id="tspan8522"
+         style="stroke-width:3.77952"
+         x="106"
+         y="268">id<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan8516">F(c) </tspan>=<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan8518"> </tspan>F(id<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan8520">c</tspan>)</tspan></text>
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000080;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;marker-end:url(#marker5773_Fnone_S-000080);stop-color:#000000;stop-opacity:1"
+       d="m 92.38976,319.83271 h 24"
+       id="path8526"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000080;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1, 0.5;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleStart_Fnone_S-000080);stop-color:#000000;stop-opacity:1"
+       d="m 95.38976,274.83271 h 18"
+       id="path8528"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000080;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1, 0.5;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleStart_Fnone_S-000080);stop-color:#000000;stop-opacity:1"
+       d="m 94.38976,289.83271 h 22"
+       id="path8530"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000080;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1, 0.5;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleStart_Fnone_S-000080);stop-color:#000000;stop-opacity:1"
+       d="m 94.38976,309.83271 h 22"
+       id="path8532"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000080;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;marker-end:url(#marker5773_Fnone_S-000080);stop-color:#000000;stop-opacity:1"
+       d="m 92.38976,299.83271 h 24"
+       id="path8536"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000080;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;marker-end:url(#marker5773_Fnone_S-000080);stop-color:#000000;stop-opacity:1"
+       d="m 92.38976,279.83271 h 24"
+       id="path8538"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleStart_Fnone_S-000000);stop-color:#000000;stop-opacity:1"
+       d="M 83.136191,283.44642 79.073681,285 v 29.26227 l 7.454366,4.17931"
+       id="path8540"
+       sodipodi:nodetypes="cccc" />
+    <text
+       xml:space="preserve"
+       style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;stop-color:#000000"
+       x="82"
+       y="260"
+       id="text8544"><tspan
+         sodipodi:role="line"
+         id="tspan8542"
+         style="stroke-width:3.77952"
+         x="82"
+         y="260">𝓒</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;stop-color:#000000"
+       x="132"
+       y="260"
+       id="text8548"><tspan
+         sodipodi:role="line"
+         id="tspan8546"
+         style="stroke-width:3.77952"
+         x="132"
+         y="260">𝓔ᵒᵖ</tspan></text>
+    <rect
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
+       id="rect8550"
+       width="35.813042"
+       height="63.929962"
+       x="63.727127"
+       y="263.11102" />
+    <rect
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+       id="rect8552"
+       width="56.813034"
+       height="63.929962"
+       x="103.72713"
+       y="263.11102" />
+    <path
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleStart_Fnone_S-000000);stop-color:#000000;stop-opacity:1"
+       d="M 121.93749,281.44642 132,285 v 29.26227 l -8.56449,3.95684"
+       id="path8801"
+       sodipodi:nodetypes="cccc" />
+    <text
+       xml:space="preserve"
+       style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;-inkscape-stroke:none;stop-color:#000000"
+       x="7"
+       y="10"
+       id="text10123"><tspan
+         sodipodi:role="line"
+         id="tspan10121"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Liberation Sans', sans-serif;-inkscape-font-specification:'Liberation Sans, sans-serif';stroke-width:3.77952"
+         x="7"
+         y="10">A functor, with solid lines mapping objects and dashed lines mapping morphisms:</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;stop-color:#000000"
+       x="101"
+       y="16"
+       id="text10129"><tspan
+         sodipodi:role="line"
+         id="tspan10127"
+         style="stroke-width:3.77952"
+         x="101"
+         y="16">→</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;stop-color:#000000"
+       x="100"
+       y="100"
+       id="text10137"><tspan
+         sodipodi:role="line"
+         id="tspan10135"
+         style="stroke-width:3.77952"
+         x="100"
+         y="100">→</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;stop-color:#000000"
+       x="100"
+       y="186"
+       id="text10141"><tspan
+         sodipodi:role="line"
+         id="tspan10139"
+         style="stroke-width:3.77952"
+         x="100"
+         y="186">→</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;stop-color:#000000"
+       x="100"
+       y="260"
+       id="text10145"><tspan
+         sodipodi:role="line"
+         id="tspan10143"
+         style="stroke-width:3.77952"
+         x="100"
+         y="260">→</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;stop-color:#000000"
+       x="7"
+       y="95"
+       id="text10397"><tspan
+         sodipodi:role="line"
+         id="tspan10395"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Liberation Sans', sans-serif;-inkscape-font-specification:'Liberation Sans, sans-serif';stroke-width:3.77952"
+         x="7"
+         y="95">A contravariant functor:</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;stop-color:#000000"
+       x="7"
+       y="180"
+       id="text10405"><tspan
+         sodipodi:role="line"
+         id="tspan10403"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Liberation Sans', sans-serif;-inkscape-font-specification:'Liberation Sans, sans-serif';stroke-width:3.77952"
+         x="7"
+         y="180">Define a covariant functor on either opposite category to avoid contravariant functors:</tspan></text>
+  </g>
+</svg>

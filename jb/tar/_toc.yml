@@ -18,6 +18,7 @@ parts:
       - file: notes/ssc-what-is-a-database.md
       - file: notes/ssc-categories.md
       - file: notes/ssc-functors-nt.md
+      - file: notes/ssc-adjunctions-and-data-migrations.md
   - caption: Statistical Rethinking
     chapters:
       - file: notes/sr2-review.md
