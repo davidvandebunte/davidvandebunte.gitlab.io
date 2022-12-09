@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="400mm"
+   viewBox="0 0 210 400"
+   version="1.1"
+   id="svg1820"
+   inkscape:version="1.2 (1:1.2.1+202207142221+cd75a1ee6d)"
+   sodipodi:docname="public-paper-alternative.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1822"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.13"
+     inkscape:cx="481.41593"
+     inkscape:cy="779.64602"
+     inkscape:window-width="1440"
+     inkscape:window-height="2523"
+     inkscape:window-x="2880"
+     inkscape:window-y="2270"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1817" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1, 3;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
+       id="rect1481"
+       width="196"
+       height="119.25479"
+       x="7"
+       y="7" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4px;line-height:4.99999px;font-family:'Liberation Sans', sans-serif;-inkscape-font-specification:'Liberation Sans, sans-serif';text-decoration-color:#000000;white-space:pre;display:inline;fill:#000000;stroke-width:3.77952;stop-color:#000000;shape-inside:url(#rect1481)"
+       x="30.093462"
+       y="39.661663"
+       id="text1498"><tspan
+         x="7"
+         y="10.603013"
+         id="tspan11139">You should always program as part of learning something. Does that mean in this case (while learning </tspan><tspan
+         x="7"
+         y="15.603003"
+         id="tspan11141">category theory) you should learn Scala’s Cats library?
+</tspan><tspan
+         x="7"
+         y="20.602994"
+         id="tspan11143">
+</tspan><tspan
+         x="7"
+         y="25.602984"
+         id="tspan11145">Move a window to the back in Ubuntu. You’d like to be able to do this when you have e.g. 3 zathura windows </tspan><tspan
+         x="7"
+         y="30.602975"
+         id="tspan11147">you want to pull back in front of your 3-screen terminal window:
+</tspan><tspan
+         x="7"
+         y="35.602965"
+         id="tspan11149">- https://askubuntu.com/questions/65580/how-can-i-easily-send-a-window-to-the-back-of-a-stack
+</tspan><tspan
+         x="7"
+         y="40.602955"
+         id="tspan11151">
+</tspan><tspan
+         x="7"
+         y="45.602944"
+         id="tspan11153">The terms “vertical” and “horizontal” are more confusing than many people realize (especially if there is not </tspan><tspan
+         x="7"
+         y="50.602933"
+         id="tspan11155">text on a graph to help define which direction “up” is). This gets even more confusing if you’re doing multiple </tspan><tspan
+         x="7"
+         y="55.602921"
+         id="tspan11157">reflections; how would you describe your reflections of (3.50) in your notes on SSC Definition 3.51?
+</tspan><tspan
+         x="7"
+         y="60.60291"
+         id="tspan11159">- https://en.wikipedia.org/wiki/Vertical_and_horizontal#Discussion
+</tspan><tspan
+         x="7"
+         y="65.602898"
+         id="tspan11161">
+</tspan><tspan
+         x="7"
+         y="70.602891"
+         id="tspan11163">Relate trees and data structures to your current study of preorders and partial orders:
+</tspan><tspan
+         x="7"
+         y="75.602883"
+         id="tspan11165">- https://en.wikipedia.org/wiki/Tree_(data_structure)
+</tspan><tspan
+         x="7"
+         y="80.602875"
+         id="tspan11167">- https://stackoverflow.com/questions/31867469/are-partially-ordered-trees-the-same-as-binary-trees
+</tspan><tspan
+         x="7"
+         y="85.602868"
+         id="tspan11169">- https://en.wikipedia.org/wiki/Big_O_notation
+</tspan></text>
+  </g>
+</svg>

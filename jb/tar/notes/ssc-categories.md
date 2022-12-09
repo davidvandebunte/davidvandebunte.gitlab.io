@@ -22,6 +22,17 @@ section will do.
 As noted in [Morphism](https://en.wikipedia.org/wiki/Morphism), some people also prefer to use
 "hom-class" for what is called "hom-set" here.
 
+Thinking only in terms of sets and functions is limiting. What if all the items in your set share
+some property that you want maintain (or transform) as part of the functions associated with it?
+For example, groups have several definining properties and group homomorphisms maintain them. This
+is where category theory begins.
+
+You can come to nearly the same perspective by thinking in terms of the elements/examples in the set
+you care about as training examples. What properties do the elements have in common that makes them
+belong to the same "set" so to speak? If you're going to do any work on your training examples then
+you need to understand these properties and be careful about how you maintain or transform them.
+That is, you can't just apply any functions to them.
+
 ## 3.2.1. Free categories
 
 Compare to [Free category](https://en.wikipedia.org/wiki/Free_category).

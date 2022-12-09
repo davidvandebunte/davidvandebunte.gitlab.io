@@ -15,7 +15,13 @@ kernelspec:
 
 ## 3.3.2. Functors
 
-Prerequisite to [Functor](https://en.wikipedia.org/wiki/Functor).
+*Definition* 3.35.
+
+The author seems to avoid defining "contravariant" functors, instead defining standard (covariant)
+functors on opposite categories. Read through the appropriate section in
+[Functor](https://en.wikipedia.org/wiki/Functor) if you're interested in this extended definition:
+
+![x](ssc-definition-3-35.svg)
 
 *Exercise* 3.37.
 
@@ -92,7 +98,7 @@ defined in part `2.` of this question.
 
 ## 3.3.3. Database instances as Set-valued functors
 
-*Exercise* 3.35.
+*Exercise* 3.45.
 
 This function $F_S$ will map 1 to S, and $id_1$ to $id_S$. It preserves identities in the one case
 it needs to, and it preserves composition because there is no composition to preserve.
@@ -112,7 +118,11 @@ vendors (asking the same price) to convert the money to a good.
 ## 3.3.4. Natural transformations
 
 Prerequisite to [Natural transformation](https://en.wikipedia.org/wiki/Natural_transformation) and
-[Functor category](https://en.wikipedia.org/wiki/Functor_category).
+[Functor category](https://en.wikipedia.org/wiki/Functor_category). A good way to think about a
+natural transformation between two functors is that we define it (its existence) in terms of its
+effects; because functors are like functions (defined in terms of what they do) all we can do is
+look at the effects (in category 𝓓). It's similar to but opposite to defining a function in terms of
+data (e.g. collected data).
 
 *Definition* 3.51.
 
