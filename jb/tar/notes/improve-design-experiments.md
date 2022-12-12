@@ -400,20 +400,3 @@ However, the page [Function composition -
 Wikipedia](https://en.wikipedia.org/wiki/Function_composition) makes no link to this other article,
 except at the very bottom where the article is listed under the "Binary operations" category:
 - https://en.wikipedia.org/wiki/Category:Binary_operations
-
-# TODO-cmmd: How do you simply describe commutative diagrams?
-
-Notice the picture of ab = ba on this page:
-- https://en.wikipedia.org/wiki/Commutative_property
-
-This is the same way that commutativity is described visually in VGT. It's the
-same pattern you see in commutative diagrams as well:
-- https://en.wikipedia.org/wiki/Commutative_diagram
-
-A similar simple example of a commutative diagram exists on this page:
-- https://en.wikipedia.org/wiki/Associative_property
-
-See also simple examples of inversion here:
-- https://mathworld.wolfram.com/CommutativeDiagram.html
-
-Perhaps some of these simpler examples should be added under "Examples" on the Wikipedia page.

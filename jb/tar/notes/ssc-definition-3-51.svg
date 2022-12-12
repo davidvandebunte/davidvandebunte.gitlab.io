@@ -24,9 +24,9 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="2.3786088"
-     inkscape:cx="346.00057"
-     inkscape:cy="265.70153"
+     inkscape:zoom="1.1893044"
+     inkscape:cx="335.91064"
+     inkscape:cy="266.54236"
      inkscape:window-width="1440"
      inkscape:window-height="2523"
      inkscape:window-x="2880"
@@ -35,25 +35,6 @@
      inkscape:current-layer="layer1" />
   <defs
      id="defs2075">
-    <marker
-       style="overflow:visible"
-       id="marker4937"
-       refX="0"
-       refY="0"
-       orient="auto-start-reverse"
-       inkscape:stockid="TriangleStart"
-       markerWidth="5.3244081"
-       markerHeight="6.155385"
-       viewBox="0 0 5.3244081 6.1553851"
-       inkscape:isstock="true"
-       inkscape:collect="always"
-       preserveAspectRatio="xMidYMid">
-      <path
-         transform="scale(0.5)"
-         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
-         d="M 5.77,0 -2.88,5 V -5 Z"
-         id="path4935" />
-    </marker>
     <marker
        style="overflow:visible"
        id="marker4937_Fnone_S-808000"
@@ -72,25 +53,6 @@
          style="fill:#808000;fill-rule:evenodd;stroke:#808000;stroke-width:1pt"
          d="M 5.77,0 -2.88,5 V -5 Z"
          id="path7182" />
-    </marker>
-    <marker
-       style="overflow:visible"
-       id="TriangleStart"
-       refX="0"
-       refY="0"
-       orient="auto-start-reverse"
-       inkscape:stockid="TriangleStart"
-       markerWidth="5.3244081"
-       markerHeight="6.155385"
-       viewBox="0 0 5.3244081 6.1553851"
-       inkscape:isstock="true"
-       inkscape:collect="always"
-       preserveAspectRatio="xMidYMid">
-      <path
-         transform="scale(0.5)"
-         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
-         d="M 5.77,0 -2.88,5 V -5 Z"
-         id="path135" />
     </marker>
     <marker
        style="overflow:visible"
@@ -135,96 +97,108 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
+    <rect
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
+       id="rect6226"
+       width="50"
+       height="40"
+       x="70"
+       y="24" />
     <text
        xml:space="preserve"
-       style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;-inkscape-stroke:none;stop-color:#000000"
+       style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;stop-color:#000000"
        x="75"
-       y="52"
+       y="31"
        id="text2144"><tspan
          sodipodi:role="line"
          id="tspan2142"
          style="stroke-width:3.77952"
          x="75"
-         y="52">F(c)</tspan></text>
+         y="31">F(c)</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;-inkscape-stroke:none;stop-color:#000000"
        x="75"
-       y="28"
+       y="55"
        id="text2148"><tspan
          sodipodi:role="line"
          id="tspan2146"
          style="stroke-width:3.77952"
          x="75"
-         y="28">G(c)</tspan></text>
+         y="55">G(c)</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;-inkscape-stroke:none;stop-color:#000000"
        x="105"
-       y="52"
+       y="31"
        id="text2152"><tspan
          sodipodi:role="line"
          id="tspan2150"
          style="stroke-width:3.77952"
          x="105"
-         y="52">F(d)</tspan></text>
+         y="31">F(d)</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;-inkscape-stroke:none;stop-color:#000000"
        x="105"
-       y="28"
+       y="55"
        id="text2156"><tspan
          sodipodi:role="line"
          id="tspan2154"
          style="stroke-width:3.77952"
          x="105"
-         y="28">G(d)</tspan></text>
+         y="55">G(d)</tspan></text>
     <path
        style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleStart_Fnone_S-000000);stop-color:#000000;stop-opacity:1"
-       d="m 86,27 h 16"
+       d="m 86,53.931641 h 16"
        id="path2221"
        sodipodi:nodetypes="cc" />
     <text
        xml:space="preserve"
        style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#008000;stroke-width:3.77952;-inkscape-stroke:none;stop-color:#000000"
        x="80.31897"
-       y="40.572304"
+       y="41.686291"
        id="text3280"><tspan
          sodipodi:role="line"
          id="tspan3278"
          style="fill:#008000;stroke-width:3.77952"
          x="80.31897"
-         y="40.572304">α<tspan
+         y="41.686291">α<tspan
    style="font-size:65%;baseline-shift:sub;fill:#008000"
    id="tspan3282">c</tspan></tspan></text>
     <text
        xml:space="preserve"
        style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#008000;stroke-width:3.77952;-inkscape-stroke:none;stop-color:#000000"
        x="103.31897"
-       y="40.572304"
+       y="41.678673"
        id="text3294"><tspan
          sodipodi:role="line"
          id="tspan3292"
          style="fill:#008000;stroke-width:3.77952"
          x="103.31897"
-         y="40.572304">α<tspan
+         y="41.678673">α<tspan
    style="font-size:65%;baseline-shift:sub;fill:#008000"
    id="tspan3290">d</tspan></tspan></text>
     <text
        xml:space="preserve"
        style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;stop-color:#000000"
        x="93.034973"
-       y="115.61615"
+       y="15.61615"
        id="text3304"><tspan
          sodipodi:role="line"
          id="tspan3302"
          style="stroke-width:3.77952"
          x="93.034973"
-         y="115.61615">𝓙 </tspan></text>
+         y="15.61615">𝓙 </tspan></text>
     <path
        style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#008000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleStart_Fnone_S-008000);stop-color:#000000;stop-opacity:1"
-       d="m 108.88777,47.887769 v -16"
+       d="m 108.88777,33.043872 v 16"
        id="path3530"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="font-variation-settings:normal;display:inline;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleStart_Fnone_S-000000);stop-color:#000000;stop-opacity:1"
+       d="m 86,103 h 16"
+       id="path3554"
        sodipodi:nodetypes="cc" />
     <rect
        style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
@@ -232,192 +206,159 @@
        width="70"
        height="40"
        x="60"
-       y="71" />
+       y="75" />
     <circle
        style="fill:#000000;stroke:#000000;stroke-width:0.499999;stroke-dasharray:none;stroke-dashoffset:0;stop-color:#000000"
        id="circle3544"
        cx="83"
-       cy="79"
+       cy="83"
        r="0.87268561" />
     <path
        style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleStart_Fnone_S-000000);stop-color:#000000;stop-opacity:1"
-       d="m 86,79 h 16"
+       d="m 86,83 h 16"
        id="path3546"
        sodipodi:nodetypes="cc" />
     <circle
        style="fill:#000000;stroke:#000000;stroke-width:0.499999;stroke-dasharray:none;stroke-dashoffset:0;stop-color:#000000"
        id="circle3548"
        cx="106"
-       cy="79"
+       cy="83"
        r="0.87268561" />
     <circle
        style="fill:#000000;stroke:#000000;stroke-width:0.499999;stroke-dasharray:none;stroke-dashoffset:0;stop-color:#000000"
        id="circle3552"
        cx="83"
-       cy="99"
+       cy="103"
        r="0.87268561" />
-    <path
-       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleStart_Fnone_S-000000);stop-color:#000000;stop-opacity:1"
-       d="m 86,99 h 16"
-       id="path3554"
-       sodipodi:nodetypes="cc" />
     <circle
        style="fill:#000000;stroke:#000000;stroke-width:0.499999;stroke-dasharray:none;stroke-dashoffset:0;stop-color:#000000"
        id="circle3556"
        cx="106"
-       cy="99"
+       cy="103"
        r="0.87268561" />
     <circle
        style="fill:#000000;stroke:#000000;stroke-width:0.499999;stroke-dasharray:none;stroke-dashoffset:0;stop-color:#000000"
        id="circle3560"
        cx="71"
-       cy="89"
+       cy="93"
        r="0.87268561" />
     <circle
        style="fill:#000000;stroke:#000000;stroke-width:0.499999;stroke-dasharray:none;stroke-dashoffset:0;stop-color:#000000"
        id="circle3562"
        cx="118"
-       cy="89"
+       cy="93"
        r="0.87268561" />
     <path
        style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleStart_Fnone_S-000000);stop-color:#000000;stop-opacity:1"
-       d="m 108.26157,97.87098 6.85641,-6"
+       d="m 108.26157,101.87098 6.85641,-6"
        id="path3566"
        sodipodi:nodetypes="cc" />
     <path
        style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleStart_Fnone_S-000000);stop-color:#000000;stop-opacity:1"
-       d="m 108.26157,80.88984 6.85641,6"
+       d="m 108.26157,84.88984 6.85641,6"
        id="path3570"
        sodipodi:nodetypes="cc" />
     <path
        style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#008000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleStart_Fnone_S-008000);stop-color:#000000;stop-opacity:1"
-       d="m 105.88777,81.11223 v 14"
+       d="m 105.88777,85.11223 v 14"
        id="path3576"
        sodipodi:nodetypes="cc" />
     <path
        style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#008000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleStart_Fnone_S-008000);stop-color:#000000;stop-opacity:1"
-       d="m 82.88777,81.11223 v 14"
+       d="m 82.88777,85.11223 v 14"
        id="path3582"
        sodipodi:nodetypes="cc" />
     <path
        style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleStart_Fnone_S-000000);stop-color:#000000;stop-opacity:1"
-       d="m 81.28951,97.87098 -6.85641,-6"
+       d="m 81.28951,101.87098 -6.85641,-6"
        id="path3596"
        sodipodi:nodetypes="cc" />
     <path
        style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleStart_Fnone_S-000000);stop-color:#000000;stop-opacity:1"
-       d="m 81.28951,80.88984 -6.85641,6"
+       d="m 81.28951,84.88984 -6.85641,6"
        id="path3598"
        sodipodi:nodetypes="cc" />
-    <path
-       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#808000;stroke-width:0.499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#marker4937_Fnone_S-808000);stop-color:#000000;stop-opacity:1"
-       d="M 109.34533,55.425872 106.54446,76.35658"
-       id="path3684"
-       sodipodi:nodetypes="cc" />
-    <path
-       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#808000;stroke-width:0.499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#marker4937_Fnone_S-808000);stop-color:#000000;stop-opacity:1"
-       d="m 114.34741,31.425872 9.90213,13.051564 -0.20238,62.734444 -9.29107,0.0287 -6.94929,-6.55138"
-       id="path4494"
-       sodipodi:nodetypes="ccccc" />
     <text
        xml:space="preserve"
        style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#808000;stroke-width:3.77952;-inkscape-stroke:none;stop-color:#000000"
-       x="-69.653152"
-       y="92.674316"
-       id="text4500"
-       transform="rotate(-90)"><tspan
+       x="76.01709"
+       y="70.064285"
+       id="text4500"><tspan
          sodipodi:role="line"
          id="tspan4498"
          style="fill:#808000;stroke-width:3.77952"
-         x="-69.653152"
-         y="92.674316">D(d)</tspan></text>
+         x="76.01709"
+         y="70.064285">D(G(f))</tspan></text>
     <path
        style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#008000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleStart_Fnone_S-008000);stop-color:#000000;stop-opacity:1"
-       d="m 78.88777,47.887769 v -16"
+       d="m 78.88777,33.043872 v 16"
        id="path4506"
        sodipodi:nodetypes="cc" />
     <path
        style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleStart_Fnone_S-000000);stop-color:#000000;stop-opacity:1"
-       d="m 86,51 h 16"
+       d="m 86,29.931641 h 16"
        id="path4512"
        sodipodi:nodetypes="cc" />
     <text
        xml:space="preserve"
        style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;-inkscape-stroke:none;stop-color:#000000"
        x="89"
-       y="49"
+       y="34"
        id="text4518"><tspan
          sodipodi:role="line"
          id="tspan4516"
          style="stroke-width:3.77952"
          x="89"
-         y="49">F(f)</tspan></text>
+         y="34">F(f)</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;-inkscape-stroke:none;stop-color:#000000"
        x="89"
-       y="25"
+       y="58"
        id="text4522"><tspan
          sodipodi:role="line"
          id="tspan4520"
          style="stroke-width:3.77952"
          x="89"
-         y="25">G(f)</tspan></text>
-    <path
-       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#808000;stroke-width:0.499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#marker4937_Fnone_S-808000);stop-color:#000000;stop-opacity:1"
-       d="M 79.70431,55.425872 82.50518,76.35658"
-       id="path5394"
-       sodipodi:nodetypes="cc" />
-    <path
-       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#808000;stroke-width:0.499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#marker4937_Fnone_S-808000);stop-color:#000000;stop-opacity:1"
-       d="m 74.78771,31.425872 -9.90213,13.051564 0.20238,62.734444 9.29107,0.0287 6.94929,-6.55138"
-       id="path6222"
-       sodipodi:nodetypes="ccccc" />
-    <rect
-       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
-       id="rect6226"
-       width="50"
-       height="40"
-       x="70"
-       y="20" />
+         y="58">G(f)</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;stop-color:#000000"
        x="93.706009"
-       y="17.335953"
+       y="120.33595"
        id="text6230"><tspan
          sodipodi:role="line"
          id="tspan6228"
          style="stroke-width:3.77952"
          x="93.706009"
-         y="17.335953">𝓒</tspan></text>
+         y="120.33595">𝓒</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;stop-color:#000000"
        x="73.034973"
-       y="121.61615"
+       y="21.61615"
        id="text6234"><tspan
          sodipodi:role="line"
          id="tspan6232"
          style="stroke-width:3.77952"
          x="73.034973"
-         y="121.61615">(indexing category)</tspan></text>
+         y="21.61615">(indexing category)</tspan></text>
     <path
        style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#808000;stroke-width:0.499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#marker4937_Fnone_S-808000);stop-color:#000000;stop-opacity:1"
-       d="m 94.34533,54.425872 0.19913,23.043053"
+       d="M 94,79.695618 V 59.652565"
        id="path6311"
        sodipodi:nodetypes="cc" />
     <text
        xml:space="preserve"
        style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;-inkscape-stroke:none;stop-color:#000000"
        x="92.978043"
-       y="83.090927"
+       y="87.090927"
        id="text6317"><tspan
          sodipodi:role="line"
          id="tspan6315"
          style="stroke-width:3.77952"
          x="92.978043"
-         y="83.090927">d</tspan></text>
+         y="87.090927">d</tspan></text>
     <rect
        style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
        id="rect7084"
@@ -436,5 +377,25 @@
          style="font-weight:bold;stroke-width:3.77952"
          x="57.436855"
          y="9.7061081">Cat</tspan></text>
+    <path
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#808000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker4937_Fnone_S-808000);stop-color:#000000;stop-opacity:1"
+       d="m 114.68178,32.945125 6.90623,6.906231 v 43.072887 l -11.60114,0.04608"
+       id="path2568"
+       sodipodi:nodetypes="cccc" />
+    <path
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#808000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker4937_Fnone_S-808000);stop-color:#000000;stop-opacity:1"
+       d="m 114.90425,54.945125 9.90623,9.906231 v 38.295354 l -14.71126,0.15621"
+       id="path3623"
+       sodipodi:nodetypes="cccc" />
+    <path
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#808000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker4937_Fnone_S-808000);stop-color:#000000;stop-opacity:1"
+       d="m 74.590047,32.945125 -6.90623,6.906231 v 43.072887 l 11.60114,0.04608"
+       id="path3637"
+       sodipodi:nodetypes="cccc" />
+    <path
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#808000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker4937_Fnone_S-808000);stop-color:#000000;stop-opacity:1"
+       d="m 74.367577,54.945125 -9.90623,9.906231 v 38.295354 l 14.71126,0.15621"
+       id="path3639"
+       sodipodi:nodetypes="cccc" />
   </g>
 </svg>
