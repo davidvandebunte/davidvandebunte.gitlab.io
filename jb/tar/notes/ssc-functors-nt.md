@@ -126,11 +126,48 @@ data (e.g. collected data).
 
 *Definition* 3.51.
 
-Prerequisite to [Commutative diagram](https://en.wikipedia.org/wiki/Commutative_diagram) and
-[Diagram (category theory)](https://en.wikipedia.org/wiki/Diagram_(category_theory)). Drawing this
-definition on top of the second category in Example 3.52:
+Prerequisite to [Commutative diagram](https://en.wikipedia.org/wiki/Commutative_diagram).
+
+It's not clear from this definition and the examples local to it whether Eq. (3.50) is 𝓙 or 𝓒. The
+following quotes from [Diagram (category
+theory)](https://en.wikipedia.org/wiki/Diagram_(category_theory)) support the former:
+
+> The diagram D is thought of as indexing a collection of objects and morphisms in C patterned on J.
+
+Within the local context, it makes sense with the wording "the only two parallel pair of morphisms"
+because there are more morphisms in the example D in SSC. It also makes sense given that it must
+hold for every parallel pair of morphism in 𝓙; there are many more parallel paths in the 𝓓 of
+Example 3.52. Looking forward, this interpretation also fits the last paragraph of Definition 3.92.
+
+Reflecting Eq. (3.50) across a diagonal to make drawing it on top of the 𝓓 of Example 3.52 easier:
 
 ![x](ssc-definition-3-51.svg)
+
+[msthr]: https://math.stackexchange.com/questions/4268174/why-are-commutative-diagrams-called-commutative-diagrams
+[wcp]: https://en.wikipedia.org/wiki/Commutative_property
+
+Using the term "commutative" for commutative diagrams is a bit misleading; see [Why are commutative
+diagrams called commutative diagrams? - Math SE][msthr]. Said another way, the name is only related
+in a historical way to the term "commutative" in [Commutative property][wcp].
+
+[wap]: https://en.wikipedia.org/wiki/Associative_property
+[wolfis]: https://mathworld.wolfram.com/CommutativeDiagram.html
+
+You can use a commutative diagram to express that a particular category (say the category of real
+numbers) is commutative. Notice that in $ab = ba$ that the a and b become morphisms. However, you
+can also use a commutative diagram to express that a particular category is associative; a
+commutative diagram is provided at the top of the article [Associative property][wap]. Notice in the
+article [Commutative Diagram -- from Wolfram MathWorld][wolfis] a much shorter (and likely more
+memorable) version of Definition 3.28 (of an isomorphism).
+
+Said another way, from [soft question - Reading commutative diagrams? - Mathematics SE](
+https://math.stackexchange.com/questions/22321/reading-commutative-diagrams?rq=1):
+
+> Commutative diagrams are, to put it simply, a (very) handy way of writing systems of equations in
+> categories.
+
+To draw or update commutative diagrams on Wikipedia, see [Help:Displaying a formula - Commutative
+diagrams - Wikipedia](https://en.wikipedia.org/wiki/Help:Displaying_a_formula#Commutative_diagrams).
 
 *Definition* 3.54.
 

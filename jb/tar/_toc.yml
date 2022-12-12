@@ -19,6 +19,7 @@ parts:
       - file: notes/ssc-categories.md
       - file: notes/ssc-functors-nt.md
       - file: notes/ssc-adjunctions-and-data-migrations.md
+      - file: notes/ssc-bonus-limits-colimits.md
   - caption: Statistical Rethinking
     chapters:
       - file: notes/sr2-review.md
