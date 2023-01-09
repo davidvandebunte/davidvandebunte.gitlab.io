@@ -1,9 +1,11 @@
 # Improve design experiments
 
+
 # TODO-rib: When should you reduce inductive bias?
 
 See:
 - [Inductive bias](https://en.wikipedia.org/wiki/Inductive_bias)
+
 
 # TODO-dr: Should you reduce the dimensionality of your inputs?
 
@@ -81,6 +83,7 @@ If it just learns to ignore the data in the first few layers it's not a big deal
 [1]: https://stats.stackexchange.com/questions/70899/what-correlation-makes-a-matrix-singular-and-what-are-implications-of-singularit
 [2]: https://en.wikipedia.org/wiki/Dimensionality_reduction#Feature_selection
 
+
 # TODO-rbsap
 
 Commenting on [](./se/relationship-between-svd-and-pca.md).
@@ -97,11 +100,13 @@ https://en.wikipedia.org/wiki/Principal_component_analysis#Further_consideration
 See also [Highest scored 'linear-algebra' questions - Math SE](
 https://math.stackexchange.com/questions/tagged/linear-algebra).
 
+
 # TODO-mspca
 
 See the first answer to [Making sense of principal component analysis, eigenvectors & eigenvalues -
 CV](https://stats.stackexchange.com/a/140579/189415). Missing the [Spectral theorem](
 https://en.wikipedia.org/wiki/Spectral_theorem) dependency.
+
 
 # TODO-ce: Is "cross-entropy" a useful abstraction?
 
@@ -143,6 +148,7 @@ See also:
 https://stats.stackexchange.com/questions/10302/what-is-perplexity)
 - [Perplexity - Wikipedia](https://en.wikipedia.org/wiki/Perplexity)
 
+
 # TODO-unsup: Do you prefer unsupervised to supervised learning?
 
 ## Estimate value
@@ -183,6 +189,7 @@ terms of efficiency:
 - [When (if ever) is a frequentist approach substantively better than a Bayesian? - Cross
   Validated](https://stats.stackexchange.com/questions/194035/when-if-ever-is-a-frequentist-approach-substantively-better-than-a-bayesian)
 
+
 # TODO-visc: Do visual proofs imply the importance of causality?
 
 Do we learn so much faster with a visual of something because logic is ultimately based on
@@ -210,6 +217,7 @@ happens in the world. This fits causality as being based in local interactions i
 world. We've created computers that emulate the human brain, to some extent, also using electrical
 impulses at the microscopic level.
 
+
 # TODO-sscb: Should you fork the content of SSC?
 
 It would make coming back to the material later easier (fix errors). That'd make your own answers on
@@ -222,12 +230,14 @@ old version of the content.
 You could get the same effect by simply copying and pasting any updates they make into your own
 build of the pdf. You really only need to copy and paste seven or so files.
 
+
 # TODO-cuhc: What is a short summary of the Curry-Howard Correspondence?
 
 See:
 - https://duckduckgo.com/?q=curry+howard+correspondence&t=newext&atb=v310-1&ia=web
 - https://courses.cs.cornell.edu/cs3110/2021sp/textbook/adv/curry-howard.html
 - https://cs3110.github.io/textbook/chapters/adv/curry-howard.html
+
 
 # TODO-cycl: How is cyclomatic complexity measured?
 
@@ -236,6 +246,7 @@ don't understand the metric.
 
 Cyclomatic complexity is related to Betti numbers:
 - [Cyclomatic complexity - Wikipedia](https://en.wikipedia.org/wiki/Cyclomatic_complexity#Definition)
+
 
 # TODO-prit: How do you prove it?
 
@@ -297,11 +308,13 @@ how well does it approximate an exponential function? It was the answer here. Se
 - [Hyperbolic growth](https://en.wikipedia.org/wiki/Hyperbolic_growth)
 - [Rectifier (neural networks)](https://en.wikipedia.org/wiki/Rectifier_(neural_networks))
 
+
 # TODO-idb: How does one quickly identify the bottleneck in a computer program?
 
 The idea here is to provide a context for studying Turing machines and computability, complexity,
 etc. There are also a lot of notes to move on this subject. So in some sense, it's exploring the
 domain to come up with better questions.
+
 
 # TODO-catt: What's a simple high-level summary of category theory?
 
@@ -385,11 +398,60 @@ https://en.wikipedia.org/wiki/Dynamic_dispatch
 
 https://en.wikipedia.org/wiki/Higher-order_function
 
+
+# Loss curves
+
+Deep learning is bad for human learning if you don't ever get anything from the curves. If you can't explain crazy loss curves you aren't learning to interpret. Like managing people, there's only so much to learn at this high level of abstraction and noise.
+
+Should you expect a long-term difference between the training and validation curves, even if you aren’t overfitting? If there’s a major gap between the two, that suggests your ground truth or model has issues because it is failing to learn the patterns in the data. If your ground truth was random noise, you’d see the training performance go up with no change in validation performance. In some sense, this is overfitting though. What if you had all the random noise to train on that you could want? You’d see neither the training nor the validation performance increase. The training performance would never increase because the network weights would continue jumping around on the random noise in the training data. Should you add this to a review of the “overfitting” page on Wikipedia? You should review Wikipedia pages, why not? Your book is about reading between the lines and giving longer explanations. In fact, you’d really like to turn *all* your notes into commentary on Wikipedia rather than on other references, then put as much as possible directly into the Wikipedia source.
+
+You also like this idea of shallow commentary because it will make it easier to apply improvements to the source (Wikipedia) and keep you near the source. You don't have to organize your notes if you already have the structure of Wikipedia to organize around; when you read a book you have the structure of the pedagogical material to organize around (which makes learning faster).
+
+What should have been a clue that you were not overfitting is that training performance (0.45) was still lower than validation performance (0.52). Besides the number of epochs, you can also consider whether you are overfitting based on how many training examples you have per class. What are the rules for that? Should you add all this to the Wikipedia page on overfitting? You’re really trying to infer something causal here; draw a DAG with dataset size as an input, number of epochs, and outputs of the validation and training scores. That is, add a document based on the question: Is model training experiencing overfitting? Still, you are still at least partially overfitting at the end of training when your training score is near 0.8 and your validation score is near 0.5; one is absolutely lower than the other.
+
+
+# Data distributions don't always matter
+
+Should we really be incrementally increasing the size of datasets? It seems like waste a lot of time trying to fit models to small/medium datasets when there should really only be two sizes: Super small (to overfit) and full size. You need to step up incrementally only to avoid creating too much data that is unnecessary to avoid overfitting. Running anything but overfitting experiments on these intermediate datasets isn't highly valuable, because you don’t know that the results will generalize to a new larger dataset. If you build too large a dataset, you can always cut it down.
+
+How would the distribution of the input data *not* effect results? I think you didn’t experience success in the past with adjusting distributions because you were always validating against some other dataset. The dataset is the truth, including its distribution. The positive/negative distribution is a truth claim about how likely you expect to see signs in the wild (not just where in the sweep image). Think of a model in SR2; in that context it’s much more clear that the distribution really matters. In the end, they optimize in the same way. Of course, what if you are fitting f(x) = x and you have more than enough data? It doesn’t really matter if all your data is in the first or third quadrant; you already have too much data (you really only needed two tuples, if your model was sufficiently simple) and so the distribution isn’t going to matter. How many parameters do you have in your model? It’s always a good question to start with. It’s also an easy thing to change to get better performance. One of the best things you could do in order to get a better sense of how to train models at work is to practice on small models like this one. That is, learn from examples. Do this as part of documenting your process on how to optimize any model.
+
+You often think of adding new data to a machine learning model to help you get the answer you want. Why are you adding new data? Often you need the new data to help you recover what reality was originally like. That is, the machine learning model is actually an inverse function - the inverse of e.g. a lidar and imagery data collection function. By adding new data to the model, you’re helping ensure the model is injective/faithful (and therefore invertible). Think instead in those terms directly. What can you do to make sure the data collection function doesn’t compress to such an extreme degree that it is no longer injective and surjective? It’s cheaper to compress more, so clearly there’s a conflict between cost and performance. For example, the SweepFCN models effectively do sparse sampling of the point cloud (it’s cheap, and still gives a good enough answer). Add data to make the external causal process injective and therefore invertible so you can write or create an inverse function.
+
+
 # TODO-ctca: How do category theory and order theory relate to causality?
 
 See [Causality](https://en.wikipedia.org/wiki/Causality). One could see the lack of preservation of
 joins and meets as a way of losing history in causal DAGs. For example, if you have the number 12
 you can't say for sure if it was generated by 6 * 2 or 3 * 4.
+
+Design experiment should have all your long shot ideas (big experiments). Parse a causal graph, somehow, from text with e.g. a transformer model. Check the same model works elsewhere in the same corpus. Involves parsing then immediately running, that is, parsing a function to then run on the same material. Recursively improves the model. Could also make improve improve process, for the parsing. It's ironic computers are so good at parsing a causal graph from a programming language but not from natural language; it seems they struggle with both probability and what ifs.
+
+# Could codesign work on neural networks?
+
+Could you use Cost-weighted graphs to design network topology? For example, the transformer model was designed based on network distances. Of course, this is also related to co-design.
+
+# Are morphisms equivalent to RL actions?
+
+Are morphisms analogous to actions? Are we able to abstract so far because we've made everything "improve" actions but many deep? Thinking more concretely in terms of Set, you can see many of the morphisms as sets of tuples (see currying question). Morphisms between these sets of two-tuples would then be improvements. Beyond this, you're moving to morphisms between sets of four tuples, unless you start to create abstractions (new words) (seems necessary).
+
+
+# How do causality and logic compare?
+
+In terms of a causal diagram, a “fact” is a piece of data (true statements). That is, you can take e.g. the fact that [V is a symmetric monoidal preorder] (alternatively, an “observation” about the world) to not just imply [(- + v) is a monotone map], but in some sense to be a causal implication of the preceding statement. That is, we use our casual faculties to perform mathematical proofs. In the case of math, there is only black and white (true and false). But, is logic really equivalent to causation? In other places, it seems this isn’t the case. Perhaps it’s only the case that logic diverges from causality when uncertainties (probabilities) or what-ifs are involved.
+
+You can also easily construct results based on different axioms; the same fact can be an axiom or a derived result. Which approach is better? If we use our causal faculties for logic, then it's easier to see how the same thing could happen in two different ways.
+
+
+# Partition the set of nouns
+
+In abstract algebra you use properties/adjectives/constraints applied to old words to come up with new facts (often, new words). Or we define a new adjective, which effectively partitions the set of nouns. Both of these activities create taxonomies (class hierarchies):
+- [Map of lattices - Wikipedia](https://en.wikipedia.org/wiki/Map_of_lattices)
+- https://en.wikipedia.org/wiki/List_of_types_of_functions
+- https://commons.wikimedia.org/wiki/File:Algebraic_structures_-_magma_to_group.svg
+- https://en.wikipedia.org/wiki/List_of_named_matrices
+- You should do the same for preorders, based on SSC (symmetric, monoidal or unital + associative, closed, has all joins). It would actually extend the map of lattices drawing.
+
 
 # TODO-cbow: Is composition a binary operation?
 
