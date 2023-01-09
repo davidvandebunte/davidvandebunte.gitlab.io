@@ -75,18 +75,15 @@ It's not trivial to build this file from the `.bbl` file they do include; see [b
 file to .bib file - TeX - LaTeX Stack
 Exchange](https://tex.stackexchange.com/questions/203177/convert-bbl-file-to-bib-file).
 
+Although the text is open source, practically speaking it's not as if someone else could edit it with these issues. For a fork of this content to provide any value (get any use) relative to the original author's copy of the content, these issues would have to be addressed.
+
 +++
 
 ## Reference materials
 
-See [Category theory](https://en.wikipedia.org/wiki/Category_theory). Examples of categories:
-- [Category of sets](https://en.wikipedia.org/wiki/Category_of_sets)
-- [Category of groups](https://en.wikipedia.org/wiki/Category_of_groups)
-- [Functor category](https://en.wikipedia.org/wiki/Functor_category)
-
 See [Category:Categories in category theory](
-https://en.wikipedia.org/wiki/Category:Categories_in_category_theory) for a more complete list of
-example categories, or [Category (mathematics) - Examples](
+https://en.wikipedia.org/wiki/Category:Categories_in_category_theory) for a list of example
+categories, or [Category (mathematics) - Examples](
 https://en.wikipedia.org/wiki/Category_(mathematics)#Examples).
 
 See also:
@@ -101,25 +98,27 @@ See also:
 [ssce]: https://docs.google.com/document/d/160G9OFcP5DWT8Stn7TxdVx83DJnnf7d5GML0_FOD5Wg/edit
 
 Don't run into the same issue someone else already struggled with; see the errata in [Seven-Sketches
-suggestions - Google Docs][ssce]. When you start a chapter, copy the comments in this errata to a
-new Google Doc and delete them as you process them. For simple issues (typos) fix the problem in the
-`tex` file so you don't have to read it over and over. For more complicated issues, add a +1 with
-your name in the author's Google Doc (if it bothered you).
+suggestions - Google Docs][ssce]. When you start a chapter or section, copy the comments in this
+errata to a new Google Doc and delete them as you process them. For simple issues (typos) fix the
+problem in the `tex` file so you don't have to read it over and over. For more complicated issues,
+add a +1 with your name in the author's Google Doc.
 
 If you're not at your Linux desktop, read [1803.05316.pdf](https://arxiv.org/pdf/1803.05316.pdf) in
 your browser with two columns up (select "Even Spreads" in Firefox to match `zathura`), and close
 the sidebar. Open a second tab scrolled to the solutions. If you are at it, use `zathura` to open
 the fixed pdf (and for all the advantages of `zathura`).
 
-Don't wait for a full build of your JB notes; open an article in Jupyter to check that e.g. the math
-renders as expected. Keep a marker in your notes showing up to which question you've answered, and
-up to which you've checked (your rendered version, not .md file) against the appendix. To mark where
-you've read, simply add headings and comments on the material.
+This commentary is organized by section, more granular than chapters but less than subsection. The
+top of every odd numbered page in the text includes the section (e.g. "1.2. What is Order?" on the
+top of pg. 17) which should make it easy to line up the book with the commentary, or vice-versa.
 
-When you're writing detailed answers, use your 1st monitor for Firefox, 2nd for `zathura`, and
-3rd/4th for either plain text notes or Inkscape. When you're producing general answers, put a
-different `zathura` instance on all three screens. See also Google Doc "Organized seven sketches
-errata" with miscellaneous comments.
+When you're writing detailed answers, use your 1st monitor for Firefox, 2nd for a historical/review
+`zathura`, and 3rd/4th for either plain text notes or Inkscape. Keep a new material `zathura`
+instance open on the 4th monitor. This way all 4 monitors move from older to newer from left to
+right; you'll want your historical zathura next to the old material in your browser (in general, you
+can only search what you already know in a browser) to review old commentary with old chapters.
+
+Arrows sometimes appear to be missing in `zathura`; see e.g. Equation 1.5 and Example 4.11. The solution is to zoom in more.
 
 % https://docs.google.com/document/d/1HC_BRM2deHxS7FiIto2bfrM81grKu8vDiI-JgCY5eXU/edit
 

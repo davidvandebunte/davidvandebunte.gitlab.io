@@ -20,6 +20,7 @@ parts:
       - file: notes/ssc-functors-nt.md
       - file: notes/ssc-adjunctions-and-data-migrations.md
       - file: notes/ssc-bonus-limits-colimits.md
+      - file: notes/ssc-section-4-2.md
   - caption: Statistical Rethinking
     chapters:
       - file: notes/sr2-review.md
@@ -111,3 +112,4 @@ parts:
       - file: notes/improve-expand-focus.md
       - file: notes/improve-design-experiments.md
       - file: notes/improve-estimate-subplan-weight.md
+      - file: notes/observations.md

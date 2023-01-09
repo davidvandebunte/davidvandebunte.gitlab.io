@@ -15,7 +15,11 @@ kernelspec:
 
 ## 2.5.1. Monoidal closed preorders
 
-See also [Closed monoidal category](https://en.wikipedia.org/wiki/Closed_monoidal_category).
+Prerequisite to [Closed monoidal category](https://en.wikipedia.org/wiki/Closed_monoidal_category).
+
+With the background of Chp. 3, read [Closed category](https://en.wikipedia.org/wiki/Closed_category) for a better explanation of how categories of this type enrich themselves. It looks like the author is defining the word "hom-element" as the hom-set for the category; perhaps because preorders have at most one element in their hom-set we can get away with this.
+
++++
 
 *Exercise* 2.82.
 
@@ -106,22 +110,68 @@ means (v ⊸ -) is a right adjoint however, and this definition has the same str
 
 +++
 
+*Example* 2.83.
+
+We start with:
+
+$$
+a + x ≥ y
+$$
+
+Subtracting $x$ from both sides:
+
+$$
+a ≥ y - x
+$$
+
+Applying $max(0,-)$ to both sides:
+
+$$
+max(0,a) ≥ max(0,y - x)
+$$
+
+How is $v ⊸ w$ an example of a "single-use v-to-w converter"? If you have a $v$, you can use the monoidal product (+) to get a $w$ because $v + max(0, w - v) ≤ w$.
+
++++
+
 *Exercise* 2.84.
 
 ![x](ssc-exercise-2-84.svg)
+
+Note $w∨ ¬v ⇔ v ⇒ w$.
+
+How is $v ⊸ w$ an example of a "single-use v-to-w converter"? If you have a $v$, you can use the monoidal product (∧) to get a $w$ because $v ∧ (w∨ ¬v) = v ∧ w ≤ w$.
+
++++
+
+*Remark* 2.89.
+
+Some examples of categories enriched in themselves (i.e. closed):
+- **Bool**-category **Bool**
+- **Cost**-category **Cost**
+- **Set**-category **Set**
 
 +++
 
 ## 2.5.2. Quantales
 
-See also [Infimum and supremum](https://en.wikipedia.org/wiki/Infimum_and_supremum) and [Complete
-lattice](https://en.wikipedia.org/wiki/Complete_lattice).
+See also [Infimum and supremum](https://en.wikipedia.org/wiki/Infimum_and_supremum).
+
+Prerequisite to [Quantale](https://en.wikipedia.org/wiki/Quantale). A unital commutative quantale is a symmetric monoidal closed preorder that has all joins. A unital quantale is a monoidal closed preorder that has all joins. This corresponds to the following alternative definition from the Wikipedia article:
+
+> A unital quantale may be defined equivalently as a monoid in the category Sup of complete join semi-lattices.
+
+The primary definition used by the Wikipedia article (based on a distributive property) is discussed in Proposition 2.98 below.
+
+If we strip the term "unital" from quantale we wouldn't be able to call the preorder "monoidal" anymore because that would require unitality. A monoid without an identity element is a semigroup; the term semigroup isn't used too often because it's easier to say a set that has nothing but a closed (see [Magma (algebra)](https://en.wikipedia.org/wiki/Magma_(algebra))) associative binary operation. The Wikipedia article includes this definition by saying they are sometimes called *complete [residuated semigroups](https://en.wikipedia.org/wiki/Residuated_lattice#Residuated_semilattice)*.
+
+At a high level the term "quantale" brings together order theory and basic algebraic structures.
 
 *Exercise* 2.92.
 
-1a. False
-1b. ∞
-2a. The usual logical or
+1a. False \
+1b. ∞ \
+2a. The usual logical or \
 2b. The minimum of the numbers (using the usual order of the reals)
 
 +++
@@ -139,9 +189,19 @@ Yes; the join of the empty set will be the empty set (the least element). The jo
 set (e.g. $\{\{T\}\}$ or $\{\{F\}\}$ in **Bool**) will be the same element. All sets of subsets will
 have a join that is the union of the included subsets.
 
+*Proposition 2.96*
+
+This proof is tricky; see [category theory - Joins and Meets in Preorder - Mathematics Stack Exchange](https://math.stackexchange.com/questions/3846876/joins-and-meets-in-preorder) for a question specific to it and this text. To "have all joins" doesn't mean (as in the definition of a [Semilattice - Wikipedia](https://en.wikipedia.org/wiki/Semilattice)) that a join exists for *any nonempty finite subset*. That is, a semilattice has all nonempty joins. A preorder that has all joins has all joins in the sense of Definition 2.90 here; a join exists even for the empty set. A preorder has all joins if it has a bottom element, which can obviously always serve as the meet of any subset that would otherwise not have one. The author intends to restrict quantales to being based on a preorder that is a [Complete lattice](https://en.wikipedia.org/wiki/Complete_lattice).
+
 +++
 
 ## 2.5.3. Matrix multiplication in a quantale
+
+Why is it necessary to be closed and have all joins to support matrix multiplication? The general definition of matrix multiplication uses joins, i.e. they seem to be required by how we choose to define our general form form of matrix multiplication. It's likely that being closed is necessary so that we have the distributive law as in Eq. (2.88).
+
+For a longer list of fields that matrix multiplication is possible in, see [torch.Tensor](https://pytorch.org/docs/stable/tensors.html).
+
++++
 
 *Exercise* 2.103.
 
@@ -205,7 +265,7 @@ $$
 
 *Exercise* 2.105.
 
-```{code-cell}
+```{code-cell} ipython3
 import numpy as np
 
 inf = float("inf")

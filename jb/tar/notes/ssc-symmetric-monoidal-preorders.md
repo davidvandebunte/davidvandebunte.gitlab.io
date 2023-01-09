@@ -27,6 +27,7 @@ monoidal category](https://en.wikipedia.org/wiki/Symmetric_monoidal_category) fo
 definition.
 
 +++
+
 *Exercise* 2.5.
 
 This won't work, because the monoidal product doesn't satisfy requirement `(a)`. Consider the
@@ -45,6 +46,7 @@ x_1 \otimes x_2 & = 4 \not\leq 1 = y_1 \otimes y_2 \\
 $$
 
 +++
+
 *Exercise* 2.8.
 
 See also [Monoid](https://en.wikipedia.org/wiki/Monoid).
@@ -56,6 +58,7 @@ discrete preorder, it satisfies `(a)` because $x_1$ will always equal $y_1$ and 
 as the order operator this condition comes down to $x_1 \otimes x_2 = x_1 \otimes x_2$.
 
 +++
+
 ## 2.2.2. Introducing wiring diagrams
 
 For more background, see [String diagram](https://en.wikipedia.org/wiki/String_diagram).
@@ -97,7 +100,8 @@ Using transitivity, we can combine all three of these equations to get Equation 
 
 To answer `3.`, the symmetry axiom does not need to be invoked because wires do not cross.
 
-+++
++++ {"jp-MarkdownHeadingCollapsed": true, "tags": []}
+
 ## 2.2.3. Applied examples
 
 *Exercise* 2.21.
@@ -111,6 +115,7 @@ product that no longer reacts with another reactant that the original reactants 
 with.
 
 +++
+
 ## 2.2.4. Abstract examples
 
 *Exercise* 2.29.
@@ -128,6 +133,7 @@ https://en.wikipedia.org/wiki/Boolean_algebra#Monotone_laws) and [Monotonic func
 In Boolean functions](https://en.wikipedia.org/wiki/Monotonic_function#In_Boolean_functions).
 
 +++
+
 *Exercise* 2.31.
 
 Notice this question only asks for a monoidal structure, not a symmetric monoidal preorder
@@ -180,16 +186,18 @@ x_1 \ast x_2 \leq x_1 \ast y_2 \leq y_1 \ast y_2
 $$
 
 +++
+
 *Exercise* 2.33.
 
 No, because $0 | n = \infty \neq 0$.
 
 +++
+
 *Exercise* 2.34.
 
 In the following table we use 0 for no, 1 for maybe, and 2 for yes:
 
-```{code-cell}
+```{code-cell} ipython3
 import pandas as pd
 
 preorder = [0, 1, 2]
@@ -239,6 +247,7 @@ min(x_1, x_2) \leq min(x_1, y_2) \leq min(y_1, y_2)
 $$
 
 +++
+
 *Exercise* 2.35.
 
 [ist]: https://en.wikipedia.org/wiki/Intersection_(set_theory)
@@ -283,6 +292,7 @@ x_1 \cap x_2 \leq x_1 \cap y_2 \leq y_1 \cap y_2
 $$
 
 +++
+
 *Exercise* 2.36.
 
 $\def\NN{{\bf N}}\def\bold#1{{\bf #1}}$A list of example statements (including those that were
@@ -303,6 +313,7 @@ we can use in the following proof (in a style suggested by Example 1.123):
 ![x](./ssc-exercise-2-36.svg)
 
 +++
+
 *Exercise* 2.39.
 
 The $I$ remains the identity because in the original symmetric monoidal preorder we had $I \otimes x
@@ -310,6 +321,7 @@ The $I$ remains the identity because in the original symmetric monoidal preorder
 associative and commutative it should remain so.
 
 +++
+
 *Exercise* 2.40.
 
 As a preorder $\bold{Cost}^{op}$ is $([0, ∞], \leq)$. In this preorder smaller numbers are "better"
@@ -318,9 +330,11 @@ As a preorder $\bold{Cost}^{op}$ is $([0, ∞], \leq)$. In this preorder smaller
 The monoidal unit remains 0, and the monoidal product remains +.
 
 +++
+
 ## 2.2.5. Monoidal monotone maps
 
 +++
+
 *Exercise* 2.43.
 
 To show this is indeed a monotone map, we must show $x ≤_B y$ implies $f(x) ≥_{Cost} f(y)$ for all
@@ -358,6 +372,7 @@ Yes, $g$ is a strict monoidal monotone.
 % TODO-answer
 
 +++
+
 *Exercise* 2.44.
 
 To show $d$ is a monotone map, we must show $x ≥_{Cost} y$ implies $d(x) ≤_B d(y)$ for all $x,y \in
@@ -445,6 +460,7 @@ $$
 Yes, $u$ is a strict monoidal monotone.
 
 +++
+
 *Exercise* 2.45.
 
 To answer `1.`, see the same question in Exercise 2.31.
