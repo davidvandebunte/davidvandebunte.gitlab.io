@@ -41,6 +41,10 @@ For `2.` we can use the same Lawvere metric space from Exercise 2.67. The new **
 
 ## 2.4.2. Enriched functors
 
+This definition is definitely not enough to understand [Enriched functors](https://en.wikipedia.org/wiki/Enriched_category#Enriched_functors). If you have read ahead enough to understand that functors preserve identity and composition, you can see this as a statement that these are preserved. If previously there was a morphism between x₁ and x₂ (in a **Bool**-category, one is less than the other), then a functor must map this morphism to another morphism between F(x₁) and F(x₂) in a second **Bool**-category that respects composition.
+
+The ⊗ operator serves as the associative operator connected to the enriched category (that emulates the composition of morphisms). For the enriched functor to respect the enriched structure means for it to respect the structure that the category includes beyond just identity and associativity: in this case Definition 2.2. defines in e.g. `(a)`, `(b)`, and `(d)` some additional structure that might need to be preserved.
+
 *Exercise* 2.73.
 
 A **Cost**-category is a Lawvere metric space. When we add the "skeletal" adjective (i.e.
