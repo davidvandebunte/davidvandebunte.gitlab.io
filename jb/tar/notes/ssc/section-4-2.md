@@ -92,6 +92,8 @@ See Remark 2.89. We will define 𝓥$(Φ(x,y),Φ(x',y'))$ to equal Φ(x,y) ⊸ �
 (𝓧ᵒᵖ$(x,x')$ ⊗ 𝓨$(y,y')$) ⊗ Φ(x,y) ≤ Φ(x',y') \
 𝓧ᵒᵖ$(x,x')$ ⊗ Φ(x,y) ⊗ 𝓨$(y,y')$ ≤ Φ(x',y')
 
+In the author's solution, he almost surely meant to refer to Definition 2.69 rather than Definition 2.41 (which is specific to monotone maps).
+
 +++
 
 *Exercise* 4.10.
@@ -126,16 +128,16 @@ import numpy as np
 inf = float("inf")
 MX1 = np.array([[0, inf, 3, inf], [2, 0 , inf, 5], [inf, 3, 0 , inf], [inf, inf, 6, 0]])
 MY1 = np.array([[0, 4, 3], [3, 0, inf], [inf, 4, 0]])
-MYΦ = np.array([[inf, inf, inf], [11, inf, inf], [inf, inf, inf], [inf, 9, inf]])
+MΦ = np.array([[inf, inf, inf], [11, inf, inf], [inf, inf, inf], [inf, 9, inf]])
 
 # See https://stackoverflow.com/a/55986817/622049
 MX2 = np.min(MX1[:,:,None] + MX1[None,:,:], axis=1)
 MX3 = np.min(MX2[:,:,None] + MX1[None,:,:], axis=1)
 MY2 = np.min(MY1[:,:,None] + MY1[None,:,:], axis=1)
-temp = np.min(MX3[:,:,None] + MYΦ[None,:,:], axis=1)
+temp = np.min(MX3[:,:,None] + MΦ[None,:,:], axis=1)
 res = np.min(temp[:,:,None] + MY2[None,:,:], axis=1)
 
-MX1, MX2, MX3, MYΦ, MY1, MY2, res
+MX1, MX2, MX3, MΦ, MY1, MY2, res
 ```
 
 ## 4.2.3. Back to co-design diagrams

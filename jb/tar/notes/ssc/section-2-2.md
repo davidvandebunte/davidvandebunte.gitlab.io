@@ -21,10 +21,7 @@ $$
 
 *Definition* 2.2.
 
-See [Monoidal category - Monoidal
-preorders](https://en.wikipedia.org/wiki/Monoidal_category#Monoidal_preorders) and [Symmetric
-monoidal category](https://en.wikipedia.org/wiki/Symmetric_monoidal_category) for an alternative
-definition.
+See [Monoidal category - Monoidal preorders](https://en.wikipedia.org/wiki/Monoidal_category#Monoidal_preorders) and [Symmetric monoidal category](https://en.wikipedia.org/wiki/Symmetric_monoidal_category) for an alternative definition. We use the term "monoidal product" for the ⊗ operator because in general the "most important" example of a monoid in this context is going to be the real numbers with multiplication as the ⊗ operator. The usual formula for matrix multiplication (and by extension, for dot products) is based on this monoid; see Section 2.5.3.
 
 +++
 

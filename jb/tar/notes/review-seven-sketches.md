@@ -95,13 +95,28 @@ See also:
 
 ## Personal workflow
 
+### Starting a chapter
+
 [ssce]: https://docs.google.com/document/d/160G9OFcP5DWT8Stn7TxdVx83DJnnf7d5GML0_FOD5Wg/edit
 
-Don't run into the same issue someone else already struggled with; see the errata in [Seven-Sketches
-suggestions - Google Docs][ssce]. When you start a chapter or section, copy the comments in this
-errata to a new Google Doc and delete them as you process them. For simple issues (typos) fix the
-problem in the `tex` file so you don't have to read it over and over. For more complicated issues,
-add a +1 with your name in the author's Google Doc.
+Don't run into the same issue someone else already struggled with; use the errata in [Seven-Sketches
+suggestions][ssce]. For a strategy for how to use it, see the following.
+
+At the start of every chapter, copy the chapter's comments to a new Google Doc (for an example, see [Review "Seven-Sketches suggestions"](https://docs.google.com/document/d/1HC_BRM2deHxS7FiIto2bfrM81grKu8vDiI-JgCY5eXU/edit)). As you read errors/suggestions in your copy of the errata, strikethrough entries that you've read and documented in this review (Ctrl-Alt-Shift-5 in Google Docs).
+
+For simple issues (typos) fix the problem in the `tex` source of the PDF and rebuild it. Strikethrough the error, and label it green (to reflect your classification). You don't want to read these over and over. However, you also don't want to make major changes that significantly affect e.g. page numbers you may have naturally memorized or affect the map between your commentary and the commentary of others.
+
+For more complicated issues, add a +1 with your name in the author's Google Doc. Then strikethrough the comment in your own copy of the errata and label it blue (to reflect your classification). Then copy/move the commentary to these html notes. You'll want a record of all the errors this in book that affected you in your own review. Why? Similar to typos, you don't want to have to search for them over and over. When you read your old answers and commentary (review your review), you aren't going to want to go back to the original errata. Before you started copying errors/commentary to your own commentary, you got confused several times when you were trying to understand a particular section and only the author's original errata had commentary, not your content.
+
+Commentary in the errata that didn't bother you, didn't seem to be worth copying, or that you didn't understand and therefore ignored, remain black with a strikethrough. If you don't know the status of whether you've copied the comment somewhere, leave it black.
+
+Ideally you'd "move" his fixes but you can't because you don’t maintain the content; instead you must strike them out in a copy to indicate that you’ve "moved" them. You could also just delete the comments in your copy, but on the off chance that you want to bring in new errors that others bring up later this allows for it. That is, you maintain a monotone map from one Google document to the other that labels errata you’ve addressed as processed. You also effectively maintain a monotone map from this Google document to these html notes through chapter/section numbering, etc.
+
+You really have to take this approach with *any* read-only material that you need to edit: everything must be an annotation. You don't want to look for annotations in two places (in both the author's annotations and your own) so you move his annotations to your own.
+
++++
+
+### Reading a chapter
 
 If you're not at your Linux desktop, read [1803.05316.pdf](https://arxiv.org/pdf/1803.05316.pdf) in
 your browser with two columns up (select "Even Spreads" in Firefox to match `zathura`), and close
@@ -120,7 +135,9 @@ can only search what you already know in a browser) to review old commentary wit
 
 Arrows sometimes appear to be missing in `zathura`; see e.g. Equation 1.5 and Example 4.11. The solution is to zoom in more.
 
-% https://docs.google.com/document/d/1HC_BRM2deHxS7FiIto2bfrM81grKu8vDiI-JgCY5eXU/edit
+### Finishing a section
+
+Build the notes you've only been looking at in Jupyter, and review the rendered html at the same time you review the answers to the questions (a double review).
 
 +++
 

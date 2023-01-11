@@ -55,7 +55,7 @@ Even if you don't use `--max-backlog=-1` with rclone to get overall progress, it
 
 See also your comments in learn-unix-utilities.md about `cp -r` confusion. See also [ubuntu - How to copy-merge two directories? - Unix & Linux Stack Exchange](https://unix.stackexchange.com/questions/149965/how-to-copy-merge-two-directories/149986#149986). You aliased `rsync` to `ry`, should you alias `rclone` to `rc`? Or create a `cp` alias that uses `rclone`?
 
-+++ {"tags": []}
++++ {"tags": [], "jp-MarkdownHeadingCollapsed": true}
 
 ## Review code
 
@@ -67,7 +67,7 @@ Part of the power of “no” is saying "no" to code reviews. It’s better to s
 
 +++
 
-# Prefer fact to answer
+## Prefer fact to answer
 
 Rather than "q-" and "a-" should you think in terms of "q-" and "f-" where f stands for fact? You like how this contrasts with counterfactual. It's also a fact that "Son child Dad" not so much an answer (the fact can exist without someone asking the question). You can also state the same fact in the opposite way with "Dad parent Son" without regard to any question. It also makes it clear you rely on these "facts" being absolutely true, with no uncertainty. This is related to your recent approach where many experiments (facts) are required to answer a question more confidently (never completely, if the question is large at all). That is, you can really only answer really specific questions fully confidently. See:
 - https://en.wikipedia.org/wiki/Fact
@@ -76,6 +76,63 @@ Rather than "q-" and "a-" should you think in terms of "q-" and "f-" where f sta
 
 Perhaps you can also get more specific with question, perhaps only allowing why questions (why-):
 - https://en.wikipedia.org/wiki/Why
+
++++ {"tags": []}
+
+## Fix slow build
+
+Prefer to local nginx server because it's faster, and encourages you to change your code to make it faster:
+- file:///home/vandebun/source/personal-notes/bazel-bin/jb/extract_build_book/tmp/_build/html/notes/about.html
+
+Of course you'll always have a slow build because you need to convert a docker image to the OCI format, then back to a docker image to do docker_run_and_commit. This really slow feedback is bad for publishing. When you're trying to organize your notes in a way that involves renames and riskier changes, this drastically slows down progress. It has been especially frustrating today when you’re trying to clean up the JB cache after some renames. You’re not going to reorganize your notes unless it’s fast to do so.
+
+BTW, to fix a broken jb build (because of renames) you have to (1) pull the latest jupyter_cache directory (and database) into your local copy of the repo (1) delete the entries from 2 tables in the SQL database and (3) as you get “KeyError: 'Cache record not found for NB with hashkey: 181d0c3c549e42ec794c4f93bcbae029'” errors, delete them from the cache as in “rm -rf jb/jupyter_cache/executed/181d0c3c549e42ec794c4f93bcbae029/”. It’s the third step that is painfully slow (once you discover it’s what you need to do).
+
+It seems quite likely you're going to have to go back to docker to be able to use the GPU anyways (assuming you are interested in that). But based on this issue, it seems it's possible:
+- https://github.com/containers/podman/issues/15863
+
+You are interested in podman for rootless containers and avoiding all the headaches associated with file permissions when you use docker run. Besides all the extra code you need to write, this has led to e.g. slow builds when your UID is other than 1000 at work (affecting more than just you, and you on multiple machines). In fact, could this be a quick solution to your slow build? If you use podman does it suddenly go away? You should start by getting rid of the GitLab build, though.
+
+That's not all there is to a rename; you also have to change the entries in the TOC and add redirects to `public/_redirects`. It's really not a surprise that you avoid this.
+
+You should always build and commit the jb cache locally, to get in that habit. Don’t let GitLab build it. You need a script to automatically commit and push it, as you have elsewhere.
+
+This slowness also drastically slows you down when you want to add a package to your docker image. You often don’t bother because you don’t want to wait. You’d like to install Xarray right now. It seems like Xarray is how to represent a "database" in the sense of SSC. When you use pandas, it's not clear that dimensions are the same (even if they are the same length). You'd also like to be able to name pandas dataframes. Of course, you may want custom multiplication of arrays anyways.
+
+If you want to "Prefer to local nginx server" can you get rid of the `pn-nginz` container? This exists in a broken state when you reboot vdd and so makes GitLab builds break. You're also spamming your repo with a bunch of tags (`test-jupyter_cache ...`) right now, which probably also wastes a little space in s3.
+
++++
+
+## Prefer dashes to underscores
+
+Prefer dashes to underscores in filenames and directories. So they show up properly in search:
+https://stackoverflow.com/q/119312/622049
+
+Also avoids shift; i.e. faster to type.
+
+However, you should prefer underscores for python scripts you may later need to import (to avoid a rename when you do want to do so).
+
++++
+
+## Time snacks
+
+Set min 45 minute timer for snack, then have a bigger snack. Don't have one piece of a carrot at a time.
+
+Also have the snack the first time you check the timer and it's OK to. You like how this doesn't interrupt you, the same as setting your watch for Salmon to finish. It seems like you're training yourself to *not* constantly think about food; thinking about food doesn't mean that you're going to get food. Perhaps the same should be applied to when you wake up at night. If it's not past a certain time, you don't get a snack. You'd need your watch (or some clock) by your bed.
+
+You like how this is also a reminder to drink water, and perhaps check your email. It's essentially a time to deal with all pending interrupts, seeing yourself as a computer.
+
++++
+
+## SSC miscellany
+
+Perhaps greater and less than is so important to humans because we often think in terms of gravity. Consider saying above and below or “as high as” rather than the other language when you’re stuck. To think in terms of preorders rather than linear orders is then to think in another dimension - left and right - as well. Two things can be the same height but not be “comparable” because they are at different places across left and right. It seems like it all comes back to our 3-dimensional thinking. Are meets the way to “go down” and joins the way to “go up” in this view? If you “want” to go up, do you use the join (i.e. addition or the logical or). In Cost, is this why we have to reverse the order? Why is I < in the definition of a V-cat?
+
+Does even forming a sentence require thinking ahead (creating an action graph)? You sometimes write the first few words of a sentence while half-thinking, and then need to erase it when you realize what you actually want to say. You often try to consider all the possible responses someone could give to a text before you write it; the more you plan ahead the more likely you’ll be able to get them to respond in a way that’s OK with you. In some sense, talking is publishing.
+
+You often want to redo old questions rather than checking the answer. Why? Do you want to confirm you remember all the dependencies that led to the result? If you wanted to rederive every result, then you wouldn’t be reading books written by others (essentially taking their answers). You also wouldn’t maintain any notes; you’d prefer to rederive the results from scratch regularly. The point of writing down the answer was for you to be able to refer to it later, and if you never refer to it the effort you put into writing down the answer was mostly wasted (at least with respect to you).
+
+To some extent you've even memorized the numbers associated with definitions are part of reading this book (e.g. Definition 2.46). You've also likely memorized the location of results on pages. The location of results on pages is why many books always start chapters on only odd-numbered pages (so results stay on the same side of the page through minor edits of other chapters). Hence, you really don't need to publish what you've changed back to the source.
 
 +++
 
@@ -99,7 +156,7 @@ Everything has been said before, probably even by you (in your notes).
 
 +++
 
-# Bazel vs. dvc
+## Bazel vs. dvc
 
 From [Overview | Data Version Control · DVC](https://dvc.org/doc/user-guide/overview#build-automation-tools):
 
