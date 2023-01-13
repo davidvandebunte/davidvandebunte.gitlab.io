@@ -90,6 +90,8 @@ This also has some nasty side effects when you're doing straightforward work. Ev
 
 BTW, to fix a broken jb build (because of renames) you have to (1) pull the latest jupyter_cache directory (and database) into your local copy of the repo (1) delete the entries from 2 tables in the SQL database and (3) as you get “KeyError: 'Cache record not found for NB with hashkey: 181d0c3c549e42ec794c4f93bcbae029'” errors, delete them from the cache as in “rm -rf jb/jupyter_cache/executed/181d0c3c549e42ec794c4f93bcbae029/”. It’s the third step that is painfully slow (once you discover it’s what you need to do).
 
+Faster than step (3) is to take note of the cache md5 keys in step (2) in the `nbcache` table and delete them then.
+
 It seems quite likely you're going to have to go back to docker to be able to use the GPU anyways (assuming you are interested in that). But based on this issue, it seems it's possible:
 - https://github.com/containers/podman/issues/15863
 
