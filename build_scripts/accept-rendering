@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+set -x -o errexit -o nounset
+
+# This file is both timestamped and required for caching to work:
+# bazel-bin/jb/extract_build_book/tmp/_build/.jupyter_cache/global.db
+bazel_cache="bazel-bin/jb/extract_build_book/tmp/_build/.jupyter_cache"
+if ! diff --brief jb/jupyter_cache/executed/ $bazel_cache/executed/; then
+    ./build_scripts/push-dvc-dpath \
+        bazel-bin/jb/extract_build_book/tmp/_build/.jupyter_cache/ jb/jupyter_cache
+fi

@@ -7,21 +7,22 @@ parts:
   - caption: Seven Sketches
     chapters:
       - file: notes/review-seven-sketches.md
-      - file: notes/ssc/section-1-1.md
-      - file: notes/ssc/section-1-2.md
-      - file: notes/ssc/section-1-3.md
-      - file: notes/ssc/section-1-4.md
-      - file: notes/ssc/section-2-2.md
-      - file: notes/ssc/section-2-3.md
-      - file: notes/ssc/section-2-4.md
-      - file: notes/ssc/section-2-5.md
-      - file: notes/ssc/section-3-1.md
-      - file: notes/ssc/section-3-2.md
-      - file: notes/ssc/section-3-3.md
-      - file: notes/ssc/section-3-4.md
-      - file: notes/ssc/section-3-5.md
-      - file: notes/ssc/section-4-2.md
-      - file: notes/ssc/section-4-3.md
+      - file: notes/ssc/1-1.md
+      - file: notes/ssc/1-2.md
+      - file: notes/ssc/1-3.md
+      - file: notes/ssc/1-4.md
+      - file: notes/ssc/2-2.md
+      - file: notes/ssc/2-3.md
+      - file: notes/ssc/2-4.md
+      - file: notes/ssc/2-5.md
+      - file: notes/ssc/3-1.md
+      - file: notes/ssc/3-2.md
+      - file: notes/ssc/3-3.md
+      - file: notes/ssc/3-4.md
+      - file: notes/ssc/3-5.md
+      - file: notes/ssc/4-2.md
+      - file: notes/ssc/4-3.md
+      - file: notes/ssc/4-4.md
   - caption: Statistical Rethinking
     chapters:
       - file: notes/sr2-review.md
