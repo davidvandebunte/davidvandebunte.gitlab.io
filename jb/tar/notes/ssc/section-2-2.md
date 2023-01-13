@@ -11,6 +11,8 @@ kernelspec:
   name: python3
 ---
 
++++ {"tags": []}
+
 # 2.2. Symmetric monoidal preorders
 
 ## 2.2.1. Definition and first examples
@@ -21,7 +23,11 @@ $$
 
 *Definition* 2.2.
 
-See [Monoidal category - Monoidal preorders](https://en.wikipedia.org/wiki/Monoidal_category#Monoidal_preorders) and [Symmetric monoidal category](https://en.wikipedia.org/wiki/Symmetric_monoidal_category) for an alternative definition. We use the term "monoidal product" for the ⊗ operator because in general the "most important" example of a monoid in this context is going to be the real numbers with multiplication as the ⊗ operator. The usual formula for matrix multiplication (and by extension, for dot products) is based on this monoid; see Section 2.5.3.
+See also [Monoidal category - Monoidal preorders](https://en.wikipedia.org/wiki/Monoidal_category#Monoidal_preorders) for an alternative definition of non-symmetric monoidal preorders. The full definition of a [Monoidal category](https://en.wikipedia.org/wiki/Monoidal_category) is not introduced (even roughly) until section 4.4.3.
+
+You can remember the term "monoidal product" for the ⊗ operator because in general the "most important" example of a monoid in this context is going to be the real numbers with multiplication as the ⊗ operator. The usual formula for matrix multiplication (and by extension, for dot products) is based on this monoid; see Section 2.5.3. However, the symbol ⊗ (`\otimes` or "circled times") is primarily associated with the [Tensor product](https://en.wikipedia.org/wiki/Tensor_product) (see [The Tensor Product, Demystified](https://www.math3ma.com/blog/the-tensor-product-demystified)) and is likely the original source of this word. A final option is to associate this word to the "Cartesian product" when you are working with **Set**-categories (regular categories) (see Example 4.49).
+
+In the short term you're going to have to accept "+" as a "monoidal product" however. The article [Monoid](https://en.wikipedia.org/wiki/Monoid) tries to avoid anything but the language "binary operator" in its definition.
 
 +++
 
@@ -45,8 +51,6 @@ $$
 +++
 
 *Exercise* 2.8.
-
-See also [Monoid](https://en.wikipedia.org/wiki/Monoid).
 
 The element $e$ in the monoid $(M, \ast, e)$ serves as $I$ in the discrete preorder $(\Cat{Disc}_M, =,
 \ast, e)_{}$. The monoid multiplication $\ast$ serves as the monoidal product $\otimes$ and
@@ -325,6 +329,10 @@ As a preorder $\bold{Cost}^{op}$ is $([0, ∞], \leq)$. In this preorder smaller
 (greater) as in golf.
 
 The monoidal unit remains 0, and the monoidal product remains +.
+
+Note that (confusingly) we use the symbol $≤_{X^{op}}$ to mean the same as ≥ (where ≥ has its normal meaning in a linear order); see the first example in [Opposite category](https://en.wikipedia.org/wiki/Opposite_category). See also "is parent of" as discussed in [Relation (mathematics)](https://en.wikipedia.org/wiki/Relation_(mathematics)). Given an arrow, the source is the first argument to the operator (e.g. ≤) and the target is the second argument. Visually:
+
+![x](exercise-2-40.svg)
 
 +++
 

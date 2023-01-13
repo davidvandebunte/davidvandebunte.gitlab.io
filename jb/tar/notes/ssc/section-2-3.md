@@ -22,11 +22,15 @@ $$
 
 ## 2.3.1. $\mathcal{V}$-categories
 
-A 𝓥-category is a generalization of a category, see [Enriched category](https://en.wikipedia.org/wiki/Enriched_category). In the context of Chp. 2 we can define "the" hom-object (in the language of Definition 2.46, defining a 𝓥-category) as a boolean or real number. In a **Set**-category (a regular category) we could say "the" hom-object is a set and hence we call it a hom-set. When we say "the" hom-element (in the language of Definition 2.79, defining a quantale) we are talking about $v ⊸ w$, which is only the same as the hom-object if the category is self-enriched (see Remark 2.89).
+A 𝓥-category is a generalization of a category, see [Enriched category](https://en.wikipedia.org/wiki/Enriched_category). However, the definition given in this section is *not* of an enriched category (as Wikipedia gives it); see section 4.4.4. for that definition.
+
+In the context of Chp. 2 we can define "the" hom-object (in the language of Definition 2.46, defining a 𝓥-category) as a boolean or real number. In a **Set**-category (a regular category) we could say "the" hom-object is a set and hence we call it a hom-set. When we say "the" hom-element (in the language of Definition 2.79, defining a quantale) we are talking about $v ⊸ w$, which is only the same as the hom-object if the category is self-enriched (see Remark 2.89).
 
 With either understanding you can see enrichment as labeling the edges of a graph; the hom-object is the label. However, this labelling has to be done in a way that respects e.g. the triangle equality.
 
 You should usually read 𝓥-category as "monoidal category" rather than "V category" audibly, only because it is more semantically meaningful. The author actually defines it to mean "symmetric monoidal category" in Chp. 2; and in addition only deals with the special case of preorders.
+
+To remember part `(b)` of this definition at this point, you should really think of it in terms of **Bool**: if x ≤ y and y ≤ x, then x ≤ z. In Chp. 4 we'll see how it effectively defines composition.
 
 +++
 

@@ -58,9 +58,9 @@ The Hasse diagram and profunctor:
 
 ![x](./ssc-exercise-4-4.svg)
 
-A monotone map to **Bool** defines an upper set; see Proposition 1.78. One possible interpretation is that the upper set defines "what works" in this particular context. If we get more resources i.e. a new $y'$ where $y ≤_Y y'$ then what we had working should still work. If we have fewer needs i.e. a new $x'$ where $x' ≤_X x$ (so that in the opposite category $x ≤_{X^{op}} x'$) then the same should also be possible. If "this book" was enough to understand a category, then it should also be enough to understand a monoid (which is lesser). Note that (confusingly) we have $≤_{X^{op}}$ ⇔ ≥ (where ≥ has its normal meaning in a linear order); see the first example in [Opposite category](https://en.wikipedia.org/wiki/Opposite_category). See also "is parent of" as discussed in [Relation (mathematics)](https://en.wikipedia.org/wiki/Relation_(mathematics)). Given an arrow, the source is the first argument to the operator (e.g. ≤) and the target is the second argument. Visually:
+A monotone map to **Bool** defines an upper set; see Proposition 1.78. One possible interpretation is that the upper set defines "what works" in this particular context. If we get more resources i.e. a new $y'$ where $y ≤_Y y'$ then what we had working should still work. If we have fewer needs i.e. a new $x'$ where $x' ≤_X x$ (so that in the opposite category $x ≤_{X^{op}} x'$) then the same should also be possible. If "this book" was enough to understand a category, then it should also be enough to understand a monoid (which is lesser). Note that (confusingly) we use the symbol $≤_{X^{op}}$ to mean the same as ≥ (where ≥ has its normal meaning in a linear order); see comments on Exercise 2.39 in [](./section-2-2.md). In this context:
 
-![x](ssc-exercise-4-10-comment.svg)
+![x](./ssc-exercise-4-10-comment.svg)
 
 +++
 
