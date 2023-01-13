@@ -5,7 +5,6 @@ import shutil
 import sys
 
 from pathlib import Path
-from datetime import datetime
 
 from dvc.repo import Repo
 
@@ -17,16 +16,13 @@ def push_dvc_dpath(in_dpath: Path, out_dpath: Path):
     shutil.rmtree(out_dpath)
     push_dpath = shutil.copytree(in_dpath, out_dpath)
     repo.add(str(push_dpath))
-    tag_name = "test-" + str(push_dpath.name) + "-" + datetime.now().strftime("%Y%m%d-%H%M%S")
-    subprocess.check_output(["git", "add", str(push_dpath.parent)])
+    subprocess.check_output(["git", "add", str(push_dpath.parent / "jupyter_cache.dvc")])
     git_status = subprocess.check_output(["git", "status", "--short"])
     print("$ git status --short")
     print(git_status)
     if git_status:
         subprocess.check_output(["git", "commit", "-m", f"{push_dpath.name}: Add dvc edits"])
-    subprocess.check_output(["git", "tag", tag_name])
     repo.push(str(push_dpath) + ".dvc")
-    subprocess.check_output(["git", "push", "-o", "ci.skip", "origin", tag_name])
     return 0
 
 
