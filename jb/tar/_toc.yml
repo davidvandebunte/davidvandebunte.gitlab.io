@@ -23,6 +23,7 @@ parts:
       - file: notes/ssc/4-2.md
       - file: notes/ssc/4-3.md
       - file: notes/ssc/4-4.md
+      - file: notes/ssc/4-5.md
   - caption: Statistical Rethinking
     chapters:
       - file: notes/sr2-review.md
@@ -114,4 +115,5 @@ parts:
       - file: notes/improve-expand-focus.md
       - file: notes/improve-design-experiments.md
       - file: notes/improve-estimate-subplan-weight.md
+      - file: notes/improve-ssc.md
       - file: notes/observations.md

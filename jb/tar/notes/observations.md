@@ -19,6 +19,8 @@ If you aren't addressing your unorganized notes, you aren't doing important work
 
 Insisting on having no unorganized notes can also be shallow. You can force no `unorganized.md` to exist, but that only forces one level of organization. When will you structure second-level concepts? Even worse, some files can become dumping grounds for nearly unorganized notes. It may even be better to wait to organize (compress) your observations, at least to some extent, until you get to a point where you can compress them all at once in focused work (unless the compression is clearly not lossy i.e. no loss of generality).
 
+Generally speaking, unorganized content is an artifact of prioritization. As you work you should constantly be pushing the most promising ideas you have to the bottom of a short list of things you are working on. Work on these first, to make forward progress on the topic you are focused on (using all your working memory on your primary task). When you're done, everything less important than your primary task will be left in your wake higher in your document. It's not that these are less important at a global level than your primary task; they may even be more important areas to explore (you don't know). To have spent time on them as you encountered them, however, would prevent you from making deep forward progress on what you previously believed (with a global view) was most important and you can't say definitely that your new areas to explore are the most globally important thing to do until you return to a global view.
+
 +++
 
 ## Z-level prioritization
@@ -29,9 +31,19 @@ You like how this approach is similar to the concept of compression. At work, yo
 
 Ironicallly, you may want to save the time dimension into Z-levels (or layers) so that if you ever want to create a visualization of your layers as a GIF (exporting as batch) the time dimension in your GIF will match the time dimension you were thinking about.
 
-Should this view reflect how you spend your time? No, because many things are important to you but aren't going to take your time. Your child's health may be important to you, but you have others to help with it (including the child, eventually) and you're not an expert in healthcare. That is, if you're not the best at something but it's important to you, outsource it.
+Should this view reflect how you spend your time? No, because many things are important to you but aren't going to take your time. Your child's health may be important to you, but you have others to help with it (including the child, eventually) and you're not an expert in healthcare. That is, if you're not the best at something but it's important to you, outsource it. Said another way, some things are important, but that doesn't mean you can control them (or choose to control them).
+
+You also like how this system makes your values theoretically measurable (in terms of e.g. area) but also clearly not particularly objective (so you don't agonize over the numbers). It also makes your values relative, which should really help you think about them.
 
 ![x](z-level-compression-example.svg)
+
+No design strategy is perfect, and unfortunately engineers often like to approach design in different ways (e.g. a codesign diagram vs. a gantt chart). It seems like the most critical part of designing a design approach should be making what's most valuable most focal, however.
+
+Nearly the same thing can be done with text, by making plain text into links. Let's say you had a link from one document A, to another B, to another C. If you move the link from B to C to the article A by e.g. mentioning the word somewhere (or even just adding the link to some related word) you're making the lower-level content more focal. Perhaps you could use links as a simpler form of the z-level based prioritization.
+
+Another way we do the same thing with text is by pushing language into version control. When you are reviewing changes in `git diff` you can `git add` and commit anything you no longer want to be focal.
+
+Another way to do the same is simply having a backlog, putting what you think should be most important at the top.
 
 +++
 
@@ -55,7 +67,7 @@ Even if you don't use `--max-backlog=-1` with rclone to get overall progress, it
 
 See also your comments in learn-unix-utilities.md about `cp -r` confusion. See also [ubuntu - How to copy-merge two directories? - Unix & Linux Stack Exchange](https://unix.stackexchange.com/questions/149965/how-to-copy-merge-two-directories/149986#149986). You aliased `rsync` to `ry`, should you alias `rclone` to `rc`? Or create a `cp` alias that uses `rclone`?
 
-+++ {"tags": [], "jp-MarkdownHeadingCollapsed": true}
++++ {"tags": []}
 
 ## Review code
 
@@ -64,6 +76,42 @@ Linting standards create another barrier to entry. You couldn't do a wiki like e
 How do you feel about approvals on code reviews in general? It's another barrier to entry.
 
 Part of the power of “no” is saying "no" to code reviews. It’s better to say no than nothing. If it doesn’t break anything, then you can treat the content as “don’t care” in your mind.
+
++++
+
+## Memorization vs. working
+
+Are you looking to memorize content, or just solve a problem? If it's the latter then you can open up a bunch of tabs and just reference them. If you want to remember/memorize something then you should limit yourself to 5-10 tabs, forcing yourself to remember what you can't pull up as easily.
+
++++
+
+## Classifiers as organizers
+
+A classifier (see [Statistical classification](https://en.wikipedia.org/wiki/Statistical_classification)) induces a partition on a set. Is it the individual classification, or the organization of examples into partitions that really adds value for humans? Knowing a stop sign is coming up wouldn't be useful if you didn't know other kinds of signs that are not stop signs.
+
+We could really go one step beyond classification into non-overlapping sets to provide an order on these sets (e.g. a preorder). Organization into trees (think of common dictionary data structures) is in general an efficient way to retrieve information, both mentally and in a computer. It'd be much easier to describe to someone all the kinds of signs in the world with a tree than a list. See [Categorization](https://en.wikipedia.org/wiki/Categorization) (a synonym for classification) for some thoughts on the psychological aspects involved; is this why category theory is so fundamental to mathematics as well? Are adjectives fundamental to how we think?
+
++++ {"tags": []}
+
+## Maintain light git history
+
+Having a single git repo with many working trees is essentially the same as a single dvc cache. Until looking up objects gets slow, there's really not a downside to it.
+
+You could pull in a repo without all its history (thinking of HDMA) by stripping history (see [How to Use Git Shallow Clone to Improve Performance | Perforce](https://www.perforce.com/blog/vcs/git-beyond-basics-using-shallow-clones)) and pushing that to some backup location. You can pull that into history, but on the branch that you have that is the original repo you can use a remote that is the original repo with all its history. In other words, you really like the idea of subtree merge (which effectively does this, but with one commit).
+
++++
+
+## Skipping questions
+
+Why do we skip questions, to come back to them later? Even if we've read all the prerequisites that we need to answer the question, we may not have enough of them memorized to be able to construct the answer using both our memorized logic and working memory. By reading and answering beyond the question, we'll have more time to memorize more of the prerequisities in the context of new problems that are more motivating and novel than the question we've been re-reading.
+
++++
+
+## Quote Wikipedia
+
+Rather than trying to freeze links to Wikipedia, copy/paste (the same way you would copy/paste code) the content you want into your own material with a quote. This is equivalent to forking the content in a more limited way; you likely didn't read the whole article anyways (and should say so if you did). You can also do this with more than Wikipedia as well; you never read a whole article anywhere on the internet.
+
+Should you have tasks to understand Wikipedia with other articles/content as your alternatives? Rather than the reverse. You'd perhaps only end up reading part of the other content, which could be hard (Wikipedia is better as a reference i.e. for one article at a time).
 
 +++
 
@@ -77,7 +125,17 @@ Rather than "q-" and "a-" should you think in terms of "q-" and "f-" where f sta
 Perhaps you can also get more specific with question, perhaps only allowing why questions (why-):
 - https://en.wikipedia.org/wiki/Why
 
-+++ {"tags": []}
++++
+
+## Short action graph
+
+Part of the struggle with an action graph (git-like graph) is that if you're working iteratively, it's usually small and short. That is, you shouldn't spend too much time in planning, which is scheduling. As long as you know where you "are" at the moment, then an iterative approach can work well.
+
+Perhaps analysis paralysis happens precisely because it's at the border of action and planning, a strange place for our thought processes.
+
+You should have only "actionable" items on your graph, that is, things don't take 20 years (though this depends on the circumstance). The shorter your items, the less likely you'll need to reorganize the chart in a major way.
+
++++ {"tags": [], "jp-MarkdownHeadingCollapsed": true}
 
 ## Fix slow build
 
@@ -126,17 +184,7 @@ Also have the snack the first time you check the timer and it's OK to. You like 
 
 You like how this is also a reminder to drink water, and perhaps check your email. It's essentially a time to deal with all pending interrupts, seeing yourself as a computer.
 
-+++
-
-## SSC miscellany
-
-Perhaps greater and less than is so important to humans because we often think in terms of gravity. Consider saying above and below or “as high as” rather than the other language when you’re stuck. To think in terms of preorders rather than linear orders is then to think in another dimension - left and right - as well. Two things can be the same height but not be “comparable” because they are at different places across left and right. It seems like it all comes back to our 3-dimensional thinking. Are meets the way to “go down” and joins the way to “go up” in this view? If you “want” to go up, do you use the join (i.e. addition or the logical or). In Cost, is this why we have to reverse the order? Why is I < in the definition of a V-cat?
-
-Does even forming a sentence require thinking ahead (creating an action graph)? You sometimes write the first few words of a sentence while half-thinking, and then need to erase it when you realize what you actually want to say. You often try to consider all the possible responses someone could give to a text before you write it; the more you plan ahead the more likely you’ll be able to get them to respond in a way that’s OK with you. In some sense, talking is publishing.
-
-You often want to redo old questions rather than checking the answer. Why? Do you want to confirm you remember all the dependencies that led to the result? If you wanted to rederive every result, then you wouldn’t be reading books written by others (essentially taking their answers). You also wouldn’t maintain any notes; you’d prefer to rederive the results from scratch regularly. The point of writing down the answer was for you to be able to refer to it later, and if you never refer to it the effort you put into writing down the answer was mostly wasted (at least with respect to you).
-
-To some extent you've even memorized the numbers associated with definitions are part of reading this book (e.g. Definition 2.46). You've also likely memorized the location of results on pages. The location of results on pages is why many books always start chapters on only odd-numbered pages (so results stay on the same side of the page through minor edits of other chapters). Hence, you really don't need to publish what you've changed back to the source.
+Can you train yourself not to have snacks, though? Hunger is not something that is amenable to simple training; it's too fundamental. More likely you just need to plan on having bigger snacks if you find yourself constantly interrupted by thinking about snacks (and have less at dinner).
 
 +++
 
