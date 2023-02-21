@@ -398,6 +398,13 @@ https://en.wikipedia.org/wiki/Dynamic_dispatch
 
 https://en.wikipedia.org/wiki/Higher-order_function
 
+An interesting open-source task would be how to perform the bitmap tracing that Inkscape does more quickly and efficiently (when you have e.g. a PNG to convert to SVG). It'd be related to topology as well as machine learning.
+
+
+# Data vs Theory
+
+Some problems are best solved with data, and some with theory. This is the idea behind Cynefin domains, and it's relevant to deciding whether to use an ML model or write traditional code. It's only through experience with a particular problem that you learn whether it's best solved with theory or data.
+
 
 # Loss curves
 
