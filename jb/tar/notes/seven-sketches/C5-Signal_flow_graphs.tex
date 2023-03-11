@@ -153,7 +153,7 @@ In this chapter, however, we introduce categorical tools---props and
 their presentations---for reasoning more directly with the diagrams. Recall from
 \cref{chap.resource_theory} that symmetric monoidal preorders are a type of
 symmetric monoidal category where the \emph{morphisms} are constrained to be
-very simple: there can be at most one morphism between any two objects. Here
+very simple: there can be at most one morphism between any two objects. Here we
 shall see that signal flow graphs represent morphisms in a different,
 complementary simplification of the symmetric monoidal category concept, known as a \emph{prop}.%
 \footnote{
@@ -265,7 +265,7 @@ satisfy the rules of symmetric monoidal categories (see
     i \longmapsto 
     \begin{cases}
       f(i) &\mbox{ if }1\leq i\leq m ;\\
-      m'+g(i) &\mbox{ if }m+1\leq i \leq m+n.
+      m'+g(i-m) &\mbox{ if }m+1\leq i \leq m+n.
     \end{cases}
     \qedhere
   \end{equation}
@@ -737,7 +737,7 @@ some examples of free structures; let's recall and explore them.
 \index{relation!free preorder on}
 For preorders, we saw the construction of taking the reflexive, transitive closure
 of a relation. That is, given a relation $R\ss P\times P$, the reflexive,
-transitive closure of $R$ is the called the free preorder on $R$. Rather than
+transitive closure of $R$ is called the free preorder on $R$. Rather than
 specify all the inequalities in the preorder $(P,\leq)$, we can specify just a few
 inequalities $p \le q$, and let our ``closure machine'' add in the minimum
 number of other inequalities necessary to make $P$ a preorder. To obtain a preorder
@@ -806,7 +806,7 @@ Let $G=(V,A,s,t)$ be a graph, and let $\cat{G}$ be the free category on $G$. Let
 	\item Show that the set of functors $\cat{G} \to
 \cat{C}$ are in one-to-one correspondence with the set of pairs of functions
 $(f,g)$, where $f\colon V \to \Ob(\cat{C})$ and $g\colon A\to\Mor(\cat{C})$ for which $\dom(g(a))=f(s(a))$ and $\cod(g(a))=f(t(a))$ for all $a$.
-	\item Is $(\Mor(\cat{C}),\Ob(\cat{C}),\dom,\cod)$ a graph? If so, see if you can use the word ``adjunction'' in a sentence that describes the statement in part 2. If not, explain why not.
+	\item Is $(\Ob(\cat{C}),\Mor(\cat{C}),\dom,\cod)$ a graph? If so, see if you can use the word ``adjunction'' in a sentence that describes the statement in part 2. If not, explain why not.
 \qedhere
 \end{enumerate}
 \end{exercise}

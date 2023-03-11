@@ -17,7 +17,7 @@ email me at davidvandebunte at Google's mail. I'm always grateful for feedback, 
 
 Add suggestions to [Suggestions: Executable Notes](
 https://docs.google.com/document/d/1K7rpdT1A84U5z5p_cg9eG6R25as6ty09REUTJLYO0YI/edit) if you'd like
-to remain anonymous, keep your email private, or are not interested in follow-up questions.
+to remain anonymous, keep your email private, or are not interested in follow-up questions. To get notifications on changes to this document, see [Google Docs Editors Help](https://support.google.com/docs/answer/91588?hl=en&co=GENIE.Platform%3DDesktop).
 
 ## Content license
 

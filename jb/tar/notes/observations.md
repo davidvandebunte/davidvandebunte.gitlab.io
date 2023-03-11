@@ -85,6 +85,19 @@ Are you looking to memorize content, or just solve a problem? If it's the latter
 
 +++
 
+## Prefer a forking workflow?
+
+New developers don't have to sit around for days waiting for access before they can write code. I've had to not only wait for access, but spend time bothering an admin to get access faster (which is work in itself).
+
+We ensure our build system works even if a repo is moved/renamed.
+
+Reduces clutter in the primary repository:
+- https://stackoverflow.com/questions/3611256
+
+One downside to a forking working flow is that when you hit "fork" on a GitLab repo you get a duplicate of all the branches. You really want to just create a blank project, and submit branches as you create them.
+
++++
+
 ## Classifiers as organizers
 
 A classifier (see [Statistical classification](https://en.wikipedia.org/wiki/Statistical_classification)) induces a partition on a set. Is it the individual classification, or the organization of examples into partitions that really adds value for humans? Knowing a stop sign is coming up wouldn't be useful if you didn't know other kinds of signs that are not stop signs.
@@ -115,6 +128,169 @@ Should you have tasks to understand Wikipedia with other articles/content as you
 
 +++
 
+## Manual dependency resolution
+
+Dependency resolution can be presented in the language of a codesign problem. Consider the feasibility relation Φ documented in [Changelog - pip documentation v23.0.1](https://pip.pypa.io/en/stable/news/):
+
+![x](pip-feasibility-relation.svg)
+
+If you know what APIs your code requires, you can enter them as matrices and see what is feasible (overall) as yet another matrix. Is it feasible, for example, to upgrade from 16.04 to 18.04? This is a function of the feasability matrices Ω, Θ, and ψ in:
+
+![x](custom-feasibility-relation.svg)
+
+In the feasibility matrix Γ that includes all this information, you would simply look for any entries where the operating system is 18.04 and the value is "true" and then configure everything else to hit one of these goals.
+
++++
+
+Is your goal to simply update to the latest version of Ubuntu? More often, you actually want something else. Perhaps you want to be working with a relatively recent version of python3 (e.g. the default in 20.04). If you set the wrong goal, you may end up working with Ubuntu 22.04 and python2! Perhaps this is what you want, though, so that when you do upgrade to python3 you can do it with the latest version. The risk here is that there is often an upgrade path from e.g. 2.7 to 3.x that is only supported up to some predetermined x. You could also simply be interested in other system packages like tmux, vim, ctags, etc.
+
+Once you have the general layout of the problem, you can go through all the system and python packages you use and get a decent understanding of Ω and Θ by constructing them assuming you only install one package.
+
+For example, for Ubuntu feasability matrices use [Ubuntu Packages Search](https://packages.ubuntu.com/) with the distribution set to "any" in the search. Notice the comment on that page:
+
+> There are shortcuts for some searches available:
+>
+>   - http://packages.ubuntu.com/name for the search on package names.
+>   - http://packages.ubuntu.com/src:name for the search on source package names.
+
+So for cmake, referencing:
+- http://packages.ubuntu.com/cmake
+
+Based on [packaging - Is there a tool/website to compare package status in different Linux distributions?](https://unix.stackexchange.com/questions/62355), another option is:
+
+```
+$ whohas --shallow --strict -d ubuntu cmake
+Ubuntu      cmake                                  3.10.2-1ubuntu2
+Ubuntu      cmake                                  3.10.2-1ubuntu2.18
+Ubuntu      cmake                                  3.16.3-1ubuntu1
+Ubuntu      cmake                                  3.16.3-1ubuntu1.20
+Ubuntu      cmake                                  3.22.1-1ubuntu1
+Ubuntu      cmake                                  3.22.1-1ubuntu1.22
+Ubuntu      cmake                                  3.24.2-1ubuntu1
+Ubuntu      cmake                                  3.25.1-1
+```
+
+Clearly there's room to automate here, by running this command on the same list of packages that you pass to `apt`. It looks like `whohas` is available going back to 16.04. If you run this immediately after running apt, in your logs you'll have all this information printed out immediately after `apt` prints the version numbers it did end up installing.
+
+We have Ω:
+
+|   Ω    | 18.04 | 16.04 |
+|   -    |   -   |   -   |
+| 3.5.1  |   T   |   T   |
+| 3.10.2 |   T   |   F   |
+
+Notice we assume we can downgrade to 3.5.1 on 18.04, which comes with assuming preorders. Although this isn't ideal, most of the time we are struggling to only upgrade our custom code and so this is not an issue (we are merely trying to enumerate everything we need to do to upgrade).
+
+Based on an understanding of your own code, which in this case we assume will work with both versions, we construct ψ:
+
+|   ψ   | 3.10.2 | 3.5.2 |
+|   -   |    -   |   -   |
+| 1.0.0 |    T   |   T   |
+| 1.0.1 |    T   |   T   |
+
+Then we construct Γ = Ω⨟ψ:
+
+|   ψ   | 18.04 | 16.04 |
+|   -   |   -   |   -   |
+| 1.0.0 |   T   |   T   |
+| 1.0.1 |   T   |   T   |
+
+Assuming your current version is 1.0.0 and your new version will be 1.0.1 (a cmake upgrade should make no breaking changes to your API).
+
++++
+
+Packages that are shared between python and C++ can be trickier. See [How do I tell if a PyPI package is pure python or not?](https://stackoverflow.com/questions/71550167) for the ambiguity that can exist. To get a list of python packages, use a URL like:
+- https://pypi.org/project/protobuf/#history
+
+Or on the command line, based on [Python and pip, list all versions of a package that's available?](https://stackoverflow.com/questions/4888027):
+
+```
+pip install --use-deprecated=legacy-resolver protobuf==
+```
+
+In this case we see `protobuf: 2 < 3 < 4`. But the native package only has version 3:
+
+```
+$ whohas --shallow --strict -d ubuntu libprotobuf-dev
+Ubuntu      libprotobuf-dev                        3.0.0-9.1ubuntu1
+Ubuntu      libprotobuf-dev                        3.6.1.3-2ubuntu5
+Ubuntu      libprotobuf-dev                        3.12.4-1ubuntu7
+Ubuntu      libprotobuf-dev                        3.12.4-1ubuntu7
+Ubuntu      libprotobuf-dev                        3.21.12-1ubuntu6
+```
+
+If a project is hosted in GitHub, use the general URL form:
+- https://github.com/protocolbuffers/protobuf/releases
+
+The full story can be found from links there:
+- [Changes made on May 6, 2022 | Protocol Buffers Documentation](https://protobuf.dev/news/2022-05-06/)
+
+This kind of digging may also reveal a [Migration Guide](https://protobuf.dev/programming-guides/migration/). Another advantage of reviewing all your package dependencies is helping make you aware of what code you could look to in order to solve your problems (by using packages you already have installed).
+
+Where do you document your code's feasability matrix ψ? If you're building a python package or deb, there should be a place to record this information so dependency resolvers like pip and apt can use them to make decisions when you are installing your code alongside other packages.
+
+Another minor advantage to this is you can install your package elsewhere. It may often be fine to copy the source code you need into multiple docker images that require it, but this is a form of duplication as long as you need to copy the code in a particular way. In some sense, you're inventing your own packaging system in the form of a simple tar and copy/paste to paths that you select.
+
+There will also always be some code in your development environment that differs from that of others (e.g. ctags, vim). If you must install these in a new stage of the Dockerfile then you're always going to be maintaining a fork of the original repository. Of course, this may be necessary to edit the code anyways.
+
+Consider other strategies like docker that prefer space consumption to coupling. For example, building binaries and copying them as you can do for native C++ and golang code. For example, with bazelisk you should end up with a binary in a predetermined location (see [bazelbuild/bazelisk: Installation](https://github.com/bazelbuild/bazelisk#installation)). Does this install work even on 16.04? Replace scons. But, no code has no dependencies. Do you depend on musl or glibc?
+
+When you run into a broken build, you have two options: improve your feasibility matrix or pin dependencies. Which one is easier? Once you know what dependencies you *could* pin to fix the issue, try to make that change and see what happens. After you kick off that potentially long build, check if the issue was reported in the release notes for the upgrade that you unintentionally did. If it was then see if there is anything else other than e.g. a name change to an API involved. Don't start on a TF1 to TF2 sized upgrade, for example, but also don't pin something that's easy to fix and could be fixed while you're looking at the code anyways (the release notes will tell you how much you have to do).
+
+By default version numbers look linear, like a linear order. Once you introduce parallel builds, however, then you can end up with a preorder. For example, you may want to experiment with an Ubuntu18 build while you're still mostly working with Ubuntu16. You could do this with separate SHA and the same version numbers, but that doesn't communicate what you think will work and what you think is better in the version numbering. Version numbers don't have to be strictly a linear order, though. You can leave the Ubuntu16 builds on e.g. the 2.x path and the Ubuntu18 builds on the 3.x path. You communicate both what you think is better (3 > 2) but you also let users continue on the linear 2.x build (including yourself, if the Ubuntu18 build never works).
+
+Said another way, a major version upgrade is more of an "opinion" than a minor version upgrade. There's really no required relationship between major versions. Who moved from TF1 to TF2 rather than to PyTorch? In that case, the "linear" order is more like TF1 < TF2 < PyTorch, or if you're at Google then TF1 < PyTorch < TF2, or perhaps this is a preorder with TF1 < PyTorch and TF1 < TF2. Many people never upgraded from Java8 to Java 9, 10, 11, etc. Are YOLOv4 and YOLOv5 really successors to the original?
+
+This is all related to building consensus. Once you have consensus (e.g. everyone using your product) you really don't want to lose it by losing backwards compatibility. If you only assigned SHA to all your releases, then no one would have to argue about which is better (the SHA are effectively all separate version numbers). The advantage of consensus, however, is that your consumers get an understanding of what you think is better and where the future is. If they see minor versions update, they know they *should* be able to get features nearly for free. You don't like automatically assigning SHA to builds because the namespace blows up, and you waste a lot of disk space (e.g. in artifactory, or s3) as you iterate on a non-functioning package (not even good in the eyes of the one person working on it). So if you're assigning names manually anyways, they should probably be semantic (like version numbers, or a branch name). If you really want to insist on no opinion then you can *manually* assign a SHA.
+
+Using the major version to indicate breaking changes means that it's actually not the case that 1.0 ≤ 2.0; the new major version number is not going to support your code. Again, this breaks the monotone assumption and essentially creates "islands" (optimization peaks) that will build.
+
+There's really a close relationship between updating dependencies and retraining a network. Both are risky, because you're never going to understand all the details of the upgrade you're doing and the risk it involves. See all your dependencies as weights: if you believe something is broken then you're going to have to look into all of them in detail. If you *believe* everything is OK though, then accept the risk and keep moving.
+
+Is the ultimate problem that you need someone to have ownership of the *code* rather than just a team? Managers "own" a team (people) but not code, and hence have no interest in keeping code up to date in terms of dependencies.
+
+If managers are upset that you did an upgrade, tell them exactly the conflict of interest involved: they don't care about my needs, the tools that I need to get a job done. You can also say that someone is excessively risk-averse (afraid of change).
+
+Running apt is like running a function with only side effects. Really, it should return the package you're installing as a deb or tar file including version information, etc.
+
+When you go from thinking about objects as morphisms, you're going from thinking about code as "packages" to executables. You can draw a wiring diagram in **Set** where the wires are e.g. packages, or where the wires are what you "really" care about (e.g. a directory of AMA files). Should you see this as a comma category, or as higher level cateogry theory?
+
+A Makefile documents a DAG, but how do you expect parts of it? To execute an upper set, you can "touch" a file and then run the "all" target. To execute a lower set, you simply provide the name of the target at the top of the set. To execute an arbitrary part of the DAG, you can touch the bottom of what you want to run and then run make on the top of what you want to make. It doesn't really seem like there'd be a simpler way to specify what you want. Unfortunately this may execute parts of the DAG you aren't interested in, and you can only partially get around this by running many lower targets building up to the target you care about. To do the minimal work, you'd have to call all the functions that the targets would otherwise call, individually (a good argument for enforcing that Makefiles only make one-line calls to scripts).
+
+A docker image that takes a "cmd" as a parameter is a lot like an HTTP service. The CMD is whatever part of the REST API you are using. The return value is trickier; are you returning files? If so you should return the path somehow. In HTTPs systems you would get an actual response.
+
++++
+
+The `dvc` tool does support 18:04:
+
+```
+apt update && apt install python3 python3-pip -y && python3 -m pip install --upgrade "pip<21.0" && python3 -m pip install dvc[s3]
+```
+
+The `dvc` tool does not support 16.04:
+
+```bash
+$ apt update && apt install python3 python3-pip -y && python3 -m pip install --upgrade "pip<21.0" && python3 -m pip install --upgrade setuptools && python3 -m pip install dvc[s3]
+...
+Collecting flufl.lock>=3.2
+  Downloading flufl.lock-4.0.tar.gz (23 kB)
+    ERROR: Command errored out with exit status 1:
+     command: /usr/bin/python3 -c 'import sys, setuptools, tokenize; sys.argv[0] = '"'"'/tmp/pip-install-x9nl1t14/flufl-lock_6627e4ef6c0f459b93ebb455d4edc7b8/setup.py'"'"'; __file__='"'"'/tmp/pip-install-x9nl1t14/flufl-lock_6627e4ef6c0f459b93ebb455d4edc7b8/setup.py'"'"';f=getattr(tokenize, '"'"'open'"'"', open)(__file__);code=f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' egg_info --egg-base /tmp/pip-pip-egg-info-7x96q495
+         cwd: /tmp/pip-install-x9nl1t14/flufl-lock_6627e4ef6c0f459b93ebb455d4edc7b8/
+    Complete output (1 lines):
+    Python 3.6.0 or better is required
+    ----------------------------------------
+...
+```
+
+Until you can get to 18.04, you can use rclone as a replacement. It will require manually uploading artifacts you generate, essentially adding the extra work of needing to come up with names for all your artifacts. It will also lead to more duplication of data in s3 (which dvc would otherwise handle with its internal SHA) and less efficient caching on your local machine (for the same reasons).
+
+This approach might be better for the future though, only because outside of docker (where you need to pull docker images you saved with `docker save`) you may not want to need to install python3. It's much easier to install a binary in e.g. alpine linux. But, you've already installed dvc in alpine linux in the past.
+
+Does the fact that you need to install dvc outside of docker anyways (in order to pull docker images) imply you shouldn't install it inside?
+
++++
+
 ## Prefer fact to answer
 
 Rather than "q-" and "a-" should you think in terms of "q-" and "f-" where f stands for fact? You like how this contrasts with counterfactual. It's also a fact that "Son child Dad" not so much an answer (the fact can exist without someone asking the question). You can also state the same fact in the opposite way with "Dad parent Son" without regard to any question. It also makes it clear you rely on these "facts" being absolutely true, with no uncertainty. This is related to your recent approach where many experiments (facts) are required to answer a question more confidently (never completely, if the question is large at all). That is, you can really only answer really specific questions fully confidently. See:
@@ -135,7 +311,45 @@ Perhaps analysis paralysis happens precisely because it's at the border of actio
 
 You should have only "actionable" items on your graph, that is, things don't take 20 years (though this depends on the circumstance). The shorter your items, the less likely you'll need to reorganize the chart in a major way.
 
-+++ {"tags": [], "jp-MarkdownHeadingCollapsed": true}
++++
+
+## Why close windows?
+
+Perhaps it's obvious, but the more tmux windows you have, the harder it is to find what you need. If you've e.g. opened `.aws/credentials` in a tab somewhere, and then need to edit it again much later, it can take a long time to find the tab you have open in again.
+
++++
+
+## Books
+
+When you're reading a book, don't commit to finishing a whole section before publishing. In a traditional classroom this is how we're taught; you must finish the whole assignment before you turn it in. This approach is not incremental, and just like publishing changes to software you shouldn't publish changes to the book (which questions essentially are proposing) in huge chunks.
+
+We use the term "bug" for two different concepts: when code doesn't act as we desire, and when code doesn't act in a way that we understand. Naturally these are often conflated, since we would like to understand. If you see a book as something you are trying to understand, then you can see any questions that you can't answer as bugs (in the second sense). Your code (mental model) "crashes" when it tries to evaluate them, perhaps because you are only missing dependencies in memory. How do you fix bugs? With many eyes. So to answer questions you are struggling with you should come back to them on different days, when you're thinking differently. To get "stuck" on a question is to read it over and over without effectively making your "eyes" different by doing something else that is still related (like looking forward in the book). It's critical to be able to only partially release your answered questions, leaving some undone (in "unorganized" notes). As long as you're still fixing the shallow bugs in the same area where the hard bugs are, you should be getting closer to fixing the hard ones.
+
+A statement that you don't understand in a book is like data (the result of running e.g. an experiment) that you don't understand when writing code. You have to explore the code, or the earlier parts of the book, or find something that the author didn't explicitly provide in alternative material (because books are not code), to understand the data.
+
+Should you take your potential errata and only post them to the author's Google Doc? If you were a student, you would ask the teacher a question about what looks wrong. The same action in a distributed internet environment is probably to ask the question on an SO site. It's not an errata entry until someone else confirms (unless it's really clear) and it's not likely the author will respond. Ideally the author would be able to answer all your questions, but you don't want to pay for that. That is, ask a friendly neighborhood mathematician. Don't wait until you're done to ask.
+
+How do you hide answer cells? It seems like there is no good solution now:
+- [Exercise cells · Issue #455 · executablebooks/jupyter-book](https://github.com/executablebooks/jupyter-book/issues/455)
+- [Adding directives for "question and answer" blocks · Issue #536 · executablebooks/jupyter-book](https://github.com/executablebooks/jupyter-book/issues/536)
+
+Why look at a book's answers? Don't try to pretend that your answers are independent of the author's answers; clearly you're reading the text and using all his assumptions and language. In answering the question, to some extent you are *only* verifying that the text has all the prerequisites to construct the answer.
+
++++
+
+## Organize notes to sort dependencies
+
+You often can't decide if e.g. one Wikipedia article is a dependency of another, or vice versa (See also, vs. read something else first). Similarly, you can't make all links in one direction among all your own articles easily (without a *lot* of organization).
+
+This is likely because there are more than two ways to understand something. You can understand via examples, that is by understanding a bunch of examples and then generalizing to something they share in common. You can also understand via construction, that is, by taking logical constructs and putting them together to build new logical constructs. The latter method is about getting your dependencies straight. The former doesn't get you to the "bottom" of a subject, even though it will likely give you a working understanding of the concept. An example of the former is when you read something in multiple places on Wikipedia and then start to suddenly assume that it's true or that you understand it. Understanding by example is not building a deep mental network; machines understand by example.
+
+For example, while reading the article [Ordinal numbers](https://en.wikipedia.org/wiki/Ordinal_number), you may read a section that says that assuming a well-ordered set is the same as assuming the axiom of choice. After following a few more links, you may read the same in [Well-ordering theorem](https://en.wikipedia.org/wiki/Well-ordering_theorem). Reading this in two places is not equivalent to reading the section in [Well-ordering theorem](https://en.wikipedia.org/wiki/Well-ordering_theorem) explaining how they are essentially the same (isomorphic, or ≅, thinking in terms of a preorder of dependencies). In fact, you haven't understood how they are the same. It may be that everyone is saying it, but that doesn't mean you understand the isomorphism.
+
+Learning by example should generally assist you in learning the causal or logical structure, not be the method of definition. You can define what a "big" or "small" dog is by example; this is necessary because the concepts are ultimately fuzzily defined.
+
+When you organize your notes, you essentially sort out all these dependencies. You establish a new "bottom" to your understanding (hopefully making it lower, simpler) making your notes into a new pedagogical tool most useful to yourself. Imagine that you were to organize all your links in your articles in one direction; this would be the equivalent of writing a book where the readers could always start on earlier chapters. In fact this is what you expect from any book that you consume; you expected to be able to follow SSC in a linear order. You may end up with a preorder/poset rather than a loset in the end, but that's better than having cycles. When you allow cycles (as on Wikipedia), your "users" don't know when to try to understand by following links or reading what they can already see. You like how this lets readers come to the book with their own motivations.
+
++++ {"tags": []}
 
 ## Fix slow build
 

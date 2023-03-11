@@ -24,6 +24,7 @@ parts:
       - file: notes/ssc/4-3.md
       - file: notes/ssc/4-4.md
       - file: notes/ssc/4-5.md
+      - file: notes/ssc/5-2.md
   - caption: Statistical Rethinking
     chapters:
       - file: notes/sr2-review.md
