@@ -124,3 +124,53 @@ $$
 $$
 
 Writing the relevant morphisms as $\mathcal{V}$-functor:
+
+
+## 5.2.3. Free constructions and universal properties
+
+See section 3.2.3. for more background. See also **Grph** as discussed in [Topos](https://en.wikipedia.org/wiki/Topos), [Global element](https://en.wikipedia.org/wiki/Global_element), and [Graph homomorphism](https://en.wikipedia.org/wiki/Graph_homomorphism).
+
+See also [Free object](https://en.wikipedia.org/wiki/Free_object). In Wikipedia's definition the function $g$ in **C** apparently corresponds to adding constraints to the free object $A$, based on what $B$ requires.
+
+The value in this section is that you can define less than what you "need to" and still get some "functioning" object. It's always helpful to be able to type/specify less to a computer as part of achieving some goal.
+
+For example, it is convenient to able to define a linear function from one vector space to another using only its value on a basis of its domain. It's convenient to only specify edges to graphviz and get a full graph (with nodes).
+
+
+*Exercise* 5.20
+
+
+*Exercise* 5.21
+
+
+*Exercise* 5.22
+
+
+*Exercise* 5.23
+
+See also `dom`/`cod` used in the definition of category in in [Category (mathematics)](https://en.wikipedia.org/wiki/Category_(mathematics)).
+
+
+## 5.2.4. The free prop on a signature
+
+See also [Signature (logic)](https://en.wikipedia.org/wiki/Signature_(logic)).
+
+- [Generator (mathematics)](https://en.wikipedia.org/wiki/Generator_(mathematics))
+
+
+*Exercise* 5.28
+
+
+*Exercise* 5.32
+
+
+## 5.2.5. Props via presentations
+
+
+*Exercise* 5.35
+
+
+## Functorial semantics
+
+- [Semantics (computer science) - Wikipedia](https://en.wikipedia.org/wiki/Semantics_(computer_science))
+- [Categorical logic - Wikipedia](https://en.wikipedia.org/wiki/Categorical_logic)
