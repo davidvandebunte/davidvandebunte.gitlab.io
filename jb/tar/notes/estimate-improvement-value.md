@@ -6,7 +6,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.11.2
+    jupytext_version: 1.14.1
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
@@ -39,6 +39,8 @@ Despite values being quite uncertain, and therefore the value of a specific proj
 being even more uncertain, it helps to try to think precisely about them to potentially teach a
 computer how to achieve larger goals.
 
++++
+
 # Cost
 
 ## Unit of measurement
@@ -65,6 +67,8 @@ person working alone, it lets them get into focused work on thinking about value
 on thinking about cost (separately). See also [Cost](https://en.wikipedia.org/wiki/Cost) and
 [Price](https://en.wikipedia.org/wiki/Price).
 
++++
+
 ### Time is not money
 
 The phrase "time is money" comes from Benjamin Franklin. See [Time is money (aphorism)](
@@ -77,6 +81,8 @@ https://thephysicianphilosopher.com/time-is-money/). The claim that "time is mon
 time can buy money and that money can buy time; both these ideas are too simple for sufficiently
 complex problems.
 
++++
+
 #### Time can buy money
 
 The claim that "time is money" implies that time can buy money, and was used in the only training
@@ -84,6 +90,8 @@ example Ben provided. While this is a side effect of labor, it ignores a million
 When you earn money, are you completely not enjoying your time? Are you not contributing to the
 world (changing it) in a way that you also find valuable? Find a job you love, and you'll never
 "work" a day in your life.
+
++++
 
 #### Money can't buy time
 
@@ -124,6 +132,8 @@ Shaking the idea that time is money may inspire you to clear your calendar; see 
 taught Bill Gates by sharing his blank calendar](
 https://www.cnbc.com/2018/09/07/warren-buffett-taught-bill-gates-about-time-management-by-sharing-his-blank-calendar.html).
 
++++
+
 #### Time can't buy time
 
 Let's say you see some task that will "save" you more time than it will cost you. What prevents you
@@ -135,6 +145,8 @@ https://en.wikipedia.org/wiki/Chess_endgame)). To some people, this may mean try
 money before they die (unless you care about the lives of e.g. your children or friends). Learning
 investments (in your own biologial neural network) will not survive your death. Ideally, you teach
 everything you know to others before you die (or document in a place you know will be read).
+
++++
 
 #### Practical standpoint
 
@@ -161,6 +173,8 @@ For the sake of scheduling (fitting items where they fit in your schedule e.g. i
 it's not desirable to absorb time estimates into weight estimates (unless they are also reported
 independently). See [Scheduling (computing)](https://en.wikipedia.org/wiki/Scheduling_(computing)).
 
++++
+
 #### Time is money model
 
 Despite it not being the normal basis for the logic used in these articles, the time is money model
@@ -177,6 +191,8 @@ money. For Ben's subject, and e.g. someone watching television, it may be that t
 nothing but the temporary happiness. That is, their activity is an end goal in the context of their
 life, a goal state they have been reaching for in all their other activities. They may be scoring
 their life in terms of how much time they spend of it in their goal state.
+
++++
 
 ## Include uncertainty
 
@@ -197,6 +213,8 @@ practice?
 % See this list of personal opportunity costs:
 % https://docs.google.com/document/d/1zqG-vNESbVLhbceU22UKO6L8hDUbLmMtooLM_M9_txs/edit
 
++++
+
 ## Ultimate Source
 
 Let's borrow two terms from philosophy: intrinsic and instrumental value. For a definition of these
@@ -204,6 +222,8 @@ terms, see [Value (ethics and social sciences)](
 https://en.wikipedia.org/wiki/Value_(ethics_and_social_sciences)#Intrinsic_or_extrinsic).
 
 ### Trusted Instrumental Value
+
++++
 
 #### Value
 
@@ -237,6 +257,8 @@ food, but what kind? And is food the end goal of all our lives, to accumulate it
 Which food? Should we back money by relationships? We could find a way to measure it, even if it'd
 be quite uncertain.
 
++++
+
 #### Cost
 
 In some sense, within a company, you want to get rid of all calculations based on trusted
@@ -257,6 +279,8 @@ otherwise there might be none.
 Do you trust that those giving you dollars providing goods and services that are "good" with respect
 to your values? See [Socially responsible investing](
 https://en.wikipedia.org/wiki/Socially_responsible_investing).
+
++++
 
 ##### Personal Currency
 
@@ -304,6 +328,8 @@ though (assuming value measure in dollars) the priority scores would be in the s
 dollars divided by story points. It's not ideal, but the stories could still be prioritized with a
 simple sort of this score.
 
++++
+
 ### Shifting Sources
 
 It’s OK to have knowledge acquisition stories, but it should be in the form of spikes, prototypes,
@@ -329,6 +355,8 @@ sprint review, even if it's not going to make a difference to your team's servic
 whether people want to update). Present those items at the sprint review as well, but more
 importantly include them in release notes.
 
++++
+
 ### Future Goals
 
 See [](./define-values.md) for a comparison between values and goals. When you are working on a
@@ -347,10 +375,14 @@ cost is how long we will need to run training (or generate commits), and the val
 we put into that investment pays off in terms of in terms of improved outputs (translated to the
 value metric).
 
++++
+
 ## Significant terms
 
 To eventually estimate the cost of an effort numerically (e.g. in time), we often need more details
 about the objective function.
+
++++
 
 ### Societal Values
 
@@ -365,12 +397,16 @@ In particular, it's important to keep track of these values because they can be 
 uncertainty. If the story the team is going to work on next becomes primarily a matter of politics
 (like passing laws from a shared backlog) then you need to move on.
 
++++
+
 #### Relationships
 
 There is value in relationships. Compliment other people. That is, if someone does something good
 for you then you should do something good for them, or they'll stop helping you out (tit for tat). A
 salesperson can put dollars on the value of many relationships. Money can't buy you love. Many
 people rate their successes on how their family will view them.
+
++++
 
 #### Normativity
 
@@ -389,12 +425,16 @@ arguably positive. In some sense, a preference for normativity is a preference f
 A preference for using the language of others rather than your own is normative, and also lets you
 pull their thoughts into your own mental networks.
 
++++
+
 #### Know thyself
 
 In some ways, this is a societal value similar to the more commonly known value we put on
 self-expression (in the western world). Unfortunately, it's hard to metricate this. Many people are
 likely pulled into "neural networks" because the name promises to help them both understand
 themselves and teach computers.
+
++++
 
 ### Value in Reproducibility
 
@@ -436,6 +476,8 @@ every build of the software (e.g. cache the passed test). If you have 1000 tests
 fraction of the time the test passes and notice if e.g. it drops to 0/10 times. Feedback will be
 slower, but you won't have to stop running the test.
 
++++
+
 ### Value in Expediency
 
 Also called the "cost of delay" in other material. It may be that a story is becoming less valuable
@@ -460,6 +502,8 @@ save time (your priors are more certain). Said another way, when do you pay back
 investment? If it's long, you many need to consider the time value of money. In the same way you
 don’t just buy something from Amazon when you think of it, you don’t work on something until you’ve
 reflected on its value.
+
++++
 
 ### Anticipated Accidental Value
 
@@ -492,6 +536,8 @@ That is, take the phrase "necessity is the mother of the invention" with a grain
 This kind of value isn't impossible in software; developers often find easy features just by reading
 through a section of code. For example, that save hundreds of thousands of dollars in production
 costs by removing unnecessary code that was running but actually not required.
+
++++
 
 ## Examples
 
