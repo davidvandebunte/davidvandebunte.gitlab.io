@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+set -x -o errexit -o nounset
+
+if [ ! -e ./bazelisk ]; then
+    wget https://github.com/bazelbuild/bazelisk/releases/download/v1.16.0/bazelisk-linux-amd64
+    mv bazelisk-linux-amd64 bazelisk
+    chmod +x bazelisk
+fi
