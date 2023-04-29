@@ -116,6 +116,7 @@ your own words. You like how this article uses Wikipedia images, just like you i
 
 Closer to understanding the Kullback-Leibler Divergence:
 - https://www.countbayesie.com/blog/2017/5/9/kullback-leibler-divergence-explained
+- https://math.stackexchange.com/a/3478519/245548
 
 Colah's take on information theory:
 - https://colah.github.io/posts/2015-09-Visual-Information/

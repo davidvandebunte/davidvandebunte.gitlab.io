@@ -2,5 +2,6 @@
 set -x -o errexit -o nounset
 
 python3 -m dvc pull jb/rethinking/image.tar
-bazel build //jb:extract_build_book
+./scripts/install-bazelisk
+./bazelisk build //jb:extract_build_book
 cp -r "bazel-bin/jb/extract_build_book/tmp/_build/html" public/executable-notes
