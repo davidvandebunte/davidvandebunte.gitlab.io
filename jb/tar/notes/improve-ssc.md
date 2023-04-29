@@ -16,6 +16,11 @@ You can read commutative diagrams like geographic maps, where the map simply rep
 Your references are broken anyways, so why not replace them with web links? That's what you'd prefer anyways. It'd also make your PDF better than the original, in your opinion, and so useful to others (worth sharing).
 
 
+## Document how to visually take product orders
+
+Add to [Product order](https://en.wikipedia.org/wiki/Product_order). You had to learn the hard way how to do this for non-total orders: see `pip-feasibility-relation.svg` for the start of how you learned to do it visually.
+
+
 ## Monotone maps
 
 Consider parallel arrows, two perspectives on the same thing. What metrics are you tracking in your model? Is there a monotone map between them? For example, from F1 to an ILE. Is there a monotone map from the loss to the metrics you are measuring and care about?
@@ -128,51 +133,343 @@ $$
 Writing the relevant morphisms as $\mathcal{V}$-functor:
 
 
+## Algebraic structures
+
+See:
+
+- [Outline of algebraic structures - Wikipedia](https://en.wikipedia.org/wiki/Outline_of_algebraic_structures)
+- [Algebraic structure - Wikipedia](https://en.wikipedia.org/wiki/Algebraic_structure)
+- [Concrete category - Wikipedia](https://en.wikipedia.org/wiki/Concrete_category)
+- [Template:Algebraic structures - Wikipedia](https://en.wikipedia.org/wiki/Template:Algebraic_structures)
+
+A start:
+
+![x](ssc/start-algebraic-struct.svg)
+
+Have these diagrams been done by others? Don't reinvent the wheel. For example:
+
+![x](https://upload.wikimedia.org/wikipedia/commons/3/3f/Magma_to_group4.svg)
+
+These are the algebraic structures with "One binary operation on one set"; it seems like others would have wanted to have come up with something similar for more complicated structures. Consider finding the same in a programming language as well; see:
+- https://typelevel.org/cats/typeclasses.html#type-classes-in-cats
+- [discopy/discopy: Architecture](https://github.com/discopy/discopy#architecture)
+
+In [Algebra](https://typelevel.org/cats/algebra.html) and [Outline of algebraic structures - Wikipedia](https://en.wikipedia.org/wiki/Outline_of_algebraic_structures) the same information that a hierarchy would express is provided in a table. Is there a simple way to construct a drawing from the table? In [File:Magma to group4.svg](https://commons.wikimedia.org/wiki/File:Magma_to_group4.svg) above, the colors of the arrows helpful indicate what structure is being added. You can only add the colors if take arrows to mean *adds*; if you reverse all the arrows to create the opposite category then you can take the arrows to mean "is a" (also useful) but you lose color. For example, in the above a Group is a Monoid. Following the arrows in reverse for the "is a" relationship also lets you add "with" as in a Group is a Semigroup with invertibility and identity.
+
+Perhaps if you store the raw information as a table, you could build both with graphviz?
+
+Perhaps you still need your own in your own notes, to include e.g. [Quantale](https://en.wikipedia.org/wiki/Quantale) and [Heyting algebra](https://en.wikipedia.org/wiki/Heyting_algebra)? In your own notes you want to see what you've understood in the past so you can think about what might be easy to construct from what you already know.
+
+How do you use categorical logic in Python? Much may need to be custom; see [Computational Category Theory in Python I: Dictionaries for FinSet | Hey There Buddo!](https://www.philipzucker.com/computational-category-theory-in-python-i-dictionaries-for-finset/). However, this mentions the promising [Welcome to Hypothesis! — Hypothesis 6.71.0 documentation](https://hypothesis.readthedocs.io/en/latest/). See also [Computational Category Theory in Python III: Monoids, Groups, and Preorders | Hey There Buddo!](https://www.philipzucker.com/computational-category-theory-in-python-3-monoids-groups-and-preorders/).
+
+
 ## 5.2.3. Free constructions and universal properties
 
-See section 3.2.3. for more background. See also **Grph** as discussed in [Topos](https://en.wikipedia.org/wiki/Topos), [Global element](https://en.wikipedia.org/wiki/Global_element), and [Graph homomorphism](https://en.wikipedia.org/wiki/Graph_homomorphism).
 
-See also [Free object](https://en.wikipedia.org/wiki/Free_object). In Wikipedia's definition the function $g$ in **C** apparently corresponds to adding constraints to the free object $A$, based on what $B$ requires.
-
-The value in this section is that you can define less than what you "need to" and still get some "functioning" object. It's always helpful to be able to type/specify less to a computer as part of achieving some goal.
-
-For example, it is convenient to able to define a linear function from one vector space to another using only its value on a basis of its domain. It's convenient to only specify edges to graphviz and get a full graph (with nodes).
+# 5.3 Simplified signal flow graphs
 
 
-*Exercise* 5.20
+## 5.3.1 Rigs
 
 
-*Exercise* 5.21
+*Exercise* 5.41
+
+For `1.`, the identity matrix $I_n$.
+
+For `2.` pick n = 2 and consider the counter-example:
+
+$$
+A = \begin{pmatrix}
+0 & 1 \\
+1 & 0
+\end{pmatrix} \\
+B = \begin{pmatrix}
+1 & 0 \\
+0 & 0
+\end{pmatrix} \\
+AB = \begin{pmatrix}
+0 & 0 \\
+1 & 0
+\end{pmatrix}
+\neq BA = \begin{pmatrix}
+0 & 1 \\
+0 & 0
+\end{pmatrix} \\
+$$
 
 
-*Exercise* 5.22
+## 5.3.2 The iconography of signal flow graphs
 
 
-*Exercise* 5.23
+*Exercise* 5.43
 
-See also `dom`/`cod` used in the definition of category in in [Category (mathematics)](https://en.wikipedia.org/wiki/Category_(mathematics)).
-
-
-## 5.2.4. The free prop on a signature
-
-See also [Signature (logic)](https://en.wikipedia.org/wiki/Signature_(logic)).
-
-- [Generator (mathematics)](https://en.wikipedia.org/wiki/Generator_(mathematics))
+$$
+\begin{align}
+a & = 16x + 4y \\
+b & = x + 4y
+\end{align}
+$$
 
 
-*Exercise* 5.28
+## 5.3.3 The prop of matrices over a rig
+
+This example of a prop is discussed in [PROP (category theory)](https://en.wikipedia.org/wiki/PROP_(category_theory)). See also [Matrix addition / Direct sum](https://en.wikipedia.org/wiki/Matrix_addition#Direct_sum).
 
 
-*Exercise* 5.32
+*Exercise* 5.51
+
+$$
+A + B = \begin{pmatrix}
+3 & 3 & 1 & 0 & 0 & 0 & 0 \\
+2 & 0 & 4 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 2 & 5 & 6 & 1
+\end{pmatrix} \\
+$$
 
 
-## 5.2.5. Props via presentations
+## 5.3.4 Turning signal flow graphs into matrices
+
+The labeled matrix at the start of this section suggests [Xarray](https://docs.xarray.dev/en/stable/).
+
+In the proof of Proposition 5.54 the points (i) and (ii) are reversed relative to the two bullet points given at the start of the proof (unnecessarily, it seems).
 
 
-*Exercise* 5.35
+*Exercise* 5.55
+
+For `1.` the relevant computation is:
+
+$$
+\begin{pmatrix} 1 & 1 \end{pmatrix}
+\begin{pmatrix}
+1 & 1 & 0 \\
+0 & 0 & 1
+\end{pmatrix}
+$$
+
+For `2.` the relevant computation is:
+
+$$
+\begin{pmatrix} 1 & 1 \end{pmatrix}
+\begin{pmatrix}
+1 & 0 & 0 \\
+0 & 1 & 1
+\end{pmatrix}
+$$
+
+For `3.`, both represent the same matrix:
+
+$$
+\begin{pmatrix}
+1 & 1 & 1
+\end{pmatrix} \\
+$$
 
 
-## Functorial semantics
+## 5.3.5 The idea of functorial semantics
 
-- [Semantics (computer science) - Wikipedia](https://en.wikipedia.org/wiki/Semantics_(computer_science))
-- [Categorical logic - Wikipedia](https://en.wikipedia.org/wiki/Categorical_logic)
+See [What is Applied Category Theory? - 1809.05923.pdf](https://arxiv.org/pdf/1809.05923.pdf). The general idea is that a functor can provide semantic meaning ("functorial semantics") (or an interpretation) to what is otherwise just plain syntax. For example, the functor $S$ can make signal flow graphs into something detailed enough to be computable (matrices).
+
+Not only that, what $S$ means depends on the rig that backs it up. The functor can change (the meaning of the language can change) depending on your context.
+
+The ambiguity of language - even mathematical language - is something that this book review runs into a lot. For example, what does $ab = ba$ mean? Ideally we'd like computers to be able to make this decision by inspecting context rather than requiring us to do all the bookkeeping (e.g. through coherence conditions).
+
+See also:
+- [Group action](https://en.wikipedia.org/wiki/Group_action)
+- [Semantics (computer science)](https://en.wikipedia.org/wiki/Semantics_(computer_science))
+- [Categorical logic](https://en.wikipedia.org/wiki/Categorical_logic)
+
+
+# 5.4 Graphical linear algebra
+
+
+## 5.4.1 A presentation of Mat(R)
+
+
+*Exercise* 5.58
+
+
+*Exercise* 5.59
+
+
+*Exercise* 5.62
+
+
+*Exercise* 5.63
+
+
+## 5.4.2 Aside: monoid objects in a monoidal category
+
+
+### Identity
+
+We often denote the identity morphism on a vertex v as either $v$ or $id_v$. Prefer the latter notation; otherwise this can be confusing because $v$ can also mean the object $v$, which is really a different thing. The articles [Identity function](https://en.wikipedia.org/wiki/Identity_function) and [Category (mathematics)](https://en.wikipedia.org/wiki/Category_(mathematics)#endnote_Alpha) don't introduce this same ambiguity (this ambiguity was explicitly introduced by the author in Section 3.2.1).
+
+Prefer $id_v$ to $1_v$; the latter assumes the identity element is one (as in multiplication) although it is shorter.
+
+There's only ever one identity morphism on an object and it is both a left and right identity; see [Identity element / Properties](https://en.wikipedia.org/wiki/Identity_element#Properties) for a discussion of how the existence of both a left and right identity implies the two identities must be equal.
+
+What does $id$ mean, without any subscript, as in the upcoming Exercise 5.67? Often it means the [Identity functor](https://en.wikipedia.org/wiki/Functor#identity_functor), which is not a morphism at all. Or is it? Do you assume that 0-morphisms don't map structure, so 1-morphisms (functors) do? That's thinking only in **Set**. Still, it may be more appropriate to write $id_𝓒$ rather than $id_C$ to make it clear this is a functor that can take as an argument any object in 𝓒 rather than the identity morphism on an object C. This isn't to say that $id_C$ couldn't take an argument; in **Set** it would take elements of the set (an identity function).
+
+This is closely related to the primordial ooze, that is, seeing functions/morphisms as "single" things/objects vs. seeing them as a collection of things/objects (a mapping defined for many objects). It's likely this is the reason that sometimes we give id a subscript and sometimes we don't; the former emphasizes that is one thing/object in some larger collection and the latter emphasizes that it is a collection of things itself (that could be subscripted/indexed as needed). Thinking in terms of both subscripts and arguments, the language of $id_a(x)$ lets you essentially consider three levels at once. For more on subscripts vs applying arguments, see [Indexed family](https://en.wikipedia.org/wiki/Indexed_family).
+
+Is $id_{x_{x_x}}$ so bad? Clearly the subscripts are going to get so small as to be unreadable. The "solution" in many contexts seems to be to start with subscripts then move to argument application (see e.g. [Operations with natural transformations](https://en.wikipedia.org/wiki/Natural_transformation#Operations_with_natural_transformations)) to get terms like $id_{F(X)}$ (which would otherwise have been $id(F(X))$ or $id_{F_X}$). For simplicity we'll either follow this mixed pattern, or use all parentheses.
+
+Can you "apply" a natural transformation the same way you apply an argument to a function or an object to a functor? See the first paragraph of [Natural transformation](https://en.wikipedia.org/wiki/Natural_transformation#natural_isomorphism), before all the nasty definitional details. The apparent difference is that a natural transformation typically takes a single functor F as an argument and produces a second functor G; it's a transformation that is defined for only one input argument. Let's simplify our thinking to identities, though, so we can more easily go up a level ("level shift" in the language of section 1.4.5). Who says there isn't an identity function defined for all natural transformations? Call this id, so that $id_\eta$ refers to the specific morphism we are talking about here.
+
+We got where we wanted, but notice we're using the language id (which we said before to prefer not to use, always including a subscript). We can only get away from this by seeing the "bigger picture" and making id just an example of morphism in a higher category. Try to do so yourself by mentally duplicating the following drawing below it, and introducing e.g. lowercase letters (a,b,c ...) to assign names to the two objects in your new collection:
+
+![x](ssc/identity-and-context.svg)
+
+
+Even if you can draw the mental picture, it's unlikely that you'll need this level of abstraction. Adding abstraction creates complexity; if we had referred to id(η(G)) in the diagram above as plain old id, then we could have saved ourselves a lot of typing and referred to the identity function on id(η(G(1))) as simply id(1) (or $id_1$). This works as long as we don't need to refer to the 1 in the context of id(η(F)) (our reference would then be ambiguous). In short, there's a tradeoff between providing extra detail (potentially distracting, more work to provide) and potentially running into ambiguity.
+
+
+#### Context creation
+
+All this likely hides the fact that when we "level shift" we are creating something new: a context. If we're upshifting then we're taking everything we know and trying to put it in a new box (seeing the big picture, seeing our currently focal object as part of a collection). If we're downshifting then we're creating a new box for something that we previously didn't concern ourselves with (getting into the details, seeing our currently focal object as a collection that we need to open up and look through). Perhaps better terms are "upcreate" and "downcreate" to emphasize that these contexts don't exist until we imagine them.
+
+This gives [Self-reference](https://en.wikipedia.org/wiki/Self-reference) a whole new meaning. To avoid self-reference we have to define things that "just are" and we don't question. This is referring to A as A rather than $id_A$, which makes the world of A a real thing with e.g. multiple things inside it (a function). In the language of [Strict 2-category](https://en.wikipedia.org/wiki/Strict_2-category) these are the 0-cells: what we don't question (at least for now). We don't use negative numbers in this context; typically we'd reindex from 0 if we needed to add more details.
+
+To "downcreate" is categorification. In fact the primary example of the concept given by the author and the article [Categorification](https://en.wikipedia.org/wiki/Categorification) is seeing a natural number such as 5 as a set of objects of size five {apple, banana, cherry, dragonfruit, elephant}.
+
+In computing this is related to dependencies. What objects do you "define" to simply exist? These become your dependencies in a particular domain. You don't have to dig into your own definitions; you've taken them as axioms.
+
+This is highly related to how a [Monad (functional programming)](https://en.wikipedia.org/wiki/Monad_(functional_programming)) creates a *context* for computation. When we're programming and downcreating it's easy to write a bunch of new code that only addresses what we care about: we get to decide the new bottom. When we're upcreating this isn't so easy. How do we share all that we know with higher levels? We often compress our results, even arguing that this is good. It's in this context that it's important to wire e.g. a Maybe monad dependency through all the layers.
+
+If you could make the structure associated with a particular morphism part of the argument i.e. make it part of a set based on tuples, couldn't you make sure it was preserved in any conversion? In that sense, it's all data. What do you let be passed via context, and what must be passed on a case-by-case basis? Functional languages try to make it easy to pass information via context, so that it *does* get passed at all.
+
+Contrast this with [Identity (mathematics)](https://en.wikipedia.org/wiki/Identity_(mathematics)), which is actually an equality.
+
+
+### Define n⁰ (for non-negative n)
+
+The functor $U$ in Exercise 5.69 sends $n ∈ ℕ$ to the set $ℝ^n$. What does this mean when n = 0? First, we should read $ℝ^n$ as a [Real coordinate space](https://en.wikipedia.org/wiki/Real_coordinate_space), not necessarily as a vector space (given the codomain of $U$ is **Set**, but in general as well). See [Real coordinate space / Examples](https://en.wikipedia.org/wiki/Real_coordinate_space#Examples); this defines $ℝ^0$ as a singleton. Clearly this is the most popular/common definition in mathematics (the apparent consensus) per e.g. the [hmakholm answer](https://math.stackexchange.com/a/235096/245548), but why is raising any number to the power of zero equal to one? Should numbers (or sets) to the power of zero equal one (or have cardinality one)?
+
+
+#### Advantages
+
+If you want to reinterpret functions with $n$ arguments as taking a member of $ℝ^n$, then $ℝ^0$ would correspond to constant functions. That is, functions that take zero arguments e.g. $x = 7$. In this last example, is $x$ a function/morphism from some "singleton" object (defining $n^0 = 1$), or is it an alias for 7 (defining $n^0 = 0$)? Either way, we could write it $x: ℝ^0 → ℝ^1 = 7$ (leaving $ℝ^0$ ambiguous).
+
+Said another way, must we define even constant objects as being with respect to something that already exists? This is highly related to the conversation about identity above.
+
+When you write a function from a singleton set to some other set (e.g. f: {1} → {2,3} = 2) there's really no need to supply the first argument. While f(1) is clearly going to be 2, you could have concluded the answer would be 2 without this argument. On the other hand, what would f(2) mean? It seems like it would be better to be explicit so you can catch apparent errors like this one. If you write this f(), are you applying the empty tuple ()? Do you want to call [numpy.squeeze](https://numpy.org/doc/stable/reference/generated/numpy.squeeze.html) on your function, or not? In the case of numpy.squeeze, you have to supply dummy 0 arguments if you don't remove the extra dimensions.
+
+If you imagine $5^3$ as a cube with 125 elements, then when you move to $5^2$ you reduce one dimension to one. Similarly when you go from $5^2$ to $5^1$ (from a box to an array). To be consistent, you should define going from $5^1$ to $5^0$ as only collapsing the last dimension down to length one. This is similar to many other answers, such as [The Count's](https://math.stackexchange.com/a/2121811/245548).
+
+Many other answers argue for this approach merely because it's convenient. See also:
+- https://math.stackexchange.com/a/235117/245548
+- https://math.stackexchange.com/questions/135 (all answers)
+
+If you take [Dimension](https://en.wikipedia.org/wiki/Dimension) to mean the number of coordinates that are needed to specify the position of a point in context, then a point has zero dimensions.
+
+It's convenient to use this definition to be able to use the trivial or zero vector space (see [Examples of vector spaces](https://en.wikipedia.org/wiki/Examples_of_vector_spaces)). See also [Dimension (vector space)](https://en.wikipedia.org/wiki/Dimension_(vector_space)) and [Zero-dimensional space](https://en.wikipedia.org/wiki/Zero-dimensional_space).
+
+
+#### Disadvantages
+
+If you see $5^3$ as five groups of fives groups of five, then $5^2$ as five groups of five, then $5^1$ as a group of five, why wouldn't $5^0$ be zero groups, or zero?
+
+It's tempting to expect $ℝ^0$ to be the empty set. If you see this as the set of tuples of size zero, then you may not want to count the empty tuple () as a tuple.
+
+While the [Vectornaut answer](https://math.stackexchange.com/a/1475935/245548) is somewhat convincing, why is "not doing anything" count as a mapping? If you had one bead and one paint, why wouldn't there be two ways to paint the beads: assigning the one paint to the one bead, or doing nothing?
+
+There's no clear consensus on $0^0$ and there may never be; see:
+- https://math.stackexchange.com/questions/235081/numbers-to-the-power-of-zero#comment521107_235081
+
+Consider this table for the operation, which demonstrates some of the conflict:
+
+| Base/Exp |  0  |  1  |  2  |
+| ---      | --- | --- | --- |
+| 0        |  ?  |  0  |  0  |
+| 1        |  1  |  1  |  1  |
+| 2        |  1  |  2  |  4  |
+| 3        |  1  |  3  |  9  |
+
+If we define a [function (mathematics)](https://en.wikipedia.org/wiki/Function_(mathematics)) as a [total function](https://en.wikipedia.org/w/index.php?title=Total_function), then the asymmetry in our definition leads to there always being one function out of the empty set but zero into it (see also [Initial and terminal objects](https://en.wikipedia.org/wiki/Initial_and_terminal_objects)). That is, a function can't be total and map to the empty set (if it has any elements in its source set). Is there a self-loop between the empty set and the empty set (i.e. $0^0$)? Is it better to work with relations to avoid this issue? The [empty function](https://en.wikipedia.org/wiki/Function_(mathematics)#empty_function) has always seemed strange.
+
+
+### *Definition* 5.65
+
+For a similar definition, see [Monoid (category theory)](https://en.wikipedia.org/wiki/Monoid_(category_theory)). The Wikipedia definition nearly exactly matches [monoid in a monoidal category in nLab](https://ncatlab.org/nlab/show/monoid+in+a+monoidal+category). Confusingly, in all definitions, both $\mu$ and $\eta$ are morphisms rather than natural transformations (despite being Greek letters).
+
+The author glosses over the natural isomorphism $\alpha$ in part (a) of his definition. He also apparently defines $\eta$ as a function with signature $0 → 1$ rather than $1 → 1$ (allowable because $I$ is a singleton set); without this assumption (b) doesn't work.
+
+The word "monoid" is being being thrown around a lot in this definition. First, there's an almost-monoid associated with 𝓒 simply being a category based on the set (presumably a small category) of objects in 𝓒, the composition operator (∘ or ⨟), and all the identity morphisms. That is, one can view a small [Category (mathematics)](https://en.wikipedia.org/wiki/Category_(mathematics)) as similar to a monoid but without closure/totality properties (see also  the row for "small category" in [Template:Group-like structures](https://en.wikipedia.org/wiki/Template:Group-like_structures)). See also [Groupoid](https://en.wikipedia.org/wiki/Groupoid). Still, a monoid is a small category but a small category is not a monoid (lacking totality/closure). This is worth mentioning because the standard composition operators provide one dimension where concatenation can happen on string diagrams, however. Because this isn't a full monoid, you can't concatenate just anything.
+
+Arguably the composition direction is more like language/algebra (which is also not symmetric/commutative) and the monoidal direction is more like convolution/parallelism (or possible worlds).
+
+This is distinct from the idea of a monoid being a small category with one object. For example, the monoid $(\{T,F\}, T, ∧)$ can be represented as a category with one object, two arrows, and the path equations $TT = T, TF = F, FT = F, FF = F$. We can't view it as [monoid object](https://en.wikipedia.org/wiki/Monoid_(category_theory)) unless we level shift to the category of sets, or the category of small categories.
+
+Why must a monoid object only exist in a monoidal category? Because the identity for the monoid object $\eta$ is (technically) dependent on the identity in the monoidal category $I$, and the identity binary operation for the monoid object $\mu$ is dependent on the monoidal category's ⊗ to "concatenate" objects.
+
+
+### *Exercise* 5.67
+
+Let's define $id_ℝ: ℝ → ℝ$ specifically as $id_ℝ(r) ↦ r$.
+
+For `1.` we have $\mu: ℝ ⊗ ℝ → ℝ$ and $id_ℝ: ℝ → ℝ$ so that $\mu ⊗ id_ℝ: (ℝ ⊗ ℝ) ⊗ ℝ → ℝ ⊗ ℝ$.
+
+Per the [Cartesian product of functions](https://en.wikipedia.org/wiki/Cartesian_product#Cartesian_product_of_functions) this is specifically defined $(\mu ⊗ id_ℝ)((a,b), c) ↦ (a * b, c)$. Similarly:
+
+$$
+\begin{align}
+((\mu ⊗ id_ℝ) ⨟ \mu)(a,b,c) & ↦ (a * b) * c \\
+((id_ℝ ⊗ \mu) ⨟ \mu)(a,b,c) & ↦ a * (b * c)
+\end{align}
+$$
+
+Which are equal by associativity (the author ignores $\alpha$ in his definition).
+
+For part (b) we have $\eta: 0 → 1 = 1$. So we have:
+
+$$
+\begin{align}
+((\eta ⊗ id_ℝ) ⨟ \mu)(a) ↦ 1 * a & = a \\
+id_ℝ(a) ↦ & = a \\
+((id_ℝ ⊗ \eta) ⨟ \mu)(a) ↦ a * 1 & = a
+\end{align}
+$$
+
+
+### *Exercise* 5.69
+
+See also [Monoidal functor](https://en.wikipedia.org/wiki/Monoidal_functor) and [Monoidal natural transformation](https://en.wikipedia.org/wiki/Monoidal_natural_transformation).
+
+For `1.`, to show we preserve the monoidal unit:
+
+$$
+U(0) = ℝ^0 = {0} ≅ {1}
+$$
+
+To show we preserve the monoidal product:
+
+$$
+U(A ⊗ B) = U(A + B) ≅ U(A) ⊗ U(B) = U(A) × U(B)
+$$
+
+which holds for all A and B in **Mat**(R), where + is the direct sum as given in Definition 5.50.
+
+For `2.` we can start by thinking of the specific monoids in Exercise 5.67. U(M) will be $R^1$, so n = 1 in the prop Mat(R).
+
+Wrap all the equations in Definition 5.65 in $U$, and use all rules about preservation to reduce.
+
+
+## 5.4.3 Signal flow graphs: feedback and more
+
+
+*Exercise* 5.77
+
+
+*Exercise* 5.80
+
+
+*Exercise* 5.82
+
+
+*Exercise* 5.83
+
+
+*Exercise* 5.84
+
+
+*Exercise* 5.85
