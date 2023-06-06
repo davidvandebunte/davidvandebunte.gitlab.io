@@ -420,10 +420,18 @@ See in particular the section on "Bias" in `!w Observation`. All observations ar
 
 Everything has been said before, probably even by you (in your notes).
 
-+++
++++ {"tags": []}
 
 ## Bazel vs. dvc
 
 From [Overview | Data Version Control · DVC](https://dvc.org/doc/user-guide/overview#build-automation-tools):
 
 > DVC uses file timestamps and inodes* for optimization. This allows DVC to avoid recomputing all dependency file hashes, which would be highly problematic when working with large files (multiple GB).
+
++++
+
+## Causal diagram for all P/R curves
+
+The FeatureExists variable is unobserved (a latent variable) typically.
+
+![x](causal-pr-curve.svg)
