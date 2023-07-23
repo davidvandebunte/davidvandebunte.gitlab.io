@@ -16,6 +16,15 @@ You can read commutative diagrams like geographic maps, where the map simply rep
 Your references are broken anyways, so why not replace them with web links? That's what you'd prefer anyways. It'd also make your PDF better than the original, in your opinion, and so useful to others (worth sharing).
 
 
+## Boxes in boxes
+
+A drawing of "boxes in boxes" could look quite different from the side.
+
+If you think of this as a presentation of a category then is this dependent types? A set of a certain size.
+
+![x](boxes-in-boxes.svg)
+
+
 ## Filters as graphs
 
 Is there a "filter framework" in the public domain? It doesn't seem so, but see:
@@ -167,10 +176,10 @@ Writing the relevant morphisms as $\mathcal{V}$-functor:
 
 See:
 
-- [Outline of algebraic structures - Wikipedia](https://en.wikipedia.org/wiki/Outline_of_algebraic_structures)
-- [Algebraic structure - Wikipedia](https://en.wikipedia.org/wiki/Algebraic_structure)
-- [Concrete category - Wikipedia](https://en.wikipedia.org/wiki/Concrete_category)
-- [Template:Algebraic structures - Wikipedia](https://en.wikipedia.org/wiki/Template:Algebraic_structures)
+- [Outline of algebraic structures](https://en.wikipedia.org/wiki/Outline_of_algebraic_structures)
+- [Algebraic structure](https://en.wikipedia.org/wiki/Algebraic_structure)
+- [Concrete category](https://en.wikipedia.org/wiki/Concrete_category)
+- [Template:Algebraic structures](https://en.wikipedia.org/wiki/Template:Algebraic_structures)
 
 Here's an example to anchor off of (could update to [File:magma to group.svg](https://commons.wikimedia.org/wiki/File:Algebraic_structures_-_magma_to_group.svg) as well):
 
@@ -211,16 +220,14 @@ This language gets especially confusing in cases like the following from [Algebr
 
 > Sometimes, the same phrase is used for a subarea and its main algebraic structures; for example, [Boolean algebra](https://en.wikipedia.org/wiki/Boolean_algebra) and a [Boolean algebra](https://en.wikipedia.org/wiki/Boolean_algebra_(structure)).
 
-With an [Article (grammar)](https://en.wikipedia.org/wiki/Article_(grammar)), an [Algebra over a field](https://en.wikipedia.org/wiki/Algebra_over_a_field) is simply an example of an algebraic structure. These are the most "structured" or complicated algebraic structures because they stack on top of vector spaces even more operations. The fact that an [Algebra over a field](https://en.wikipedia.org/wiki/Algebra_over_a_field) is the starting point on Wikipedia is a bit unfortunate because it seems like most examples easily generalize to an [Algebra over a ring](https://en.wikipedia.org/wiki/Algebra_over_a_field#Generalization:_algebra_over_a_ring) (e.g. [Associative algebra](https://en.wikipedia.org/wiki/Associative_algebra)). See also [Map of lattices](https://en.wikipedia.org/wiki/Map_of_lattices).
+With an [Article (grammar)](https://en.wikipedia.org/wiki/Article_(grammar)), an [Algebra over a field](https://en.wikipedia.org/wiki/Algebra_over_a_field) is simply an example of an algebraic structure. These are the most "structured" or complicated algebraic structures because they stack on top of vector spaces even more operations. The fact that an [Algebra over a field](https://en.wikipedia.org/wiki/Algebra_over_a_field) is the starting point on Wikipedia is a bit unfortunate because it seems like most examples easily generalize to an [Algebra over a ring](https://en.wikipedia.org/wiki/Algebra_over_a_field#Generalization:_algebra_over_a_ring) (e.g. [Associative algebra](https://en.wikipedia.org/wiki/Associative_algebra)).
 
 Why do we often use the letter $K$ for a field rather than $F$? One possibility (or at least a mnemonic) is that the "c" in "vector" sounds like K, and a "vector" space is defined over a field. The (historical) language of "algebra over a field" may be related to this: the concept of an "algebra over a field" is an extension of a vector space, which seems to often be conflated with the concept of a field. We could read this as an "algebra over a vector space" instead, and it's likely most people would understand what was meant (though this is even more verbose).
 
 
 ### Two binary operations
 
-These are the algebraic structures with "One binary operation on one set"; can you do the same for structures with two operations? Starting with the same colors as [File:Magma to group4.svg](https://commons.wikimedia.org/wiki/File:Magma_to_group4.svg) (RGB), but with dark colors for multiplication (×) and light colors for addition (+). Expanding on the operations in [Algebra [cats]](https://typelevel.org/cats/algebra.html):
-
-![x](ssc/start-algebraic-struct.svg)
+These are the algebraic structures with "One binary operation on one set"; can you do the same for structures with two operations? Starting with the same colors as [File:Magma to group4.svg](https://commons.wikimedia.org/wiki/File:Magma_to_group4.svg) (RGB), but with dark colors for multiplication (×) and light colors for addition (+). We'll expand on the operations in [Algebra [cats]](https://typelevel.org/cats/algebra.html).
 
 The corresponding category is marked to the bottom left of some defintions, where you'll find the rules for preserving structure between different examples (in the definition of the homomorphism). The arrows between these categories indicate "full subcategory" rather than the addition of some property/constraint/structure.
 
@@ -230,7 +237,7 @@ If you take "is a" to mean "has inside it all examples" then you'd get a bunch o
 
 When you link to an example, link to the longest possible explanation of the example you can find (not just where you originally found it).
 
-Prefer the term "Noncommutative ring" to be more specific, since in some contexts "Ring" may imply a commutative ring. Prefer the term "Semiring" to "Rig" only because the former is more common and consistently used on Wikipedia; it's also much easier to quickly search for ("rig" is a part of many words, requiring whole word search).
+Prefer the term "Noncommutative ring" to be more specific, since in some contexts "Ring" may imply a commutative ring. Prefer the term "Semiring" to "Rig" only because the former is more common and consistently used on Wikipedia; it's also much easier to quickly search for ("rig" is a part of many words, requiring whole word search). But see [semiring in nLab](https://ncatlab.org/nlab/show/semiring).
 
 We "generalize" when we go from thinking about specific examples in a category to thinking in terms of the category (what structure all the examples have in common), and we "generalize" when we remove property/constraints/structure (following arrows in the reverse direction).
 
@@ -243,8 +250,6 @@ Said another way, the "is a" relationship can hold because one object has more c
 
 Consider the following diagram, now one level "up" in the sense of thinking about properties/constraints/structure you can add to categories. But is it part of **Cat** if it includes **Cat**?
 
-![x](ssc/properties-of-categories.svg)
-
 It could be drawn similar to the algebraic diagrams above. In both cases we are adding something with all of our arrows, whether we are assigning new properties or assigning arguments (calling constructors, so to speak). In the first case we add a property to all examples in a set/class ("modify" the set/class relative to its previous definition); in the second case we add a property to only an element ("modify" the element relative to its previous definition).
 
 This drawing assumes some categories (e.g. **Rel**) are only defined as monoidal categories in one way. In fact, there are often multiple ways to define a category as monoidal (different options for the monoidal product). It should include what monoidal product is being used in its examples.
@@ -256,6 +261,24 @@ The link https://en.wikipedia.org/wiki/Compact_category redirects to Autonomous 
 This diagram started as a list of common [Enriched category](https://en.wikipedia.org/wiki/Enriched_category).
 
 
+### All examples
+
+Be careful with the word "example" (which shows up all over these notes). Is a collection of examples an example of something? If you're using the word analogously to "element" in a set, then you're going to run into Russell's paradox if you consider a collection of examples as an example in some other collection of examples.
+
+Instead, invent words to create collections of collections of examples. Call them sets, categories, collections, [Class (set theory)](https://en.wikipedia.org/wiki/Class_(set_theory)), [Conglomerate (mathematics)](https://en.wikipedia.org/wiki/Conglomerate_(mathematics)), etc. until you're sick of coming up with words. Or start using 0-category, 1-category, 2-category, etc. as in [n-category](https://ncatlab.org/nlab/show/n-category). From that page:
+
+> Especially as n increases, there is a plethora of different definitions of n-categories, some differing in generality others different-looking but secretly equivalent. A (woefully incomplete) list is given below, with pointers to dedicated entries. Part of the subject of higher category theory is to understand, organize, systematize and, last not least, apply these definitions. (It is the “n” in “n-category” that gives the nLab its name.)
+
+In SVG you should link boxes to the word you want to be using for the collection (boxes can be linked, just like text). You could even provide a separate TOC, and color boxes (perhaps shades of gray) for the word that should be used with them.
+
+It seems like the word "collection" is the most informal and therefore a good default (for unlinked boxes). See:
+- [elementary set theory - What are the differences between class, set, family, and collection?](https://math.stackexchange.com/questions/172966/what-are-the-differences-between-class-set-family-and-collection)
+
+Perhaps a "collection" is something that must be constructed one-by-one, not defined via properties. That is, the word "example" may be appropriate for a collection. Of course, what makes an example belong to your collection? If you don't have a rule, you could put anything into it. In some sense this is what gray boxes are; there's only a notion that these belong together.
+
+See [Is there a category of categories?](https://math.stackexchange.com/questions/750731/is-there-a-category-of-categories). You could draw a large CAT box around your whole drawing, but it probably wouldn't be helpful. Similarly you could draw a large [Algebraic structure](https://en.wikipedia.org/wiki/Algebraic_structure) box arond a large section of these notes, because this term is again rather general.
+
+
 ### Managing definitions
 
 Working through this exercise, it's clear that there are so many definitions you're going to struggle to get them all on one diagram. As discussed in [Ring (mathematics)](https://en.wikipedia.org/wiki/Ring_(mathematics)), many authors define a ring differently depending on the context. And why not? These definitions (like any structure) should only be evaluated relative to your objectives.
@@ -265,12 +288,222 @@ Even if you *wanted* to define global terms, the terms are going to get incredib
 For example, prefer the term "Noncommutative ring" internally to be more specific, though this will usually correspond to the unadorned "Ring" when you encounter that term.
 
 
+### Major connections
+
+![x](major-connections.svg)
+
+
 ### Other
 
 Consider finding the same in a programming language as well; see:
 - https://typelevel.org/cats/typeclasses.html#type-classes-in-cats
 - [discopy/discopy: Architecture](https://github.com/discopy/discopy#architecture)
 
-Perhaps you still need your own in your own notes, to include e.g. [Quantale](https://en.wikipedia.org/wiki/Quantale) and [Heyting algebra](https://en.wikipedia.org/wiki/Heyting_algebra)? In your own notes you want to see what you've understood in the past so you can think about what might be easy to construct from what you already know. In general, this is true for most drawings (you only include on them what you understand).
+Perhaps you still need your own in your own notes, to include e.g. [Quantale](https://en.wikipedia.org/wiki/Quantale)? In your own notes you want to see what you've understood in the past so you can think about what might be easy to construct from what you already know. In general, this is true for most drawings (you only include on them what you understand).
 
 How do you use categorical logic in Python? Much may need to be custom; see [Computational Category Theory in Python I: Dictionaries for FinSet | Hey There Buddo!](https://www.philipzucker.com/computational-category-theory-in-python-i-dictionaries-for-finset/). However, this mentions the promising [Welcome to Hypothesis! — Hypothesis 6.71.0 documentation](https://hypothesis.readthedocs.io/en/latest/). See also [Computational Category Theory in Python III: Monoids, Groups, and Preorders | Hey There Buddo!](https://www.philipzucker.com/computational-category-theory-in-python-3-monoids-groups-and-preorders/).
+
+
+# 6.2 Colimits and connection
+
+
+## 6.2.1 Initial objects
+
+
+### *Exercise* 6.3
+
+1. The relation with zero morphisms (besides the identity morphisms).
+2. A relation with one extra morphism (either from a → b or b → a).
+3. The preorder relation with both a → b and b → a.
+
+
+### *Exercise* 6.6
+
+Example `1.` has a single initial object a, because there's still an identity morphism on a in the free category.
+
+Example `2.` has a single initial object a, because the free category (unlike a preorder) has a morphism for every path. That is, there's a morphism from a to c that isn't explicitly shown.
+
+Example `3.` has no initial object because no object has a morphism to every other object.
+
+Example `4.` has no initial object because a has many morphisms to it from itself.
+
+
+### Stuff, structure, properties
+
+
+A major motivation of category theory (going back to section 1.1) is "structure" preservation. We've gained intuition for what "structure" is through many examples, but is there a more concrete definition? For example, is the [Commutative property](https://en.wikipedia.org/wiki/Commutative_property) applied to an operation an example of structure (see also [Property (mathematics)](https://en.wikipedia.org/wiki/Property_(mathematics))), and in particular something that morphisms preserve by definition of being structure-preserving?
+
+Part of the problem in defining what it means to preserve "structure" is that we may not agree on what structure is important to preserve. Every structure-preserving function ("map") must forget some structure; we wouldn't call it a map if it was nothing but an identity (nothing changed). This disagreement about what is important to preserve leads to a wide variety of definitions (see comments in [n-category](https://ncatlab.org/nlab/show/n-category)).
+
+In the definition of [Property (mathematics)](https://en.wikipedia.org/wiki/Property_(mathematics)), we say that it must apply across all examples. Similarly, for a commutative diagram to "commute" means it applies in all cases. A [Universal property](https://en.wikipedia.org/wiki/Universal_property) extends a "traditional property" in being also true of an associated morphism (rather than just an object).
+
+The short answer is that there are different types (think type theory) of morphisms, which are defined to preserve different types of "structure" (the term "structure" being used here in the wide sense).
+
+The author often presents algebraic structures as tuples, as in Exercise 6.7. For the homomorphism to preserve structure, it must preserve all the structure in the tuple. However, there can also be "structure" *between* the elements of these tuples, such as (in Exercise 6.7) the distributive property.
+
+A [Functor](https://en.wikipedia.org/wiki/Functor) is a special case of a morphism (a structure-preserving map), but one that we often think of happening one "level" up of our "regular" morphisms. If you think of a small category as a partial magma with identity and an associative partial function, then a functor preserves this structure (without having to think up a level). Functors are in fact the morphisms of the category of small categories (**Cat**).
+
+In Definition 5.11 (and soon in Rough Definition 6.68) we'll see examples of functors that actually preserve more than what basic functors do. These are structure-preserving maps (morphisms) as well, in some category similar to **Cat**.
+
+What's special about functors is that they transform commutative diagrams in one category to commutative diagrams in another (see [Functor § Properties](https://en.wikipedia.org/wiki/Functor#Properties)). So if in one category you have that g ∘ f = h, as in (from [Morphism](https://en.wikipedia.org/wiki/Morphism)):
+
+![x](https://upload.wikimedia.org/wikipedia/commons/e/ef/Commutative_diagram_for_morphism.svg)
+
+Then a functor will ensure this commutative diagram is also a commutative diagram in the second category. In this drawing from [Functor](https://en.wikipedia.org/wiki/Functor#Properties), you can see the previous commutative diagram on the bottom and top:
+
+![x](https://upload.wikimedia.org/wikipedia/commons/b/b3/Commutative_diagram_of_a_functor.svg)
+
+See a slightly more involved but similar definition in [functor](https://ncatlab.org/nlab/show/functor).
+
+
+### Interpretations of zero
+
+The symbol 0 gets used for a lot; see [Zero element](https://en.wikipedia.org/wiki/Zero_element). Notice how in [Zero object (algebra)](https://en.wikipedia.org/wiki/Zero_object_(algebra)#Vector_space) the word "trivial" is almost a synonym for zero object. Per [Initial and terminal objects](https://en.wikipedia.org/wiki/Initial_and_terminal_objects):
+
+> This is the origin of the term "zero object".
+
+You can't use the trivial ring because you could map the identity to either the additive or multiplicative identity.
+
+Is 0 like initial, and 1 like terminal?
+
+
+*Exercise* 6.7
+
+Consider part `1.`. Recall Definition 5.36 alongside this tuple. The sets $R$ and $S$ have no structure to preserve. To preserve the structure of the other elements of a rig, we will at least need the two rules the author provided:
+- $f(0_R) = 0_S$
+- $f(r_1 +_R r_2) = f(r_1) +_S f(r_2)$
+
+We'll also at least need the same rules for the multiplication monoid:
+- $f(1_R) = 1_S$
+- $f(r_1 *_R r_2) = f(r_1) *_S f(r_2)$
+
+Do we also need to preserve commutativity of the addition monoid? I'd guess no; this is a property rather than a structure in the language of [stuff, structure, property](https://ncatlab.org/nlab/show/stuff%2C+structure%2C+property) (and the language of most mathematicians, it seems):
+
+> It is worth noting that this formalism captures the intuition of how “stuff”, “structure”, and “properties” are expected to be related:
+>
+>    - stuff may be equipped with structure;
+>    - structure may have (be equipped with) properties.
+
+This article specifically mentions the commutative property at the top:
+
+> objects enjoying “extra properties” (for instance a ring being commutative ring);
+
+See also [How is a full and faithful functor necessarily injective on objects up to isomorphism?](https://math.stackexchange.com/questions/4720623/how-is-a-full-and-faithful-functor-necessarily-injective-on-objects-up-to-isomor).
+
+See this quote from [stuff, structure, property § More examples](https://ncatlab.org/nlab/show/stuff%2C+structure%2C+property#more_examples):
+
+> The embedding of abelian groups into all groups, F: Ab → Grp is faithful and full, but not essentially surjective.
+
+A second issue is the following statement from [full functor](https://ncatlab.org/nlab/show/full+functor):
+
+> For ordinary functors this may sound odd, because there is no real sense in which “full” modifies “faithful.”
+
+It doesn't seem like your "faithful, not full" example fits this situation. In nlab they seem to repeat this sentiment in [faithful functor](https://ncatlab.org/nlab/show/faithful+functor), where they say a faithful functor is 2-surjective (impying it is also 1-surjective i.e. a full functor).
+
+Can we see structure-preserving morphisms as preserving context? Keep what you learned in one context in another context. In terms of stuff, structure, property then, it's about how much structure you want to preserve.
+
+The stuff/structure/property conversation comes up in more detail in [Forgetful functor](https://en.wikipedia.org/wiki/Forgetful_functor), relating it to logic.
+
+What does it mean to preserve the distributitive property? If it's a property, it seems like it would be the same situation (doesn't need to be handled separately).
+
+For likely solutions to this question (check before checking the back of the book), see:
+- [Rig in nLab](https://ncatlab.org/nlab/show/Rig)
+- [rig in nLab](https://ncatlab.org/nlab/show/rig)
+
+
+You can't really work on part `2.` (what element is the initial object) without understanding part `1.` (what it means to preserve structure) because whatever unique morphism exists for all objects must preserve structure. How do you check it preserves structure for all cases unless you understand what it means to do so?
+
+For part `2.` can we use a one-element set? Per [Field with one element](https://en.wikipedia.org/wiki/Field_with_one_element), it seems like the answer is no. Why can't the multiplicative identity equal the [Additive identity](https://en.wikipedia.org/wiki/Additive_identity)? See [Additive identity § Properties](https://en.wikipedia.org/wiki/Additive_identity#Properties); there's no hard reason this isn't possible.
+
+
+*Exercise* 6.8
+
+
+
+
+### *Exercise* 6.10
+
+Call $!_{c_2}$ the unique morphism from $c_1$ to $c_2$. Call $!_{c_1}$ the unique morphism from $c_2$ to $c_1$. Then both are isomorphisms, because $id_{c_1} = !_{c_2} ⨟ !_{c_1}$ and $id_{c_2} = !_{c_1} ⨟ !_{c_2}$.
+
+
+## 6.2.2 Coproducts
+
+
+*Exercise* 6.13
+
+
+
+
+### *Exercise* 6.16
+
+$$
+\begin{align}
+[f,g](apple1) = a \\
+[f,g](banana1) = b \\
+[f,g](pear1) = p \\
+[f,g](cherry1) = c \\
+[f,g](orange1) = o \\
+[f,g](apple2) = e \\
+[f,g](tomato2) = o \\
+[f,g](mango2) = o
+\end{align}
+$$
+
+
+*Exercise* 6.17
+
+In Definition 6.11 we said that there is a unique morphism from the coproduct $A+B$ to all objects $T$ and pairs of morphisms $(f: A → T, g: B → T)$. Clearly $A+B$ exists because the category 𝓒 has coproducts, and $C$ can serve as one of these objects $T$ because it has appropriate functions $f$ and $g$. Taking $C$ as the object $T$ in diagram (6.12),  we can conclude that part `1.` and `2.` are true from the fact that the diagram commutes.
+
+For part `3.`, we know that the morphisms $f ⨟ h$ and $g ⨟ h$ and exist by simply composing morphisms, and therefore that $D$ can also serve as a $T$ in the definition and that there is some unique morphism from $A + B$ to $D$ we can call $[f ⨟ h, g ⨟ h]$. But $[f,g] ⨟ h$ also exists by simply composing morphisms, and therefore must equal $[f ⨟ h, g ⨟ h]$.
+
+For part `4.` we know that the morphisms $ɩ_A$ and $ɩ_B$ exist because all coproducts exist, and therefore that $A+B$ can serve as a $T$ in the definition and that there is some unique morphism from $A + B$ to $A + B$ that we can call $[ɩ_A, ɩ_B]$. But $id_{A+B}$ exists by definition of $A+B$ being an object in the category, and therefore must equal $[ɩ_A, ɩ_B]$.
+
+
+*Exercise* 6.18
+
+For part `1.` is this simply constructing the copairing of the two morphisms?
+
+For part `2.` see the diagram (6.12) and put $∅$ on the right. That makes $ɩ_∅$ a unique morphism, and $g$ a unique morphism. Is the composition $ɩ_∅ ⨟ [f,g]$ also unique? What about the unique morphism across the top of the diagram from $∅$ to $A$?
+
+
+## 6.2.3 Pushouts
+
+See [Pushout (category theory)](https://en.wikipedia.org/wiki/Pushout_(category_theory)); contrast with [Pullback (category theory)](https://en.wikipedia.org/wiki/Pullback_(category_theory)) (from section 3.5.3).
+
+
+*Exercise* 6.24
+
+
+
+
+*Exercise* 6.26
+
+
+
+
+*Exercise* 6.28
+
+
+
+
+## 6.2.4 Finite colimits
+
+
+*Exercise* 6.35
+
+
+*Exercise* 6.41
+
+
+## 6.2.5 Cospans
+
+
+*Exercise* 6.48
+
+
+*Exercise* 6.49
+
+
+# 6.3 Hypergraph categories
+
+See [Review "Seven-Sketches suggestions" - Google Docs](https://docs.google.com/document/d/1HC_BRM2deHxS7FiIto2bfrM81grKu8vDiI-JgCY5eXU/edit).
