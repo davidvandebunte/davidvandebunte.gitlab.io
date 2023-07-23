@@ -126,7 +126,7 @@ Rather than trying to freeze links to Wikipedia, copy/paste (the same way you wo
 
 Should you have tasks to understand Wikipedia with other articles/content as your alternatives? Rather than the reverse. You'd perhaps only end up reading part of the other content, which could be hard (Wikipedia is better as a reference i.e. for one article at a time).
 
-+++
++++ {"tags": []}
 
 ## Manual dependency resolution
 
