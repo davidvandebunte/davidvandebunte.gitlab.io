@@ -335,6 +335,8 @@ A major motivation of category theory (going back to section 1.1) is "structure"
 
 Part of the problem in defining what it means to preserve "structure" is that we may not agree on what structure is important to preserve. Every structure-preserving function ("map") must forget some structure; we wouldn't call it a map if it was nothing but an identity (nothing changed). This disagreement about what is important to preserve leads to a wide variety of definitions (see comments in [n-category](https://ncatlab.org/nlab/show/n-category)).
 
+It may be best to completely avoid the word "structure" and rather say what structure you are preserving. Don't say structure-preserving, for example, when you mean composition-preserving. The latter is just as many letters and is more specific.
+
 In the definition of [Property (mathematics)](https://en.wikipedia.org/wiki/Property_(mathematics)), we say that it must apply across all examples. Similarly, for a commutative diagram to "commute" means it applies in all cases. A [Universal property](https://en.wikipedia.org/wiki/Universal_property) extends a "traditional property" in being also true of an associated morphism (rather than just an object).
 
 The short answer is that there are different types (think type theory) of morphisms, which are defined to preserve different types of "structure" (the term "structure" being used here in the wide sense).
@@ -388,11 +390,11 @@ This article specifically mentions the commutative property at the top:
 
 > objects enjoying “extra properties” (for instance a ring being commutative ring);
 
-See also [How is a full and faithful functor necessarily injective on objects up to isomorphism?](https://math.stackexchange.com/questions/4720623/how-is-a-full-and-faithful-functor-necessarily-injective-on-objects-up-to-isomor).
-
 See this quote from [stuff, structure, property § More examples](https://ncatlab.org/nlab/show/stuff%2C+structure%2C+property#more_examples):
 
 > The embedding of abelian groups into all groups, F: Ab → Grp is faithful and full, but not essentially surjective.
+
+See also [Group homomorphism](https://en.wikipedia.org/wiki/Group_homomorphism). That article concludes at the start that because a group homomorphism preserves properties (the associative property) it must also preserve stuff (identities and inverses).
 
 A second issue is the following statement from [full functor](https://ncatlab.org/nlab/show/full+functor):
 
