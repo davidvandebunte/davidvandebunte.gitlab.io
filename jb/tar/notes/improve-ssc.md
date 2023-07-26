@@ -237,7 +237,7 @@ If you take "is a" to mean "has inside it all examples" then you'd get a bunch o
 
 When you link to an example, link to the longest possible explanation of the example you can find (not just where you originally found it).
 
-Prefer the term "Noncommutative ring" to be more specific, since in some contexts "Ring" may imply a commutative ring. Prefer the term "Semiring" to "Rig" only because the former is more common and consistently used on Wikipedia; it's also much easier to quickly search for ("rig" is a part of many words, requiring whole word search). But see [semiring in nLab](https://ncatlab.org/nlab/show/semiring).
+Prefer the term "Noncommutative ring" to be more specific, since in some contexts "Ring" may imply a commutative ring. Prefer the term "Semiring" to "Rig" only because the former is more common and consistently used on Wikipedia; it's also much easier to quickly search for ("rig" is a part of many words, requiring whole word search). But see [semiring in nLab](https://ncatlab.org/nlab/show/semiring) and [rig in nLab](https://ncatlab.org/nlab/show/rig).
 
 We "generalize" when we go from thinking about specific examples in a category to thinking in terms of the category (what structure all the examples have in common), and we "generalize" when we remove property/constraints/structure (following arrows in the reverse direction).
 
@@ -268,6 +268,8 @@ Be careful with the word "example" (which shows up all over these notes). Is a c
 Instead, invent words to create collections of collections of examples. Call them sets, categories, collections, [Class (set theory)](https://en.wikipedia.org/wiki/Class_(set_theory)), [Conglomerate (mathematics)](https://en.wikipedia.org/wiki/Conglomerate_(mathematics)), etc. until you're sick of coming up with words. Or start using 0-category, 1-category, 2-category, etc. as in [n-category](https://ncatlab.org/nlab/show/n-category). From that page:
 
 > Especially as n increases, there is a plethora of different definitions of n-categories, some differing in generality others different-looking but secretly equivalent. A (woefully incomplete) list is given below, with pointers to dedicated entries. Part of the subject of higher category theory is to understand, organize, systematize and, last not least, apply these definitions. (It is the “n” in “n-category” that gives the nLab its name.)
+
+However, the definitions do seem to agree that a [0-category](https://ncatlab.org/nlab/show/0-category) is a set, and a 1-category is a regular category.
 
 In SVG you should link boxes to the word you want to be using for the collection (boxes can be linked, just like text). You could even provide a separate TOC, and color boxes (perhaps shades of gray) for the word that should be used with them.
 
@@ -328,26 +330,50 @@ Example `3.` has no initial object because no object has a morphism to every oth
 Example `4.` has no initial object because a has many morphisms to it from itself.
 
 
-### Stuff, structure, properties
+### Define structure-preserving
+
+A major motivation of category theory (going back to section 1.1) is "structure" preservation. The term is used all over [Morphism](https://en.wikipedia.org/wiki/Morphism#Examples). We've gained intuition for what "structure" is through many examples, but is there a more concrete definition? The short answer is no; what it means to preserve structure completely depends on the context. The word "structure" may have more specific meanings in specific contexts (see [stuff, structure, property in nLab](https://ncatlab.org/nlab/show/stuff%2C+structure%2C+property)), but in the context of what it means to be a morphism (i.e. something that is structure-preserving) this can mean many things.
+
+One kind of example is given in [Morphism § Examples](https://en.wikipedia.org/wiki/Morphism#Examples) under:
+
+> - In the category of small categories, the morphisms are functors.
+> - In a functor category, the morphisms are natural transformations.
+
+In Definition 5.11 (and in Rough Definition 6.68) we'll see examples of functors that actually preserve more than what plain functors do. These are structure-preserving maps (morphisms) as well, in some category similar to **Cat** (where plain functors are the morphisms).
+
+These examples are for "strict" categories, as defined in [Higher category theory](https://en.wikipedia.org/wiki/Higher_category_theory). There are many more possible definitions of structure-preserving in this domain. From [n-category](https://ncatlab.org/nlab/show/n-category):
+
+> Especially as n increases, there is a plethora of different definitions of n-categories, some differing in generality others different-looking but secretly equivalent. A (woefully incomplete) list is given below, with pointers to dedicated entries. Part of the subject of higher category theory is to understand, organize, systematize and, last not least, apply these definitions. (It is the “n” in “n-category” that gives the nLab its name.)
+
+The term "morphism" was also apparently originally used in category theory as an abstraction of the notion of homomorphism, apparently in order to advance the field of topology. This creates examples of morphisms of almost a completely different kind:
+
+> - In the category of topological spaces, the morphisms are the continuous functions and isomorphisms are called homeomorphisms. There are bijections (that is, isomorphisms of sets) that are not homeomorphisms.
+> - In the category of smooth manifolds, the morphisms are the smooth functions and isomorphisms are called diffeomorphisms.
+
+Part of the problem in defining what it means to preserve "structure" is that we may not agree on what structure is important to preserve. Every structure-preserving function ("map") must forget some structure; we wouldn't call it a map if it was nothing but an identity (nothing changed). This disagreement about what is important to preserve leads to a wide variety of definitions.
+
+It may be best to completely avoid the word "structure" and rather say what structure you are preserving. Don't say structure-preserving, for example, when you mean identity-preserving. The latter is just as many letters and is more specific.
+
+It's interesting that the word "morphism" now means structure preserving, when the prefix that would indicate it should be structure preserving (in Greek) has been taken away. For example, [Isomorphism](https://en.wikipedia.org/wiki/Isomorphism) means "equal" form (equal "structure" or shape). [Homomorphism](https://en.wikipedia.org/wiki/Homomorphism) means "same" form though this is due to a mistranslation; it should have been "similar" form (and you should think of it that way).
+
+Can we see structure-preserving morphisms as preserving context? Since what it means to be structure-preserving is so variable, this may be acceptable. A morphism, functor, homemorphism, homomorphism, etc. help you keep what you already knew from one context and use it in another context (either duplicating your knowledge base to reduce or edit it, or building it up without duplication).
 
 
-A major motivation of category theory (going back to section 1.1) is "structure" preservation. We've gained intuition for what "structure" is through many examples, but is there a more concrete definition? For example, is the [Commutative property](https://en.wikipedia.org/wiki/Commutative_property) applied to an operation an example of structure (see also [Property (mathematics)](https://en.wikipedia.org/wiki/Property_(mathematics))), and in particular something that morphisms preserve by definition of being structure-preserving?
+### Define morphism
 
-Part of the problem in defining what it means to preserve "structure" is that we may not agree on what structure is important to preserve. Every structure-preserving function ("map") must forget some structure; we wouldn't call it a map if it was nothing but an identity (nothing changed). This disagreement about what is important to preserve leads to a wide variety of definitions (see comments in [n-category](https://ncatlab.org/nlab/show/n-category)).
+If you could think of a small category as a partial magma with identity and an associative partial function, then a functor might preserve this structure, without having to think about all the structure that is presumably preserved in the morphisms (which could be of any kind). A morphism is a bit more than this, though, because a morphism must also be defined whenever composition is possible (when the target of one morphism matches the source of another). It's in this sense that we say a functor is composition-preserving; because (in the language of Definition 3.6) a "composite" morphism must be defined in a category for every two morphisms that can compose. Said another way, we cannot use just any associative partial function.
 
-It may be best to completely avoid the word "structure" and rather say what structure you are preserving. Don't say structure-preserving, for example, when you mean composition-preserving. The latter is just as many letters and is more specific.
 
-In the definition of [Property (mathematics)](https://en.wikipedia.org/wiki/Property_(mathematics)), we say that it must apply across all examples. Similarly, for a commutative diagram to "commute" means it applies in all cases. A [Universal property](https://en.wikipedia.org/wiki/Universal_property) extends a "traditional property" in being also true of an associated morphism (rather than just an object).
+### Why functors?
 
-The short answer is that there are different types (think type theory) of morphisms, which are defined to preserve different types of "structure" (the term "structure" being used here in the wide sense).
+It can be easy to read the definition of a functor without thinking about why they are defined the way they are. From [Functor § Properties](https://en.wikipedia.org/wiki/Functor#Properties)
 
-The author often presents algebraic structures as tuples, as in Exercise 6.7. For the homomorphism to preserve structure, it must preserve all the structure in the tuple. However, there can also be "structure" *between* the elements of these tuples, such as (in Exercise 6.7) the distributive property.
+> Two important consequences of the functor axioms are:
+>
+> - F transforms each commutative diagram in C into a commutative diagram in D;
+> - if f is an isomorphism in C, then F(f) is an isomorphism in D.
 
-A [Functor](https://en.wikipedia.org/wiki/Functor) is a special case of a morphism (a structure-preserving map), but one that we often think of happening one "level" up of our "regular" morphisms. If you think of a small category as a partial magma with identity and an associative partial function, then a functor preserves this structure (without having to think up a level). Functors are in fact the morphisms of the category of small categories (**Cat**).
-
-In Definition 5.11 (and soon in Rough Definition 6.68) we'll see examples of functors that actually preserve more than what basic functors do. These are structure-preserving maps (morphisms) as well, in some category similar to **Cat**.
-
-What's special about functors is that they transform commutative diagrams in one category to commutative diagrams in another (see [Functor § Properties](https://en.wikipedia.org/wiki/Functor#Properties)). So if in one category you have that g ∘ f = h, as in (from [Morphism](https://en.wikipedia.org/wiki/Morphism)):
+So if in one category you have that g ∘ f = h, as in (from [Morphism](https://en.wikipedia.org/wiki/Morphism)):
 
 ![x](https://upload.wikimedia.org/wikipedia/commons/e/ef/Commutative_diagram_for_morphism.svg)
 
@@ -355,67 +381,109 @@ Then a functor will ensure this commutative diagram is also a commutative diagra
 
 ![x](https://upload.wikimedia.org/wikipedia/commons/b/b3/Commutative_diagram_of_a_functor.svg)
 
+As discussed above, what makes a morphism a morphism is that the "composite" morphisms exist. That is, the commutative triangle given above is what defines a morphism in the context of a category. You can see the same drawing in [Category (mathematics)](https://en.wikipedia.org/wiki/Category_(mathematics)):
+
+![x](https://upload.wikimedia.org/wikipedia/commons/f/ff/Category_SVG.svg)
+
 See a slightly more involved but similar definition in [functor](https://ncatlab.org/nlab/show/functor).
 
+The second property is also significant:
 
-### Interpretations of zero
+> - if f is an isomorphism in C, then F(f) is an isomorphism in D.
 
-The symbol 0 gets used for a lot; see [Zero element](https://en.wikipedia.org/wiki/Zero_element). Notice how in [Zero object (algebra)](https://en.wikipedia.org/wiki/Zero_object_(algebra)#Vector_space) the word "trivial" is almost a synonym for zero object. Per [Initial and terminal objects](https://en.wikipedia.org/wiki/Initial_and_terminal_objects):
+Let's say you had the following category:
 
-> This is the origin of the term "zero object".
+![x](ssc/why-functors-1.svg)
 
-You can't use the trivial ring because you could map the identity to either the additive or multiplicative identity.
+Define a function (an attempt at an endofunctor) that maps every object and morphism to itself, except that it switches the morphisms $id_B$ and $h$ (notice this disrespects identity-preservation because $F(id_B) = h ≠ id_{F(B)} = id_B$). While we still have a commutative diagram corresponding to $g⨟f = id_B$ (namely $g⨟f = h$) we failed to preserve the isomorphism.
 
-Is 0 like initial, and 1 like terminal?
+It may be more appropriate to call functors commutative-diagram-preserving and isomorphism-preserving, rather than composition-preserving and identity-preserving. The former more likely describes what someone wants from them, while the latter more likely only describes the mechanics.
+
+For a slightly more complicated example of failing to preserve the identity (in the case of only one object), see [Monoid § Monoid homomorphisms](https://en.wikipedia.org/wiki/Monoid#Monoid_homomorphisms).
 
 
-*Exercise* 6.7
+### Define stuff, structure, properties
 
-Consider part `1.`. Recall Definition 5.36 alongside this tuple. The sets $R$ and $S$ have no structure to preserve. To preserve the structure of the other elements of a rig, we will at least need the two rules the author provided:
-- $f(0_R) = 0_S$
-- $f(r_1 +_R r_2) = f(r_1) +_S f(r_2)$
 
-We'll also at least need the same rules for the multiplication monoid:
-- $f(1_R) = 1_S$
-- $f(r_1 *_R r_2) = f(r_1) *_S f(r_2)$
+The article [stuff, structure, property in nLab](https://ncatlab.org/nlab/show/stuff%2C+structure%2C+property#more_examples) provides a tempting definition of "structure" that could potentially free this word from its expected ambiguity (perhaps all three of these things are examples of "structure"). In the context of Exercise 6.7, this could help make it easier to guess what from Definition 5.36 (of a rig) we need to maintain. Which of the items in this list are stuff, structure, and properties? If remembering properties implies we also remember stuff, then perhaps we only need to worry about some these items and get the others to follow along. For example, see [Group homomorphism](https://en.wikipedia.org/wiki/Group_homomorphism). That article concludes at the start that because a group homomorphism preserves the group operator it must also preserve identities and inverses. Similarly, see the start of [Ring homomorphism](https://en.wikipedia.org/wiki/Ring_homomorphism).
 
-Do we also need to preserve commutativity of the addition monoid? I'd guess no; this is a property rather than a structure in the language of [stuff, structure, property](https://ncatlab.org/nlab/show/stuff%2C+structure%2C+property) (and the language of most mathematicians, it seems):
+This simple relationship is also implied by the comment:
 
 > It is worth noting that this formalism captures the intuition of how “stuff”, “structure”, and “properties” are expected to be related:
 >
 >    - stuff may be equipped with structure;
 >    - structure may have (be equipped with) properties.
 
-This article specifically mentions the commutative property at the top:
-
-> objects enjoying “extra properties” (for instance a ring being commutative ring);
-
-See this quote from [stuff, structure, property § More examples](https://ncatlab.org/nlab/show/stuff%2C+structure%2C+property#more_examples):
+See also this quote from [stuff, structure, property § More examples](https://ncatlab.org/nlab/show/stuff%2C+structure%2C+property#more_examples):
 
 > The embedding of abelian groups into all groups, F: Ab → Grp is faithful and full, but not essentially surjective.
 
-See also [Group homomorphism](https://en.wikipedia.org/wiki/Group_homomorphism). That article concludes at the start that because a group homomorphism preserves properties (the associative property) it must also preserve stuff (identities and inverses).
+Unfortunately, it's not that simple. The language of [k-surjective functor](https://ncatlab.org/nlab/show/k-surjective+functor) at first seems to imply that with increasing k more "structure" is preserved. In fact, different values of k and combinations of k imply different kinds of "structure" (meaning stuff, structure, properties) is forgotten. See:
 
-A second issue is the following statement from [full functor](https://ncatlab.org/nlab/show/full+functor):
+![x](ssc/functor-types.svg)
+
+The author often presents algebraic structures as tuples, as in Exercise 6.7. For the homomorphism to preserve structure, it must preserve all the structure in the tuple. However, there can also be "structure" *between* the elements of these tuples, such as (in Exercise 6.7) the distributive property. In other cases the author seems to have an understanding of stuff, structure, properties as he lists them separately (e.g. Definition 3.6, Definition 3.35).
+
+One way to see the stuff, structure, properties breakdown is in terms of a finite presentation of a category. If you see a category as a database (Chp. 3) then this is more obvious based on inspecting the type theory example [structure § GroupDataStructure](https://ncatlab.org/nlab/show/structure#GroupDataStructure). The properties correspond to the equations at the bottom of the diagram, the structure to the morphisms in the category, and the stuff to the objects in the category. Rather than a finite number of equations, there are equations that apply globally. For example, in the definition of [Property (mathematics)](https://en.wikipedia.org/wiki/Property_(mathematics)), we say that it must apply across all examples. Similarly, for a commutative diagram to "commute" means it applies in all cases. A [Universal property](https://en.wikipedia.org/wiki/Universal_property) extends a "traditional property" in being also true of an associated morphism (rather than just an object).
+
+Another reason that this logic doesn't apply to Exercise 6.7 is that a homomorphism is not a functor. Both are examples of morphisms (are "structure" preserving in at least some sense) but a homomorphism is only preserving of *some* kind of structure on top of a set, and a functor is identity and composition preserving. It is true that rig homomorphisms happen to form a category (see [Rig](https://ncatlab.org/nlab/show/Rig)), but an endofunctor on that category would need to apply to every rig (not be defined between rigs). A rig does have some internal compositional structure to preserve, however, on its two monoids.
+
+See also the much more detailed original paper on this topic, which explains e.g. why all these functors can be seen as surjective (and why an "injective" function across sets can even be seen as surjective). In particular, [section 2.4, p. 15](http://arxiv.org/PS_cache/math/pdf/0608/0608420v2.pdf#page=15) and [section 3.1, p. 17](http://arxiv.org/PS_cache/math/pdf/0608/0608420v2.pdf#page=17). The stuff/structure/property conversation comes up in more detail in [Forgetful functor](https://en.wikipedia.org/wiki/Forgetful_functor), relating it to logic.
+
+An outstanding issue is the following statement from [full functor](https://ncatlab.org/nlab/show/full+functor):
 
 > For ordinary functors this may sound odd, because there is no real sense in which “full” modifies “faithful.”
 
-It doesn't seem like your "faithful, not full" example fits this situation. In nlab they seem to repeat this sentiment in [faithful functor](https://ncatlab.org/nlab/show/faithful+functor), where they say a faithful functor is 2-surjective (impying it is also 1-surjective i.e. a full functor).
 
-Can we see structure-preserving morphisms as preserving context? Keep what you learned in one context in another context. In terms of stuff, structure, property then, it's about how much structure you want to preserve.
+*Exercise* 6.7
 
-The stuff/structure/property conversation comes up in more detail in [Forgetful functor](https://en.wikipedia.org/wiki/Forgetful_functor), relating it to logic.
+Consider part `1.`. Recall Definition 5.36 alongside this tuple. The sets $R$ and $S$ have no structure to preserve. To preserve the structure of the other elements of a rig, we will at least need the two rules the author provided:
 
-What does it mean to preserve the distributitive property? If it's a property, it seems like it would be the same situation (doesn't need to be handled separately).
+1) $f(0_R) = 0_S$
+2) $f(r_1 +_R r_2) = f(r_1) +_S f(r_2)$
 
-For likely solutions to this question (check before checking the back of the book), see:
+We'll also at least need the following rule for the multiplication monoid:
+
+3) $f(1_R) = 1_S$
+4) $f(r_1 *_R r_2) = f(r_1) *_S f(r_2)$
+
+The last bullet point in Definition 5.36 implies we should preserve the absorbing element zero ($f(0_R) = 0_S$) but this is already satisfied by condition `1.` above.
+
+Do we also need to preserve commutativity of the addition monoid? I'd guess no; why? We can see the combination of `1.` and `2.` above as a functor, because a monoid with one element is effectively a category with a single object. By preserving the monoid operation we effectively preserve composition, because all commutative triangles in a monoid flatten into a linear chain. Any functor will end up being an equivalence of categories because the functor is only defined from one object to one object. The commutative property is a "property" in the language of [stuff, structure, property](https://ncatlab.org/nlab/show/stuff%2C+structure%2C+property), and therefore should be preserved by an equivalence of categories (which "forgets nothing" where nothing means none of stuff, structure, properties).
+
+What does it mean to preserve the distributive property given in part (c) of Definition 5.36? If it's a property, it seems like it would be the same situation, so we'll assume it will be preserved without more rules.
+
+Note that [Ring homomorphism](https://en.wikipedia.org/wiki/Ring_homomorphism) only requires {`2.`, `3.`, `4.`} and takes `1.` as a consequence; it's likely the proof/derivation uses negative elements. For a definition that only requires {`1.`, `2.`, `4.`}, see [Ring Homomorphism - from Wolfram MathWorld](https://mathworld.wolfram.com/RingHomomorphism.html).
+
+
+For part `2.` can we use a one-element set? See [Field with one element](https://en.wikipedia.org/wiki/Field_with_one_element); at least for a field this isn't a well-defined concept. However, why can't the multiplicative identity equal the [Additive identity](https://en.wikipedia.org/wiki/Additive_identity)? See [Additive identity § Properties](https://en.wikipedia.org/wiki/Additive_identity#Properties); there's no hard reason this isn't possible for a ring. In fact, this is known as the [Zero ring](https://en.wikipedia.org/wiki/Zero_ring).
+
+However, the zero ring cannot serve as an initial object in **Rig** because we can still preserve structure and map the one element in this structure to either the additive or multiplicative identity in many other rigs (such as e.g. the natural numbers). That makes two morphisms (homomorphisms) from the zero ring to the natural numbers, when an initial object must only have one.
+
+Having both a multiplicative and additive element implies (via the distributive property) that some other element 1+1 must exist, and via mathematical induction this implies we must have at least the natural numbers in an initial object. Are the natural numbers an initial object in **Rig**? There is exactly one morphism from them to the zero ring (all elements go to zero).
+
+Without reading it, this solution looks long. For likely solutions to this question (check before checking the back of the book), see:
 - [Rig in nLab](https://ncatlab.org/nlab/show/Rig)
 - [rig in nLab](https://ncatlab.org/nlab/show/rig)
 
 
-You can't really work on part `2.` (what element is the initial object) without understanding part `1.` (what it means to preserve structure) because whatever unique morphism exists for all objects must preserve structure. How do you check it preserves structure for all cases unless you understand what it means to do so?
+### Interpretations of zero
 
-For part `2.` can we use a one-element set? Per [Field with one element](https://en.wikipedia.org/wiki/Field_with_one_element), it seems like the answer is no. Why can't the multiplicative identity equal the [Additive identity](https://en.wikipedia.org/wiki/Additive_identity)? See [Additive identity § Properties](https://en.wikipedia.org/wiki/Additive_identity#Properties); there's no hard reason this isn't possible.
+The symbol 0 gets used in higher mathematics for much more than the number zero; see [Zero element](https://en.wikipedia.org/wiki/Zero_element). In part (d) of Definition 5.36 (a dependency of Exercise 6.7) it's specifically identified as an absorbing element, besides being the additive identity. Since we're in a section on initial objects, and have already learned about terminal objects, it may be worth looking at the concept of a [Zero object (algebra)](https://en.wikipedia.org/wiki/Zero_object_(algebra)) (which is both initial and terminal).
+
+All over the article [Zero object (algebra)](https://en.wikipedia.org/wiki/Zero_object_(algebra)#Vector_space), the word "trivial" is used almost as a synonym for zero object. At the start:
+
+> This article is about trivial or zero algebraic structures.
+
+The article [Initial and terminal objects](https://en.wikipedia.org/wiki/Initial_and_terminal_objects) redefines "zero object" but links to [Zero object (algebra)](https://en.wikipedia.org/wiki/Zero_object_(algebra)#Vector_space) and specifically mentions:
+
+> This is the origin of the term "zero object".
+
+In [Initial and terminal objects](https://en.wikipedia.org/wiki/Initial_and_terminal_objects), the symbol 0 is often used for initial objects (though the author uses ∅). It's likely this is because 0 serves as the additive identity and so seems natural alongside the symbol + often used for the coproduct. The symbol 1 is similarly often used for terminal objects because it is the identity with respect to the categorical product. The article also mentions:
+
+> Cat, the category of small categories with functors as morphisms has the empty category, 0 (with no objects and no morphisms), as initial object and the terminal category, 1 (with a single object with a single identity morphism), as terminal object.
+
+While it often works to use 0 for an initial object and 1 for a terminal object, this also not a specific approach. It can also be confusing when a category has a "zero" object that is not initial (as in **Ring**/**Rig**, where the zero ring/rig is terminal).
 
 
 *Exercise* 6.8
