@@ -486,9 +486,13 @@ In [Initial and terminal objects](https://en.wikipedia.org/wiki/Initial_and_term
 While it often works to use 0 for an initial object and 1 for a terminal object, this also not a specific approach. It can also be confusing when a category has a "zero" object that is not initial (as in **Ring**/**Rig**, where the zero ring/rig is terminal).
 
 
-*Exercise* 6.8
+### *Exercise* 6.8
 
+The initial object is clearly what is being universal in this context. The "comparable object" is any other object in the category.
 
+In terms of [Universal property § Formal definition](https://en.wikipedia.org/wiki/Universal_property#Formal_definition), an initial object corresponds to the 1st definition and a terminal object corresponds to the 2nd. That is, in the 1st definition the unique morphism (dashed arrow) goes out from the blue object rather than into it:
+
+![x](https://upload.wikimedia.org/wikipedia/commons/d/df/Universal_morphism_definition.svg)
 
 
 ### *Exercise* 6.10
@@ -499,9 +503,22 @@ Call $!_{c_2}$ the unique morphism from $c_1$ to $c_2$. Call $!_{c_1}$ the uniqu
 ## 6.2.2 Coproducts
 
 
-*Exercise* 6.13
+### *Exercise* 6.13
 
+In a preorder all morphisms are unique, so we can remove any distinction between the types of arrows in (6.12) (that is, the dashed arrow can be thought of as solid). With this, for any coproduct we clearly have the two morphisms corresponding to the canonical injections:
 
+$$
+A ≤ A + B \\
+B ≤ A + B
+$$
+
+Using the definition of join in [Join and meet § Partial order approach](https://en.wikipedia.org/wiki/Join_and_meet#Partial_order_approach), this shows that A+B is an upper bound of A and B.
+
+How do we show that it is the least upper bound? Let's say there was some other upper bound Q ≤ A+B. We know that there is some morphism corresponding to the copairing $[f,g]$ so that (taking Q as T) we have A+B ≤ Q. So even if Q is technically distinct from A+B, they are isomorphic, just as two coproducts can be isomorphic.
+
+Said another way, a coproduct has that for all objects T where A ≤ T and B ≤ T, that A+B ≤ T. That is, A+B is less than or equal to any other object and hence is the least upper bound.
+
+Just as joins may not exist in every preorder, coproducts may not exist in every category.
 
 
 ### *Exercise* 6.16
@@ -520,13 +537,19 @@ $$
 $$
 
 
-*Exercise* 6.17
+### *Exercise* 6.17
 
-In Definition 6.11 we said that there is a unique morphism from the coproduct $A+B$ to all objects $T$ and pairs of morphisms $(f: A → T, g: B → T)$. Clearly $A+B$ exists because the category 𝓒 has coproducts, and $C$ can serve as one of these objects $T$ because it has appropriate functions $f$ and $g$. Taking $C$ as the object $T$ in diagram (6.12),  we can conclude that part `1.` and `2.` are true from the fact that the diagram commutes.
+In Definition 6.11 we said that there is a unique morphism from the coproduct $A+B$ to all objects $T$ and pairs of morphisms $(f: A → T, g: B → T)$. Clearly $A+B$ exists because the category 𝓒 has coproducts, and $C$ can serve as one of these objects $T$ because it has appropriate functions $f$ and $g$. Taking $C$ as the object $T$ in diagram (6.12),  we can conclude that part `1.` and `2.` are true from the fact that the diagram commutes. Replacing the variable names:
 
-For part `3.`, we know that the morphisms $f ⨟ h$ and $g ⨟ h$ and exist by simply composing morphisms, and therefore that $D$ can also serve as a $T$ in the definition and that there is some unique morphism from $A + B$ to $D$ we can call $[f ⨟ h, g ⨟ h]$. But $[f,g] ⨟ h$ also exists by simply composing morphisms, and therefore must equal $[f ⨟ h, g ⨟ h]$.
+![x](ssc/exercise-6-17.svg)
 
-For part `4.` we know that the morphisms $ɩ_A$ and $ɩ_B$ exist because all coproducts exist, and therefore that $A+B$ can serve as a $T$ in the definition and that there is some unique morphism from $A + B$ to $A + B$ that we can call $[ɩ_A, ɩ_B]$. But $id_{A+B}$ exists by definition of $A+B$ being an object in the category, and therefore must equal $[ɩ_A, ɩ_B]$.
+For part `3.`, we know that the morphisms $f ⨟ h$ and $g ⨟ h$ exist by simply composing morphisms, and therefore that $D$ can also serve as a $T$ in the definition and that there is some unique morphism from $A + B$ to $D$ we can call $[f ⨟ h, g ⨟ h]$. But $[f,g] ⨟ h$ also exists by simply composing morphisms, and therefore must equal $[f ⨟ h, g ⨟ h]$. Visually:
+
+![x](ssc/exercise-6-17-part3.svg)
+
+For part `4.` we know that the morphisms $ɩ_A$ and $ɩ_B$ exist because all coproducts exist, and therefore that $A+B$ can serve as a $T$ in the definition and that there is some unique morphism from $A + B$ to $A + B$ that we can call $[ɩ_A, ɩ_B]$. But $id_{A+B}$ exists by definition of $A+B$ being an object in the category, and therefore must equal $[ɩ_A, ɩ_B]$. Visually:
+
+![x](ssc/exercise-6-17-part4.svg)
 
 
 *Exercise* 6.18
