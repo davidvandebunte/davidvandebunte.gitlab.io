@@ -554,29 +554,85 @@ For part `4.` we know that the morphisms $ɩ_A$ and $ɩ_B$ exist because all cop
 
 *Exercise* 6.18
 
-For part `1.` is this simply constructing the copairing of the two morphisms?
+For part `1.` is this simply constructing the copairing of the two morphisms? First, we'll have to construct a [Product category](https://en.wikipedia.org/wiki/Product_category).
 
-For part `2.` see the diagram (6.12) and put $∅$ on the right. That makes $ɩ_∅$ a unique morphism, and $g$ a unique morphism. Is the composition $ɩ_∅ ⨟ [f,g]$ also unique? What about the unique morphism across the top of the diagram from $∅$ to $A$?
+How do we show that our definition, whatever we guess it to be, is an endo-bi-functor? We must show that it preserves identities and composition.
+
+For part `2.` see the diagram (6.12) and put $∅$ on the right. That makes $ɩ_∅$ a unique morphism, and $g$ a unique morphism. Is the composition $ɩ_∅ ⨟ [f,g]$ also unique? No, it must equal $g$. What about the unique morphism across the top of the diagram from $∅$ to $A$?
+
+Could $A$ serve as $T$ in the diagram to get a unique morphism from A+∅ to $A$? We would want to show $ɩ_A ⨟ [id_A,g] = id_A$ and $[id_A,g] ⨟ ɩ_A = id_{A+∅}$.
+
+Does the author mean to say natural isomorphisms? The left and right unitors in [Monoidal category](https://en.wikipedia.org/wiki/Monoidal_category) are natural isomorphisms.
 
 
 ## 6.2.3 Pushouts
 
-See [Pushout (category theory)](https://en.wikipedia.org/wiki/Pushout_(category_theory)); contrast with [Pullback (category theory)](https://en.wikipedia.org/wiki/Pullback_(category_theory)) (from section 3.5.3).
+Contrast with [Pullback (category theory)](https://en.wikipedia.org/wiki/Pullback_(category_theory)) (from section 3.5.3).
 
 
 *Exercise* 6.24
 
+For part `1.`, what does it mean for all pushouts to exist? recall that a pushout consists of an object and two morphisms that have the pushout's object as the target.
+
+For part `2.`, there is clearly an initial object in the category **1** corresponding the the single object; there is one morphism from it to every other object (namely, the identity morphism to itself). In the category **0** it is vacuously true that there is one morphism out of every object, but there is no object (hence it has no initial object).
 
 
-
-*Exercise* 6.26
-
+### *Exercise* 6.26
 
 
+First we'll construct the solution somewhat experimentally, by simply trying to get $f ⨾ ɩ_X = g ⨾ ɩ_Y$ (the black dashed arrows in the drawing below). The arrows in this drawing are in various styles only to make them easier to visually distinguish. Compare to (6.20):
 
-*Exercise* 6.28
+![x](ssc/exercise-6-26-part1.svg)
+
+In the previous, we could have still satisfied the requirement $f ⨾ ɩ_X = g ⨾ ɩ_Y$ by e.g. mapping both {2,4} in X to the same place we mapped {1}:
+
+![x](ssc/exercise-6-26-part1-2.svg)
+
+Although the diagram commutes, it does not satisfy (6.21) for all T. In the language of [pushout](https://ncatlab.org/nlab/show/pushout), it's not the universal solution to finding a commutative square like this (just one solution).
 
 
+To check the answer using the abstract description of Example 6.25, we'll start by filling in a binary relation with only the connections produced by the a ∈ A:
+
+![x](ssc/exercise-6-26-part2.svg)
+
+
+Taking the reflexive, symmetric closure:
+
+![x](ssc/exercise-6-26-part2-2.svg)
+
+
+This relatively sparse matrix is better visualized as a graph. This approach also makes it easier to see how the resulting equivalence categories are the connected components of the corresponding graph (see [Component (graph theory)](https://en.wikipedia.org/wiki/Component_(graph_theory))):
+
+![x](ssc/exercise-6-26-part2-3.svg)
+
+
+Taking the transitive closure:
+
+![x](ssc/exercise-6-26-part2-4.svg)
+
+
+### *Exercise* 6.28
+
+
+For `1.`, remember that the initial object has only one morphism to every object. This includes the coproduct $X+Y$; therefore the morphisms $f⨟ɩ_X$ and $g⨟ɩ_Y$ must be the same (i.e. $f⨟ɩ_X$ = $g⨟ɩ_Y$).
+
+The conclusion in part `2.` follows directly from the universal property of a coproduct (see the commutative diagram in (6.12)). That is, adding (6.12) to the diagram on the left results in (6.21).
+
+For part `3.` assume we have a pushout $X +_∅ Y$, so that as given in part (b) of the definition of a pushout there is a unique morphism $t$ from it to any other object $T$ and (6.21) commutes. The pushout $X +_∅ Y$ is then a coproduct $X + Y$ with respect to $X$ and $Y$ where the the copairing $[f,g]$ given in (6.12) is equal to $t$.
+
+
+### *Example* 6.29
+
+
+This example starts:
+
+> If $T$ is any other set and we have maps $x\colon X\to T$ and $y\colon Y\to T$ that commute with $f$ and $g$, i.e. $f\cong x=g\cong y$, then this commutativity implies that ...
+
+It seems likely the congruent symbols ($\cong$) are wrong. This makes more sense:
+
+> If $T$ is any other set and we have maps $x\colon X\to T$ and $y\colon Y\to T$ that commute with $f$ and $g$, i.e. $f⨟x=g⨟y$, then this commutativity implies that ...
+
+Thinking of this example in terms of connected components (see [Component (graph theory)](https://en.wikipedia.org/wiki/Component_(graph_theory))) makes it much easier to accept the solution. If you follow the blue dotted lines in the drawing, you'll see there is just one single large component.
 
 
 ## 6.2.4 Finite colimits
