@@ -119,4 +119,5 @@ parts:
       - file: notes/improve-design-experiments.md
       - file: notes/improve-estimate-subplan-weight.md
       - file: notes/improve-ssc.md
+      - file: notes/ssc/improve.md
       - file: notes/observations.md
