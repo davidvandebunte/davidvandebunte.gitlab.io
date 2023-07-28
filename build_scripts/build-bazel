@@ -1,6 +1,12 @@
 #!/usr/bin/env sh
 set -x -o errexit -o nounset
 
+if [ -z ${GITLAB_CI+x} ]; then
+    echo "Building locally"
+else
+    python3 -m dvc pull jb/tar/notes/ssc/raster
+fi
+
 python3 -m dvc pull jb/rethinking/image.tar
 ./scripts/install-bazelisk
 ./bazelisk build //jb:extract_build_book

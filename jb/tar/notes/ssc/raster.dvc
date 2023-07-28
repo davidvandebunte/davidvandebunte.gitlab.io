@@ -1,0 +1,5 @@
+outs:
+- md5: 2d68cb36821ddb76f8d28c734b336e3d.dir
+  size: 19992
+  nfiles: 1
+  path: raster
