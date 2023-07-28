@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+set -o errexit -o nounset -o xtrace
+
+dvc add jb/tar/notes/ssc/raster
+
+# Push it all.
+dvc push
+git commit -m "notes/approve-rendering: Add dvc edits"
