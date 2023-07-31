@@ -15,13 +15,11 @@ kernelspec:
 
 +++
 
-An example image:
-
-![x](raster/exercise-6-24.png)
+# 6.2 Colimits and connection
 
 +++
 
-# 6.2 Colimits and connection
+![x](raster/2023-07-30T18-28-31.png)
 
 +++
 
@@ -29,7 +27,21 @@ An example image:
 
 +++
 
+![x](raster/2023-07-30T18-30-56.png)
+
++++
+
+![x](raster/2023-07-30T19-04-13.png)
+
++++
+
 ### *Exercise* 6.3
+
++++
+
+![x](raster/2023-07-30T19-04-43.png)
+
++++
 
 1. The relation with zero morphisms (besides the identity morphisms).
 2. A relation with one extra morphism (either from a → b or b → a).
@@ -37,7 +49,21 @@ An example image:
 
 +++
 
+### *Example* 6.4
+
++++
+
+![x](raster/2023-07-30T19-06-40.png)
+
++++
+
 ### *Exercise* 6.6
+
++++
+
+![x](raster/2023-07-30T19-12-53.png)
+
++++
 
 Example `1.` has a single initial object a, because there's still an identity morphism on a in the free category.
 
@@ -145,7 +171,9 @@ Unfortunately, it's not that simple. The language of [k-surjective functor](http
 
 ![x](functor-types.svg)
 
-The author often presents algebraic structures as tuples, as in Exercise 6.7. For the homomorphism to preserve structure, it must preserve all the structure in the tuple. However, there can also be "structure" *between* the elements of these tuples, such as (in Exercise 6.7) the distributive property. In other cases the author seems to have an understanding of stuff, structure, properties as he lists them separately (e.g. Definition 3.6, Definition 3.35).
++++
+
+The author often presents algebraic structures as tuples, as in Exercise 6.7. For the homomorphism to preserve structure, it must preserve all the structure in the tuple. However, there can also be "structure" *between* the elements of these tuples, such as (in Exercise 6.7) the distributive property. In other cases the author seems to have an understanding of stuff, structure, properties as he lists them separately (e.g. Definition 3.6, Definition 3.35). For more on the author's perspective, see "Coherence conditions" in Section 3.6.
 
 One way to see the stuff, structure, properties breakdown is in terms of a finite presentation of a category. If you see a category as a database (Chp. 3) then this is more obvious based on inspecting the type theory example [structure § GroupDataStructure](https://ncatlab.org/nlab/show/structure#GroupDataStructure). The properties correspond to the equations at the bottom of the diagram, the structure to the morphisms in the category, and the stuff to the objects in the category. Rather than a finite number of equations, there are equations that apply globally. For example, in the definition of [Property (mathematics)](https://en.wikipedia.org/wiki/Property_(mathematics)), we say that it must apply across all examples. Similarly, for a commutative diagram to "commute" means it applies in all cases. A [Universal property](https://en.wikipedia.org/wiki/Universal_property) extends a "traditional property" in being also true of an associated morphism (rather than just an object).
 
@@ -159,9 +187,19 @@ An outstanding issue is the following statement from [full functor](https://ncat
 
 +++
 
-*Exercise* 6.7
+### *Exercise* 6.7: Initial rig
 
-Consider part `1.`. Recall Definition 5.36 alongside this tuple. The sets $R$ and $S$ have no structure to preserve. To preserve the structure of the other elements of a rig, we will at least need the two rules the author provided:
++++
+
+#### Part `1.`
+
++++
+
+![x](raster/2023-07-30T19-22-18.png)
+
++++
+
+Recall Definition 5.36 alongside this tuple. The sets $R$ and $S$ have no structure to preserve. To preserve the structure of the other elements of a rig, we will at least need the two rules the author provided:
 
 1) $f(0_R) = 0_S$
 2) $f(r_1 +_R r_2) = f(r_1) +_S f(r_2)$
@@ -181,6 +219,14 @@ Note that [Ring homomorphism](https://en.wikipedia.org/wiki/Ring_homomorphism) o
 
 +++
 
+#### Part `2.`
+
++++
+
+![x](raster/2023-07-30T19-22-48.png)
+
++++
+
 For part `2.` can we use a one-element set? See [Field with one element](https://en.wikipedia.org/wiki/Field_with_one_element); at least for a field this isn't a well-defined concept. However, why can't the multiplicative identity equal the [Additive identity](https://en.wikipedia.org/wiki/Additive_identity)? See [Additive identity § Properties](https://en.wikipedia.org/wiki/Additive_identity#Properties); there's no hard reason this isn't possible for a ring. In fact, this is known as the [Zero ring](https://en.wikipedia.org/wiki/Zero_ring).
 
 However, the zero ring cannot serve as an initial object in **Rig** because we can still preserve structure and map the one element in this structure to either the additive or multiplicative identity in many other rigs (such as e.g. the natural numbers). That makes two morphisms (homomorphisms) from the zero ring to the natural numbers, when an initial object must only have one.
@@ -194,6 +240,8 @@ Without reading it, this solution looks long. For likely solutions to this quest
 +++
 
 ### Interpretations of zero
+
++++
 
 The symbol 0 gets used in higher mathematics for much more than the number zero; see [Zero element](https://en.wikipedia.org/wiki/Zero_element). In part (d) of Definition 5.36 (a dependency of Exercise 6.7) it's specifically identified as an absorbing element, besides being the additive identity. Since we're in a section on initial objects, and have already learned about terminal objects, it may be worth looking at the concept of a [Zero object (algebra)](https://en.wikipedia.org/wiki/Zero_object_(algebra)) (which is both initial and terminal).
 
@@ -215,25 +263,53 @@ While it often works to use 0 for an initial object and 1 for a terminal object,
 
 ### *Exercise* 6.8
 
++++
+
+![x](raster/2023-07-30T19-23-25.png)
+
++++
+
 The initial object is clearly what is being universal in this context. The "comparable object" is any other object in the category.
 
-In terms of [Universal property § Formal definition](https://en.wikipedia.org/wiki/Universal_property#Formal_definition), an initial object corresponds to the 1st definition and a terminal object corresponds to the 2nd. That is, in the 1st definition the unique morphism (dashed arrow) goes out from the blue object rather than into it:
+In terms of [Universal property § Formal definition](https://en.wikipedia.org/wiki/Universal_property#Formal_definition), an initial object corresponds to the 1st definition and a terminal object corresponds to the 2nd. That is, in the 1st definition the unique morphism (dashed arrow) goes out from the blue/initial object on the right rather than into it:
 
 ![x](https://upload.wikimedia.org/wikipedia/commons/d/df/Universal_morphism_definition.svg)
 
 +++
 
+### *Remark* 6.9
+
++++
+
+![x](raster/2023-07-30T19-24-24.png)
+
++++
+
 ### *Exercise* 6.10
+
++++
+
+![x](raster/2023-07-30T19-30-03.png)
+
++++
 
 Call $!_{c_2}$ the unique morphism from $c_1$ to $c_2$. Call $!_{c_1}$ the unique morphism from $c_2$ to $c_1$. Then both are isomorphisms, because $id_{c_1} = !_{c_2} ⨟ !_{c_1}$ and $id_{c_2} = !_{c_1} ⨟ !_{c_2}$.
 
-+++
++++ {"tags": []}
 
 ## 6.2.2 Coproducts
 
-+++
++++ {"tags": []}
+
+![x](raster/definition-6-11.png)
+
++++ {"tags": []}
 
 ### *Exercise* 6.13
+
+![x](raster/exercise-6-13.png)
+
++++ {"jp-MarkdownHeadingCollapsed": true, "tags": []}
 
 In a preorder all morphisms are unique, so we can remove any distinction between the types of arrows in (6.12) (that is, the dashed arrow can be thought of as solid). With this, for any coproduct we clearly have the two morphisms corresponding to the canonical injections:
 
@@ -250,9 +326,23 @@ Said another way, a coproduct has that for all objects T where A ≤ T and B ≤
 
 Just as joins may not exist in every preorder, coproducts may not exist in every category.
 
-+++
++++ {"tags": []}
+
+### *Example* 6.14
+
++++ {"tags": []}
+
+![x](raster/2023-07-30T19-44-03.png)
+
++++ {"tags": []}
 
 ### *Exercise* 6.16
+
++++ {"tags": []}
+
+![x](raster/example-6-16.png)
+
++++
 
 $$
 \begin{align}
@@ -271,6 +361,12 @@ $$
 
 ### *Exercise* 6.17
 
++++ {"tags": []}
+
+![x](raster/2023-07-30T19-48-38.png)
+
++++
+
 In Definition 6.11 we said that there is a unique morphism from the coproduct $A+B$ to all objects $T$ and pairs of morphisms $(f: A → T, g: B → T)$. Clearly $A+B$ exists because the category 𝓒 has coproducts, and $C$ can serve as one of these objects $T$ because it has appropriate functions $f$ and $g$. Taking $C$ as the object $T$ in diagram (6.12),  we can conclude that part `1.` and `2.` are true from the fact that the diagram commutes. Replacing the variable names:
 
 ![x](exercise-6-17.svg)
@@ -279,26 +375,31 @@ For part `3.`, we know that the morphisms $f ⨟ h$ and $g ⨟ h$ exist by simpl
 
 ![x](exercise-6-17-part3.svg)
 
-For part `4.` we know that the morphisms $ɩ_A$ and $ɩ_B$ exist because all coproducts exist, and therefore that $A+B$ can serve as a $T$ in the definition and that there is some unique morphism from $A + B$ to $A + B$ that we can call $[ɩ_A, ɩ_B]$. But $id_{A+B}$ exists by definition of $A+B$ being an object in the category, and therefore must equal $[ɩ_A, ɩ_B]$. Visually:
+For part `4.` we know that the morphisms $ι_A$ and $ι_B$ exist because all coproducts exist, and therefore that $A+B$ can serve as a $T$ in the definition and that there is some unique morphism from $A + B$ to $A + B$ that we can call $[ι_A, ι_B]$. But $id_{A+B}$ exists by definition of $A+B$ being an object in the category, and therefore must equal $[ι_A, ι_B]$. Visually:
 
 ![x](exercise-6-17-part4.svg)
 
 +++
 
-*Exercise* 6.18
-
-![x](raster/exercise-6-18.png)
-![x](raster/exercise-6-18-2.png)
+### *Exercise* 6.18
 
 +++
 
-For part `1.` is this simply constructing the copairing of the two morphisms? First, we'll have to construct a [Product category](https://en.wikipedia.org/wiki/Product_category).
+![x](raster/2023-07-30T19-54-08.png)
+
++++
+
+For part `1.` is this simply constructing the copairing of the two morphisms? First, we'll have to construct a [Product category](https://en.wikipedia.org/wiki/Product_category). Some pieces of that:
+
+![x](exercise-6-18.svg)
+
++++
 
 How do we show that our definition, whatever we guess it to be, is an endo-bi-functor? We must show that it preserves identities and composition.
 
-For part `2.` see the diagram (6.12) and put $∅$ on the right. That makes $ɩ_∅$ a unique morphism, and $g$ a unique morphism. Is the composition $ɩ_∅ ⨟ [f,g]$ also unique? No, it must equal $g$. What about the unique morphism across the top of the diagram from $∅$ to $A$?
+For part `2.` see the diagram (6.12) and put $∅$ on the right. That makes $ι_∅$ a unique morphism, and $g$ a unique morphism. Is the composition $ι_∅ ⨟ [f,g]$ also unique? No, it must equal $g$. What about the unique morphism across the top of the diagram from $∅$ to $A$?
 
-Could $A$ serve as $T$ in the diagram to get a unique morphism from A+∅ to $A$? We would want to show $ɩ_A ⨟ [id_A,g] = id_A$ and $[id_A,g] ⨟ ɩ_A = id_{A+∅}$.
+Could $A$ serve as $T$ in the diagram to get a unique morphism from A+∅ to $A$? We would want to show $ι_A ⨟ [id_A,g] = id_A$ and $[id_A,g] ⨟ ι_A = id_{A+∅}$.
 
 Does the author mean to say natural isomorphisms? The left and right unitors in [Monoidal category](https://en.wikipedia.org/wiki/Monoidal_category) are natural isomorphisms.
 
@@ -306,11 +407,29 @@ Does the author mean to say natural isomorphisms? The left and right unitors in 
 
 ## 6.2.3 Pushouts
 
-Contrast with [Pullback (category theory)](https://en.wikipedia.org/wiki/Pullback_(category_theory)) (from section 3.5.3).
++++ {"tags": []}
+
+![x](raster/2023-07-30T13-59-52.png)
+
++++ {"tags": []}
+
+![x](raster/2023-07-30T14-00-34.png)
 
 +++
 
-*Exercise* 6.24
+See [Pushout (category theory)](https://en.wikipedia.org/w/index.php?title=Pushout_%28category_theory%29&section=2), in particular the whole paragraph starting:
+
+> Suppose that X, Y, and Z as above are sets, and that f : Z → X and g : Z → Y are set functions.
+
++++
+
+### *Exercise* 6.24
+
++++
+
+![x](raster/exercise-6-24.png)
+
++++
 
 For part `1.`, what does it mean for all pushouts to exist? recall that a pushout consists of an object and two morphisms that have the pushout's object as the target.
 
@@ -318,15 +437,27 @@ For part `2.`, there is clearly an initial object in the category **1** correspo
 
 +++
 
-### *Exercise* 6.26
+### *Example* 6.25
+
++++ {"tags": []}
+
+![x](raster/2023-07-30T14-06-15.png)
 
 +++
 
-First we'll construct the solution somewhat experimentally, by simply trying to get $f ⨾ ɩ_X = g ⨾ ɩ_Y$ (the black dashed arrows in the drawing below). The arrows in this drawing are in various styles only to make them easier to visually distinguish. Compare to (6.20):
+### *Exercise* 6.26
+
++++ {"tags": []}
+
+![x](raster/2023-07-30T14-09-06.png)
+
++++
+
+First we'll construct the solution somewhat experimentally, by simply trying to get $f ⨾ ι_X = g ⨾ ι_Y$ (the black dashed arrows in the drawing below). The arrows in this drawing are in various styles only to make them easier to visually distinguish. Compare to (6.20):
 
 ![x](exercise-6-26-part1.svg)
 
-In the previous, we could have still satisfied the requirement $f ⨾ ɩ_X = g ⨾ ɩ_Y$ by e.g. mapping both {2,4} in X to the same place we mapped {1}:
+In the previous, we could have still satisfied the requirement $f ⨾ ι_X = g ⨾ ι_Y$ by e.g. mapping both {2,4} in X to the same place we mapped {1}:
 
 ![x](exercise-6-26-part1-2.svg)
 
@@ -356,13 +487,21 @@ Taking the transitive closure:
 
 ![x](exercise-6-26-part2-4.svg)
 
++++ {"tags": []}
+
+![x](raster/2023-07-30T18-41-39.png)
+
 +++
 
 ### *Exercise* 6.28
 
++++ {"tags": []}
+
+![x](raster/2023-07-30T14-14-39.png)
+
 +++
 
-For `1.`, remember that the initial object has only one morphism to every object. This includes the coproduct $X+Y$; therefore the morphisms $f⨟ɩ_X$ and $g⨟ɩ_Y$ must be the same (i.e. $f⨟ɩ_X$ = $g⨟ɩ_Y$).
+For `1.`, remember that the initial object has only one morphism to every object. This includes the coproduct $X+Y$; therefore the morphisms $f⨟ι_X$ and $g⨟ι_Y$ must be the same (i.e. $f⨟ι_X$ = $g⨟ι_Y$).
 
 The conclusion in part `2.` follows directly from the universal property of a coproduct (see the commutative diagram in (6.12)). That is, adding (6.12) to the diagram on the left results in (6.21).
 
@@ -371,6 +510,10 @@ For part `3.` assume we have a pushout $X +_∅ Y$, so that as given in part (b)
 +++
 
 ### *Example* 6.29
+
++++ {"tags": []}
+
+![x](raster/2023-07-30T14-16-55.png)
 
 +++
 
@@ -388,25 +531,97 @@ Thinking of this example in terms of connected components (see [Component (graph
 
 ## 6.2.4 Finite colimits
 
++++ {"tags": []}
+
+![x](raster/2023-07-30T00-37-46.png)
+
++++ {"tags": []}
+
+![x](raster/2023-07-30T00-40-54.png)
+
++++ {"tags": []}
+
+![x](raster/2023-07-30T00-43-55.png)
+
 +++
 
-*Exercise* 6.35
+### *Exercise* 6.35
+
++++ {"tags": []}
+
+![x](raster/2023-07-30T00-36-43.png)
+
++++ {"tags": []}
+
+![x](raster/2023-07-30T00-55-03.png)
+
++++ {"tags": []}
+
+![x](raster/2023-07-30T00-56-03.png)
 
 +++
 
-*Exercise* 6.41
+### *Exercise* 6.41
+
++++ {"tags": []}
+
+![x](raster/2023-07-30T00-56-26.png)
+
++++
+
+### *Example* 6.42
+
++++ {"tags": []}
+
+![x](raster/2023-07-30T00-56-51.png)
 
 +++
 
 ## 6.2.5 Cospans
 
++++ {"tags": []}
+
+![x](raster/2023-07-30T14-29-02.png)
+
++++ {"tags": []}
+
+![x](raster/2023-07-30T14-29-41.png)
+
++++ {"tags": []}
+
+![x](raster/2023-07-30T14-30-10.png)
+
++++ {"tags": []}
+
+![x](raster/2023-07-30T14-32-11.png)
+
 +++
 
-*Exercise* 6.48
+### *Exercise* 6.48
+
++++ {"tags": []}
+
+![x](raster/2023-07-30T14-33-39.png)
 
 +++
 
-*Exercise* 6.49
+![x](exercise-6-48.svg)
+
++++ {"tags": []}
+
+![x](raster/2023-07-30T17-59-28.png)
+
++++
+
+### *Exercise* 6.49
+
++++ {"tags": []}
+
+![x](raster/2023-07-30T14-34-05.png)
+
++++
+
+Composition reduces the two cospans A→B and B→C to a single cospan A→C where the only remaining components are those that are connected all the way from A to C.
 
 +++
 
