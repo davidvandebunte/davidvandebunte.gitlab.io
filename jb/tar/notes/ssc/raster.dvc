@@ -1,5 +1,5 @@
 outs:
-- md5: 1ce618de6c36eefe85f82109023e7898.dir
-  size: 72946
-  nfiles: 3
+- md5: 617e2809210afb7f66947e2ae690c8b1.dir
+  size: 3316059
+  nfiles: 69
   path: raster
