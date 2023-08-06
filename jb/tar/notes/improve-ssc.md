@@ -280,6 +280,10 @@ Perhaps a "collection" is something that must be constructed one-by-one, not def
 
 See [Is there a category of categories?](https://math.stackexchange.com/questions/750731/is-there-a-category-of-categories). You could draw a large CAT box around your whole drawing, but it probably wouldn't be helpful. Similarly you could draw a large [Algebraic structure](https://en.wikipedia.org/wiki/Algebraic_structure) box arond a large section of these notes, because this term is again rather general.
 
+Many web APIs use tags (think hash tags in twitter, labels in Gmail, tags for cost-tracking in AWS) to make it quick and easy to put new elements into a set. The Web API then provides a single list of tags (i.e. types in a type system).
+
+It seems like you are running into nearly the same issue when organizing into directories: do you see each directory as a set? You can make everything much simpler if you have a single namespace, as Jupyter Book suggests that you do. Why not use JB tags to avoid directories?
+
 
 ### Managing definitions
 

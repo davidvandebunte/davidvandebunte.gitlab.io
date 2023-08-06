@@ -303,6 +303,8 @@ Call $!_{c_2}$ the unique morphism from $c_1$ to $c_2$. Call $!_{c_1}$ the uniqu
 
 ![x](raster/definition-6-11.png)
 
+When we speak of a "pair" we typically use parentheses. When we speak of a "copair" we apparently use square brackets.
+
 +++ {"tags": []}
 
 ### *Exercise* 6.13
@@ -397,13 +399,38 @@ For part `1.` is this simply constructing the copairing of the two morphisms? Fi
 
 How do we show that our definition, whatever we guess it to be, is an endo-bi-functor? We must show that it preserves identities and composition.
 
-For part `2.` see the diagram (6.12) and put $∅$ on the right. That makes $ι_∅$ a unique morphism, and $g$ a unique morphism. Is the composition $ι_∅ ⨟ [f,g]$ also unique? No, it must equal $g$. What about the unique morphism across the top of the diagram from $∅$ to $A$?
++++
 
-Could $A$ serve as $T$ in the diagram to get a unique morphism from A+∅ to $A$? We would want to show $ι_A ⨟ [id_A,g] = id_A$ and $[id_A,g] ⨟ ι_A = id_{A+∅}$.
+For part `2.` let $A$ serve as $T$ in (6.12) in the first diagram below:
+
+![x](exercise-6-18-part2.svg)
+
+Reading one equation off the left side of the diagram:
+
+$$
+id_A = ι_A ⨟ [id_A,!_A]
+$$
+
+We would have an isomorphism if we could show:
+
+$$
+id_{A+∅} = [id_A,!_A] ⨟ ι_A
+$$
+
+It may be tempting to collapse the two A on the left side of the diagram to conclude the preceding statement, but we only know that the composition $[id_A,!_A] ⨟ ι_A$ exists. The commutative diagram makes no claim about it being equal $id_{A+∅}$ because $id_{A+∅}$ is not on the diagram. This proof would also not use the universal property of ∅ and could be done with any object B (not just ∅).
+
+We also know:
+
+$$
+!_A = ι_∅ ⨟ [id_A,!_A] \\
+ι_∅ = !_A ⨟ ι_A
+$$
+
++++
 
 Does the author mean to say natural isomorphisms? The left and right unitors in [Monoidal category](https://en.wikipedia.org/wiki/Monoidal_category) are natural isomorphisms.
 
-+++
++++ {"tags": []}
 
 ## 6.2.3 Pushouts
 
@@ -623,8 +650,171 @@ Thinking of this example in terms of connected components (see [Component (graph
 
 Composition reduces the two cospans A→B and B→C to a single cospan A→C where the only remaining components are those that are connected all the way from A to C.
 
-+++
++++ {"tags": []}
 
 # 6.3 Hypergraph categories
 
-See [Review "Seven-Sketches suggestions" - Google Docs](https://docs.google.com/document/d/1HC_BRM2deHxS7FiIto2bfrM81grKu8vDiI-JgCY5eXU/edit).
++++
+
+![x](raster/2023-08-05T00-19-07.png)
+
++++ {"tags": []}
+
+## 6.3.1 Frobenius monoids
+
++++
+
+![x](raster/2023-08-05T15-49-57.png)
+
++++
+
+![x](raster/2023-08-05T17-01-29.png)
+
++++
+
+![x](raster/2023-08-05T17-18-13.png)
+
++++ {"tags": []}
+
+### Theorem 6.55
+
++++
+
+What is the author referring to with the word "each" in this Theorem? Did he mean to say there was more than one map $f$?
+
++++
+
+![x](raster/2023-08-05T17-38-52.png)
+
++++ {"tags": []}
+
+### Exercise 6.57
+
++++
+
+![x](raster/2023-08-05T17-43-41.png)
+
++++
+
+```{admonition} Reveal answer
+:class: dropdown
+![x](raster/2023-08-05T17-56-58.png)
+```
+
++++ {"tags": []}
+
+### Theorem 6.58
+
++++
+
+![x](raster/2023-08-05T18-20-34.png)
+
++++ {"tags": []}
+
+## 6.3.2 Wiring diagram for hypergraph categories
+
++++
+
+![x](raster/2023-08-05T18-23-08.png)
+
++++
+
+![x](raster/2023-08-05T18-24-09.png)
+
++++ {"tags": []}
+
+### Exercise 6.59
+
++++
+
+![x](raster/2023-08-05T18-29-37.png)
+
++++
+
+```{admonition} Reveal answer
+:class: dropdown
+![x](raster/2023-08-05T18-32-11.png)
+```
+
++++ {"tags": []}
+
+## 6.3.3 Definition of a hypergraph category
+
++++
+
+![x](raster/2023-08-05T18-34-13.png)
+
++++
+
+![x](raster/2023-08-05T18-38-03.png)
+
++++
+
+![x](raster/2023-08-05T18-40-44.png)
+
++++ {"tags": []}
+
+### Exercise 6.62
+
++++
+
+![x](raster/2023-08-05T19-05-22.png)
+
++++
+
+```{admonition} Reveal answer
+:class: dropdown
+![x](raster/2023-08-05T19-08-34.png)
+```
+
++++ {"tags": []}
+
+### Exercise 6.63
+
++++
+
+![x](raster/2023-08-05T21-18-01.png)
+
++++ {"tags": []}
+
+### Example 6.64
+
++++
+
+![x](raster/2023-08-05T21-22-06.png)
+
++++ {"tags": []}
+
+### Example 6.65
+
++++
+
+![x](raster/2023-08-05T21-22-44.png)
+
++++ {"tags": []}
+
+### Proposition 6.66
+
++++
+
+![x](raster/2023-08-05T21-23-37.png)
+
++++ {"tags": []}
+
+### Exercise 6.67
+
++++
+
+![x](raster/2023-08-05T21-24-18.png)
+
++++ {"tags": []}
+
+# 6.4 Decorated cospans
+
++++ {"tags": []}
+
+See [Review "Seven-Sketches suggestions" - Google Docs](https://docs.google.com/document/d/1HC_BRM2deHxS7FiIto2bfrM81grKu8vDiI-JgCY5eXU/edit) (several issues in this section).
+
++++
+
+![x](raster/2023-08-05T00-12-16.png)
