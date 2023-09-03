@@ -919,8 +919,8 @@ Let $\cat{C}$ be a category with all pushouts, and suppose we want to take the c
 	B\ar[r]\ar[d]&
 	Z\\
 	A\ar[r]\ar[d]&
-	C\\
-	D
+	Y\\
+	X
 \end{tikzcd}
 \end{equation}
 In it we see two diagrams ready to be pushed out, and we know how to take pushouts. So suppose we do that; then we see another pushout diagram so we take the pushout again:
@@ -2800,7 +2800,7 @@ $(\elec,\psi)$. We start by defining the functor part
 \]
 as follows. On objects, simply send a finite set $V$ to the set of $C$-circuits:
 \[
-  \elec(V)\coloneqq\{(V,A,s,t,\ell)\,|\,\mbox{ where }s,t \colon A \to V, \ell\colon E \to
+  \elec(V)\coloneqq\{(V,A,s,t,\ell)\,|\,\mbox{ where }s,t \colon A \to V, \ell\colon A \to
 C\}.
 \]
 On morphisms, $\elec$ sends a function $f\colon V \to V'$ to the function
