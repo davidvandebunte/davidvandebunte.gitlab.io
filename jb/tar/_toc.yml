@@ -27,6 +27,8 @@ parts:
       - file: notes/ssc/5-2.md
       - file: notes/ssc/5-3.md
       - file: notes/ssc/5-4.md
+      - file: notes/ssc/6-2.md
+      - file: notes/ssc/6-3.md
   - caption: Statistical Rethinking
     chapters:
       - file: notes/sr2-review.md
