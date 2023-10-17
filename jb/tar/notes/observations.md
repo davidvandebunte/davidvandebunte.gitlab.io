@@ -126,6 +126,8 @@ Rather than trying to freeze links to Wikipedia, copy/paste (the same way you wo
 
 Should you have tasks to understand Wikipedia with other articles/content as your alternatives? Rather than the reverse. You'd perhaps only end up reading part of the other content, which could be hard (Wikipedia is better as a reference i.e. for one article at a time).
 
+Don't be discouraged if you simply copy/paste from Wikipedia and get what looks like a mess. If you have math anywhere in what you copy/pasted, you'll have gotten both a Unicode version of it and a Wikipedia version of it. Just delete the Wikipedia version, and you'll have something you can put in any document.
+
 +++ {"tags": []}
 
 ## Manual dependency resolution
