@@ -398,7 +398,19 @@ $$
 A×C ≤ D ≅ A ≤ D→C
 $$
 
-See something similar at the start of [Heyting algebra](https://en.wikipedia.org/wiki/Heyting_algebra#Universal_constructions), which also discusses subobject classifiers.
+See something similar in Equation (2.80).
+
+Can the first statement be taken to mean bounded? From the top, at least.
+
+Can the second statement be taken to mean that a proposition becomes either equally or less likely to be true if you ask it to be true alongside a second proposition?
+
+The third statement looks rather similar to the definition of join, below (1.5).
+
+Can you see the propositions-as-types insight as both propositions and types corresponding to a range of possible worlds? A type (such as an integer) can take on e.g. 2^32 possible values (possible worlds). A proposition (such as whether aristotle is a man) can take on a certain number of possible values (possible worlds) such as true or false. When you extend to Heyting logic, you're allowing for more than two possible worlds.
+
+Throwing away uncertainty then becomes a matter of engineering; how much do you want to throw away? It depends on your meta-uncertainty; perhaps you aren't sure how uncertain you are and so only bother to split the possible worlds into true and false (as a first step).
+
+We know how to show that two functions are adjoint from Chp. 1; we likely need to use these three properties to show that we have adjoint functors using the same strategy.
 
 +++
 

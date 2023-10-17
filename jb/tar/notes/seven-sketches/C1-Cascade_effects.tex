@@ -32,7 +32,7 @@ Asking which aspects of $X$ one wants
 to preserve under the observation $f$ becomes the question ``what category are you working
 in?.'' As an example, there are many functions $f$ from $\RR$ to $\RR$, and we can think of them as observations: rather than view $x$ ``directly'', we only observe $f(x)$. Out of all the functions $f\colon\rr\to\rr$, only
 some of them preserve the order of numbers, only some of them preserve the distance between numbers, only
-some of them preserve the sum of numbers, etc. Let's check in with an exercise; a solution can be found in \cref{chap.preorders}.
+some of them preserve the sum of numbers, etc. Let's check in with an exercise; a solution can be found in \cref{chap.solutions}.
 
 \begin{exercise}%
 \label{exc.function_pres} %
@@ -2037,7 +2037,7 @@ These two constructions are mutually inverse, and hence prove the proposition.
   upper set $U \subseteq Q$ to the upper set $f\inv (U) \subseteq P$. We call this the
   \emph{pullback along $f$}.
 
-  Viewing upper sets as a monotone maps to $\bb$ as in \cref{prop.upperset_presheaf}, the pullback can be understood in terms of composition. Indeed, show
+  Viewing upper sets as monotone maps to $\bb$ as in \cref{prop.upperset_presheaf}, the pullback can be understood in terms of composition. Indeed, show
   that the $f^\ast$ is defined by taking $u\colon Q \to \bb$ to $(f\cp u)
   \colon P \to \bb$. 
 \end{exercise}
@@ -2403,7 +2403,7 @@ Suppose we are given any function $g\colon S\to T$. We will show that this
 function $g$ induces a Galois connection 
 %$\begin{tikzcd} \prt{S} \ar[r, "g_!",shift left] & \prt{T} \ar[l, "g^*", shift left] \end{tikzcd}$
 $g_!\colon\prt{S}\leftrightarrows\prt{T}\cocolon g^*$,
-between preorder of $S$-partitions and the preorder of $T$-partitions. The way
+between the preorder of $S$-partitions and the preorder of $T$-partitions. The way
 you might explain it to a seasoned category theorist is:
 \begin{quote}%
 \index{adjunction!examples of}
@@ -2424,7 +2424,7 @@ By the end of this book, the reader will understand pushouts and epi-mono factor
 \index{pushout}%
 \index{epi-mono factorization}
 
-Start with $g\colon S\to T$; we first want to understand $g_!\colon\prt S\to \prt T$. So start with a partition $\sim_S$ of $S$. To begin the process of obtaining a partition $\sim_T$ on $T$, say that two elements $t_1,t_2\in T$ are in the same part, $t_1\sim_T t_2$, if there exist $s_1,s_2\in S$ with such that $s_1\sim_Ss_2$ and $g(s_1)=t_1$ and $g(s_2)=t_2$. However, the result of doing so will not necessarily be transitive---you may get $t_1\sim_T t_2$ and $t_2\sim_T t_3$ without $t_1\sim_T^? t_3$---and partitions must be transitive. So complete the process by just adding in the missing pieces (take the transitive closure).%
+Start with $g\colon S\to T$; we first want to understand $g_!\colon\prt S\to \prt T$. So start with a partition $\sim_S$ of $S$. To begin the process of obtaining a partition $\sim_T$ on $T$, say that two elements $t_1,t_2\in T$ are in the same part, $t_1\sim_T t_2$, if there exist $s_1,s_2\in S$ such that $s_1\sim_Ss_2$ and $g(s_1)=t_1$ and $g(s_2)=t_2$. However, the result of doing so will not necessarily be transitive---you may get $t_1\sim_T t_2$ and $t_2\sim_T t_3$ without $t_1\sim_T^? t_3$---and partitions must be transitive. So complete the process by just adding in the missing pieces (take the transitive closure).%
 \index{transitive closure} The result is $g_!(\sim_S)\coloneqq\sim_T$.
 
 Again starting with $g$, we want to get the right adjoint $g^*\colon\prt T\to\prt S$. So start with a partition $\sim_T$ of $T$. Get a partition $\sim_S$ on $S$ by saying that $s_1\sim_Ss_2$ iff $g(s_1)\sim_T g(s_2)$. The result is $g^*(\sim_T)\coloneqq \sim_S$.%
@@ -2633,7 +2633,7 @@ f(p)$. By reflexivity, we have $f(p)\leq q$, so by the \cref{def.galois} of
 Galois connection we have $p\leq g(q)$, but this means $p\leq g(f(p))$. The
 proof that $f(g(q))\leq q$ is similar.
 
-Now suppose that \cref{eqn.preorder_monad_comonad} holds for all $p\in P$ and $q\in Q$. We want show that $f(p)\leq q$ iff $p\leq g(q)$. Suppose $f(p)\leq q$; then since $g$ is monotonic, $g(f(p))\leq g(q)$, but $p\leq g(f(p))$ so $p\leq g(q)$. The proof that $p\leq g(q)$ implies $f(p)\leq q$ is similar.
+Now suppose that \cref{eqn.preorder_monad_comonad} holds for all $p\in P$ and $q\in Q$. We want to show that $f(p)\leq q$ iff $p\leq g(q)$. Suppose $f(p)\leq q$; then since $g$ is monotonic, $g(f(p))\leq g(q)$, but $p\leq g(f(p))$ so $p\leq g(q)$. The proof that $p\leq g(q)$ implies $f(p)\leq q$ is similar.
 \end{proof}
 
 \begin{exercise}%
@@ -2641,7 +2641,7 @@ Now suppose that \cref{eqn.preorder_monad_comonad} holds for all $p\in P$ and $q
 Complete the proof of \cref{prop.galois_monad_comonad} by showing that
 \begin{enumerate}
 	\item if $f$ is left adjoint to $g$ then for any $q\in Q$, we have $f(g(q))\leq q$, and 
-	\item if \cref{eqn.preorder_monad_comonad} holds, then holds $p\leq g(q)$ iff $f(p)\leq q$ holds, for all $p\in P$ and $q\in Q$.
+	\item if \cref{eqn.preorder_monad_comonad} holds, then $p\leq g(q)$ iff $f(p)\leq q$ holds, for all $p\in P$ and $q\in Q$.
 \qedhere
 \end{enumerate}
 \end{exercise}
@@ -2750,7 +2750,7 @@ monotone map that preserves meets; we shall construct a left adjoint $f$. We def
 \end{equation}
 this meet is well defined because $Q$ has all meets, but for $f$ to really be a candidate, we need to show it is monotone. So suppose that $p\leq p'$. Then $\{q' \in Q \mid p'\leq g(q')\}\ss\{q \in Q \mid p\leq g(q)\}$. By \cref{prop.containment_meet_join}, this implies $f(p)\leq f(p')$. Thus $f$ is monotone.
 
-By \cref{prop.right_adj_meets}, it suffices to show that $p_0\leq g(f(p_0))$ and that $f(g(q_0))\leq q_0$ for all $p_0\in P$ and $q_0\in Q$. For the first, we have
+By \cref{prop.galois_monad_comonad}, it suffices to show that $p_0\leq g(f(p_0))$ and that $f(g(q_0))\leq q_0$ for all $p_0\in P$ and $q_0\in Q$. For the first, we have
 \[
   p_0\leq
   \bigwedge\{g(q)\in P\mid p_0\leq g(q)\}\cong
