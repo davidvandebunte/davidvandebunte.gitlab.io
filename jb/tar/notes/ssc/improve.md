@@ -157,6 +157,10 @@ See also [Topos](https://en.wikipedia.org/wiki/Topos).
 
 ### Exercise 7.4
 
++++
+
+![x](raster/2023-10-27T20-47-36.png)
+
 +++ {"tags": []}
 
 Labeling the morphisms:
@@ -392,15 +396,17 @@ See also [Cartesian closed category](https://en.wikipedia.org/wiki/Cartesian_clo
 
 +++
 
-How does the cartesian closure requirement (i.e. Equation (7.10)) translate to preorders? Something along the lines of:
+How does the cartesian closure requirement (i.e. Equation (7.10)) translate to preorders? In short:
 
 $$
-A×C ≤ D ≅ A ≤ D→C
+A∧C ≤ D ≅ A ≤ D⊸C
 $$
+
+Why? We replace × with ∧ by Exercise 3.88 (that is, the categorial product in a preorder is the meet). We replace instances of 𝒞(X,Y) with $X ≤ Y$ because the hom-set in a preorder is a hom-element, namely a boolean, which is produced by the ≤ relation. We assume the internal hom-element operator $⊸$ is the operator that will be right adjoint to the categorical product ∧, but must show that as part of this proof.
 
 See something similar in Equation (2.80).
 
-Can the first statement be taken to mean bounded? From the top, at least.
+Can the first statement be taken to mean bounded? From the top, at least. It could also be taken to mean that the preorder has a terminal object; all objects have exactly one morphism to $I$.
 
 Can the second statement be taken to mean that a proposition becomes either equally or less likely to be true if you ask it to be true alongside a second proposition?
 
@@ -456,6 +462,13 @@ See also [Subobject classifier](https://en.wikipedia.org/wiki/Subobject_classifi
 
 ![x](raster/2023-09-13T00-45-10.png)
 
++++
+
+```{admonition} Reveal 7S answer
+:class: dropdown
+![x](raster/2023-10-24T14-26-59.png)
+```
+
 +++ {"tags": []}
 
 ### Exercise 7.17
@@ -464,6 +477,587 @@ See also [Subobject classifier](https://en.wikipedia.org/wiki/Subobject_classifi
 
 ![x](raster/2023-09-13T00-47-00.png)
 
++++
+
+```{admonition} Reveal 7S answer
+:class: dropdown
+![x](raster/2023-10-24T14-38-05.png)
+```
+
 +++ {"tags": []}
 
 ## 7.2.3 Logic in the topos Set
+
++++
+
+![x](raster/2023-10-24T14-39-21.png)
+
++++
+
+![x](raster/2023-10-24T15-14-45.png)
+
++++
+
+![x](raster/2023-10-24T15-15-05.png)
+
++++ {"tags": []}
+
+### Exercise 7.19
+
++++
+
+![x](raster/2023-10-24T15-16-14.png)
+
++++
+
+```{admonition} Reveal 7S answer
+:class: dropdown
+![x](raster/2023-10-24T18-27-50.png)
+```
+
++++ {"tags": []}
+
+### Exercise 7.20
+
++++
+
+![x](raster/2023-10-24T15-16-42.png)
+
++++
+
+```{admonition} Reveal 7S answer
+:class: dropdown
+![x](raster/2023-10-24T19-02-36.png)
+```
+
++++ {"tags": []}
+
+### Exercise 7.21
+
++++
+
+![x](raster/2023-10-24T15-17-27.png)
+
++++
+
+```{admonition} Reveal 7S answer
+:class: dropdown
+![x](raster/2023-10-24T19-07-16.png)
+```
+
++++ {"tags": []}
+
+### Review
+
++++
+
+![x](raster/2023-10-24T17-47-28.png)
+
++++ {"tags": []}
+
+# 7.3 Sheaves
+
++++
+
+![x](raster/2023-10-24T17-52-25.png)
+
++++
+
+![x](raster/2023-10-24T17-52-59.png)
+
++++ {"tags": []}
+
+## 7.3.1 Presheaves
+
++++
+
+![x](raster/2023-10-24T17-53-30.png)
+
++++
+
+![x](raster/2023-10-24T17-56-25.png)
+
++++
+
+See also [Presheaf (category theory)](https://en.wikipedia.org/wiki/Presheaf_(category_theory)) and [Sheaf (mathematics) § Presheaves](https://en.wikipedia.org/wiki/Sheaf_(mathematics)#Presheaves).
+
++++
+
+![x](raster/2023-10-24T17-58-06.png)
+
++++
+
+![x](raster/2023-10-24T18-00-25.png)
+
++++ {"tags": []}
+
+## 7.3.2 Topological spaces
+
++++
+
+![x](raster/2023-10-24T18-05-56.png)
+
++++ {"tags": []}
+
+### Definition 7.25
+
++++
+
+![x](raster/2023-10-24T18-06-27.png)
+
++++
+
+![x](raster/2023-10-24T18-07-51.png)
+
++++
+
+Compare to [Topological space § Definition via open sets](https://en.wikipedia.org/wiki/Topological_space#Definition_via_open_sets) and [Cover (topology)](https://en.wikipedia.org/wiki/Cover_(topology)#open_cover). See also [Clopen set](https://en.wikipedia.org/wiki/Clopen_set) and its comparison of sets to doors.
+
++++
+
+Regarding continuity, see in particular the part of the discussion in [Continuous function § Continuous functions between topological spaces](https://en.wikipedia.org/wiki/Continuous_function#Continuous_functions_between_topological_spaces) that references [Limit of a function § (ε, δ)-definition of limit](https://en.wikipedia.org/wiki/Limit_of_a_function#(%CE%B5,_%CE%B4)-definition_of_limit). In both definitions, we require that "small" variations/perturbations in the codomain (defined via either ε or V) must correspond to "small" variations/perturbations in the input (defined via either δ or $f^{-1}(V)$). We define what "small" means in the codomain, and our function definition should lead us to the test we need to apply in the domain. Is it possible to find a δ or $f^{-1}(V)$ that is small enough? If not, then the function is not continuous.
+
++++
+
+For example, consider the following function $f$ defined on essentially the same set with different topologies. If we want to define "small" to mean the open set $V = \{1\}$ on the right, then there's no open set on the left we can choose that's "small enough" to cover it without also covering other objects in the codomain:
+
++++
+
+![x](continuous-function-topology-example-1.svg)
+
++++
+
+In this example, confirm that there is no open set on the left that covers the open set $V = \{2, 3\}$ on the right without also covering other objects in the codomain:
+
++++
+
+![x](continuous-function-topology-example-2.svg)
+
++++
+
+This explanation is not quite the same as the one given in [The definition of continuous function in topology - MSE](https://math.stackexchange.com/questions/323610/the-definition-of-continuous-function-in-topology/323620#323620). That explanation also uses the opposite variable names for sets ($U$ corresponds to $V$ in the Wikipedia definition, and $V$ corresponds to $U$) so it is not recommended reading.
+
++++
+
+A differentiable function is defined differently in topology just as a continuous function is. See [Differentiable function § Differentiable functions on manifolds](https://en.wikipedia.org/wiki/Differentiable_function) and [Differentiable programming](https://en.wikipedia.org/wiki/Differentiable_programming).
+
++++
+
+![x](raster/2023-10-24T18-07-11.png)
+
++++ {"tags": []}
+
+### Example 7.26
+
++++
+
+![x](raster/2023-10-24T18-11-37.png)
+
++++ {"tags": []}
+
+### Exercise 7.27
+
++++
+
+![x](raster/2023-10-24T18-14-41.png)
+
++++
+
+```{admonition} Reveal 7S answer
+:class: dropdown
+![x](raster/2023-10-24T19-25-47.png)
+```
+
++++ {"tags": []}
+
+### Example 7.28
+
++++
+
+![x](raster/2023-10-24T18-15-11.png)
+
++++ {"tags": []}
+
+### Exercise 7.29
+
++++
+
+![x](raster/2023-10-24T18-15-33.png)
+
++++
+
+```{admonition} Reveal 7S answer
+:class: dropdown
+![x](raster/2023-10-25T21-51-47.png)
+```
+
++++ {"tags": []}
+
+### Example 7.30
+
++++
+
+![x](raster/2023-10-24T18-18-14.png)
+
++++
+
+Compare to [Sierpiński space](https://en.wikipedia.org/wiki/Sierpi%C5%84ski_space).
+
++++ {"tags": []}
+
+### The open sets of a topological space form a preorder
+
++++
+
+![x](raster/2023-10-24T18-18-41.png)
+
++++ {"tags": []}
+
+### Exercise 7.31
+
++++
+
+![x](raster/2023-10-24T18-19-50.png)
+
++++
+
+```{admonition} Reveal 7S answer
+:class: dropdown
+![x](raster/2023-10-24T19-45-50.png)
+```
+
++++ {"tags": []}
+
+### Exercise 7.32
+
++++
+
+![x](raster/2023-10-24T18-20-12.png)
+
++++
+
+![x](raster/2023-10-24T19-48-35.png)
+
++++
+
+See also [Subspace topology](https://en.wikipedia.org/wiki/Subspace_topology).
+
+For part `1.`, take $B = X$. Taking $B = Y$ (as the author suggests) is incorrect because there's no guarantee that $Y ∈ \bf{Op}$.
+
++++
+
+For part `2.` we know that $Y$ is a member of $\bf{Op}_{?∩Y}$ by part `1.` and that ∅ is a member by taking $B = ∅$.
+
+We know that we have binary/finite intersections between any $A_1, A_2$ because there must be some $B_1, B_2$ such that $A_1 = B_1 ∩ Y$ and $A_1 = B_2 ∩ Y$. Since $B_1 ∩ B_2 ∈ \bf{Op}$ because we have arbitrary intersections, we must have:
+
+$$
+A_3 = A_1 ∩ A_2 = (B_1 ∩ Y) ∩ (B_2 ∩ Y) = (B_1 ∩ B_2) ∩ Y ∈ \bf{Op}_{?∩Y}
+$$
+
+To show that we have arbitrary unions, we must show that given $I$ as a set where we are given an open set $A_i ∈ \bf{Op}_{?∩Y}$ for each $i$ then their union $⋃_{i∈I}A_i ∈ \bf{Op}_{?∩Y}$. We know that for every $A_i$ there must be some corresponding $B_i$ such that $A_i = B_i ∩ Y$, so we can also write arbitrary unions of $A_i$ as $⋃_{i∈I}A_i = ⋃_{i∈I}(B_i ∩ Y) = (⋃_{i∈I}B_i) ∩ Y$. We know that $⋃_{i∈I}B_i ∈ \bf{Op}$ because it has arbitrary unions, so $⋃_{i∈I}A_i ∈ \bf{Op}_{?∩Y}$.
+
+For part `3.` we must show that for every $B ∈ \bf{Op}$, the preimage $f^{-1}(B) ∈ \bf{Op}_{?∩Y}$. An inclusion function maps each element y ∈ Y to the same element x ∈ X in the larger set, so there should always be some open set $A = B ∩ Y ∈ \bf{Op}_{?∩Y}$ that has all the same elements as $B$. That is, the preimage $f^{-1}(B)$ of an inclusion map is all the same elements as $B$ but in another set $A ∈ Y$.
+
++++
+
+```{admonition} Reveal 7S answer
+:class: dropdown
+![x](raster/2023-10-26T17-53-08.png)
+```
+
++++ {"tags": []}
+
+### Exercise 7.34
+
++++
+
+![x](raster/2023-10-24T18-20-34.png)
+
++++
+
+![x](raster/2023-10-24T18-21-04.png)
+
++++
+
+This question seems related to Exercise 2.62 in particular (which effectively considers the discrete topology).
+
+It will likely help to work from an example in [Finite topological space](https://en.wikipedia.org/wiki/Finite_topological_space).
+
++++ {"tags": []}
+
+## 7.3.3 Sheaves on topological spaces
+
++++
+
+![x](raster/2023-10-25T13-49-44.png)
+
++++
+
+![x](raster/2023-10-25T13-56-03.png)
+
++++ {"tags": []}
+
+### Definition 7.35
+
++++
+
+![x](raster/2023-10-25T13-56-36.png)
+
++++ {"tags": []}
+
+### Example 7.36
+
++++
+
+![x](raster/2023-10-25T14-05-04.png)
+
++++ {"tags": []}
+
+### Extended example: sections of a function
+
++++
+
+![x](raster/2023-10-25T14-08-10.png)
+
++++
+
+![x](raster/2023-10-25T14-08-35.png)
+
++++
+
+![x](raster/2023-10-25T14-09-24.png)
+
++++ {"tags": []}
+
+#### Exercise 7.38
+
++++
+
+![x](raster/2023-10-25T14-09-04.png)
+
++++
+
+```{admonition} Reveal 7S answer
+:class: dropdown
+![x](raster/2023-10-25T15-10-37.png)
+```
+
++++
+
+![x](raster/2023-10-25T14-29-43.png)
+
++++
+
+![x](raster/2023-10-25T14-33-22.png)
+
++++ {"tags": []}
+
+#### Exercise 7.40
+
++++
+
+![x](raster/2023-10-25T14-34-57.png)
+
++++
+
+```{admonition} Reveal 7S answer
+:class: dropdown
+![x](raster/2023-10-25T15-11-26.png)
+```
+
++++
+
+![x](raster/2023-10-25T14-49-41.png)
+
++++ {"tags": []}
+
+#### Exercise 7.42
+
++++
+
+![x](raster/2023-10-25T14-50-14.png)
+
++++
+
+```{admonition} Reveal 7S answer
+:class: dropdown
+![x](raster/2023-10-25T15-57-47.png)
+```
+
++++
+
+![x](raster/2023-10-25T14-50-50.png)
+
++++
+
+![x](raster/2023-10-25T17-29-35.png)
+
++++ {"tags": []}
+
+#### Exercise 7.44
+
++++
+
+![x](raster/2023-10-25T17-33-14.png)
+
++++
+
+```{admonition} Reveal 7S answer
+:class: dropdown
+![x](raster/2023-10-25T17-33-44.png)
+```
+
++++ {"tags": []}
+
+### Other examples of sheaves
+
++++
+
+![x](raster/2023-10-25T17-35-16.png)
+
++++
+
+![x](raster/2023-10-25T17-35-37.png)
+
++++
+
+![x](raster/2023-10-25T17-49-28.png)
+
++++
+
+See also [Tangent bundle](https://en.wikipedia.org/wiki/Tangent_bundle).
+
++++ {"tags": []}
+
+### Exercise 7.47
+
++++
+
+![x](raster/2023-10-25T17-55-44.png)
+
++++ {"tags": []}
+
+### Example 7.48
+
++++
+
+![x](raster/2023-10-25T18-15-34.png)
+
++++ {"tags": []}
+
+### Exercise 7.49
+
++++
+
+![x](raster/2023-10-25T18-15-58.png)
+
++++ {"tags": []}
+
+# 7.4 Toposes
+
++++
+
+![x](raster/2023-10-25T18-20-25.png)
+
++++
+
+![x](raster/2023-10-25T18-21-47.png)
+
++++
+
+![x](raster/2023-10-25T18-22-10.png)
+
++++
+
+![x](raster/2023-10-25T18-24-47.png)
+
++++ {"tags": []}
+
+## 7.4.1 The subobject classifier Ω in a sheaf topos
+
++++
+
+![x](raster/2023-10-25T18-27-35.png)
+
++++ {"tags": []}
+
+### Exercise 7.52
+
++++
+
+![x](raster/2023-10-25T18-29-14.png)
+
++++ {"tags": []}
+
+### Exercise 7.53
+
++++
+
+![x](raster/2023-10-25T18-29-50.png)
+
++++ {"tags": []}
+
+## 7.4.5 Modalities
+
++++ {"tags": []}
+
+## 7.4.6 Type theories and semantics
+
++++
+
+See also [Kripke semantics § Kripke–Joyal semantics](https://en.wikipedia.org/wiki/Kripke_semantics#Kripke%E2%80%93Joyal_semantics).
+
++++ {"tags": []}
+
+# 7.5 A topos of behavior types
+
++++
+
+![x](raster/2023-10-25T18-57-57.png)
+
++++ {"tags": []}
+
+## 7.5.1 The interval domain
+
++++
+
+![x](raster/2023-10-25T19-01-23.png)
+
++++ {"tags": []}
+
+### Exercise 7.76
+
++++
+
+![x](raster/2023-10-25T19-19-01.png)
+
++++
+
+Notice that $o_{[a,b]}$ is an infinite set of finite closed intervals, not just a finite closed interval. When we form $o_{[0,5]} ∪ o_{[4,8]}$ we'll only "deduplicate" all the closed intervals in $o_{[4,5]}$ (roughly speaking).
+
++++
+
+```{admonition} Reveal 7S answer
+:class: dropdown
+![x](raster/2023-10-25T19-20-21.png)
+```
+
++++
+
+![x](raster/2023-10-25T19-48-39.png)
+
++++ {"tags": []}
+
+### Exercise 7.77
+
++++
+
+![x](raster/2023-10-25T19-49-19.png)
+
++++ {"tags": []}
+
+## 7.5.2 Sheaves on 𝕀ℝ
+
++++
+
+![x](raster/2023-10-25T19-50-04.png)
