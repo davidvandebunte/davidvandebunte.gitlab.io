@@ -1,0 +1,226 @@
+# Logic
+
+
+## Chp 2: The scope of logic
+
+
+It may seem like only logicians would ignore truth and focus only on form. When else don't we care about truth, however?
+
+When training a deep learning model, we often start with dummy data and just check that we *can* fit to something (e.g. images from some other dataset). If we can't, then we likely coded something wrong. Sometimes we are just interested in learning a libary (e.g. PyTorch) rather than getting it to do something useful.
+
+In Bayesian statistics, similarly, we generate data from our assumed data-generating distribution and then try to fit our model to it to confirm we can reproduce the model parameters.
+
+In [Chapter 2: The scope of logic](https://forallx.openlogicproject.org/html/Ch2.html), this is put in terms of a "valid" argument: we don't care about truth. Alternatively, you can see this as asking a "what if" question about a world that could have existed (e.g. if Abe Lincoln was from France). You could also see all this as "play" in the sense that it helps you understand other assumptions people have about the world. A kid could learn something about e.g. conjunction introduction on any imaginary world where we hold it to be true.
+
+Do you only care about valid arguments, not sound arguments? Yes, when you're trying to learn the rules of inference. No, when you're trying to get something "done" in some sense (in this case, discovering truth).
+
+
+## Chp 12: Semantic concepts
+
+
+How do you read A → B? Not in general, but in a context where it means [Material conditional](https://en.wikipedia.org/wiki/Material_conditional). See [Chapter 12 Semantic concepts § 12.6](https://forallx.openlogicproject.org/html/Ch12.html#S6) for a suggestion to avoid "implies" because of both the causal and historical issues. How about always reading it "backwards" and putting "or not" in the middle? So you'd read "A → B" as "B or not A" in these situations. That makes you read "(A → B) → A" as "A or not (B or not A)" (can't really avoid the parentheses) which makes it rather obvious how it reduces to "A or not B" assuming the law of the excluded middle. You can then read Pierce's law i.e. ((A → B) → A) → A as "A or not (A or not B)" which reduces to the law of the excluded middle (with an "or B" at the end that doesn't hurt anything).
+
+This strategy is similar to always applying [Material implication (rule of inference)](https://en.wikipedia.org/wiki/Material_implication_(rule_of_inference)), but also flipping the disjunction. Reading A → B as "not A or B" is also acceptable, but it seems more intuitive to replace a single symbol (→) with a pair of words than adding two words in different spots. It also avoids the potential misinterpretation of "not A or B" as "not (A or B)" which is something completely different (and you can't express parentheses when you're talking without a lot of extra work).
+
+You could also replace A → B with A ≤ B if you don't mind seeing false as less than true.
+
+Alternatively one could read A → B as "A forces B" (in the sense of turning a light on) which is a bit shorter and read in the right direction, but harder to break down. It may also imply that A is the only forcer of B.
+
+How should one read ⊨? It seems like the best word is "entails" because it's a rather technical term. The author suggests that he may use "implies" to mean entails, but in practice almost never does. It's likely better to never use the word "implies" because of its present ambiguity. In particular, many people would read "A implies B" to mean that A not being true also implies that B is not true (or is at least a clue that indicates it may not be true). There are no clues in this domain; everything is true or false.
+
+Consider the following simple example argument. While A ∨ B entails A ∨ B ∨ C, if you're thinking about the truth tables you'll clearly see the most unambiguous way to explain their relationship is with ≤ rather than → (in English, use "entails" rather than "implies"):
+
+
+![x](./fax-chp12-entailment.svg)
+
+
+## Valid argument
+
+
+The word "valid" as it is used in logic doesn't really correspond to how we use it in everyday life; see [Validity](https://en.wikipedia.org/wiki/Validity) and [valid](https://en.wiktionary.org/wiki/valid). However, there needs to be some word that separates the truth of individual propositions from how you reason about truth. Is it true that you can reason about truth in this way?
+
+Why not define valid to mean "if all the premises are true, the conclusion is true" rather than "if it is impossible for all the premises to be true and the conclusion false" as in forallx? That is, so that "all premises true" → "conclusion is true"? Perhaps you can define it that way; this produces the conclusion that the argument is valid if you accept the [Material conditional](https://en.wikipedia.org/wiki/Material_conditional). Perhaps this is getting to some comments on the modal logic about "knowing that you know that" which otherwise seem rather crazy. To some extent this is also about "defaults" in the presence of uncertainty: do you conclude that A implies B if you have no evidence that A has led to B (because you have no record of A ever being true)? The material conditional can only be T/F so it must choose either T or F, and someone somewhere seems to have decided that it defaults to T. This seems wrong: from a constructivist perspective we should only accept that something is true if we can prove that it is true. It should have "defaulted" to false. Said another way, absence of evidence (see [Argument from ignorance](https://en.wikipedia.org/wiki/Argument_from_ignorance#Examples)) says nothing about the truth of a matter (see also [Evidence of absence](https://en.wikipedia.org/wiki/Evidence_of_absence), which links to the last article).
+
+What if you saw material implication not as that it's true that A causes B, but that it's possible that A causes B? This feels like going from a strict inequality to a non-strict inequality. Or perhaps as if A is true, then B is possible.
+
+Perhaps an even better way to define this (more generally) is that it is impossible that an increase in X does not lead to an increase in Y. This is effectively what arrows mean on a causal diagram; they indicate that an increase in the source of the arrow leads to an increase in the target of an arrow. In the simple case of T/F, this reduces to the definition of entailment (or material conditional). Because T is as high as you can get, and F is as low as you can get, if you see X equal to T and Y equal to F then clearly no increase in X leads to any increase in Y.
+
+This seems quite similar to an adjoint pair, in that x ≤ y iff f(x) ≤ f(y). An increase (or no change) from x to y must always correspond to an increase (or no change) from f(x) to f(y).
+
+See also [Wason selection task](https://en.wikipedia.org/wiki/Wason_selection_task). In the first example, you can distinguish between the rule being *obeyed* or *causative* relative to being *likely*. If a card shows an even number on one face, is it *likely* the opposite face is blue? In that case, you need to flip all the cards to get more evidence about whether the rule holds. If you flip an odd number and see blue, it may be the case that *all* colored sides are blue. If that's the case, then the rule that there is an even number on one face means the other side is blue isn't really correct: it may be technically true but it's far from the full story (and you could come up with a simpler rule). Why not prefer simpler theories, if you believe in Occam's razor? The existence of the red card excludes the possibility of this rule being true, but many people (experimentally-minded rather than theoretically-minded) will simply start collecting evidence before even thinking about theories.
+
+Another explanation could simply be that in regular English we assume that "if" means "iff" in many cases. See this same point being made in [Chapter 5 Connectives](https://forallx.openlogicproject.org/html/Ch5.html).
+
+If we had simply stopped "constructing" (making statements about truth, such as whether an argument is valid) when we saw a contradiction in our assumptions, then we could have avoided reaching a conclusion that may be "true" in some sense but isn't useful (that the argument is actually valid). That is, the world doesn't have to be valid or invalid: it could have been left neither.
+
+We often feel that we need to organize our notes to remove contradictions. It's not that we're doing this for the sake of avoiding an explosion in conclusions; we're simplying doing it to avoid reaching different but incompatible conclusions in different areas of our notes. We want one, single, complex model. In particular, we want to avoid coming to simple conclusions in some areas because we aren't considering enough possibilities (possible worlds).
+
+
+## Chp 17: Basic Rules for TFL
+
+
+### Practice exercises
+
+
+Part C.
+
+
+```
+0 J → ¬J ∴ ¬J
+1 J → ¬J           PR
+2   J              AS
+3   ¬J             →E 1,2
+4   ⊥              ¬E 3,2
+5 ¬J               ¬I 2-4
+```
+
+
+```
+0 Q → (Q ∧ ¬Q) ∴ ¬Q
+1 Q → (Q ∧ ¬Q)        PR
+2   Q                 AS
+3   Q ∧ ¬Q            →E 1,2
+4   ¬Q                ∧E 3
+5   ⊥                 ¬E 2,4
+6 ¬Q                  ¬I 2-5
+```
+
+
+```
+0 A → (B → C) ∴ (A ∧ B) → C
+1 A → (B → C)             PR
+2   A ∧ B                 AS
+3   A                     ∧E 2
+4   B                     ∧E 2
+5   B → C                 →E 1,3
+6   C                     →E 5,4
+7 (A ∧ B) → C             →I 2-6
+```
+
+
+For the next few examples, we also provide the possible worlds (each cell being a possible world) associated with parts of the proof. These are essentially the same as the truth tables:
+
+
+![x](./fax-chp17-partC.svg)
+
+
+![x](./fax-chp17-partC-cont.svg)
+
+
+Natural deduction in TFL is very much like how you already do proofs. It feels like a geographical search, where you have as "truth" what you are trying to prove, and like a geographical "proof" of how to get from A to B there is often more than one way to do so (but sometimes only one). You could see your intended proof (your goal) as minimizing the loss in machine learning, or maximizing some utility function, but in this case reaching the proof is the end because there's only one thing to show (only one "ground" truth example). In ML you set a bunch of parameters; in this context we fill out a truth table.
+
+Part of the problem is that you can go in circles, i.e. with:
+
+```
+A → B
+  A
+  B
+A → B
+```
+
+With a natural deduction system, the large number of basic and derived rules give you many directions you can take at any possible point. The less natural a system, the fewer options/choices you have. The advantage to a natural deduction system is that your proofs can be much shorter, and arguably easier to comprehend (as long as you agree with and understand all the additional rules i.e. have them memorized).
+
+You don't look at the proof for the same reason a machine learning model doesn't look at the truth when it's running inference (the term inference now makes a ton of sense, see [Inference](https://en.wikipedia.org/wiki/Inference)). We want to check it comes to the same conclusion (e.g. true or false) about a particular set of premises that we do. If it had the truth as an input, it could just feed that all the way through, from being a premise to being the conclusion.
+
+If proofs are programs, then automated theorem proving is automated program writing.
+
+
+## Chp 20: Proof-theoretic concepts
+
+
+Notice how the title of this chapter is symmetric with the title of [Chp 12: Semantic concepts](https://forallx.openlogicproject.org/html/Ch12.html). We'll see in Chp 22 how the "semantic" (truth table) concepts relate to the "syntatic" (proof-theoretic) concepts (e.g. both define a notion of equivalence). For now, ignore how familiar all the language looks.
+
+
+### Practice exercises
+
+
+Exercise A2's answer was covered in more detail in 18.6 Indirect proof of excluded middle.
+
+
+For Exercise A4 we'll try a more systematic answer search. In the following, red arrows to the right indicate searching backwards using IP. Red arrows going down indicate searching backwards using some kind of introduction rule. Green arrows going left indicate searching forwards using some kind of elimination rule.
+
+
+![x](fax-chp20-A4.svg)
+
+
+## Propositions from propositions
+
+
+When you see "if you're in the rain, you're going to get wet" you see A → B with the obvious fill-ins. But why don't you see this as a proposition in itself, that is, a C that can be true or false? You could see it as either adding another object to your preorder of propositions, or you could see it as equivalent to an existing object (equivalent in the sense of iff i.e. an arrow in both directions).
+
+
+## Chp 22: Sound and complete
+
+
+See [Chapter 22 Soundness and completeness ‣ Part IV Natural deduction for TFL ‣ forall x: Calgary. An Introduction to Formal Logic‣ Part IV Natural deduction for TFL ‣ forall x: Calgary. An Introduction to Formal Logic](https://forallx.openlogicproject.org/html/Ch22.html) for some suggestions about when to use truth tables vs. logic.
+
+Sound and complete to some degree means you can use both data and logic to solve a problem. Each is better in some situation. For ill-defined problems, it's often to collect a bunch of data and do machine learning (truth tables). For cleaner problems, you can write code.
+
+
+## Chp 23: Building blocks of FOL
+
+
+How do you code the "necessary" truths discussed in previous chapters? Let's say you believe it's true that if Jenny is mean, then Jenny will kick the dog. Similarly, you think that if George is mean, then George will kick the dog. It seems like you'd have to codify/model this as two different implications JM → JK and GM → GK. How do you deal with specifying this for all possible people, though? While it's true that JM → JK, you could make it a "necessary truth" by coming up with some rule where XM → XK where X is any person. This way, you don't have to specify so many individual rules. It's only possible to code something like this once you move to FOL (or a programming language).
+
+
+## Chp 24: Sentences with one quantifier
+
+
+See [Syllogism § Types](https://en.wikipedia.org/wiki/Syllogism#Types) for more on syllogisms and these examples.
+
+
+## Why past possible worlds?
+
+
+If you think of the world like a computer i.e. in a deterministic way, then it's hard to fathom the value in past possible worlds. How would we get to a point where Abraham Lincoln was born in France? It seems silly; what would you have to change farther back in the past to make that happen? Convince his parents to move?
+
+One possible resolution is that we need past possible worlds because really have imperfect information about the past, just like we have imperfect information about the future. How do you know that Abraham Lincoln wasn't born in France? You think it quite unlikely that historians and the US government would lie about that, but it's possible.
+
+Another possible resolution is that we need to accept that those living in the past didn't have perfect information about what their future would be. Did they make the best decision based on the information that was available to them? That's often a more important question than how history actually turned out; you can only go on the information you have. Leaders are often criticized despite the fact that they made the best decision they could given the information they had.
+
+
+## Standard compression
+
+
+TFL is obviously a lossy compression. If you're going to use it, however, then you need a standard way to compress into it. That is, you essentially need a standard functor from natural language sentences to TFL, which will necessarily not be injective.
+
+In Chp5 of forallx you can see many examples of compressions you may not agree with, but they are standard in the context of this text. The author is doing his best given the system.
+
+For example, you code "Jean is in France only if Jean is in Paris." to F → P. If you switch this to "Jean is in Paris only if Jean is in France." it'd be coded P → F (although P → F seems true, the coding still seems wrong). Really, you'd like to use the biconditional here, if anything. Is the speaker saying that Jean may or may not have had a layover in France, but if he did then it was in Paris? You almost want to refuse to encode this, but it might work in some cases. It's an example of ambiguity in language where you really need to ask the original speaker what they meant (ask for more context).
+
+Another nasty one (see [Necessity and sufficiency](https://en.wikipedia.org/wiki/Necessity_and_sufficiency)) is all of these being coded to the same thing, namely P → F:
+- For Jean to be in Paris, it is necessary that Jean be in France.
+- It is a necessary condition on Jean’s being in Paris that she be in France.
+- For Jean to be in France, it is sufficient that Jean be in Paris.
+- It is a sufficient condition on Jean’s being in France that she be in Paris.
+
+Just as we have nasty standards/defaults for the material conditional when the antecedent is false, we have to live with some of these compression standards if we're using TFL.
+
+
+## Law of exclude middle
+
+
+Is like arguing with someone and they find some small contradiction in something you said once. They use that to conclude everything you say is wrong and their conclusion is right. Or perhaps this is closer to the principle of explosion?
+
+
+## Improvements
+
+
+In section 12.5, change:
+
+> This says that there is no valuation which makes all the sentences mentioned on the left side of ⊨ true whilst making 𝒞 false.
+
+To:
+
+> This says that there is no valuation which makes all the sentences mentioned on the left side of ⊨ true whilst making all the sentences on the right side false.
+
+This would make it easier to understand how 𝒜 ⊨ is another way of saying that 𝒜 is a contradiction.
+
+The A in the first AS in this section should probably be a script A:
+- https://forallx.openlogicproject.org/html/Ch18.html#S5
+
+In https://forallx.openlogicproject.org/html/Ch23.html#S2 it seems unnecessary to include the following sentence:
+
+> (Equally, there are at least two people with the name ‘P. D. Magnus’.)
+
+Most readers will already be familiar with the fact that many full names are reused.

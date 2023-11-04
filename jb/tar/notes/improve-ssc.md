@@ -258,6 +258,8 @@ The link https://en.wikipedia.org/wiki/Compact_category redirects to Autonomous 
 - https://math.stackexchange.com/questions/4548276
 - https://ncatlab.org/nlab/show/rigid+monoidal+category
 
+For more on the term compact, see [machine learning - Can neural networks approximate any function given enough hidden neurons? - SO](https://stackoverflow.com/questions/25609347/can-neural-networks-approximate-any-function-given-enough-hidden-neurons) and [Compact space](https://en.wikipedia.org/wiki/Compact_space).
+
 This diagram started as a list of common [Enriched category](https://en.wikipedia.org/wiki/Enriched_category).
 
 

@@ -610,7 +610,7 @@ Given two booleans $P,Q$, define $P\imp Q$ to mean $P=(P\wedge Q)$.
 		\false&\false&\?&\?\\
 	\end{array}
 	\]
-	\item If you already have an idea what $P\imp Q$ should mean, does it agree with the last column of table above?
+	\item If you already have an idea what $P\imp Q$ should mean, does it agree with the last column of the table above?
 	\item What is the characteristic function $m\colon \BB\times\BB\to\BB$ for $P\imp Q$?
 	\item What subobject does $m$ classify?
 \qedhere
@@ -632,7 +632,7 @@ Consider the sets $E\coloneqq\{n\in\NN\mid n\text{ is even}\}$, $P\coloneqq\{n\i
 
 
 \paragraph{Review.}
-Let's take stock of where we are and where we're going. In \cref{sec.safe_machines}, we set out our goal of proving properties about behavior, and we said that topos theory is a good mathematical setting for doing that. We are now at the end of \cref{sec.logic_and_set}, which was about $\smset$ as an examplar topos. What happened?
+Let's take stock of where we are and where we're going. In \cref{sec.safe_machines}, we set out our goal of proving properties about behavior, and we said that topos theory is a good mathematical setting for doing that. We are now at the end of \cref{sec.logic_and_set}, which was about $\smset$ as an exemplar topos. What happened?
 
 In \cref{subsec.set_like}, we talked about properties of $\smset$ that are enjoyed by any topos: limits and colimits, cartesian closure, epi-mono factorizations, and subobject classifiers. Then in \cref{subsec.subobj_classifier} we launched into thinking about the subobject classifier in general and in the specific topos $\smset$, where it is the set $\bb$ of booleans because any subset of $Y$ is classified by a specific predicate $p\colon Y\to\BB$. Finally, in \cref{subsubsec.logic_set} we discussed how to understand logic in terms of $\Omega$: there are various maps $\wedge,\vee,\imp\colon\Omega\times\Omega\to\Omega$ and $\neg\colon\Omega\to\Omega$ etc., which serve as logical connectives. These are operations on truth values.%
 \index{limit}%
@@ -1052,7 +1052,7 @@ Consider the function $f\colon X\to Y$ shown in \cref{eqn.sections_of_function}.
 	\item What is the fiber of $f$ over $a$?
 	\item What is the fiber of $f$ over $c$?
 	\item What is the fiber of $f$ over $d$?
-	\item Gave an example of a function $f'\colon X\to Y$ for which every fiber has either one or two elements.
+	\item Give an example of a function $f'\colon X\to Y$ for which every fiber has either one or two elements.
 \qedhere
 \end{enumerate}
 \end{exercise}
@@ -1110,7 +1110,7 @@ Refer to \cref{eqn.sections_of_function}.
 \end{enumerate}
 \end{exercise}
 
-By now you should understand the sections of $\Fun{Sec}_f(U)$ for various $U\ss X$. This is $\Fun{Sec}_f$ on objects, so you are half way to understanding $\Fun{Sec}_f$ as a presheaf. That is, as a presheaf, $\Fun{Sec}_f$ also includes a restriction maps for every subset $V\ss U$. Luckily, the restriction maps are easy: if $V\ss U$, say $V=\{a\}$ and $U=\{a,b\}$, then given a section $s$ as in \cref{eqn.all_six_sections}, we get a section over $V$ by `restricting' our attention to what $s$ does on $\{a\}$. 
+By now you should understand the sections of $\Fun{Sec}_f(U)$ for various $U\ss X$. This is $\Fun{Sec}_f$ on objects, so you are half way to understanding $\Fun{Sec}_f$ as a presheaf. That is, as a presheaf, $\Fun{Sec}_f$ also includes a restriction map for every subset $V\ss U$. Luckily, the restriction maps are easy: if $V\ss U$, say $V=\{a\}$ and $U=\{a,b\}$, then given a section $s$ as in \cref{eqn.all_six_sections}, we get a section over $V$ by `restricting' our attention to what $s$ does on $\{a\}$.
 \begin{equation}%
 \label{eqn.restriction_map_rand9384}
 \begin{tikzpicture}[y=.25cm, x=.75cm, every label/.style={font=\scriptsize}, trim left=4.5cm]
@@ -1148,7 +1148,7 @@ By now you should understand the sections of $\Fun{Sec}_f(U)$ for various $U\ss 
 
 Now we have understood $\Fun{Sec}_f$ as a presheaf; we next explain how to see that it is a sheaf, i.e.\ that it satisfies the sheaf condition for every cover. To understand the sheaf condition, consider the set $U_1=\{a,b\}$ and $U_2=\{b,e\}$. These cover the set $U=\{a,b,e\}=U_1\cup U_2$. By \cref{def.sheaf}, a matching family for this cover consists of a section over $U_1$ and a section over $U_2$ that agree on the overlap set, $U_1\cap U_2=\{b\}$.
 
-So consider $s_1\in \Fun{Sec}_f(U_1)$ and $s_2\in \Fun{Sec}_f(U_2)$ shown below.
+Consider $g_1\in \Fun{Sec}_f(U_1)$ and $g_2\in \Fun{Sec}_f(U_2)$ shown here:
 \begin{equation}%
 \label{eqn.one_section}
 \begin{tikzpicture}[y=.4cm, x=.4cm, every label/.style={font=\scriptsize}, baseline=(f)]
@@ -1316,7 +1316,7 @@ But are the sheaves on $M$ the vector fields? That is, is there a one-to-one cor
 \begin{example}%
 \label{ex.Sets_as_sheaves}%
 \index{set!as sheaf on one-point space}
-For every topological space $(X,\Op)$, we have the topos of sheaves on it. The topos of sets, which one can regard as the story of set theory, is the category of sheaves on the one-point space $\{*\}$. In topos theory, we see the category of sets---an huge, amazing, and rich category---as corresponding to a single point. Imagine how much more complex arbitrary toposes are, when they can take place on much more interesting topological spaces (and in fact even more general `sites'). 
+For every topological space $(X,\Op)$, we have the topos of sheaves on it. The topos of sets, which one can regard as the story of set theory, is the category of sheaves on the one-point space $\{*\}$. In topos theory, we see the category of sets---huge, amazing, and rich ---as corresponding to a single point. Imagine how much more complex arbitrary toposes are, when they can take place on much more interesting topological spaces (and in fact even more general `sites').
 \end{example}
 
 \begin{exercise}%
@@ -1876,7 +1876,6 @@ We said in \cref{subsec.IR} that every open set $U\ss\IR$ can be written as the 
 However, rather than get into the details, we describe a few sorts of sheaves that may be of interest.
 
 \begin{example}%
-\label{ex.const_sheaves}%
 \index{sheaf!constant}
 For any set $A$ there is a sheaf $\const{A}\in\Shv(\IR)$ that assigns to each open set $U$ the set $\const{A}(U)\coloneqq A$. This allows us to refer to integers, or real numbers, or letters of an alphabet, as though they were behaviors. What sort of behavior is $7\in\NN$? It is the sort of behavior that never changes: it's always seven. Thus $\const{A}$ is called the \emph{constant sheaf on $A$}.
 \end{example}
@@ -1888,7 +1887,7 @@ Fix any topological space $(X,\Op_X)$. Then there is a sheaf $F_X$ of \emph{loca
 
 \begin{exercise}%
 \label{exc.interval_domain_top}
-Let's check that \cref{ex.const_sheaves} makes sense. Fix any topological space $(X,\Op_X)$ and any subset $R\ss\IR$ of the interval domain. Define $H_X(U)\coloneqq\{f\colon U\cap R\to X\mid f\text{ is continuous}\}$.
+Let's check that last example makes sense. Fix any topological space $(X,\Op_X)$ and any subset $R\ss\IR$ of the interval domain. Define $H_X(U)\coloneqq\{f\colon U\cap R\to X\mid f\text{ is continuous}\}$.
 \begin{enumerate}
 	\item Is $H_X$ a presheaf? If not, why not; if so, what are the restriction maps?
 	\item Is $H_X$ a sheaf? Why or why not?
