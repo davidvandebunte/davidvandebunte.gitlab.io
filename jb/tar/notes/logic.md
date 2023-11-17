@@ -34,6 +34,29 @@ Consider the following simple example argument. While A ∨ B entails A ∨ B �
 ![x](./fax-chp12-entailment.svg)
 
 
+## Monotone valuation functions
+
+
+When applying inferences to propositions, we effectively expect our valuation function to be monotone. For example, we want the "green" situation/arrows here rather than the red:
+
+
+![x](./monotone-valuation-functions.svg)
+
+
+When this isn't the case, we have to give something up. It could be that our valuation function is wrong; the data we've collected is wrong (and we need to fix the dashed green/red arrows). It could be that our system for coming up with inferences is wrong (and we need to fix the solid black arrows). In propositional logic we assume that the dashed arrows are always right (even definining them as "right" by removing meaning from the words, e.g. replacing Cloudy with $C$) and do whatever we need to in order to rearrange items on the left to make the function monotone. Humans get to choose what they question, which (among other things) creates politics and filter bubbles.
+
+One solution for the system on the right is to delete the arrow Raining → Wet Ground (perhaps you have a roof or umbrella to cover the ground you're talking about). That is, what you can you do with a contradiction in your system of logic? In almost any system you'll want to rearrange your drawing so Raining is not above Wet Ground. You could put them at the same level ("rank" in graphviz) until you know more.
+
+
+Consider the following inference system that includes Pierce's law, however. There are three gray arrows on the diagram for the three arrows in Pierce's law, where gray here indicates TBD. The given valuation function is shown as green because it can be made green for some choice of turning arrows on and off. Can you easily see which gray arrows need to be turned black/white?
+
+
+![x](./recursive-pierces-law.svg)
+
+
+You can come up with a working inference system based on some valuation function (deciding which arrows on the left side need to be turned on/off), but can you always come up with a green valuation function given arrows that are definitively turned on/off? What makes this question harder to "solve" is its recursive nature; if you only commit to one piece of "data" (e.g. whether a proposition is true or false) and start to check what that implies, you may discover that you need to change your original choice. What if you assign the proposition that is Pierce's law to false to start? Your valuation function now determines the truth value of your propositions, which determines which arrows need to be on/off, which determines whether you valuation function is monotone and therefore needs to be changed.
+
+
 ## Valid argument
 
 
@@ -98,6 +121,15 @@ Part C.
 ```
 
 
+Let's take this third example and rewrite it as a [String diagram](https://en.wikipedia.org/wiki/String_diagram). We convert objects (propositions) to wires, and morphisms (inference rules) to boxes:
+
+
+![x](./uncurrying-string-diagram.svg)
+
+
+For this particular example, we can view the same diagram (taking propositions to types per the curry-howard isomorphism) as a description of a function that takes a function of type $A→(B→C)$ and returns a function of type $(A∧B)→C$ (or in the category of sets $(A×B)→C$). That is, this expresses uncurrying.
+
+
 For the next few examples, we also provide the possible worlds (each cell being a possible world) associated with parts of the proof. These are essentially the same as the truth tables:
 
 
@@ -141,6 +173,12 @@ For Exercise A4 we'll try a more systematic answer search. In the following, red
 
 
 ![x](fax-chp20-A4.svg)
+
+
+The same proof as a [String diagram](https://en.wikipedia.org/wiki/String_diagram):
+
+
+![x](pierces-law-string-diagram.svg)
 
 
 ## Propositions from propositions
@@ -202,8 +240,10 @@ Just as we have nasty standards/defaults for the material conditional when the a
 
 Is like arguing with someone and they find some small contradiction in something you said once. They use that to conclude everything you say is wrong and their conclusion is right. Or perhaps this is closer to the principle of explosion?
 
+Either way, it feels similar to exceptions in programming languages. You "explode" when things don't logically fit together (give up on any kind of inference).
 
-## Improvements
+
+## ForAllX improvements
 
 
 In section 12.5, change:
@@ -224,3 +264,23 @@ In https://forallx.openlogicproject.org/html/Ch23.html#S2 it seems unnecessary t
 > (Equally, there are at least two people with the name ‘P. D. Magnus’.)
 
 Most readers will already be familiar with the fact that many full names are reused.
+
+
+## Propositions as types
+
+
+One of the primary insights that came out of the [Curry–Howard correspondence](https://en.wikipedia.org/wiki/Curry%E2%80%93Howard_correspondence) is the analogy between propositions and types. Here's an example isomorphism, originating from the example type hierarchy on the right:
+
+
+![x](./animal-propositions-as-types.svg)
+
+
+When we expand to thinking in terms of the Curry–Howard–Lambek correspondence/isomorphism (see [Curry–Howard correspondence § Curry–Howard–Lambek correspondence](https://en.wikipedia.org/wiki/Curry%E2%80%93Howard_correspondence#Curry%E2%80%93Howard%E2%80%93Lambek_correspondence)), we interpret category-theoretic objects as types or propositions. From this perspective an "Animal" is an object in a category, and the isomorphism between the categories is (partially) shown as the dashed arrows.
+
+
+## Turnstile symbol ⊢
+
+
+Notice this symbol is used for both syntactic consequence (see [Logical consequence § Syntactic consequence](https://en.wikipedia.org/wiki/Logical_consequence#Syntactic_consequence)) and [Adjoint functors](https://en.wikipedia.org/wiki/Adjoint_functors). Is this just a coincidence? It seems likely that syntactic consequence is part of an adjunction (based on the syntax alone, it's the right adjoint).
+
+Some evidence for this is that the propositions we can derive as being true given some propositions that we assume are generally not speaking not equivalent to our assumed propositions. Since the left side of the syntactic consequence operator takes a set of propositions, this may be the upper closure operation $A^{↑X}$ defined in [Upper set](https://en.wikipedia.org/wiki/Upper_set).
