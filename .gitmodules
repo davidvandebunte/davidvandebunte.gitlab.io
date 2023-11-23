@@ -3,4 +3,4 @@
 	url = https://github.com/halogenica/beautifulhugo.git
 [submodule "gitlab/applied-category-theory/seven-sketches"]
 	path = gitlab/applied-category-theory/seven-sketches
-	url = https://gitlab.com/applied-category-theory/seven-sketches.git
+	url = git@gitlab.com:applied-category-theory/seven-sketches.git
