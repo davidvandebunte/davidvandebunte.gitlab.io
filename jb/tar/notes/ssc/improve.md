@@ -13,7 +13,9 @@ kernelspec:
 
 # Improve SSiC
 
-+++
+```{code-cell} ipython3
+from IPython.display import Image, Markdown
+```
 
 ## Optimization problems
 
@@ -25,7 +27,19 @@ See also [Equaliser (mathematics)](https://en.wikipedia.org/wiki/Equaliser_(math
 
 +++
 
+## Isomorphic objects
+
++++
+
+Why do we call two items isomorphic in a pre-order? Because in one shot (one arrow) you can go to an "equivalent" node on the other side. You could see these two nodes as two one-object categories that are equivalent. To generalize this notion of "isomorphic" to two object categories, you just need two arrows that are bidirectional.
+
++++
+
 ## 6.2.1 Initial objects
+
++++
+
+Russell's analysis in forallx looks related to unique objects; see [Chapter 28](https://forallx.openlogicproject.org/html/Ch28.html).
 
 +++
 
@@ -573,13 +587,33 @@ See also [Subobject classifier](https://en.wikipedia.org/wiki/Subobject_classifi
 
 ![x](raster/2023-10-24T17-53-30.png)
 
++++ {"tags": []}
+
+### Definition 7.22
+
 +++
 
 ![x](raster/2023-10-24T17-56-25.png)
 
++++ {"tags": []}
+
+### Define presheaf <!-- define-presheaf -->
+
 +++
 
-See also [Presheaf (category theory)](https://en.wikipedia.org/wiki/Presheaf_(category_theory)) and [Sheaf (mathematics) § Presheaves](https://en.wikipedia.org/wiki/Sheaf_(mathematics)#Presheaves).
+See also [Presheaf (category theory)](https://en.wikipedia.org/wiki/Presheaf_(category_theory)) and the "Presheaves" subsection of [Sheaf (mathematics) § Presheaves](https://en.wikipedia.org/wiki/Sheaf_(mathematics)#Presheaves).
+
++++ {"tags": []}
+
+### Define "restriction morphism" <!-- define-restriction-morphism -->
+
++++
+
+The author uses the notation $s|_f$ by analogy with the more general concept of restriction of functions (see [Restriction (mathematics)](https://en.wikipedia.org/wiki/Restriction_(mathematics)). See also comments on this topic in [Sheaf (mathematics) § Presheaves](https://en.wikipedia.org/wiki/Sheaf_(mathematics)#Presheaves). The author sometimes uses the term "restriction" when he means the more general term "restriction morphism" (or "restriction map").
+
++++ {"tags": []}
+
+### Example 7.23
 
 +++
 
@@ -609,17 +643,35 @@ See also [Presheaf (category theory)](https://en.wikipedia.org/wiki/Presheaf_(ca
 
 ![x](raster/2023-10-24T18-07-51.png)
 
-+++
++++ {"tags": []}
 
-Compare to [Topological space § Definition via open sets](https://en.wikipedia.org/wiki/Topological_space#Definition_via_open_sets) and [Cover (topology)](https://en.wikipedia.org/wiki/Cover_(topology)#open_cover). See also [Clopen set](https://en.wikipedia.org/wiki/Clopen_set) and its comparison of sets to doors.
-
-+++
-
-Regarding continuity, see in particular the part of the discussion in [Continuous function § Continuous functions between topological spaces](https://en.wikipedia.org/wiki/Continuous_function#Continuous_functions_between_topological_spaces) that references [Limit of a function § (ε, δ)-definition of limit](https://en.wikipedia.org/wiki/Limit_of_a_function#(%CE%B5,_%CE%B4)-definition_of_limit). In both definitions, we require that "small" variations/perturbations in the codomain (defined via either ε or V) must correspond to "small" variations/perturbations in the input (defined via either δ or $f^{-1}(V)$). We define what "small" means in the codomain, and our function definition should lead us to the test we need to apply in the domain. Is it possible to find a δ or $f^{-1}(V)$ that is small enough? If not, then the function is not continuous.
+### Define "topological space" <!-- define-topological-space -->
 
 +++
 
-For example, consider the following function $f$ defined on essentially the same set with different topologies. If we want to define "small" to mean the open set $V = \{1\}$ on the right, then there's no open set on the left we can choose that's "small enough" to cover it without also covering other objects in the codomain:
+Why does the author use **Op** for a topology? It might initially look short for "top" (without the t), but is more likely short for **Op**en as in open sets. Compare these definitions to the definitions in [Topological space § Definition via open sets](https://en.wikipedia.org/wiki/Topological_space#Definition_via_open_sets) (and [Open set](https://en.wikipedia.org/wiki/Open_set)).
+
+See also [Clopen set](https://en.wikipedia.org/wiki/Clopen_set) and its comparison of sets to doors. If you're over-accustomed to the concept of an open set tied to the [standard topology](https://en.wikipedia.org/wiki/Real_coordinate_space#Topological_properties), look through some of the examples of a closure on the non-standard topologies in [Closure (topology) § Examples](https://en.wikipedia.org/wiki/Closure_(topology)#Examples).
+
++++ {"tags": []}
+
+### Define "open cover" <!-- define-open-cover -->
+
++++
+
+The author uses the term "cover" here when the more specific term is "open cover" (see [Cover (topology)](https://en.wikipedia.org/wiki/Cover_(topology)#open_cover)). You'll need to know this; the author soon starts to use "open cover" rather than cover.
+
++++ {"tags": []}
+
+### Continuous functions
+
++++
+
+Regarding continuity, see in particular the part of the discussion in [Continuous function § Continuous functions between topological spaces](https://en.wikipedia.org/wiki/Continuous_function#Continuous_functions_between_topological_spaces) that references [Limit of a function § (ε, δ)-definition of limit](https://en.wikipedia.org/wiki/Limit_of_a_function#(%CE%B5,_%CE%B4)-definition_of_limit) in the subsection [Continuity at a point](https://en.wikipedia.org/wiki/Continuous_function#Continuity_at_a_point). In both definitions, we require that "small" variations/perturbations in the codomain (defined via either ε or V) must correspond to "small" variations/perturbations in the input (defined via either δ or $f^{-1}(V)$). We define what "small" means in the codomain, and our function definition should lead us to the test we need to apply in the domain. Is it possible to find a δ or $f^{-1}(V)$ that is small enough? If not, then the function is not continuous.
+
++++
+
+For example, consider the following function $f$ defined on essentially the same set with different topologies. If we want to define "small" to mean the open set $V = \{2\}$ on the right, then there's no open set on the left we can choose that's "small enough" such that its image contains $\{2\}$ without also including other objects in the codomain. Indeed, our only option is $U = \{A,B\}$ whose image $f(U) = \{1,2\}$ is not a subset of $\{2\}$:
 
 +++
 
@@ -627,7 +679,7 @@ For example, consider the following function $f$ defined on essentially the same
 
 +++
 
-In this example, confirm that there is no open set on the left that covers the open set $V = \{2, 3\}$ on the right without also covering other objects in the codomain:
+In this example, confirm that there is no open set on the left whose image includes $V = \{2, 3\}$ on the right without also including other objects in the codomain:
 
 +++
 
@@ -641,6 +693,73 @@ This explanation is not quite the same as the one given in [The definition of co
 
 A differentiable function is defined differently in topology just as a continuous function is. See [Differentiable function § Differentiable functions on manifolds](https://en.wikipedia.org/wiki/Differentiable_function) and [Differentiable programming](https://en.wikipedia.org/wiki/Differentiable_programming).
 
++++ {"tags": []}
+
+### Review earlier topologies
+
++++
+
+How do you see the topologies of chapter 1 as a set of open sets? Recall, for example:
+
++++
+
+![x](raster/2023-12-02T16-58-17.png)
+
++++
+
+The short answer is that these are actually partitions of a set, not topologies, though they are introduced with the language of connectedness. Notice there are only 5 partitions on a set of 3 elements, but 29 topologies (see [Finite topological space](https://en.wikipedia.org/wiki/Finite_topological_space)).
+
+If you want to try to draw a finite topological space, one option is to exclude all the open sets that are implied by the open sets you choose to draw. That is, choose not to draw any open sets that are either the intersection or union of open sets you've chosen to draw. Also always choose to exclude to both the empty set and the full set. With this approach, we might simplify the drawing above to:
+
++++
+
+![x](draw-topologies-example-1.svg)
+
++++
+
+Notice the left of our two examples is `8.` in the list provided by Wikipedia, mapping our element to theirs by:
+- a → b
+- b → c
+- c → a
+
++++
+
+Unfortunately this drawing strategy isn't always going to produce the same drawing for the same topology. We could have also drawn the above as:
+
++++
+
+![x](draw-topologies-example-2.svg)
+
++++
+
+To be consistent, it's probably best to only draw the smallest open sets that you can that still imply the other open sets. Said another way, draw only those open sets that allow you to infer all other open sets via the rule that the union of any open sets is also an open set. In general, this should lead to a less-cluttered drawing.
+
+Said another way, we don't draw any open sets that are "covered" by other open sets (the "open covers") except those open covers that can be produced by a single (the same) open set. We *may* draw an open set that contains an open set. Said another way, in the sublattice (or preordered set) that defines the topology we draw the bottom (leaf) elements first and then keep drawing up any elements that don't have two arrows pointing into them. Notice these arrows represent "inclusion" morphisms, so we don't draw any sets that "include" two other sets (notably, the same arrows in the opposite category are the restriction morphisms).
+
++++ {"tags": []}
+
+### Defined "connected space"
+
++++
+
+See [Connected space](https://en.wikipedia.org/wiki/Connected_space). We can't say that a topological space that includes the whole set as an open set "connected" because every topological space includes the whole set as an open set.
+
+Instead, we define "connected space" in a negative way, in terms of whether the whole set can be represented as the union of two (or more) open sets. See [Finite topological space](https://en.wikipedia.org/wiki/Finite_topological_space); the 9 non-equivalent topologies on three elements from this perspective:
+
++++
+
+![x](connected-and-not-spaces-examples.svg)
+
++++
+
+The arrows in the preceding diagram demonstrate the [Specialization (pre)order](https://en.wikipedia.org/wiki/Specialization_(pre)order) for these topologies, which demonstrates some of the concepts in [Finite topological space § Connectivity](https://en.wikipedia.org/wiki/Finite_topological_space#Connectivity). The [Clopen sets](https://en.wikipedia.org/wiki/Clopen_set) are colored green.
+
+See also [Connected space § Connected components](https://en.wikipedia.org/wiki/Connected_space). With this perspective we can produce a partition of any of these spaces. You should see that topologies 1-3 and 5-6 produce the trivial partition, 4 and 7-8 produce the partition AB|C, and 9 is the finest partition.
+
++++ {"tags": []}
+
+### Sheaves vs Presheaves
+
 +++
 
 ![x](raster/2023-10-24T18-07-11.png)
@@ -652,6 +771,10 @@ A differentiable function is defined differently in topology just as a continuou
 +++
 
 ![x](raster/2023-10-24T18-11-37.png)
+
++++
+
+See also [Ball (mathematics)](https://en.wikipedia.org/wiki/Ball_(mathematics)).
 
 +++ {"tags": []}
 
@@ -705,11 +828,29 @@ Compare to [Sierpiński space](https://en.wikipedia.org/wiki/Sierpi%C5%84ski_spa
 
 +++ {"tags": []}
 
-### The open sets of a topological space form a preorder
+### The open sets preorder
 
 +++
 
 ![x](raster/2023-10-24T18-18-41.png)
+
++++ {"tags": []}
+
+### Specialization (pre)order
+
++++
+
+See [Specialization (pre)order](https://en.wikipedia.org/wiki/Specialization_(pre)order) and [specialization order](https://ncatlab.org/nlab/show/specialization+order). This is *not* the concept we're talking about here; this is defined on the objects of a set X rather than the subsets of a set X. For example, compare the specialization order on the Sierpinski space in [Specialization (pre)order § Examples](https://en.wikipedia.org/wiki/Specialization_(pre)order#Examples) to the Hasse diagram you eventually produce in Exercise 7.31.
+
+The Sierpinski space defined by the open sets {∅, {1}, {0,1}} is defined by the closed sets {∅, {0}, {0,1}} (the complements of the open sets). Therefore the closure of {0} is {0} and the closure of {1} is {0,1}, leading to the conclusion that the specialization preorder of the Sierpinski space is the natural one (0 ≤ 0, 0 ≤ 1, and 1 ≤ 1).
+
++++
+
+Consider the following adjoint pair, with the closure operator in blue and the interior operator in red. These are *not* an adjoint pair (take $p = q = \{1\}$) despite these operators being "dual" to each other:
+
++++
+
+![x](sierpinski-closure-interior.svg)
 
 +++ {"tags": []}
 
@@ -740,8 +881,6 @@ Compare to [Sierpiński space](https://en.wikipedia.org/wiki/Sierpi%C5%84ski_spa
 
 +++
 
-See also [Subspace topology](https://en.wikipedia.org/wiki/Subspace_topology).
-
 For part `1.`, take $B = X$. Taking $B = Y$ (as the author suggests) is incorrect because there's no guarantee that $Y ∈ \bf{Op}$.
 
 +++
@@ -756,6 +895,8 @@ $$
 
 To show that we have arbitrary unions, we must show that given $I$ as a set where we are given an open set $A_i ∈ \bf{Op}_{?∩Y}$ for each $i$ then their union $⋃_{i∈I}A_i ∈ \bf{Op}_{?∩Y}$. We know that for every $A_i$ there must be some corresponding $B_i$ such that $A_i = B_i ∩ Y$, so we can also write arbitrary unions of $A_i$ as $⋃_{i∈I}A_i = ⋃_{i∈I}(B_i ∩ Y) = (⋃_{i∈I}B_i) ∩ Y$. We know that $⋃_{i∈I}B_i ∈ \bf{Op}$ because it has arbitrary unions, so $⋃_{i∈I}A_i ∈ \bf{Op}_{?∩Y}$.
 
++++
+
 For part `3.` we must show that for every $B ∈ \bf{Op}$, the preimage $f^{-1}(B) ∈ \bf{Op}_{?∩Y}$. An inclusion function maps each element y ∈ Y to the same element x ∈ X in the larger set, so there should always be some open set $A = B ∩ Y ∈ \bf{Op}_{?∩Y}$ that has all the same elements as $B$. That is, the preimage $f^{-1}(B)$ of an inclusion map is all the same elements as $B$ but in another set $A ∈ Y$.
 
 +++
@@ -764,6 +905,10 @@ For part `3.` we must show that for every $B ∈ \bf{Op}$, the preimage $f^{-1}(
 :class: dropdown
 ![x](raster/2023-10-26T17-53-08.png)
 ```
+
++++
+
+See also [Subspace topology](https://en.wikipedia.org/wiki/Subspace_topology).
 
 +++ {"tags": []}
 
@@ -779,7 +924,7 @@ For part `3.` we must show that for every $B ∈ \bf{Op}$, the preimage $f^{-1}(
 
 +++
 
-This question seems related to Exercise 2.62 in particular (which effectively considers the discrete topology).
+This question seems related to Exercise 2.62 in particular (which effectively considers the discrete topology). Exercise 7.34 is similar to 2.62, just with a subset of the power set. So you can't connect two nodes by just anything, but only by an open set i.e. a measure of connectedness. So this restricts connections to those allowed by the topological space.
 
 It will likely help to work from an example in [Finite topological space](https://en.wikipedia.org/wiki/Finite_topological_space).
 
@@ -805,6 +950,14 @@ It will likely help to work from an example in [Finite topological space](https:
 
 +++ {"tags": []}
 
+### Define sheaf
+
++++
+
+See also [Sheaf (mathematics)](https://en.wikipedia.org/wiki/Sheaf_(mathematics)).
+
++++ {"tags": []}
+
 ### Example 7.36
 
 +++
@@ -814,6 +967,10 @@ It will likely help to work from an example in [Finite topological space](https:
 +++ {"tags": []}
 
 ### Extended example: sections of a function
+
++++
+
+Consider a section as a possible world, so a set of sections is a set of possible worlds. Different sheaves then represent different sets of possible worlds (for the same open set). Perhaps each part of a section is an aspect of a possible world (each person is an aspect of the world in S). This fits an instance of a database being a possible world.
 
 +++
 
@@ -829,7 +986,7 @@ It will likely help to work from an example in [Finite topological space](https:
 
 +++ {"tags": []}
 
-#### Exercise 7.38
+### Exercise 7.38
 
 +++
 
@@ -852,39 +1009,33 @@ It will likely help to work from an example in [Finite topological space](https:
 
 +++ {"tags": []}
 
-#### Exercise 7.40
+### Exercise 7.40
 
 +++
 
 ![x](raster/2023-10-25T14-34-57.png)
 
-+++
+```{code-cell} ipython3
+:tags: [hide-output]
 
-```{admonition} Reveal 7S answer
-:class: dropdown
-![x](raster/2023-10-25T15-11-26.png)
+Image('raster/2023-10-25T15-11-26.png', metadata={'description': "7S answer"})
 ```
-
-+++
 
 ![x](raster/2023-10-25T14-49-41.png)
 
 +++ {"tags": []}
 
-#### Exercise 7.42
+### Exercise 7.42
 
 +++
 
 ![x](raster/2023-10-25T14-50-14.png)
 
-+++
+```{code-cell} ipython3
+:tags: [hide-output]
 
-```{admonition} Reveal 7S answer
-:class: dropdown
-![x](raster/2023-10-25T15-57-47.png)
+Image('raster/2023-10-25T15-57-47.png', metadata={'description': "7S answer"})
 ```
-
-+++
 
 ![x](raster/2023-10-25T14-50-50.png)
 
@@ -894,17 +1045,16 @@ It will likely help to work from an example in [Finite topological space](https:
 
 +++ {"tags": []}
 
-#### Exercise 7.44
+### Exercise 7.44
 
 +++
 
 ![x](raster/2023-10-25T17-33-14.png)
 
-+++
+```{code-cell} ipython3
+:tags: [hide-output]
 
-```{admonition} Reveal 7S answer
-:class: dropdown
-![x](raster/2023-10-25T17-33-44.png)
+Image('raster/2023-10-25T17-33-44.png', metadata={'description': "7S answer"})
 ```
 
 +++ {"tags": []}
@@ -923,9 +1073,13 @@ It will likely help to work from an example in [Finite topological space](https:
 
 ![x](raster/2023-10-25T17-49-28.png)
 
++++ {"tags": []}
+
+### Define bundle
+
 +++
 
-See also [Tangent bundle](https://en.wikipedia.org/wiki/Tangent_bundle).
+See also [Tangent bundle](https://en.wikipedia.org/wiki/Tangent_bundle); not to be confused with [Bundle (geometry)](https://en.wikipedia.org/wiki/Bundle_(geometry)).
 
 +++ {"tags": []}
 
@@ -943,6 +1097,10 @@ See also [Tangent bundle](https://en.wikipedia.org/wiki/Tangent_bundle).
 
 ![x](raster/2023-10-25T18-15-34.png)
 
++++
+
+For 7.48 and 7.49 the sheaf condition is vacuously satisfied because there are no covers. There is also a simple selection for the function for the empty set based on 7.36. The nonempty set can map to any set, so that the category of all presheaves are all sets. Perhaps the morphisms between sheaves are then functions, or at least some function and a trivial function between initial objects. What is the restriction map for every sheaf? It looks like it's the constant function to the initial object.
+
 +++ {"tags": []}
 
 ### Exercise 7.49
@@ -950,6 +1108,14 @@ See also [Tangent bundle](https://en.wikipedia.org/wiki/Tangent_bundle).
 +++
 
 ![x](raster/2023-10-25T18-15-58.png)
+
++++
+
+For `1.`, the category $\bf{Op}$ is $∅ → \{1\} → \{1,2\}$ (the inclusion morphisms).
+
++++
+
+For `2.`, the opposite of that category is $\bf{Op}^{op}$ or $\{1,2\} → \{1\} → ∅$ (the restriction morphisms). A presheaf consists of a functor $\bf{Op}^{op} → \bf{Set}$.
 
 +++ {"tags": []}
 
@@ -987,6 +1153,10 @@ See also [Tangent bundle](https://en.wikipedia.org/wiki/Tangent_bundle).
 
 ![x](raster/2023-10-25T18-29-14.png)
 
++++
+
+For exercise 7.52, we have two open sets to map. The empty set goes to the initial object, as discussed. The non empty set goes to a two object set we can see as the booleans.
+
 +++ {"tags": []}
 
 ### Exercise 7.53
@@ -995,9 +1165,193 @@ See also [Tangent bundle](https://en.wikipedia.org/wiki/Tangent_bundle).
 
 ![x](raster/2023-10-25T18-29-50.png)
 
++++
+
+![x](raster/2023-11-24T14-25-32.png)
+
++++
+
+![x](raster/2023-11-24T14-26-13.png)
+
++++
+
+![x](raster/2023-11-24T14-26-58.png)
+
++++
+
+![x](raster/2023-11-24T15-38-16.png)
+
++++ {"tags": []}
+
+### Exercise 7.55
+
++++
+
+![x](raster/2023-11-24T15-41-06.png)
+
++++ {"tags": []}
+
+## 7.4.2 Logic in a sheaf topos
+
++++
+
+![x](raster/2023-11-25T14-17-22.png)
+
++++
+
+![x](raster/2023-11-25T14-17-50.png)
+
++++
+
+![x](raster/2023-11-25T14-18-28.png)
+
++++ {"tags": []}
+
+### Exercise 7.59
+
++++
+
+![x](raster/2023-11-25T14-24-21.png)
+
++++
+
+![x](raster/2023-11-25T14-24-45.png)
+
++++ {"tags": []}
+
+### Exercise 7.60
+
++++
+
+![x](raster/2023-11-25T14-25-10.png)
+
++++
+
+![x](raster/2023-11-25T14-41-34.png)
+
++++ {"tags": []}
+
+## 7.4.3 Predicates
+
++++
+
+![x](raster/2023-11-25T14-56-44.png)
+
++++ {"tags": []}
+
+### Exercise 7.62
+
++++
+
+![x](raster/2023-11-25T14-57-07.png)
+
++++
+
+In section 7.4.3 we can take S to stand for either sections (like Sec) or subjects (as in, the subject of a sentence where the predicate follows).
+
++++
+
+![x](raster/2023-11-25T14-57-35.png)
+
++++
+
+![x](raster/2023-11-25T15-01-57.png)
+
++++
+
+![x](raster/2023-11-25T15-02-51.png)
+
++++ {"tags": []}
+
+### Exercise 7.64
+
++++
+
+![x](raster/2023-11-25T15-03-21.png)
+
++++
+
+![x](raster/2023-11-25T15-03-43.png)
+
++++ {"tags": []}
+
+## 7.4.4 Quantification
+
++++
+
+![x](raster/2023-11-25T15-04-32.png)
+
++++
+
+![x](raster/2023-11-25T15-04-47.png)
+
++++ {"tags": []}
+
+### Exercise 7.66
+
++++
+
+![x](raster/2023-11-25T15-05-08.png)
+
++++
+
+![x](raster/2023-11-25T15-05-42.png)
+
++++
+
+![x](raster/2023-11-25T15-06-15.png)
+
++++ {"tags": []}
+
+### Exercise 7.67
+
++++
+
+![x](raster/2023-11-25T15-06-48.png)
+
++++
+
+![x](raster/2023-11-25T15-07-09.png)
+
++++
+
+![x](raster/2023-11-25T15-10-58.png)
+
++++ {"tags": []}
+
+### Exercise 7.68
+
++++
+
+![x](raster/2023-11-25T15-11-26.png)
+
++++
+
+![x](raster/2023-11-25T15-11-58.png)
+
 +++ {"tags": []}
 
 ## 7.4.5 Modalities
+
++++
+
+![x](raster/2023-11-25T15-14-28.png)
+
++++
+
+![x](raster/2023-11-25T15-14-50.png)
+
++++
+
+![x](raster/2023-11-25T15-15-22.png)
+
++++
+
+![x](raster/2023-11-25T15-15-53.png)
+
++++
+
+![x](raster/2023-11-25T15-16-19.png)
 
 +++ {"tags": []}
 
@@ -1005,7 +1359,19 @@ See also [Tangent bundle](https://en.wikipedia.org/wiki/Tangent_bundle).
 
 +++
 
+![x](raster/2023-11-25T15-25-15.png)
+
++++
+
 See also [Kripke semantics § Kripke–Joyal semantics](https://en.wikipedia.org/wiki/Kripke_semantics#Kripke%E2%80%93Joyal_semantics).
+
++++
+
+![x](raster/2023-11-25T15-24-55.png)
+
++++
+
+Example 7.74 seems to summarize 7.73 incorrectly, reversing s and t. Or is this part of the reversal that is part of defining a restriction? Start with the simple example provided in (3.2), and come up with two instances on it (S and T) then a natural transformation f between them. From this perspective it does make sense; there’s a surjective map from the table S(c) in S to the table T(c) in T.
 
 +++ {"tags": []}
 
