@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="73.651764mm"
+   height="51.991165mm"
+   viewBox="0 0 73.651764 51.991165"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.1 (1:1.3.1+202311172155+91b66b0783)"
+   sodipodi:docname="exercise-7-55.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="true"
+     inkscape:zoom="2.4161165"
+     inkscape:cx="205.28811"
+     inkscape:cy="203.83951"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       id="grid1"
+       units="px"
+       originx="-34.145834"
+       originy="-50.020835"
+       spacingx="0.26458333"
+       spacingy="0.26458334"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#0099e5"
+       opacity="0.14901961"
+       empspacing="5"
+       dotted="false"
+       gridanglex="30"
+       gridanglez="30"
+       visible="true" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1">
+    <marker
+       style="overflow:visible"
+       id="marker21"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Wide arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:none;stroke:context-stroke;stroke-width:1;stroke-linecap:butt"
+         d="M 3,-3 0,0 3,3"
+         transform="rotate(180,0.125,0)"
+         sodipodi:nodetypes="ccc"
+         id="path21" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker21_Fnone_S-3584e4"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Wide arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:none;stroke:#3584e4;stroke-width:1;stroke-linecap:butt"
+         d="M 3,-3 0,0 3,3"
+         transform="rotate(180,0.125,0)"
+         sodipodi:nodetypes="ccc"
+         id="path7" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker16"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Wide arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:none;stroke:context-stroke;stroke-width:1;stroke-linecap:butt"
+         d="M 3,-3 0,0 3,3"
+         transform="rotate(180,0.125,0)"
+         sodipodi:nodetypes="ccc"
+         id="path16" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker16_Fnone_S-000000"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Wide arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt"
+         d="M 3,-3 0,0 3,3"
+         transform="rotate(180,0.125,0)"
+         sodipodi:nodetypes="ccc"
+         id="path8" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="ArrowWide"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Wide arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:none;stroke:context-stroke;stroke-width:1;stroke-linecap:butt"
+         d="M 3,-3 0,0 3,3"
+         transform="rotate(180,0.125,0)"
+         sodipodi:nodetypes="ccc"
+         id="path3" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="ArrowWide_Fnone_S-000000"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Wide arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt"
+         d="M 3,-3 0,0 3,3"
+         transform="rotate(180,0.125,0)"
+         sodipodi:nodetypes="ccc"
+         id="path9" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-34.145834,-50.020836)">
+    <circle
+       style="fill:#000000;stroke:#000000;stroke-width:0.2;paint-order:stroke fill markers"
+       id="path1"
+       cx="43.65625"
+       cy="55.5625"
+       r="1" />
+    <circle
+       style="fill:#000000;stroke:#000000;stroke-width:0.2;paint-order:stroke fill markers"
+       id="circle1"
+       cx="43.65625"
+       cy="70.5625"
+       r="1" />
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;marker-end:url(#ArrowWide_Fnone_S-000000);stop-color:#000000;stop-opacity:1"
+       d="M 45.156249,57.708335 V 68.000002"
+       id="path2"
+       sodipodi:nodetypes="cc" />
+    <circle
+       style="fill:#000000;stroke:#000000;stroke-width:0.2;paint-order:stroke fill markers"
+       id="circle3"
+       cx="43.65625"
+       cy="85.5625"
+       r="1" />
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;marker-end:url(#ArrowWide_Fnone_S-000000);stop-color:#000000;stop-opacity:1"
+       d="M 43.656249,72.708335 V 83.000002"
+       id="path4"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4px;line-height:4.99999px;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;-inkscape-stroke:none;stop-color:#000000"
+       x="46.47916"
+       y="63.5"
+       id="text4"><tspan
+         sodipodi:role="line"
+         id="tspan4"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella';stroke-width:3.77952"
+         x="46.47916"
+         y="63.5">f</tspan></text>
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;marker-end:url(#ArrowWide_Fnone_S-000000);stop-color:#000000;stop-opacity:1"
+       d="M 42.437233,68.416586 V 58.124919"
+       id="path5"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4px;line-height:4.99999px;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;-inkscape-stroke:none;stop-color:#000000"
+       x="39.760143"
+       y="63.938034"
+       id="text5"><tspan
+         sodipodi:role="line"
+         id="tspan5"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella';stroke-width:3.77952"
+         x="39.760143"
+         y="63.938034">g</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4px;line-height:4.99999px;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;-inkscape-stroke:none;stop-color:#000000"
+       x="40.97916"
+       y="79"
+       id="text6"><tspan
+         sodipodi:role="line"
+         id="tspan6"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella';stroke-width:3.77952"
+         x="40.97916"
+         y="79">h</tspan></text>
+    <circle
+       style="fill:#000000;stroke:#000000;stroke-width:0.2;paint-order:stroke fill markers"
+       id="circle6"
+       cx="43.65625"
+       cy="100.5625"
+       r="1" />
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;marker-end:url(#ArrowWide_Fnone_S-000000);stop-color:#000000;stop-opacity:1"
+       d="M 43.656249,87.708335 V 98"
+       id="path6"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4px;line-height:4.99999px;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;-inkscape-stroke:none;stop-color:#000000"
+       x="44.47916"
+       y="94"
+       id="text7"><tspan
+         sodipodi:role="line"
+         id="tspan7"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella';stroke-width:3.77952"
+         x="44.47916"
+         y="94">i</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4px;line-height:4.99999px;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;-inkscape-stroke:none;stop-color:#000000"
+       x="38.869652"
+       y="56.5"
+       id="text8"><tspan
+         sodipodi:role="line"
+         id="tspan8"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella';stroke-width:3.77952"
+         x="38.869652"
+         y="56.5">A</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4px;line-height:4.99999px;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;-inkscape-stroke:none;stop-color:#000000"
+       x="38.97916"
+       y="71.938019"
+       id="text9"><tspan
+         sodipodi:role="line"
+         id="tspan9"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella';stroke-width:3.77952"
+         x="38.97916"
+         y="71.938019">B</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4px;line-height:4.99999px;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;-inkscape-stroke:none;stop-color:#000000"
+       x="38.869652"
+       y="86.719009"
+       id="text10"><tspan
+         sodipodi:role="line"
+         id="tspan10"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella';stroke-width:3.77952"
+         x="38.869652"
+         y="86.719009">C</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4px;line-height:4.99999px;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;-inkscape-stroke:none;stop-color:#000000"
+       x="38.47916"
+       y="102"
+       id="text11"><tspan
+         sodipodi:role="line"
+         id="tspan11"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella';stroke-width:3.77952"
+         x="38.47916"
+         y="102">D</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4px;line-height:4.99999px;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;-inkscape-stroke:none;stop-color:#000000"
+       x="85.369652"
+       y="89.740936"
+       id="text12"><tspan
+         sodipodi:role="line"
+         id="tspan12"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella';stroke-width:3.77952"
+         x="85.369652"
+         y="89.740936">0</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4px;line-height:4.99999px;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;-inkscape-stroke:none;stop-color:#000000"
+       x="85.369652"
+       y="64.724937"
+       id="text13"><tspan
+         sodipodi:role="line"
+         id="tspan13"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella';stroke-width:3.77952"
+         x="85.369652"
+         y="64.724937">V</tspan></text>
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;marker-end:url(#ArrowWide_Fnone_S-000000);stop-color:#000000;stop-opacity:1"
+       d="m 88.156249,85.780602 c 0,0 5.5,-6.272184 5.5,-9.895834 0,-3.623649 -4.5,-9.895833 -4.5,-9.895833"
+       id="path13"
+       sodipodi:nodetypes="csc" />
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;marker-end:url(#ArrowWide_Fnone_S-000000);stop-color:#000000;stop-opacity:1"
+       d="m 84.742338,65.745839 c 0,0 -4.5,6.272184 -4.5,9.895834 0,3.623649 4.5,9.895833 4.5,9.895833"
+       id="path14"
+       sodipodi:nodetypes="csc" />
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;marker-end:url(#marker16_Fnone_S-000000);stop-color:#000000;stop-opacity:1"
+       d="m 85.58333,90.488935 c 0,0 -2.138282,2.837492 -1.322917,3.96875 0.773523,1.073206 3.148345,1.037807 3.96875,0 0.736949,-0.932236 -0.65144,-3.687765 -0.65144,-3.687765"
+       id="path15"
+       sodipodi:nodetypes="cssc" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4px;line-height:4.99999px;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;-inkscape-stroke:none;stop-color:#000000"
+       x="79.869652"
+       y="98.988937"
+       id="text16"><tspan
+         sodipodi:role="line"
+         id="tspan16"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella';stroke-width:3.77952"
+         x="79.869652"
+         y="98.988937">(0,0; 0)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4px;line-height:4.99999px;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;-inkscape-stroke:none;stop-color:#000000"
+       x="94.869652"
+       y="76.988937"
+       id="text17"><tspan
+         sodipodi:role="line"
+         id="tspan17"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella';stroke-width:3.77952"
+         x="94.869652"
+         y="76.988937">(0,V; 0)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4px;line-height:4.99999px;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;-inkscape-stroke:none;stop-color:#000000"
+       x="66.369652"
+       y="76.988937"
+       id="text18"><tspan
+         sodipodi:role="line"
+         id="tspan18"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella';stroke-width:3.77952"
+         x="66.369652"
+         y="76.988937">(V,0; 0)</tspan></text>
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;marker-end:url(#marker16_Fnone_S-000000);stop-color:#000000;stop-opacity:1"
+       d="m 89.289401,64.054987 c 0,0 2.837492,2.138282 3.96875,1.322917 1.073206,-0.773523 1.037807,-3.148345 0,-3.96875 -0.932236,-0.736949 -3.687765,0.65144 -3.687765,0.65144"
+       id="path18"
+       sodipodi:nodetypes="cssc" />
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;marker-end:url(#marker16_Fnone_S-000000);stop-color:#000000;stop-opacity:1"
+       d="m 84.149382,62.282863 c 0,0 -2.837492,-2.138282 -3.96875,-1.322917 -1.073206,0.773523 -1.037807,3.148345 0,3.96875 0.932236,0.736949 3.687765,-0.65144 3.687765,-0.65144"
+       id="path19"
+       sodipodi:nodetypes="cssc" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4px;line-height:4.99999px;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;-inkscape-stroke:none;stop-color:#000000"
+       x="64.369652"
+       y="63.988937"
+       id="text19"><tspan
+         sodipodi:role="line"
+         id="tspan19"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella';stroke-width:3.77952"
+         x="64.369652"
+         y="63.988937">(V,V; A)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4px;line-height:4.99999px;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;-inkscape-stroke:none;stop-color:#000000"
+       x="94.869652"
+       y="63.988937"
+       id="text20"><tspan
+         sodipodi:role="line"
+         id="tspan20"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella';stroke-width:3.77952"
+         x="94.869652"
+         y="63.988937">(V,V; 0)</tspan></text>
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#3584e4;stroke-width:0.499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.999998, 0.499999;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;marker-end:url(#marker21_Fnone_S-3584e4);stop-color:#000000;stop-opacity:1"
+       d="m 40.833333,78.052085 h -6.4375 v -27.78125 h 67.145827 v 9.4375"
+       id="path20"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#3584e4;stroke-width:0.499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.999998, 0.499999;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;marker-end:url(#marker21_Fnone_S-3584e4);stop-color:#000000;stop-opacity:1"
+       d="m 39.333333,63.052085 h -4.9375 v -12.78125 h 67.145827 v 9.4375"
+       id="path22"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#3584e4;stroke-width:0.499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.999998, 0.499999;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;marker-end:url(#marker21_Fnone_S-3584e4);stop-color:#000000;stop-opacity:1"
+       d="m 45.786325,55.442311 h 41.145827 v 4.9375"
+       id="path23"
+       sodipodi:nodetypes="ccc" />
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#3584e4;stroke-width:0.499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.999998, 0.499999;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;marker-end:url(#marker21_Fnone_S-3584e4);stop-color:#000000;stop-opacity:1"
+       d="m 60.786325,55.442311 h 26.145827 v 4.9375"
+       id="path24"
+       sodipodi:nodetypes="ccc" />
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#3584e4;stroke-width:0.499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.999998, 0.499999;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;marker-end:url(#marker21_Fnone_S-3584e4);stop-color:#000000;stop-opacity:1"
+       d="m 45.786325,70.442311 h 4.5 v -15 h 36.645827 v 4.9375"
+       id="path25"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#3584e4;stroke-width:0.499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.999998, 0.499999;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;marker-end:url(#marker21_Fnone_S-3584e4);stop-color:#000000;stop-opacity:1"
+       d="m 45.786325,85.442311 h 4.5 v -30 h 36.645827 v 4.9375"
+       id="path26"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#3584e4;stroke-width:0.499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.999998, 0.499999;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;marker-end:url(#marker21_Fnone_S-3584e4);stop-color:#000000;stop-opacity:1"
+       d="m 45.786325,100.44231 h 31 V 88.442311 h 7.5"
+       id="path27"
+       sodipodi:nodetypes="cccc" />
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#3584e4;stroke-width:0.499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.999998, 0.499999;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;marker-end:url(#marker21_Fnone_S-3584e4);stop-color:#000000;stop-opacity:1"
+       d="m 46.067309,92.661326 h 12 V 75.98985 h 7.5"
+       id="path28"
+       sodipodi:nodetypes="cccc" />
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#3584e4;stroke-width:0.499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.999998, 0.499999;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;marker-end:url(#marker21_Fnone_S-3584e4);stop-color:#000000;stop-opacity:1"
+       d="m 48.286325,62.942311 h 0.645827 c 0,0 -0.471405,-1.528595 0,-2 0.707107,-0.707107 2.292893,-0.707107 3,0 0.471405,0.471405 0,2 0,2 h 12"
+       id="path29"
+       sodipodi:nodetypes="ccsscc" />
+  </g>
+</svg>

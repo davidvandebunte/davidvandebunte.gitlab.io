@@ -19,14 +19,12 @@ kernelspec:
 
 +++
 
-Category theory is ubiquitous in mathematics; it's difficult to read mathematical articles on Wikipedia without an understanding of the topic. See also [Mathematical subjects you wish you learned earlier - MSE](https://math.stackexchange.com/questions/213/mathematical-subjects-you-wish-you-learned-earlier).
+Category theory is ubiquitous in mathematics; it's difficult to read mathematical articles on Wikipedia without an understanding of the topic. See also [Mathematical subjects you wish you learned earlier - MSE](https://math.stackexchange.com/questions/213/mathematical-subjects-you-wish-you-learned-earlier). This may reflect the fact that more and more mathematicians are using category theory as a basis for mathematics rather than set theory; see [Topos § Elementary topoi (topoi in logic)](https://en.wikipedia.org/wiki/Topos#Elementary_topoi_(topoi_in_logic)) and [nLab](https://ncatlab.org/nlab/show/HomePage).
 
 Category theory is also fundamental to programming, and in particular to functional programming. See
 [Is Category Theory useful for learning functional programming? - CS
 SE](https://cs.stackexchange.com/questions/3028) and [Cats |
-Semigroup](https://www.scala-exercises.org/cats/semigroup).
-
-For the formal relationship between category theory and programming, see [Curry–Howard
+Semigroup](https://www.scala-exercises.org/cats/semigroup). For the formal relationship between category theory and programming, see [Curry–Howard
 correspondence](https://en.wikipedia.org/wiki/Curry%E2%80%93Howard_correspondence) and [Cartesian
 closed category](https://en.wikipedia.org/wiki/Cartesian_closed_category). These are at least partially addressed by the end of the book.
 
@@ -48,19 +46,33 @@ https://math.stackexchange.com/questions/tagged/category-theory)
 - [Highest scored 'category-theory' questions - Stack Overflow](
 https://stackoverflow.com/questions/tagged/category-theory)
 
++++
+
+What makes "Seven Sketches" stand out is that it is:
+1. Tied to Wikipedia
+2. Open source
+
++++
+
+### Tied to Wikipedia
+
++++
+
 Category theory is an old topic and shouldn't include much original research. You'll find most of this book's instructions have directly applicable or equivalent articles on Wikipedia; you'll likely eventually want to graduate to using only references (non-pedagogical resources) like Wikipedia and nLab. We'll assume the authors never inspected Wikipedia and that therefore there are no circular references if we cite it from these sites 😉.
+
+In the following (much longer) commentary on this book we'll provide links to the Wikipedia articles that most closely match the content that we are covering in the text. When the text does not provide a great explanation, these links can provide a second perspective.
 
 [azurl]: https://www.amazon.com/Invitation-Applied-Category-Theory-Compositionality/dp/1108711820/ref=sr_1_1?keywords=Invitation-Applied-Category-Theory-Compositionality&qid=1664376287&qu=eyJxc2MiOiIwLjYzIiwicXNhIjoiMC4wMCIsInFzcCI6IjAuMDAifQ%3D%3D&sr=8-1&ufe=app_do%3Aamzn1.fos.d977788f-1483-4f76-90a3-786e4cdc8f10
 
-% TODO: Add an Amazon review when you're done, good or bad. See [Amazon.com: SSC][azurl].
+% TODO: Add an Amazon review when you're done, good or bad. See [Amazon.com: 7S][azurl].
 
 +++
 
-### Open source PDF
+### Open source
 
 +++
 
-The PDF is open source. At the least, this makes it easy to search for content (e.g. latex macros). You could in theory pull only the source of a question out into some other context (perhaps next to your answer, to avoid the split attention effect).
+The PDF is open source and published on arXiv. At the least, this makes it easy to search for content (e.g. latex macros). You could in theory pull only the source of a question out into some other context (perhaps next to your answer, to avoid the split attention effect).
 
 Although there were many small errors (errata, grammar, etc.) in the original PDF, the advantage of open source is that these can not only be expressed to the authors, but fixed. See the latest pipeline in [Pipelines · applied-category-theory / seven-sketches · GitLab](https://gitlab.com/applied-category-theory/seven-sketches/-/pipelines) for a PDF with some of these kinds of errors fixed.
 
@@ -68,7 +80,7 @@ Even if you're not fixing errors, being able to build the PDF can be useful for 
 
 +++
 
-### Building the PDF
+#### Building the PDF
 
 +++
 
@@ -118,7 +130,7 @@ You could also just delete the comments in [Review "Seven-Sketches suggestions"]
 
 I'm also effectively maintaining a monotone map from the PDF to these html notes through chapter/section numbering, etc. You really have to take this approach with *any* read-only material that you need to edit: everything must be an annotation. In this case, neither the original PDF nor [Seven-Sketches suggestions][ssce] are completely read-only, but we don't want to heavily edit either. You also don't want to look for annotations in two places (in other reader's commentary and your own) so you move their commentary to your own. As is the case for many issues in [Seven-Sketches suggestions][ssce], you may not even want to pull in all other commentary.
 
-Commentary in the errata that didn't bother you, didn't seem to be worth copying, or that you didn't understand and therefore ignored, can be highlighted blue. Commentary that you haven't decided what to do with can remain black with a strikethrough.
+Commentary in the errata that didn't bother you, didn't seem to be worth copying, or that you didn't understand and therefore ignored, can be highlighted light blue (not light cornflower blue). Commentary that you haven't decided what to do with can remain black with a strikethrough.
 
 +++
 

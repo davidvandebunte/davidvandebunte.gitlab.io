@@ -43,7 +43,7 @@ Russell's analysis in forallx looks related to unique objects; see [Chapter 28](
 
 +++
 
-### Exercise 6.7
+### Exercise 6.7²
 
 +++
 
@@ -169,7 +169,7 @@ See also [Topos](https://en.wikipedia.org/wiki/Topos).
 
 +++ {"tags": []}
 
-### Exercise 7.4
+### Exercise 7.4²
 
 +++
 
@@ -231,7 +231,7 @@ Let's call C/Z the vertex of the monomorphism $f$ (being the vertex of the assoc
 
 +++ {"tags": []}
 
-### Exercise 7.6
+### Exercise 7.6²
 
 +++
 
@@ -255,7 +255,7 @@ In the first equation above, we treat $a$ and $b$ as objects. In the second we m
 
 +++ {"tags": []}
 
-### Exercise 7.7
+### Exercise 7.7²
 
 +++
 
@@ -328,7 +328,7 @@ The morphism $n$ is clearly a candidate because it exists and satisfies the two 
 
 +++ {"tags": []}
 
-### Exercise 7.8
+### Exercise 7.8²
 
 +++
 
@@ -377,14 +377,11 @@ See also [Isomorphism theorems § Discussion](https://en.wikipedia.org/wiki/Isom
 
 ![x](raster/2023-09-13T00-25-45.png)
 
-+++
+```{code-cell} ipython3
+:tags: [hide-output]
 
-```{admonition} Reveal 7S answer
-:class: dropdown
-![x](raster/2023-09-13T16-30-42.png)
+Image('raster/2023-09-13T16-30-42.png', metadata={'description': "7S answer"})
 ```
-
-+++
 
 ![x](raster/2023-09-13T00-26-17.png)
 
@@ -402,7 +399,7 @@ See also [Cartesian closed category](https://en.wikipedia.org/wiki/Cartesian_clo
 
 +++ {"tags": []}
 
-### Exercise 7.11
+### Exercise 7.11²
 
 +++
 
@@ -416,7 +413,7 @@ $$
 A∧C ≤ D ≅ A ≤ D⊸C
 $$
 
-Why? We replace × with ∧ by Exercise 3.88 (that is, the categorial product in a preorder is the meet). We replace instances of 𝒞(X,Y) with $X ≤ Y$ because the hom-set in a preorder is a hom-element, namely a boolean, which is produced by the ≤ relation. We assume the internal hom-element operator $⊸$ is the operator that will be right adjoint to the categorical product ∧, but must show that as part of this proof.
+Why? We replace × with ∧ by Exercise 3.88 (that is, the categorical product in a preorder is the meet). We replace instances of 𝒞(X,Y) with $X ≤ Y$ because the hom-set in a preorder is a hom-element, namely a boolean, which is produced by the ≤ relation. We assume the internal hom-element operator $⊸$ is the operator that will be right adjoint to the categorical product ∧, but must show that as part of this proof.
 
 See something similar in Equation (2.80).
 
@@ -454,10 +451,6 @@ See also [Subobject classifier](https://en.wikipedia.org/wiki/Subobject_classifi
 
 +++
 
-![x](raster/2023-09-13T00-31-35.png)
-
-+++
-
 ![x](raster/2023-09-13T00-39-56.png)
 
 +++ {"tags": []}
@@ -476,11 +469,10 @@ See also [Subobject classifier](https://en.wikipedia.org/wiki/Subobject_classifi
 
 ![x](raster/2023-09-13T00-45-10.png)
 
-+++
+```{code-cell} ipython3
+:tags: [hide-output]
 
-```{admonition} Reveal 7S answer
-:class: dropdown
-![x](raster/2023-10-24T14-26-59.png)
+Image('raster/2023-10-24T14-26-59.png', metadata={'description': "7S answer"})
 ```
 
 +++ {"tags": []}
@@ -491,11 +483,10 @@ See also [Subobject classifier](https://en.wikipedia.org/wiki/Subobject_classifi
 
 ![x](raster/2023-09-13T00-47-00.png)
 
-+++
+```{code-cell} ipython3
+:tags: [hide-output]
 
-```{admonition} Reveal 7S answer
-:class: dropdown
-![x](raster/2023-10-24T14-38-05.png)
+Image('raster/2023-10-24T14-38-05.png', metadata={'description': "7S answer"})
 ```
 
 +++ {"tags": []}
@@ -522,11 +513,10 @@ See also [Subobject classifier](https://en.wikipedia.org/wiki/Subobject_classifi
 
 ![x](raster/2023-10-24T15-16-14.png)
 
-+++
+```{code-cell} ipython3
+:tags: [hide-output]
 
-```{admonition} Reveal 7S answer
-:class: dropdown
-![x](raster/2023-10-24T18-27-50.png)
+Image('raster/2023-10-24T18-27-50.png', metadata={'description': "7S answer"})
 ```
 
 +++ {"tags": []}
@@ -537,11 +527,10 @@ See also [Subobject classifier](https://en.wikipedia.org/wiki/Subobject_classifi
 
 ![x](raster/2023-10-24T15-16-42.png)
 
-+++
+```{code-cell} ipython3
+:tags: [hide-output]
 
-```{admonition} Reveal 7S answer
-:class: dropdown
-![x](raster/2023-10-24T19-02-36.png)
+Image('raster/2023-10-24T19-02-36.png', metadata={'description': "7S answer"})
 ```
 
 +++ {"tags": []}
@@ -552,11 +541,10 @@ See also [Subobject classifier](https://en.wikipedia.org/wiki/Subobject_classifi
 
 ![x](raster/2023-10-24T15-17-27.png)
 
-+++
+```{code-cell} ipython3
+:tags: [hide-output]
 
-```{admonition} Reveal 7S answer
-:class: dropdown
-![x](raster/2023-10-24T19-07-16.png)
+Image('raster/2023-10-24T19-07-16.png', metadata={'description': "7S answer"})
 ```
 
 +++ {"tags": []}
@@ -579,6 +567,10 @@ See also [Subobject classifier](https://en.wikipedia.org/wiki/Subobject_classifi
 
 ![x](raster/2023-10-24T17-52-59.png)
 
++++
+
+See also [Grothendieck topology](https://en.wikipedia.org/wiki/Grothendieck_topology). A site is defined on the same page, best linked to as [Site (mathematics)](https://en.wikipedia.org/wiki/Grothendieck_topology) (a redirect). The link [Grothendieck site](https://en.wikipedia.org/wiki/Grothendieck_topology) again goes to the same page.
+
 +++ {"tags": []}
 
 ## 7.3.1 Presheaves
@@ -597,19 +589,25 @@ See also [Subobject classifier](https://en.wikipedia.org/wiki/Subobject_classifi
 
 +++ {"tags": []}
 
-### Define presheaf <!-- define-presheaf -->
+### Define "set presheaf"
 
 +++
 
-See also [Presheaf (category theory)](https://en.wikipedia.org/wiki/Presheaf_(category_theory)) and the "Presheaves" subsection of [Sheaf (mathematics) § Presheaves](https://en.wikipedia.org/wiki/Sheaf_(mathematics)#Presheaves).
+The same definition is presented in [Presheaf (category theory)](https://en.wikipedia.org/wiki/Presheaf_(category_theory)). We're defining a "presheaf" here as a functor to set, so in the language of [Sheaf (mathematics)](https://en.wikipedia.org/wiki/Sheaf_(mathematics)) we would call these "sheaves of sets" (and "set presheaf" on an individual basis). The author uses the notation $s|_f$ following [Restriction (mathematics)](https://en.wikipedia.org/wiki/Restriction_(mathematics).
+
+See also comments on this topic in [Sheaf (mathematics) § Presheaves](https://en.wikipedia.org/wiki/Sheaf_(mathematics)#Presheaves); the notation $s|_f$ is used by analogy with the more general concept of restriction of functions even for non-set presheaves. Here the author uses the more general term "restriction map" (equivalent to "restriction morphism"), despite the fact that the unadorned term "restriction" would have communicated enough: these maps/morphisms are only functions (because these are set presheaves).
 
 +++ {"tags": []}
 
-### Define "restriction morphism" <!-- define-restriction-morphism -->
+### Define "contravariant functor"
 
 +++
 
-The author uses the notation $s|_f$ by analogy with the more general concept of restriction of functions (see [Restriction (mathematics)](https://en.wikipedia.org/wiki/Restriction_(mathematics)). See also comments on this topic in [Sheaf (mathematics) § Presheaves](https://en.wikipedia.org/wiki/Sheaf_(mathematics)#Presheaves). The author sometimes uses the term "restriction" when he means the more general term "restriction morphism" (or "restriction map").
+We referred to the "Presheaves" subsection of [Sheaf (mathematics) § Presheaves](https://en.wikipedia.org/wiki/Sheaf_(mathematics)#Presheaves) above in several places, but the definition presented in it is *not* the same as the one presented in [Presheaf (category theory)](https://en.wikipedia.org/wiki/Presheaf_(category_theory)). As noted in the first paragraph of the latter, a [Sheaf (mathematics) § Presheaves](https://en.wikipedia.org/wiki/Sheaf_(mathematics)#Presheaves) is a [Presheaf (category theory)](https://en.wikipedia.org/wiki/Presheaf_(category_theory)) where the category $C$ is the poset of open sets in a topological space (a concept that isn't presented here until the paragraph starting **The open sets of a topological space form a preorder.**).
+
+We'll use the adjective "categorical" with [Presheaf (category theory)](https://en.wikipedia.org/wiki/Presheaf_(category_theory)) and the unadorned "presheaf" for [Presheaf (category theory)](https://en.wikipedia.org/wiki/Presheaf_(category_theory)) (or "topological presheaf" if necessary). Notice the term "categorical set presheaf" also makes sense, but a "topological presheaf" seems to almost be defined as a "topological set presheaf" so much so that it is called a "presheaf of sets" in [Sheaf (mathematics)](https://en.wikipedia.org/wiki/Sheaf_(mathematics)). This terminology suggests that a presheaf can be seen as a collection of sets i.e. that when say "sheaf" we mean to imply that we don't know what we are reaping (yet).
+
+Notice that in Chp 3 the author defines a database instance on a category $C$ as a functor from $C$ to **Set**. That means that technically his definition of a database instance corresponds to a presheaf on $C^{op}$, so that when you take the double-opposite you get back the definition of a database instance as a functor from $C$ to **Set**. All this opposite nonsense needs to be tracked rather than ignored, however. A synonym for "presheaf" is [Contravariant functor](https://en.wikipedia.org/wiki/Functor#Covariance_and_contravariance), as discussed in [Topos § Equivalent definitions](https://en.wikipedia.org/wiki/Topos#Equivalent_definitions). In fact this is actually the preferred language for [Presheaf (category theory)](https://en.wikipedia.org/wiki/Presheaf_(category_theory)), being more common, except when trying to make analogies to topology.
 
 +++ {"tags": []}
 
@@ -619,9 +617,17 @@ The author uses the notation $s|_f$ by analogy with the more general concept of 
 
 ![x](raster/2023-10-24T17-58-06.png)
 
++++ {"tags": []}
+
+### Trivial covering
+
 +++
 
 ![x](raster/2023-10-24T18-00-25.png)
+
++++
+
+It seems the author is trying to define a different definition of covering here than e.g. the one used in [Cover (topology)](https://en.wikipedia.org/wiki/Cover_(topology)#open_cover). This may be a bit confusing if you're used to the original term.
 
 +++ {"tags": []}
 
@@ -648,6 +654,8 @@ The author uses the notation $s|_f$ by analogy with the more general concept of 
 ### Define "topological space" <!-- define-topological-space -->
 
 +++
+
+Why do many writers use $U$ for an open set? The word "open" doesn't have a $U$ in it anywhere. It may be that $U$ is just the second letter of s**u**bset.
 
 Why does the author use **Op** for a topology? It might initially look short for "top" (without the t), but is more likely short for **Op**en as in open sets. Compare these definitions to the definitions in [Topological space § Definition via open sets](https://en.wikipedia.org/wiki/Topological_space#Definition_via_open_sets) (and [Open set](https://en.wikipedia.org/wiki/Open_set)).
 
@@ -784,11 +792,10 @@ See also [Ball (mathematics)](https://en.wikipedia.org/wiki/Ball_(mathematics)).
 
 ![x](raster/2023-10-24T18-14-41.png)
 
-+++
+```{code-cell} ipython3
+:tags: [hide-output]
 
-```{admonition} Reveal 7S answer
-:class: dropdown
-![x](raster/2023-10-24T19-25-47.png)
+Image('raster/2023-10-24T19-25-47.png', metadata={'description': "7S answer"})
 ```
 
 +++ {"tags": []}
@@ -807,11 +814,10 @@ See also [Ball (mathematics)](https://en.wikipedia.org/wiki/Ball_(mathematics)).
 
 ![x](raster/2023-10-24T18-15-33.png)
 
-+++
+```{code-cell} ipython3
+:tags: [hide-output]
 
-```{admonition} Reveal 7S answer
-:class: dropdown
-![x](raster/2023-10-25T21-51-47.png)
+Image('raster/2023-10-25T21-51-47.png', metadata={'description': "7S answer"})
 ```
 
 +++ {"tags": []}
@@ -836,6 +842,16 @@ Compare to [Sierpiński space](https://en.wikipedia.org/wiki/Sierpi%C5%84ski_spa
 
 +++ {"tags": []}
 
+### The open sets poset
+
++++
+
+Per [Finite topological space](https://en.wikipedia.org/wiki/Finite_topological_space#0_or_1_points), a topology on a finite set can be thought of as a sublattice of the power set of $X$ that always includes the top/bottom element. Additionally, the first sentence of [Presheaf (category theory)](https://en.wikipedia.org/wiki/Presheaf_(category_theory)) refers to this structure as the "poset" of open sets rather than the preorder.
+
+Both of these statements imply that this is actually a poset rather than just a preorder (preordered set).
+
++++ {"tags": []}
+
 ### Specialization (pre)order
 
 +++
@@ -843,14 +859,6 @@ Compare to [Sierpiński space](https://en.wikipedia.org/wiki/Sierpi%C5%84ski_spa
 See [Specialization (pre)order](https://en.wikipedia.org/wiki/Specialization_(pre)order) and [specialization order](https://ncatlab.org/nlab/show/specialization+order). This is *not* the concept we're talking about here; this is defined on the objects of a set X rather than the subsets of a set X. For example, compare the specialization order on the Sierpinski space in [Specialization (pre)order § Examples](https://en.wikipedia.org/wiki/Specialization_(pre)order#Examples) to the Hasse diagram you eventually produce in Exercise 7.31.
 
 The Sierpinski space defined by the open sets {∅, {1}, {0,1}} is defined by the closed sets {∅, {0}, {0,1}} (the complements of the open sets). Therefore the closure of {0} is {0} and the closure of {1} is {0,1}, leading to the conclusion that the specialization preorder of the Sierpinski space is the natural one (0 ≤ 0, 0 ≤ 1, and 1 ≤ 1).
-
-+++
-
-Consider the following adjoint pair, with the closure operator in blue and the interior operator in red. These are *not* an adjoint pair (take $p = q = \{1\}$) despite these operators being "dual" to each other:
-
-+++
-
-![x](sierpinski-closure-interior.svg)
 
 +++ {"tags": []}
 
@@ -860,11 +868,10 @@ Consider the following adjoint pair, with the closure operator in blue and the i
 
 ![x](raster/2023-10-24T18-19-50.png)
 
-+++
+```{code-cell} ipython3
+:tags: [hide-output]
 
-```{admonition} Reveal 7S answer
-:class: dropdown
-![x](raster/2023-10-24T19-45-50.png)
+Image('raster/2023-10-24T19-45-50.png', metadata={'description': "7S answer"})
 ```
 
 +++ {"tags": []}
@@ -899,20 +906,17 @@ To show that we have arbitrary unions, we must show that given $I$ as a set wher
 
 For part `3.` we must show that for every $B ∈ \bf{Op}$, the preimage $f^{-1}(B) ∈ \bf{Op}_{?∩Y}$. An inclusion function maps each element y ∈ Y to the same element x ∈ X in the larger set, so there should always be some open set $A = B ∩ Y ∈ \bf{Op}_{?∩Y}$ that has all the same elements as $B$. That is, the preimage $f^{-1}(B)$ of an inclusion map is all the same elements as $B$ but in another set $A ∈ Y$.
 
-+++
+```{code-cell} ipython3
+:tags: [hide-output]
 
-```{admonition} Reveal 7S answer
-:class: dropdown
-![x](raster/2023-10-26T17-53-08.png)
+Image('raster/2023-10-26T17-53-08.png', metadata={'description': "7S answer"})
 ```
-
-+++
 
 See also [Subspace topology](https://en.wikipedia.org/wiki/Subspace_topology).
 
 +++ {"tags": []}
 
-### Exercise 7.34
+### Exercise 7.34²
 
 +++
 
@@ -927,6 +931,8 @@ See also [Subspace topology](https://en.wikipedia.org/wiki/Subspace_topology).
 This question seems related to Exercise 2.62 in particular (which effectively considers the discrete topology). Exercise 7.34 is similar to 2.62, just with a subset of the power set. So you can't connect two nodes by just anything, but only by an open set i.e. a measure of connectedness. So this restricts connections to those allowed by the topological space.
 
 It will likely help to work from an example in [Finite topological space](https://en.wikipedia.org/wiki/Finite_topological_space).
+
+A topological space has all intersections and all unions. Is this the same as saying it has all meets and all joins? And that it has all finite limits and colimits? Or is a complete lattice? How many of these things are the exact same? Isn't a quantale defined in the same way, by having all joins?
 
 +++ {"tags": []}
 
@@ -950,11 +956,23 @@ It will likely help to work from an example in [Finite topological space](https:
 
 +++ {"tags": []}
 
-### Define sheaf
+### Define "categorical sheaf"
 
 +++
 
-See also [Sheaf (mathematics)](https://en.wikipedia.org/wiki/Sheaf_(mathematics)).
+See also [Sheaf (mathematics)](https://en.wikipedia.org/wiki/Sheaf_(mathematics)). See [sheaf - Wiktionary](https://en.wiktionary.org/wiki/sheaf) for the implied visualization; the term "sheaf" comes from archery where it is a collection of arrows (usually twenty four). The website [quiver](https://q.uiver.app/) has a similarly creative name. We're taking "arrows" here to mean every association of an object/morphism to a different object/morphism by a functor. We can optionally visualize it as a traditional sheaf, i.e. as many stalks of grain (see [Stalk (sheaf)](https://en.wikipedia.org/wiki/Stalk_(sheaf))) if we care less about direction. A categorical presheaf ([Presheaf (category theory)](https://en.wikipedia.org/wiki/Presheaf_(category_theory))) is nothing more than a synonym for a functor, but we're now talking about a [Sheaf (mathematics)](https://en.wikipedia.org/wiki/Sheaf_(mathematics)) since we're in the context of topology.
+
+A sheaf is more than a synonym for a functor; it's a functor with special properties (certain requirements).
+
+A collection of arrows makes a functor/presheaf, and a collection of functors/presheaves makes a category (a functor category). We're just defining a lot of synonyms again, so far. A functor/presheaf is not necessarily a sheaf, however, so we need a new name for a collection of sheaves: a [Topos](https://en.wikipedia.org/wiki/Topos) (which is a functor category with special functors).
+
+It may be easier to read many of these definitions if you move the "for all" before before the requirement (especially if you have a computer science background). At the least, this is a good way to reread them. For example, in the locality axiom replace:
+
+> If $s|_{ U_i} = t|_{ U_i}$ for all $i \in I$, then $s = t$.
+
+With:
+
+> If for all $i \in I$: $s|_{ U_i} = t|_{ U_i}$, then $s = t$.
 
 +++ {"tags": []}
 
@@ -970,10 +988,6 @@ See also [Sheaf (mathematics)](https://en.wikipedia.org/wiki/Sheaf_(mathematics)
 
 +++
 
-Consider a section as a possible world, so a set of sections is a set of possible worlds. Different sheaves then represent different sets of possible worlds (for the same open set). Perhaps each part of a section is an aspect of a possible world (each person is an aspect of the world in S). This fits an instance of a database being a possible world.
-
-+++
-
 ![x](raster/2023-10-25T14-08-10.png)
 
 +++
@@ -984,6 +998,12 @@ Consider a section as a possible world, so a set of sections is a set of possibl
 
 ![x](raster/2023-10-25T14-09-24.png)
 
++++
+
+The author is using the term "fiber" here in the same way it is defined in [Fiber (mathematics)](https://en.wikipedia.org/wiki/Fiber_(mathematics)). The article [Fiber bundle](https://en.wikipedia.org/wiki/Fiber_bundle) uses it in a different but related way; it would call $B$ what is called $Y$ here and the "fiber" $F$ what is called $X$ here.
+
+How are we going to get "sections" on a function, when sections are defined on a functor (presheaf)? The title of this section is a bit of a misnomer (or "abuse of language"). The author doesn't introduce his strategy until later: he'll first convert the sets $X$ and $Y$ to topologies (the discrete topology), then he'll take the open set preorder of each, then he'll define a categorical presheaf between those (a topological presheaf in this topological context). Confusingly this functor $Sec$ is not the same as the $f$ initially introduced, that is, we are not taking the sections of $f$ but of a map in the opposite direction.
+
 +++ {"tags": []}
 
 ### Exercise 7.38
@@ -992,20 +1012,59 @@ Consider a section as a possible world, so a set of sections is a set of possibl
 
 ![x](raster/2023-10-25T14-09-04.png)
 
-+++
+```{code-cell} ipython3
+:tags: [hide-output]
 
-```{admonition} Reveal 7S answer
-:class: dropdown
-![x](raster/2023-10-25T15-10-37.png)
+Image('raster/2023-10-25T15-10-37.png', metadata={'description': "7S answer"})
 ```
-
-+++
 
 ![x](raster/2023-10-25T14-29-43.png)
 
 +++
 
+Notice how the equation above shows that $s$ is a right inverse to $f$ as discussed in [Section (category theory)](https://en.wikipedia.org/wiki/Section_(category_theory)).
+
++++
+
+### Define section
+
++++
+
+See [Section (fiber bundle)](https://en.wikipedia.org/wiki/Section_(fiber_bundle)) for nearly the same definition. The author's definition replaces σ → s and π → f. That is, the Wikipedia article uses **s**igma for the section and **p**i for the projection function. The author also defines not just one section, but a set of sections $Sec_f(U)$ for each $U$.
+
+The author of this drawing replaces σ → s and π → p:
+
++++
+
+![x](https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Bundle_section.svg/187px-Bundle_section.svg.png)
+
++++
+
 ![x](raster/2023-10-25T14-33-22.png)
+
++++
+
+See [Cross section (geometry)](https://en.wikipedia.org/wiki/Cross_section_(geometry)) for the author's implied visualization/intuition for the word "section" in this context.
+
+You can also see a section as a possible world, so that a set of sections is a set of possible worlds for the subworld defined by $U$. Different sheaves or presheaves then represent different sets of possible worlds (for the same open set). Look at the mapping of each element of a section as an aspect of a possible world; we consider them independent but not identically distributed. This interpretation fits the interpretation of an instance of a database being a possible world; the data we collected could have been different in a different world. From the start of Chp. 7:
+
+> Technically, a sheaf is a certain sort of functor, but one can imagine it as a space of possibilities, varying in a controlled way ...
+
+In the introduction to [Section (fiber bundle)](https://en.wikipedia.org/wiki/Section_(fiber_bundle)) they describe how an individual section can be seen as an abstract characterization of a graph. From this perspective, the set of sections over $U$ is the set of all possible graphs the sheaf/presheaf allows:
+
++++
+
+![x](sections-as-graphs.svg)
+
++++
+
+The author defines $Sec$ as a section in the sense of [Section (fiber bundle)](https://en.wikipedia.org/wiki/Section_(fiber_bundle)). This terminology may be a bit confusing, because a [Section (fiber bundle)](https://en.wikipedia.org/wiki/Section_(fiber_bundle)) can always go into defining a sheaf. A section as defined in [Sheaf (mathematics) § Presheaves](https://en.wikipedia.org/wiki/Sheaf_(mathematics)#Presheaves) will usually not. These could almost be called a "presection" or "categorical section" to indicate they haven't passed the required tests to be a section in the original sense of the word (when it was only used in topology).
+
+Even more confusingly, a categorical section is an element of a set, rather than a function (as a topological section is). But, you can see a topological section as the set of 2-tuples that define a function (as a [Binary relation](https://en.wikipedia.org/wiki/Binary_relation)). For example, we could represent $s_4$ above as $\{(a,2),(b,1)\}$ or $((a,2),(b,1))$. A set of sections over $U$ would then be a set of sets, where each member set in this example has two 2-tuples.
+
+You can see a categorical section as a member of a set, so we would represent $s_4$ above as $((a,2),(b,1))$ ∈ (2⊕3)×(2⊕3) = $Sec_f(\{a,b\})$. Notice that we're using ⊕ in the previous equation for the [Coproduct](https://en.wikipedia.org/wiki/Coproduct) or [Disjoint union](https://en.wikipedia.org/wiki/Disjoint_union). However, given the context that we're working in, we can drastically compress this representation to $(2,1)$ or $(a_2,b_1)$ ∈ 2×3 = $Sec_f(\{a,b\})$.
+
+We recover the six sections in this example indirectly by defining the restriction morphisms. The restriction map from $Sec_f(\{a,b\})$ to $Sec_f(\{a\})$ defines half of each of these six functions, and the restriction map from $Sec_f(\{a,b\})$ to $Sec_f(\{b\})$ defines the other half. In some sense there are morphisms in the opposite direction for how to "glue" sections together, but these are not part of the definition.
 
 +++ {"tags": []}
 
@@ -1043,6 +1102,12 @@ Image('raster/2023-10-25T15-57-47.png', metadata={'description': "7S answer"})
 
 ![x](raster/2023-10-25T17-29-35.png)
 
++++
+
+See also [Gluing axiom](https://en.wikipedia.org/wiki/Gluing_axiom). The author's Definition 7.35 initially defines a gluing in passive terms; it's something that might exist for a matching family and if it does we have a name for it. He then defines the sheaf condition in terms of a unique gluing always existing for every open cover.
+
+In contrast, the article [Sheaf (mathematics) § Sheaves](https://en.wikipedia.org/wiki/Sheaf_(mathematics)#Sheaves) directly states that a gluing must exist for every open cover in the second of two axioms. It provides a second axiom (the first of the two axioms) to guarantee that it is unique. The advantage of separate axioms is apparently to be able to make it clear how some presheaves satisfy only one or the other.
+
 +++ {"tags": []}
 
 ### Exercise 7.44
@@ -1059,6 +1124,28 @@ Image('raster/2023-10-25T17-33-44.png', metadata={'description': "7S answer"})
 
 +++ {"tags": []}
 
+### Non-sheaf examples
+
++++
+
+Some (relatively) simple examples of non-sheaves are provided in [Constant sheaf § A detailed example](https://en.wikipedia.org/wiki/Constant_sheaf#A_detailed_example). In the first example presheaf $F$ we fail to satisfy the locality axiom because if $U = ∅$ then the categorical sections $F(U)$ are elements of ℤ i.e. integers. The statement $s|_{ U_i} = t|_{ U_i}$ for all $i \in I$ will always be true when $I$ is empty, but we can choose $s,t$ to be any integers. You can't assume any two random integers are equal.
+
+In the second example presheaf $G$ of [Constant sheaf § A detailed example](https://en.wikipedia.org/wiki/Constant_sheaf#A_detailed_example), we cannot map the restriction maps correctly to satisfy the gluing axiom given our mapping of the objects. In particular, consider the open cover $\{\{p\},\{q\}\}$ of $U = \{p,q\}$. The intersection $U_i ∩ U_j$ of these two open sets is the empty set, and the restriction of any section will be the one element in a one-element set, so it is a "matching family" in the terminology of 7S. Does there exist a unique section  $s ∈ F(U) = ℤ$ such that for all $i ∈ I$ we have $s|_{U_i} = s_i$? Take $s_1 = 7$ over $U_1 = \{p\}$ and $s_2 = 5$ over $U_2 = \{q\}$. Because $res_{\{p\},\{p,q\}} = id$ we have $res_{\{p\},\{p,q\}}(s) = s|_{\{p\}} = s = s_1 = 7 ≠ s|_{\{q\}} = s_2 = 5$, we will not be able to find such a unique $s$.
+
+See [Talk:Constant sheaf § Coproduct vs categorical product](https://en.wikipedia.org/wiki/Talk:Constant_sheaf#c-Davidvandebunte-20231206182000-Coproduct_vs_categorical_product) for some comments on the example presheaf $H$ of this example.
+
+We could come up with another non-sheaf example, which we'll call $K$. See [this quiver drawing](https://q.uiver.app/#q=WzAsNCxbMiwwLCJLKOKIhSk9MCJdLFswLDIsIksoXFx7cFxcfSk94oSkIl0sWzQsMiwiSyhcXHtxXFx9KT3ihKQiXSxbMiw0LCJLKFxce3AscVxcfSk94oSkw5fihKTDl+KEpCJdLFsyLDAsIjAiXSxbMSwwLCIwIiwyXSxbMywyLCLPgF8yIl0sWzMsMSwiz4BfMSIsMl1d), repeated here:
+
++++
+
+![x](raster/2023-12-07T16-28-12.png)
+
++++
+
+This example passes the gluing axiom, but the gluing is not unique. That is, it fails locality/uniqueness axiom for the open cover $\{\{p\},\{q\}\}$ (though it does not fail it for the open cover $\{\{p,q\}\}$).
+
++++ {"tags": []}
+
 ### Other examples of sheaves
 
 +++
@@ -1071,7 +1158,19 @@ Image('raster/2023-10-25T17-33-44.png', metadata={'description': "7S answer"})
 
 +++
 
+See [Sheaf (mathematics) § Sheaf of sections of a continuous map](https://en.wikipedia.org/wiki/Sheaf_(mathematics)#Sheaf_of_sections_of_a_continuous_map), which demonstrates that $s$ is a right inverse and links to [Section (category theory)](https://en.wikipedia.org/wiki/Section_(category_theory)).
+
++++
+
 ![x](raster/2023-10-25T17-49-28.png)
+
++++
+
+See nearly the same discussion in [Vector field § Vector fields on manifolds](https://en.wikipedia.org/wiki/Vector_field#Vector_fields_on_manifolds).
+
+When the author says "agree around the border" think of the sheaf condition's requirement that open sets agree on their overlap. You could define a presheaf by putting together disagreeing pieces, but not a sheaf.
+
+In the last sentence of the first paragraph the author appeals to the possible worlds interpretation. The cowlick example could also be described in terms of possible worlds.
 
 +++ {"tags": []}
 
@@ -1079,7 +1178,7 @@ Image('raster/2023-10-25T17-33-44.png', metadata={'description': "7S answer"})
 
 +++
 
-See also [Tangent bundle](https://en.wikipedia.org/wiki/Tangent_bundle); not to be confused with [Bundle (geometry)](https://en.wikipedia.org/wiki/Bundle_(geometry)).
+See also [Tangent bundle](https://en.wikipedia.org/wiki/Tangent_bundle); not to be confused with [Bundle (geometry)](https://en.wikipedia.org/wiki/Bundle_(geometry)). A tangent bundle is a special case of [Fiber bundle](https://en.wikipedia.org/wiki/Fiber_bundle). Another kind of fiber bundle is a [Vector bundle](https://en.wikipedia.org/wiki/Vector_bundle).
 
 +++ {"tags": []}
 
@@ -1088,6 +1187,18 @@ See also [Tangent bundle](https://en.wikipedia.org/wiki/Tangent_bundle); not to 
 +++
 
 ![x](raster/2023-10-25T17-55-44.png)
+
++++
+
+There is not a one-to-one correspondence; every sheaf defines a set of possible vector fields. Each vector field is a section, that is, a particular possible world in all the possible worlds defined by the sheaf.
+
+The category of sheaves on M is then a category of different sets of sets of possible worlds. That is, in one sheaf we may allow for certain vector fields, but in another we will not.
+
+```{code-cell} ipython3
+:tags: [hide-output]
+
+Image('raster/2023-12-07T18-12-51.png', metadata={'description': "7S answer"})
+```
 
 +++ {"tags": []}
 
@@ -1099,7 +1210,19 @@ See also [Tangent bundle](https://en.wikipedia.org/wiki/Tangent_bundle); not to 
 
 +++
 
-For 7.48 and 7.49 the sheaf condition is vacuously satisfied because there are no covers. There is also a simple selection for the function for the empty set based on 7.36. The nonempty set can map to any set, so that the category of all presheaves are all sets. Perhaps the morphisms between sheaves are then functions, or at least some function and a trivial function between initial objects. What is the restriction map for every sheaf? It looks like it's the constant function to the initial object.
+The category $\bf{Op}$ is $∅ → \{1\}$; to make it clear the one arrow is an inclusion morphism it could be drawn $∅ ⊆ \{1\}$. The category $\bf{Op}^{op}$ is $\{1\} → ∅$ or $\{1\} ⊇ ∅$.
+
+See [Finite topological space § 0 or 1 points](https://en.wikipedia.org/wiki/Finite_topological_space#0_or_1_points) for a discussion of this space. The one arrow in $\bf{Op}$ is the empty function, and the one arrow in $\bf{Op}^{op}$ is the constant function.
+
+To define a sheaf for **Op** we can map the empty set to the empty tuple, as described in Example 7.36 (the terminal object in **Set**). The nonempty set can map to any set, so that the category of all presheaves are all sets. That is, every presheaf picks out one set.
+
+The morphisms (natural transformations) between sheaves are then a pair of functions. The first of the two functions is always the identity function on the initial object (rather uninteresting). The second morphism (the second component of the natural transformation) is any function, however. So ignoring the identity function on the initial object, we can see every morphism in this category of presheaves as corresponding to a function in **Set**.
+
+The restriction map for every presheaf that qualifies as a sheaf will be the constant function to the terminal object; there is only ever one map to the terminal object so this is our only choice. The sections of $P(U)$ will simply be elements of whatever set the presheaf maps to.
+
+The only open covers we need to worry about (besides the one for the empty set we've already addressed) are the open covers of $U = \{*\}$. These open covers will necessarily only have the empty set and $U$ as members. Let's first look at the "locality" axiom of [Sheaf (mathematics) § Sheaves](https://en.wikipedia.org/wiki/Sheaf_(mathematics)#Sheaves). It will always be satisfied if $U_i$ is the empty set by Example 7.36. It will also always be satisfied if $U_i$ is $U$ because the restriction map will be trivial (the identity) and therefore $s = t$.
+
+Next, let's look at the "gluing" axiom of [Sheaf (mathematics) § Sheaves](https://en.wikipedia.org/wiki/Sheaf_(mathematics)#Sheaves). By Example 7.36 any open cover that includes only the empty set will satisfy this requirement. If $U$ is also part of the open cover, then if $i,j$ pick out the empty set alongside $U$ we'll have a matching family because $U_i ∩ U_j$ will be the empty set. However, we'll also always have a unique section $s|_U$ that corresponds to whatever section $s$ we picked out of $U$.
 
 +++ {"tags": []}
 
@@ -1111,11 +1234,39 @@ For 7.48 and 7.49 the sheaf condition is vacuously satisfied because there are n
 
 +++
 
-For `1.`, the category $\bf{Op}$ is $∅ → \{1\} → \{1,2\}$ (the inclusion morphisms).
+For `1.`, the category $\bf{Op}$ is $∅ → \{1\} → \{1,2\}$ (with the inclusion morphisms).
 
 +++
 
-For `2.`, the opposite of that category is $\bf{Op}^{op}$ or $\{1,2\} → \{1\} → ∅$ (the restriction morphisms). A presheaf consists of a functor $\bf{Op}^{op} → \bf{Set}$.
+For `2.`, the opposite of that category is $\bf{Op}^{op}$ or $\{1,2\} → \{1\} → ∅$ (with the restriction morphisms). A presheaf consists of a functor $\bf{Op}^{op} → \bf{Set}$.
+
++++
+
+For `3.` the sheaf condition is that for all open covers we satisfy the sheaf condition. How many open covers are there? As discussed in Exercise 7.31, the only open covers are (1) the empty collection covering the empty set and (2) various collections $C$ covering an open set $U$, where $U$ is a member of the collection $C$.
+
+To define a sheaf for **Op** we can map the empty set to the empty tuple, as described in Example 7.36. We can define a trivial matching family for every collection $C$ that has only one open set in it; it will satisfy the sheaf condition because the family will be matching (i = j = 0) and the gluing will simply be the section $s_0$.
+
+There is also an open cover consisting of $\{\{1,2\},\{1\}\}$ (that covers $\{1,2\}$). Let's say that $\{1\}$ is mapped to some arbitrary set, so that sections over $\{1\}$ are elements of that set $X$. We'll have a matching family when e.g. $U_0 = \{1,2\}$ and $U_1 = \{1\}$ so that the overlap/intersection is $U_1$, and the section $s_0$ associated with $U_0$ restricts to the section $s_1$.
+
+Unless we include information about $X$ in the set $P(\{1,2\})$ we risk having a matching family and not satisfying the gluing condition. At the least we could map $P(\{1,2\}) = X$; this would satisfy the gluing axiom (and the locality axiom) and therefore give us a sheaf. Notice we could even make $X = \{()\}$.
+
+However, if we wanted we could put even more information into $P(\{1,2\})$ and still have a sheaf. If we mapped $P(\{1,2\}) = X×Y$ where Y is any other set, we'd still satisfy the gluing axiom. The restriction $s_1|_{U_1}$ where again $U_1 = \{1\}$ would not uniquely identify a section of $P(U)$, but the restriction $s_0|_{U_0} = s|_{U}$ obviously would.
+
+In the style of [Constant sheaf § A detailed example](https://en.wikipedia.org/wiki/Constant_sheaf#A_detailed_example) see [this quiver drawing](https://q.uiver.app/#q=WzAsMyxbMCwyLCJQKFxcezEsMlxcfSkgPSBYw5dZIl0sWzAsMSwiUChcXHsxXFx9KSA9IFgiXSxbMCwwLCJQKOKIhSkgPSBcXHsoKVxcfSJdLFsxLDIsIjAiXSxbMCwxLCLPgCJdXQ==), repeated here:
+
++++
+
+![x](raster/2023-12-07T18-40-33.png)
+
++++
+
+For `4.` we could likely associate a sheaf on **Op** with a function in several ways. One way to do so would be to identify it with a function of two variables, or more generally a function that's constructed from two functions.
+
+```{code-cell} ipython3
+:tags: [hide-output]
+
+Image('raster/2023-12-07T18-13-18.png', metadata={'description': "7S answer"})
+```
 
 +++ {"tags": []}
 
@@ -1155,7 +1306,15 @@ For `2.`, the opposite of that category is $\bf{Op}^{op}$ or $\{1,2\} → \{1\} 
 
 +++
 
-For exercise 7.52, we have two open sets to map. The empty set goes to the initial object, as discussed. The non empty set goes to a two object set we can see as the booleans.
+The one point space has two open sets and could be represented ∅ → {1}. Based on Eq. 7.50 we assign $Ω(∅) = \{∅\}$ and we assign $Ω(\{1\}) = \{∅,\{1\}\}$.
+
+The non-empty set is being mapped to a two object set we can see as the booleans. Therefore we can see any morphism between sheaves (a natural transformation) that targets this sheaf as a function to the booleans.
+
+```{code-cell} ipython3
+:tags: [hide-output]
+
+Image('raster/2023-12-08T17-20-38.png', metadata={'description': "7S answer"})
+```
 
 +++ {"tags": []}
 
@@ -1167,7 +1326,57 @@ For exercise 7.52, we have two open sets to map. The empty set goes to the initi
 
 +++
 
+For part `1.` we need to check that Ω is functorial i.e. that it preserves identities and composition. It preserves identities because the identity on every open set $U$ in 𝓒 (the trivial inclusion ⊆) is mapped to the identity on $Ω(U)$ in **Set**. This latter identity is $Ω(U) → Ω(U)$ or $U' ↦ U' ∩ U$ or $U' ↦ U'$ (every set gets mapped to itself).
+
+To preserve composition we must have that if $f⨟g = h$ then $Ω(f)⨟Ω(g) = Ω(h)$. That is, if W ⊆ V ⊆ U then $res_{V,U}⨟res_{W,V} = res_{W,U}$ (using syntax from [Sheaf (mathematics)](https://en.wikipedia.org/wiki/Sheaf_(mathematics)), and including a reversal because presheafs are contravariant). The first two restriction maps are:
+
+$$
+\begin{align}
+U' & ↦ U' ∩ V \\
+V' & ↦ V' ∩ W
+\end{align}
+$$
+
+Replacing the dummy variables with $S$ (for **s**et) to make for easier reading:
+
+$$
+\begin{align}
+S & ↦ S ∩ V \\
+S & ↦ S ∩ W
+\end{align}
+$$
+
+Composing these and using the fact that W ⊆ V so that V ∩ W = W:
+
+$$
+\begin{align}
+S & ↦ (S ∩ V) ∩ W \\
+S & ↦ S ∩ (V ∩ W) \\
+S & ↦ S ∩ W
+\end{align}
+$$
+
++++
+
+For part `2.`, it's true that all you need to do to check that something like Ω is a presheaf is to check that it is a functor, because a functor and a presheaf are essentially synonymous.
+
+```{code-cell} ipython3
+:tags: [hide-output]
+
+Image('raster/2023-12-08T17-37-03.png', metadata={'description': "7S answer"})
+```
+
++++ {"tags": []}
+
+### Ω satisfies sheaf condition
+
++++
+
 ![x](raster/2023-11-24T14-25-32.png)
+
++++ {"tags": []}
+
+### Sheaf morphism for true
 
 +++
 
@@ -1175,11 +1384,37 @@ For exercise 7.52, we have two open sets to map. The empty set goes to the initi
 
 +++
 
+The section [Subobject classifier § Sheaves of sets](https://en.wikipedia.org/wiki/Subobject_classifier#Sheaves_of_sets) provides nearly the same definition. We could alternatively describe {1} as the [Constant presheaf](https://en.wikipedia.org/w/index.php?title=Constant_presheaf) with value {1} (or $\{*\}$), which happens to also be a sheaf. Here's a visualization of it on the two-element discrete topological space:
+
+![x](true-sheaf-morphism.svg)
+
++++
+
+Notice that the natural transformation η that corresponds to `true` always points to the "largest open set" that it can, as the author suggests.
+
++++ {"tags": []}
+
+### Upshot
+
++++
+
 ![x](raster/2023-11-24T14-26-58.png)
 
 +++
 
+See a similar "upshot" in [Subobject classifier § Sheaves of sets](https://en.wikipedia.org/wiki/Subobject_classifier#Sheaves_of_sets). This suggests a more probabilistic view of truth; we could even considering getting a value between 0 and 1 by taking the open set returned and seeing what fraction it covers of the whole set.
+
++++
+
 ![x](raster/2023-11-24T15-38-16.png)
+
++++ {"tags": []}
+
+### Inconsistent ⌜?⌝ notation
+
++++
+
+The author seems to be inconsistently using the ⌜?⌝ notation. Should we fill the ? with the monic morphism $m$ as in (7.13), or the subobject $H$ as in Example 7.54? The article [Subobject classifier](https://en.wikipedia.org/wiki/Subobject_classifier) is also inconsistent, using $χ_A$ where $A$ is the subobject at the start, then $χ_j$ where $j$ is the monic morphism.
 
 +++ {"tags": []}
 
@@ -1188,6 +1423,22 @@ For exercise 7.52, we have two open sets to map. The empty set goes to the initi
 +++
 
 ![x](raster/2023-11-24T15-41-06.png)
+
++++
+
+Answering via a drawing:
+
++++
+
+![x](exercise-7-55.svg)
+
+```{code-cell} ipython3
+:tags: [hide-output]
+
+Image('raster/2023-12-08T16-51-55.png', metadata={'description': "7S answer"})
+```
+
+The author's solution seems to replace $H$ with $G'$.
 
 +++ {"tags": []}
 
@@ -1207,6 +1458,16 @@ For exercise 7.52, we have two open sets to map. The empty set goes to the initi
 
 +++ {"tags": []}
 
+### Implies in the standard ℝ sheaf topos
+
++++
+
+Another way to define the [Material conditional](https://en.wikipedia.org/wiki/Material_conditional) (implies) $p → q$ is as $q ∨ ¬p$, though this translation requires reading it backwards. You can think about implication in Example 7.58 by imagining two number lines on top of each other with the antecedent on the bottom; when the top line is false and the bottom is true the result is not part of the resulting open set. Equivalently, the resulting open set is all parts of the line where the top line is true or the bottom line is false.
+
+This strategy works for the standard topology on the real line, but would break down with more exotic topologies on it.
+
++++ {"tags": []}
+
 ### Exercise 7.59
 
 +++
@@ -1215,7 +1476,43 @@ For exercise 7.52, we have two open sets to map. The empty set goes to the initi
 
 +++
 
-![x](raster/2023-11-25T14-24-45.png)
+For `1.`, the complement of ℝ is {0} (a point). The [Interior (topology)](https://en.wikipedia.org/wiki/Interior_(topology)) of {0} is not (0) because an open set (an "open line") on the real line is defined to include all points within ε of 0, where ε is non-zero (see also [Ball (mathematics)](https://en.wikipedia.org/wiki/Ball_(mathematics))). Therefore (0) is "larger" than {0}, and so the largest open set contained in {0} is ∅. It may be best not to even think of (0) or (0,0) as an open set; it uses interval notation but without two distinct numbers to define the interval.
+
+For `2.` the complement of ∅ is the full set. The interior of the full set is the full set.
+
+For `3.`, yes.
+
+For `4.`, no.
+
+```{code-cell} ipython3
+:tags: [hide-output]
+
+Image('raster/2023-12-08T22-57-51.png', metadata={'description': "7S answer"})
+```
+
++++ {"tags": []}
+
+### Dual interior/closure operators
+
++++
+
+Consider the following not-adjoint pair for the [Sierpiński space](https://en.wikipedia.org/wiki/Sierpi%C5%84ski_space) defined by the open sets $∅ → \{1\} → \{0,1\}$, with the closure operator in blue and the interior operator in red. These are *not* an adjoint pair (take $p = q = \{1\}$) despite these operators being described as "dual" to each other in some references:
+
++++
+
+![x](sierpinski-closure-interior.svg)
+
++++
+
+Replacing the interior → interior of the complement, and the closure → closure of the complement, we get an adjoint pair with the opposite category:
+
++++
+
+![x](sierpinski-closure-interior-v2.svg)
+
++++
+
+See also [Interior algebra](https://en.wikipedia.org/wiki/Interior_algebra).
 
 +++ {"tags": []}
 
@@ -1223,11 +1520,38 @@ For exercise 7.52, we have two open sets to map. The empty set goes to the initi
 
 +++
 
+![x](raster/2023-11-25T14-24-45.png)
+
++++
+
 ![x](raster/2023-11-25T14-25-10.png)
 
 +++
 
+1. The whole set $X$
+2. Yes
+3. The empty set ∅
+4. Yes
+
+```{code-cell} ipython3
+:tags: [hide-output]
+
+Image('raster/2023-12-08T23-00-20.png', metadata={'description': "7S answer"})
+```
+
++++ {"tags": []}
+
+### Example 7.61
+
++++
+
 ![x](raster/2023-11-25T14-41-34.png)
+
++++
+
+See also [differential geometry - Applications of Topos Theory to the theory of bundles. - MSE](https://math.stackexchange.com/questions/3912771/applications-of-topos-theory-to-the-theory-of-bundles).
+
+For a longer list of internal logics associated to their categories, see [Heyting category in nLab](https://ncatlab.org/nlab/show/Heyting+category). A similar list is in [internal logic in nLab](https://ncatlab.org/nlab/show/internal+logic).
 
 +++ {"tags": []}
 
@@ -1237,9 +1561,13 @@ For exercise 7.52, we have two open sets to map. The empty set goes to the initi
 
 ![x](raster/2023-11-25T14-56-44.png)
 
++++
+
+Given the author previously used $P$ for a presheaf, the $S$ in this section likely stands for sheaf. Looking at the mapping of each element of a section as an aspect of a possible world, in this example each person's opinion is an aspect of the world allowed by $S$.
+
 +++ {"tags": []}
 
-### Exercise 7.62
+### Exercise 7.62³
 
 +++
 
@@ -1247,7 +1575,17 @@ For exercise 7.52, we have two open sets to map. The empty set goes to the initi
 
 +++
 
-In section 7.4.3 we can take S to stand for either sections (like Sec) or subjects (as in, the subject of a sentence where the predicate follows).
+Perhaps those who exist and like the weather over the given time?
+
+Can you see the following as sections over a timeline? Adding Alice from [Alice and Bob](https://en.wikipedia.org/wiki/Alice_and_Bob):
+
++++
+
+![x](bob-sections-over-timeline.svg)
+
++++ {"tags": []}
+
+### The subobjects poset
 
 +++
 
@@ -1263,7 +1601,81 @@ In section 7.4.3 we can take S to stand for either sections (like Sec) or subjec
 
 +++ {"tags": []}
 
-### Exercise 7.64
+### Topological subobjects
+
++++
+
+A topological subobject (see also [Subobject](https://en.wikipedia.org/wiki/Subobject)) would be a [Subspace topology](https://en.wikipedia.org/wiki/Subspace_topology).
+
++++ {"tags": []}
+
+### Example propositions
+
++++
+
+The author is referring to propositions from truth-functional logic; see [Propositional calculus](https://en.wikipedia.org/wiki/Propositional_calculus). In **Set** these are maps from the one-object category to the booleans, true and false. A picture to have in mind is (see also Exercise 7.52):
+
++++
+
+![x](one-point-space-true-sheaf-morphism.svg)
+
++++
+
+A proposition like "The dog is brown." is often simply assigned to a letter in logic, such as $B$ (see the "symbolization key" introduced in [Chapter 4 § Atomic sentences](https://forallx.openlogicproject.org/html/Ch4.html#S3)). We can see η in this scenario as that letter. If we had mapped $*$ to the empty set, then the proposition would be false.
+
++++
+
+Let's move on to a more complicated example of a proposition, now in the context of the two-point discrete topological space. The requirement that these be a [Natural transformation](https://en.wikipedia.org/wiki/Natural_transformation) is going to start to limit what counts as a proposition. Consider the two examples on the right:
+
++++
+
+![x](two-point-space-example-proposition.svg)
+
++++
+
+The infranatural transformation on the left is not a proposition because it is not a natural transformation. Using the following from [Natural transformation § Definition](https://en.wikipedia.org/wiki/Natural_transformation#Definition):
+
+$$
+η_Y ∘ F(f) = G(f) ∘ η_X
+$$
+
+We always have that $F(f)$ is the identity on the one object in **1**, so this reduces to:
+
+$$
+η_Y = G(f) ∘ η_X
+$$
+
+While this is true for $η_{\{1\}} = G(f) ∘ η_{\{0,1\}}$ (using part of the green restriction morphism) this fails for $η_{\{0\}} = G(f) ∘ η_{\{0,1\}}$ (using part of the red restriction morphism).
+
++++ {"tags": []}
+
+### More than true and false
+
++++
+
+As the previous example shows, we now have more than just "true" and "false" that can be assigned to a proposition. Not only that, even in this simple example there are two propositions that are neither true or false, and yet are unequal to each other. We can't say that each should be assigned a value of 0.5, for example, such as if we wanted to reduce our observation to a probabilistic framework.
+
+Instead let's call $B = η$ and $A$ the only natural transformation 1 → Ω that sends $*$ to the section $\{0\}$ of $Ω(\{0,1\})$. Then we can see $A ∩ B$ as the sheaf morphism true, and $A ∪ B$ as the sheaf morphism false.
+
+We know that (A ∩ B) ⊢ B. Is this the subobjects poset |Ω|?
+
++++
+
+![x](two-element-space-subobjects-poset.svg)
+
++++
+
+From [Heyting algebra](https://en.wikipedia.org/wiki/Heyting_algebra):
+
+> Heyting algebras serve as the algebraic models of propositional [intuitionistic logic](https://en.wikipedia.org/wiki/Intuitionistic_logic "Intuitionistic logic") in the same way Boolean algebras model propositional [classical logic](https://en.wikipedia.org/wiki/Classical_logic "Classical logic"). The internal logic of an [elementary topos](https://en.wikipedia.org/wiki/Elementary_topos "Elementary topos") is based on the Heyting algebra of [subobjects](https://en.wikipedia.org/wiki/Subobject "Subobject") of the [terminal object](https://en.wikipedia.org/wiki/Terminal_object "Terminal object") 1 ordered by inclusion, equivalently the morphisms from 1 to the [subobject classifier](https://en.wikipedia.org/wiki/Subobject_classifier "Subobject classifier") Ω.
+
+> The [open sets](https://en.wikipedia.org/wiki/Open_set "Open set") of any [topological space](https://en.wikipedia.org/wiki/Topological_space "Topological space") form a [complete Heyting algebra](https://en.wikipedia.org/wiki/Complete_Heyting_algebra "Complete Heyting algebra"). Complete Heyting algebras thus become a central object of study in [pointless topology](https://en.wikipedia.org/wiki/Pointless_topology "Pointless topology").
+
+The [pointless topology](https://en.wikipedia.org/wiki/Pointless_topology "Pointless topology") article discusses the lattices of open sets denoted Ω(X) and Ω(Y).
+
++++ {"tags": []}
+
+### Exercise 7.64¹
 
 +++
 
@@ -1279,6 +1691,10 @@ In section 7.4.3 we can take S to stand for either sections (like Sec) or subjec
 
 +++
 
+See also [Power set § Functors and quantifiers](https://en.wikipedia.org/wiki/Power_set#Functors_and_quantifiers).
+
++++
+
 ![x](raster/2023-11-25T15-04-32.png)
 
 +++
@@ -1287,11 +1703,18 @@ In section 7.4.3 we can take S to stand for either sections (like Sec) or subjec
 
 +++ {"tags": []}
 
-### Exercise 7.66
+### Exercise 7.66¹
 
 +++
 
 ![x](raster/2023-11-25T15-05-08.png)
+
++++
+
+1. {0}
+2. ℕ
+3. {∞}
+4. ℤ
 
 +++
 
@@ -1303,7 +1726,7 @@ In section 7.4.3 we can take S to stand for either sections (like Sec) or subjec
 
 +++ {"tags": []}
 
-### Exercise 7.67
+### Exercise 7.67¹
 
 +++
 
@@ -1319,7 +1742,7 @@ In section 7.4.3 we can take S to stand for either sections (like Sec) or subjec
 
 +++ {"tags": []}
 
-### Exercise 7.68
+### Exercise 7.68¹
 
 +++
 
@@ -1337,6 +1760,10 @@ In section 7.4.3 we can take S to stand for either sections (like Sec) or subjec
 
 ![x](raster/2023-11-25T15-14-28.png)
 
++++ {"tags": []}
+
+### Exercise 7.70¹
+
 +++
 
 ![x](raster/2023-11-25T15-14-50.png)
@@ -1348,6 +1775,10 @@ In section 7.4.3 we can take S to stand for either sections (like Sec) or subjec
 +++
 
 ![x](raster/2023-11-25T15-15-53.png)
+
++++ {"tags": []}
+
+### Exercise 7.72¹
 
 +++
 
@@ -1364,6 +1795,10 @@ In section 7.4.3 we can take S to stand for either sections (like Sec) or subjec
 +++
 
 See also [Kripke semantics § Kripke–Joyal semantics](https://en.wikipedia.org/wiki/Kripke_semantics#Kripke%E2%80%93Joyal_semantics).
+
++++ {"tags": []}
+
+### Example 7.74
 
 +++
 
@@ -1401,20 +1836,17 @@ Example 7.74 seems to summarize 7.73 incorrectly, reversing s and t. Or is this 
 
 Notice that $o_{[a,b]}$ is an infinite set of finite closed intervals, not just a finite closed interval. When we form $o_{[0,5]} ∪ o_{[4,8]}$ we'll only "deduplicate" all the closed intervals in $o_{[4,5]}$ (roughly speaking).
 
-+++
+```{code-cell} ipython3
+:tags: [hide-output]
 
-```{admonition} Reveal 7S answer
-:class: dropdown
-![x](raster/2023-10-25T19-20-21.png)
+Image('raster/2023-10-25T19-20-21.png', metadata={'description': "7S answer"})
 ```
-
-+++
 
 ![x](raster/2023-10-25T19-48-39.png)
 
 +++ {"tags": []}
 
-### Exercise 7.77
+### Exercise 7.77¹
 
 +++
 
@@ -1427,3 +1859,43 @@ Notice that $o_{[a,b]}$ is an infinite set of finite closed intervals, not just 
 +++
 
 ![x](raster/2023-10-25T19-50-04.png)
+
++++
+
+![x](raster/2023-12-09T14-58-37.png)
+
++++ {"tags": []}
+
+### Example 7.79
+
++++
+
+![x](raster/2023-12-09T14-56-03.png)
+
++++ {"tags": []}
+
+### Exercise 7.80¹
+
++++
+
+![x](raster/2023-12-09T14-55-26.png)
+
++++ {"tags": []}
+
+### Example 7.81
+
++++
+
+![x](raster/2023-12-09T14-57-15.png)
+
++++
+
+![x](raster/2023-12-09T14-57-40.png)
+
++++
+
+![x](raster/2023-12-09T14-58-08.png)
+
++++ {"tags": []}
+
+## 7.5.2 Safety proofs in temporal logic
