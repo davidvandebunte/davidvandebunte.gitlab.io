@@ -19,7 +19,7 @@ kernelspec:
 
 +++
 
-Category theory is ubiquitous in mathematics; it's difficult to read mathematical articles on Wikipedia without an understanding of the topic. See also [Mathematical subjects you wish you learned earlier - MSE](https://math.stackexchange.com/questions/213/mathematical-subjects-you-wish-you-learned-earlier). This may reflect the fact that more and more mathematicians are using category theory as a basis for mathematics rather than set theory; see [Topos § Elementary topoi (topoi in logic)](https://en.wikipedia.org/wiki/Topos#Elementary_topoi_(topoi_in_logic)) and [nLab](https://ncatlab.org/nlab/show/HomePage).
+Category theory is ubiquitous in mathematics; it's difficult to read mathematical articles on Wikipedia without an understanding of the topic. See also [Mathematical subjects you wish you learned earlier - MSE](https://math.stackexchange.com/questions/213/mathematical-subjects-you-wish-you-learned-earlier). This may reflect the fact that more mathematicians are using category theory as a basis for mathematics rather than set theory; see [Topos § Elementary topoi (topoi in logic)](https://en.wikipedia.org/wiki/Topos#Elementary_topoi_(topoi_in_logic)) and [nLab](https://ncatlab.org/nlab/show/HomePage).
 
 Category theory is also fundamental to programming, and in particular to functional programming. See
 [Is Category Theory useful for learning functional programming? - CS

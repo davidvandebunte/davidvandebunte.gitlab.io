@@ -441,6 +441,10 @@ We know how to show that two functions are adjoint from Chp. 1; we likely need t
 
 ## 7.2.2 The subobject classifier
 
++++ {"tags": []}
+
+### Definition 7.12
+
 +++
 
 ![x](raster/2023-09-13T00-31-10.png)
@@ -1000,6 +1004,10 @@ With:
 
 +++
 
+This section almost exactly follows [Sheaf (mathematics) § Sheaf of sections of a continuous map](https://en.wikipedia.org/wiki/Sheaf_(mathematics)#Sheaf_of_sections_of_a_continuous_map). Notice the creative use of Γ (which looks like a scythe, related to a sheaf) in that article.
+
++++
+
 The author is using the term "fiber" here in the same way it is defined in [Fiber (mathematics)](https://en.wikipedia.org/wiki/Fiber_(mathematics)). The article [Fiber bundle](https://en.wikipedia.org/wiki/Fiber_bundle) uses it in a different but related way; it would call $B$ what is called $Y$ here and the "fiber" $F$ what is called $X$ here.
 
 How are we going to get "sections" on a function, when sections are defined on a functor (presheaf)? The title of this section is a bit of a misnomer (or "abuse of language"). The author doesn't introduce his strategy until later: he'll first convert the sets $X$ and $Y$ to topologies (the discrete topology), then he'll take the open set preorder of each, then he'll define a categorical presheaf between those (a topological presheaf in this topological context). Confusingly this functor $Sec$ is not the same as the $f$ initially introduced, that is, we are not taking the sections of $f$ but of a map in the opposite direction.
@@ -1062,7 +1070,7 @@ The author defines $Sec$ as a section in the sense of [Section (fiber bundle)](h
 
 Even more confusingly, a categorical section is an element of a set, rather than a function (as a topological section is). But, you can see a topological section as the set of 2-tuples that define a function (as a [Binary relation](https://en.wikipedia.org/wiki/Binary_relation)). For example, we could represent $s_4$ above as $\{(a,2),(b,1)\}$ or $((a,2),(b,1))$. A set of sections over $U$ would then be a set of sets, where each member set in this example has two 2-tuples.
 
-You can see a categorical section as a member of a set, so we would represent $s_4$ above as $((a,2),(b,1))$ ∈ (2⊕3)×(2⊕3) = $Sec_f(\{a,b\})$. Notice that we're using ⊕ in the previous equation for the [Coproduct](https://en.wikipedia.org/wiki/Coproduct) or [Disjoint union](https://en.wikipedia.org/wiki/Disjoint_union). However, given the context that we're working in, we can drastically compress this representation to $(2,1)$ or $(a_2,b_1)$ ∈ 2×3 = $Sec_f(\{a,b\})$.
+You can see a categorical section as a member of a set, so we would represent $s_4$ above as $((a,2),(b,1))$ ∈ (2⊕3)×(2⊕3) = $Sec_f(\{a,b\})$. Notice that we're using ⊕ in the previous equation for the [Coproduct](https://en.wikipedia.org/wiki/Coproduct) or [Disjoint union](https://en.wikipedia.org/wiki/Disjoint_union). However, given the context that we're working in, we can drastically compress this representation to $(2,1)$ or $(a_2,b_1)$ ∈ 2×3 = $Sec_f(\{a,b\})$. We can make this drastic compression because we know we're working with the open set $U = \{a,b\}$; be aware that $(2,1)$ in the context of $U = \{a,e\}$ is something completely different.
 
 We recover the six sections in this example indirectly by defining the restriction morphisms. The restriction map from $Sec_f(\{a,b\})$ to $Sec_f(\{a\})$ defines half of each of these six functions, and the restriction map from $Sec_f(\{a,b\})$ to $Sec_f(\{b\})$ defines the other half. In some sense there are morphisms in the opposite direction for how to "glue" sections together, but these are not part of the definition.
 
@@ -1504,7 +1512,7 @@ Consider the following not-adjoint pair for the [Sierpiński space](https://en.w
 
 +++
 
-Replacing the interior → interior of the complement, and the closure → closure of the complement, we get an adjoint pair with the opposite category:
+Replacing interior → "interior of the complement" and closure → "closure of the complement" we get an adjoint pair with the opposite category:
 
 +++
 
@@ -1601,6 +1609,18 @@ Can you see the following as sections over a timeline? Adding Alice from [Alice 
 
 +++ {"tags": []}
 
+### Power object
+
++++ {"tags": []}
+
+The content of Example 7.54 is also discussed in [Power set § Power object](https://en.wikipedia.org/wiki/Power_set#Power_object), using similar variable names:
+
+> Certain classes of algebras enjoy both of these properties. The first property is more common; the case of having both is relatively rare. One class that does have both is that of [multigraphs](https://en.wikipedia.org/wiki/Multigraph "Multigraph"). Given two multigraphs *G* and *H*, a [homomorphism](https://en.wikipedia.org/wiki/Homomorphism "Homomorphism") *h* : *G* → *H* consists of two functions, one mapping vertices to vertices and the other mapping edges to edges. The set $H^G$ of homomorphisms from *G* to *H* can then be organized as the graph whose vertices and edges are respectively the vertex and edge functions appearing in that set. Furthermore, the subgraphs of a multigraph *G* are in bijection with the graph homomorphisms from *G* to the multigraph Ω definable as the [complete directed graph](https://en.wikipedia.org/wiki/Complete_graph "Complete graph") on two vertices (hence four edges, namely two self-loops and two more edges forming a cycle) augmented with a fifth edge, namely a second self-loop at one of the vertices. We can therefore organize the subgraphs of *G* as the multigraph $Ω^G$, called the **power object** of *G*.
+
+Notice the notational similarity to what the author is calling the subobjects poset.
+
++++ {"tags": []}
+
 ### Topological subobjects
 
 +++
@@ -1653,9 +1673,9 @@ While this is true for $η_{\{1\}} = G(f) ∘ η_{\{0,1\}}$ (using part of the g
 
 +++
 
-As the previous example shows, we now have more than just "true" and "false" that can be assigned to a proposition. Not only that, even in this simple example there are two propositions that are neither true or false, and yet are unequal to each other. We can't say that each should be assigned a value of 0.5, for example, such as if we wanted to reduce our observation to a probabilistic framework.
+As the previous example shows, we now have more than just "true" and "false" that can be assigned to a proposition. Not only that, even in this simple example there are two propositions that are neither true or false, and yet are unequal to each other. We could say that each should be assigned a value of 0.5, for example, such as if we wanted to reduce our observation to a probabilistic framework. Still, this loses information because there are two different ways for something to be "half true" and we've lost in which way it is half true.
 
-Instead let's call $B = η$ and $A$ the only natural transformation 1 → Ω that sends $*$ to the section $\{0\}$ of $Ω(\{0,1\})$. Then we can see $A ∩ B$ as the sheaf morphism true, and $A ∪ B$ as the sheaf morphism false.
+Let's call $B = η$ and $A$ the only natural transformation 1 → Ω that sends $*$ to the section $\{0\}$ of $Ω(\{0,1\})$. Then we can see $A ∩ B$ as the sheaf morphism true, and $A ∪ B$ as the sheaf morphism false.
 
 We know that (A ∩ B) ⊢ B. Is this the subobjects poset |Ω|?
 
@@ -1668,7 +1688,7 @@ We know that (A ∩ B) ⊢ B. Is this the subobjects poset |Ω|?
 From [Heyting algebra](https://en.wikipedia.org/wiki/Heyting_algebra):
 
 > Heyting algebras serve as the algebraic models of propositional [intuitionistic logic](https://en.wikipedia.org/wiki/Intuitionistic_logic "Intuitionistic logic") in the same way Boolean algebras model propositional [classical logic](https://en.wikipedia.org/wiki/Classical_logic "Classical logic"). The internal logic of an [elementary topos](https://en.wikipedia.org/wiki/Elementary_topos "Elementary topos") is based on the Heyting algebra of [subobjects](https://en.wikipedia.org/wiki/Subobject "Subobject") of the [terminal object](https://en.wikipedia.org/wiki/Terminal_object "Terminal object") 1 ordered by inclusion, equivalently the morphisms from 1 to the [subobject classifier](https://en.wikipedia.org/wiki/Subobject_classifier "Subobject classifier") Ω.
-
+>
 > The [open sets](https://en.wikipedia.org/wiki/Open_set "Open set") of any [topological space](https://en.wikipedia.org/wiki/Topological_space "Topological space") form a [complete Heyting algebra](https://en.wikipedia.org/wiki/Complete_Heyting_algebra "Complete Heyting algebra"). Complete Heyting algebras thus become a central object of study in [pointless topology](https://en.wikipedia.org/wiki/Pointless_topology "Pointless topology").
 
 The [pointless topology](https://en.wikipedia.org/wiki/Pointless_topology "Pointless topology") article discusses the lattices of open sets denoted Ω(X) and Ω(Y).
