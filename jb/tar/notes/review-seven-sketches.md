@@ -19,7 +19,7 @@ kernelspec:
 
 +++
 
-Category theory is ubiquitous in mathematics; it's difficult to read mathematical articles on Wikipedia without an understanding of the topic. See also [Mathematical subjects you wish you learned earlier - MSE](https://math.stackexchange.com/questions/213/mathematical-subjects-you-wish-you-learned-earlier). This may reflect the fact that more and more mathematicians are using category theory as a basis for mathematics rather than set theory; see [Topos § Elementary topoi (topoi in logic)](https://en.wikipedia.org/wiki/Topos#Elementary_topoi_(topoi_in_logic)) and [nLab](https://ncatlab.org/nlab/show/HomePage).
+Category theory is ubiquitous in mathematics; it's difficult to read mathematical articles on Wikipedia without an understanding of the topic. See also [Mathematical subjects you wish you learned earlier - MSE](https://math.stackexchange.com/questions/213/mathematical-subjects-you-wish-you-learned-earlier). This may reflect the fact that more mathematicians are using category theory as a basis for mathematics rather than set theory; see [Topos § Elementary topoi (topoi in logic)](https://en.wikipedia.org/wiki/Topos#Elementary_topoi_(topoi_in_logic)) and [nLab](https://ncatlab.org/nlab/show/HomePage).
 
 Category theory is also fundamental to programming, and in particular to functional programming. See
 [Is Category Theory useful for learning functional programming? - CS
@@ -27,6 +27,8 @@ SE](https://cs.stackexchange.com/questions/3028) and [Cats |
 Semigroup](https://www.scala-exercises.org/cats/semigroup). For the formal relationship between category theory and programming, see [Curry–Howard
 correspondence](https://en.wikipedia.org/wiki/Curry%E2%80%93Howard_correspondence) and [Cartesian
 closed category](https://en.wikipedia.org/wiki/Cartesian_closed_category). These are at least partially addressed by the end of the book.
+
+We use CT for category theory following `math.CT` in [arXiv - Mathematics](https://arxiv.org/archive/math.CT).
 
 +++
 
@@ -51,6 +53,10 @@ https://stackoverflow.com/questions/tagged/category-theory)
 What makes "Seven Sketches" stand out is that it is:
 1. Tied to Wikipedia
 2. Open source
+
++++
+
+If you need a letter-only acronym for the book, consider SSC (Seven Sketches in Compositionality). This acronym/title could also be used to emphasize a commitment to the [Principle of compositionality](https://en.wikipedia.org/wiki/Principle_of_compositionality).
 
 +++
 
