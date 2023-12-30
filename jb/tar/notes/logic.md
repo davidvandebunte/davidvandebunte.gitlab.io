@@ -34,6 +34,18 @@ Consider the following simple example argument. While A ∨ B entails A ∨ B �
 ![x](./fax-chp12-entailment.svg)
 
 
+## bussproofs prooftree
+
+
+See [Supported TeX/LaTeX commands — MathJax 3.2 documentation § Environments](https://docs.mathjax.org/en/latest/input/tex/macros/index.html#environments) for the prooftree environment, and more documentation under [bussproofs — MathJax 3.2 documentation](https://docs.mathjax.org/en/latest/input/tex/extensions/bussproofs.html). At the moment, you can't get this to work. Right click on the following example to get our MathJax version:
+
+$$\require{enclose}
+\enclose{circle}{x}
+$$
+
+It looks like it's 2.7.9 at the moment. Even [The TeX/LaTeX Extension List — MathJax 3.0 documentation](https://docs.mathjax.org/en/v3.0-latest/input/tex/extensions/) doesn't have bussproofs. It looks like the examples on [Motivating Examples — Jupyter Notebook 7.0.6 documentation](https://jupyter-notebook.readthedocs.io/en/stable/examples/Notebook/Typesetting%20Equations.html) are 3.2.2.
+
+
 ## Monotone valuation functions
 
 
@@ -241,6 +253,26 @@ Just as we have nasty standards/defaults for the material conditional when the a
 Is like arguing with someone and they find some small contradiction in something you said once. They use that to conclude everything you say is wrong and their conclusion is right. Or perhaps this is closer to the principle of explosion?
 
 Either way, it feels similar to exceptions in programming languages. You "explode" when things don't logically fit together (give up on any kind of inference).
+
+
+## One and only one
+
+
+See [Chapter 28 Definite descriptions ‣ forall x: Calgary](https://forallx.openlogicproject.org/html/Ch28.html) for Russell's analysis of what it means for something to be unique. See [Glossary of mathematical jargon § Proof terminology](https://en.wikipedia.org/wiki/Glossary_of_mathematical_jargon#Proof_terminology) for the related jargon, which points to [Uniqueness quantification](https://en.wikipedia.org/wiki/Uniqueness_quantification).
+
+When you move to equivalence classes you should be thinking in terms of [Essentially unique](https://en.wikipedia.org/wiki/Essentially_unique) instead. Sometimes we don't care about the differences between all the objects in an equivalence class.
+
+
+## Metalanguage
+
+
+See [Chapter 8 Use and mention ‣ Part II Truth-functional logic ‣ forall x: Calgary](https://forallx.openlogicproject.org/html/Ch8.html) for the object-language and meta-language distinction also mentioned in [implication in nLab](https://ncatlab.org/nlab/show/implication).
+
+
+## Necessary and sufficient
+
+
+See [Glossary of mathematical jargon § Proof terminology](https://en.wikipedia.org/wiki/Glossary_of_mathematical_jargon#Proof_terminology), which points to [Necessity and sufficiency](https://en.wikipedia.org/wiki/Necessity_and_sufficiency). Although this is taken to mean iff, you should also be skeptical of [If and only if](https://en.wikipedia.org/wiki/If_and_only_if), being based on the [Material conditional](https://en.wikipedia.org/wiki/Material_conditional).
 
 
 ## ForAllX improvements

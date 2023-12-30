@@ -28,6 +28,8 @@ Semigroup](https://www.scala-exercises.org/cats/semigroup). For the formal relat
 correspondence](https://en.wikipedia.org/wiki/Curry%E2%80%93Howard_correspondence) and [Cartesian
 closed category](https://en.wikipedia.org/wiki/Cartesian_closed_category). These are at least partially addressed by the end of the book.
 
+We use CT for category theory following `math.CT` in [arXiv - Mathematics](https://arxiv.org/archive/math.CT).
+
 +++
 
 ## Why [Seven Sketches](https://math.mit.edu/~dspivak/teaching/sp18/) (7S) for CT?
@@ -51,6 +53,10 @@ https://stackoverflow.com/questions/tagged/category-theory)
 What makes "Seven Sketches" stand out is that it is:
 1. Tied to Wikipedia
 2. Open source
+
++++
+
+If you need a letter-only acronym for the book, consider SSC (Seven Sketches in Compositionality). This acronym/title could also be used to emphasize a commitment to the [Principle of compositionality](https://en.wikipedia.org/wiki/Principle_of_compositionality).
 
 +++
 
