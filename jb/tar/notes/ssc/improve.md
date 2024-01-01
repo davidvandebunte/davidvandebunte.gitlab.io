@@ -35,6 +35,14 @@ Why do we call two items isomorphic in a pre-order? Because in one shot (one arr
 
 +++
 
+## Recursion and terminal objects
+
++++
+
+Recursive base case for extended real number line is infinity. Serves as terminal object. Terminate program.
+
++++
+
 ## 6.2.1 Initial objects
 
 +++

@@ -29,7 +29,7 @@
      inkscape:document-units="mm"
      showgrid="true"
      inkscape:zoom="0.92355768"
-     inkscape:cx="2756.7309"
+     inkscape:cx="2670.1093"
      inkscape:cy="4250.4113"
      inkscape:window-width="1368"
      inkscape:window-height="2496"
@@ -2746,7 +2746,7 @@
        id="a40386"
        xlink:href="https://en.wikipedia.org/wiki/PROP_(category_theory)"
        style="fill:#3584e4"
-       transform="translate(593.36814,1032.4767)"><text
+       transform="translate(608.36814,1032.4767)"><text
          xml:space="preserve"
          style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#3584e4;stroke-width:3.77952;-inkscape-stroke:none;stop-color:#000000"
          x="163.65778"
@@ -2853,19 +2853,19 @@
        id="path7824"
        sodipodi:nodetypes="cc" /><path
        style="font-variation-settings:normal;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;marker-end:url(#marker4141_Fnone_S-000000);stop-color:#000000"
-       d="m 761.70512,1205.5292 v 13.423"
+       d="m 761.70512,1205.5292 v 16.923 h 9"
        id="path62489"
-       sodipodi:nodetypes="cc" /><text
+       sodipodi:nodetypes="ccc" /><text
        xml:space="preserve"
        style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;-inkscape-stroke:none;stop-color:#000000"
-       x="763.39038"
-       y="1215.2842"
+       x="777.89038"
+       y="1217.2842"
        id="text63049"><tspan
          sodipodi:role="line"
          id="tspan63047"
          style="fill:#000000;stroke-width:3.77952"
-         x="763.39038"
-         y="1215.2842">⊗ = +</tspan></text><text
+         x="777.89038"
+         y="1217.2842">⊗ = +</tspan></text><text
        xml:space="preserve"
        style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;-inkscape-stroke:none;stop-color:#000000"
        x="665.87512"
@@ -2888,14 +2888,14 @@
          y="1287.7842">I = {1}</tspan></text><text
        xml:space="preserve"
        style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;-inkscape-stroke:none;stop-color:#000000"
-       x="763.35986"
-       y="1211.2842"
+       x="777.85986"
+       y="1213.2842"
        id="text2773"><tspan
          sodipodi:role="line"
          id="tspan2771"
          style="fill:#000000;stroke-width:3.77952"
-         x="763.35986"
-         y="1211.2842">I = 0</tspan></text><text
+         x="777.85986"
+         y="1213.2842">I = 0</tspan></text><text
        xml:space="preserve"
        style="font-size:4px;line-height:4.99999px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:3.77952;-inkscape-stroke:none;stop-color:#000000"
        x="703.39343"
@@ -9000,6 +9000,20 @@
        style="font-variation-settings:normal;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;marker-end:url(#marker4141_Fnone_S-000000);stop-color:#000000"
        d="m 717.97098,1281.2868 v 27.6654"
        id="path280"
+       sodipodi:nodetypes="cc" /><text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15.1181px;line-height:18.8976px;font-family:'Liberation Mono', monospace;-inkscape-font-specification:'Liberation Mono, monospace';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;vector-effect:none;fill:#c64600;fill-opacity:1;stroke-width:14.2848;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
+       x="94.48819"
+       y="6935.4331"
+       id="text280"
+       transform="matrix(0.26458333,0,0,0.26458333,731,-599.5)"><tspan
+         sodipodi:role="line"
+         id="tspan280"
+         x="94.48819"
+         y="6935.4331">Exercise 7.11</tspan></text><path
+       style="font-variation-settings:normal;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;marker-end:url(#marker4141_Fnone_S-000000);stop-color:#000000"
+       d="m 776.70512,1209.7868 v 10.1654"
+       id="path281"
        sodipodi:nodetypes="cc" /></g><g
      inkscape:label=""
      transform="translate(1237.13,816.249)"
