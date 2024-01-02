@@ -18,6 +18,7 @@ Your references are broken anyways, so why not replace them with web links? That
 
 ## Boxes in boxes
 
+
 A drawing of "boxes in boxes" could look quite different from the side.
 
 If you think of this as a presentation of a category then is this dependent types? A set of a certain size.
@@ -27,6 +28,7 @@ If you think of this as a presentation of a category then is this dependent type
 
 ## Filters as graphs
 
+
 Is there a "filter framework" in the public domain? It doesn't seem so, but see:
 - [Filter graph - Wikipedia](https://en.wikipedia.org/wiki/Filter_graph)
 - [Filter (software) - Wikipedia](https://en.wikipedia.org/wiki/Filter_(software))
@@ -35,6 +37,7 @@ Can you see Unix filters as defining a DAG, where the functions are the commands
 
 
 ## Document how to visually take product orders
+
 
 Add to [Product order](https://en.wikipedia.org/wiki/Product_order). You had to learn the hard way how to do this for non-total orders: see `pip-feasibility-relation.svg` for the start of how you learned to do it visually.
 
@@ -128,6 +131,7 @@ Smaller commits makes verification that these maps are as expected easier. That 
 
 
 ## Composition of relations and matrix multiplication
+
 
 How are these related? You're familiar with both, but it seems like they sometimes express nearly the same thing. See:
 
@@ -297,6 +301,7 @@ For example, prefer the term "Noncommutative ring" internally to be more specifi
 
 
 ### Major connections
+
 
 ![x](major-connections.svg)
 

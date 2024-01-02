@@ -69,6 +69,33 @@ Consider the following inference system that includes Pierce's law, however. The
 You can come up with a working inference system based on some valuation function (deciding which arrows on the left side need to be turned on/off), but can you always come up with a green valuation function given arrows that are definitively turned on/off? What makes this question harder to "solve" is its recursive nature; if you only commit to one piece of "data" (e.g. whether a proposition is true or false) and start to check what that implies, you may discover that you need to change your original choice. What if you assign the proposition that is Pierce's law to false to start? Your valuation function now determines the truth value of your propositions, which determines which arrows need to be on/off, which determines whether you valuation function is monotone and therefore needs to be changed.
 
 
+## Heyting algebra semantics
+
+<!-- #region -->
+See [OpenLogic/content/intuitionistic-logic/semantics/introduction.tex (line 45) · OpenLogicProject/OpenLogic](https://github.com/OpenLogicProject/OpenLogic/blob/master/content/intuitionistic-logic/semantics/introduction.tex#L45). This whole chapter is also a great introduction to intuitionistic logic, but notice the BD book hasn't been built in 2 years.
+
+Another way to see this as a function that is written at some point, but that doesn't have any constructions to work on. In the world of programming, this would not compile. In the world of math, however, this isn't unreasonable. Many famous conjectures have had additional work done on them assuming that someday someone will come up with a proof of some of the dependencies of the proof. That is, sometimes mathematicians build $A→B$ without having $A$ yet.
+
+Or consider this function defined in a file by itself:
+
+```python
+def add_one(x: Integer):
+    x = x + 1
+```
+
+Clearly this code only has "potential" without being used. That's not to say it isn't something in itself, however.
+<!-- #endregion -->
+
+## Accessible logic
+
+
+In Kripske semantics we say that a world is "accessible" from another if we feel it's possible to get there from where we are. Is this a statement about the future, or about the past? Likely neither. It seems like our imperfect knowledge of the past makes multiple histories possible given what we're observing, as well. Are we even always more interested in the future than the past? Many problems (e.g. building a map) depend on being able to consider many possible past worlds.
+
+Either way, the word "accessible" often comes up when you're trying to decide what to read on Wikipedia. For example, the article [Heyting algebra](https://en.wikipedia.org/wiki/Heyting_algebra) is long and complicated. Only some sections are "accessible" to your current understanding. You've tried to build git graphs to plan your learning, but is it better to think about this in terms of possible worlds?
+
+One way to read is to only read chapter sections, and consider both what's accessible and what's valuable. If you read only accessible sections, you'll end up following links on Wikipedia from the categorical product to tychoff's theorem to who the current king of England is (it's easy to understand history and politics). If you only read what's valuable to solving your current problem, you may end up spending a long time reading an article and not comprehend anything at the end (or not comprehend anything long term e.g. new math).
+
+
 ## Valid argument
 
 
@@ -266,13 +293,15 @@ When you move to equivalence classes you should be thinking in terms of [Essenti
 ## Metalanguage
 
 
-See [Chapter 8 Use and mention ‣ Part II Truth-functional logic ‣ forall x: Calgary](https://forallx.openlogicproject.org/html/Ch8.html) for the object-language and meta-language distinction also mentioned in [implication in nLab](https://ncatlab.org/nlab/show/implication).
+See [Chapter 8 Use and mention ‣ Part II Truth-functional logic ‣ forall x: Calgary](https://forallx.openlogicproject.org/html/Ch8.html) for the object-language and meta-language distinction also mentioned in [implication in nLab](https://ncatlab.org/nlab/show/implication). See also [Metalogic](https://en.wikipedia.org/wiki/Metalogic), which points to [Use–mention distinction](https://en.wikipedia.org/wiki/Use%E2%80%93mention_distinction).
 
 
 ## Necessary and sufficient
 
 
 See [Glossary of mathematical jargon § Proof terminology](https://en.wikipedia.org/wiki/Glossary_of_mathematical_jargon#Proof_terminology), which points to [Necessity and sufficiency](https://en.wikipedia.org/wiki/Necessity_and_sufficiency). Although this is taken to mean iff, you should also be skeptical of [If and only if](https://en.wikipedia.org/wiki/If_and_only_if), being based on the [Material conditional](https://en.wikipedia.org/wiki/Material_conditional).
+
+If you're looking at [Modal logic](https://en.wikipedia.org/wiki/Modal_logic), you'll see it uses the word "necessity" in essentially a completely different way.
 
 
 ## ForAllX improvements
