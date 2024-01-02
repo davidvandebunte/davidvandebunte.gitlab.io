@@ -94,15 +94,3 @@ In [Initial and terminal objects](https://en.wikipedia.org/wiki/Initial_and_term
 > Cat, the category of small categories with functors as morphisms has the empty category, 0 (with no objects and no morphisms), as initial object and the terminal category, 1 (with a single object with a single identity morphism), as terminal object.
 
 While it often works to use 0 for an initial object and 1 for a terminal object, this also not a specific approach. It can also be confusing when a category has a "zero" object that is not initial (as in **Ring**/**Rig**, where the zero ring/rig is terminal).
-
-+++ {"tags": []}
-
-# 6.6 Summary and further reading
-
-+++
-
-![x](raster/2023-09-11T00-43-47.png)
-
-+++
-
-![x](raster/2023-09-11T00-44-20.png)
