@@ -4,3 +4,6 @@
 [submodule "gitlab/applied-category-theory/seven-sketches"]
 	path = gitlab/applied-category-theory/seven-sketches
 	url = git@gitlab.com:applied-category-theory/seven-sketches.git
+[submodule "github/OpenLogicProject/OpenLogic"]
+	path = github/OpenLogicProject/OpenLogic
+	url = https://github.com/davidvandebunte/OpenLogic.git
