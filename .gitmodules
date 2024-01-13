@@ -3,7 +3,7 @@
 	url = https://github.com/halogenica/beautifulhugo.git
 [submodule "gitlab/applied-category-theory/seven-sketches"]
 	path = gitlab/applied-category-theory/seven-sketches
-	url = https://@gitlab.com/applied-category-theory/seven-sketches.git
+	url = https://gitlab.com/applied-category-theory/seven-sketches.git
 [submodule "github/OpenLogicProject/OpenLogic"]
 	path = github/OpenLogicProject/OpenLogic
 	url = https://github.com/davidvandebunte/OpenLogic.git
