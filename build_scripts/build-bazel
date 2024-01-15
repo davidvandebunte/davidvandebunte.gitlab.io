@@ -5,6 +5,7 @@ if [ -z ${GITLAB_CI+x} ]; then
     echo "Building locally"
 else
     python3 -m dvc pull jb/tar/notes/ssc/raster
+    python3 -m dvc pull jb/jupyter_cache
 fi
 
 python3 -m dvc pull jb/rethinking/image.tar
