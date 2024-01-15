@@ -20,6 +20,3 @@ fi
 
 ./build_scripts/build-bazel
 ./build-shared-notes
-
-cd public
-./start-nginx
