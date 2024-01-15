@@ -29,34 +29,3 @@ pkg_tar(
     srcs = [":raw_cache"],
     owner = "1000.100",
 )
-
-# Construct a layer with the jupyter book cache
-load("@io_bazel_rules_docker//container:container.bzl", "container_layer")
-container_layer(
-    name="cache_layer",
-    directory = "/tmp/_build/.jupyter_cache",
-    tars = [":cache_tar"],
-)
-
-# Construct a layer with the jupyter book md, yml, etc. sources
-container_layer(
-    name="source_layer",
-    directory = "/home/jovyan/work",
-    tars = ["//jb/tar:jb_tar"],
-)
-
-# Construct an image with the jupyter cache and jupyter book sources, with user jovyan
-load("@io_bazel_rules_docker//container:container.bzl", "container_image")
-container_image(
-    name = "datascience_with_source",
-    base = "@install_rethinking//image",
-    layers = [":cache_layer", ":source_layer"],
-)
-
-load("@io_bazel_rules_docker//docker/util:run.bzl", "container_run_and_extract")
-container_run_and_extract(
-    name = "extract_build_book",
-    commands = ["./work/jb-build"],
-    extract_file = "/tmp/_build",
-    image = ":datascience_with_source.tar",
-)
