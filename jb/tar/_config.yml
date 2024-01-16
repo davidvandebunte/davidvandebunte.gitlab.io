@@ -9,6 +9,7 @@ only_build_toc_files: true
 # See jupyterbook.org/content/execute.html
 execute:
   execute_notebooks: cache
+  cache: /jupyter_cache
   timeout: -1
 
 # See jupyterbook.org/customize/config.html#add-a-link-to-your-repository

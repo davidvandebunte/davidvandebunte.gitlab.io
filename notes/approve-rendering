@@ -2,6 +2,7 @@
 set -o errexit -o nounset -o xtrace
 
 dvc add jb/tar/notes/ssc/raster
+dvc add jb/jupyter_cache
 
 # Push it all.
 dvc push

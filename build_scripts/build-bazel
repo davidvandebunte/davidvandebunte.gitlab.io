@@ -3,11 +3,30 @@ set -x -o errexit -o nounset
 
 if [ -z ${GITLAB_CI+x} ]; then
     echo "Building locally"
+
+    ./scripts/install-bazelisk
+    ./bazelisk build //jb:cache_tar
 else
     python3 -m dvc pull jb/tar/notes/ssc/raster
+    python3 -m dvc pull jb/jupyter_cache
+
+    # BOTH global.db and the directory it lives in must be writable. It's not clear why they are
+    # locally writable by default, not in GitLab CI/CD. See:
+    # - https://stackoverflow.com/a/3330616/622049
+    find jb/jupyter_cache/ | xargs chmod 777
+
+    python3 -m dvc pull jb/rethinking/image.tar
+    docker load -i ./jb/rethinking/image.tar
 fi
 
-python3 -m dvc pull jb/rethinking/image.tar
-./scripts/install-bazelisk
-./bazelisk build //jb:extract_build_book
-cp -r "bazel-bin/jb/extract_build_book/tmp/_build/html" public/executable-notes
+cd jb
+    docker run --name build_jb \
+        --env NB_USER="${USER:=xxx}" \
+        --mount type=bind,source=$(pwd)/jupyter_cache,target=/jupyter_cache \
+        --volume "$(pwd)"/tar:/home/jovyan/work \
+        --entrypoint /bin/bash \
+        --workdir /home/jovyan/work \
+        install_rethinking:latest /home/jovyan/work/jb-build
+cd -
+docker cp build_jb:/tmp/_build/html public/executable-notes
+docker rm build_jb
