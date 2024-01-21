@@ -61,7 +61,7 @@ To be consistent, it's probably best to only draw the smallest open sets that yo
 Said another way, we don't draw any open sets that are "covered" by other open sets (the "open covers") except those open covers that can be produced by a single (the same) open set. We *may* draw an open set that contains an open set. Said another way, in the sublattice (or preordered set) that defines the topology we draw the bottom (leaf) elements first and then keep drawing up any elements that don't have two arrows pointing into them. Notice these arrows represent "inclusion" morphisms, so we don't draw any sets that "include" two other sets (notably, the same arrows in the opposite category are the restriction morphisms). The topology on the left from this perspective:
 
 ```{code-cell} ipython3
-save_url = "https://q.uiver.app/#q=WzAsNixbMSwzLCJcXGVtcHR5Il0sWzEsMiwiXFx7QVxcfSJdLFswLDIsIlxce0JcXH0iXSxbMCwxLCJcXHtBLEJcXH0iXSxbMSwxLCJcXHtBLENcXH0iXSxbMSwwLCJcXHtBLEIsQ1xcfSJdLFswLDJdLFswLDFdLFsxLDNdLFsyLDNdLFszLDVdLFs0LDVdLFsxLDRdXQ=="
+save_url = "https://q.uiver.app/#q=WzAsNixbMSwzLCJcXGVtcHR5Il0sWzEsMiwiXFx7QVxcfSJdLFswLDIsIlxce0JcXH0iXSxbMCwxLCJcXHtBLEJcXH0iXSxbMiwxLCJcXHtBLENcXH0iXSxbMSwwLCJcXHtBLEIsQ1xcfSJdLFswLDJdLFswLDFdLFsxLDNdLFsyLDNdLFszLDVdLFs0LDVdLFsxLDRdXQ=="
 IFrame(src=f"{save_url}&embed", width="423", height="423")
 ```
 

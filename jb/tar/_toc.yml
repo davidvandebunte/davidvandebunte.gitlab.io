@@ -149,6 +149,7 @@ parts:
       - file: notes/ssc/improve.md
         sections:
         - file: notes/ssc/exercise-7-11.md
+        - file: notes/ssc/exercise-7-32.md
         - file: notes/ssc/7-3.md
         - file: notes/ssc/connected-space.md
         - file: notes/ssc/7-4.md
