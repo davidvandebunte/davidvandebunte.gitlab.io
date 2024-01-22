@@ -15,6 +15,7 @@ parts:
         - file: notes/ssc/1-4.md
       - file: notes/ssc/2-0.md
         sections:
+        - file: notes/ssc/2-1.md
         - file: notes/ssc/2-2.md
         - file: notes/ssc/2-3.md
         - file: notes/ssc/2-4.md
@@ -148,6 +149,9 @@ parts:
       - file: notes/improve-ssc.md
       - file: notes/ssc/improve.md
         sections:
+        - file: notes/ssc/exercise-2-5.md
+        - file: notes/ssc/exercise-2-8.md
+        - file: notes/ssc/exercise-2-20.md
         - file: notes/ssc/exercise-7-11.md
         - file: notes/ssc/exercise-7-32.md
         - file: notes/ssc/7-3.md
