@@ -15,8 +15,28 @@ parts:
         - file: notes/ssc/1-4.md
       - file: notes/ssc/2-0.md
         sections:
+        - file: notes/ssc/2-1.md
         - file: notes/ssc/2-2.md
+          sections:
+          - file: notes/ssc/exercise-2-5.md
+          - file: notes/ssc/exercise-2-8.md
+          - file: notes/ssc/exercise-2-20.md
+          - file: notes/ssc/exercise-2-21.md
+          - file: notes/ssc/exercise-2-29.md
+          - file: notes/ssc/exercise-2-33.md
+          - file: notes/ssc/exercise-2-34.md
+          - file: notes/ssc/exercise-2-35.md
+          - file: notes/ssc/exercise-2-36.md
+          - file: notes/ssc/exercise-2-39.md
+          - file: notes/ssc/exercise-2-40.md
+          - file: notes/ssc/exercise-2-43.md
+          - file: notes/ssc/exercise-2-44.md
+          - file: notes/ssc/exercise-2-45.md
         - file: notes/ssc/2-3.md
+          sections:
+          - file: notes/ssc/exercise-2-61.md
+          - file: notes/ssc/exercise-2-62.md
+          - file: notes/ssc/exercise-2-63.md
         - file: notes/ssc/2-4.md
         - file: notes/ssc/2-5.md
       - file: notes/ssc/3-0.md
@@ -149,7 +169,10 @@ parts:
       - file: notes/ssc/improve.md
         sections:
         - file: notes/ssc/exercise-7-11.md
+        - file: notes/ssc/exercise-7-32.md
+        - file: notes/ssc/exercise-7-34.md
         - file: notes/ssc/7-3.md
+        - file: notes/ssc/connected-space.md
         - file: notes/ssc/7-4.md
         - file: notes/ssc/7-5.md
         - file: notes/ssc/7-6.md

@@ -7,3 +7,6 @@
 [submodule "github/OpenLogicProject/OpenLogic"]
 	path = github/OpenLogicProject/OpenLogic
 	url = https://github.com/davidvandebunte/OpenLogic.git
+[submodule "jb/jupyter_cache"]
+	path = jb/jupyter_cache
+	url = ../private-jupyter-cache.git
