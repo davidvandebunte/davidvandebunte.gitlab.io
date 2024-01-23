@@ -22,13 +22,13 @@ kernelspec:
 +++
 
 Using reflexivity, we have that $u \leq u$. Add this to the first of the equations in (2.16), using
-`(a)` in the definition of a symmetrical monoidal preorder:
+`(a)` (monotonicity) in the definition of a symmetrical monoidal preorder:
 
 $$
 \begin{align} \\
 t & \leq v + w \\
 u & \leq u \\
-t + u & \leq u + v + w \\
+t + u & \leq (v + w) + u \\
 \end{align}
 $$
 
@@ -38,7 +38,7 @@ $$
 \begin{align} \\
 w + u & \leq x + z \\
 v & \leq v \\
-v + w + u & \leq v + x + z \\
+v + (w + u) & \leq v + (x + z) \\
 \end{align}
 $$
 
@@ -48,10 +48,12 @@ $$
 \begin{align} \\
 v + x & \leq y \\
 z & \leq z \\
-v + x + z & \leq y + z \\
+(v + x) + z & \leq y + z \\
 \end{align}
 $$
 
-Using transitivity, we can combine all three of these equations to get Equation (2.18) in the text.
+Using associativity and transitivity, we can combine all three of these equations to get Equation (2.18) in the text.
+
++++
 
 To answer `3.`, the symmetry axiom does not need to be invoked because wires do not cross.
