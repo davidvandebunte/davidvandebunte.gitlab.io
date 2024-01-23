@@ -345,3 +345,9 @@ When we expand to thinking in terms of the Curry–Howard–Lambek correspondenc
 Notice this symbol is used for both syntactic consequence (see [Logical consequence § Syntactic consequence](https://en.wikipedia.org/wiki/Logical_consequence#Syntactic_consequence)) and [Adjoint functors](https://en.wikipedia.org/wiki/Adjoint_functors). Is this just a coincidence? It seems likely that syntactic consequence is part of an adjunction (based on the syntax alone, it's the right adjoint).
 
 Some evidence for this is that the propositions we can derive as being true given some propositions that we assume are generally not speaking not equivalent to our assumed propositions. Since the left side of the syntactic consequence operator takes a set of propositions, this may be the upper closure operation $A^{↑X}$ defined in [Upper set](https://en.wikipedia.org/wiki/Upper_set).
+
+
+## Open/closed set as proposition
+
+
+Could you see a set being defined as "open" or "closed" like a proposition in the language of modal logic? That is, $V(p)$ assigns certain worlds to every proposition. Those sets/worlds that are open could be represented by the letter `o` so that $V(o)$ picks them out.
