@@ -31,6 +31,7 @@ parts:
           - file: notes/ssc/exercise-2-40.md
           - file: notes/ssc/exercise-2-43.md
           - file: notes/ssc/exercise-2-44.md
+          - file: notes/ssc/exercise-2-45.md
         - file: notes/ssc/2-3.md
           sections:
           - file: notes/ssc/exercise-2-61.md
