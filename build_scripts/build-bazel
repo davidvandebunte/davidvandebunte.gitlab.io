@@ -8,6 +8,12 @@ if [ -z ${GITLAB_CI+x} ]; then
     ./bazelisk build //jb:cache_tar
 else
     python3 -m dvc pull jb/tar/notes/ssc/raster
+
+    # BOTH global.db and the directory it lives in must be writable. It's not clear why they are
+    # locally writable by default, not in GitLab CI/CD. See:
+    # - https://stackoverflow.com/a/3330616/622049
+    find jb/jupyter_cache/ | xargs chmod 777
+
     python3 -m dvc pull jb/rethinking/image.tar
     docker load -i ./jb/rethinking/image.tar
 fi
