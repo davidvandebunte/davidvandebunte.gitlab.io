@@ -23,6 +23,10 @@ parts:
           - file: notes/ssc/exercise-2-20.md
           - file: notes/ssc/exercise-2-21.md
           - file: notes/ssc/exercise-2-29.md
+          - file: notes/ssc/exercise-2-33.md
+          - file: notes/ssc/exercise-2-34.md
+          - file: notes/ssc/exercise-2-35.md
+          - file: notes/ssc/exercise-2-36.md
         - file: notes/ssc/2-3.md
           sections:
           - file: notes/ssc/exercise-2-61.md
