@@ -9,5 +9,7 @@ docker build \
     --no-cache \
     - < "$tar_fpath" > build.log
 docker save -o image.tar install_rethinking
-dvc add build.log image.tar
+python3 -m dvc add build.log image.tar
+# Warning: This takes 25 minutes to push
+# python3 -m dvc push
 git ci -m "Build install_rethinking docker image on $(hostname)"
