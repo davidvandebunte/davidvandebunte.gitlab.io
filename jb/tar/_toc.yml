@@ -34,11 +34,19 @@ parts:
           - file: notes/ssc/exercise-2-45.md
         - file: notes/ssc/2-3.md
           sections:
+          - file: notes/ssc/exercise-2-50.md
           - file: notes/ssc/exercise-2-61.md
           - file: notes/ssc/exercise-2-62.md
           - file: notes/ssc/exercise-2-63.md
         - file: notes/ssc/2-4.md
         - file: notes/ssc/2-5.md
+          sections:
+          - file: notes/ssc/exercise-2-82.md
+          - file: notes/ssc/exercise-2-84.md
+          - file: notes/ssc/exercise-2-93.md
+          - file: notes/ssc/exercise-2-94.md
+          - file: notes/ssc/exercise-2-104.md
+          - file: notes/ssc/exercise-2-105.md
       - file: notes/ssc/3-0.md
         sections:
         - file: notes/ssc/3-1.md
