@@ -1,4 +1,4 @@
 outs:
-- md5: 898930c17e31b205958395057fd60ec4
-  size: 4355458
+- md5: d41d8cd98f00b204e9800998ecf8427e
+  size: 0
   path: build.log

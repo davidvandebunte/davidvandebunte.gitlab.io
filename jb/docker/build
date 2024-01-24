@@ -4,5 +4,6 @@ set -o errexit -o nounset -o xtrace
 docker build --no-cache -t install_conda_pip - < Dockerfile > build.log
 docker save -o image.tar install_conda_pip
 python3 -m dvc add build.log image.tar
-python3 -m dvc push
+# Warning: This takes 10-20 minutes to push
+# python3 -m dvc push
 git ci -m "Build jb docker image on $(hostname)"
