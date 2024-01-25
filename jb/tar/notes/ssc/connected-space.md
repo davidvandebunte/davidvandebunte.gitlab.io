@@ -4,22 +4,18 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.14.1
+    jupytext_version: 1.16.1
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
   name: python3
 ---
 
-+++ {"tags": []}
-
 # Connected space
 
 ```{code-cell} ipython3
 from IPython.display import IFrame
 ```
-
-+++ {"tags": []}
 
 ## Drawing topologies
 
@@ -65,8 +61,6 @@ save_url = "https://q.uiver.app/#q=WzAsNixbMSwzLCJcXGVtcHR5Il0sWzAsMiwiXFx7QVxcf
 IFrame(src=f"{save_url}&embed", width="423", height="423")
 ```
 
-+++ {"tags": []}
-
 ## Drawing topologies with color
 
 +++
@@ -77,7 +71,7 @@ In some cases it's necessary to be able to quickly see what sets are open, which
 
 ![x](topology-with-color.svg)
 
-+++ {"tags": []}
++++
 
 ## Define **connected space**
 
@@ -93,7 +87,7 @@ We define [Connected space](https://en.wikipedia.org/wiki/Connected_space) in a 
 
 The arrows in the preceding diagram demonstrate the [Specialization (pre)order](https://en.wikipedia.org/wiki/Specialization_(pre)order) for these topologies, which demonstrates some of the concepts in [Finite topological space § Connectivity](https://en.wikipedia.org/wiki/Finite_topological_space#Connectivity). The [Clopen sets](https://en.wikipedia.org/wiki/Clopen_set) are colored purple.
 
-+++ {"tags": []}
++++
 
 ## Review of Chapter 1
 
