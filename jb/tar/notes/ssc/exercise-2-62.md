@@ -28,6 +28,10 @@ def prove_v_category(df, mon_prod, preorder_rel):
 
 +++
 
+See also [Exercise 2.35](exercise-2-35.md).
+
++++
+
 ![x](./ssc-exercise-2-62.svg)
 
 The first property requires that the diagonal be {car, boat, foot}:

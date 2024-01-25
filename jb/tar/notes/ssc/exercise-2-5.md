@@ -21,8 +21,11 @@ kernelspec:
 
 This won't work, because the monoidal product doesn't satisfy requirement `(a)`. Consider the
 example:
+
++++
+
 $$
-\begin{align} \\
+\begin{align}
 x_1 & = -2 \\
 x_2 & = -2 \\
 y_1 & = 1 \\
