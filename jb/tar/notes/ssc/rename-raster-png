@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+old_name=${1}
+new_name=${2}
+mv raster/${old_name}.png raster/${new_name}.png | true
+git grep -l ${old_name} | xargs sed -i "s/${old_name}/${new_name}/g"
