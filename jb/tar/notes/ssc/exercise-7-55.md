@@ -4,25 +4,23 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.14.1
+    jupytext_version: 1.16.1
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
   name: python3
 ---
 
-+++ {"tags": []}
-
-# Exercise 7.11
+# Exercise 7.55
 
 +++
 
-![x](raster/2023-09-13T00-28-26.png)
-
-+++ {"tags": []}
-
-## What must we show?
+![x](raster/2023-11-24T15-41-06.png)
 
 +++
 
-## What do we have?
+Answering via a drawing:
+
++++
+
+![x](exercise-7-55.svg)
