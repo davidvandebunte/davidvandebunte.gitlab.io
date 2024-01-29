@@ -351,3 +351,11 @@ Some evidence for this is that the propositions we can derive as being true give
 
 
 Could you see a set being defined as "open" or "closed" like a proposition in the language of modal logic? That is, $V(p)$ assigns certain worlds to every proposition. Those sets/worlds that are open could be represented by the letter `o` so that $V(o)$ picks them out.
+
+
+## Kripke semantics
+
+
+Take the relational models of [Kripke semantics](https://en.wikipedia.org/wiki/Kripke_semantics). The $R$ (accessibility relation) is clearly the "category" because you can draw a relation in one way or another as a bunch of arrows, and the $W$ are the objects in the category. The relation must be reflexive and transitive (T and 4) for it to be a category, however.
+
+Read the symbol ⊩ as "forces" (the language of the Unicode standard). Per [List of logic symbols](https://en.wikipedia.org/wiki/List_of_logic_symbols), it seems to only be used in modal logic.
