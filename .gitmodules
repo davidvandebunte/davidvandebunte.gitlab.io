@@ -10,3 +10,6 @@
 [submodule "jb/jupyter_cache"]
 	path = jb/jupyter_cache
 	url = ../private-jupyter-cache.git
+[submodule "jb/tar/notes/ssc/raster"]
+	path = jb/tar/notes/ssc/raster
+	url = ../ssc-raster.git
