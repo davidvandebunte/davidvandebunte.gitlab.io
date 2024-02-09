@@ -187,6 +187,7 @@ parts:
         - file: notes/ssc/exercise-7-52.md
         - file: notes/ssc/exercise-7-53.md
         - file: notes/ssc/exercise-7-55.md
+        - file: notes/ssc/exercise-7-59.md
         - file: notes/ssc/7-5.md
         - file: notes/ssc/7-6.md
       - file: notes/logic.md

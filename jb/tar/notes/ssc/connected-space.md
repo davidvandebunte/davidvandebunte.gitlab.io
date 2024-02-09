@@ -52,7 +52,7 @@ Unfortunately this drawing strategy isn't always going to produce the same drawi
 
 +++
 
-To be consistent, it's probably best to only draw the smallest open sets that you can, that still imply the other open sets. Said another way, draw only those open sets that allow you to infer all other open sets via the rule that the union of any open sets is also an open set. In general, this should lead to a less-cluttered drawing.
+To be consistent, it's probably best to only draw the smallest open sets that you can, that still imply the other open sets. Said another way, draw only those open sets that allow you to infer all other open sets via the rule that the union of any open sets is also an open set. In general, this should lead to a less-cluttered drawing. That is, draw only the [Base (topology)](https://en.wikipedia.org/wiki/Base_(topology)).
 
 Said another way, we don't draw any open sets that are "covered" by other open sets (the "open covers") except those open covers that can be produced by a single (the same) open set. We *may* draw an open set that contains an open set. Said yet another way, in the sublattice (or preordered set) that defines the topology we draw the bottom (leaf) elements first and then keep drawing up any elements that don't have two arrows pointing into them. Notice these arrows represent "inclusion" morphisms, so we don't draw any sets that "include" two other sets (notably, the same arrows in the opposite category are the restriction morphisms). The topology on the left from this perspective:
 
@@ -65,7 +65,9 @@ IFrame(src=f"{save_url}&embed", width="423", height="423")
 
 +++
 
-In some cases it's necessary to be able to quickly see what sets are open, which are closed, and which are both. It's reasonable to use color to indicate these states, to avoid cluttering the diagram too much. We'll red for open, blue for closed, and purple for both (red and blue mix to make purple in subtractive color models). An example topology with this scheme:
+In some cases it's necessary to be able to quickly see what sets are open, which are closed, and which are both. It's reasonable to use color to indicate these states, to avoid cluttering the diagram too much.
+
+We'll opt to use yellow for open, orange for closed, and green for both. These are simply the remaining colors in the traditional RYB model (see [Secondary color § Traditional painting (RYB)](https://en.wikipedia.org/wiki/Secondary_color#Traditional_painting_(RYB))), assuming we're already using blue/red for left/right adjoints and purple for natural transformations. An example topology with this scheme:
 
 +++
 
@@ -85,7 +87,7 @@ We define [Connected space](https://en.wikipedia.org/wiki/Connected_space) in a 
 
 +++
 
-The arrows in the preceding diagram demonstrate the [Specialization (pre)order](https://en.wikipedia.org/wiki/Specialization_(pre)order) for these topologies, which demonstrates some of the concepts in [Finite topological space § Connectivity](https://en.wikipedia.org/wiki/Finite_topological_space#Connectivity). The [Clopen sets](https://en.wikipedia.org/wiki/Clopen_set) are colored purple.
+The arrows in the preceding diagram demonstrate the [Specialization (pre)order](https://en.wikipedia.org/wiki/Specialization_(pre)order) for these topologies, which demonstrates some of the concepts in [Finite topological space § Connectivity](https://en.wikipedia.org/wiki/Finite_topological_space#Connectivity). The [Clopen sets](https://en.wikipedia.org/wiki/Clopen_set) are colored green.
 
 +++
 
