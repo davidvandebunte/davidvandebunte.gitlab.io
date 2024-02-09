@@ -6,7 +6,7 @@
 
 It may seem like only logicians would ignore truth and focus only on form. When else don't we care about truth, however?
 
-When training a deep learning model, we often start with dummy data and just check that we *can* fit to something (e.g. images from some other dataset). If we can't, then we likely coded something wrong. Sometimes we are just interested in learning a libary (e.g. PyTorch) rather than getting it to do something useful.
+When training a deep learning model, we often start with dummy data and just check that we *can* fit to something (e.g. images from some other dataset). If we can't, then we likely coded something wrong. Sometimes we are just interested in learning a library (e.g. PyTorch) rather than getting it to do something useful.
 
 In Bayesian statistics, similarly, we generate data from our assumed data-generating distribution and then try to fit our model to it to confirm we can reproduce the model parameters.
 
@@ -18,13 +18,30 @@ Do you only care about valid arguments, not sound arguments? Yes, when you're tr
 ## Chp 12: Semantic concepts
 
 
-How do you read A → B? Not in general, but in a context where it means [Material conditional](https://en.wikipedia.org/wiki/Material_conditional). See [Chapter 12 Semantic concepts § 12.6](https://forallx.openlogicproject.org/html/Ch12.html#S6) for a suggestion to avoid "implies" because of both the causal and historical issues. How about always reading it "backwards" and putting "or not" in the middle? So you'd read "A → B" as "B or not A" in these situations. That makes you read "(A → B) → A" as "A or not (B or not A)" (can't really avoid the parentheses) which makes it rather obvious how it reduces to "A or not B" assuming the law of the excluded middle. You can then read Pierce's law i.e. ((A → B) → A) → A as "A or not (A or not B)" which reduces to the law of the excluded middle (with an "or B" at the end that doesn't hurt anything).
+How do you read A → B? Not in general, but in a context where it means [Material conditional](https://en.wikipedia.org/wiki/Material_conditional).
+
+
+### Or not
+
+
+How about always reading it "backwards" and putting "or not" in the middle? So you'd read "A → B" as "B or not A" in these situations. That makes you read "(A → B) → A" as "A or not (B or not A)" (can't really avoid the parentheses) which makes it rather obvious how it reduces to "A or not B" assuming the law of the excluded middle. You can then read Pierce's law i.e. ((A → B) → A) → A as "A or not (A or not B)" which reduces to the law of the excluded middle (with an "or B" at the end that doesn't hurt anything).
 
 This strategy is similar to always applying [Material implication (rule of inference)](https://en.wikipedia.org/wiki/Material_implication_(rule_of_inference)), but also flipping the disjunction. Reading A → B as "not A or B" is also acceptable, but it seems more intuitive to replace a single symbol (→) with a pair of words than adding two words in different spots. It also avoids the potential misinterpretation of "not A or B" as "not (A or B)" which is something completely different (and you can't express parentheses when you're talking without a lot of extra work).
 
 You could also replace A → B with A ≤ B if you don't mind seeing false as less than true.
 
+
+### Forces
+
+
 Alternatively one could read A → B as "A forces B" (in the sense of turning a light on) which is a bit shorter and read in the right direction, but harder to break down. It may also imply that A is the only forcer of B.
+
+
+### Entails
+
+
+See [Chapter 12 Semantic concepts § 12.6](https://forallx.openlogicproject.org/html/Ch12.html#S6) for a suggestion to avoid "implies" for ⊨ because of both the causal and historical issues.
+
 
 How should one read ⊨? It seems like the best word is "entails" because it's a rather technical term. The author suggests that he may use "implies" to mean entails, but in practice almost never does. It's likely better to never use the word "implies" because of its present ambiguity. In particular, many people would read "A implies B" to mean that A not being true also implies that B is not true (or is at least a clue that indicates it may not be true). There are no clues in this domain; everything is true or false.
 
@@ -34,16 +51,107 @@ Consider the following simple example argument. While A ∨ B entails A ∨ B �
 ![x](./fax-chp12-entailment.svg)
 
 
+### If
+
+
+One can read A → B backwards to get "B if A" which appears to match a language construct of Python:
+
+```python
+x = True
+y = True if x else False
+```
+
+However, `y = True if x` produces an exception. This is because we're constructing a boolean, not taking a valuation.
+
+
+### Only if
+
+
+Per [paradoxes-material.pdf](https://builds.openlogicproject.org/content/counterfactuals/introduction/paradoxes-material.pdf), using "only if" is a better option than "implies" because of the noted issues. For example, let's say being good at basketball (B) requires one to be tall (T), and the converse does not hold. So you're good at basketball *only if* you're tall i.e. B → T. This naturally extends to predicate logic so that B → T if B(x) → T(x) for all x.
+
+
+This also seems to work if two statements are equivalent. If you're Canadian (C) you're a citizen of Canada (U), and if you're a citizen of Canada you're Canadian. So we have that both C → U and U → C, and it's still fair to say that you're Canadian only if you're a citizen of Canada and you're a citizen of Canada only if you're Canadian.
+
+
+The "only if" language continues to work if you're thinking in terms of intuitionistic or constructivist mathematics, or the Curry-Howard isomorphism. To say P → Q in that context means that you can construct a P only if you can construct a Q, or that there's some function P → Q that can give you a Q only if you give it a P.
+
+
+The language breaks down if you start to think causally. If A is that the Nazis won WW2, then A → B is vacuously true. But to say that Nazis won WW2 only if 2 + 2 = 4 is not intuitive. See similar comments in [Boxes and Diamonds § Paradoxes of the Material Conditional](https://bd.openlogicproject.org/bd-screen.pdf#section.10.2).
+
+
+### Necessary and sufficient
+
+
+See also [Necessity and sufficiency](https://en.wikipedia.org/wiki/Necessity_and_sufficiency).
+
+When this article says that Q is "necessary" for P if P → Q, what it means is that Q must hold (is necessary) for P to also hold. You can't have P being true (holding) unless Q also holds. When you want to use the word "necessary" you must read P → Q backwards, however (similar to "Q or not P").
+
+The word "sufficient" reads in the forward direction (P is sufficient for Q), at least. Perhaps the article should be named "Sufficiency and necessity" to reflect this.
+
+
+The language breaks down if you start to think causally. Is it the moon being made of green cheese sufficient for 2 + 2 = 4?. Most would say no.
+
+
+### If statement
+
+
+The "if statement" of [Conditional (computer programming)](https://en.wikipedia.org/wiki/Conditional_(computer_programming)#If%E2%80%93then(%E2%80%93else)) is unfortunately a false friend in this context. Most often, it's used for control flow.
+
+
+However, it could be used to create a function from the booleans to some set:
+
+```python
+x = True
+y = 3 if x else 4
+```
+
+```python
+x = True
+y = "yes" if x else "no"
+```
+
+When used for control flow, it could be replaced with a function that returns a function:
+
+```python
+def clean_up():
+    pass
+
+def keep_working():
+    pass
+
+messy = True
+z = clean_up if messy else keep_working
+```
+
+See also [Anti-IF Programming](https://www.antiifprogramming.com/about-the-anti-if.php) and [Destroy All Ifs](https://degoes.net/articles/destroy-all-ifs).
+
+
 ## bussproofs prooftree
 
 
-See [Supported TeX/LaTeX commands — MathJax 3.2 documentation § Environments](https://docs.mathjax.org/en/latest/input/tex/macros/index.html#environments) for the prooftree environment, and more documentation under [bussproofs — MathJax 3.2 documentation](https://docs.mathjax.org/en/latest/input/tex/extensions/bussproofs.html). At the moment, you can't get this to work. Right click on the following example to get our MathJax version:
+See [Supported TeX/LaTeX commands — MathJax 3.2 documentation § Environments](https://docs.mathjax.org/en/latest/input/tex/macros/index.html#environments) for the prooftree environment, and more documentation under [bussproofs — MathJax 3.2 documentation](https://docs.mathjax.org/en/latest/input/tex/extensions/bussproofs.html). The example from that page:
 
-$$\require{enclose}
-\enclose{circle}{x}
+
 $$
-
-It looks like it's 2.7.9 at the moment. Even [The TeX/LaTeX Extension List — MathJax 3.0 documentation](https://docs.mathjax.org/en/v3.0-latest/input/tex/extensions/) doesn't have bussproofs. It looks like the examples on [Motivating Examples — Jupyter Notebook 7.0.6 documentation](https://jupyter-notebook.readthedocs.io/en/stable/examples/Notebook/Typesetting%20Equations.html) are 3.2.2.
+\begin{prooftree}
+\AxiomC{}
+\RightLabel{Hyp$^{1}$}
+\UnaryInfC{$P$}
+\AXC{$P\to Q$}
+\RL{$\to_E$}
+\BIC{$Q^2$}
+\AXC{$Q\to R$}
+\RL{$\to_E$}
+\BIC{$R$}
+\AXC{$Q$}
+\RL{Rit$^2$}
+\UIC{$Q$}
+\RL{$\wedge_I$}
+\BIC{$Q\wedge R$}
+\RL{$\to_I$$^1$}
+\UIC{$P\to Q\wedge R$}
+\end{prooftree}
+$$
 
 
 ## Monotone valuation functions
@@ -299,9 +407,7 @@ See [Chapter 8 Use and mention ‣ Part II Truth-functional logic ‣ forall x: 
 ## Necessary and sufficient
 
 
-See [Glossary of mathematical jargon § Proof terminology](https://en.wikipedia.org/wiki/Glossary_of_mathematical_jargon#Proof_terminology), which points to [Necessity and sufficiency](https://en.wikipedia.org/wiki/Necessity_and_sufficiency). Although this is taken to mean iff, you should also be skeptical of [If and only if](https://en.wikipedia.org/wiki/If_and_only_if), being based on the [Material conditional](https://en.wikipedia.org/wiki/Material_conditional).
-
-If you're looking at [Modal logic](https://en.wikipedia.org/wiki/Modal_logic), you'll see it uses the word "necessity" in essentially a completely different way.
+See [Glossary of mathematical jargon § Proof terminology](https://en.wikipedia.org/wiki/Glossary_of_mathematical_jargon#Proof_terminology), which points to [Necessity and sufficiency](https://en.wikipedia.org/wiki/Necessity_and_sufficiency). If you're looking at [Modal logic](https://en.wikipedia.org/wiki/Modal_logic), you'll see it uses the word "necessity" in essentially a completely different way.
 
 
 ## ForAllX improvements
@@ -356,6 +462,51 @@ Could you see a set being defined as "open" or "closed" like a proposition in th
 ## Kripke semantics
 
 
-Take the relational models of [Kripke semantics](https://en.wikipedia.org/wiki/Kripke_semantics). The $R$ (accessibility relation) is clearly the "category" because you can draw a relation in one way or another as a bunch of arrows, and the $W$ are the objects in the category. The relation must be reflexive and transitive (T and 4) for it to be a category, however.
+Take the relational models of [Kripke semantics](https://en.wikipedia.org/wiki/Kripke_semantics). The $R$ (accessibility relation) is clearly the "category" because you can draw a relation in one way or another as a bunch of arrows, and the $W$ are the objects in the category. The relation must be reflexive and transitive (T and 4) for it to be a category, however. The T stands for the truth axiom in epistemic modal logic.
 
-Read the symbol ⊩ as "forces" (the language of the Unicode standard). Per [List of logic symbols](https://en.wikipedia.org/wiki/List_of_logic_symbols), it seems to only be used in modal logic.
+Still, this means much of category theory must correspond to modal frames with certain properties. If you have a symmetric relation (think of a symmetric monoidal preorder) then you add a B (for Brouwer).
+
+
+## Entails and forces
+
+
+Notice the similarity between the symbol [⊨](https://en.wikipedia.org/wiki/Double_turnstile "Double turnstile") ("double right turnstile" in Unicode) and the symbol [⊩](https://en.wikipedia.org/w/index.php?title=%E2%8A%A9&redirect=no) ("forces" in Unicode). Per [List of logic symbols](https://en.wikipedia.org/wiki/List_of_logic_symbols), it seems to only be used in modal logic, but per [Forcing (mathematics)](https://en.wikipedia.org/wiki/Forcing_(mathematics)#Forcing) it has nothing to do with modal logic. Per [Boxes and Diamonds](https://bd.openlogicproject.org/bd-screen.pdf) it should be read as making a formula true in either a particular world or all worlds (say "world" rather than "possible worlds" unless you're in the alethic interpretation).
+
+
+## Is the modal frame the sheaf morphism for true?
+
+
+The modal frame decides what is possible.
+
+
+## Possible world (alethic) semantics
+
+
+See [Possible world](https://en.wikipedia.org/wiki/Possible_world); not to be confused with [Kripke semantics](https://en.wikipedia.org/wiki/Kripke_semantics) (despite the fact that [Modal logic](https://en.wikipedia.org/wiki/Modal_logic) is about possibilities).
+
+See section 7.4.3 of SSC. Looking at the mapping of each element of a section as an aspect of a possible world, in this example each person's opinion is an aspect of the world allowed by $S$.
+
+You can see this as limiting subobjects. In our people example, there are some subsheafs that are not legitimate subsheafs of the people sheaf. For example, if Bob was not alive in 1921 then we cannot provide a subsheaf that says that Bob liked the weather in 1921. That is, we don't allow that possible world.
+
+People can disagree about what's possible, and if something isn't possible in the mind of one person they won't bother to think about it in the models they produce. This could be seen as an optimization as well as a statement about what's real; someone may refuse to think about a particular possibility because it would require rewriting too much of what they already know (e.g. an older adult).
+
+
+The subobjects of the terminal object 1 are essentially a list of all possible worlds.
+
+
+We don't allow some worlds i.e. consider them impossible (level one), we allow some worlds (level two), we allow world aspects (level three). Do we also allow for world aspects to be of different kinds?
+
+Agreement on the overlap for a particular matching family is then agreement on the shared aspects of the possible worlds.
+
+When we consider only a subset U of X we are cutting down all our possible worlds to fewer world aspects. That is, fewer columns in a table (assuming rows are observations, columns are features).
+
+
+Can you see the following as sections over a timeline?:
+
+
+![x](ssc/bob-sections-over-timeline.svg)
+
+
+Can you see the propositions-as-types insight as both propositions and types corresponding to a range of possible worlds? A type (such as an integer) can take on e.g. 2^32 possible values (possible worlds). A proposition (such as whether aristotle is a man) can take on a certain number of possible values (possible worlds) such as true or false. When you extend to Heyting logic, you're allowing for more than two possible worlds.
+
+Throwing away uncertainty then becomes a matter of engineering; how much do you want to throw away? It depends on your meta-uncertainty; perhaps you aren't sure how uncertain you are and so only bother to split the possible worlds into true and false (as a first step).

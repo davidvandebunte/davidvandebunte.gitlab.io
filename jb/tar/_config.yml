@@ -3,6 +3,7 @@
 # See jupyterbook.org/customize/config.html
 title: Executable Notes
 author: David VandeBunte
+copyright: "2024"
 logo: executable-notes.svg
 only_build_toc_files: true
 
