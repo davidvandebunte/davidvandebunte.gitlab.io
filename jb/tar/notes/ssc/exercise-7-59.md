@@ -23,8 +23,10 @@ If we were considering the discrete topology on ℝ (rather than the standard to
 
 For `2.` the complement of ∅ is the full set. The interior of the full set is the full set.
 
-Not only is the pseudocomplement of the pseudocomplement of $U$ not equal to $U$ in this case, we've also selected a $U$ that is not a [Regular open set](https://en.wikipedia.org/wiki/Regular_open_set). That is, it is not equal to the interior of its closure.
+The primary lesson here is that the pseudocomplement of the pseudocomplement of $U$ is not always equal to $U$.
 
-For `3.`, yes.
+We've also selected a $U$ that is not a [Regular open set](https://en.wikipedia.org/wiki/Regular_open_set). That is, it is not equal to the interior of its closure.
 
-For `4.`, no.
+For `3.`, yes. For `4.`, no. From [Heyting algebra](https://en.wikipedia.org/wiki/Heyting_algebra):
+
+> Although the negation operation ¬*a* is not part of the definition, it is definable as *a* → 0. The intuitive content of ¬*a* is the proposition that to assume *a* would lead to a contradiction. The definition implies that *a* ∧ ¬*a* = 0. It can further be shown that *a* ≤ ¬¬*a*, although the converse, ¬¬*a* ≤ *a*, is not true in general, that is, [double negation elimination](https://en.wikipedia.org/wiki/Double_negation_elimination "Double negation elimination") does not hold in general in a Heyting algebra.

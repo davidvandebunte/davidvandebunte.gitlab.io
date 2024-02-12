@@ -23,12 +23,14 @@ Still, it's good to include the number in headings because the PDF still refers 
 
 If this numbering were to change, many references all over the PDF would change. So include *both* the exercise number and a short description. If the PDF ever changes, just remove all the numbering. It'd be faster to just move all the PDF content inline than to update everything. Hopefully the remaining short description will still be unique.
 
+Removing the numbering is when you really create a "fork" rather than just commentary. You don't want to maintain a fork; you want others to be able to relate your comments to the original PDF quickly. You can expect that the original PDF won't have its numbering changed anytime soon, unless the authors upload something new to arxiv.org (which seems unlikely).
+
 Part of the problem here is that you may also want to refer to examples, and those won't have a separate document. You can refer to the whole section, however, and just give a vague description of where to look in it.
 
 Unfortunately URLs are permanent unless you want to create a bunch of redirects. If either you or the author adds more exercises, you'll need to only use the short (and unique) description or risk either clobbering an existing exercise or breaking someone's links. This approach also makes it easier to add new examples in JB (which obviously aren't going to get a number) that fit in with the rest.
 
 ```{code-cell} ipython3
-doc_name = "exercise-7-59.md"
+doc_name = "define-logical-dual.md"
 doc_path = "notes/ssc/" + doc_name
 ```
 
@@ -39,7 +41,7 @@ By copying this same document, we can be confident that all the versions in the 
 ```
 
 ```{code-cell} ipython3
-doc_title = "Exercise 7.59"
+doc_title = "Define logical dual"
 ```
 
 ```{code-cell} ipython3

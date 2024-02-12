@@ -472,6 +472,8 @@ Still, this means much of category theory must correspond to modal frames with c
 
 Notice the similarity between the symbol [⊨](https://en.wikipedia.org/wiki/Double_turnstile "Double turnstile") ("double right turnstile" in Unicode) and the symbol [⊩](https://en.wikipedia.org/w/index.php?title=%E2%8A%A9&redirect=no) ("forces" in Unicode). Per [List of logic symbols](https://en.wikipedia.org/wiki/List_of_logic_symbols), it seems to only be used in modal logic, but per [Forcing (mathematics)](https://en.wikipedia.org/wiki/Forcing_(mathematics)#Forcing) it has nothing to do with modal logic. Per [Boxes and Diamonds](https://bd.openlogicproject.org/bd-screen.pdf) it should be read as making a formula true in either a particular world or all worlds (say "world" rather than "possible worlds" unless you're in the alethic interpretation).
 
+In contrast, [Modal logic](https://en.wikipedia.org/wiki/Modal_logic) doesn't use the "forces" symbol at all.
+
 
 ## Is the modal frame the sheaf morphism for true?
 
