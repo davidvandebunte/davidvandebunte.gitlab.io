@@ -186,6 +186,7 @@ parts:
         - file: notes/ssc/7-4.md
         - file: notes/ssc/exercise-7-52.md
         - file: notes/ssc/exercise-7-53.md
+        - file: notes/ssc/define-logical-dual.md
         - file: notes/ssc/exercise-7-55.md
         - file: notes/ssc/exercise-7-59.md
         - file: notes/ssc/7-5.md
