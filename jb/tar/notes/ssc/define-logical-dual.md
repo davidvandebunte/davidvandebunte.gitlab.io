@@ -37,7 +37,11 @@ Why does this not work? We'll come back to this later, but for now let's address
 
 We'd call the top poset in this example the "dual" (or opposite) of the bottom poset, and vice-versa. Our author uses $P^{op}$ for this dual poset, but an alternative notation is $P^d$, which may be more appropriate when you are using the word "dual" regularly (or just to save a letter).
 
-Let's say instead that we were given these two posets and asked if they are duals. In that case we'd check that there is an [Order isomorphism](https://en.wikipedia.org/wiki/Order_isomorphism) between one and the dual of the other. The drawing of the posets above is a special case of duality showing a *self-dual* poset; there is an order isomorphism between the poset and its own dual. The following poset is not self-dual (derived from [original](https://en.wikipedia.org/wiki/Duality_(order_theory)#/media/File:Duale_Verbaende.svg)):
+Let's say instead that we were given these two posets and asked if they are duals. In that case we'd check that there is an [Order isomorphism](https://en.wikipedia.org/wiki/Order_isomorphism) between one and the dual of the other.
+
++++
+
+The drawing of the posets above is a special case of duality showing a *self-dual* poset; there is an order isomorphism between the poset and its own dual. The following poset is not self-dual (derived from [this example](https://en.wikipedia.org/wiki/Duality_(order_theory)#/media/File:Duale_Verbaende.svg)):
 
 +++
 
@@ -71,7 +75,7 @@ See [Dual (category theory)](https://en.wikipedia.org/wiki/Dual_(category_theory
 
 +++
 
-See [Duality (mathematics) § Duality in logic and set theory](https://en.wikipedia.org/wiki/Duality_(mathematics)#Duality_in_logic_and_set_theory). Let's take our example from above and replace "interior" with the "interior of the complement" and "closure" with "complement of the closure" to get an adjoint pair with the opposite category:
+See [Duality (mathematics) § Duality in logic and set theory](https://en.wikipedia.org/wiki/Duality_(mathematics)#Duality_in_logic_and_set_theory) and let $A$ mean "interior" and $B$ mean "closure" in the first definition. Let's take our example from above and replace "interior" with the "interior of the complement" and "closure" with "complement of the closure" to get an adjoint pair with the opposite category:
 
 +++
 
@@ -80,3 +84,7 @@ See [Duality (mathematics) § Duality in logic and set theory](https://en.wikipe
 +++
 
 Apparently, this is the definition of "dual" the authors of [Interior algebra](https://en.wikipedia.org/wiki/Interior_algebra) had in mind when they described these operators as being dual to each other despite linking to [Duality (order theory)](https://en.wikipedia.org/wiki/Duality_(order_theory)).
+
++++
+
+TODO: This may be completely wrong/unhelpful in its current form. Perhaps just remove it. Think of both $A$ and $A^d$ as maps to an Ω such as Bool instead.
