@@ -15,6 +15,14 @@ In [Chapter 2: The scope of logic](https://forallx.openlogicproject.org/html/Ch2
 Do you only care about valid arguments, not sound arguments? Yes, when you're trying to learn the rules of inference. No, when you're trying to get something "done" in some sense (in this case, discovering truth).
 
 
+## Chp 8: Metalanguage
+
+
+See [forall x § Chapter 8 Use and mention](https://forallx.openlogicproject.org/html/Ch8.html) for the object-language and meta-language distinction also mentioned in [implication in nLab](https://ncatlab.org/nlab/show/implication). See also [Metalogic](https://en.wikipedia.org/wiki/Metalogic), which points to [Use–mention distinction](https://en.wikipedia.org/wiki/Use%E2%80%93mention_distinction).
+
+It seems likely this is related to the issue that often comes up in category theory where you can think of a word (or symbol) as either an arrow, or the thing that the arrow points to. So while "Alice" is a word in English (e.g. an element of the set of words, an arrow into the set of people), Alice is some imaginary person (e.g. an element of the set of people).
+
+
 ## Chp 12: Semantic concepts
 
 
@@ -35,6 +43,11 @@ You could also replace A → B with A ≤ B if you don't mind seeing false as le
 
 
 Alternatively one could read A → B as "A forces B" (in the sense of turning a light on) which is a bit shorter and read in the right direction, but harder to break down. It may also imply that A is the only forcer of B.
+
+
+Notice the similarity between the symbol [⊨](https://en.wikipedia.org/wiki/Double_turnstile "Double turnstile") ("double right turnstile" in Unicode) and the symbol [⊩](https://en.wikipedia.org/w/index.php?title=%E2%8A%A9&redirect=no) ("forces" in Unicode). Per [List of logic symbols](https://en.wikipedia.org/wiki/List_of_logic_symbols), it seems to only be used in modal logic, but per [Forcing (mathematics)](https://en.wikipedia.org/wiki/Forcing_(mathematics)#Forcing) it has nothing to do with modal logic. Per [Boxes and Diamonds](https://bd.openlogicproject.org/bd-screen.pdf) it should be read as making a formula true in either a particular world or all worlds (say "world" rather than "possible worlds" unless you're in the alethic interpretation).
+
+In contrast, [Modal logic](https://en.wikipedia.org/wiki/Modal_logic) doesn't use ⊩ at all. In [Kripke semantics](https://en.wikipedia.org/wiki/Kripke_semantics) only ⊩ is used; the ⊨ symbol is never mentioned.
 
 
 ### Entails
@@ -82,14 +95,19 @@ The language breaks down if you start to think causally. If A is that the Nazis 
 ### Necessary and sufficient
 
 
-See also [Necessity and sufficiency](https://en.wikipedia.org/wiki/Necessity_and_sufficiency).
+See [Glossary of mathematical jargon § Proof terminology](https://en.wikipedia.org/wiki/Glossary_of_mathematical_jargon#Proof_terminology), which points to [Necessity and sufficiency](https://en.wikipedia.org/wiki/Necessity_and_sufficiency).
+
 
 When this article says that Q is "necessary" for P if P → Q, what it means is that Q must hold (is necessary) for P to also hold. You can't have P being true (holding) unless Q also holds. When you want to use the word "necessary" you must read P → Q backwards, however (similar to "Q or not P").
+
 
 The word "sufficient" reads in the forward direction (P is sufficient for Q), at least. Perhaps the article should be named "Sufficiency and necessity" to reflect this.
 
 
 The language breaks down if you start to think causally. Is it the moon being made of green cheese sufficient for 2 + 2 = 4?. Most would say no.
+
+
+If you're looking at [Modal logic](https://en.wikipedia.org/wiki/Modal_logic), you'll see it uses the word "necessity" in essentially a completely different way. Avoid an overload of language for "necessity" when possible.
 
 
 ### If statement
@@ -124,6 +142,12 @@ z = clean_up if messy else keep_working
 ```
 
 See also [Anti-IF Programming](https://www.antiifprogramming.com/about-the-anti-if.php) and [Destroy All Ifs](https://degoes.net/articles/destroy-all-ifs).
+
+
+## Search/replace implies
+
+
+Take the time to `git grep` for "implies" in these public notes. Replace all instances of "implies" and "imply" with either "entails" or "only if" or "or not" depending on the context.
 
 
 ## bussproofs prooftree
@@ -180,7 +204,9 @@ You can come up with a working inference system based on some valuation function
 ## Heyting algebra semantics
 
 <!-- #region -->
-See [OpenLogic/content/intuitionistic-logic/semantics/introduction.tex (line 45) · OpenLogicProject/OpenLogic](https://github.com/OpenLogicProject/OpenLogic/blob/master/content/intuitionistic-logic/semantics/introduction.tex#L45). This whole chapter is also a great introduction to intuitionistic logic, but notice the BD book hasn't been built in 2 years.
+From [Boxes and Diamonds § Intuitionistic Logic § Semantics](https://bd.openlogicproject.org/bd-screen.pdf#chapter.8):
+
+> The truth conditions for the conditional, however, differ from classical logic. $A→B$ is known at $w$ iff at no $w'$ with $Rww'$, $A$ is known without $B$ also being known. This is not the same as the condition that $A$ is unknown or $B$ is known at $w$. For if we know neither $A$ nor $B$ at $w$, there might be a future epistemic state $w'$ with $Rww'$ such that at $w'$, $A$ is known without also coming to know $B$.
 
 Another way to see this as a function that is written at some point, but that doesn't have any constructions to work on. In the world of programming, this would not compile. In the world of math, however, this isn't unreasonable. Many famous conjectures have had additional work done on them assuming that someday someone will come up with a proof of some of the dependencies of the proof. That is, sometimes mathematicians build $A→B$ without having $A$ yet.
 
@@ -354,6 +380,14 @@ How do you code the "necessary" truths discussed in previous chapters? Let's say
 See [Syllogism § Types](https://en.wikipedia.org/wiki/Syllogism#Types) for more on syllogisms and these examples.
 
 
+## Chp 28: One and only one
+
+
+See [Chapter 28 Definite descriptions ‣ forall x: Calgary](https://forallx.openlogicproject.org/html/Ch28.html) for Russell's analysis of what it means for something to be unique. See [Glossary of mathematical jargon § Proof terminology](https://en.wikipedia.org/wiki/Glossary_of_mathematical_jargon#Proof_terminology) for the related jargon, which points to [Uniqueness quantification](https://en.wikipedia.org/wiki/Uniqueness_quantification).
+
+When you move to equivalence classes you should be thinking in terms of [Essentially unique](https://en.wikipedia.org/wiki/Essentially_unique) instead. Sometimes we don't care about the differences between all the objects in an equivalence class.
+
+
 ## Why past possible worlds?
 
 
@@ -390,49 +424,6 @@ Is like arguing with someone and they find some small contradiction in something
 Either way, it feels similar to exceptions in programming languages. You "explode" when things don't logically fit together (give up on any kind of inference).
 
 
-## One and only one
-
-
-See [Chapter 28 Definite descriptions ‣ forall x: Calgary](https://forallx.openlogicproject.org/html/Ch28.html) for Russell's analysis of what it means for something to be unique. See [Glossary of mathematical jargon § Proof terminology](https://en.wikipedia.org/wiki/Glossary_of_mathematical_jargon#Proof_terminology) for the related jargon, which points to [Uniqueness quantification](https://en.wikipedia.org/wiki/Uniqueness_quantification).
-
-When you move to equivalence classes you should be thinking in terms of [Essentially unique](https://en.wikipedia.org/wiki/Essentially_unique) instead. Sometimes we don't care about the differences between all the objects in an equivalence class.
-
-
-## Metalanguage
-
-
-See [Chapter 8 Use and mention ‣ Part II Truth-functional logic ‣ forall x: Calgary](https://forallx.openlogicproject.org/html/Ch8.html) for the object-language and meta-language distinction also mentioned in [implication in nLab](https://ncatlab.org/nlab/show/implication). See also [Metalogic](https://en.wikipedia.org/wiki/Metalogic), which points to [Use–mention distinction](https://en.wikipedia.org/wiki/Use%E2%80%93mention_distinction).
-
-
-## Necessary and sufficient
-
-
-See [Glossary of mathematical jargon § Proof terminology](https://en.wikipedia.org/wiki/Glossary_of_mathematical_jargon#Proof_terminology), which points to [Necessity and sufficiency](https://en.wikipedia.org/wiki/Necessity_and_sufficiency). If you're looking at [Modal logic](https://en.wikipedia.org/wiki/Modal_logic), you'll see it uses the word "necessity" in essentially a completely different way.
-
-
-## ForAllX improvements
-
-
-In section 12.5, change:
-
-> This says that there is no valuation which makes all the sentences mentioned on the left side of ⊨ true whilst making 𝒞 false.
-
-To:
-
-> This says that there is no valuation which makes all the sentences mentioned on the left side of ⊨ true whilst making all the sentences on the right side false.
-
-This would make it easier to understand how 𝒜 ⊨ is another way of saying that 𝒜 is a contradiction.
-
-The A in the first AS in this section should probably be a script A:
-- https://forallx.openlogicproject.org/html/Ch18.html#S5
-
-In https://forallx.openlogicproject.org/html/Ch23.html#S2 it seems unnecessary to include the following sentence:
-
-> (Equally, there are at least two people with the name ‘P. D. Magnus’.)
-
-Most readers will already be familiar with the fact that many full names are reused.
-
-
 ## Propositions as types
 
 
@@ -448,7 +439,7 @@ When we expand to thinking in terms of the Curry–Howard–Lambek correspondenc
 ## Turnstile symbol ⊢
 
 
-Notice this symbol is used for both syntactic consequence (see [Logical consequence § Syntactic consequence](https://en.wikipedia.org/wiki/Logical_consequence#Syntactic_consequence)) and [Adjoint functors](https://en.wikipedia.org/wiki/Adjoint_functors). Is this just a coincidence? It seems likely that syntactic consequence is part of an adjunction (based on the syntax alone, it's the right adjoint).
+Notice ⊢ ("right tack") is used for both syntactic consequence (see [Logical consequence § Syntactic consequence](https://en.wikipedia.org/wiki/Logical_consequence#Syntactic_consequence)) and [Adjoint functors](https://en.wikipedia.org/wiki/Adjoint_functors). Is this just a coincidence? It seems likely that syntactic consequence is part of an adjunction (based on the syntax alone, it's the right adjoint).
 
 Some evidence for this is that the propositions we can derive as being true given some propositions that we assume are generally not speaking not equivalent to our assumed propositions. Since the left side of the syntactic consequence operator takes a set of propositions, this may be the upper closure operation $A^{↑X}$ defined in [Upper set](https://en.wikipedia.org/wiki/Upper_set).
 
@@ -467,14 +458,6 @@ Take the relational models of [Kripke semantics](https://en.wikipedia.org/wiki/K
 Still, this means much of category theory must correspond to modal frames with certain properties. If you have a symmetric relation (think of a symmetric monoidal preorder) then you add a B (for Brouwer).
 
 
-## Entails and forces
-
-
-Notice the similarity between the symbol [⊨](https://en.wikipedia.org/wiki/Double_turnstile "Double turnstile") ("double right turnstile" in Unicode) and the symbol [⊩](https://en.wikipedia.org/w/index.php?title=%E2%8A%A9&redirect=no) ("forces" in Unicode). Per [List of logic symbols](https://en.wikipedia.org/wiki/List_of_logic_symbols), it seems to only be used in modal logic, but per [Forcing (mathematics)](https://en.wikipedia.org/wiki/Forcing_(mathematics)#Forcing) it has nothing to do with modal logic. Per [Boxes and Diamonds](https://bd.openlogicproject.org/bd-screen.pdf) it should be read as making a formula true in either a particular world or all worlds (say "world" rather than "possible worlds" unless you're in the alethic interpretation).
-
-In contrast, [Modal logic](https://en.wikipedia.org/wiki/Modal_logic) doesn't use the "forces" symbol at all.
-
-
 ## Is the modal frame the sheaf morphism for true?
 
 
@@ -486,9 +469,12 @@ The modal frame decides what is possible.
 
 See [Possible world](https://en.wikipedia.org/wiki/Possible_world); not to be confused with [Kripke semantics](https://en.wikipedia.org/wiki/Kripke_semantics) (despite the fact that [Modal logic](https://en.wikipedia.org/wiki/Modal_logic) is about possibilities).
 
+
 See section 7.4.3 of SSC. Looking at the mapping of each element of a section as an aspect of a possible world, in this example each person's opinion is an aspect of the world allowed by $S$.
 
+
 You can see this as limiting subobjects. In our people example, there are some subsheafs that are not legitimate subsheafs of the people sheaf. For example, if Bob was not alive in 1921 then we cannot provide a subsheaf that says that Bob liked the weather in 1921. That is, we don't allow that possible world.
+
 
 People can disagree about what's possible, and if something isn't possible in the mind of one person they won't bother to think about it in the models they produce. This could be seen as an optimization as well as a statement about what's real; someone may refuse to think about a particular possibility because it would require rewriting too much of what they already know (e.g. an older adult).
 
@@ -498,7 +484,9 @@ The subobjects of the terminal object 1 are essentially a list of all possible w
 
 We don't allow some worlds i.e. consider them impossible (level one), we allow some worlds (level two), we allow world aspects (level three). Do we also allow for world aspects to be of different kinds?
 
+
 Agreement on the overlap for a particular matching family is then agreement on the shared aspects of the possible worlds.
+
 
 When we consider only a subset U of X we are cutting down all our possible worlds to fewer world aspects. That is, fewer columns in a table (assuming rows are observations, columns are features).
 
@@ -512,3 +500,23 @@ Can you see the following as sections over a timeline?:
 Can you see the propositions-as-types insight as both propositions and types corresponding to a range of possible worlds? A type (such as an integer) can take on e.g. 2^32 possible values (possible worlds). A proposition (such as whether aristotle is a man) can take on a certain number of possible values (possible worlds) such as true or false. When you extend to Heyting logic, you're allowing for more than two possible worlds.
 
 Throwing away uncertainty then becomes a matter of engineering; how much do you want to throw away? It depends on your meta-uncertainty; perhaps you aren't sure how uncertain you are and so only bother to split the possible worlds into true and false (as a first step).
+
+
+## Define dual
+
+
+See also [Define dual](ssc/define-logical-dual.md), which ends with the observation that the "interior of the complement" (or ¬ according to our author) is a right adjoint to the "complement of the closure" (not defined specially here). To preserve **m**eets we need a **r**ight adjoint (see Proposition 1.111 in [Section 1.4](./ssc/1-4.md)). Therefore we expect that $¬(x∧y) = ¬x∧¬y$; this is not true however.
+
+
+## Example: Kitchen topology
+
+
+A reasonable example of a topology might be a kitchen, which potentially has multiple rooms (e.g. a walk-in pantry, additional dining room) each of which will have many cupboards/drawers/shelves, each of which may have many utensils, pans, etc. Use this to think about [Topological indistinguishability](https://en.wikipedia.org/wiki/Topological_indistinguishability). Perhaps using a house is even better; there are more names. It's also not clear what word the pantry and kitchen add up to together: places we store food? We could also store food in dining room cupboards, or at least dishes. Perhaps this should be part of a house design? A [Topological map](https://en.wikipedia.org/wiki/Topological_map). But for that, you could use real distances?
+
+In this topology you'd describe where something is by saying e.g. what room it's in, and then e.g. what shelves it is not on (to limit a search). It may be helpful to have such a topology for a house only for the sake of naming all the rooms and shelves.
+
+
+## Topological subobjects
+
+
+A topological subobject (see also [Subobject](https://en.wikipedia.org/wiki/Subobject)) would be a [Subspace topology](https://en.wikipedia.org/wiki/Subspace_topology).
