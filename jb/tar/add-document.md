@@ -30,7 +30,7 @@ Part of the problem here is that you may also want to refer to examples, and tho
 Unfortunately URLs are permanent unless you want to create a bunch of redirects. If either you or the author adds more exercises, you'll need to only use the short (and unique) description or risk either clobbering an existing exercise or breaking someone's links. This approach also makes it easier to add new examples in JB (which obviously aren't going to get a number) that fit in with the rest.
 
 ```{code-cell} ipython3
-doc_name = "define-logical-dual.md"
+doc_name = "exercise-7-64.md"
 doc_path = "notes/ssc/" + doc_name
 ```
 
@@ -41,20 +41,17 @@ By copying this same document, we can be confident that all the versions in the 
 ```
 
 ```{code-cell} ipython3
-doc_title = "Define logical dual"
+doc_title = "Exercise 7.64"
 ```
 
 ```{code-cell} ipython3
 # !sed -i "s/Add document/""{doc_title}""/g" {doc_path}
-```
-
-```{code-cell} ipython3
 # !sed -i "s|add-document.md|""{doc_name}""|g" {doc_path}
 ```
 
 +++ {"tags": ["hide-output"]}
 
-See also [Add document](add-document.md).
+See [Add document](add-document.md).
 
 +++
 
@@ -70,3 +67,11 @@ The following will need to be cleaned up, but it's better than forgetting to add
 +++
 
 ## What do we have?
+
++++
+
+## Author's solution
+
++++
+
+## Alternative answer

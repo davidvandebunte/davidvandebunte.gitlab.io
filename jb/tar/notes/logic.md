@@ -22,11 +22,33 @@ See [forall x § Chapter 8 Use and mention](https://forallx.openlogicproject.org
 
 It seems likely this is related to the issue that often comes up in category theory where you can think of a word (or symbol) as either an arrow, or the thing that the arrow points to. So while "Alice" is a word in English (e.g. an element of the set of words, an arrow into the set of people), Alice is some imaginary person (e.g. an element of the set of people).
 
+See also [Do Periods Go Inside Quotation Marks? | The Editor’s Manual](https://editorsmanual.com/articles/periods-with-quotes/). You prefer British style, not only because it makes it clear that the punctuation is not conceptually part of the quote (it could be transferred somewhere else unchanged) but because it allows for quotes within quotes more naturally, since single quotes are actually used (not double quotes everywhere). This also matches how programming languages (e.g. Python) are written. It also gives you a standard for Python: use single quotes first and then double quotes (just like British English). Perhaps it's not surprising that forallx is written in this style (see e.g. [Chapter 4: First steps to symbolization](https://forallx.openlogicproject.org/html/Ch4.html)).
+
+If you're American, to get used this to style you may have to think of English more like a programming language. If you write `;` at the end of statements in C and C++, then adding . to the end of a line that ends with '"' won't seem so strange.
+
+But, double quotes are easier to visually distinguish from e.g. an apostrophe (see [Apostrophe vs. Single Quote - SE](https://english.stackexchange.com/questions/36046/apostrophe-vs-single-quote)). So prefer it first, taking what you want from both the American and British styles. In theory, you could use a triple quote if the need ever arose by combining single quotes (as in ‘‘‘), or using the dedicated symbol ‴. See also [What is the difference between single, double, and triple quotes in Python? - SO](https://stackoverflow.com/questions/35659017/what-is-the-difference-between-single-double-and-triple-quotes-in-python).
+
+Add this to a "preface" on your website? Really, everything regarding logic should come first.
+
+What about "fully mathematician" for a blog title? You're looking for a good combination of an adjective and a noun, that's also memorable (like many restaurant names). This is a play on "fully human, fully divine" that is often used in your circles. Perhaps "fully philosopher" is a little shorter and easier to read (since it's alliterative).
+
 
 ## Chp 12: Semantic concepts
 
 
-How do you read A → B? Not in general, but in a context where it means [Material conditional](https://en.wikipedia.org/wiki/Material_conditional).
+How do you read A → B? Not in general, but in a context where it means [Material conditional](https://en.wikipedia.org/wiki/Material_conditional). As discussed in [forall x](https://forallx.openlogicproject.org/forallxyyc.pdf), the best we can do in languages like TFL and FOL is "symbolize" the richer English language; to say we "translate" would imply we preserve meaning and we are most definitely not doing that. Therefore when we desymbolize we need to be extremely careful that we don't add additional meaning, effectively claiming that the logic that a machine (or formal language) is doing is more powerful than what it actually is doing.
+
+What we really want here is a desymbolization that satsifies certain ground truth requirements. One of the most important requirements is when $A$ and $B$ are both false, as in if you assign A to the "the Nazis won WW2" and B to "the moon is made of green cheese". Notice the contrast with LLMs here; we want to define certain words to mean certain things rather than simply measure what they mean on a large corpus of work. We're changing how *we* think rather (making our thoughts more precise) rather than telling the computer we're always right. One column is syntax (→), and the other is semantics ("implies"). Or one column is use (English), and the other is mention (FOL, TFL)? This is similar to the Alice/Bob pointers out to the real world (being Peruvian and quick). We rapidly go from English to Augmented English, then continue to augment our English indefinitely. To write pedagogical material is the process of augmenting English. See also "homoiconicity" in [What is a "symbol" in Julia?](https://stackoverflow.com/questions/23480722/what-is-a-symbol-in-julia).
+
+If we all speak slightly different versions of English, then we must always translate from the variation someone else is writing in to the version we write (and hence think) in. This justifies copying and pasting content from other texts to your own, and modifying code as you read it (if only the formatting). The logic should be similar for effectively copying drawings; if you cannot build it then you do not understand it (e.g. a commutative diagram). And because we all speak different versions of English, we have to provide our own answers to questions that instructors provide. Our answer should never match the author's answer word-for-word, and may even take a completely different approach.
+
+So what does the word "imply" really mean? When spoken about a word, it means that the word is usually used in a way that brings along additional context, the additional context being what is implied. It's a probabilistic statement about the word, based on the author's experience with the word. By supplying definitions for words we eliminate this uncertainty and allow for faster communication (because readers need to disambiguate less and consider fewer possible worlds) but also start to talk in a jargon specific to those like us. In the interest of obeying the [Robustness principle](https://en.wikipedia.org/wiki/Robustness_principle) we'll also likely need to read words from others who are using in an old or different way, leading to extra internal translations in our head (not as hard to deal with, if we can determine the author's meaning from context).
+
+Every LLM speaks its own variation on English.
+
+Software bugs are almost always the result of a failure to desymbolize; to not catch certain situations ("bugs") until they're uncovered by someone else.
+
+This is closely related to "correlation does not imply causation" in statistics. While the Nazis winning WW2 and the moon being made of cheese are correlated, there's no causal relation between them. If there were, we'd expect them both to change together (so that they would also both become true together).
 
 
 ### Or not
@@ -34,9 +56,16 @@ How do you read A → B? Not in general, but in a context where it means [Materi
 
 How about always reading it "backwards" and putting "or not" in the middle? So you'd read "A → B" as "B or not A" in these situations. That makes you read "(A → B) → A" as "A or not (B or not A)" (can't really avoid the parentheses) which makes it rather obvious how it reduces to "A or not B" assuming the law of the excluded middle. You can then read Pierce's law i.e. ((A → B) → A) → A as "A or not (A or not B)" which reduces to the law of the excluded middle (with an "or B" at the end that doesn't hurt anything).
 
-This strategy is similar to always applying [Material implication (rule of inference)](https://en.wikipedia.org/wiki/Material_implication_(rule_of_inference)), but also flipping the disjunction. Reading A → B as "not A or B" is also acceptable, but it seems more intuitive to replace a single symbol (→) with a pair of words than adding two words in different spots. It also avoids the potential misinterpretation of "not A or B" as "not (A or B)" which is something completely different (and you can't express parentheses when you're talking without a lot of extra work).
+This strategy is similar to always applying [Material implication (rule of inference)](https://en.wikipedia.org/wiki/Material_implication_(rule_of_inference)), but also flipping the disjunction. Reading A → B as "not A or B" is also acceptable, but it seems more intuitive to replace a single symbol (→) with a pair of words than adding two words in different spots. It also avoids the potential misinterpretation of "not A or B" as "not (A or B)" which is something completely different (and you can't express parentheses verbally without a lot of extra work).
 
-You could also replace A → B with A ≤ B if you don't mind seeing false as less than true.
+
+This language doesn't make any claims about causality. If you assign A to the "the Nazis won WW2" and B to "the moon is made of green cheese" then A → B is true because both statements are false. This desymbolizes to "either the moon is made of green cheese or the Nazis did not win WW2" and this is easy to agree with because we don't believe that the Nazis won WW2.
+
+
+### Less than or equal (LTE)
+
+
+You could also replace A → B with A ≤ B if you don't mind seeing false as "less than" true. At that point, it's trivial to desymbolize ≤ to "less than or equal to" when moving to English. If that's too wordy, consider the acronym LTE (commonly used in programming and spreadsheet languages).
 
 
 ### Forces
@@ -255,6 +284,9 @@ We often feel that we need to organize our notes to remove contradictions. It's 
 ## Chp 17: Basic Rules for TFL
 
 
+TFL is based on [Truth functions](https://en.wikipedia.org/wiki/Truth_function); see the redirect [Truth-functional logic](https://en.wikipedia.org/w/index.php?title=Truth-functional_logic&redirect=no).
+
+
 ### Practice exercises
 
 
@@ -378,14 +410,6 @@ How do you code the "necessary" truths discussed in previous chapters? Let's say
 
 
 See [Syllogism § Types](https://en.wikipedia.org/wiki/Syllogism#Types) for more on syllogisms and these examples.
-
-
-## Chp 28: One and only one
-
-
-See [Chapter 28 Definite descriptions ‣ forall x: Calgary](https://forallx.openlogicproject.org/html/Ch28.html) for Russell's analysis of what it means for something to be unique. See [Glossary of mathematical jargon § Proof terminology](https://en.wikipedia.org/wiki/Glossary_of_mathematical_jargon#Proof_terminology) for the related jargon, which points to [Uniqueness quantification](https://en.wikipedia.org/wiki/Uniqueness_quantification).
-
-When you move to equivalence classes you should be thinking in terms of [Essentially unique](https://en.wikipedia.org/wiki/Essentially_unique) instead. Sometimes we don't care about the differences between all the objects in an equivalence class.
 
 
 ## Why past possible worlds?
