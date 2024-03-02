@@ -86,7 +86,6 @@ parts:
         - file: notes/ssc/7-3.md
           sections:
           - file: notes/ssc/connected-space.md
-          - file: notes/ssc/exercise-7-11.md
           - file: notes/ssc/exercise-7-32.md
           - file: notes/ssc/exercise-7-34.md
           - file: notes/ssc/exercise-7-49.md
@@ -203,6 +202,8 @@ parts:
       - file: notes/improve-ssc.md
       - file: notes/ssc/improve.md
         sections:
+        - file: notes/prefer-descriptive-headings.md
+        - file: notes/ssc/exercise-7-11.md
         - file: notes/ssc/define-logical-dual.md
       - file: notes/logic.md
       - file: notes/observations.md

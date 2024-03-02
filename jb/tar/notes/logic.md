@@ -544,3 +544,21 @@ In this topology you'd describe where something is by saying e.g. what room it's
 
 
 A topological subobject (see also [Subobject](https://en.wikipedia.org/wiki/Subobject)) would be a [Subspace topology](https://en.wikipedia.org/wiki/Subspace_topology).
+
+
+## Avoid SSC auto-numbering
+
+
+See [Prefer descriptive headings](prefer-descriptive-headings.md). We can expect that the original 7S PDF won't have its numbering changed anytime soon, unless the authors upload something new to arxiv.org (which seems unlikely). Instead, the minds of readers and their commentary are a "fork" of the content; we can refer to an old version of the PDF (if necessary) to help others relate the website content to the PDF. This way, even if the authors create yet another version with new numbering (they've already done this, kinda too late) others can still share content. We can't help other readers if they're using a new numbering scheme; they'll have to do the mapping themselves anyway we look at it.
+
+
+So create titles that are descriptive and help anyone who only speaks English and memorizes words better than numbers find what they need quickly in the TOC. We can mention exercise numbers in plain text (an *addition* to the headings, and less prominent).
+
+
+## Deemphasizing SSC content
+
+
+We're never planning to rework the PDF to the point that we e.g. remove a bunch of original research or remove content that simply isn't helpful. Instead, just fail to quote or recommend those sections in our own academic courses on the topic. Put those sections into their own documents and then "bury" the document (effectively archive it) by only linking to it. You'd offend the original authors (Fong/Spivak) by removing the content we don't agree with or don't see much promise in (they put a lot of work into it). Instead, just fail to quote it.
+
+
+It's still acceptable to remove content from a personal fork of the PDF; the authors should not mind this kind of change. If someone accidentally quotes a personal copy of the PDF, they should only accidentally quote *less* than the original content. These direct changes to the PDF may also be helpful to the original authors; if they see consensus that several readers don't find value in a particular section then they may be more willing to remove it.
