@@ -562,3 +562,13 @@ We're never planning to rework the PDF to the point that we e.g. remove a bunch 
 
 
 It's still acceptable to remove content from a personal fork of the PDF; the authors should not mind this kind of change. If someone accidentally quotes a personal copy of the PDF, they should only accidentally quote *less* than the original content. These direct changes to the PDF may also be helpful to the original authors; if they see consensus that several readers don't find value in a particular section then they may be more willing to remove it.
+
+
+## Enrich English
+
+
+When deciding whether to use quotes, see [Use–mention distinction](https://en.wikipedia.org/wiki/Use%E2%80%93mention_distinction). Avoid quotes unless you are making this distinction.
+
+If you're trying to emphasize something, it really is OK to use italic. Not using italic (or using quotes instead) is potentially confusing and may change the meaning of the sentence. See the "You can't give these plants too much water" example in [Alethic modality](https://en.wikipedia.org/wiki/Alethic_modality).
+
+When you're trying to define something, use bold.
