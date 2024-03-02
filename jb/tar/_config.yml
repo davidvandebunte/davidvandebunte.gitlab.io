@@ -14,5 +14,7 @@ execute:
   timeout: -1
 
 # See jupyterbook.org/customize/config.html#add-a-link-to-your-repository
+# See https://jupyterbook.org/en/stable/advanced/html.html#enable-google-analytics
 html:
   favicon: executable-notes-mini.svg
+  google_analytics_id: G-40YLY6N4ZW
