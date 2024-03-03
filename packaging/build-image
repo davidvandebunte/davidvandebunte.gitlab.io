@@ -7,7 +7,7 @@ log_fpath=$(mktemp -u -p $(pwd)/packaging/logs -t buildXXXXXX).log
 DOCKER_BUILDKIT=1 docker build --progress=plain \
     -t $(./packaging/tag) \
     -f install/Dockerfile \
-    --no-cache \
     - < "$tar_fpath" 2>&1 | tee $log_fpath
-docker login registry.gitlab.com -u davidvandebunte --password-stdin < ~/.gitlab_access_token
-docker push $(./packaging/tag)
+# Push after verifying a build.
+# docker login registry.gitlab.com -u davidvandebunte --password-stdin < ~/.gitlab_access_token
+# docker push $(./packaging/tag)

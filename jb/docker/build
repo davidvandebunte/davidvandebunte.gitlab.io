@@ -1,8 +1,0 @@
-#!/usr/bin/env sh
-set -o errexit -o nounset -o xtrace
-
-log_fpath=$(mktemp -u -p $(pwd)/packaging/logs -t buildXXXXXX).log
-DOCKER_BUILDKIT=1 docker build --progress=plain \
-    -t install_conda_pip \
-    --no-cache \
-    - < jb/docker/Dockerfile 2>&1 | tee $log_fpath
