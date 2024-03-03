@@ -1,0 +1,13 @@
+#!/usr/bin/env sh
+set -o errexit -o nounset -o xtrace
+
+bazel build //jb:rethinking_tar
+tar_fpath="$(bazel info bazel-bin)/jb/rethinking_tar.tar"
+log_fpath=$(mktemp -u -p $(pwd)/packaging/logs -t buildXXXXXX).log
+DOCKER_BUILDKIT=1 docker build --progress=plain \
+    -t $(./packaging/tag) \
+    -f install/Dockerfile \
+    - < "$tar_fpath" 2>&1 | tee $log_fpath
+# Push after verifying a build.
+# docker login registry.gitlab.com -u davidvandebunte --password-stdin < ~/.gitlab_access_token
+# docker push $(./packaging/tag)
