@@ -3,13 +3,11 @@ set -o errexit -o nounset -o xtrace
 
 bazel build //jb:rethinking_tar
 tar_fpath="$(bazel info bazel-bin)/jb/rethinking_tar.tar"
-docker build \
-    -t install_rethinking \
+log_fpath=$(mktemp -u -p $(pwd)/packaging/logs -t buildXXXXXX).log
+DOCKER_BUILDKIT=1 docker build --progress=plain \
+    -t $(./packaging/tag) \
     -f install/Dockerfile \
     --no-cache \
-    - < "$tar_fpath" > build.log
-docker save -o image.tar install_rethinking
-python3 -m dvc add build.log image.tar
-# Warning: This takes 25 minutes to push
-# python3 -m dvc push
-git ci -m "Build install_rethinking docker image on $(hostname)"
+    - < "$tar_fpath" 2>&1 | tee $log_fpath
+docker login registry.gitlab.com -u davidvandebunte --password-stdin < ~/.gitlab_access_token
+docker push $(./packaging/tag)
