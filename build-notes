@@ -12,4 +12,3 @@ if [ "${AWS_ACCESS_KEY_ID:+x}" ]; then
 fi
 
 ./build_scripts/build-bazel
-./build-shared-notes
