@@ -11,8 +11,6 @@
   artifacts:
     paths:
       - public
-  tags:
-    - notes
 
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
