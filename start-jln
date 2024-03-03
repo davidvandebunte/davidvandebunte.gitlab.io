@@ -14,7 +14,7 @@ docker run --rm \
     --volume $(pwd):$(pwd) \
     --user root \
     --workdir $(pwd) \
-    install_rethinking:latest \
+    $(./packaging/tag) \
     start.sh jupyter lab \
     --port "$JPORT" \
     --notebook-dir $(pwd) \
