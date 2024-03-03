@@ -12,18 +12,15 @@ else
     # - https://stackoverflow.com/a/3330616/622049
     find jb/jupyter_cache/ | xargs chmod 777
 
-    python3 -m dvc pull jb/rethinking/image.tar
-    docker load -i ./jb/rethinking/image.tar
+    docker pull $(./packaging/tag)
 fi
 
-cd jb
-    docker run --name build_jb \
-        --env NB_USER="${USER:=xxx}" \
-        --mount type=bind,source=$(pwd)/jupyter_cache,target=/jupyter_cache \
-        --volume "$(pwd)"/tar:/home/jovyan/work \
-        --entrypoint /bin/bash \
-        --workdir /home/jovyan/work \
-        install_rethinking:latest /home/jovyan/work/jb-build
-cd -
+docker run --name build_jb \
+    --env NB_USER="${USER:=xxx}" \
+    --mount type=bind,source=$(pwd)/jb/jupyter_cache,target=/jupyter_cache \
+    --volume $(pwd)/jb/tar:/home/jovyan/work \
+    --entrypoint /bin/bash \
+    --workdir /home/jovyan/work \
+    $(./packaging/tag) /home/jovyan/work/jb-build
 docker cp build_jb:/tmp/_build/html public/executable-notes
 docker rm build_jb
