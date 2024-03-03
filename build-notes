@@ -1,14 +1,7 @@
 #!/usr/bin/env sh
 set -o errexit -o nounset -o xtrace
 
-date
-env
+date && env
 docker system info
-
-if [ "${AWS_ACCESS_KEY_ID:+x}" ]; then
-    python3 -m dvc config --local cache.dir /tmp/dvc-cache
-    python3 -m dvc remote modify --local aws access_key_id "$AWS_ACCESS_KEY_ID"
-    python3 -m dvc remote modify --local aws secret_access_key "$AWS_SECRET_ACCESS_KEY"
-fi
 
 ./build_scripts/build-bazel
