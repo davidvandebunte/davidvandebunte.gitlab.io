@@ -1,5 +1,0 @@
-[core]
-    remote = aws
-    autostage = true
-['remote "aws"']
-    url = s3://davidvandebunte/dvcstore
