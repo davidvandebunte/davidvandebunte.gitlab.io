@@ -20,7 +20,11 @@ Do you only care about valid arguments, not sound arguments? Yes, when you're tr
 
 See [forall x § Chapter 8 Use and mention](https://forallx.openlogicproject.org/html/Ch8.html) for the object-language and meta-language distinction also mentioned in [implication in nLab](https://ncatlab.org/nlab/show/implication). See also [Metalogic](https://en.wikipedia.org/wiki/Metalogic), which points to [Use–mention distinction](https://en.wikipedia.org/wiki/Use%E2%80%93mention_distinction).
 
+You can think about names as pointers in e.g. C++ as well. So if `x` is an object, `&x` is some number (like `0xdeadbeef`) that we could call a pointer. You could modify `0xdeadbeef` by adding e.g. `0x4` to get a different pointer/name, just like you could replace "Trudeau" with "Verlander" in the name "Justin Trudeau" to get a different name. As mentioned in the text, “‘Justin Trudeau’” is the name of a name, just like `&&x` is a pointer to a pointer.
+
 It seems likely this is related to the issue that often comes up in category theory where you can think of a word (or symbol) as either an arrow, or the thing that the arrow points to. So while "Alice" is a word in English (e.g. an element of the set of words, an arrow into the set of people), Alice is some imaginary person (e.g. an element of the set of people).
+
+Is referring to something without quotes the same as taking it from context? That is, using it. If you use quotes or bold then you're defining a term (mention). Must you always mention/define before you can use, or otherwise rely on it being in context?
 
 See also [Do Periods Go Inside Quotation Marks? | The Editor’s Manual](https://editorsmanual.com/articles/periods-with-quotes/). You prefer British style, not only because it makes it clear that the punctuation is not conceptually part of the quote (it could be transferred somewhere else unchanged) but because it allows for quotes within quotes more naturally, since single quotes are actually used (not double quotes everywhere). This also matches how programming languages (e.g. Python) are written. It also gives you a standard for Python: use single quotes first and then double quotes (just like British English). Perhaps it's not surprising that forallx is written in this style (see e.g. [Chapter 4: First steps to symbolization](https://forallx.openlogicproject.org/html/Ch4.html)).
 
@@ -32,13 +36,15 @@ Add this to a "preface" on your website? Really, everything regarding logic shou
 
 What about "fully mathematician" for a blog title? You're looking for a good combination of an adjective and a noun, that's also memorable (like many restaurant names). This is a play on "fully human, fully divine" that is often used in your circles. Perhaps "fully philosopher" is a little shorter and easier to read (since it's alliterative).
 
+Strict quoting falls apart when applied to regular human language because we adopt words quickly. Do "Yahweh" and "Hosanna" count as English words? Almost, if you're using them regularly in e.g. a church context and their definition is given in English words. The English language is ultimately just a collection of words from other languages; there's no bottom. See [English language](https://en.wikipedia.org/wiki/English_language) for the major influences (Hebrew is not a major influence).
+
 
 ## Chp 12: Semantic concepts
 
 
 How do you read A → B? Not in general, but in a context where it means [Material conditional](https://en.wikipedia.org/wiki/Material_conditional). As discussed in [forall x](https://forallx.openlogicproject.org/forallxyyc.pdf), the best we can do in languages like TFL and FOL is "symbolize" the richer English language; to say we "translate" would imply we preserve meaning and we are most definitely not doing that. Therefore when we desymbolize we need to be extremely careful that we don't add additional meaning, effectively claiming that the logic that a machine (or formal language) is doing is more powerful than what it actually is doing.
 
-What we really want here is a desymbolization that satsifies certain ground truth requirements. One of the most important requirements is when $A$ and $B$ are both false, as in if you assign A to the "the Nazis won WW2" and B to "the moon is made of green cheese". Notice the contrast with LLMs here; we want to define certain words to mean certain things rather than simply measure what they mean on a large corpus of work. We're changing how *we* think rather (making our thoughts more precise) rather than telling the computer we're always right. One column is syntax (→), and the other is semantics ("implies"). Or one column is use (English), and the other is mention (FOL, TFL)? This is similar to the Alice/Bob pointers out to the real world (being Peruvian and quick). We rapidly go from English to Augmented English, then continue to augment our English indefinitely. To write pedagogical material is the process of augmenting English. See also "homoiconicity" in [What is a "symbol" in Julia?](https://stackoverflow.com/questions/23480722/what-is-a-symbol-in-julia).
+What we really want here is a desymbolization that satsifies certain ground truth requirements. One of the most important requirements is when $A$ and $B$ are both false, as in if you assign A to the "the Nazis won WW2" and B to "the moon is made of green cheese". Notice the contrast with LLMs here; we want to define certain words to mean certain things rather than simply measure what they mean on a large corpus of work. We're changing how *we* think rather (making our thoughts more precise) than telling the computer we're always right. One column is syntax (→), and the other is semantics ("implies"). Or one column is use (English), and the other is mention (FOL, TFL)? This is similar to the Alice/Bob pointers out to the real world (being Peruvian and quick). We rapidly go from English to Augmented English, then continue to augment our English indefinitely. To write pedagogical material is the process of augmenting English. See also "homoiconicity" in [What is a "symbol" in Julia?](https://stackoverflow.com/questions/23480722/what-is-a-symbol-in-julia).
 
 If we all speak slightly different versions of English, then we must always translate from the variation someone else is writing in to the version we write (and hence think) in. This justifies copying and pasting content from other texts to your own, and modifying code as you read it (if only the formatting). The logic should be similar for effectively copying drawings; if you cannot build it then you do not understand it (e.g. a commutative diagram). And because we all speak different versions of English, we have to provide our own answers to questions that instructors provide. Our answer should never match the author's answer word-for-word, and may even take a completely different approach.
 
@@ -49,6 +55,30 @@ Every LLM speaks its own variation on English.
 Software bugs are almost always the result of a failure to desymbolize; to not catch certain situations ("bugs") until they're uncovered by someone else.
 
 This is closely related to "correlation does not imply causation" in statistics. While the Nazis winning WW2 and the moon being made of cheese are correlated, there's no causal relation between them. If there were, we'd expect them both to change together (so that they would also both become true together).
+
+
+### Implies
+
+
+What does implies mean, if it's not the materical conditional? Try to use it in a few sentences. Often, it means something from the future implies something about the past. See also [Implication](https://en.wikipedia.org/wiki/Implication).
+
+See [imply - Wiktionary, the free dictionary](https://en.wiktionary.org/wiki/imply#English). Someone who isn't a mathematician or logician will know this word in terms of the third definition:
+
+> ([transitive](https://en.wiktionary.org/wiki/Appendix:Glossary#transitive "Appendix:Glossary"), of a person or proposition) to [hint](https://en.wiktionary.org/wiki/hint#English "hint"); to [insinuate](https://en.wiktionary.org/wiki/insinuate#English "insinuate"); to [suggest](https://en.wiktionary.org/wiki/suggest#English "suggest") [tacitly](https://en.wiktionary.org/wiki/tacit#English "tacit") and avoid a [direct](https://en.wiktionary.org/wiki/direct#English "direct") [statement](https://en.wiktionary.org/wiki/statement#English "statement")
+>
+> *What do you mean "we need to be more careful with hygiene"? Are you **implying** that I don't [wash](https://en.wiktionary.org/wiki/wash#English "wash") my hands?*
+
+Although this way of using the word is common, it's a very human custom to be polite. It's also quite culture-specific; see [Politeness](https://en.wikipedia.org/wiki/Politeness).
+
+This is related to but not quite the same as the way the word [Implicit](https://en.wikipedia.org/wiki/Implicit) is used. In both cases there's something left unsaid but derivable from the context; but the word implicit doesn't always mean something was left unsaid for the sake of being polite.
+
+The second definition is essentially probabilistic:
+
+> ([transitive](https://en.wiktionary.org/wiki/Appendix:Glossary#transitive "Appendix:Glossary"), of a person) to [suggest](https://en.wiktionary.org/wiki/suggest#English "suggest") by [logical](https://en.wiktionary.org/wiki/logical#English "logical") [inference](https://en.wiktionary.org/wiki/inference#English "inference")
+>
+> *When I state that your dog is brown, I am not **implying** that all dogs are brown.*
+
+That is, someone might say that a dog is brown (and list several dogs that are brown) to try to make a point that all dogs are brown or at least that most dogs are brown.
 
 
 ### Or not
@@ -420,6 +450,14 @@ If you think of the world like a computer i.e. in a deterministic way, then it's
 One possible resolution is that we need past possible worlds because really have imperfect information about the past, just like we have imperfect information about the future. How do you know that Abraham Lincoln wasn't born in France? You think it quite unlikely that historians and the US government would lie about that, but it's possible.
 
 Another possible resolution is that we need to accept that those living in the past didn't have perfect information about what their future would be. Did they make the best decision based on the information that was available to them? That's often a more important question than how history actually turned out; you can only go on the information you have. Leaders are often criticized despite the fact that they made the best decision they could given the information they had.
+
+
+## Possible worlds vs. world states
+
+
+We sometimes think of different rows in a database as possible worlds, where each column is associated with a propositional variable. Other times we think of each row as a state of the same world, just evolving over time. For example, think of all your paystubs you get over the year as being related to the state of your checking and other accounts over the year. These transactional databases (like logs) usually have rows ordered by time.
+
+The second kind of row is like the first, but with an explicit timestamp. Does that mean the first kind of row/world is considered timeless? If you think of there being a causal relationship between columns (or that we're looking for one), you're also going to run into trouble when timestamps are associated with rows because one row will cause effects in other rows.
 
 
 ## Standard compression
