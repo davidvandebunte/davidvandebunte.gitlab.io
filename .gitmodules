@@ -10,3 +10,6 @@
 [submodule "jb/tar/notes/ssc/raster"]
 	path = jb/tar/notes/ssc/raster
 	url = ../ssc-raster.git
+[submodule "gitlab/inkscape/inkscape"]
+	path = gitlab/inkscape/inkscape
+	url = https://gitlab.com/inkscape/inkscape.git

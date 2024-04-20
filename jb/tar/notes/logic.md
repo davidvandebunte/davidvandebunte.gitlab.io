@@ -163,7 +163,7 @@ When this article says that Q is "necessary" for P if P → Q, what it means is 
 The word "sufficient" reads in the forward direction (P is sufficient for Q), at least. Perhaps the article should be named "Sufficiency and necessity" to reflect this.
 
 
-The language breaks down if you start to think causally. Is it the moon being made of green cheese sufficient for 2 + 2 = 4?. Most would say no.
+The language breaks down if you start to think causally. Is the moon being made of green cheese sufficient for 2 + 2 = 4?. Most would say no.
 
 
 If you're looking at [Modal logic](https://en.wikipedia.org/wiki/Modal_logic), you'll see it uses the word "necessity" in essentially a completely different way. Avoid an overload of language for "necessity" when possible.
@@ -200,7 +200,7 @@ messy = True
 z = clean_up if messy else keep_working
 ```
 
-See also [Anti-IF Programming](https://www.antiifprogramming.com/about-the-anti-if.php) and [Destroy All Ifs](https://degoes.net/articles/destroy-all-ifs).
+See also [Anti-IF Programming](https://www.antiifprogramming.com/about-the-anti-if.php) and [Destroy All Ifs](https://degoes.net/articles/destroy-all-ifs). See also [Replace Conditional with Polymorphism](https://www.refactoring.com/catalog/replaceConditionalWithPolymorphism.html).
 
 
 ## Search/replace implies
