@@ -127,6 +127,9 @@ parts:
       - file: notes/se/what-exactly-are-keys-queries-and-values.md
   - caption: Visual Group Theory
     chapters:
+      - file: notes/review-vgt.md
+      - file: notes/vgt/1-what-is-a-group.md
+      - file: notes/vgt/2-what-do-groups-look-like.md
       - file: notes/chp8-q32.md
   - caption: Book of Why
     chapters:

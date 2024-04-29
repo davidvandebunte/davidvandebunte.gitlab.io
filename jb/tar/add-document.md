@@ -22,9 +22,9 @@ kernelspec:
 Try to avoid `exercise-7-21.md` (based on numbers), but being lazy isn't all bad (see [Prefer descriptive headings](notes/prefer-descriptive-headings.md)).
 
 ```{code-cell} ipython3
-doc_name = "prefer-descriptive-headings.md"
+doc_name = "vgt/chp1.md"
 doc_path = "notes/" + doc_name
-doc_title = "Prefer descriptive headings"
+doc_title = "What is a group?"
 ```
 
 By copying this same document, we can be confident that all the versions in the header will be up-to-date. The change to `.gitlab-ci.yml` will need to be cleaned up, but it's better than forgetting to add it:
