@@ -11,7 +11,11 @@ kernelspec:
   name: python3
 ---
 
-# Prefer descriptive headings
+# Add descriptive headings
+
++++
+
+In summary, don't write `2-0.md`. Instead, create documents with names more like `2-0-what-do-groups-look-like.md`.
 
 +++
 
@@ -42,6 +46,30 @@ When two readers agree to use the same version of a PDF, automatic numbering is 
 +++
 
 There's also value in a quick mapping from PDF to e.g. HTML commentary. If you retain these numbers, you'll be able to go from the PDF to an `exercise-x-yy.html` file quickly and be able to go from an exercise to the right subheading when you're starting form the HTML. But go from PDF to HTML, don't you always have to first jump to the exercise in the PDF to get the associated section name first though? If you're doing that anyways, you'll almost surely be able to narrow down what heading to click on in the HTML TOC based on the content of the question. Even the largest sections have only 10-15 questions.
+
++++
+
+### In-Jupyter TOC
+
++++
+
+One reason you don't use Jupyter and instead are forced to build JB and inspect the result is that you have a useful TOC in JB that lets you e.g. jump to a part of SSC by section number. You should really have numbered your files by section number (e.g. `ssc-section-4-2.md`) so that the sidebar in Jupyter was essentially a linear TOC. You should try to achieve this in the future however: your JB TOC should roughly be in alphabetical order (whenever possible e.g. you can anticipate your organization).
+
+Unfortunately alphabetical order doesn't always match logical order. You've had the same conflict in your tmux sessions, where you try to organize them artificially. Is this artificial, though? Could you see this as numbering the sections of your notes to make them quicker to jump to? Look at the SSC source .tex files: it also "artifically" puts numbers at the start of filenames.
+
+In fact, you should be able to see the organization of your files on disk as analogous to an extended table of contents. Both are tree data structures; you've noted elsewhere that the sections in a particular document (the `#`, `##`, etc.) are a tree data structure. The filesystem is the same, but using nested directories. You should be able to make your TOC as deep as you want this way; the JB `_toc.yml` is only going to be a flattened version of this organization. Generally speaking, you should be able to make the sections in your `_toc.yml` match the directories you have on disk.
+
+A major advantage of Jupyter rather than vim is that it lets you quickly see this structure of your documents. In many documents you are working with confused headings (confused `#`, `##`, etc.) because you were working in vim and just wanted to write something down quickly.
+
+What's frustrating about JB is that you can't easily rename files without breaking links online. You really just need to get in the practice of using the redirect feature you've already looked into. Either that, or you have to let links be broken, or avoid providing direct links you might forget you provided. The last option two options aren't good in other ways though; you should publish quickly and regularly to get feedback. If you break links, you risk someone not giving you feedback when they want to look up a link you provided later.
+
++++
+
+### Distinct shortnames
+
++++
+
+When you start with a description in a `.md` file, you often end up in a situation (when many `.md` files are open) that you can't tell the difference between the documents based on Jupyter's collapse of the document name to a few characters at the top of the UI.
 
 +++
 
