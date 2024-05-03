@@ -128,9 +128,20 @@ parts:
   - caption: Visual Group Theory
     chapters:
       - file: notes/review-vgt.md
-      - file: notes/vgt/1-what-is-a-group.md
-      - file: notes/vgt/2-what-do-groups-look-like.md
-      - file: notes/chp8-q32.md
+      - file: notes/vgt/01-what-is-a-group.md
+        sections:
+        - file: notes/vgt/01-5-exercises.md
+      - file: notes/vgt/02-what-do-groups-look-like.md
+        sections:
+        - file: notes/vgt/02-6-exercises.md
+      - file: notes/vgt/03-why-study-groups.md
+        sections:
+        - file: notes/vgt/03-4-exercises.md
+      - file: notes/vgt/08-the-power-of-homomorphisms.md
+        sections:
+        - file: notes/chp8-q32.md
+      - file: notes/vgt/09-sylow-theory.md
+      - file: notes/vgt/10-galois-theory.md
   - caption: Book of Why
     chapters:
       - file: notes/bow-review.md

@@ -4,7 +4,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.14.1
+    jupytext_version: 1.16.1
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
@@ -57,7 +57,7 @@ You should see your notes as a set, partitioned between public/private/work. The
 
 ![x](example-notes-partition.svg)
 
-+++ {"tags": []}
++++
 
 ## Rclone
 
@@ -71,7 +71,7 @@ Even if you don't use `--max-backlog=-1` with rclone to get overall progress, it
 
 See also your comments in learn-unix-utilities.md about `cp -r` confusion. See also [ubuntu - How to copy-merge two directories? - Unix & Linux Stack Exchange](https://unix.stackexchange.com/questions/149965/how-to-copy-merge-two-directories/149986#149986). You aliased `rsync` to `ry`, should you alias `rclone` to `rc`? Or create a `cp` alias that uses `rclone`?
 
-+++ {"tags": []}
++++
 
 ## Review code
 
@@ -108,7 +108,7 @@ A classifier (see [Statistical classification](https://en.wikipedia.org/wiki/Sta
 
 We could really go one step beyond classification into non-overlapping sets to provide an order on these sets (e.g. a preorder). Organization into trees (think of common dictionary data structures) is in general an efficient way to retrieve information, both mentally and in a computer. It'd be much easier to describe to someone all the kinds of signs in the world with a tree than a list. See [Categorization](https://en.wikipedia.org/wiki/Categorization) (a synonym for classification) for some thoughts on the psychological aspects involved; is this why category theory is so fundamental to mathematics as well? Are adjectives fundamental to how we think?
 
-+++ {"tags": []}
++++
 
 ## Maintain light git history
 
@@ -132,7 +132,7 @@ Should you have tasks to understand Wikipedia with other articles/content as you
 
 Don't be discouraged if you simply copy/paste from Wikipedia and get what looks like a mess. If you have math anywhere in what you copy/pasted, you'll have gotten both a Unicode version of it and a Wikipedia version of it. Just delete the Wikipedia version, and you'll have something you can put in any document.
 
-+++ {"tags": []}
++++
 
 ## Manual dependency resolution
 
@@ -355,7 +355,7 @@ Learning by example should generally assist you in learning the causal or logica
 
 When you organize your notes, you essentially sort out all these dependencies. You establish a new "bottom" to your understanding (hopefully making it lower, simpler) making your notes into a new pedagogical tool most useful to yourself. Imagine that you were to organize all your links in your articles in one direction; this would be the equivalent of writing a book where the readers could always start on earlier chapters. In fact this is what you expect from any book that you consume; you expected to be able to follow SSC in a linear order. You may end up with a preorder/poset rather than a loset in the end, but that's better than having cycles. When you allow cycles (as on Wikipedia), your "users" don't know when to try to understand by following links or reading what they can already see. You like how this lets readers come to the book with their own motivations.
 
-+++ {"tags": []}
++++
 
 ## Fix slow build
 
@@ -428,7 +428,7 @@ See in particular the section on "Bias" in `!w Observation`. All observations ar
 
 Everything has been said before, probably even by you (in your notes).
 
-+++ {"tags": []}
++++
 
 ## Bazel vs. dvc
 
@@ -436,7 +436,7 @@ From [Overview | Data Version Control · DVC](https://dvc.org/doc/user-guide/ove
 
 > DVC uses file timestamps and inodes* for optimization. This allows DVC to avoid recomputing all dependency file hashes, which would be highly problematic when working with large files (multiple GB).
 
-+++ {"tags": []}
++++
 
 ## Causal diagram for all P/R curves
 
@@ -445,3 +445,53 @@ From [Overview | Data Version Control · DVC](https://dvc.org/doc/user-guide/ove
 The FeatureExists variable is unobserved (a latent variable) typically.
 
 ![x](causal-pr-curve.svg)
+
++++
+
+## Symmetry groups as categories
+
++++
+
+See Chp 3 of VGT. One can view a symmetry group as a category where the morphisms (structure-preserving maps) are transformations of objects that are sets with a certain "structure" defined by the object under study. In e.g. $D_4$ mapped to the symmetries of a square, we could see the objects as 4-tuples (for the edges of the square) of 2-tuples (assuming two dimensions). We then consider only transformations where the points are unchanged ("point-invariant" transformations?) in the sense that the *set* of points is unchanged (ignore order). Otherwise, we'd be moving out of the ambient space of the original points.
+
++++
+
+If we wanted our model to be rotation-invariant, we'd just need to rotate the points (before we run further inference) into some canonical form. As long as the 4-tuple was ordered, we'd be able to "rotate" the object by switching the positions of the points in the 4-tuple. This is similar to how the author numbers the parts of the object in Step 1 of Definition 3.1. Rather than numbering the corners of a square as 1,2,3,4 we could have numbered them (1,1),(1,-1),(-1,1),(-1,-1) in keeping with their euclidean coordinates. Then to permute this list in one direction would be to rotate the square; to flip it would be to reverse the list.
+
++++
+
+Of course to get the input into a "canonical" form, we'd have to know how much to rotate the permutation back or forward. To do so, we'd have to use features of the square that are not part of our "don't care" set. To do this, you need to draw a number/letter on the square to act as the feature, such as the L in the following:
+
++++
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Cayley_graph_of_S3_with_triangles%3B_generators_a%2C_b.svg" alt="drawing" width="400"/>
+
++++
+
+So we're back to feature detection.
+
++++
+
+See also the following from [Rotational symmetry](https://en.wikipedia.org/wiki/Rotational_symmetry):
+
+> Therefore, a [symmetry group](https://en.wikipedia.org/wiki/Symmetry_group "Symmetry group") of rotational symmetry is a subgroup of $E^+(m)$ (see [Euclidean group](https://en.wikipedia.org/wiki/Euclidean_group "Euclidean group")).
+
++++
+
+## Configuration and manifolds
+
++++
+
+See [Configuration space (physics)](https://en.wikipedia.org/wiki/Configuration_space_(physics)) for what seems like clean introduction.
+
++++
+
+## Don't compress
+
++++
+
+The VGT author's point in the answer to Exercise 3.13 (which makes it much easier to answer part (b) of the question) is that you don't want to compress your results early. If you don't compress (i.e. actually move the dancers) then you can more easily visually match known states to what you have. In this question, it also helped not to introduce another language (of permutations of integers). You'd only be introducing an alias (a one-line notation for a permutation) that you'd visually match just like visually matching the dances.
+
+This can be seen as similar to the pattern in functional programming where we avoid evaluation for as long as possible. Especially when you can undo expensive operations, this can be quite helpful relative to the mutate paradigm. If you're dealing with a small number of possible worlds then mutating may help you identify worlds that are equivalent, but the word problem is hard in general and really only solvable efficiently if you don't compress the words.
+
+The problem is that the compression is lossy; you can't easily go back (even more true with floating point numbers).
