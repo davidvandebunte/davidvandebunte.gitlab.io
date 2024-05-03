@@ -29,6 +29,10 @@ This section discusses [Symmetry group](https://en.wikipedia.org/wiki/Symmetry_g
 
 +++
 
+When the author says "similar" in Definition 3.1 he means it in a technical sense; see [Similarity (geometry)](https://en.wikipedia.org/wiki/Similarity_(geometry)). You'll often see "L" used to make this check easier, as in [Dihedral group of order 6](https://en.wikipedia.org/wiki/Dihedral_group_of_order_6).
+
++++
+
 In this section, the invariant we are pursuing is the occupation of ambient space. Some things change and some stay the same; it's not like rotating a molecule means "nothing changed" but that nothing changed regarding the metrics we care about. What does change in this context is e.g. the labeling we apply to parts of the object, which are considered not part of the ambient space. If we were to write them on the objects with marker, we would imagine the marker as taking no space.
 
 +++
