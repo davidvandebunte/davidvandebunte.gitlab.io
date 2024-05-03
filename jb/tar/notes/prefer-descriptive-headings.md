@@ -45,7 +45,7 @@ When two readers agree to use the same version of a PDF, automatic numbering is 
 
 +++
 
-There's also value in a quick mapping from PDF to e.g. HTML commentary. If you retain these numbers, you'll be able to go from the PDF to an `exercise-x-yy.html` file quickly and be able to go from an exercise to the right subheading when you're starting form the HTML. But go from PDF to HTML, don't you always have to first jump to the exercise in the PDF to get the associated section name first though? If you're doing that anyways, you'll almost surely be able to narrow down what heading to click on in the HTML TOC based on the content of the question. Even the largest sections have only 10-15 questions.
+There's also value in a quick mapping from PDF to e.g. HTML commentary. If you retain these numbers, you'll be able to go from the PDF to an `exercise-x-yy.html` file quickly and be able to go from an exercise to the right subheading when you're starting form the HTML. But to go from PDF to HTML, don't you always have to first jump to the exercise in the PDF to get the associated section name first though? If you're doing that anyways, you'll almost surely be able to narrow down what heading to click on in the HTML TOC based on the content of the question. Even the largest sections have only 10-15 questions.
 
 +++
 
@@ -59,9 +59,52 @@ Unfortunately alphabetical order doesn't always match logical order. You've had 
 
 In fact, you should be able to see the organization of your files on disk as analogous to an extended table of contents. Both are tree data structures; you've noted elsewhere that the sections in a particular document (the `#`, `##`, etc.) are a tree data structure. The filesystem is the same, but using nested directories. You should be able to make your TOC as deep as you want this way; the JB `_toc.yml` is only going to be a flattened version of this organization. Generally speaking, you should be able to make the sections in your `_toc.yml` match the directories you have on disk.
 
-A major advantage of Jupyter rather than vim is that it lets you quickly see this structure of your documents. In many documents you are working with confused headings (confused `#`, `##`, etc.) because you were working in vim and just wanted to write something down quickly.
++++
+
+Be aware that numerical order does not match alphabetical order! Consider the sort of these filenames:
+
++++
+
+```
+1-first.md
+10-tenth.md
+11-eleventh.md
+2-second.md
+3-third.md
+...
+```
+
++++
+
+Because a `-` comes before any of the numbers in [ASCII § Character set](https://en.wikipedia.org/wiki/ASCII#Character_set), you're going to see this unexpected sorting in your file browser. The solution is to zero-pad:
+
++++
+
+```
+01-first.md
+02-second.md
+03-third.md
+...
+10-tenth.md
+11-eleventh.md
+...
+```
+
++++
+
+A major advantage of Jupyter rather than `vim` is that it lets you quickly see this structure of your documents. In many documents you are working with confused headings (confused `#`, `##`, etc.) because you were working in vim and just wanted to write something down quickly. You can't see the big picture in `vim`.
+
++++
+
+#### Fix numbering
+
++++
 
 What's frustrating about JB is that you can't easily rename files without breaking links online. You really just need to get in the practice of using the redirect feature you've already looked into. Either that, or you have to let links be broken, or avoid providing direct links you might forget you provided. The last option two options aren't good in other ways though; you should publish quickly and regularly to get feedback. If you break links, you risk someone not giving you feedback when they want to look up a link you provided later.
+
++++
+
+To continue to see the big picture, you're not going to be able to predict ahead of time all the documents you'll need to add and how they should be named. Renaming can be done in batch (when you're trying to see the big picture) to make it less painful.
 
 +++
 
