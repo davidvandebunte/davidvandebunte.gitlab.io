@@ -137,6 +137,12 @@ parts:
       - file: notes/vgt/03-why-study-groups.md
         sections:
         - file: notes/vgt/03-4-exercises.md
+      - file: notes/vgt/04-algebra-at-last.md
+        sections:
+        - file: notes/vgt/04-5-exercises.md
+      - file: notes/vgt/05-five-families.md
+      - file: notes/vgt/06-subgroups.md
+      - file: notes/vgt/07-products-and-quotients.md
       - file: notes/vgt/08-the-power-of-homomorphisms.md
         sections:
         - file: notes/chp8-q32.md

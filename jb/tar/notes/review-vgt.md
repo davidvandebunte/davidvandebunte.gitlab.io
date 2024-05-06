@@ -53,7 +53,7 @@ On my machine it takes 2 minutes (all single CPU) for Inkscape to get to the poi
 
 +++
 
-The errata is clean and up-to-date; see [VGT § Errata](http://web.bentley.edu/empl/c/ncarter/vgt/errata.html). You'll see misspellings and even major issues, but they're usually already documented. The website went down at one point; if this happens again see [Wayback Machine: VGT](https://web.archive.org/web/20230501000000*/http://web.bentley.edu/empl/c/ncarter/vgt/errata.html) to get to the errata (it seems to have been up for 14+ years, otherwise).
+The errata is clean and up-to-date; see [VGT - Errata](http://web.bentley.edu/empl/c/ncarter/vgt/errata.html). You'll see misspellings and even major issues in the book, but they're usually already documented in this errata. The website went down at one point; if this happens again see [Wayback Machine: VGT](https://web.archive.org/web/20230501000000*/http://web.bentley.edu/empl/c/ncarter/vgt/errata.html) to get back to the errata (it seems to have been up for 14+ years, otherwise).
 
 +++
 
@@ -79,7 +79,7 @@ These answers are also included inline in this Jupyer Book, partially because th
 
 +++
 
-We'll mark questions and sections with a ⚠ if one should reference the errata before starting. We won't do this for typos but only non-trivial problems where it would be helpful to see the errata before reading or trying to answer a question. See [VGT § Errata](http://web.bentley.edu/empl/c/ncarter/vgt/errata.html).
+We'll mark questions and sections with a ⚠ if one should reference the errata before starting. We won't do this for typos but only non-trivial problems where it would be helpful to see the errata before reading or trying to answer a question.
 
 +++
 
