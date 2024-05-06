@@ -495,3 +495,13 @@ The VGT author's point in the answer to Exercise 3.13 (which makes it much easie
 This can be seen as similar to the pattern in functional programming where we avoid evaluation for as long as possible. Especially when you can undo expensive operations, this can be quite helpful relative to the mutate paradigm. If you're dealing with a small number of possible worlds then mutating may help you identify worlds that are equivalent, but the word problem is hard in general and really only solvable efficiently if you don't compress the words.
 
 The problem is that the compression is lossy; you can't easily go back (even more true with floating point numbers).
+
++++
+
+## Infinite as configurable max
+
++++
+
+We often talk about infinite in a way where we could easily just define a maximum instead, but don't because then we would have to deal with all the bugs etc. associated with corner cases. No one wants to talk about that issues when you can just say that something extends to infinite.
+
+For example, how long should you plan out to? If you just plan to infinite, you don't have to accept that what you're working on may never pay back (it's too far-looking).
