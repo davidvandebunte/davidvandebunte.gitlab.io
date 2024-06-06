@@ -12,3 +12,7 @@ kernelspec:
 ---
 
 # 6 Subgroups
+
++++
+
+It's not clear if the author's definition of "regular" is anything but a completely custom (and informal) description specific to the author. That is, the author doesn't provide any references on the term.
