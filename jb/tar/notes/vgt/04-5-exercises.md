@@ -17,7 +17,7 @@ kernelspec:
 
 ## 4.5.1 Basics
 
-+++
++++ {"jp-MarkdownHeadingCollapsed": true}
 
 ### Exercise 4.1
 
@@ -139,6 +139,8 @@ import pandas as pd
 pd.DataFrame(rank_v(x[...,np.newaxis] * x), index=actions, columns=actions)
 ```
 
++++ {"jp-MarkdownHeadingCollapsed": true}
+
 ### Exercise 4.3
 
 +++
@@ -169,7 +171,7 @@ Not commutative, not associative (try 2^3^2)
 
 ## 4.5.2 Creating tables
 
-+++
++++ {"jp-MarkdownHeadingCollapsed": true}
 
 ### Exercise 4.4 (⚠)
 
@@ -205,7 +207,7 @@ $-1$ and $-k$
 
 $-i$
 
-+++
++++ {"jp-MarkdownHeadingCollapsed": true}
 
 ### Exercise 4.5 (📑)
 
@@ -372,6 +374,8 @@ cm = sns.color_palette("Paired", as_cmap=True)
 df.style.background_gradient(axis=None, cmap=cm, gmap=index_v(y))
 ```
 
++++ {"jp-MarkdownHeadingCollapsed": true}
+
 ### Exercise 4.7
 
 +++
@@ -382,7 +386,7 @@ df.style.background_gradient(axis=None, cmap=cm, gmap=index_v(y))
 
 ![x](04-5-ex-07-infinite-table.svg)
 
-+++
++++ {"jp-MarkdownHeadingCollapsed": true}
 
 ### Exercise 4.8
 
@@ -398,7 +402,7 @@ Here are possible answers for Exercise 2.4 through Exercise 2.7; see the next qu
 
 ![x](04-5-ex-08-answer.svg)
 
-+++
++++ {"jp-MarkdownHeadingCollapsed": true}
 
 ### Exercise 4.9
 
@@ -634,11 +638,11 @@ Yes, there are similar patterns in those tables.
 
 In the top-left quadrant we have the table for when we never flip the $n$-gon (limit ourselves to rotations, this is essentially the table for a cyclic group). The bottom-left and top-right quadrants are associated with a single flip, and the bottom-right with two flips.
 
-+++
++++ {"jp-MarkdownHeadingCollapsed": true}
 
 ## 4.5.3 Almost tables
 
-+++
++++ {"jp-MarkdownHeadingCollapsed": true}
 
 ### Exercise 4.10 (📑)
 
@@ -703,7 +707,7 @@ Lacking associativity, nothing about the previous statement can be reduced and t
 
 Assuming $A ≠ B$ we can't even call this algebraic structure a [Quasigroup](https://en.wikipedia.org/wiki/Quasigroup) because it doesn't obey the Latin square property.
 
-+++
++++ {"jp-MarkdownHeadingCollapsed": true}
 
 ### Exercise 4.11
 
@@ -731,7 +735,7 @@ An operation is associative if a term reduces to the same regardless of where yo
 
 We'd call this algebraic structure a [Monoid](https://en.wikipedia.org/wiki/Monoid) (because it has associativity and identity, but not invertibility), specifically a commutative monoid.
 
-+++
++++ {"jp-MarkdownHeadingCollapsed": true}
 
 ### Exercise 4.12
 
@@ -759,7 +763,7 @@ Yes, because terms will evaluate the same regardless of parentheses. If a term h
 
 We'd call this algebraic structure a [Monoid](https://en.wikipedia.org/wiki/Monoid) (because it has associativity and identity, but not invertibility), specifically a commutative monoid.
 
-+++
++++ {"jp-MarkdownHeadingCollapsed": true}
 
 ### Exercise 4.13 (📑)
 
@@ -855,7 +859,7 @@ $$
 
 It lacks an identity.
 
-+++
++++ {"jp-MarkdownHeadingCollapsed": true}
 
 ### Exercise 4.14 (📑)
 
@@ -877,7 +881,7 @@ The author's answer:
 
 > The element $s$ appears in the table, but is not in the row or column headings. Is it in the group or isn't it?
 
-+++
++++ {"jp-MarkdownHeadingCollapsed": true}
 
 ### Exercise 4.15
 
@@ -907,9 +911,13 @@ $$
 
 +++
 
-This would require us to conclude that $x = y$, which is typically not going to be possible, meaning we must more likely give up either the assumption of (1) inverses or (2) associativity and therefore that we're looking at a group. Notice we're trying to avoid an appeal to the [Law of excluded middle](https://en.wikipedia.org/wiki/Law_of_excluded_middle). A similar argument would apply to columns.
+This would require us to conclude that $x = y$, which is typically not going to be possible. We must more likely give up either the assumption of (1) inverses or (2) associativity; but to give up either would be to concede that we're not looking at a group. Notice we're trying to avoid an appeal to the [Law of excluded middle](https://en.wikipedia.org/wiki/Law_of_excluded_middle).
 
 +++
+
+A similar argument would apply to columns.
+
++++ {"jp-MarkdownHeadingCollapsed": true}
 
 ### Exercise 4.16
 
@@ -925,7 +933,59 @@ This would require us to conclude that $x = y$, which is typically not going to 
 
 +++
 
+- There's a predefined list of 2 generators (red and blue, which we'll call $a$ and $b$).
+- Every action can be undone in one way or another. Every generator comes into every node, so it can in theory be followed backwards assuming inverses.
+- There's no sense of probability or chance in the actions.
+- The two generators are available coming out of every node.
+
++++
+
 > (b) Try to convert each of these diagrams into a multiplication table. What problem arises in each case?
+
++++
+
+How should we choose what element to label $e$ in the diagrams above, and on unlabeled Cayley diagrams in general? There's no rule regarding which element to label as the identity, so ultimately this must be an arbitrary choice. In this sense a group has no "bottom" on which all other elements rest, because with a different selection the labels would have all ended up different but you'd still have the "same" group (really, an isomorphic group). Let's put $e$ in the top left (reading order) and see what we come up with for both diagrams:
+
++++
+
+![x](04-5-ex-16-part-b.svg)
+
++++
+
+In both these examples we run into an issue with the same element appearing twice on one row:
+
++++
+
+$$
+\begin{align}
+(a³)(aba) &= (a³)(a²b) = ab \\
+(b)(e)    &= (b)(a²)   = b
+\end{align}
+$$
+
++++
+
+As discussed in Exercise 4.15 this implies we've made an incorrect assumption somewhere. If we assume we have inverses and associativity, then we'll find that we don't have distinct elements:
+
++++
+
+$$
+\begin{align}
+(a)(a³)(aba) &= (a)(a³)(a²b) = (a)ab \\
+aba          &= a²b          = a²b
+\end{align}
+$$
+
+$$
+\begin{align}
+(b)(b)(e)    &= (b)(b)(a²) = (b)b \\
+e            &= a²         = e \\
+\end{align}
+$$
+
++++
+
+Since actions are equivalent to elements, another way to put this is that we don't have distinct actions. That is, what $e$ does (as an action) is sometimes the same as what $a²$ does (as an action) and sometimes not. That is, in some places in the second diagram we have $a²$ acting as an identity, and in other places (namely, starting from $e$) it doesn't.
 
 +++
 
@@ -933,8 +993,649 @@ This would require us to conclude that $x = y$, which is typically not going to 
 
 +++
 
+In short, these diagrams are not symmetrical. We should be able to put $e$ on any node in the diagram and get the same list of actions. Consider for example the [Symmetric group S₃](https://en.wikipedia.org/wiki/Dihedral_group_of_order_6), another version of which you can find in [Cayley Diagram for S³](https://nathancarter.github.io/group-explorer/CayleyDiagram.html?groupURL=https://nathancarter.github.io/group-explorer/groups/S_3.group). With the second version's generators, notice that $frf = r^2 = r^{-1}$ no matter where you start from, i.e. where you put $e$. With the first version's generators, you should similarly see that it's always the case that $aba = bab$.
+
++++
+
+Another way to put this is that what actions are equivalent should not be stateful i.e. depend on your current location on the map. If you discover that $ab = ba$ in one part of a diagram (i.e. with a particular selection of $e$), it should also be the case that $ab = ba$ in another part of the diagram (i.e. with another selection of $e$). If we call the node representing the second selection of $e$ something like $c$, then we're saying it should be the case that $cab = cba$. That is, we should be able to left-multiply and get another true statement.
+
++++
+
+It may help to rely on your sense of symmetry to quickly show that a particular diagram does not represent group. For example, we can see that moving $e$ down to $b$ in the left example won't help show that $ab ≠ ba$ because the diagram has reflectional symmetry in that direction. If we instead move $e$ to $a$ then we'll be able to show that $ab ≠ ba$ starting from that new position.
+
++++
+
 > (d) Create another diagram satisfying the criteria of Exercises 2.14 through Exercises 2.17, yet having the same problem as the two diagrams above.
 
 +++
 
-This exercise shows a slight discrepancy between the actions-based definition of group (Definition 1.9, illustrated using Cayley diagrams) and my algebraic one (Definition 4.2, illustrated using multiplication tables). This discrepancy will be cleared up in Section 6.1.
+Although we informally specified that groups that are "non-symmetrical" will fail to satisfy all the axioms of the group, it's not hard to accidentally draw what is really a group in a non-symmetrical way. Consider the following example; the non-symmetrical Cayley diagram on the left is actually hiding $Z_4$:
+
++++
+
+![x](04-5-ex-16-part-d-1.svg)
+
++++
+
+If we allow self-loops (i.e. competing identities) then we can create a rather minimal example of a Cayley diagram satisyfing the 4 action-based requirements that also does not represent a group:
+
++++
+
+![x](04-5-ex-16-part-d-2.svg)
+
++++
+
+We show the action of $e$ on all the nodes for completeness (in green). We clearly have that $ae = ab$, which assuming inverses implies $e = b$ (a competing identity). In fact this equation is not universal in the diagram; starting from $e$ we have that $e ≠ b$.
+
++++
+
+An arguably more interesting example without self-loops:
+
++++
+
+![x](04-5-ex-16-part-d-3.svg)
+
++++
+
+> This exercise shows a slight discrepancy between the actions-based definition of group (Definition 1.9, illustrated using Cayley diagrams) and my algebraic one (Definition 4.2, illustrated using multiplication tables). This discrepancy will be cleared up in Section 6.1.
+
++++ {"jp-MarkdownHeadingCollapsed": true}
+
+### Exercise 4.18 (⚠, 📑)
+
++++
+
+The errata suggests working on 4.18 before 4.17:
+
++++
+
+> These exercises should be in the other order, since 4.18 asks you why there is only one identity element in a group, and the answer to 4.17 requires you to use the fact that there is only one identity element in a group.
+
++++
+
+> When creating a multiplication table for a group, if you try to include two different identity elements, what goes wrong? What does this lead you to conclude about groups?
+
++++
+
+If you have two columns that are both for identity elements $e$ and $f$, then in every row you'll repeat the elements in those two columns. For example, in the row for $a$ you'll have entries for $ae$ and $af$, which will both be equal $a$. If $ae = af$ then $e = f$ given invertibility.
+
++++
+
+The author's answer:
+
+> It leads you to conclude that a group can have only one identity element.
+
++++ {"jp-MarkdownHeadingCollapsed": true}
+
+### Exercise 4.17 (⚠, 📑)
+
++++
+
+> Explain why a Cayley diagram must be connected. That is, why must there be a path from every node to every other node?
+
++++
+
+There should be at least one path to every node $a$ from the starting node, or the node $a$ wouldn't be a part of the group. If there's a path from the starting node to every node $a$ then one could also take the inverse $a^{-1}$ to get back to the starting node and then to any other node $b$.
+
++++
+
+The author's answer:
+
+> Hint: It may help to consider a specific example. Why can the following two-piece diagram not be viewed as one Cayley diagram for an eight-element group? Which part of Definition 4.2 would be violated?
+>
+> ![x](04-5-ex-17-answer.svg)
+>
+> (Note that you could add arrows to make it a Cayley diagram, but as is, it is not one.)
+
++++
+
+Consider part `3.` of the definition, which requires that $eg = g$ for every element in the group. One can read this as saying that every element is both an action and an element; it's an action that takes the current state (system state, i.e. the argument to $g$) from the starting node $e$ to the named node (element) $g$. If we take $a$ as the identity element in the Cayley diagram above, there's no action to get to e.g. $f$ (so it's only an element, not an action that's always available). We interpret "action" to mean an active transformation in the sense of [Active and passive transformation](https://en.wikipedia.org/wiki/Active_and_passive_transformation).
+
+This makes "travel" in a Cayley diagram for a group easy if you know the name of where you want to go relative to the starting point; you can always take the inverse of your current location and then the action $g$ to get to the node $g$.
+
++++
+
+## 4.5.4 Small groups
+
++++ {"jp-MarkdownHeadingCollapsed": true}
+
+### Exercise 4.19
+
++++
+
+> Complete each of the following multiplication tables so that it depicts a group. There is only one way to do so, if we require that 0 be the identity element in
+each table. Then search Group Explorer's group library to determine the names for the groups the tables represent.
+
+```{code-cell} ipython3
+pd.DataFrame([
+    [0, 1],
+    [1, 0],
+], index=[0, 1], columns=[0, 1])
+```
+
+See [Group Explorer · Z₂](https://nathancarter.github.io/group-explorer/GroupInfo.html?groupURL=https://nathancarter.github.io/group-explorer/groups/Z_2.group).
+
+```{code-cell} ipython3
+pd.DataFrame([
+    [0, 1, 2],
+    [1, 2, 0],
+    [2, 0, 1],
+], index=[0, 1, 2], columns=[0, 1, 2])
+```
+
+See [Group Explorer · Z₃](https://nathancarter.github.io/group-explorer/GroupInfo.html?groupURL=https://nathancarter.github.io/group-explorer/groups/Z_3.group).
+
+```{code-cell} ipython3
+pd.DataFrame([
+    [0],
+], index=[0], columns=[0])
+```
+
+See [Group Explorer · Z₁](https://nathancarter.github.io/group-explorer/GroupInfo.html?groupURL=https://nathancarter.github.io/group-explorer/groups/Trivial.group).
+
+```{code-cell} ipython3
+pd.DataFrame([
+    [0, 1, 2, 3],
+    [1, 2, 3, 0],
+    [2, 3, 0, 1],
+    [3, 0, 1, 2],
+], index=[0, 1, 2, 3], columns=[0, 1, 2, 3])
+```
+
+See [Group Explorer · Z₄](https://nathancarter.github.io/group-explorer/GroupInfo.html?groupURL=https://nathancarter.github.io/group-explorer/groups/Z_4.group).
+
+```{code-cell} ipython3
+pd.DataFrame([
+    [0, 1, 2, 3],
+    [1, 3, 0, 2],
+    [2, 0, 3, 1],
+    [3, 2, 1, 0],
+], index=[0, 1, 2, 3], columns=[0, 1, 2, 3])
+```
+
+See [Group Explorer · Z₄](https://nathancarter.github.io/group-explorer/GroupInfo.html?groupURL=https://nathancarter.github.io/group-explorer/groups/Z_4.group) with:
+- $0 = e$
+- $1 = a$
+- $3 = a²$
+- $2 = a³$
+
+Shift-click on columns in Group Explorer to move them and make the multiplication tables match.
+
++++
+
+The author's answer:
+
+> Hint: For this exercise and those that follow it, use the fact from Exercise 4.15 liberally.
+
++++ {"jp-MarkdownHeadingCollapsed": true}
+
+### Exercise 4.20
+
++++
+
+The following table can be completed in more than one way, and still have the result depict a group. Find all possible such completions of the table, again using 0 as the identity element. How many did you find? Search Group Explorer's group library to determine the names for the groups each of your resulting tables represents.
+
+```{code-cell} ipython3
+pd.DataFrame([
+    [0, 1, 2, 3],
+    [1, 0, 3, 2],
+    [2, 3, 0, 1],
+    [3, 2, 1, 0],
+], index=[0, 1, 2, 3], columns=[0, 1, 2, 3])
+```
+
+See [Group Explorer · V₄](https://nathancarter.github.io/group-explorer/GroupInfo.html?groupURL=https://nathancarter.github.io/group-explorer/groups/V_4.group) with:
+- $0 = e$
+- $1 = h$
+- $3 = v$
+- $2 = hv$
+
+```{code-cell} ipython3
+pd.DataFrame([
+    [0, 1, 2, 3],
+    [1, 0, 3, 2],
+    [2, 3, 1, 0],
+    [3, 2, 0, 1],
+], index=[0, 1, 2, 3], columns=[0, 1, 2, 3])
+```
+
+See [Group Explorer · Z₄](https://nathancarter.github.io/group-explorer/GroupInfo.html?groupURL=https://nathancarter.github.io/group-explorer/groups/Z_4.group) with:
+- $0 = e$
+- $1 = a²$
+- $2 = a$
+- $3 = a³$
+
++++ {"jp-MarkdownHeadingCollapsed": true}
+
+### Exercise 4.21
+
++++
+
+> From Exercise 4.19 part (a) you can conclude that there is only one pattern for a group containing two elements. This is because the only difference between the multiplication table you computed and that of any other group with two elements will be the names of those elements. So the pattern of interactions among elements (or colors if we were to color the cells of the table) would be no different.
+> (a) How many patterns are there for groups containing three elements?
+
+One, for the same reasons.
+
+> (b) Containing one element?
+
+One, for the same reasons.
+
+> (c) Containing four elements?
+
+Two, based on the last two parts of Exercise 4.19 and Exercise 4.20.
+
+> Chapter 9 attacks the general question, "How many groups there are with n elements?"
+
++++ {"jp-MarkdownHeadingCollapsed": true}
+
+## 4.5.5 Table patterns
+
++++
+
+> These exercises preview Section 5.2, about an important family of groups called the abelian groups.
+
++++ {"jp-MarkdownHeadingCollapsed": true}
+
+### Exercise 4.22 (📑)
+
++++
+
+> We saw earlier in this chapter that in the group $V_4$, the equation $RB = BR$ is true. In fact, for any two elements $a, b ∈ V_4$, the equation $ab = ba$ is true. That is, the order in which you combine elements does not matter. Consider each group whose multiplication table appears in Figure 4.7 (except $A_5$, whose details are too small to see). For which of those groups does the order of combining elements matter?
+
++++
+
+The symmetric group $S_3$ and the quasihedral group with 16 elements.
+
++++
+
+The author's answer:
+
+> Order matters in $S_3$, and the two groups shown in the bottom row, but order does not matter in the other three groups shown in that figure.
+
++++ {"jp-MarkdownHeadingCollapsed": true}
+
+### Exercise 4.23 (📑)
+
++++
+
+> Groups in which the order of multiplication of elements does not matter are called commutative or abelian. Look through the groups in Group Explorer's group library, starting with the smallest, until you find one that is noncommutative. What is the name of the smallest noncommutative group?
+
++++
+
+The symmetric group $S_3$.
+
++++ {"jp-MarkdownHeadingCollapsed": true}
+
+### Exercise 4.24 (📑)
+
++++
+
+> What visual pattern do the multiplication tables of commutative groups exhibit?
+
++++
+
+The colors reflect across the diagonal.
+
++++
+
+## 4.5.6 Algebra
+
++++ {"jp-MarkdownHeadingCollapsed": true}
+
+### Exercise 4.25
+
++++
+
+> To go along with the other algebraic notation we've seen in this chapter, there is also an algebraic notation for generators. For instance, the group $C_5$, which appears in the first few exercises of this chapter, is generated by the element $a$. The standard notation for this is $C_5 = 〈a〉$. The 〈a〉 means "what you can generate from a," and so the equation $C_5 = 〈a〉$ is saying $C_5$ is the group generated from a." From Figure 4.3, we can write $V_4 = 〈R, B〉$, saying that $R$ and $B$ together generate $V_4$.
+>
+> Show your understanding of this new notation by filling in the blanks below using however many elements are necessary to generate the group. Use as few elements as possible.
+>
+> (a) From the Cayley diagram in Exercise 4.4, we see that $Q_4 = 〈 \underline{ } 〉$
+
++++
+
+$Q_4 = 〈i,j〉$
+
++++
+
+> (b) From the Cayley diagram in part (c) of Exercise 4.6, we see that $A_4 = 〈\underline{ }〉$.
+
++++
+
+$A_4 = 〈 a,x 〉$
+
++++
+
+> (c) There is more than one way to generate most groups. Find a different (yet still correct) answer to each of the previous two questions.
+
++++
+
+$Q_4 = 〈i,k〉$ because $k = ji$ so that $j = ki^{-1}$.
+
++++
+
+$A_4 = 〈 a²,x 〉$ because $a² = aa$ so that $a = a²a^{-1}$.
+
++++
+
+### Exercise 4.26 (⚠, 📑)
+
++++
+
+> Use the multiplication tables you constructed in Exercise 4.6 to determine the inverses for each element of each of the three groups from that problem.
+>
+> (a) In the cyclic group $C_5$, the inverses are:
+
++++
+
+$$
+\begin{align}
+e^{-1} &= e \\
+a^{-1} &= a⁴ \\
+(a^2)^{-1} &= a³ \\
+(a^3)^{-1} &= a² \\
+(a^4)^{-1} &= a \\
+\end{align}
+$$
+
++++
+
+> (b) In the quaternion group $Q_4$, the inverses are:
+
++++
+
+See the multiplication table in [Quaternion group](https://en.wikipedia.org/wiki/Quaternion_group), where what the author calls $Q_4$ is called $Q_8$.
+
++++
+
+$$
+\begin{align}
+1^{-1} &= e \\
+(-1)^{-1} &= -1 \\
+i^{-1} &= -i \\
+(-i)^{-1} &= i \\
+j^{-1} &= -j \\
+(-j)^{-1} &= j \\
+k^{-1} &= -k \\
+(-k)^{-1} &= k \\
+\end{align}
+$$
+
++++
+
+> (c) In the alternating group $A_4$, the inverses are:
+
++++
+
+Skipping; this answer would be straightforward but time-consuming.
+
++++
+
+> (d) In general, how do you use a multiplication table to find an element's inverse?
+
++++
+
+You take the name of the column where the element's value is $e$. In a Cayley diagram, you follow the associated inverse arrow(s) in the reverse order (e.g. the inverse of $fr$ is $r^{-1}f^{-1}$).
+
++++
+
+### Exercise 4.27 (📑)
+
++++
+
+> Inverses can be used to solve equations. In the group $C_5$, to solve $a²x = a$ for x, I can proceed as in high school algebra:
+>
+> $$
+\begin{align}
+a²x &= a \\
+(a²)^{-1}a²x &= (a²)^{-1}a \\
+x &= (a²)^{-1}a \\
+x &= a^4
+\end{align}
+$$
+>
+> Computing $(a²)^{-1}a$ in $C_5$ gives $x = a^4$.
+>
+> Try solving each of these equations in $C_5$.
+>
+> (a) $a^3 x = a^2$
+
++++
+
+$$
+\begin{align}
+a³x &= a² \\
+(a³)^{-1}a³x &= (a³)^{-1}a² \\
+x &= a^{-1} = a⁴ \\
+\end{align}
+$$
+
++++
+
+> (b) $a^4 a^2 x = a$
+
++++
+
+$$
+\begin{align}
+a^4 a^2 x &= a \\
+x &= e
+\end{align}
+$$
+
++++
+
+> (c) $a x (a^3)^{-1} = e$
+
++++
+
+$$
+\begin{align}
+a x (a^3)^{-1} &= e \\
+x &= a²
+\end{align}
+$$
+
++++
+
+### Exercise 4.28 (⚠)
+
++++
+
+> (a) If I have the equation $a^2 x (a^2)^{-1} = a$ to solve as in the previous exercise, can I cancel the $a²$ and the $(a^2)^{-1}$? Why or why not? (Hint: Is the result you get by canceling actually a solution to the equation?)
+
++++
+
+Yes, because the group is abelian.
+
++++
+
+> (b) If I have a similar equation, but in the group $Q_4$ from Exercise 4.6, $ixi^{-1} = j$, can I cancel the $i$ and $i^{-1}$? Why or why not?
+
++++
+
+No, because the group is not abelian.
+
++++
+
+> (c) Your answers to parts (a) and (b) should be different. What makes them different? Hint: Apply what you learned from the exercises in Section 4.5.5.
+
++++
+
+From the errata:
+
+> The exercise attempts to show a difference between abelian and nonabelian groups, but fails in the following way. In part (a), one can cancel a² and (a²)⁻¹ despite the x between them because the group C₅ is abelian; this part of the exercise is correct. In part (b), the group is Q₄, a nonabelian group, and in general it is not acceptable in nonabelian groups to rearrange elements to permit cancelling. However, in this case, the example chosen was a poor example, because the solution to part (b) is x = j, which one could obtain by naively canceling the i and i⁻¹. Although this strategy does not work in every nonabelian example, it works in this one.
+>
+> A correct version of the exercise would use a different example for part (b), such as the equation a² x (a²)⁻¹ = d in the group A₄ from page 54. The solution would be x = b, which we would not get through naive cancelling. If we attempted to cancel the a² with (a²)⁻¹, we would find x = d instead, which is incorrect.
+
++++
+
+### Exercise 4.29 (⚠)
+
++++
+
+Premultiply by b₁'s inverse and postmultiply by a₂'s inverse.
+
++++
+
+### Exercise 4.30 (⚠)
+
++++
+
+> Solve these equations for t.
+> (a) In Q₄, $jitk⁻¹ = -kj$
+
+$i⁻¹j⁻¹jitk⁻¹k = i⁻¹j⁻¹(-k)jk = t = (-i)(-j)(-k)jk = (-k)(-k)(-i) = i$
+
+> (b) In A₄, $t(b₂)² = xyz$
+
+Skipping because these symbols don't match the A₄ symbols; see errata.
+
+> (c) In S₃, $rtf = e$
+
+$$
+\begin{align}
+r⁻¹ &= r² \\
+f⁻¹ &= f \\
+rtf &= e \\
+r⁻¹rtff⁻¹ &= r⁻¹ef⁻¹ = t = r²ef = fr
+\end{align}
+$$
+
++++
+
+### Exercise 4.31
+
++++
+
+> Let's say you have a group G with identity element e. Take any three elements a, b, and c in G.
+>
+> (a) What does the equation ab = e say about the relationship between a and b?
+
++++
+
+It implies they are inverses of one another.
+
++++
+
+> (b) If both ab = e and ac = e, can you use algebra to show that b = c?
+
++++
+
+We have ab = ac = e from the two equations. Premultiply by the inverse of a to show this implies b = c.
+
++++
+
+> (c) Can an element in a group have two different inverses?
+
++++
+
+No
+
++++
+
+### Exercise 4.32 (📑)
+
++++
+
+> The set of integers (all positive and negative whole numbers, and zero) is often written as ℤ. Use Definition 4.2 to answer each of the following questions about ℤ.
+>
+> (a) Is it a group using ordinary addition as the operation?
+
++++
+
+Yes: It's closed, associative, has an identity element (0), and every element has an inverse.
+
++++
+
+> (b) Is it a group using ordinary multiplication as the operation?
+
++++
+
+No: Assume an identity element of 1. Every element does not have an inverse. For example,
+3 does not have an inverse (you'd need to use 1/3 which is a rational).
+
++++
+
+> (c) Are the even integers a group using ordinary addition as the operation?
+
++++
+
+Yes, still using 0 as the identity element.
+
++++
+
+> (d) The even integers are sometimes written 2ℤ, because they can be obtained by multiplying every integer by 2. If we think of 3ℤ, 4ℤ, and in general any nℤ in the same way, for what integers n is the set nℤ a group using ordinary addition as the operation?
+
++++
+
+Any integer n should still describe a group.
+
++++
+
+### Exercise 4.33 (📑)
+
++++
+
+> The rational numbers (often written ℚ) are the set of fractions $\frac{a}{b}$, where a and b are integers (but b ≠ 0). For example, $\frac{1}{2}$, $\frac{-6}{11}$, and $\frac{50}{3}$ are all rational. Any integer, including zero, is rational, because you can just divide it by 1. For example, 10 is the rational number $\frac{10}{1}$.
+>
+> Use Definition 4.2 to answer each of the following questions about ℚ.
+>
+> (a) Is it a group using ordinary addition as the operation?
+
++++
+
+Yes: It's closed, associative, has an identity element (0), and every element has an inverse.
+
++++
+
+> (b) Is it a group using ordinary multiplication as the operation?
+
++++
+
+Almost: It's closed, associative, has an identity element (1), and almost every element has an
+inverse (the reciprocal). Zero does not have a reciprocal.
+
++++
+
+> (c) Call ℚ⁺ the positive rational numbers (only those greater than zero). Is ℚ⁺ a group under
+ordinary addition?
+
++++
+
+No, it doesn't have an identity element.
+
++++
+
+> (d) Is ℚ⁺ a group under ordinary multiplication?
+
++++
+
+Yes: It's closed, associative, has an identity element (1), and every element has an
+inverse (the reciprocal).
+
++++
+
+> (e) Call ℚ* the nonzero rational numbers (all positive and negative ones, only leaving out
+zero). Is ℚ* a group under ordinary addition?
+
++++
+
+No, it doesn't have an identity element.
+
++++
+
+> (f) Is ℚ* a group under ordinary multiplication?
+
++++
+
+Yes: It's closed, associative, has an identity element (1), and every element has an inverse
+(the reciprocal).
+
++++
+
+> (g) Why are groups like ℚ, ℚ⁺, and ℚ* difficult to visualize using multiplication tables and Cayley diagrams?
+
++++
+
+It's hard to know what part of them to show since they're infinite in two directions, both the numerator and the denominator. Besides that, they have have "holes" for irrational numbers like π (see [Compact space](https://en.wikipedia.org/wiki/Compact_space)) which will not be consistent or symmetric (will appear almost random).
