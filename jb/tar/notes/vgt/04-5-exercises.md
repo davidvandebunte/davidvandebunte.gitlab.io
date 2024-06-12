@@ -402,7 +402,7 @@ Here are possible answers for Exercise 2.4 through Exercise 2.7; see the next qu
 
 ![x](04-5-ex-08-answer.svg)
 
-+++ {"jp-MarkdownHeadingCollapsed": true}
++++
 
 ### Exercise 4.9
 
@@ -638,11 +638,11 @@ Yes, there are similar patterns in those tables.
 
 In the top-left quadrant we have the table for when we never flip the $n$-gon (limit ourselves to rotations, this is essentially the table for a cyclic group). The bottom-left and top-right quadrants are associated with a single flip, and the bottom-right with two flips.
 
-+++ {"jp-MarkdownHeadingCollapsed": true}
++++
 
 ## 4.5.3 Almost tables
 
-+++ {"jp-MarkdownHeadingCollapsed": true}
++++
 
 ### Exercise 4.10 (📑)
 
@@ -881,7 +881,7 @@ The author's answer:
 
 > The element $s$ appears in the table, but is not in the row or column headings. Is it in the group or isn't it?
 
-+++ {"jp-MarkdownHeadingCollapsed": true}
++++
 
 ### Exercise 4.15
 
@@ -1167,7 +1167,7 @@ The author's answer:
 
 > Hint: For this exercise and those that follow it, use the fact from Exercise 4.15 liberally.
 
-+++ {"jp-MarkdownHeadingCollapsed": true}
++++
 
 ### Exercise 4.20
 

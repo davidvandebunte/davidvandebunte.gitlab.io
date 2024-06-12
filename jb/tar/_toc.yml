@@ -141,8 +141,14 @@ parts:
         sections:
         - file: notes/vgt/04-5-exercises.md
       - file: notes/vgt/05-five-families.md
+        sections:
+        - file: notes/vgt/05-5-exercises.md
       - file: notes/vgt/06-subgroups.md
+        sections:
+        - file: notes/vgt/06-6-exercises.md
       - file: notes/vgt/07-products-and-quotients.md
+        sections:
+        - file: notes/vgt/07-6-exercises.md
       - file: notes/vgt/08-the-power-of-homomorphisms.md
         sections:
         - file: notes/chp8-q32.md
