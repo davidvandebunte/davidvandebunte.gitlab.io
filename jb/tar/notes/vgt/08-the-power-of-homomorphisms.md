@@ -16,3 +16,11 @@ kernelspec:
 +++
 
 ## 8.1 Embeddings and quotient maps
+
++++
+
+## 8.2 The Fundamental Homomorphism Theorem
+
++++
+
+See also [Fundamental theorem on homomorphisms](https://en.wikipedia.org/wiki/Fundamental_theorem_on_homomorphisms).
