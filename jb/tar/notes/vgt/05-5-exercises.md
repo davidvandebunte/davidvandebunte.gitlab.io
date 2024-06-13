@@ -27,7 +27,11 @@ kernelspec:
 
 +++
 
-This is often called the trivial group. It is:
+A cyclic group.
+
++++
+
+A similar, also interesting question: If a group contains one element, what kind of group is it? This is often called the trivial group. It is:
 - Cyclic because applying the single action leads you back to the same location.
 - Abelian because the multiplication table is symmetric along the diagonal and it doesn't order what matter you perform actions in.
 - Symmetric because it corresponds to all permutations of size one.

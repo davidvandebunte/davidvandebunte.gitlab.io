@@ -514,7 +514,7 @@ $$
 
 > List all the subgroup relationships that exist among the following eight groups.
 
-Assuming $ℚ$ refers to the ratoinal numbers under addition. Assuming $ℚ⁺$ refers to the rational numbers under multiplication (not related to the other groups).
+Assuming $ℚ$ refers to the rational numbers under addition. Ignoring $ℚ⁺$ since this is not a group (likely an error in the book).
 
 $$
 \begin{gather}

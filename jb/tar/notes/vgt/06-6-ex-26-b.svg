@@ -25,9 +25,9 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="px"
      showgrid="true"
-     inkscape:zoom="1.1848949"
-     inkscape:cx="203.81555"
-     inkscape:cy="563.3411"
+     inkscape:zoom="3.3513889"
+     inkscape:cx="195.14298"
+     inkscape:cy="293.16204"
      inkscape:current-layer="layer1">
     <inkscape:grid
        id="grid1"
@@ -200,42 +200,34 @@
        fy="180.0088"
        gradientUnits="userSpaceOnUse"
        gradientTransform="translate(-405.20076,-40.27221)">
-				<stop
-   offset="0"
-   style="stop-color:#FFFFFF"
-   id="stop7-7" />
-
-				<stop
-   offset="0.4888"
-   style="stop-color:#73BE1E"
-   id="stop8-5" />
-
-				<stop
-   offset="1"
-   style="stop-color:#005447"
-   id="stop9-9" />
-
-				<a:midPointStop
-   offset="0"
-   style="stop-color:#FFFFFF" />
-
-				<a:midPointStop
-   offset="0.5"
-   style="stop-color:#FFFFFF" />
-
-				<a:midPointStop
-   offset="0.4888"
-   style="stop-color:#73BE1E" />
-
-				<a:midPointStop
-   offset="0.5"
-   style="stop-color:#73BE1E" />
-
-				<a:midPointStop
-   offset="1"
-   style="stop-color:#005447" />
-
-			</radialGradient>
+      <stop
+         offset="0"
+         style="stop-color:#FFFFFF"
+         id="stop7-7" />
+      <stop
+         offset="0.4888"
+         style="stop-color:#73BE1E"
+         id="stop8-5" />
+      <stop
+         offset="1"
+         style="stop-color:#005447"
+         id="stop9-9" />
+      <a:midPointStop
+         offset="0"
+         style="stop-color:#FFFFFF" />
+      <a:midPointStop
+         offset="0.5"
+         style="stop-color:#FFFFFF" />
+      <a:midPointStop
+         offset="0.4888"
+         style="stop-color:#73BE1E" />
+      <a:midPointStop
+         offset="0.5"
+         style="stop-color:#73BE1E" />
+      <a:midPointStop
+         offset="1"
+         style="stop-color:#005447" />
+    </radialGradient>
     <radialGradient
        id="XMLID_50_-2"
        cx="291.35501"
@@ -245,42 +237,34 @@
        fy="217.8159"
        gradientUnits="userSpaceOnUse"
        gradientTransform="translate(-482.43088,-35.117378)">
-				<stop
-   offset="0"
-   style="stop-color:#FFFFFF"
-   id="stop10-2" />
-
-				<stop
-   offset="0.4888"
-   style="stop-color:#FF9900"
-   id="stop11-8" />
-
-				<stop
-   offset="1"
-   style="stop-color:#5B3E1C"
-   id="stop12-9" />
-
-				<a:midPointStop
-   offset="0"
-   style="stop-color:#FFFFFF" />
-
-				<a:midPointStop
-   offset="0.5"
-   style="stop-color:#FFFFFF" />
-
-				<a:midPointStop
-   offset="0.4888"
-   style="stop-color:#FF9900" />
-
-				<a:midPointStop
-   offset="0.5"
-   style="stop-color:#FF9900" />
-
-				<a:midPointStop
-   offset="1"
-   style="stop-color:#5B3E1C" />
-
-			</radialGradient>
+      <stop
+         offset="0"
+         style="stop-color:#FFFFFF"
+         id="stop10-2" />
+      <stop
+         offset="0.4888"
+         style="stop-color:#FF9900"
+         id="stop11-8" />
+      <stop
+         offset="1"
+         style="stop-color:#5B3E1C"
+         id="stop12-9" />
+      <a:midPointStop
+         offset="0"
+         style="stop-color:#FFFFFF" />
+      <a:midPointStop
+         offset="0.5"
+         style="stop-color:#FFFFFF" />
+      <a:midPointStop
+         offset="0.4888"
+         style="stop-color:#FF9900" />
+      <a:midPointStop
+         offset="0.5"
+         style="stop-color:#FF9900" />
+      <a:midPointStop
+         offset="1"
+         style="stop-color:#5B3E1C" />
+    </radialGradient>
     <radialGradient
        id="XMLID_51_-7"
        cx="266.59329"
@@ -290,42 +274,34 @@
        fy="260.00781"
        gradientUnits="userSpaceOnUse"
        gradientTransform="translate(-405.20076,-40.27221)">
-				<stop
-   offset="0"
-   style="stop-color:#FFFFFF"
-   id="stop13-3" />
-
-				<stop
-   offset="0.4494"
-   style="stop-color:#9957F7"
-   id="stop14-6" />
-
-				<stop
-   offset="1"
-   style="stop-color:#000000"
-   id="stop15-1" />
-
-				<a:midPointStop
-   offset="0"
-   style="stop-color:#FFFFFF" />
-
-				<a:midPointStop
-   offset="0.5"
-   style="stop-color:#FFFFFF" />
-
-				<a:midPointStop
-   offset="0.4494"
-   style="stop-color:#9957F7" />
-
-				<a:midPointStop
-   offset="0.5"
-   style="stop-color:#9957F7" />
-
-				<a:midPointStop
-   offset="1"
-   style="stop-color:#000000" />
-
-			</radialGradient>
+      <stop
+         offset="0"
+         style="stop-color:#FFFFFF"
+         id="stop13-3" />
+      <stop
+         offset="0.4494"
+         style="stop-color:#9957F7"
+         id="stop14-6" />
+      <stop
+         offset="1"
+         style="stop-color:#000000"
+         id="stop15-1" />
+      <a:midPointStop
+         offset="0"
+         style="stop-color:#FFFFFF" />
+      <a:midPointStop
+         offset="0.5"
+         style="stop-color:#FFFFFF" />
+      <a:midPointStop
+         offset="0.4494"
+         style="stop-color:#9957F7" />
+      <a:midPointStop
+         offset="0.5"
+         style="stop-color:#9957F7" />
+      <a:midPointStop
+         offset="1"
+         style="stop-color:#000000" />
+    </radialGradient>
     <radialGradient
        id="XMLID_52_-2"
        cx="214.59081"
@@ -335,42 +311,34 @@
        fy="221.9937"
        gradientUnits="userSpaceOnUse"
        gradientTransform="translate(-327.5857,-42.657154)">
-				<stop
-   offset="0"
-   style="stop-color:#FFFFFF"
-   id="stop16-9" />
-
-				<stop
-   offset="0.382"
-   style="stop-color:#22ADF2"
-   id="stop17-3" />
-
-				<stop
-   offset="1"
-   style="stop-color:#000000"
-   id="stop18-1" />
-
-				<a:midPointStop
-   offset="0"
-   style="stop-color:#FFFFFF" />
-
-				<a:midPointStop
-   offset="0.5"
-   style="stop-color:#FFFFFF" />
-
-				<a:midPointStop
-   offset="0.382"
-   style="stop-color:#22ADF2" />
-
-				<a:midPointStop
-   offset="0.5"
-   style="stop-color:#22ADF2" />
-
-				<a:midPointStop
-   offset="1"
-   style="stop-color:#000000" />
-
-			</radialGradient>
+      <stop
+         offset="0"
+         style="stop-color:#FFFFFF"
+         id="stop16-9" />
+      <stop
+         offset="0.382"
+         style="stop-color:#22ADF2"
+         id="stop17-3" />
+      <stop
+         offset="1"
+         style="stop-color:#000000"
+         id="stop18-1" />
+      <a:midPointStop
+         offset="0"
+         style="stop-color:#FFFFFF" />
+      <a:midPointStop
+         offset="0.5"
+         style="stop-color:#FFFFFF" />
+      <a:midPointStop
+         offset="0.382"
+         style="stop-color:#22ADF2" />
+      <a:midPointStop
+         offset="0.5"
+         style="stop-color:#22ADF2" />
+      <a:midPointStop
+         offset="1"
+         style="stop-color:#000000" />
+    </radialGradient>
     <marker
        inkscape:isstock="true"
        style="overflow:visible"
@@ -910,7 +878,7 @@
      transform="translate(630.61668,487.76478)">
     <g
        id="g44158"
-       transform="matrix(3.7795276,0,0,3.7795276,-815.2563,-12089.708)">
+       transform="matrix(3.7795276,0,0,3.7795276,-814.95792,-12089.708)">
       <rect
          style="fill:#ff9999;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-miterlimit:4;stroke-dasharray:none;stop-color:#000000"
          id="rect42465"
@@ -935,17 +903,17 @@
        id="rect43394"
        width="30.193165"
        height="30.193165"
-       x="-619.86078"
+       x="-619.56238"
        y="-445.30365" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1.25;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       x="-608.86816"
+       x="-608.56976"
        y="-425.25537"
        id="text43398"><tspan
          sodipodi:role="line"
          id="tspan43396"
-         x="-608.86816"
+         x="-608.56976"
          y="-425.25537"
          style="stroke-width:0.999999">2</tspan></text>
     <rect
@@ -953,17 +921,17 @@
        id="rect43901"
        width="30.193165"
        height="30.193165"
-       x="-619.86078"
+       x="-619.56238"
        y="-413.59937" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1.25;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       x="-608.86816"
+       x="-608.56976"
        y="-393.55106"
        id="text43905"><tspan
          sodipodi:role="line"
          id="tspan43903"
-         x="-608.86816"
+         x="-608.56976"
          y="-393.55106"
          style="stroke-width:0.999999">4</tspan></text>
     <rect
@@ -971,17 +939,17 @@
        id="rect43893"
        width="30.193165"
        height="30.193165"
-       x="-619.86078"
+       x="-619.56238"
        y="-381.89413" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1.25;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       x="-608.86816"
+       x="-608.56976"
        y="-361.84586"
        id="text43897"><tspan
          sodipodi:role="line"
          id="tspan43895"
-         x="-608.86816"
+         x="-608.56976"
          y="-361.84586"
          style="stroke-width:0.999999">6</tspan></text>
     <g
@@ -1074,7 +1042,7 @@
     </g>
     <g
        id="g44163"
-       transform="matrix(3.7795276,0,0,3.7795276,-815.2563,-12089.708)">
+       transform="matrix(3.7795276,0,0,3.7795276,-814.95792,-12089.708)">
       <rect
          style="fill:#ffe999;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-miterlimit:4;stroke-dasharray:none;stop-color:#000000"
          id="rect43853"
@@ -1099,17 +1067,17 @@
        id="rect43845"
        width="30.193165"
        height="30.193165"
-       x="-588.15582"
+       x="-587.85742"
        y="-445.30365" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1.25;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       x="-577.16321"
+       x="-576.86481"
        y="-425.25537"
        id="text43849"><tspan
          sodipodi:role="line"
          id="tspan43847"
-         x="-577.16321"
+         x="-576.86481"
          y="-425.25537"
          style="stroke-width:0.999999">4</tspan></text>
     <rect
@@ -1117,17 +1085,17 @@
        id="rect43837"
        width="30.193165"
        height="30.193165"
-       x="-588.15582"
+       x="-587.85742"
        y="-413.59937" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1.25;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       x="-577.16321"
+       x="-576.86481"
        y="-393.55106"
        id="text43841"><tspan
          sodipodi:role="line"
          id="tspan43839"
-         x="-577.16321"
+         x="-576.86481"
          y="-393.55106"
          style="stroke-width:0.999999">6</tspan></text>
     <rect
@@ -1135,17 +1103,17 @@
        id="rect43829"
        width="30.193165"
        height="30.193165"
-       x="-588.15582"
+       x="-587.85742"
        y="-381.89413" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1.25;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       x="-577.16321"
+       x="-576.86481"
        y="-361.84586"
        id="text43833"><tspan
          sodipodi:role="line"
          id="tspan43831"
-         x="-577.16321"
+         x="-576.86481"
          y="-361.84586"
          style="stroke-width:0.999999">0</tspan></text>
     <rect
@@ -1222,7 +1190,7 @@
          style="stroke-width:0.999999">1</tspan></text>
     <g
        id="g44168"
-       transform="matrix(3.7795276,0,0,3.7795276,-815.2563,-12089.708)">
+       transform="matrix(3.7795276,0,0,3.7795276,-814.95792,-12089.708)">
       <rect
          style="fill:#ccff99;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-miterlimit:4;stroke-dasharray:none;stop-color:#000000"
          id="rect43789"
@@ -1247,17 +1215,17 @@
        id="rect43781"
        width="30.193165"
        height="30.193165"
-       x="-556.45087"
+       x="-556.15247"
        y="-445.30365" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1.25;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       x="-545.45825"
+       x="-545.15985"
        y="-425.25537"
        id="text43785"><tspan
          sodipodi:role="line"
          id="tspan43783"
-         x="-545.45825"
+         x="-545.15985"
          y="-425.25537"
          style="stroke-width:0.999999">6</tspan></text>
     <rect
@@ -1265,17 +1233,17 @@
        id="rect43773"
        width="30.193165"
        height="30.193165"
-       x="-556.45087"
+       x="-556.15247"
        y="-413.59937" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1.25;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       x="-545.45825"
+       x="-545.15985"
        y="-393.55106"
        id="text43777"><tspan
          sodipodi:role="line"
          id="tspan43775"
-         x="-545.45825"
+         x="-545.15985"
          y="-393.55106"
          style="stroke-width:0.999999">0</tspan></text>
     <rect
@@ -1283,17 +1251,17 @@
        id="rect43765"
        width="30.193165"
        height="30.193165"
-       x="-556.45087"
+       x="-556.15247"
        y="-381.89413" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1.25;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       x="-545.45825"
+       x="-545.15985"
        y="-361.84586"
        id="text43769"><tspan
          sodipodi:role="line"
          id="tspan43767"
-         x="-545.45825"
+         x="-545.15985"
          y="-361.84586"
          style="stroke-width:0.999999">2</tspan></text>
     <rect
@@ -1370,7 +1338,7 @@
          style="stroke-width:0.999999">3</tspan></text>
     <g
        id="g44173"
-       transform="matrix(3.7795276,0,0,3.7795276,-815.2563,-12089.708)">
+       transform="matrix(3.7795276,0,0,3.7795276,-814.95792,-12089.708)">
       <rect
          style="fill:#99ffb6;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-miterlimit:4;stroke-dasharray:none;stop-color:#000000"
          id="rect43725"
@@ -1395,17 +1363,17 @@
        id="rect43717"
        width="30.193165"
        height="30.193165"
-       x="-524.74585"
+       x="-524.44745"
        y="-445.30365" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1.25;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       x="-513.7533"
+       x="-513.4549"
        y="-424.27356"
        id="text43721"><tspan
          sodipodi:role="line"
          id="tspan43719"
-         x="-513.7533"
+         x="-513.4549"
          y="-424.27356"
          style="stroke-width:0.999999">0</tspan></text>
     <rect
@@ -1413,17 +1381,17 @@
        id="rect43709"
        width="30.193165"
        height="30.193165"
-       x="-524.74585"
+       x="-524.44745"
        y="-413.59937" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1.25;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       x="-513.7533"
+       x="-513.4549"
        y="-393.55106"
        id="text43713"><tspan
          sodipodi:role="line"
          id="tspan43711"
-         x="-513.7533"
+         x="-513.4549"
          y="-393.55106"
          style="stroke-width:0.999999">2</tspan></text>
     <rect
@@ -1431,17 +1399,17 @@
        id="rect43701"
        width="30.193165"
        height="30.193165"
-       x="-524.74585"
+       x="-524.44745"
        y="-381.89413" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1.25;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       x="-513.7533"
+       x="-513.4549"
        y="-361.84586"
        id="text43705"><tspan
          sodipodi:role="line"
          id="tspan43703"
-         x="-513.7533"
+         x="-513.4549"
          y="-361.84586"
          style="stroke-width:0.999999">4</tspan></text>
     <rect
@@ -1518,7 +1486,7 @@
          style="stroke-width:0.999999">5</tspan></text>
     <g
        id="g44209"
-       transform="matrix(3.7795276,0,0,3.7795276,-689.25629,-12216.199)">
+       transform="matrix(3.7795276,0,0,3.7795276,-688.65953,-12216.199)">
       <rect
          style="fill:#99ffff;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-miterlimit:4;stroke-dasharray:none;stop-color:#000000"
          id="rect44203"
@@ -1540,7 +1508,7 @@
     </g>
     <g
        id="g44217"
-       transform="matrix(3.7795276,0,0,3.7795276,-659.25629,-12247.708)">
+       transform="matrix(3.7795276,0,0,3.7795276,-658.65953,-12247.708)">
       <rect
          style="fill:#99afff;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-miterlimit:4;stroke-dasharray:none;stop-color:#000000"
          id="rect44211"
@@ -1562,7 +1530,7 @@
     </g>
     <g
        id="g44225"
-       transform="matrix(3.7795276,0,0,3.7795276,-629.25629,-12279.708)">
+       transform="matrix(3.7795276,0,0,3.7795276,-628.65953,-12279.708)">
       <rect
          style="fill:#cc99ff;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-miterlimit:4;stroke-dasharray:none;stop-color:#000000"
          id="rect44219"
@@ -1584,7 +1552,7 @@
     </g>
     <g
        id="g44233"
-       transform="matrix(3.7795276,0,0,3.7795276,-599.25629,-12311.217)">
+       transform="matrix(3.7795276,0,0,3.7795276,-598.65953,-12311.217)">
       <rect
          style="fill:#ff99e2;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-miterlimit:4;stroke-dasharray:none;stop-color:#000000"
          id="rect44227"
@@ -1606,7 +1574,7 @@
     </g>
     <g
        id="g44257"
-       transform="matrix(3.7795276,0,0,3.7795276,-689.49252,-12216.49)">
+       transform="matrix(3.7795276,0,0,3.7795276,-688.89576,-12216.49)">
       <rect
          style="fill:#99afff;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-miterlimit:4;stroke-dasharray:none;stop-color:#000000"
          id="rect44251"
@@ -1628,7 +1596,7 @@
     </g>
     <g
        id="g44265"
-       transform="matrix(3.7795276,0,0,3.7795276,-659.49251,-12248.49)">
+       transform="matrix(3.7795276,0,0,3.7795276,-658.89575,-12248.49)">
       <rect
          style="fill:#cc99ff;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-miterlimit:4;stroke-dasharray:none;stop-color:#000000"
          id="rect44259"
@@ -1650,7 +1618,7 @@
     </g>
     <g
        id="g44273"
-       transform="matrix(3.7795276,0,0,3.7795276,-629.49251,-12279.999)">
+       transform="matrix(3.7795276,0,0,3.7795276,-628.89575,-12279.999)">
       <rect
          style="fill:#ff99e2;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-miterlimit:4;stroke-dasharray:none;stop-color:#000000"
          id="rect44267"
@@ -1672,7 +1640,7 @@
     </g>
     <g
        id="g44281"
-       transform="matrix(3.7795276,0,0,3.7795276,-598.54763,-12184.981)">
+       transform="matrix(3.7795276,0,0,3.7795276,-597.95087,-12184.981)">
       <rect
          style="fill:#99ffff;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-miterlimit:4;stroke-dasharray:none;stop-color:#000000"
          id="rect44275"
@@ -1694,7 +1662,7 @@
     </g>
     <g
        id="g44289"
-       transform="matrix(3.7795276,0,0,3.7795276,-597.80176,-12184.78)">
+       transform="matrix(3.7795276,0,0,3.7795276,-597.205,-12184.78)">
       <rect
          style="fill:#99afff;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-miterlimit:4;stroke-dasharray:none;stop-color:#000000"
          id="rect44283"
@@ -1716,7 +1684,7 @@
     </g>
     <g
        id="g44297"
-       transform="matrix(3.7795276,0,0,3.7795276,-688.74663,-12216.78)">
+       transform="matrix(3.7795276,0,0,3.7795276,-688.14987,-12216.78)">
       <rect
          style="fill:#cc99ff;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-miterlimit:4;stroke-dasharray:none;stop-color:#000000"
          id="rect44291"
@@ -1738,7 +1706,7 @@
     </g>
     <g
        id="g44305"
-       transform="matrix(3.7795276,0,0,3.7795276,-658.74664,-12248.289)">
+       transform="matrix(3.7795276,0,0,3.7795276,-658.14988,-12248.289)">
       <rect
          style="fill:#ff99e2;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-miterlimit:4;stroke-dasharray:none;stop-color:#000000"
          id="rect44299"
@@ -1760,7 +1728,7 @@
     </g>
     <g
        id="g44313"
-       transform="matrix(3.7795276,0,0,3.7795276,-627.80175,-12153.271)">
+       transform="matrix(3.7795276,0,0,3.7795276,-627.20499,-12153.271)">
       <rect
          style="fill:#99ffff;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-miterlimit:4;stroke-dasharray:none;stop-color:#000000"
          id="rect44307"
@@ -1782,7 +1750,7 @@
     </g>
     <g
        id="g44329"
-       transform="matrix(3.7795276,0,0,3.7795276,-628.03798,-12153.071)">
+       transform="matrix(3.7795276,0,0,3.7795276,-627.44122,-12153.071)">
       <rect
          style="fill:#99afff;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-miterlimit:4;stroke-dasharray:none;stop-color:#000000"
          id="rect44323"
@@ -1804,7 +1772,7 @@
     </g>
     <g
        id="g44337"
-       transform="matrix(3.7795276,0,0,3.7795276,-597.05588,-12185.071)">
+       transform="matrix(3.7795276,0,0,3.7795276,-596.45912,-12185.071)">
       <rect
          style="fill:#cc99ff;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-miterlimit:4;stroke-dasharray:none;stop-color:#000000"
          id="rect44331"
@@ -1826,7 +1794,7 @@
     </g>
     <g
        id="g44345"
-       transform="matrix(3.7795276,0,0,3.7795276,-688.98286,-12216.58)">
+       transform="matrix(3.7795276,0,0,3.7795276,-688.3861,-12216.58)">
       <rect
          style="fill:#ff99e2;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-miterlimit:4;stroke-dasharray:none;stop-color:#000000"
          id="rect44339"
@@ -1848,7 +1816,7 @@
     </g>
     <g
        id="g44353"
-       transform="matrix(3.7795276,0,0,3.7795276,-658.03798,-12121.562)">
+       transform="matrix(3.7795276,0,0,3.7795276,-657.44122,-12121.562)">
       <rect
          style="fill:#99ffff;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-miterlimit:4;stroke-dasharray:none;stop-color:#000000"
          id="rect44347"
@@ -1868,5 +1836,309 @@
            y="3111.3855"
            style="stroke-width:0.264583">1</tspan></text>
     </g>
+    <g
+       id="g1"
+       transform="matrix(3.7795276,0,0,3.7795276,-688.7482,-11963.112)">
+      <rect
+         style="fill:#ff9999;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-miterlimit:4;stroke-dasharray:none;stop-color:#000000"
+         id="rect1"
+         width="7.9886079"
+         height="7.9886079"
+         x="51.698399"
+         y="3072.5266" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         x="54.606853"
+         y="3077.8311"
+         id="text1"><tspan
+           sodipodi:role="line"
+           id="tspan1"
+           x="54.606853"
+           y="3077.8311"
+           style="stroke-width:0.264583">0</tspan></text>
+    </g>
+    <rect
+       style="fill:#ffe999;fill-opacity:1;stroke:#000000;stroke-width:1.51181;stroke-miterlimit:4;stroke-dasharray:none;stop-color:#000000"
+       id="rect2"
+       width="30.193165"
+       height="30.193165"
+       x="-493.35263"
+       y="-318.70691" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1.25;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="-482.36002"
+       y="-298.65863"
+       id="text2"><tspan
+         sodipodi:role="line"
+         id="tspan2"
+         x="-482.36002"
+         y="-298.65863"
+         style="stroke-width:0.999999">2</tspan></text>
+    <rect
+       style="fill:#ccff99;fill-opacity:1;stroke:#000000;stroke-width:1.51181;stroke-miterlimit:4;stroke-dasharray:none;stop-color:#000000"
+       id="rect3"
+       width="30.193165"
+       height="30.193165"
+       x="-493.35263"
+       y="-287.00262" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1.25;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="-482.36002"
+       y="-266.95432"
+       id="text3"><tspan
+         sodipodi:role="line"
+         id="tspan3"
+         x="-482.36002"
+         y="-266.95432"
+         style="stroke-width:0.999999">4</tspan></text>
+    <rect
+       style="fill:#99ffb6;fill-opacity:1;stroke:#000000;stroke-width:1.51181;stroke-miterlimit:4;stroke-dasharray:none;stop-color:#000000"
+       id="rect4"
+       width="30.193165"
+       height="30.193165"
+       x="-493.35263"
+       y="-255.29736" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1.25;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="-482.36002"
+       y="-235.24908"
+       id="text4"><tspan
+         sodipodi:role="line"
+         id="tspan4"
+         x="-482.36002"
+         y="-235.24908"
+         style="stroke-width:0.999999">6</tspan></text>
+    <g
+       id="g5"
+       transform="matrix(3.7795276,0,0,3.7795276,-689.55468,-11963.112)">
+      <rect
+         style="fill:#ffe999;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-miterlimit:4;stroke-dasharray:none;stop-color:#000000"
+         id="rect5"
+         width="7.9886079"
+         height="7.9886079"
+         x="60.087006"
+         y="3072.5266" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         x="62.995461"
+         y="3077.8311"
+         id="text5"><tspan
+           sodipodi:role="line"
+           id="tspan5"
+           x="62.995461"
+           y="3077.8311"
+           style="stroke-width:0.264583">2</tspan></text>
+    </g>
+    <rect
+       style="fill:#ccff99;fill-opacity:1;stroke:#000000;stroke-width:1.51181;stroke-miterlimit:4;stroke-dasharray:none;stop-color:#000000"
+       id="rect6"
+       width="30.193165"
+       height="30.193165"
+       x="-462.45419"
+       y="-318.70691" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1.25;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="-451.46158"
+       y="-298.65863"
+       id="text6"><tspan
+         sodipodi:role="line"
+         id="tspan6"
+         x="-451.46158"
+         y="-298.65863"
+         style="stroke-width:0.999999">4</tspan></text>
+    <rect
+       style="fill:#99ffb6;fill-opacity:1;stroke:#000000;stroke-width:1.51181;stroke-miterlimit:4;stroke-dasharray:none;stop-color:#000000"
+       id="rect7"
+       width="30.193165"
+       height="30.193165"
+       x="-462.45419"
+       y="-287.00262" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1.25;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="-451.46158"
+       y="-266.95432"
+       id="text7"><tspan
+         sodipodi:role="line"
+         id="tspan7"
+         x="-451.46158"
+         y="-266.95432"
+         style="stroke-width:0.999999">6</tspan></text>
+    <rect
+       style="font-variation-settings:normal;vector-effect:none;fill:#ff9999;fill-opacity:1;stroke:#000000;stroke-width:1.51181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
+       id="rect8"
+       width="30.193165"
+       height="30.193165"
+       x="-462.45419"
+       y="-255.29736" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1.25;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="-451.46158"
+       y="-235.24908"
+       id="text8"><tspan
+         sodipodi:role="line"
+         id="tspan8"
+         x="-451.46158"
+         y="-235.24908"
+         style="stroke-width:0.999999">0</tspan></text>
+    <g
+       id="g9"
+       transform="matrix(3.7795276,0,0,3.7795276,-690.7482,-11963.112)">
+      <rect
+         style="fill:#ccff99;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-miterlimit:4;stroke-dasharray:none;stop-color:#000000"
+         id="rect9"
+         width="7.9886079"
+         height="7.9886079"
+         x="68.475609"
+         y="3072.5266" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         x="71.384064"
+         y="3077.8311"
+         id="text9"><tspan
+           sodipodi:role="line"
+           id="tspan9"
+           x="71.384064"
+           y="3077.8311"
+           style="stroke-width:0.264583">4</tspan></text>
+    </g>
+    <rect
+       style="fill:#99ffb6;fill-opacity:1;stroke:#000000;stroke-width:1.51181;stroke-miterlimit:4;stroke-dasharray:none;stop-color:#000000"
+       id="rect10"
+       width="30.193165"
+       height="30.193165"
+       x="-431.94272"
+       y="-318.70691" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1.25;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="-420.9501"
+       y="-298.65863"
+       id="text10"><tspan
+         sodipodi:role="line"
+         id="tspan10"
+         x="-420.9501"
+         y="-298.65863"
+         style="stroke-width:0.999999">6</tspan></text>
+    <rect
+       style="font-variation-settings:normal;vector-effect:none;fill:#ff9999;fill-opacity:1;stroke:#000000;stroke-width:1.51181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
+       id="rect11"
+       width="30.193165"
+       height="30.193165"
+       x="-431.94272"
+       y="-287.00262" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1.25;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="-420.9501"
+       y="-266.95432"
+       id="text11"><tspan
+         sodipodi:role="line"
+         id="tspan11"
+         x="-420.9501"
+         y="-266.95432"
+         style="stroke-width:0.999999">0</tspan></text>
+    <rect
+       style="fill:#ffe999;fill-opacity:1;stroke:#000000;stroke-width:1.51181;stroke-miterlimit:4;stroke-dasharray:none;stop-color:#000000"
+       id="rect12"
+       width="30.193165"
+       height="30.193165"
+       x="-431.94272"
+       y="-255.29736" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1.25;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="-420.9501"
+       y="-235.24908"
+       id="text12"><tspan
+         sodipodi:role="line"
+         id="tspan12"
+         x="-420.9501"
+         y="-235.24908"
+         style="stroke-width:0.999999">2</tspan></text>
+    <g
+       id="g13"
+       transform="matrix(3.7795276,0,0,3.7795276,-691.64334,-11963.112)">
+      <rect
+         style="fill:#99ffb6;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-miterlimit:4;stroke-dasharray:none;stop-color:#000000"
+         id="rect13"
+         width="7.9886079"
+         height="7.9886079"
+         x="76.86422"
+         y="3072.5266" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         x="79.772675"
+         y="3077.8311"
+         id="text13"><tspan
+           sodipodi:role="line"
+           id="tspan13"
+           x="79.772675"
+           y="3077.8311"
+           style="stroke-width:0.264583">6</tspan></text>
+    </g>
+    <rect
+       style="font-variation-settings:normal;vector-effect:none;fill:#ff9999;fill-opacity:1;stroke:#000000;stroke-width:1.51181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
+       id="rect14"
+       width="30.193165"
+       height="30.193165"
+       x="-401.13281"
+       y="-318.70691" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1.25;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="-390.14026"
+       y="-297.67682"
+       id="text14"><tspan
+         sodipodi:role="line"
+         id="tspan14"
+         x="-390.14026"
+         y="-297.67682"
+         style="stroke-width:0.999999">0</tspan></text>
+    <rect
+       style="fill:#ffe999;fill-opacity:1;stroke:#000000;stroke-width:1.51181;stroke-miterlimit:4;stroke-dasharray:none;stop-color:#000000"
+       id="rect15"
+       width="30.193165"
+       height="30.193165"
+       x="-401.13281"
+       y="-287.00262" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1.25;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="-390.14026"
+       y="-266.95432"
+       id="text15"><tspan
+         sodipodi:role="line"
+         id="tspan15"
+         x="-390.14026"
+         y="-266.95432"
+         style="stroke-width:0.999999">2</tspan></text>
+    <rect
+       style="fill:#ccff99;fill-opacity:1;stroke:#000000;stroke-width:1.51181;stroke-miterlimit:4;stroke-dasharray:none;stop-color:#000000"
+       id="rect16"
+       width="30.193165"
+       height="30.193165"
+       x="-401.13281"
+       y="-255.29736" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1.25;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="-390.14026"
+       y="-235.24908"
+       id="text16"><tspan
+         sodipodi:role="line"
+         id="tspan16"
+         x="-390.14026"
+         y="-235.24908"
+         style="stroke-width:0.999999">4</tspan></text>
   </g>
 </svg>
