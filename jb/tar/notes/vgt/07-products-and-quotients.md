@@ -55,4 +55,4 @@ See also [Centralizer and normalizer](https://en.wikipedia.org/wiki/Centralizer_
 
 +++
 
-See also [Conjugacy class](https://en.wikipedia.org/wiki/Conjugacy_class).
+See also [Conjugacy class](https://en.wikipedia.org/wiki/Conjugacy_class). Once you've reached this section, it may be helpful to start referring to normal subgroups as [Self-conjugate subgroups](https://en.wikipedia.org/wiki/Self-conjugate_subgroup) (a bit more descriptive).

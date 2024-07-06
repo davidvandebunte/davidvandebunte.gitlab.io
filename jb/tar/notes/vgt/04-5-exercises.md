@@ -171,7 +171,7 @@ Not commutative, not associative (try 2^3^2)
 
 ## 4.5.2 Creating tables
 
-+++ {"jp-MarkdownHeadingCollapsed": true}
++++
 
 ### Exercise 4.4 (⚠)
 
