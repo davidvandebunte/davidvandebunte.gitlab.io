@@ -52,3 +52,7 @@ See also [Yoneda lemma](https://en.wikipedia.org/wiki/Yoneda_lemma).
 The author's footnote regarding composition is a bit unfortunate. It's fine and good to choose this particular convention of right-multiplication for composition: it's also the choice of GAP, [Permutations - SymPy](https://docs.sympy.org/latest/modules/combinatorics/permutations.html) and [Permutations · AbstractAlgebra.jl](https://docs.juliahub.com/AbstractAlgebra/b8V2b/0.41.3/perm/). What's unfortunate about this choice is that (unlike the mentioned libraries) the author chooses to use the symbol ∘ ("ring operator" in Unicode) for composition.
 
 Per [Function composition § Alternative notations](https://en.wikipedia.org/wiki/Function_composition#Alternative_notations), the more common notational preference is $f∘g$ for "g then f" although it gives mention to the author's convention. We'll prefer $f⨟g$ for "f then g" when it doesn't conflict with the author.
+
++++
+
+Although the author's right-multiplication is preferred going forward, notice [Permutation § Composition of permutations](https://en.wikipedia.org/wiki/Permutation#Composition_of_permutations) also uses the opposite convention. It unfortunately also often takes the same liberty as our author of not using a symbol between the elements (concatenation) to disambiguate.

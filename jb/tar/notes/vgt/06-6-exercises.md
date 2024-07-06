@@ -617,7 +617,7 @@ Skipping, a lot of work for not that interesting of a result.
 
 +++
 
-### Exercise 6.26 (📑)
+### Exercise 6.26 (📑, 🕳️)
 
 +++
 
@@ -635,7 +635,7 @@ There are only order-2 subgroups, so any table will do.
 
 +++
 
-The author's solution to this question has an error; the fourth column should be a $6$ rather than an $8$.
+The author's solution to this question has an error; the fourth column should be a $6$ rather than an $8$. He mentions this in the errata, but the errata erroneously mentions it only under "Page 270, Answer to Exercise 7.9" (only the page number is right).
 
 +++
 

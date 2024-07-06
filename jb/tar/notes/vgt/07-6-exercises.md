@@ -211,7 +211,7 @@ In terms of multiplication tables, the non-abelian nature of A will lead to a no
 
 +++
 
-### Exercise 7.9 (📑, ⚠)
+### Exercise 7.9 (📑, ⚠, 🕳️)
 
 +++
 
@@ -584,11 +584,11 @@ Quotient group: D₄
 >
 > (a) What is G/G?
 
-{e}
+$\{e\}$
 
 > (b) What is G/{e}?
 
-G
+$G$
 
 +++
 
@@ -826,23 +826,23 @@ The element, because g(g)g⁻¹ = g. That is, every element is conjugate with it
 
 > Show that all of an element's conjugates have the same order as the element.
 
-The order of an element $h$ is the smallest possible integer $m$ such that $hᵐ = e$. The order of any conjugate $ghg⁻¹$ is the smallest possible integer m such that $(ghg⁻¹)ᵐ = e$. We can simplify this second equation to:
+The order of an element $h$ is the smallest possible integer $m$ such that $h^m = e$. The order of any conjugate $ghg⁻¹$ is the smallest possible integer m such that $(ghg⁻¹)^m = e$. We can simplify this second equation to:
 
 $$
-(ghg⁻¹)ᵐ = (ghg⁻¹)(ghg⁻¹)(ghg⁻¹) ... = ghᵐg⁻¹ = e
+(ghg⁻¹)^m = (ghg⁻¹)(ghg⁻¹)(ghg⁻¹) ... = gh^mg⁻¹ = e
 $$
 
-Premultiplying by g⁻¹ and postmultiplying by g:
+Premultiplying by $g^{-1}$ and postmultiplying by $g$:
 
 $$
 \begin{align}
-ghᵐg⁻¹ &= e \\
-hᵐ &= g⁻¹eg \\
-hᵐ &= e
+gh^mg⁻¹ &= e \\
+h^m &= g⁻¹eg \\
+h^m &= e
 \end{align}
 $$
 
-So for both h and all its conjugates, the order of the element is the smallest possible integer $m$ such that $hᵐ = e$.
+So for both $h$ and all its conjugates, the order of the element is the smallest possible integer $m$ such that $h^m = e$.
 
 +++
 
@@ -850,7 +850,377 @@ So for both h and all its conjugates, the order of the element is the smallest p
 
 +++
 
+> For each group below, an element has been singled out. Describe the conjugacy class of that element.
+>
+> (a) $r ∈ D_3$
+
++++
+
+A single rotation of a triangle and its reverse $\{r, r²\}$. An exhaustive/brute-force review of the conjugates of $r$:
+
+$$
+\begin{align}
+(r)r(r)⁻¹ &= r \\
+(e)r(e)⁻¹ &= r \\
+(r^2)r(r^2)⁻¹ &= r \\
+(f)r(f)⁻¹ &= r² \\
+(fr)r(fr)⁻¹ &= r² \\
+(rf)r(rf)⁻¹ &= r²
+\end{align}
+$$
+
++++
+
+> (b) $r^k ∈ D_n$
+
++++
+
+Assume $k < n$; if $k ≥ n$ we can easily find an alias for it by subtracting $n$. Conjugate by all the powers $r^m$ where $m < n$:
+
+$$
+(r^m)r^k(r^m)^{-1} = r^k
+$$
+
++++
+
+Conjugate by all the powers $fr^m$ where $m < n$:
+
+$$
+(fr^m)r^k(fr^m)^{-1} = fr^kf = r^{-k}
+$$
+
++++
+
+The last equality comes from continuing the following pattern:
+
+$$
+\begin{align}
+frf &= r^{-1} \\
+(frf)^2 &= r^{-2} \\
+(frf)^2 &= (frf)(frf) = fr²f
+\end{align}
+$$
+
++++
+
+So the conjugacy class is a single rotation $r^k$ of an $n$-gon and the same action from the flipped perspective ($r^{n-k}$ or $r^{-k}$).
+
+As a special case, if we have that both $n$ is even and $k = n/2$ then $r^{n-k} = r^k$. For example, $r^2$ is in its own conjugacy class in $D_4$.
+
++++
+
+> (c) $m ∈ C_n$
+
++++
+
+$C_n$ is an abelian group (see Exercise 7.31 part (c)) so every element is in its own conjugacy class. In this case, the conjugacy class of $m$ is just $\{m\}$.
+
++++
+
+> (d) A 90-degree clockwise rotation about one face in the group of symmetries of the cube
+
++++
+
+See the section "Conjugacy classes" in [Octahedral symmetry § Details](https://en.wikipedia.org/wiki/Octahedral_symmetry#Details). The relevant row is:
+
+> 6× rotation by 90° about a 4-fold axis
+
+See [Rotational symmetry](https://en.wikipedia.org/wiki/Rotational_symmetry) for the meaning of "$n$-fold" in this context. See [Full octahedral group - Wikiversity](https://en.wikiversity.org/wiki/Full_octahedral_group) for visualizations of each on a JF compound.
+
+So the conjugacy class of this move is all the 90-degree clockwise rotations about any of the six faces of the cube.
+
++++
+
+> (e) A 180-degree clockwise rotation about one face in the group of symmetries of the cube
+
++++
+
+A 180-degree clockwise rotation about three of the faces of the cube.
+
++++
+
+> (f) The permutation interchanging $1$ and $2$ in $S_n$ (with $n ≥ 2$)
+
++++
+
+You can take the conjugate of this permutation $σ$ with a permutation $τ$ that switches element $1$ with any element $i ≤ n$ and $2$ with any element $j ≤ n$ (we must also have $i ≠ j$ to still have a bijection). We know that the transposition $τ$ is in $S_n$ because it has all permutations. Therefore, this permutation is conjugate to at least the transposition of any two elements in $S_n$.
+
++++
+
+In fact, any permutation $τ$ (whether a transposition or not) will not affect any other element but the $i$ and $j$ that get switched into position $1$ and $2$ because the full conjugation operation $ρ$ will undo what it does with the action $τ$ by the action $τ^{-1}$ for all other elements. Therefore the conjugacy class of $\sigma$ is also only the transpositions.
+
++++
+
+> (g) The following permutation in $S_n$ (for $k ≤ n$):
+>
+> $(123⋯k)⋯n$
+
++++
+
+You can take the conjugate of this permutation $σ$ with the cyclic permutation $τ$ of length $k + 1$ to get a permutation of length $k$ at a different position (on different elements of the set). Therefore this permutation is conjugate to many adjacent cyclic permutations of length $k$. If we take the conjugate with any non-adjacent length-$k$ cyclic permutation $τ$ where we line up the elements of the single cycle in $σ$ with the elements of the single cycle in $τ$ would allow us to construct non-adjacent cycles. Think of $τ$ as a "translation" permutation; $τ$ lines up elements to be operated on by $σ$ and $τ^{-1}$ translates back and puts those that weren't operated on by $σ$ back where it got them.
+
++++
+
+In fact, conjugating by any permutation $τ$ can only affect those elements that are operated on by $σ$; those that aren't operated on by $σ$ will be put back by $τ^{-1}$ to the place that $τ$ got them from. Those that are operated on by $σ$ will be un-renamed by $τ^{-1}$ in the opposite way that $τ$ renamed them, so that conjugation by any permutation $τ$ will only be able to produce other permutations $ρ$ that are $k$-cycles.
+
++++
+
+See [abstract algebra - Why are two permutations conjugate iff they have the same cycle structure?](https://math.stackexchange.com/questions/48134/why-are-two-permutations-conjugate-iff-they-have-the-same-cycle-structure) for a more general proof. While it's only true in $S_n$ that if two elements have the same cycle structure they are conjugate, the converse is true in any group: if two elements are conjugate they have the same cycle structure. Therefore another way to show that two elements of a group are not conjugate is to show that they do not have the same cycle structure (though this would require embedding the group in some $S_n$ to reveal a cycle structure). The source SVGs for the rasters in that answer:
+
++++
+
+![x](mse-48134.svg)
+
++++
+
 ### Exercise 7.31
+
++++
+
+> Compute the class equations for the following groups.
+>
+> (a) C₃
+
+This is an abelian group, so:
+
+```
+1 + 1 + 1 = 3
+```
+
++++
+
+> (b) V₄
+
+This is an abelian group, so:
+
+```
+1 + 1 + 1 + 1 = 4
+```
+
++++
+
+> (c) any abelian group of order n
+
+```
+1 + 1 + 1 ... = n
+```
+
++++
+
+> (d) S₃
+
+See logic in Exercise 7.30a; we can see this group as $D_3$. Therefore $r²$ is conjugate to $r$; we'll call this conjugacy class 3A (see the last paragraph of [Conjugacy class § Definition](https://en.wikipedia.org/wiki/Conjugacy_class#Definition) for the "3A" language).
+
+We can see $fr$ is conjugate to $f$:
+
+$$
+(r)f(r)⁻¹ = rfr² = r²f = fr
+$$
+
+And $rf$ is conjugate to $fr$:
+
+$$
+(r)fr(r)⁻¹ = rf
+$$
+
+Therefore we have conjugacy class 2A that includes at least $\{f, rf, fr\}$. Is this group conjugate with the conjugacy class 3A we already discovered? No, because we showed that $r$ is not conjugate to any element but $r^2$ in Exercise 7.30a. We could also confirm this by checking the order of the elements don't match:
+
+$$
+\begin{align}
+|e| = 1 \\
+|r| = |r²| = 3 \\
+|f| = |fr| = |rf| = 2
+\end{align}
+$$
+
+To summarize:
+
+```
+1 + 2 + 3 = 6
+```
+
++++
+
+> (e) Q₄ (as in Exercises 4.4 and 7.9)
+
++++
+
+We can quickly confirm that $-i$ is conjugate to $i$ (call this 4A):
+
+$$
+(j)i(j)⁻¹ = -i
+$$
+
+$-j$ is conjugate to $j$ (call this 4B):
+
+$$
+(i)j(i)⁻¹ = -j
+$$
+
+$-k$ is conjugate to $k$ (call this 4C):
+
+$$
+(i)k(i)⁻¹ = -k
+$$
+
+And $-1$ is conjugate to $-1$ (call this 2A):
+
+$$
+(j)-1(j)⁻¹ = -1
+$$
+
++++
+
+Clearly 2A cannot be merged with any other class because of its order. How do we know that e.g. 4A can't be merged with 4B, though? Checking that e.g. $i$ is not conjugate to $j$ by conjugating by some element $q_1 ∈ Q_4$ would not prove that these classes are disjoint, only that this particular element is not conjugate to the other by switching our context to $q_1$.
+
++++
+
+Just because we show that $i$ is not conjugate to $j$ doesn't mean that we can't perform something similar to $i$ via a $j$ operation by conjugating with some $q_2$ other than the $q_1$ we tested with (see an example of this in Exercise 7.30a, where $r$ is in the same class as $r^2$ but it takes several tests to establish this). Said in the language of the author's "doing the same thing in another context" analogy, there's a difference between whether you *can* achieve something in another context and whether you will. You need to discover the specific $g ∈ G$ in your group $G$ that lets you achieve the same elsewhere. Not any will work.
+
++++
+
+One way to describe what we need is an algorithm to discover [Connected components](https://en.wikipedia.org/wiki/Connected_component). Per [Connected components (graph theory) - Wikipedia](https://en.wikipedia.org/wiki/Component_(graph_theory)), this can be done efficiently with something like a [Disjoint-set data structure](https://en.wikipedia.org/wiki/Disjoint-set_data_structure). We could have even used a disjoint set data structure with the orders of the elements, then created disjoint data structures at that point from every element of a given order. Said another way, you start with every element in its own class (i.e. $1 + 1 + 1 + ... = n$) and then slowly merge classes/sets.
+
++++
+
+At this point, we don't have a great way to prove that 4A, 4B, and 4C are disjoint conjugacy classes except by brute force. A good library for quaternions in python (if you need speed i.e. in an industrial application) is likely [moble/quaternion: Add built-in support for quaternions to numpy](https://github.com/moble/quaternion); this library is also mentioned in [Quaternions and spatial rotation](https://en.wikipedia.org/wiki/Quaternions_and_spatial_rotation). We'll avoid an extra install and use the `Quaternion` from [Algebras - SymPy 1.13.0rc2 documentation](https://docs.sympy.org/latest/modules/algebras.html).
+
+```{code-cell} ipython3
+from sympy import Quaternion
+
+one = Quaternion(1, 0, 0, 0)
+i = Quaternion(0, 1, 0, 0)
+j = Quaternion(0, 0, 1, 0)
+k = Quaternion(0, 0, 0, 1)
+```
+
+```{code-cell} ipython3
+one*i*one
+```
+
+```{code-cell} ipython3
+-one*i*-one
+```
+
+```{code-cell} ipython3
+i*i*-i
+```
+
+```{code-cell} ipython3
+-i*i*i
+```
+
+```{code-cell} ipython3
+j*i*-j
+```
+
+```{code-cell} ipython3
+-j*i*j
+```
+
+```{code-cell} ipython3
+k*i*-k
+```
+
+```{code-cell} ipython3
+-k*i*k
+```
+
+With this, we've shown that 4A is a closed conjugacy class; it won't be merged with either 4B or 4C. Why don't we need to check for transitive conjugacy relationships? More specifically, why don't we need to check that $-i$ (the other element in this conjugacy class) is not conjugate to any other $g$ in $G$? More generally, why isn't it possible that after computing that $g_1$ is conjugate to $g_2$ that we later discover that $g_2$ is conjugate to $g_3$ and we need to merge the conjugacy classes? See Exercise 7.36c below. As long as we compute the conjugate of $g_1$ with respect to all $g$ in $G$, we would already have discovered the conjugate relationship between $g_1$ and $g_3$ with the element $h_3$ (if it exists).
+
++++
+
+We won't show that 4B is disjoint from 4C only because the work would be tedious, but it would be the final step in this proof. That is, we would not need to show that 4B or 4C is not conjugate to any element in 4A.
+
++++
+
+To summarize:
+
+```
+1 + 2 + 2 + 2 + 1 = 8
+```
+
++++
+
+> (f) D₄
+
++++
+
+We'll start by checking the orders to try to identify which elements could be in the same conjugacy classes:
+
++++
+
+```
+|e| = 1
+|r| = |r³| = 4
+|f| = |fr²| = |rf| = |fr| = |r²| = 2
+```
+
++++
+
+r³ is conjugate to r (call this 4A):
+
+$$
+(f)r(f)⁻¹ = frf = r³
+$$
+
++++
+
+We know that $r²$ is not conjugate to any of the $fr^m$ for any $m$ based on logic in Exercise 7.30b (call this 2A).
+
++++
+
+$fr²$ is conjugate to $f$ (call this 2B):
+
+$$
+(r)f(r)⁻¹ = rfr³ = fr²
+$$
+
+$rf$ is conjugate to $fr$ (call this 2C):
+
+$$
+(r)fr(r)⁻¹ = rf
+$$
+
++++
+
+Conjugate all the powers $fr^m$ by $r^k$ with $m,k$ arbitrary:
+
+$$
+(r^k)fr^m(r^k)^{-1} = r^kfr^kr^{-k}r^mr^{-k} = r^kfr^kr^{m-2k} = fr^{m-2k}
+$$
+
++++
+
+The last equality comes from continuing the following pattern:
+
+$$
+\begin{align}
+rfr &= f \\
+rrfrr &= rfr \\
+r^2fr^2 &= f \\
+\end{align}
+$$
+
++++
+
+Conjugate all the powers $fr^m$ by $fr^k$ with $m,k$ arbitrary:
+
+$$
+(fr^k)fr^m(fr^k)^{-1} = fr^kfr^kr^{-k}r^mr^{-k}f = fr^kfr^kr^{m-2k} = ffr^{m-2k}f = r^{m-2k}f = r^{m-2k}fr^{m-2k}r^{2k-m} = fr^{2k-m}
+$$
+
++++
+
+Because the $m$ in $fr^{2k-m}$ is arbitrary, this term is equivalent to $fr^{m-2k}$. From all of the preceding, we can conclude that $fr^m$ for an arbitrary $m$ is only conjugate to $fr^{m-2k}$ i.e. to other elements of the same [Parity (mathematics)](https://en.wikipedia.org/wiki/Parity_(mathematics)). Therefore 2B and 2C are distinct conjugacy classes.
+
++++
+
+To summarize:
+
++++
+
+1 + 2 + 1 + 2 + 2 = 8
 
 +++
 
@@ -858,7 +1228,318 @@ So for both h and all its conjugates, the order of the element is the smallest p
 
 +++
 
-### Exercise 7.33 (📑)
+> Let $c$ and $t$ stand for the permutations shown below, members of $S_n$.
+>
+> \begin{align}
+c = (1 ⋯ n) \\
+t = (12) ⋯ n
+\end{align}
+>
+> Thus $c$ stands for a cycle of $n$ numbers in order, and $t$ stands for the interchange of just the numbers 1 and 2, leaving the rest alone. This exercise determines what elements the subgroup $⟨c, t⟩$ of $S_n$ contains.
+>
+> (a) What is the conjugate of $t$ by $c$, written $ctc^{-1}$? What is the conjugate of $t$ by $c^k$, for any $k$ up to $n$?
+
++++
+
+In this question, the author essentially works us through the logic in [Cyclic permutation § Transpositions](https://en.wikipedia.org/wiki/Cyclic_permutation#Transpositions). He explicitly includes a cycle $c$ when we could (alternatively) use many transpositions to generate the group (see [Symmetric group § Generators and relations](https://en.wikipedia.org/wiki/Symmetric_group#Generators_and_relations)).
+
++++
+
+We'll write permutations in both one-line notation and cycle notation to provide some variety. Each may be more useful in some context; one-line notation represents a compression of cycle notation (which loses cycle information, but is more compact).
+
++++
+
+We always use active rather than passive one-line notation (for the distinction see [Permutation notation - Wikiversity](https://en.wikiversity.org/wiki/Permutation_notation)). For beginners this may be confusing because the active and passive notations are the same until you start to work with more complicated permutations (they differ for e.g. $(235)$ but not $(12)$). Consider the following permutation:
+
++++
+
+![x](07-6-ex-32-example-permutation-1.svg)
+
++++
+
+The arrows are the permutation, not the set below or above. The one-line notation we prefer (active) for this permutation is 42315. This describes where the arrows go, not where they come from. In this case (for a [transposition](https://en.wikipedia.org/wiki/Cyclic_permutation#Transpositions)) the passive one-line notation is the same — 42315 — because where the arrows come from is the same as where they go.
+
++++
+
+Consider instead the following permutation:
+
++++
+
+![x](07-6-ex-32-example-permutation-2.svg)
+
++++
+
+The active one-line notation is 13542, while the passive one-line notation is 15243. To get the active one-line notation you go through the top row from left to right and follow the arrows forward. To get the passive one-line notation you go through the bottom row from left to right and follow the arrows backwards. Alternatively, to get the active one-line notation you sort the items on the bottom so all the arrows are straight. To get the passive one-line notation you sort items on the top so all the arrows are straight.
+
+A permutation is a function (from a set to a set) so there is no sense of order fundamental to it. We can create an order by working with vectors or words (which both have order) rather than sets, applying the permutation to them.
+
+Applying this permutation to the vector 12345 gives the vector 15243. Don't write this down as a representation of the permutation, it's usually not what you want! That is, it's the passive rather than active notation. That is, it's a description of what will happen after the permutation is complete (passive) rather than a description of what to do if you want to apply the permutation.
+
++++
+
+We'll use the author's composition convention, which conflicts with the convention of [Permutation § Composition of permutations](https://en.wikipedia.org/wiki/Permutation#Composition_of_permutations). To make this choice clear, we'll use ⨟ between terms rather than simple concatenation. The combination of our active/passive and composition conventions means we use what is called an "Active right" convention in [Permutation notation](https://en.wikiversity.org/wiki/Permutation_notation). In [Permutation matrix](https://en.wikipedia.org/wiki/Permutation_matrix), this is equivalent to the column representation.
+
++++
+
+$$
+\begin{align}
+c = (1 ⋯ n) &= 234...n1 \\
+t = (21) ⋯ n &= 2134...n \\
+c⨟t = (1)(2 ⋯ n) &= 134...n2 \\
+c^{-1} = (n⋯321) &= n123...n-1 \\
+c⨟t⨟c^{-1} = (1n)2⋯(n-1) &= n23...1 \\
+c^2⨟t = (135⋯n)(246⋯(n-1)) &= 345...n21 \\
+c^2⨟t⨟c^{-2} = 123⋯n((n-1)n) &= 123...n(n-1) \\
+\end{align}
+$$
+
++++
+
+While $t$ switches elements 0 and 1, $ctc^{-1}$ switches elements $n-1$ and $0$, and $c^2t(c^2)^{-1}$ switches elements $n-2$ and $n-1$. In general $c^kt(c^k)^{-1}$ switches elements $n-k$ and $n-k+1$.
+
++++
+
+> (b) All the conjugates from part (a) are in $⟨c, t⟩$. Describe that set of conjugate elements.
+
++++
+
+All permutations that switch two *adjacent* elements (see [adjacent transformations](https://en.wikipedia.org/wiki/Cyclic_permutation#adjacent_transpositions)).
+
++++
+
+> (c) What is the conjugate of $t$ by the following permutation, which interchanges just the numbers 2 and 3, leaving the rest alone?
+>
+> $1(23)4⋯n$
+
++++
+
+We'll call this permutation $s$, but notice that based on part (a) we could generate it as $s = c^{n-2}tc^{-(n-2)}$.
+
++++
+
+$$
+\begin{align}
+s⨟t = (123)⋯n &= 2314...n \\
+s⨟t⨟s^{-1} = (13)⋯n &= 3214...n
+\end{align}
+$$
+
++++
+
+> How could you use two of the elements in $⟨c, t⟩$ to create a permutation that swaps any two numbers from $1$ to $n$, leaving the rest alone?
+
++++
+
+To create $(02)$ above, we took the conjugate of $(01)$ by $(12)$. To create $(13)$, we would take the conjugate of $(12)$ by $(23)$. You could create all actions to swap elements two steps away from each other with this pattern. You can think of it in general as getting to into a context where the action $01$ is effectively the same action as some other flip (because the appropriate item has been put in the $1$ spot).
+
+To produce $(03)$, we would take the conjugate of $(01)$ by $(13)$. Similarly, to create all actions to swap elements three steps away from each other.
+
+To create $(0k)$, take the conjugate of $(01)$ by $(0k)$. Similarly, to create all actions to swap elements $k$ steps away from each other.
+
++++
+
+> (d) Describe the set of elements that part (c) shows to be members of $⟨c, t⟩$.
+
++++
+
+All permutations that switch any two in general *non-adjacent* elements (i.e. all swaps of any two elements).
+
++++
+
+> (e) What permutation is obtained by doing $t$ followed by the permutation of part (c)? How could you create any cyclic permutation using just elements of $⟨c, t⟩$?
+
++++
+
+A reversed cycle of length three:
+
++++
+
+$$
+\begin{align}
+t⨟s = (12)⨟(23) = (132)4⋯n &= 3124...n
+\end{align}
+$$
+
++++
+
+Notice $s⨟t$ above is the forward cycle.
+
++++
+
+We can create a reversed 4-cycle by appending another transposition:
+
++++
+
+$$
+\begin{align}
+t⨟s⨟r = (12)⨟(23)⨟(34) = (1432)4⋯n &= 41235...n
+\end{align}
+$$
+
++++
+
+Or a forward 4-cycle by prepending another transposition:
+
++++
+
+$$
+\begin{align}
+u⨟t⨟s = (34)⨟(23)⨟(12) = (1234)5⋯n &= 23415...n
+\end{align}
+$$
+
++++
+
+By prepending an adjacent transposition in the same manner (not just t, but any transposition we showed in part (d) is part of this group) you can construct any length cyclic permutation.
+
++++
+
+You can look at a transposition as a cyclic permutation of length 2, so in general prepending a transposition to a cyclic permutation of length $n$ constructs a cyclic permutation of length $n+1$.
+
++++
+
+> (f) All permutations can be broken into a sequence of non-overlapping cyclic permutations, as in the following example.
+>
+> $(14)(235) = (14)⨟(235)$
+>
+> How does this help determine the subgroup $⟨c, t⟩$ of $S_n$? What is that subgroup?
+
++++
+
+By using some non-adjacent swap permutations you can add "skips" to a cyclic permutation in the sense of $(235)$ skipping $4$. We could call these non-adjacent cycles.
+
++++
+
+To construct permutations that include one more than one cyclic permutation, we can combine two cyclic permutations as shown above. With the previous observations, this shows we can build any permutation in $S_n$ from $⟨c, t⟩$ (the subgroup is all of $S_n$).
+
++++
+
+Let's step back and consider what the author is trying to say in all of Exercise 7.32. The immediate lesson is that you can generate any symmetric group with just two generators. Since any group is a subgroup of a symmetric group, does this mean that you can generate any group with just two generators? The short answer is likely no; we need to prevent some elements of the symmetric group from being generated to stay closed with respect to the group we want to generate elements for.
+
++++
+
+### Exercise 7.33 (📑, 🕳️)
+
++++
+
+> (a) Compute the class equation for the first few dihedral groups $D_n$ with $n$ odd, until you notice a pattern. State the pattern and give some justification for it.
+
+Let's start by looking at the order of elements to see which cannot be in the same conjugacy class.
+
+For D₁ we have:
+
+```
+|e| = 1
+|f| = 2
+```
+
+For D₃ we have:
+
+```
+|e| = 1
+|r| = |r²| = 3
+|f| = |rf| = |r²f| = 2
+```
+
+For D₅ we have:
+
+```
+|e| = 1
+|r| = |r²| = |r³| = |r⁴| = 5
+|f| = |rf| = |r²f| = |r³f| = |r⁴f| = 2
+```
+
+For D₇ we have:
+
+```
+|e| = 1
+|r| = |r²| = |r³| = |r⁴| = |r⁵| = |r⁶| = 7
+|f| = |rf| = |r²f| = |r³f| = |r⁴f| = 2
+```
+
+For D₉ we have:
+
+```
+|e| = 1
+|r| = |r²| = |r⁴| = |r⁵| = |r⁷| = |r⁸| = 9
+|r³| = |r⁶| = 3
+|f| = |rf| = |r²f| = |r³f| = |r⁴f| = 2
+```
+
+See the notebook linked to from [File:Dihedral-conjugacy-classes.svg](https://commons.wikimedia.org/wiki/File:Dihedral-conjugacy-classes.svg) for full calculations. The elements generated by $r$ are not in the same conjugacy class; the orders of elements as
+shown above for $D_9$ show this cannot be the case.
+
+As pointed out in Exercise 7.30(b) the elements generated by $r$ (i.e. $r^k$) are in conjugacy classes of size 2 (because n is even, there is no special case).
+
+All other elements are in the same conjugacy class. The conjugate of $f$ by $r$ is $rfr^{n-1}$ or $fr^{n-2}$. Unlike the standard dihedral relationship $rfr = f$ this rotates the shape in the same direction twice (rather than in one direction, then in reverse). Conjugating by other powers of $r$ similarly rotates the shape double the distance and flips it.
+
+Therefore in general the class equation is:
+
+$$
+1 + 2 [(n-1)/2 (repetitions)] + n = 2n
+$$
+
++++
+
+> (b) Compute the class equation for the first few dihedral groups Dₙ with n even, until you notice a pattern. State the pattern and give some justification for it.
+
+For D₂ (V₄) we have:
+
+```
+|e| = 1
+|r| = 2
+|f| = 2
+|rf| = 2
+```
+
+For D₄ we have:
+
+```
+|e| = 1
+|r| = |r³| = 4
+|r²| = 2
+|f| = |rf| = |r²f| = |r³f| = 2
+```
+
+For D₆ we have:
+
+```
+|e| = 1
+|r| = |r⁵| = 6
+|r²| = |r⁴| = 3
+|r³| = 2
+|f| = |rf| = |r²f| = |r³f| = |r⁴f| = |r⁵f| = 2
+```
+
+For D₈ we have:
+
+```
+|e| = 1
+|r| = |r³| = |r⁵| = |r⁷| = 8
+|r²| = |r⁶| = 4
+|r⁴| = 2
+|f| = |rf| = |r²f| = |r³f| = |r⁴f| = |r⁵f| = |r⁶f| = |r⁷f| = 2
+```
+
+As pointed out in Exercise 7.30(b) the elements generated by $r$ (i.e. $r^k$) are in conjugacy classes of size 2 in general. Because $n$ is even, there is a special case when $k = n/2$.
+
+See the thoughts above (7.33a) about how to conjugate $f$ to get an action that rotates the $n$-gon in the same direction twice and flips it. When we rotate twice or in general $2k$ times ($r^{2k}$) when the $n$ in $D_n$ is even, we don't ever produce odd rotation powers. This divides the conjugacy class that previously included all terms with $f$ in half. The answer to Exercise 7.31(f) explains the same more algebraically.
+
+Therefore in general the class equation is:
+
+$$
+1 + 1 + 2 [n/2 - 1 (repetitions)] + n/2 + n/2 = 2n
+$$
+
++++
+
+> (c) Class equations can be illustrated by coloring the elements of a group according to the sets in the conjugacy class partition, a different color for each set. Illustrate the patterns in each of parts (a) and (b) using colored Cayley diagrams.
+
+See [File:Dihedral-conjugacy-classes.svg](https://commons.wikimedia.org/wiki/File:Dihedral-conjugacy-classes.svg).
+
+> (d) Cycle graphs display element order rather clearly. How is this relevant to conjugacy classes? Use Group Explorer to illustrate the patterns in each of parts (a) and (b) using cycle graphs.
+
+Because cycle graphs show the order of elements, they can help you quickly identify which elements may be in the same conjugacy class.
 
 +++
 
@@ -866,7 +1547,52 @@ So for both h and all its conjugates, the order of the element is the smallest p
 
 +++
 
+> Which of the following equations could be class equations for a group? Find all the groups that have that class equation, if there are any. If there are not any, explain why.
+>
+> (a) 1 + 2 = 3
+
+The only group of order 3 is cyclic (abelian) for which all conjugacy classes are of order one.
+
+> (b) 1 + 1 + 1 + 1 + 1 = 5
+
+C₅
+
+> (c) 1 + 2 + 3 = 6
+
+S₃ (see Exercise 7.31)
+
+> (d) 1 + 3 + 3 = 7
+
+The only group of order 7 is cyclic (abelian) for which all conjugacy classes are of order one.
+
+> (e) 1 + 3 + 4 = 8
+
+The only groups of order 8 are Q₄ and several cyclic (abelian) groups. For Q₈, see Exercise 7.31 above. All conjugacy classes of an abelian group would be order one.
+
++++
+
 ### Exercise 7.35
+
++++
+
+> How few elements might $gHg^{-1}$ and $H$ have in common? Find a minimal example and explain how you know it is minimal.
+
+This question could be read in two ways, one where $gHg^{-1}$ is a term defined on a single $g$ and one where $gHg^{-1}$ is shorthand for $gHg^{-1}$ for all $g ∈ G$. The latter interpretation was more common for much of the chapter when we were trying to show that e.g. $H$ is a normal subgroup, but it seems possible the author is referring to $gHg^{-1}$ for a single $g ∈ G$.
+
+Regardless of how the question is read, all subgroups $H$ must contain the identity element $e$. The element $e$ will always be shared between $gHg^{-1}$ and $H$ because $geg^{-1} = gg^{-1} = e$. A trivial example would be $H$ as the trivial subgroup $\{e\}$: in this case $H$ and $gHg^{-1}$ have only one element in common.
+
+Regardless of how the question is read, $gHg^{-1}$ will only contain conjugates of elements in $H$. If $H$ is a normal (i.e. self-conjugate) subgroup then these elements will land in $H$, but otherwise they could land all over the larger group $G$. Therefore to minimize shared elements, we should expect $H$ to be a non-normal subgroup.
+
+Let's say we read the question where we must pick a single $g ∈ G$. If we pick a $g ∈ H$, then because $hhh^{-1} = h$ we'll end up with one more shared element between $gHg^{-1}$ and $H$. To minimize shared elements, we'll want to choose some $g ∉ H$.
+
+Take as an example the subgroup $H = \{e,f\}$ in $S_3$. If we let $g = r$ then we get only one shared element between $gHg^{-1}$ and $H$, namely the unavoidable element $e$.
+
+In non-trivial minimal examples all $h ∈ H$ will also be included because $hhh^{-1} = h$. In $S_3$, an example of this is the subgroup $H = 〈f〉$ which has only two elements. Said another way, only $\{e,f\} ∈ G$ will "vote" for this being a normal subgroup and all other elements (e.g. $r$) will vote against.
+
+We should see this when the subgroup H is normal.
+
+Consider the subgroup H = ⟨v⟩ in V₄, for which gHg⁻¹ = g{e,v}g⁻¹ = gvg⁻¹ for all g in S₃:
+= {hv(h)⁻¹ = v, (vh)v(vh)⁻¹ = v}
 
 +++
 
