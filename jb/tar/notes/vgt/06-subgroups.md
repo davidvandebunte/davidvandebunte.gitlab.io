@@ -15,7 +15,7 @@ kernelspec:
 
 +++
 
-See also [Subgroup](https://en.wikipedia.org/wiki/Subgroup).
+Compare [Subgroup](https://en.wikipedia.org/wiki/Subgroup).
 
 +++
 
@@ -27,7 +27,10 @@ It's not clear if the author's definition of "regular" is anything but a complet
 
 +++
 
-See also [Coset](https://en.wikipedia.org/wiki/Coset).
+Compare [Coset](https://en.wikipedia.org/wiki/Coset).
+
+See also, from [Affine space](https://en.wikipedia.org/wiki/Affine_space):
+> Any [coset](https://en.wikipedia.org/wiki/Coset "Coset") of a subspace V of a vector space is an affine space over that subspace.
 
 +++
 
@@ -35,4 +38,4 @@ See also [Coset](https://en.wikipedia.org/wiki/Coset).
 
 +++
 
-See also [Lagrange's theorem (group theory)](https://en.wikipedia.org/wiki/Lagrange%27s_theorem_(group_theory)).
+Compare [Lagrange's theorem (group theory)](https://en.wikipedia.org/wiki/Lagrange%27s_theorem_(group_theory)).

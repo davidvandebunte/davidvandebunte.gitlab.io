@@ -87,4 +87,12 @@ We'll mark questions and sections with a ⚠ if one should reference the errata 
 
 +++
 
-Sometimes both a question and its answer have issues (the author was having a bad day). We'll use a separate symbol so we don't check the errata only when we start the question.
+Sometimes both a question and its answer have issues (the author was having a bad day). We'll use 🕳️ rather than 📑 when an answer has issues so we don't check the errata only when we start the question.
+
++++
+
+### 🔨: Work in progress
+
++++
+
+Some questions don't have complete answers, either because we decided it didn't seem valuable to finish answering the question (there was little insight to be gained) or the question was simply too difficult.

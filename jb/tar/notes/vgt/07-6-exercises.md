@@ -211,7 +211,7 @@ In terms of multiplication tables, the non-abelian nature of A will lead to a no
 
 +++
 
-### Exercise 7.9 (📑, ⚠, 🕳️)
+### Exercise 7.9 (⚠, 🕳️)
 
 +++
 
@@ -770,6 +770,10 @@ Dₙ
 
 +++
 
+See also [Centralizer and normalizer § Example](https://en.wikipedia.org/wiki/Centralizer_and_normalizer#Example).
+
++++
+
 > (b) G = D₄, H = ⟨f⟩
 
 +++
@@ -965,11 +969,27 @@ In fact, conjugating by any permutation $τ$ can only affect those elements that
 
 +++
 
-See [abstract algebra - Why are two permutations conjugate iff they have the same cycle structure?](https://math.stackexchange.com/questions/48134/why-are-two-permutations-conjugate-iff-they-have-the-same-cycle-structure) for a more general proof. While it's only true in $S_n$ that if two elements have the same cycle structure they are conjugate, the converse is true in any group: if two elements are conjugate they have the same cycle structure. Therefore another way to show that two elements of a group are not conjugate is to show that they do not have the same cycle structure (though this would require embedding the group in some $S_n$ to reveal a cycle structure). The source SVGs for the rasters in that answer:
+### Conjugation and cycle structure
+
++++
+
+See [abstract algebra - Why are two permutations conjugate iff they have the same cycle structure?](https://math.stackexchange.com/questions/48134/why-are-two-permutations-conjugate-iff-they-have-the-same-cycle-structure) for a proof of a more general concept:
+
+> I have heard that two permutations are conjugate if they have the same cyclic structure. Is there an intuitive way to understand why this is?
+
+While it's only true in $S_n$ that if two elements have the same cycle structure they are conjugate, the converse is true in any group: if two elements are conjugate they have the same cycle structure. Therefore another way to show that two elements of a group are not conjugate is to show that they do not have the same cycle structure (though this would require embedding the group in some $S_n$ to reveal a cycle structure). The source SVGs for the rasters in that answer:
 
 +++
 
 ![x](mse-48134.svg)
+
++++
+
+The symbols in the answer come from [Geometric Shapes (Unicode block)](https://en.wikipedia.org/wiki/Geometric_Shapes_(Unicode_block)) (generally a good source of symbols when you want to define an abstract set).
+
++++
+
+Another useful perspective on this proof is to see the "cycle structure" permutation as the only alibi permutation, and all others as alias permutations.
 
 +++
 
@@ -1080,6 +1100,10 @@ Just because we show that $i$ is not conjugate to $j$ doesn't mean that we can't
 +++
 
 One way to describe what we need is an algorithm to discover [Connected components](https://en.wikipedia.org/wiki/Connected_component). Per [Connected components (graph theory) - Wikipedia](https://en.wikipedia.org/wiki/Component_(graph_theory)), this can be done efficiently with something like a [Disjoint-set data structure](https://en.wikipedia.org/wiki/Disjoint-set_data_structure). We could have even used a disjoint set data structure with the orders of the elements, then created disjoint data structures at that point from every element of a given order. Said another way, you start with every element in its own class (i.e. $1 + 1 + 1 + ... = n$) and then slowly merge classes/sets.
+
++++
+
+At an abstract level we’re disambiguating words. When we show two words are joint, it makes our lives easier because we can reduce the number of words we talk in. When we show two words are disjoint we can totally disregard one when talking about another. We use the language “up to'' in this kind of scenario (see Exercise 7.36). As an example, we would say $r$ and $r_3$ are equivalent up to conjugacy in $D_4$. The “up to” language can be dangerous, however, often equating elements of a set that may best be left un-conflated. For example, what if you have two people who are equivalent “up to” height and eye color? They’re likely much different in many other ways (gender, age, etc.) so that this kind of distinction is unhelpful. Considering height and eye color as columns in a table of observations, you can essentially say two elements are equivalent “up to” in at least one way whenever at least two columns match. Correlation does not imply equivalence, even less so than it implies causation.
 
 +++
 
@@ -1245,38 +1269,6 @@ In this question, the author essentially works us through the logic in [Cyclic p
 
 +++
 
-We'll write permutations in both one-line notation and cycle notation to provide some variety. Each may be more useful in some context; one-line notation represents a compression of cycle notation (which loses cycle information, but is more compact).
-
-+++
-
-We always use active rather than passive one-line notation (for the distinction see [Permutation notation - Wikiversity](https://en.wikiversity.org/wiki/Permutation_notation)). For beginners this may be confusing because the active and passive notations are the same until you start to work with more complicated permutations (they differ for e.g. $(235)$ but not $(12)$). Consider the following permutation:
-
-+++
-
-![x](07-6-ex-32-example-permutation-1.svg)
-
-+++
-
-The arrows are the permutation, not the set below or above. The one-line notation we prefer (active) for this permutation is 42315. This describes where the arrows go, not where they come from. In this case (for a [transposition](https://en.wikipedia.org/wiki/Cyclic_permutation#Transpositions)) the passive one-line notation is the same — 42315 — because where the arrows come from is the same as where they go.
-
-+++
-
-Consider instead the following permutation:
-
-+++
-
-![x](07-6-ex-32-example-permutation-2.svg)
-
-+++
-
-The active one-line notation is 13542, while the passive one-line notation is 15243. To get the active one-line notation you go through the top row from left to right and follow the arrows forward. To get the passive one-line notation you go through the bottom row from left to right and follow the arrows backwards. Alternatively, to get the active one-line notation you sort the items on the bottom so all the arrows are straight. To get the passive one-line notation you sort items on the top so all the arrows are straight.
-
-A permutation is a function (from a set to a set) so there is no sense of order fundamental to it. We can create an order by working with vectors or words (which both have order) rather than sets, applying the permutation to them.
-
-Applying this permutation to the vector 12345 gives the vector 15243. Don't write this down as a representation of the permutation, it's usually not what you want! That is, it's the passive rather than active notation. That is, it's a description of what will happen after the permutation is complete (passive) rather than a description of what to do if you want to apply the permutation.
-
-+++
-
 We'll use the author's composition convention, which conflicts with the convention of [Permutation § Composition of permutations](https://en.wikipedia.org/wiki/Permutation#Composition_of_permutations). To make this choice clear, we'll use ⨟ between terms rather than simple concatenation. The combination of our active/passive and composition conventions means we use what is called an "Active right" convention in [Permutation notation](https://en.wikiversity.org/wiki/Permutation_notation). In [Permutation matrix](https://en.wikipedia.org/wiki/Permutation_matrix), this is equivalent to the column representation.
 
 +++
@@ -1418,7 +1410,7 @@ Let's step back and consider what the author is trying to say in all of Exercise
 
 +++
 
-### Exercise 7.33 (📑, 🕳️)
+### Exercise 7.33 (🕳️)
 
 +++
 
@@ -1583,16 +1575,11 @@ Regardless of how the question is read, all subgroups $H$ must contain the ident
 
 Regardless of how the question is read, $gHg^{-1}$ will only contain conjugates of elements in $H$. If $H$ is a normal (i.e. self-conjugate) subgroup then these elements will land in $H$, but otherwise they could land all over the larger group $G$. Therefore to minimize shared elements, we should expect $H$ to be a non-normal subgroup.
 
-Let's say we read the question where we must pick a single $g ∈ G$. If we pick a $g ∈ H$, then because $hhh^{-1} = h$ we'll end up with one more shared element between $gHg^{-1}$ and $H$. To minimize shared elements, we'll want to choose some $g ∉ H$.
+Let's say we read the question where we must pick a single $g ∈ G$. If we pick a $g ∈ H$, then because $ggg^{-1} = g$ we'll end up with one more shared element between $gHg^{-1}$ and $H$. To minimize shared elements, we'll want to choose some $g ∉ H$.
 
-Take as an example the subgroup $H = \{e,f\}$ in $S_3$. If we let $g = r$ then we get only one shared element between $gHg^{-1}$ and $H$, namely the unavoidable element $e$.
+Take as an example the subgroup $H = \{e,f\}$ in $S_3$. If we let $g = r$ then we get only one shared element between $gHg^{-1}$ and $H$, namely the unavoidable element $e$. This implies that we can minimally get down to only one element shared between $H$ and the set of conjugates $gHg^{-1}$.
 
-In non-trivial minimal examples all $h ∈ H$ will also be included because $hhh^{-1} = h$. In $S_3$, an example of this is the subgroup $H = 〈f〉$ which has only two elements. Said another way, only $\{e,f\} ∈ G$ will "vote" for this being a normal subgroup and all other elements (e.g. $r$) will vote against.
-
-We should see this when the subgroup H is normal.
-
-Consider the subgroup H = ⟨v⟩ in V₄, for which gHg⁻¹ = g{e,v}g⁻¹ = gvg⁻¹ for all g in S₃:
-= {hv(h)⁻¹ = v, (vh)v(vh)⁻¹ = v}
+Let's say we read the question where we assume the elements are defined for all $g ∈ G$. All $h ∈ H$ must be shared because $hhh^{-1} = h$. In $S_3$, an example of this is the subgroup $H = 〈f〉$ which has only two elements. Said another way, only $\{e,f\} ∈ G$ will "vote" for this being a normal subgroup and all other elements (e.g. $r$) and cosets (e.g. $rH$) will vote against. In general, the smallest set of elements that may be shared between $gHg^{-1}$ and $H$ is the elements of $H$.
 
 +++
 
@@ -1600,4 +1587,53 @@ Consider the subgroup H = ⟨v⟩ in V₄, for which gHg⁻¹ = g{e,v}g⁻¹ = g
 
 +++
 
+> An equivalence relation is one that can be used to partition a set; equivalence relations have three properties. This exercise asks you to prove that being a conjugate is an equivalence relation, using algebraic or visual evidence, whichever seems best to you.
+>
+> (a) Show that being a conjugate is a reflexive relation: Any $g ∈ G$ is conjugate to itself.
+
+See Exercise 7.28 above; conjugating any element by itself will produce the same element.
+
+Alternatively, one can take the conjugate of any element $g$ by $e$ to get the same element.
+
+> (b) Show that being a conjugate is a symmetric relation: If $g_1$ is conjugate to $g_2$ (that is, there is some $h ∈ G$ such that $g_1 = hg_2h^{-1}$), then $g_2$ is also conjugate to $g_1$.
+
+We need to show for some $h_2$ in $G$ that $g_2$ = $h_2g_1h_2^{-1}$. Consider the inverse of the $h$ that was used to show $g_1$ is conjugate to $g_2$; this is an element of $G$ because every element (including $h$) has an inverse.
+
+Set $h_2$ = $h^{-1}$:
+
+$$
+g_2 = h^{-1}g_1h = h^{-1}(hg_2h^{-1})h = g_2
+$$
+
+If you have unanimous arrows from one coset to another, you should also have unanimous inverse arrows.
+
+> (c) Show that being a conjugate is a transitive relation: If $g_1$ is conjugate to $g_2$, which is conjugate to $g_3$, then $g_1$ is also conjugate to $g_3$.
+
+For some $h_1$ and $h_2$ we have:
+
+$$
+\begin{align}
+g_1 = h_1g_2(h_1)^{-1} \\
+g_2 = h_2g_3(h_2)^{-1}
+\end{align}
+$$
+
+We need to show for some $h_3$ in $G$ that $g_1 = h_3g_3(h_3)^{-1}$. Consider $h_3 = h_1h_2$:
+
+$$
+g_1 = h_1h_2g_3(h_1h_2)^{-1} = h_1h_2g_3(h_2)^{-1}(h_1)^{-1} = h_1g_2(h_1)^{-1} = g_1
+$$
+
+If you have unanimous arrows from coset $A$ to coset $B$ and from coset $B$ to coset $C$, you should also have unanimous arrows from coset $A$ to coset $C$.
+
++++
+
 ### Exercise 7.37 (⚠)
+
++++
+
+> Recall Figure 7.33, which showed that $a$ and $b$ are conjugates in $A_4$. Show that $b$ and $d$ are conjugates as well, by finding an element of $A_4$ by which to conjugate. This can be done algebraically (using a Cayley diagram or multiplication table for $A_4$ as reference) or visually (using Figure 7.32 or an actual tetrahedron for reference). Try to illustrate the conjugation like Figure 7.33 does.
+
++++
+
+![x](07-6-ex-37.svg)
