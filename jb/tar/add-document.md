@@ -47,6 +47,10 @@ See [Add document](add-document.md).
 
 +++
 
+Find a counterexample, even if you must prove a positive case. It helps to have someone to argue with, and in the search for a counterexample you should actually prove what you're looking for (that there is no counterexample). Humans think well in terms of examples and possible worlds.
+
++++
+
 ## What do we have?
 
 +++
