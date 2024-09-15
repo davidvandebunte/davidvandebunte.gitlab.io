@@ -169,17 +169,23 @@ The six order-4 groups form the automorphism group of V₄. Two actions that can
 >
 > (a) Is it a homomorphism? If so, is it an embedding or a quotient map?
 
++++
+
 An embedding, because the mapping is one-to-one.
 
 +++
 
 > (b) Would $ϕ$ be a homomorphism if it were to use a different coefficient than 2? If so, what numbers could be used in place of 2?
 
++++
+
 Any positive or negative integer, and zero. That is, $ℤ$.
 
 +++
 
 > (c) What are $Ker(ϕ)$ and $Im(ϕ)$?
+
++++
 
 $Ker(ϕ) = {0}$ \
 $Im(ϕ)  = ⟨2⟩$
@@ -224,7 +230,7 @@ Another approach could use that a group can be presented as being generated from
 
 +++
 
-We can also simply try to directly show $L$ is a group given $ϕ: G → H$ is a group homomorphism. For it to be a group, it must have an identity, inverses, and be associative and closed.
+We can also simply try to directly show $L$ is a group given $ϕ: G → H$ is a group homomorphism. For it to be a group, it must have an identity, inverses, and be associative and closed. See [Fundamental theorem on homomorphisms § Proof](https://en.wikipedia.org/wiki/Fundamental_theorem_on_homomorphisms#Proof) for a similar proof.
 
 +++
 
@@ -495,3 +501,299 @@ See Exercise 8.8 (only the trivial homomorphism for $C_1$).
 +++
 
 The only automorphisms are $ϕ(n) = mn$ for $m \in \{1,-1\}$, as discussed in Exercise 8.9c. See Exercise 8.5 for an example of an embedding that is not an automorphism; we could effectively extend that example to $ϕ(n) = mn$ for $m \in ℤ$.
+
++++
+
+## 8.7.4 Quotient maps
+
++++
+
+### Exercise 8.11 (📑)
+
++++
+
+> (a) Diagram the quotient $\frac{ℤ}{⟨3⟩}$ similar to the diagram $\frac{ℤ}{⟨12⟩}$ in Figure 8.17.
+
++++
+
+![x](08-6-ex-11-a.svg)
+
++++
+
+> (b) What is the corresponding quotient map from $ℤ$ to $C_3$?
+
++++
+
+$ϕ(n) = n \mod 3$
+
++++
+
+> (c) Can you devise a way to diagram that quotient using a multiplication table instead?
+
++++
+
+![x](08-6-ex-11-c.svg)
+
++++
+
+### Exercise 8.12 (📑)
+
++++
+
+> For parts (a) through (c), a group $G$ is given together with a normal subgroup $H$. Illustrate not only the quotient map $q: G → G/H$, but the embedding $ϕ: H → G$, chained together so that $Im(ϕ) = Ker(q)$. Here is an example for $H = C_2$ and $G = C_6$. Elements of $H$ (as well as elements to which they map) are highlighted:
+>
+> ![x](08-6-ex-12-ques.svg)
+
++++
+
+> (a) $H = C_3$, $G = C_6$
+
++++
+
+![x](08-6-ex-12-a.svg)
+
++++
+
+> (b) $H = C_3$, $G = S_3$
+
++++
+
+![x](08-6-ex-12-b.svg)
+
++++
+
+> (c) $H = V_4$, $G = A_4$
+
++++
+
+See [A₄ Cayley table](https://en.wikipedia.org/wiki/Alternating_group#/media/File:Alternating_group_4;_Cayley_table;_numbers.svg) for the source of the node labels. This drawing is similar to Figure 7.23, although Figure 7.24 arguably makes the structure clearer:
+
++++
+
+![x](08-6-ex-12-c.svg)
+
++++
+
+See also [Klein four-group § Permutation representation](https://en.wikipedia.org/wiki/Klein_four-group#Permutation_representation).
+
++++
+
+> Now answer each of the following questions about each of your answers to parts (a) through (c).
+>
+> (d) What map $θ$ into $H$ would satisfy the equation $Im(θ) = Ker(ϕ)$? Choose one with the smallest possible domain.
+
++++
+
+See above.
+
++++
+
+> (e) What map $θ'$ from $G/H$ would satisfy the equation $Im(q) = Ker(θ')$? Choose one with the smallest possible codomain.
+
++++
+
+See above.
+
++++
+
+> (f) Add the two maps $θ'$ and $θ'$ to your illustration.
+
++++
+
+See above.
+
++++
+
+> The new chain of four homomorphisms is called a *short exact sequence*. It is one way to use homomorphisms to illustrate quotients, and it shows a connection between embeddings and quotient maps.
+
++++
+
+See more commentary from the author in [Group Theory Terminology - Short Exact Sequence](https://nathancarter.github.io/group-explorer/help/rf-groupterms/index.html#short-exact-sequence), though that explanation doesn't use great variable names and sometimes uses $=$ when it should use $\cong$.
+
++++
+
+See also [Exact sequence § Short exact sequence](https://en.wikipedia.org/wiki/Exact_sequence#Short_exact_sequence). What's the motivation for putting groups on a line and forcing $im(f_1) = {ker(f_2)}$ (an exact sequence, not yet short)? There is more than one motivation, but one is that when you put a $0$ object at the start or end of such a sequence you can force certain properties on the morphisms involved, in particular that they are monomorphisms or epimorphisms (or both). This is discussed in [Exact sequence § Simple cases](https://en.wikipedia.org/wiki/Exact_sequence#Simple_cases).
+
++++
+
+Another motivation for exact sequences is obviously short exact sequences, which can be seen as a tool for recording either:
+1. How a group "breaks down" into two smaller groups.
+2. How two groups can "compose" or "add up" to produce some particular new group.
+
++++
+
+Regarding #1, since the first isomorphism theorem demonstrates how to break down a group given a homomorphism out of it, a short exact sequence can illustrate the first isomorphism theorem (since it specifies a unique homomorphism $q$ or $\pi$ that can be used for the breakdown). Here's an illustration of the first isomorphism theorem (in the form of a short exact sequence) from [Isomorphism theorems](https://en.wikipedia.org/wiki/Isomorphism_theorems):
+
++++
+
+![x](https://upload.wikimedia.org/wikipedia/commons/8/8a/First-isomorphism-theorem.svg)
+
++++
+
+Let's replace some variable names in the drawing above to make the relationship between the two drawings clearer:
+
++++
+
+![x](08-6-ex-12-c-isomorphism-theorems.svg)
+
++++
+
+This drawing uses $\pi$ (for **p**rojection) rather than $q$ as the author uses (for **q**uotient); from [Quotient group § Properties](https://en.wikipedia.org/wiki/Quotient_group#Properties):
+
+> There is a "natural" [surjective](https://en.wikipedia.org/wiki/Surjective "Surjective") [group homomorphism](https://en.wikipedia.org/wiki/Group_homomorphism "Group homomorphism") ⁠$\pi : G → G / N$, sending each element $g$ of $G$ to the coset of $N$ to which $g$ belongs, that is: $\pi(g) = gN$⁠. The mapping $\pi$ is sometimes called the *canonical projection of $G$ onto ⁠$G/N$*. Its [kernel](https://en.wikipedia.org/wiki/Kernel_(algebra) "Kernel (algebra)") is ⁠$N$.
+
++++
+
+Notice that in an exact sequence (with the indexing in the following equation coming from [Exact sequence - Wikipedia](https://en.wikipedia.org/wiki/Exact_sequence)) the first isomorphism theorem implies:
+
++++
+
+$$
+im(f_n) \cong \frac{G_{n-1}}{ker(f_n)}
+$$
+
++++
+
+With the addition of the exact sequence's requirement that $im(f_{n-1}) = {ker(f_{n})}$, we have that:
+
++++
+
+$$
+im(f_n) \cong \frac{G_{n-1}}{im(f_{n-1})}
+$$
+
++++
+
+The $0$ on the far left of the sequence forces $f_1$ to be injective, so that $G_1 \cong im(f_2)$. The $0$ on the far right forces $f_3$ to be surjective, so that $G_3 \cong im(f_3)$. These additional requirements imply:
+
++++
+
+$$
+G_3 \cong \frac{G_2}{G_1}
+$$
+
++++
+
+It's in this sense that a short exact sequence illustrates the first isomorphism theorem, by taking the three terms in the theorem and laying them out as the three middle groups of the sequence. Notice the first isomophism theorem implies parallel isomorphic groups along the whole sequence, however, as illustrated in the drawing above. These parallel isomorphic groups exist not just in short exact sequences but for any homomorphism, so in some scenarios it may seem redundant to include them.
+
++++
+
+To repeat motivation #2 above, short exact sequences also provide a way to record how two groups can "add up" to produce some new group. That is, we can see the short exact sequences $0 → V_4 → A_4 → C_3 → 0$ as a record of not just how to break down $A_4$ into $C_3$ and $V_4$, but how to add up $C_3$ and $V_4$ to get $A_4$. In the language of [Group extension](https://en.wikipedia.org/wiki/Group_extension) we'd call this short exact sequence an "extension" and say that $A_4$ is an extension of $C_3$ by $V_4$. A group extension records how to break down a group to produce a quotient group, but this isn't particularly interesting if you know that any normal subgroup can be used to produce a quotient group (just find all the normal subgroups of a group to illustrate all the ways to break it down). The harder problem is the [Extension problem](https://en.wikipedia.org/wiki/Group_extension#Extension_problem), which asks how you can take two groups and add them up.
+
++++
+
+As a small example of the extension problem, say you were given the two groups $C_2$ and $C_2$ and asked to answer what groups could be constructed with the former as a normal subgroup and the latter as the quotient group. You'd likely discover the semidirect product $C_2 × C_2$ (also the direct product) and that there are no other semidirect products. However, as discussed in [Semidirect product § Non-examples](https://en.wikipedia.org/wiki/Semidirect_product#Non-examples) there's another short exact sequence using these two groups with $C_4$ in the middle. How could you have known that group existed, and be sure that you enumerated all possible groups? At this scale the problem isn't difficult since we can easily enumerate all groups of order four, but enumerating all possible groups doesn't scale well.
+
++++
+
+See also [Isomorphism theorems § Discussion](https://en.wikipedia.org/wiki/Isomorphism_theorems#Discussion) for other categorical interpretations of the first isomorphism theorem.
+
++++
+
+### Exercise 8.13 (⚠, 📑, 🔨)
+
++++
+
+> For any group $G$ and any number $n$ we can create a homomorphism that raises every element to the $n^{th}$ power, $ϕ: G → G$ by $ϕ(g) = g^n$. (In an additive group like ℤ, we would write $ng$ instead of $g^n$. Thus this is like the function in Exercise 8.5, but it works for any group $G$.)
+
++++
+
+Is this a homomorphism? We'd expect that $ϕ(g_1g_2) = ϕ(g_1)ϕ(g_2)$, but in general $ϕ(g_1g_2) = (g_1g_2)^n \neq ϕ(g_1)ϕ(g_2) = g_1^ng_2^n$. Consider e.g. the case where $n=2$ and $G=S_3$ with $g_1,g_2 = f,r$ (a trivial non-abelian group). If you work on the assumption that this a homomorphism then you'll find that the kernel is not always a normal subgroup of $G$:
+
++++
+
+![x](08-6-ex-13-error.svg)
+
++++
+
+The author notes this issue in the errata. If we assume $G$ is an abelian group then $ϕ(g_1g_2) = (g_1g_2)^n = ϕ(g_1)ϕ(g_2) = g_1^ng_2^n$.
+
++++
+
+> What is the kernel of this homomorphism?
+
++++
+
+The identity element and any other element whose order is a factor of $n$. If an element has order $m$ and this is a factor of $n$ so that $n = mk$, then $ϕ(g) = g^{mk} = e^k = e$. We could also express this from the additive perspective as $ϕ(g) = kmg = ke = e$. In a finite group all elements have finite order, so taking $n$ to be the least common multiple of the orders of all the elements will make the whole group the kernel. For example, in $C_3$ the elements are of order $\{2,3,6\}$ so setting $ϕ(g) = g^6$ maps the whole group to the kernel. In $V_4$ the elements are of order $\{2,2,2\}$ so to collapse the group to the identity requires $n=2$. Similarly, setting $n = 1$ on any group makes $ϕ$ injective (and trivial).
+
++++
+
+Because the group (and therefore the kernel) are abelian, we should be able to represent either (per the the [fundamental theorem of finite abelian groups](https://en.wikipedia.org/wiki/Fundamental_theorem_of_finite_abelian_groups "Fundamental theorem of finite abelian groups")) as a the direct product of cyclic subgroups of prime-power order. The prime factorization of $n$ will determine these subgroups in the kernel, because a prime-power in $n$ will map a subgroup of that order (or of a smaller prime-power, for the same prime) to the identity (if the subgroup exists in $G$).
+
++++
+
+> (b) When we compute $\frac{G}{Ker(ϕ)}$, do we get a subgroup of $G$?
+
++++
+
+This question is specific to the $ϕ$ defined in part (a). Normal subgroups and kernels of homomorphisms are in a one-to-one relationship, so an alternative way to phrase this question is whether $\frac{G}{H}$ is a subgroup of $G$ for any normal subgroup defined by $ϕ$ for different $n$ (call these $ϕ_n$). In part (c) we'll ask the more general question of whether (ignoring $ϕ$) dividing by any normal subgroup leads to a group that is isomorphic to a subgroup of $G$.
+
++++
+
+To show we have an isomorphism, we could try to show that there is a homomorphism that's injective and surjective (bijective) between the quotient group and some subgroup of the original group. Consider the special case of $C_4$ however, which we saw in Exercise 7.18(a) is not the direct product of cyclic groups. It's not clear how we'd form this reverse map in this example.
+
++++
+
+Another option is to use the [fundamental theorem of finite abelian groups](https://en.wikipedia.org/wiki/Fundamental_theorem_of_finite_abelian_groups "Fundamental theorem of finite abelian groups") (the author's Theorem 8.8). According to that theorem, the group $G$ should be constructible as the direct product of cyclic subgroups of prime-power order. These factors $C_{n_1}$, $C_{n_2}, \cdots C_{n_m}$ will naturally be subgroups of $G$, and the direct product of any arbitrary subset of them should be usable to form other subgroups (imagine the power set as the group's Hasse diagram).
+
++++
+
+Will we be able to use the direct product of some subset of $C_{n_1}$, $C_{n_2}, \cdots C_{n_m}$ to form the quotient group? Take some arbitary $C_{n_1}$ with $n_1 = p^b$ where $p$ is a prime and $b$ is a prime-power. If $n$ has a prime-power $a$ (i.e. $p^a$ for some prime $p$) that is less than the prime-power $b$ of the subgroup in $G$, then the group in $G$ will have its order reduced to $b - a$ by the homomorphism so that $C_{p^{a}}$ is in the kernel and $C_{p^{b-a}}$ is in the quotient group. If $C_{p^b}$ is in $G$ we know that we'll also have a group $C_{p^{b-a}} < C_{p^b}$ in $G$ that we can use to form a direct product subgroup involving that term, however. If $a >= b$ then we'll map $C_{n_1}$ to the identity, which will have no effect on a direct product we form with it.
+
++++
+
+In this way we can imagine every $C_{n_1}$, $C_{n_2}, \cdots C_{n_m}$ being mapped to some other subgroup of the quotient group, so that the quotient group (not surprisingly) is a direct product of these new groups (and therefore also an abelian group, since each will be cyclic and of a prime power).
+
++++
+
+Take for example the group $G = C_4 × C_2 × C_7 × C_9$. If we take $n = 12 = 4×3$ then the quotient group will be $\frac{G}{Ker(ϕ_{12})} = e × e × C_7 × C_3 = C_7 × C_3$ which is also a subgroup of $G$. Notice the kernel is $C_4 × C_2 × C_3$, which depended on the contents of $G$. That is, $Ker(ϕ_{12})$ is a subgroup that depends on the contents of $G$ because of the particular way in which this homomorphism is defined.
+
++++
+
+<!--
+
+Consider all the elements $g \in G$ as potential generators of subgroups in $G$. These are the only possible generators of groups; no subgroups can be formed without using some subset of these elements. If we were to take the quotient using the trivial homomorphism $ϕ_1$ with kernel $N = \{e\}$ we'd get all the same groups with the new generators $gN \in \frac{G}{Ker(ϕ)}$.
+
+Stepping up the number of worlds we're considering to the homomorphism $ϕ_2$, we'd find that $N$ included all elements $g \in G$ of order two. Is it still the case that for any elements $g_1,g_2 \in G$ for which $g_3 = g_1·g_2$ we also have that $g_3N = g_1N·g_2N$? Yes, by the logic in [Quotient group § Definition](https://en.wikipedia.org/wiki/Quotient_group#Definition).
+
+Is it still the case that for any elements $g_1N,g_2N,g_3N \in \frac{G}{Ker(ϕ)}$ for which $g_3N = g_1N·g_2N$ we also have that $g_3 = g_1·g_2$? No; consider even $0⟨2⟩ = 1⟨2⟩·1⟨2⟩$ in $\frac{C_4}{⟨2⟩}$ or $4⟨2⟩ = 1⟨2⟩·1⟨2⟩$ in $\frac{C_6}{⟨2⟩}$. What we can say is that it's always possible to pick a canonical representative for $g_1,g_2,g_3$ and construct an equivalent group in $G$. In this case we'll pick $g_1^2$, $g_2^2$, and $g_3^2$. We know that $gN = g^2N$
+
+We'd again have all the same groups in the quotient group because we strictly removed generators (elements) from the group. For every $g_1$ we removed we still have a $g_1^2$ that can generate any groups that used to be generated with $g_1^2$.
+
+-->
+
++++
+
+> (c) Is $\frac{G}{H}$ always isomorphic to a subgroup of $G$ (for any $G$ and $H ⊲ G$)?
+
++++
+
+No, we saw in Exercise 7.18(h) the group $G_{4,4}$ for which this was not the case. Looking through [List of small groups](https://en.wikipedia.org/wiki/List_of_small_groups#Small_Groups_Library) for a smaller example, we see the following comment on $Q_8$:
+
+> The smallest group $G$ demonstrating that for a normal subgroup $H$ the [quotient group](https://en.wikipedia.org/wiki/Quotient_group "Quotient group") $G$/$H$ need not be isomorphic to a subgroup of $G$.
+
+This example is discussed in more detail in [Semidirect product § Non-examples](https://en.wikipedia.org/wiki/Semidirect_product#Non-examples), in the context of it not being expressable as a semidirect product. If we take the quotient $\frac{Q_8}{⟨-1⟩}$ we get a group isomorphic to $V_4$, which is not a subgroup of $Q_8$:
+
++++
+
+![x](08-6-ex-13-c.svg)
+
++++
+
+Notice the pattern we first saw in 7.18a (in both the red and green generators) that collapses and order-4 generator to an order-2 generator in the quotient. If we were to allow expanding order-2 generators to all the possible order-4 generators in the something similar to the semidirect product, then we could potentially reverse this operation. See also [Wreath product](https://en.wikipedia.org/wiki/Wreath_product).
+
++++
+
+### Exercise 8.14
+
++++
+
+> For any group $G$ consider the homomorphism $θ: G → G$ by $θ(g) = g^{-1}$. What are its image and kernel? What more can you say about it?
+
++++
+
+The image is the set $\{θ(g) | g \in G\}$ or $\{g^{-1} | g \in G\}$. This set will include all the inverses of $G$, of course. Because all the inverses of $G$ were in $G$, it will also include all $g \in G$. That is, the image will be the whole group.
+
+The kernel is all $g$ for which $ϕ(g) = e$. For which elements does $e = g^{-1}$ in G? Multiply by $g$ on the right to get $eg = g^{-1}g = g = e$ (i.e. all $g$ for which this is true is $\{e\}$).
+
+Because the kernel is only the identity element, we can call this homomorphism injective. Because the image is the whole group, we can call this embedding an isomorphism. It is also an [involution (mathematics)](https://en.wikipedia.org/wiki/Involution_(mathematics)).

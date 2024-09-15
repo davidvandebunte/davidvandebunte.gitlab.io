@@ -154,6 +154,7 @@ Cayley diagrams are small and succinct because they usually include only a minim
 Cycle graphs express groups in terms of simpler cyclic groups, but are not unique (see [Cycle graph (algebra) § Non-uniqueness](https://en.wikipedia.org/wiki/Cycle_graph_(algebra)#Non-uniqueness)). Like Cayley diagrams and multiplication tables, they often rely on colors (and humans can only distinguish a dozen or so colors):
 
 > There can be ambiguity when two cycles share a non-identity element. For example, the 8-element [quaternion group](https://en.wikipedia.org/wiki/Quaternion_group "Quaternion group") has cycle graph shown at right. Each of the elements in the middle row when multiplied by itself gives -1 (where 1 is the identity element). In this case we may use different colors to keep track of the cycles, although symmetry considerations will work as well.
+>
 > ![x](https://upload.wikimedia.org/wikipedia/commons/3/3a/GroupDiagramQ8.svg)
 
 +++
@@ -1345,7 +1346,7 @@ The element e is already implicitly part of the list as a⁰. Let's say we were 
 
 +++
 
-> The parts of this exercise ask you to explore the relationship among the elements in D₄, and how different layouts of its Cayley diagram can show those relationships in different ways. Begin with the Cayley diagram you created for D₄ in Exercise 5.6. Ensure that it follows the pattern given in Figure 5.17.
+> The parts of this exercise ask you to explore the relationship among the elements in $D_4$, and how different layouts of its Cayley diagram can show those relationships in different ways. Begin with the Cayley diagram you created for $D_4$ in Exercise 5.6. Ensure that it follows the pattern given in Figure 5.17.
 
 +++
 
@@ -1353,7 +1354,7 @@ The element e is already implicitly part of the list as a⁰. Let's say we were 
 
 +++
 
-> (a) Make another copy of this diagram with one change: Reorder the elements of the inner ring so that the arrows representing r point clockwise in that ring, as they do in the outer ring. In order for it to still be a Cayley diagram of D₄, you must preserve the same pattern of connections. Therefore some of your f arrows will be stretched by this new layout, but try to stretch them as little as possible.
+> (a) Make another copy of this diagram with one change: Reorder the elements of the inner ring so that the arrows representing $r$ point clockwise in that ring, as they do in the outer ring. In order for it to still be a Cayley diagram of $D_4$, you must preserve the same pattern of connections. Therefore some of your $f$ arrows will be stretched by this new layout, but try to stretch them as little as possible.
 
 +++
 
@@ -1361,7 +1362,7 @@ The element e is already implicitly part of the list as a⁰. Let's say we were 
 
 +++
 
-> (b) Make another copy of the diagram, but this time arrange the nodes in two horizontal rows, the top row proceeding through the orbit of r starting from e, and the bottom row connected to the top row by four parallel f arrows.
+> (b) Make another copy of the diagram, but this time arrange the nodes in two horizontal rows, the top row proceeding through the orbit of $r$ starting from $e$, and the bottom row connected to the top row by four parallel $f$ arrows.
 
 +++
 
@@ -1369,7 +1370,7 @@ The element e is already implicitly part of the list as a⁰. Let's say we were 
 
 +++
 
-> (c) Make another copy of this two-row diagram, but this time arrange the bottom row so that each element frm is below the corresponding element rm for every number m (between 0 and 3). The f arrows will no longer be parallel, but try to make it as organized as possible.
+> (c) Make another copy of this two-row diagram, but this time arrange the bottom row so that each element $fr^m$ is below the corresponding element $r^m$ for every number $m$ (between 0 and 3). The $f$ arrows will no longer be parallel, but try to make it as organized as possible.
 
 +++
 
@@ -1377,13 +1378,13 @@ The element e is already implicitly part of the list as a⁰. Let's say we were 
 
 +++
 
-> (d) For each of these three new ways of laying out the dihedral group D₄ (parts (a) through (c)), explain what the Cayley diagram for an arbitrary dihedral group Dₙ would look like if laid out similarly.
+> (d) For each of these three new ways of laying out the dihedral group $D_4$ (parts (a) through (c)), explain what the Cayley diagram for an arbitrary dihedral group $D_n$ would look like if laid out similarly.
 
 (a) The blue arrows would form a twisted pattern. \
 (b) You'd get nearly the same diagram as an infinite dihedral group. \
 (c) The blue arrows would form a large diamond.
 
-> (e) In Group Explorer, open a Cayley diagram for the group D₄. It defaults to the pattern from Figure 5.17. How can you instruct Group Explorer to reorganize the nodes of the diagram in the same ways you did in this exercise? (You may need to refer to Group Explorer's built-in help system for information on manipulating Cayley diagrams.)
+> (e) In Group Explorer, open a Cayley diagram for the group $D_4$. It defaults to the pattern from Figure 5.17. How can you instruct Group Explorer to reorganize the nodes of the diagram in the same ways you did in this exercise? (You may need to refer to Group Explorer's built-in help system for information on manipulating Cayley diagrams.)
 
 The location of the nodes and arc of arrows can be changed by holding down shift.
 

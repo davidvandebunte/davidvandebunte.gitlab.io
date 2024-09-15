@@ -15,7 +15,7 @@ kernelspec:
 
 +++
 
-We'll use "VGT" as an acronym for Visual Group Theory. See the [VGT Website](http://web.bentley.edu/empl/c/ncarter/vgt/) for a quick summary of the book. The author points to [Group Explorer](https://nathancarter.github.io/group-explorer/index.html) several times in the text. It's functioning as of 2024-May.
+We'll use "VGT" as an acronym for Visual Group Theory. See the [VGT Website](http://web.bentley.edu/empl/c/ncarter/vgt/) for a quick summary of the book.
 
 This review will rely on Inkscape heavily to construct answers; it's not clear what tool the author used for his drawings but it would work as well.
 
@@ -96,3 +96,16 @@ Sometimes both a question and its answer have issues (the author was having a ba
 +++
 
 Some questions don't have complete answers, either because we decided it didn't seem valuable to finish answering the question (there was little insight to be gained) or the question was simply too difficult. Comments on how to move forward are always welcome!
+
++++
+
+## Group lists
+
++++
+
+These are also often called group libraries. The author points to [Group Explorer](https://nathancarter.github.io/group-explorer/index.html) several times in the text. It's functioning as of September 2024; see also [Wayback Machine: GroupExplorer](https://web.archive.org/web/20240000000000*/https://nathancarter.github.io/group-explorer/GroupExplorer.html). Alternatives include (all with slightly different functionality):
+- [List of small groups](https://en.wikipedia.org/wiki/List_of_small_groups#cite_note-Dockchitser-2)
+  - See in particular [List of small groups § Small Groups Library](https://en.wikipedia.org/wiki/List_of_small_groups#Small_Groups_Library), a part of GAP.
+- [GroupNames (maintained by Tim Dokchitser)](https://people.maths.bris.ac.uk/~matyd/GroupNames/)
+  - Includes subgroup lattices within the articles on specific groups, including the [Lattice of normal subgroups](https://en.wikipedia.org/wiki/Normal_subgroup#Lattice_of_normal_subgroups) in red.
+- [ProofWiki](https://proofwiki.org/wiki/Main_Page)

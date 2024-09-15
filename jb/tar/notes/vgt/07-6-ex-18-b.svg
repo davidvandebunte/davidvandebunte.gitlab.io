@@ -25,9 +25,9 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="px"
      showgrid="true"
-     inkscape:zoom="0.83784722"
-     inkscape:cx="155.75632"
-     inkscape:cy="377.75383"
+     inkscape:zoom="3.5333341"
+     inkscape:cx="140.94336"
+     inkscape:cy="66.367909"
      inkscape:current-layer="layer1">
     <inkscape:grid
        id="grid1"
@@ -200,42 +200,34 @@
        fy="180.0088"
        gradientUnits="userSpaceOnUse"
        gradientTransform="translate(-405.20076,-40.27221)">
-				<stop
-   offset="0"
-   style="stop-color:#FFFFFF"
-   id="stop7-7" />
-
-				<stop
-   offset="0.4888"
-   style="stop-color:#73BE1E"
-   id="stop8-5" />
-
-				<stop
-   offset="1"
-   style="stop-color:#005447"
-   id="stop9-9" />
-
-				<a:midPointStop
-   offset="0"
-   style="stop-color:#FFFFFF" />
-
-				<a:midPointStop
-   offset="0.5"
-   style="stop-color:#FFFFFF" />
-
-				<a:midPointStop
-   offset="0.4888"
-   style="stop-color:#73BE1E" />
-
-				<a:midPointStop
-   offset="0.5"
-   style="stop-color:#73BE1E" />
-
-				<a:midPointStop
-   offset="1"
-   style="stop-color:#005447" />
-
-			</radialGradient>
+      <stop
+         offset="0"
+         style="stop-color:#FFFFFF"
+         id="stop7-7" />
+      <stop
+         offset="0.4888"
+         style="stop-color:#73BE1E"
+         id="stop8-5" />
+      <stop
+         offset="1"
+         style="stop-color:#005447"
+         id="stop9-9" />
+      <a:midPointStop
+         offset="0"
+         style="stop-color:#FFFFFF" />
+      <a:midPointStop
+         offset="0.5"
+         style="stop-color:#FFFFFF" />
+      <a:midPointStop
+         offset="0.4888"
+         style="stop-color:#73BE1E" />
+      <a:midPointStop
+         offset="0.5"
+         style="stop-color:#73BE1E" />
+      <a:midPointStop
+         offset="1"
+         style="stop-color:#005447" />
+    </radialGradient>
     <radialGradient
        id="XMLID_50_-2"
        cx="291.35501"
@@ -245,42 +237,34 @@
        fy="217.8159"
        gradientUnits="userSpaceOnUse"
        gradientTransform="translate(-482.43088,-35.117378)">
-				<stop
-   offset="0"
-   style="stop-color:#FFFFFF"
-   id="stop10-2" />
-
-				<stop
-   offset="0.4888"
-   style="stop-color:#FF9900"
-   id="stop11-8" />
-
-				<stop
-   offset="1"
-   style="stop-color:#5B3E1C"
-   id="stop12-9" />
-
-				<a:midPointStop
-   offset="0"
-   style="stop-color:#FFFFFF" />
-
-				<a:midPointStop
-   offset="0.5"
-   style="stop-color:#FFFFFF" />
-
-				<a:midPointStop
-   offset="0.4888"
-   style="stop-color:#FF9900" />
-
-				<a:midPointStop
-   offset="0.5"
-   style="stop-color:#FF9900" />
-
-				<a:midPointStop
-   offset="1"
-   style="stop-color:#5B3E1C" />
-
-			</radialGradient>
+      <stop
+         offset="0"
+         style="stop-color:#FFFFFF"
+         id="stop10-2" />
+      <stop
+         offset="0.4888"
+         style="stop-color:#FF9900"
+         id="stop11-8" />
+      <stop
+         offset="1"
+         style="stop-color:#5B3E1C"
+         id="stop12-9" />
+      <a:midPointStop
+         offset="0"
+         style="stop-color:#FFFFFF" />
+      <a:midPointStop
+         offset="0.5"
+         style="stop-color:#FFFFFF" />
+      <a:midPointStop
+         offset="0.4888"
+         style="stop-color:#FF9900" />
+      <a:midPointStop
+         offset="0.5"
+         style="stop-color:#FF9900" />
+      <a:midPointStop
+         offset="1"
+         style="stop-color:#5B3E1C" />
+    </radialGradient>
     <radialGradient
        id="XMLID_51_-7"
        cx="266.59329"
@@ -290,42 +274,34 @@
        fy="260.00781"
        gradientUnits="userSpaceOnUse"
        gradientTransform="translate(-405.20076,-40.27221)">
-				<stop
-   offset="0"
-   style="stop-color:#FFFFFF"
-   id="stop13-3" />
-
-				<stop
-   offset="0.4494"
-   style="stop-color:#9957F7"
-   id="stop14-6" />
-
-				<stop
-   offset="1"
-   style="stop-color:#000000"
-   id="stop15-1" />
-
-				<a:midPointStop
-   offset="0"
-   style="stop-color:#FFFFFF" />
-
-				<a:midPointStop
-   offset="0.5"
-   style="stop-color:#FFFFFF" />
-
-				<a:midPointStop
-   offset="0.4494"
-   style="stop-color:#9957F7" />
-
-				<a:midPointStop
-   offset="0.5"
-   style="stop-color:#9957F7" />
-
-				<a:midPointStop
-   offset="1"
-   style="stop-color:#000000" />
-
-			</radialGradient>
+      <stop
+         offset="0"
+         style="stop-color:#FFFFFF"
+         id="stop13-3" />
+      <stop
+         offset="0.4494"
+         style="stop-color:#9957F7"
+         id="stop14-6" />
+      <stop
+         offset="1"
+         style="stop-color:#000000"
+         id="stop15-1" />
+      <a:midPointStop
+         offset="0"
+         style="stop-color:#FFFFFF" />
+      <a:midPointStop
+         offset="0.5"
+         style="stop-color:#FFFFFF" />
+      <a:midPointStop
+         offset="0.4494"
+         style="stop-color:#9957F7" />
+      <a:midPointStop
+         offset="0.5"
+         style="stop-color:#9957F7" />
+      <a:midPointStop
+         offset="1"
+         style="stop-color:#000000" />
+    </radialGradient>
     <radialGradient
        id="XMLID_52_-2"
        cx="214.59081"
@@ -335,42 +311,34 @@
        fy="221.9937"
        gradientUnits="userSpaceOnUse"
        gradientTransform="translate(-327.5857,-42.657154)">
-				<stop
-   offset="0"
-   style="stop-color:#FFFFFF"
-   id="stop16-9" />
-
-				<stop
-   offset="0.382"
-   style="stop-color:#22ADF2"
-   id="stop17-3" />
-
-				<stop
-   offset="1"
-   style="stop-color:#000000"
-   id="stop18-1" />
-
-				<a:midPointStop
-   offset="0"
-   style="stop-color:#FFFFFF" />
-
-				<a:midPointStop
-   offset="0.5"
-   style="stop-color:#FFFFFF" />
-
-				<a:midPointStop
-   offset="0.382"
-   style="stop-color:#22ADF2" />
-
-				<a:midPointStop
-   offset="0.5"
-   style="stop-color:#22ADF2" />
-
-				<a:midPointStop
-   offset="1"
-   style="stop-color:#000000" />
-
-			</radialGradient>
+      <stop
+         offset="0"
+         style="stop-color:#FFFFFF"
+         id="stop16-9" />
+      <stop
+         offset="0.382"
+         style="stop-color:#22ADF2"
+         id="stop17-3" />
+      <stop
+         offset="1"
+         style="stop-color:#000000"
+         id="stop18-1" />
+      <a:midPointStop
+         offset="0"
+         style="stop-color:#FFFFFF" />
+      <a:midPointStop
+         offset="0.5"
+         style="stop-color:#FFFFFF" />
+      <a:midPointStop
+         offset="0.382"
+         style="stop-color:#22ADF2" />
+      <a:midPointStop
+         offset="0.5"
+         style="stop-color:#22ADF2" />
+      <a:midPointStop
+         offset="1"
+         style="stop-color:#000000" />
+    </radialGradient>
     <marker
        inkscape:isstock="true"
        style="overflow:visible"
@@ -2420,6 +2388,11 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(810.61659,793.2383)">
+    <path
+       style="display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#e5a50a;stroke-width:1.88976;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m -579.55042,-753.0389 v 52.97647"
+       id="path6137"
+       sodipodi:nodetypes="cc" />
     <ellipse
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:#b3b3b3;fill-opacity:1;fill-rule:evenodd;stroke:#b3b3b3;stroke-width:1.88976;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        id="ellipse6087"
@@ -2569,11 +2542,6 @@
        inkscape:tile-h="6.4999993"
        inkscape:tile-x0="38.574606"
        inkscape:tile-y0="241.54889" />
-    <path
-       style="display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#800000;stroke-width:1.88976;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       d="m -579.55042,-753.0389 v 52.97647"
-       id="path6137"
-       sodipodi:nodetypes="cc" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1.25;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"

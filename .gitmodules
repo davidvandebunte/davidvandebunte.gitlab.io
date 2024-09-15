@@ -13,3 +13,6 @@
 [submodule "gitlab/inkscape/inkscape"]
 	path = gitlab/inkscape/inkscape
 	url = https://gitlab.com/inkscape/inkscape.git
+[submodule "dotfiles"]
+	path = dotfiles
+	url = https://gitlab.com/davidvandebunte/dotfiles.git
