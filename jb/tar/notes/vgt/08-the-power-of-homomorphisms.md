@@ -90,15 +90,33 @@ A congruence relation is a continuation of the theme that the "operator" works t
 
 +++
 
-The [fundamental theorem on homomorphisms](https://en.wikipedia.org/wiki/Fundamental_theorem_on_homomorphisms "Fundamental theorem on homomorphisms") states that the [image](https://en.wikipedia.org/wiki/Image_(mathematics) "Image (mathematics)") of a homomorphism is [isomorphic](https://en.wikipedia.org/wiki/Isomorphism "Isomorphism") to the quotient by the kernel. It actually applies to many structures other than groups. The author provides some great visual examples but nothing original relative to Wikipedia.
+The [first isomorphism theorem](https://en.wikipedia.org/wiki/First_isomorphism_theorem "First isomorphism theorem") states that the [image](https://en.wikipedia.org/wiki/Image_(mathematics) "Image (mathematics)") of a homomorphism is [isomorphic](https://en.wikipedia.org/wiki/Isomorphism "Isomorphism") to the quotient by the kernel, or in short that $im(f) \cong \frac{G}{ker(f)}$. It's actually point `3.` in [Isomorphism theorems § Theorem A (groups)](https://en.wikipedia.org/wiki/Isomorphism_theorems#Theorem_A_(groups)). What's interesting about it is that it applies to absolutely any homomorphism $f$, and not just for group homomorphisms but to many other homomorphisms between algebraic structures of the same type.
 
 +++
 
-Per [Isomorphism theorems § Note on numbers and names](https://en.wikipedia.org/wiki/Isomorphism_theorems#Note_on_numbers_and_names), this theorem is also confusingly called the [first isomorphism theorem](https://en.wikipedia.org/wiki/First_isomorphism_theorem "First isomorphism theorem") by some authors, but authors who call it the "fundamental theorem of homomorphisms" call a different theorem the first isomorphism theorem. The authors who call it fundamental are generally earlier, and the title "fundamental theorem of homomorphisms" is currently not ambiguous, and therefore "fundamental" should be preferred.
+Per [Isomorphism theorems § Note on numbers and names](https://en.wikipedia.org/wiki/Isomorphism_theorems#Note_on_numbers_and_names), this theorem is also confusingly called the [fundamental theorem on homomorphisms](https://en.wikipedia.org/wiki/Fundamental_theorem_on_homomorphisms "Fundamental theorem on homomorphisms") by some authors, and authors who call it the "fundamental theorem of homomorphisms" call a different theorem the first isomorphism theorem. Which is correct, or desirable?
+
++++
+
+The article [fundamental theorem on homomorphisms](https://en.wikipedia.org/wiki/Fundamental_theorem_on_homomorphisms "Fundamental theorem on homomorphisms") currently describes a more general theorem than the one stated above, only requiring $N \in ker(f)$. Notice in particular the distinction it creates with the statement:
+
+> Therefore, by setting $N = ker(f)$, we immediately get the [first isomorphism theorem](https://en.wikipedia.org/wiki/First_isomorphism_theorem "First isomorphism theorem").
+
++++
+
+We'll follow this article in calling the simpler theorem the first isomorphism theorem (straying from VGT a bit). It turns out the author is not completely consistent either; see [First Isomorphism Theorem - Group Theory Terminology](https://nathancarter.github.io/group-explorer/help/rf-groupterms/index.html#first-isomorphism-theorem).
+
++++
+
+In the short term we can essentially consider them synonyms, however, since we essentially always take $N = ker(f)$.
 
 +++
 
 ## 8.3 Modular arithmetic
+
++++
+
+This section summarizes [Fundamental theorem on homomorphisms § Integers modulo $n$](https://en.wikipedia.org/wiki/Fundamental_theorem_on_homomorphisms#Integers_modulo_n) in a visual way. It's also discussed in the first two examples of [Quotient group § Examples](https://en.wikipedia.org/wiki/Quotient_group#Examples).
 
 +++
 
@@ -118,7 +136,39 @@ From [Cyclic group § Additional properties](https://en.wikipedia.org/wiki/Cycli
 
 +++
 
-What the author calls the "Fundamental Theorem of Abelian Groups" is known elsewhere as the [fundamental theorem of *finite* abelian groups](https://en.wikipedia.org/wiki/Fundamental_theorem_of_finite_abelian_groups "Fundamental theorem of finite abelian groups"), which is distinct from the [fundamental theorem of *finitely generated* abelian groups](https://en.wikipedia.org/wiki/Fundamental_theorem_of_finitely_generated_abelian_groups "Fundamental theorem of finitely generated abelian groups").
+What the author calls the "Fundamental Theorem of Abelian Groups" is known elsewhere as the [fundamental theorem of *finite* abelian groups](https://en.wikipedia.org/wiki/Fundamental_theorem_of_finite_abelian_groups "Fundamental theorem of finite abelian groups"), which is distinct from the [fundamental theorem of *finitely generated* abelian groups](https://en.wikipedia.org/wiki/Fundamental_theorem_of_finitely_generated_abelian_groups "Fundamental theorem of finitely generated abelian groups"). From that article:
+
++++
+
+> The **fundamental theorem of finite abelian groups** states that every finite abelian group $G$ can be expressed as the direct sum of cyclic subgroups of [prime](https://en.wikipedia.org/wiki/Prime_number "Prime number")-power order; ...
+
++++
+
+This definition uses the term "direct sum" rather than "direct product" but for abelian groups these are equivalent, according to the article [Direct product of groups](https://en.wikipedia.org/wiki/Direct_product_of_groups):
+
+> In the context of [abelian groups](https://en.wikipedia.org/wiki/Abelian_group "Abelian group"), the direct product is sometimes referred to as the [direct sum](https://en.wikipedia.org/wiki/Direct_sum "Direct sum"), and is denoted $G ⊕ H$. Direct sums play an important role in the classification of abelian groups: according to the [fundamental theorem of finite abelian groups](https://en.wikipedia.org/wiki/Fundamental_theorem_of_finite_abelian_groups "Fundamental theorem of finite abelian groups"), every finite abelian group can be expressed as the direct sum of [cyclic groups](https://en.wikipedia.org/wiki/Cyclic_group "Cyclic group").
+
++++
+
+The terms "direct sum" and "direct product" are also equivalent in the context of abelian groups according to the article section [Direct sum § Direct sum of abelian groups](https://en.wikipedia.org/wiki/Direct_sum#Direct_sum_of_abelian_groups).
+
++++
+
+Notice that this theorem does not imply that every finite abelian group is isomorphic to a direct product of *prime*-order cyclic groups. For example $C_4 \neq C_2 × C_2$ (see Exercise 7.18a). The theorem works in this case because $C_4 = C_{2^2}$ ($4$ is *prime-power*).
+
++++
+
+### Direct sum vs. direct product
+
++++
+
+How do the terms "direct sum" and "direct product" differ in a context other than abelian groups? There doesn't seem to be clear consensus on this topic. According to [Direct sum § Examples](https://en.wikipedia.org/wiki/Direct_sum#Examples):
+
+>  In the case of groups, if the group operation is written as + the phrase "direct sum" is used, while if the group operation is written ∗ the phrase "direct product" is used. When the index set is infinite, the direct sum is not the same as the direct product since the direct sum has the extra requirement that all but finitely many coordinates must be zero. 
+
++++
+
+The introduction to the article and the section [Direct sum § Direct sum of abelian groups](https://en.wikipedia.org/wiki/Direct_sum#Direct_sum_of_abelian_groups) go into more detail on this topic. This definition seems to conflict with the article [Direct sum of groups](https://en.wikipedia.org/wiki/Direct_sum_of_groups), which defines a direct sum in the context of two normal subgroups.
 
 +++
 

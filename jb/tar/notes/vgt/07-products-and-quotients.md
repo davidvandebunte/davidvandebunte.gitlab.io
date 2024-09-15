@@ -39,7 +39,47 @@ Compare [Semidirect product](https://en.wikipedia.org/wiki/Semidirect_product).
 
 +++
 
-Compare [Quotient group](https://en.wikipedia.org/wiki/Quotient_group).
+Compare [Quotient group](https://en.wikipedia.org/wiki/Quotient_group). Per that article, we should read $G/N$ as "G mod N" which makes sense given that essentially all of the examples under [Quotient group § Examples](https://en.wikipedia.org/wiki/Quotient_group#Examples) can be seen as a generalization of modular arithmetic.
+
++++
+
+A quotient group is not analogous to the $5$ that's the [integer part](https://en.wikipedia.org/wiki/Quotient#Integer_part_definition) of the quotient $15/3$. If it were, then we could reconstruct the $15$ from the $3$ and $5$, but as we'll see this is not the case. It's tempting to see the problem this way because a normal subgroup and its cosets fit snugly into their parent group.
+
++++
+
+A quotient group is also not even nicely analogous to the $5$ that's the integer part of the quotient $16/3$. This analogy is a bit better because it's clear that we don't always have a way to take the subgroup ($3$) and quotient ($5$) and reproduce the original group, but reversing this operation with the addition of the recording of the remainder is not difficult. For groups this reversal operation is called the [Extension problem](https://en.wikipedia.org/wiki/Group_extension#Extension_problem) and it may never have an efficient solution.
+
++++
+
+### Simple groups
+
++++
+
+On the subject of poor analogies for groups, you may have heard of the [Classification of finite simple groups](https://en.wikipedia.org/wiki/Classification_of_finite_simple_groups). From that article:
+
++++
+
+> Simple groups can be seen as the basic building blocks of all [finite groups](https://en.wikipedia.org/wiki/Finite_group "Finite group"), reminiscent of the way the [prime numbers](https://en.wikipedia.org/wiki/Prime_number "Prime number") are the basic building blocks of the [natural numbers](https://en.wikipedia.org/wiki/Natural_number "Natural number"). The [Jordan--Hölder theorem](https://en.wikipedia.org/wiki/Jordan%E2%80%93H%C3%B6lder_theorem "Jordan--Hölder theorem") is a more precise way of stating this fact about finite groups. However, a significant difference from [integer factorization](https://en.wikipedia.org/wiki/Integer_factorization "Integer factorization") is that such "building blocks" do not necessarily determine a unique group, since there might be many non-[isomorphic](https://en.wikipedia.org/wiki/Isomorphic "Isomorphic") groups with the same [composition series](https://en.wikipedia.org/wiki/Composition_series "Composition series") or, put in another way, the [extension problem](https://en.wikipedia.org/wiki/Group_extension#Extension_problem "Group extension") does not have a unique solution.
+
++++
+
+The first sentence of this paragraph analogizes some groups (specifically [simple groups](https://en.wikipedia.org/wiki/Simple_group)) to the prime numbers. This is a relatively poor analogy, and seems to be poor enough to have garnered many votes on the questions and answers to [abstract algebra - How is a group made up of simple groups?](https://math.stackexchange.com/questions/25315/how-is-a-group-made-up-of-simple-groups). There's actually just a special way of breaking down a group into predictable smaller groups; quoting from [Group extension](https://en.wikipedia.org/wiki/Group_extension):
+
+> Since any [finite group](https://en.wikipedia.org/wiki/Finite_group "Finite group") $G$ possesses a [maximal](https://en.wikipedia.org/wiki/Maximal_subgroup "Maximal subgroup") [normal subgroup](https://en.wikipedia.org/wiki/Normal_subgroup "Normal subgroup") $N$ with [simple](https://en.wikipedia.org/wiki/Simple_group "Simple group") [factor group](https://en.wikipedia.org/wiki/Factor_group "Factor group") $G/N$, all finite groups may be constructed as a series of extensions with finite [simple groups](https://en.wikipedia.org/wiki/Simple_group "Simple group"). This fact was a motivation for completing the [classification of finite simple groups](https://en.wikipedia.org/wiki/Classification_of_finite_simple_groups "Classification of finite simple groups").
+
++++
+
+So if you take a group $G$ you can divide it by its maximal normal subgroup $N$ to get a group you add to a list, and then you keep dividing $N$ using this special technique. The list (series) you'll end up with, all normal groups, is not completely unique to the original group $G$ but at least so up to permutation and isomorphism; see [Composition series § For groups](https://en.wikipedia.org/wiki/Composition_series#For_groups) for details.
+
++++
+
+See also, from [Quotient group § Properties](https://en.wikipedia.org/wiki/Quotient_group#Properties):
+
+> If $H$ is a subgroup in a finite group $G$, and the order of $H$ is one half of the order of $G$⁠, then $H$ is guaranteed to be a normal subgroup, so $G/H$ exists and is isomorphic to ⁠$C_2$⁠. This result can also be stated as "any subgroup of index 2 is normal", and in this form it applies also to infinite groups. Furthermore, if $p$ is the smallest prime number dividing the order of a finite group, $G$⁠, then if $G/H$ has order $p$, $H$ must be a normal subgroup of $G$.
+
++++
+
+The smallest nonabelian simple group is the [alternating group](https://en.wikipedia.org/wiki/Alternating_group "Alternating group") $A_5$ of order 60, which we'll meet in Chp. 10, and every simple group of order 60 is [isomorphic](https://en.wikipedia.org/wiki/Group_isomorphism "Group isomorphism") to $A_5$.
 
 +++
 
@@ -56,6 +96,30 @@ Compare [Centralizer and normalizer](https://en.wikipedia.org/wiki/Centralizer_a
 +++
 
 Compare [Conjugacy class](https://en.wikipedia.org/wiki/Conjugacy_class). Once you've reached this section, it may be helpful to start referring to normal subgroups as [Self-conjugate subgroups](https://en.wikipedia.org/wiki/Self-conjugate_subgroup) (a bit more descriptive).
+
++++
+
+### Colored conjugacy classes
+
++++
+
+In Exercise 7.33 part (c) the author suggests coloring the elements of a group according to the sets in the conjugacy class partition. This is arguably one of the simplest ways (if you know the group's conjugacy classes) to identify whether a particular group is normal. In the following, we draw a boundary around the normal subgroup isomorphic to $V_4$ that's in $A_4$. To determine whether the group is normal, all we have to do is check whether the colors inside the boundary are only inside the boundary:
+
++++
+
+![x](07-5-colored-conjugacy.svg)
+
++++
+
+In the following we show $D_4$ with both a black boundary around $⟨f,r^2⟩$ and a gray boundary around $⟨rf⟩$. One represents a normal subgroup, and the other a non-normal subgroup. Can you quickly tell which is normal?
+
++++
+
+![x](07-5-colored-conjugacy-d4.svg)
+
++++
+
+The downside to this approach is that the list of subgroups associated with a group is typically shorter than the number of elements (see e.g. [List of small groups](https://en.wikipedia.org/wiki/List_of_small_groups)), so if you're relying on tables/data anyway it may be better to simply find the list of subgroups associated with a group and see if you can find a source that includes normality. It's likely the case that lists of subgroups are smaller because, although elements can be part of multiple subgroups, for every subgroup there must be many cosets of elements that necessarily aren't part of the subgroup and these elements will add up. The group list also stays small because small subgroups add up into larger subgroups (think of a Hasse diagram).
 
 +++
 

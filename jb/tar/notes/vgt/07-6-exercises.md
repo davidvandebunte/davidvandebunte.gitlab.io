@@ -217,7 +217,7 @@ In terms of multiplication tables, the non-abelian nature of A will lead to a no
 
 > A Cayley diagram for Q₄ appears in Exercise 4.4.
 >
-> (a) Reorganize the diagram to show the subgroup ⟨i⟩ and its left cosets. Is ⟨i⟩ a normal subgroup of Q₄?
+> (a) Reorganize the diagram to show the subgroup $⟨i⟩$ and its left cosets. Is $⟨i⟩$ a normal subgroup of $Q_4$?
 
 +++
 
@@ -229,17 +229,27 @@ The subgroup $⟨i⟩$ is $\{1, i, -1, -i\}$. The only left coset is $j⟨i⟩$ 
 
 +++
 
-> (b) Let's determine whether Q₄ is a direct product of ⟨i⟩ with some other subgroup A < Q₄. What size must A be?
+> (b) Let's determine whether $Q_4$ is a direct product of $⟨i⟩$ with some other subgroup $A < Q_4$. What size must $A$ be?
 
-Either two or four (based on Langrange's Theorem).
++++
 
-> (c) Based on part (b), what are the possibilities for A?
+Four, because the number of elements in a direct product is the product of the number of elements in the factors.
 
-Only C₄. Both C₂ and V₄ are the right sizes but are not subgroups.
++++
 
-> (d) Is Q₄ a direct product ⟨i⟩ × A for some A? If so, what is A? If not, why not?
+> (c) Based on part (b), what are the possibilities for $A$?
 
-It's not a direct product for any A. If you take the quotient you can see it's a semidirect product; corresponding elements are not lined up with the blue arrows.
++++
+
+Only $C_4$. It looks like $V_4$ is the right size but is not a subgroup.
+
++++
+
+> (d) Is $Q_4$ a direct product $⟨i⟩ × A$ for some $A$? If so, what is $A$? If not, why not?
+
++++
+
+It's not a direct product for any $A$, because $⟨i⟩ × C_4$ is not isomorphic to $Q_4$.
 
 +++
 
@@ -302,6 +312,10 @@ To show $A ⊲ A × B$ for a non-cyclic group $A$, we need to consider more gene
 +++
 
 ![x](07-6-ex-14-a.svg)
+
++++
+
+See also [Stellation](https://en.wikipedia.org/wiki/Stellation).
 
 +++
 
@@ -430,7 +444,7 @@ Per Exercise 6.31, there are no subgroups of order 6 to divide by. We've already
 
 +++
 
-Said another way, the order 2 subgroup is not normal (notice the left and right cosets aH and Ha are not equal, at least one vote against).
+Said another way, the order-2 subgroup is not normal (notice the left and right cosets $aH$ and $Ha$ are not equal, at least one vote against).
 
 +++
 
@@ -438,9 +452,21 @@ Said another way, the order 2 subgroup is not normal (notice the left and right 
 
 +++
 
-> For each of the following H and G (with H < G), attempt the quotient process from Definition 7.5. If it succeeds, show a diagram like Figure 7.20 and state the name of the quotient group. If the quotient operation reveals a direct or semidirect product structure, say which it is and name the factors. If the quotient operation fails, show a diagram like Figure 7.26.
->
-> (a) G = C₄, H = ⟨2⟩
+> For each of the following $H$ and $G$ (with $H < G$), attempt the quotient process from Definition 7.5. If it succeeds, show a diagram like Figure 7.20 and state the name of the quotient group. If the quotient operation reveals a direct or semidirect product structure, say which it is and name the factors. If the quotient operation fails, show a diagram like Figure 7.26.
+
++++
+
+The author's language in this question and throughout the chapter is a bit confusing, because the semidirect product is a generalization of the direct product and therefore it's not an "either or" question of which pattern is revealed. That is, the author uses "direct product" to mean a product that can be modeled by both a direct and semidirect product.
+
++++
+
+See also the following comment on this exercise in the text:
+
+> We will also see quotients that reveal neither of these patterns, but that nonetheless help us see structure in a large group (e.g., Exercise 7.18).
+
++++
+
+> (a) $G = C_4, H = ⟨2⟩$
 
 +++
 
@@ -448,14 +474,51 @@ Said another way, the order 2 subgroup is not normal (notice the left and right 
 
 +++
 
-Left  cosets: ⟨2⟩, 1⟨2⟩ \
-Right cosets: ⟨2⟩, ⟨2⟩1 \
-Semidirect product \
-Quotient group: C₂
+Left  cosets: $⟨2⟩, 1⟨2⟩$ \
+Right cosets: $⟨2⟩, ⟨2⟩1$ \
+Quotient group: $C_2$
 
 +++
 
-> (b) G = V₄ with generators named a and b, H = ⟨a⟩
+This is our first example of a quotient that cannot be undone by a semidirect product. It's specifically discussed in [Semidirect product § Non-examples](https://en.wikipedia.org/wiki/Semidirect_product#Non-examples).
+
++++
+
+Notice that the quotient group on the drawing uses as coset representatives the elements $\{0,1\} \in C_4$, which are not a subgroup of $C_4$ (the set is not closed under the original group operations). It may seem somewhat arbitrary that we labeled the nodes in the quotient $\{⟨2⟩, 1⟨2⟩\}$ when we could have chosen alternative names for the cosets, such as $\{2⟨2⟩, 3⟨2⟩\}$. However, see [Quotient group § Definition](https://en.wikipedia.org/wiki/Quotient_group#Definition). We should have been able to choose *any* elements of the original group to represent each coset and still seen that e.g. $\{2⟨2⟩, 3⟨2⟩\}$ was a group and it is; the quotient group.
+
++++
+
+For example, in the quotient group we have that $2⟨2⟩·3⟨2⟩ = (2·3)⟨2⟩ = 1⟨2⟩ = 3⟨2⟩$. We color the quotient group's generator $1⟨2⟩$ yellow on the right in the drawing above to make it clear that's a different generator than either $1$ or $2$ used on the left of the diagram (red and blue). It's also different than $3$:
+
++++
+
+![x](07-6-ex-18-a-v2.svg)
+
++++
+
+We chose the representatives $\{0,1\}$ only because they looked the "smallest" when in fact the elements are unordered; we could have chosen any others and would likely have done so if the labeling happened to be different.
+
++++
+
+Choosing $2⟨2⟩$ for the node label of the first coset doesn't make sense because then the identity would not become part of the quotient group. With that choice the $\{⟨2⟩, 3⟨2⟩\}$ quotient node labels would be less natural because they use $r^{-1}$ ($r^3$) to define the potential group rather than $r$. Still, we should check that all alternative generators don't produce a group, and $\{0, 3\}$ is not a subgroup.
+
++++
+
+A tempting way to see this example is that $C_4$ has only one subgroup isomorphic to $C_2$, which we divided out. It doesn't have any subgroups $C_2$ left to make it any kind of product $C_2 ⋊ C_2$. This is an incorrect way of reasoning, however, because as we'll see later the quotient group doesn't have to be a subgroup of the original group. Subgroups and quotient groups are two ways to make a smaller group out of a larger one, but they work differently. From [Quotient group](https://en.wikipedia.org/wiki/Quotient_group):
+
+> The [dual](https://en.wikipedia.org/wiki/Duality_(mathematics) "Duality (mathematics)") notion of a quotient group is a [subgroup](https://en.wikipedia.org/wiki/Subgroup "Subgroup"), these being the two primary ways of forming a smaller group from a larger one. Any normal subgroup has a corresponding quotient group, formed from the larger group by eliminating the distinction between elements of the subgroup. In [category theory](https://en.wikipedia.org/wiki/Category_theory "Category theory"), quotient groups are examples of [quotient objects](https://en.wikipedia.org/wiki/Quotient_object "Quotient object"), which are [dual](https://en.wikipedia.org/wiki/Dual_(category_theory) "Dual (category theory)") to [subobjects](https://en.wikipedia.org/wiki/Subobject "Subobject").
+
++++
+
+To form a semidirect product the author typically rearranges the elements inside the dark grey regions (the subgroup $\{0,2\}$ and its cosets in this case) but when we're dividing by a group isomorphic to $C_2$ there's no opportunity to rearrange. From [Quotient group § Properties](https://en.wikipedia.org/wiki/Quotient_group#Properties):
+
++++
+
+> Given $G$ and a normal subgroup ⁠$N$, then $G$ is a [group extension](https://en.wikipedia.org/wiki/Group_extension "Group extension") of $G/N$ by $N$⁠. One could ask whether this extension is trivial or split; in other words, one could ask whether $G$ is a [direct product](https://en.wikipedia.org/wiki/Direct_product_of_groups "Direct product of groups") or [semidirect product](https://en.wikipedia.org/wiki/Semidirect_product "Semidirect product") of $N$ and $G  /N$⁠. This is a special case of the [extension problem](https://en.wikipedia.org/wiki/Extension_problem "Extension problem"). An example where the extension is not split is as follows: Let $G = Z_4 = \{0, 1, 2, 3\}$⁠, and ⁠$N = \{0, 2\}$⁠, which is isomorphic to $Z_2$. Then $G/N$ is also isomorphic to $Z_2$. But $Z_2$ has only the trivial [automorphism](https://en.wikipedia.org/wiki/Automorphism "Automorphism"), so the only semi-direct product of $N$ and $G/N$ is the direct product. Since $Z_4$ is different from ⁠$Z_2×Z_2$⁠, we conclude that $G$ is not a semi-direct product of $N$ and ⁠$G/N$.
+
++++
+
+> (b) $G = V_4$ with generators named $a$ and $b$, $H = ⟨a⟩$
 
 +++
 
@@ -463,14 +526,22 @@ Quotient group: C₂
 
 +++
 
-Left  cosets: ⟨a⟩, b⟨a⟩ \
-Right cosets: ⟨a⟩, ⟨a⟩b \
-Direct product \
-Quotient group: C₂
+Left  cosets: $⟨a⟩, b⟨a⟩$ \
+Right cosets: $⟨a⟩, ⟨a⟩b$ \
+Quotient group: $C_2$ \
+Direct product $C_2 \times C_2$
 
 +++
 
-> (c) G = C₁₀, H = ⟨2⟩
+It may be tempting to see the quotient group as "corresponding" to $⟨b⟩$, but this is incorrect because in general a quotient group does not need to be a subgroup of the original group. The quotient group also does not correspond to $⟨c⟩$ in the original group:
+
++++
+
+![x](07-6-ex-18-b-v2.svg)
+
++++
+
+> (c) $G = C_{10}, H = ⟨2⟩$
 
 +++
 
@@ -478,14 +549,18 @@ Quotient group: C₂
 
 +++
 
-Left  cosets: ⟨a⟩, b⟨a⟩ \
-Right cosets: ⟨a⟩, ⟨a⟩b \
-Direct product \
-Quotient group: C₂
+Left  cosets: $⟨a⟩, b⟨a⟩$ \
+Right cosets: $⟨a⟩, ⟨a⟩b$ \
+Quotient group: $C_2$ which does *not* correspond to any one of $⟨5⟩$, $⟨7⟩$, $⟨9⟩$, $⟨1⟩$, or $⟨3⟩$ in the original group \
+Direct product $C_2 × C_5$
 
 +++
 
-> (d) G = D₄, H = ⟨r²⟩
+If we were to take the quotient of $C_∞$ by $⟨2⟩$, we'd remove an infinite number of order-2 subgroups from the original group.
+
++++
+
+> (d) $G = D_4, H = ⟨r^2⟩$
 
 +++
 
@@ -493,15 +568,37 @@ Quotient group: C₂
 
 +++
 
-See Exercise 5.40 for a visual D₄. \
-Left  cosets: ⟨r²⟩, r⟨r²⟩, f⟨r²⟩, fr⟨r²⟩ \
-Right cosets: ⟨r²⟩, ⟨r²⟩r, ⟨r²⟩f, ⟨r²⟩fr \
-Semidirect product \
-Quotient group: V₄
+See Exercise 5.40 for a visual $D_4$.
 
 +++
 
-> (e) G = D₄, H = ⟨f⟩
+Left cosets: $⟨r²⟩, r⟨r²⟩, f⟨r²⟩, fr⟨r²⟩$ \
+Right cosets: $⟨r²⟩, ⟨r²⟩r, ⟨r²⟩f, ⟨r²⟩fr$ \
+Quotient group: $V_4$
+
++++
+
+This is another example of a quotient that can't be undone by a semidirect product. To form a semidirect product the author typically rearranges the elements inside the dark grey regions (the subgroup $\{e,r²\}$ and its cosets) but in this case that's only $C_2$ so there's no opportunity to rearrange. We can actually see the pattern in part (a)'s drawing at the bottom of part (d)'s drawing.
+
++++
+
+This group can be constructed as a semidirect product, and even of the form $V_4 ⋊_\phi C_2$ for various $\phi$. To see one, fold down the top-most and fold up the bottom-most row in the drawing above and try some new generators $fr$ and $rf$:
+
++++
+
+![x](07-6-ex-18-d-semidirect.svg)
+
++++
+
+The previous drawings suggest a way to divide out the normal subgroup $⟨fr, r^2⟩$ but others suggest a way to divide out the normal subgroup $⟨f, r^2⟩$:
+
++++
+
+![x](07-6-ex-18-d-semidirect-v2.svg)
+
++++
+
+> (e) $G = D_4, H = ⟨f⟩$
 
 +++
 
@@ -509,25 +606,18 @@ Quotient group: V₄
 
 +++
 
-See Exercise 5.40 for a visual D₄.
-
-Left  cosets: \
-⟨f⟩ \
-r⟨f⟩ = {r, rf} \
-r²⟨f⟩ = {r², fr²} \
-fr⟨f⟩ = {fr, r³}
-
-Right cosets: \
-⟨f⟩ \
-⟨f⟩r = {fr, r} \
-⟨f⟩r² = {fr², r²} \
-⟨f⟩r³ = {rf, r³}
-
-Quotient operation failed.
+See Exercise 5.40 for a visual $D_4$.
 
 +++
 
-> (f) The group G shown in the Cayley diagram below, with H standing for the two-element subgroup generated by the green arrow.
+Left cosets: $⟨f⟩, r⟨f⟩, r²⟨f⟩, fr⟨f⟩$ \
+Right cosets: $⟨f⟩, ⟨f⟩r, ⟨f⟩r², ⟨f⟩r³$
+
+The quotient operation failed.
+
++++
+
+> (f) The group $G$ shown in the Cayley diagram below, with $H$ standing for the two-element subgroup generated by the green arrow.
 
 +++
 
@@ -535,7 +625,7 @@ Quotient operation failed.
 
 +++
 
-View from the top (or bottom); quotient operation failed:
+View from the top (or bottom); the quotient operation failed:
 
 +++
 
@@ -543,7 +633,7 @@ View from the top (or bottom); quotient operation failed:
 
 +++
 
-> (g) The group G shown in the same Cayley diagram (above), but this time with H standing for the two-element subgroup generated by the blue arrow.
+> (g) The group $G$ shown in the same Cayley diagram (above), but this time with $H$ standing for the two-element subgroup generated by the blue arrow.
 
 +++
 
@@ -551,7 +641,7 @@ View from the top (or bottom); quotient operation failed:
 
 +++
 
-View from the front (or back); quotient operation failed:
+View from the front (or back); the quotient operation failed:
 
 +++
 
@@ -559,11 +649,22 @@ View from the front (or back); quotient operation failed:
 
 +++
 
-> (h) The group G shown in the Cayley diagram below (sometimes called G₄,₄), with H standing for the two-element subgroup generated by the red arrow
+> (h) The group $G$ shown in the Cayley diagram below (sometimes called $G_{4,4}$), with $H$ standing for the two-element subgroup generated by the red arrow.
 
 +++
 
-![x](07-6-ex-18-h-1.svg)
+Let's also label the elements to make them easier to talk about (using $r$ for red, $b$ for blue, and $g$ for green):
+
++++
+
+<!-- ![x](07-6-ex-18-h-ques.svg) -->
+<!-- ![x](07-6-ex-18-h-1.svg) -->
+
+![x](07-6-ex-18-h-labels.svg)
+
++++
+
+Quotient group $D_4$:
 
 +++
 
@@ -571,8 +672,15 @@ View from the front (or back); quotient operation failed:
 
 +++
 
-Semidirect product \
-Quotient group: D₄
+Notice we chose our node names so that $b ↔ r$ and $g ↔ f$ in the typical labelling of the nodes in $D_4$.
+
++++
+
+It appears there is no way to form this group as a semidirect product of other groups. To form a semidirect product the author typically rearranges the elements inside the dark grey regions (the subgroup $\{e,r\}$ and its cosets in this case) but when we're dividing by a group isomorphic to $C_2$ there's no opportunity to rearrange.
+
++++
+
+A search for $G_{4,4}$ on [List of small groups](https://en.wikipedia.org/wiki/List_of_small_groups#Small_Groups_Library) (it's #31) indicates it has no subgroups isomorphic to $D_4$ (i.e. $D_8$ in that context) so we won't bother to search for it.
 
 +++
 
@@ -580,13 +688,13 @@ Quotient group: D₄
 
 +++
 
-> In any group G, the relationships G ⊲ G and {e} ⊲ G are true (where e stands for the identity element).
+> In any group $G$, the relationships $G ⊲ G$ and ${e} ⊲ G$ are true (where $e$ stands for the identity element).
 >
-> (a) What is G/G?
+> (a) What is $G/G$?
 
 $\{e\}$
 
-> (b) What is G/{e}?
+> (b) What is $G/{e}$?
 
 $G$
 
@@ -990,6 +1098,10 @@ The symbols in the answer come from [Geometric Shapes (Unicode block)](https://e
 +++
 
 Another useful perspective on this proof is to see the "cycle structure" permutation as the only alibi permutation, and all others as alias permutations.
+
++++
+
+Are generators equivalent to the basis vectors in linear algebra? The [Basis disambiguation page - Wikipedia](https://en.wikipedia.org/wiki/Basis) specifically links to the article [Generating set of a group](https://en.wikipedia.org/wiki/Generating_set_of_a_group).
 
 +++
 
@@ -1527,9 +1639,17 @@ $$
 
 > (c) Class equations can be illustrated by coloring the elements of a group according to the sets in the conjugacy class partition, a different color for each set. Illustrate the patterns in each of parts (a) and (b) using colored Cayley diagrams.
 
-See [File:Dihedral-conjugacy-classes.svg](https://commons.wikimedia.org/wiki/File:Dihedral-conjugacy-classes.svg).
++++
+
+See [File:Dihedral-conjugacy-classes.svg](https://commons.wikimedia.org/wiki/File:Dihedral-conjugacy-classes.svg):
+
+![x](https://upload.wikimedia.org/wikipedia/commons/e/e0/Dihedral-conjugacy-classes.svg)
+
++++
 
 > (d) Cycle graphs display element order rather clearly. How is this relevant to conjugacy classes? Use Group Explorer to illustrate the patterns in each of parts (a) and (b) using cycle graphs.
+
++++
 
 Because cycle graphs show the order of elements, they can help you quickly identify which elements may be in the same conjugacy class.
 
