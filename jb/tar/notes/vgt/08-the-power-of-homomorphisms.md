@@ -132,6 +132,10 @@ From [Cyclic group § Additional properties](https://en.wikipedia.org/wiki/Cycli
 
 +++
 
+The term "coprime" never appears in this book; the author uses the term "relatively prime" as an exact synonym (a synonym mentioned in [Coprime](https://en.wikipedia.org/wiki/Coprime_integers)). We'll prefer "coprime" to "relatively prime" for brevity.
+
++++
+
 ## 8.5 The Fundamental Theorem of Abelian Groups
 
 +++

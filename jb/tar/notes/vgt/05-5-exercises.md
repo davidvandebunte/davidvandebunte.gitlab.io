@@ -1519,22 +1519,28 @@ See Figure 5.27 (or square all permutations in S₄)
 
 > Although you can find a copy of $C_6$ in $S_6$ by simply taking the orbit of the permutation shown here:
 >
-> (123456)
+> $(123456)$
 >
 > that is not the most "efficient" way to embed $C_6$ in an $S_n$. The following permutation in $S_5$ also has order 6, and therefore its orbit is a copy of $C_6$ as well:
 >
-> (123)(45)
+> $(123)(45)$
 >
 > Thus we can fit $C_6$ in $S_6$ in an obvious way, or in $S_5$ with a little cleverness. So although the easiest way to embed $C_n$ in a symmetric group is by taking a permutation that cycles the elements of $S_n$, for some $n$ there is a way to embed $C_n$ in a smaller symmetric group.
 >
 > (a) For each $n$ between 1 and 12, determine the smallest value of $m$ such that $C_n$ can be expressed in $S_m$. Can you find any pattern or determine any strategy for computing $m$ from $n$?
 
-Most of the time, $n = m$. The exceptions are for $n = 6$ (described above), $n = 10$, and $n = 12$. For $n = 10$, $m = 7$ and the generator is (12345)(67) (where a represents 10, as in hex). For $n = 12$, $m = 7$ and the generator is (1234)(567).
++++
+
+Most of the time, $n = m$. The exceptions are for $n = 6$ (described above), $n = 10$, and $n = 12$. For $n = 10$, $m = 7$ and the generator is $(12345)(67)$ (a $C_5 × C_2$). For $n = 12$, $m = 7$ and the generator is $(1234)(567)$ (a $C_4 × C_3$).
 
 You can embed a cyclic group of order $n$ in a smaller symmetric group when $n$ can be factored into a set that is coprime.
 
++++
+
 > (b) Does your answer change if instead of a copy of $C_n$, you must find in $S_m$ a copy of $D_n$?
+
++++
 
 It should be possible to use the same permutations, reversing them as the second action required by $D_n$ (the $f$ to go with the existing $r$). So e.g. for $n = 10$ (and $m = 7$) the two generators are:
 
-(12345)(67), (15)(24)(3)67
+$(12345)(67)$, $(15)(24)(3)67$
