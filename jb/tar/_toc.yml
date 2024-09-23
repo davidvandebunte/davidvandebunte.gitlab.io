@@ -152,7 +152,7 @@ parts:
       - file: notes/vgt/08-the-power-of-homomorphisms.md
         sections:
         - file: notes/vgt/08-7-exercises.md
-        sections:
+          sections:
           - file: notes/chp8-q32.md
       - file: notes/vgt/09-sylow-theory.md
       - file: notes/vgt/10-galois-theory.md

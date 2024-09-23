@@ -2210,6 +2210,10 @@ Can we confirm from examples that the product of two normal subgroups that only 
 
 +++
 
+See also [Product of group subsets](https://en.wikipedia.org/wiki/Product_of_group_subsets).
+
++++
+
 <!--
 Do we need to use the fact that the product of two normal subgroups is a normal subgroup? We may not need to, given we have the extra information that we have a trivial intersection.
 
