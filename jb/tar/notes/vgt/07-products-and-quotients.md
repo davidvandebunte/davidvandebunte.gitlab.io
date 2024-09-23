@@ -39,7 +39,7 @@ Compare [Semidirect product](https://en.wikipedia.org/wiki/Semidirect_product).
 
 +++
 
-Compare [Quotient group](https://en.wikipedia.org/wiki/Quotient_group). Per that article, we should read $G/N$ as "G mod N" which makes sense given that essentially all of the examples under [Quotient group § Examples](https://en.wikipedia.org/wiki/Quotient_group#Examples) can be seen as a generalization of modular arithmetic.
+Compare [Quotient group](https://en.wikipedia.org/wiki/Quotient_group). Per that article, we should read $G/N$ as "G mod N" which makes sense given that essentially all of the examples under [Quotient group § Examples](https://en.wikipedia.org/wiki/Quotient_group#Examples) can be seen as a generalization of modular arithmetic. See also [Congruence relation](https://en.wikipedia.org/wiki/Congruence_relation). Unfortunately this clashes with the typical "G divided by N" most people will come to the subject with, and that we'll all continue to use most of the time for the symbol `/`. It's important to mentally pronounce this correctly so you say it and recall the concept correctly; practice with some kind of reminder.
 
 +++
 

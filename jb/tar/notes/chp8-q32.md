@@ -13,7 +13,7 @@ kernelspec:
   name: python3
 ---
 
-# Exercise 8.32
+# Exercise 8.32: Conjugation Table
 
 ```{code-cell} ipython3
 from itertools import permutations, product

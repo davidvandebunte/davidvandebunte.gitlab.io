@@ -165,11 +165,17 @@ C₂ × C₃ × C₂
 
 > (b) The group C₁₀ is a direct product. What are its factors?
 
++++
+
 C₂ × C₅
+
++++
 
 > (c) Is the group depicted by the following Cayley diagram a direct product group? Justify your answer.
 >
 > ![x](07-6-ex-07-c-ques.svg)
+
++++
 
 No, it looks like C₄ × C₄ but notice the reversed blue arrows in the 2nd and 4th rows. If you take a quotient by the red C₄ arrows you'll see the blue arrows do not connect corresponding elements of the red C₄ cosets.
 
@@ -307,7 +313,7 @@ To show $A ⊲ A × B$ for a non-cyclic group $A$, we need to consider more gene
 
 +++
 
-> (a) Create and diagram the rewiring group for C₅.
+> (a) Create and diagram the rewiring group for $C_5$.
 
 +++
 
@@ -319,7 +325,7 @@ See also [Stellation](https://en.wikipedia.org/wiki/Stellation).
 
 +++
 
-> (b) Create and diagram the rewiring group for C₇.
+> (b) Create and diagram the rewiring group for $C_7$.
 
 +++
 
@@ -327,13 +333,25 @@ See also [Stellation](https://en.wikipedia.org/wiki/Stellation).
 
 +++
 
-> (c) What conjecture would you make about rewiring groups for Cₚ, when p is prime?
-
-The rewiring group is of order p - 1, with the (p - 1) / 2 rotation providing a cyclic group covering the whole rewiring group (not just a subgroup).
+> (c) What conjecture would you make about rewiring groups for $C_p$, when $p$ is prime?
 
 +++
 
-> (d) What is the rewiring group of S₃?
+The rewiring group is of order $p - 1$. We'll learn later the correct term for a "rewiring group" is an [Automorphism group](https://en.wikipedia.org/wiki/Automorphism_group). From that page:
+
+> The automorphism group $G$ of a finite [cyclic group](https://en.wikipedia.org/wiki/Cyclic_group "Cyclic group") of [order](https://en.wikipedia.org/wiki/Order_(group_theory) "Order (group theory)") $n$ is [isomorphic](https://en.wikipedia.org/wiki/Group_isomorphism "Group isomorphism") to  $(ℤ/nℤ)^×$, the [multiplicative group of integers modulo *n*](https://en.wikipedia.org/wiki/Multiplicative_group_of_integers_modulo_n "Multiplicative group of integers modulo n") ...
+
++++
+
+And from [Multiplicative group of integers modulo n](https://en.wikipedia.org/wiki/Multiplicative_group_of_integers_modulo_n):
+
++++
+
+> The order of the multiplicative group of integers modulo $n$ is the number of integers in $\{0,1, ... , n - 1\}$ coprime to $n$. It is given by [Euler's totient function](https://en.wikipedia.org/wiki/Euler%27s_totient_function "Euler's totient function"): $|(ℤ/nℤ)^×|= φ (n)$ (sequence [A000010](https://oeis.org/A000010 "oeis:A000010") in the [OEIS](https://en.wikipedia.org/wiki/On-Line_Encyclopedia_of_Integer_Sequences "On-Line Encyclopedia of Integer Sequences")). For prime *p*, $φ ( p ) = p - 1$.
+
++++
+
+> (d) What is the rewiring group of $S_3$?
 
 +++
 
@@ -346,6 +364,8 @@ The rewiring group is of order p - 1, with the (p - 1) / 2 rotation providing a 
 +++
 
 > (a) What is the semidirect product of C₄ with its rewiring group?
+
++++
 
 What is C₄'s rewiring group? We can reverse the arrows to get one other option, but you can't use r² to get another option in the group. That is, (r r²) (r³) (r⁴) produces a subgroup (isomorphic to C₂) rather than the whole group.
 
@@ -363,17 +383,23 @@ The semidirect product of C₄ with this group (C₄ ⋊ C₂) is D₄.
 
 > (b) What is the semidirect product of C₆ with its rewiring group?
 
++++
+
 What is C₆'s rewiring group? You can reverse the arrows, but both r² and r³ will produce a subgroup. So the semidirect product is similar to above, but D₆ this time.
 
 +++
 
 > (c) Do you suspect that the semidirect product of C₅ with its rewiring group will follow the pattern suggested by parts (a) and (b)? Why or why not?
 
-It won't follow, because C₅ has a more interesting rewiring group as covered in Exercise 7.15.
++++
+
+It won't follow, because C₅ has a more interesting rewiring group as covered in Exercise 7.14.
 
 +++
 
 > (d) Draw a Cayley diagram of the semidirect product of C₅ with its rewiring group.
+
++++
 
 With only 2/5 of the blue arrows, to keep the drawing readable:
 
@@ -385,6 +411,8 @@ With only 2/5 of the blue arrows, to keep the drawing readable:
 
 > (e) Think about and then describe (without necessarily drawing it) the Cayley diagram for the semidirect product of C₇ with its rewiring group.
 
++++
+
 Similar to the above, but seven layers deep and with seven nodes in each layer.
 
 +++
@@ -393,7 +421,7 @@ Similar to the above, but seven layers deep and with seven nodes in each layer.
 
 +++
 
-> What is the rewiring group of Z?
+> What is the rewiring group of ℤ?
 
 +++
 

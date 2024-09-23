@@ -99,6 +99,14 @@ Some questions don't have complete answers, either because we decided it didn't 
 
 +++
 
+### 📌: Unresolved issue
+
++++
+
+Some content still appears to be incorrect, and the issue is not mentioned in the errata. Can you help verify there's a problem?
+
++++
+
 ## Group lists
 
 +++

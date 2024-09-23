@@ -1424,3 +1424,808 @@ No, we can't put the prime factors into different groups or the group orders are
 +++
 
 As suggested in that answer, you can embed $C_n$ into an $S_m$ with $n < m$ when you are able to factor $n$ into a set that is coprime. Theorem 8.7 makes it clearer how to do the factorization. The order $m$ of the $S_m$ will be the sum of the numbers in the prime factorization of $n$.
+
++++
+
+## 8.7.8 Semidirect products
+
++++
+
+### Exercise 8.28 (📑)
+
++++
+
+> The semidirect product in Figure 8.24 uses an embedding homomorphism; let's try a semidirect product using a quotient map. Consider the homomorphism $\theta': C_4 → Aut(C_4)$ shown below. It can be used to create a semidirect product group $C_4 ⋊ C_4$ in which each rewiring of $C_4$ appears twice. Construct a Cayley diagram for that semidirect product group.
+>
+> ![x](08-6-ex-28-ques.svg)
+
++++
+
+![x](08-6-ex-28-answer.svg)
+
++++
+
+For a better drawing, see Exercise 7.7 part (c).
+
++++
+
+### Exercise 8.29 (⚠, 🕳️)
+
++++
+
+The issues mentioned in the errata are fixed in the following questions.
+
++++
+
+> Recall that Exercise 7.14 had you diagram several rewiring groups, which we now call automorphism groups, including $Aut(C_5)$, $Aut(C_7)$, and $Aut(S_3)$.
+>
+> (a) Find an embedding $θ: C_2 → Aut(C_5)$ and diagram the semidirect product $C_2 ⋊_θ C_5$. What is a more common name for this group?
+
++++
+
+We'll skip the diagram because it's relatively easy to mentally visualize with the Exercise 7.14 answers up elsewhere. The result should be the dihedral group of order 10 ($D_5$).
+
++++
+
+> (b) Repeat part (a) for $C_7$. Make a general conjecture from these two semidirect products.
+
++++
+
+The dihedral group of order 14 ($D_7$). It looks like you can construct the dihedral group $D_n$ from a semidirect product $C_2 ⋊_θ C_n$.
+
++++
+
+> (c) How many embeddings are there of $C_3$ into $Aut(S_3)$? Create a diagram of the semidirect product group $C_3 ⋊_θ S_3$ for one such embedding $θ$.
+
++++
+
+From Exercise 7.14 we know $Aut(S_3) \cong S_3$ so there are as many embeddings into it as there are from $C_3$ to $S_3$. One is shown in Figure 8.2 and it looks like there are 2 total. Notice the following is not a homomorphism:
+
++++
+
+$$
+\begin{align}
+0 & → f \\
+1 & → fr \\
+2 & → rf
+\end{align}
+$$
+
++++
+
+It doesn't map the identity to the identity, among other issues.
+
++++
+
+We'll draw only some of the green arrows to try to reduce clutter on the diagram:
+
++++
+
+![x](08-6-ex-29-c.svg)
+
++++
+
+> (d) If $n$ and $m$ are positive whole numbers and $n$ is even, consider $θ: C_n → Aut(C_m)$ defined as follows. Even numbers map to the automorphism that changes nothing (all elements and arrows correspond to themselves, the non-rewiring). Odd numbers map to the automorphism that reverses the $C_m$ arrows.
+>
+> Draw one such $C_n ⋊_θ C_m$, and describe them in general. Where have we seen one before?
+
++++
+
+These groups will have $n$ rows where each row is a cycle of $m$ elements, with the direction of the cycle alternating every other row.
+
+We saw one example of this class of groups for $n = 4$ and $m = 4$ in Exercise 8.28 above and Exercise 7.7 part (c). Exercise 8.30 is an example with $n = 4$ and $m = 3$.
+
++++
+
+### Exercise 8.30 (⚠)
+
++++
+
+> Specify θ for the semidirect product of $C_3$ with $C_4$ shown below.
+>
+> ![x](08-6-ex-30-ques.svg)
+
++++
+
+![x](08-6-ex-30-answer.svg)
+
++++
+
+### Exercise 8.31
+
++++
+
+> What homomorphisms are there from $C_3$ to $Aut(V_4)$ besides the one in Figure 8.23? What semidirect products do they generate?
+
++++
+
+![x](08-6-ex-31-answer.svg)
+
++++
+
+This semidirect product is isomorphic to $A_4$ as well, just replacing $r^2$ with $r$.
+
++++
+
+### Exercise 8.32 (📑)
+
++++
+
+> An inner automorphism $θ: G → G$ is one that conjugates every element of $G$ by some particular element of $G$ chosen in advance. That is, from any element $g ∈ G$, we can create an inner automorphism defined by $θ(x) = gxg^{-1}$. Obviously there are different inner automorphisms for different $g$, though sometimes several different $g$'s result in the same $θ$.
+
++++
+
+See [Inner automorphism](https://en.wikipedia.org/wiki/Inner_automorphism) for the same definition.
+
++++
+
+> (a) If $G$ is abelian, what inner automorphisms does it have?
+
++++
+
+Only one, a trivial automorphism that maps every element to itself.
+
++++
+
+> (b) Fill in the following table for $S_3$ so that the entry in row $a$ and column $b$ contains not $ab$ (as multiplication tables do) but rather $bab^{-1}$, the conjugate of $a$ by $b$. The result is a conjugation table.
+
+```{code-cell} ipython3
+from itertools import permutations, product
+from pprint import pformat
+
+from numpy import zeros
+from sympy.combinatorics.generators import symmetric
+from IPython.display import Markdown
+
+
+def display_symmetric(n: int):
+    perms = list(symmetric(n))
+    perm_dict = dict()
+    for i, perm in enumerate(perms):
+        perm_dict[i] = perm
+    inv_perms = {v: k for k, v in perm_dict.items()}
+
+    display(Markdown(f'**n = {n}**'))
+    print(pformat(perm_dict))
+
+    exp_table        = zeros([len(perms), len(perms)], dtype=int)
+    conjugacy_table2 = zeros([len(perms), len(perms)], dtype=int)
+    for i, j in product(range(len(perms)), repeat=2):
+        a = perms[i]
+        b = perms[j]
+        exp_table[i, j]        = inv_perms[a ^ b]
+        conjugacy_table2[i, j] = inv_perms[b * a * ~b]
+
+    display(Markdown('<br/>exp_table'))
+    print(exp_table)
+
+    display(Markdown('<br/>conjugacy_table2'))
+    print(conjugacy_table2)
+
+[display_symmetric(n) for n in range(3,4)];
+```
+
+See also the historical [Exercise 8.32: Conjugation Table](../chp8-q32.md) (retained to avoid breaking links).
+
++++
+
+> (c) What significance do the rows in the above table have?
+
++++
+
+The conjugacy class of the element associated with the row. For a more complex example, that also colors these rows, see [File:Symmetric group S4; conjugacy table.svg](https://en.wikipedia.org/wiki/Conjugacy_class#/media/File:Symmetric_group_S4;_conjugacy_table.svg).
+
++++
+
+> (d) What significance do the columns in the above table have?
+
++++
+
+They are the inner automorphisms of the element associated with the column.
+
++++
+
+> (e) What are all the inner automorphisms of $S_3$?
+
++++
+
+See the columns above.
+
++++
+
+### Exercise 8.33
+
++++
+
+> Let $θ: H → Aut(G)$ be the map that sends every $h ∈ H$ to the identity element of $Aut(G)$, the non-rewiring (as in Exercise 8.3). What is $H ⋊_θ G$?
+
++++
+
+The direct product operation $H × G$.
+
++++
+
+### Exercise 8.34
+
++++
+
+> Definition 8.9 required the function from $H$ to $Aut(G)$ to be a homomorphism. This turns out to be necessary; not just any function from $H$ to $Aut(G)$ will work. Find two groups $G$ and $H$ and a function $f: H → Aut(G)$ that is not a homomorphism, and apply Definition 8.9 to them. Why is the resulting diagram not a Cayley diagram? What necessary property of Cayley diagrams does it fail to possess?
+
++++
+
+See the examples on pg. 161. Take an $f$ from $C_3$ to $Aut(V_4)$ defined by:
+
+$$
+\begin{align}
+f(0) & = id \\
+f(1) & = \text{(h v d)}
+\end{align}
+$$
+
++++
+
+![x](08-6-ex-34.svg)
+
++++
+
+The semidirect product produces a diagram that is not regular.
+
++++
+
+### Exercise 8.35 (📑)
+
++++
+
+> Definition 8.9 defines the semidirect product process for Cayley diagrams. Come up with the semidirect product process for multiplication tables.
+
++++
+
+This solution uses the example in Figure 8.23 to illustrate the process, reproduced here to allow naming elements:
+
++++
+
+![x](08-6-ex-35-1.svg)
+
++++
+
+Construct the multiplication tables for all the elements in the codomain of the homomorphism, with appropriate labels based on the codomain:
+
++++
+
+![x](08-6-ex-35-V_4-tables.svg)
+
++++
+
+In all tables but the first we must strip the colors because these will represent new actions in the new larger table; notice how the colors are stripped off the table in Figure 7.12.
+
+To construct the semidirect product table, we place tables based on the homomorphism specified as part of the semidirect product:
+
++++
+
+![x](08-6-ex-35-full-table.svg)
+
++++
+
+## 8.7.9 Isomorphisms
+
++++
+
+### Exercise 8.36
+
++++
+
+> Prove that A × B ≅ B × A. Give the formula for the isomorphism.
+
++++
+
+A homomorphism from one to the other is:
+$$
+ϕ((a,b)) = (b,a)
+$$
+
+We know this is a valid homomorphism because for all $(a,b)$:
+$$
+ϕ((a,b)) = ϕ((a,e)·(e,b)) = ϕ((a,e))×ϕ(((e,b)) = (b,a) = (e,a)×(b,e)
+$$
+
+It assigns elements on a one-to-one basis (injective, embedding) and it completely covers
+the codomain (surjective) so it is an isomorphism.
+
++++
+
+### Exercise 8.37
+
++++
+
+> Which of the following equations is true for any $G$ and $H$? If the equation is true, describe the isomorphism map. If the equation is false, find a particular $G$ and $H$ that make it false and explain why.
+>
+> (a) $\frac{G×H}{H} ≅ G$
+
++++
+
+The isomorphism map is from a quotient group (with $H$ as the kernel) to $G$. The domain is the kernel and cosets of $H$ in $G×H$. This map is a renaming isomorphism similar to $i$ in Figure 8.14.
+
++++
+
+> (b) $\frac{G×H}{G} ≅ H$
+
++++
+
+Similar answer; the direct product is symmetric.
+
++++
+
+> (c) $\frac{G⋊_{\theta}H}{H} ≅ G$
+
++++
+
+It may not be that $\frac{G⋊_{\theta}H}{H}$ is a group, much less isomorphic to $G$. Consider $G = V_4$ and $H = C_3$ with $θ$ as in Figure 8.23. Trying to divide out $C_3$ will fail because it is not a normal subgroup.
+
+An even simpler example is $G = C_3$ and $H = C_2$ (only one $θ$ is possible) to create an $S_3$. If you try to divide by e.g. the $f$ subgroup (one of several $C_2$ subgroups, it's not clear which one would be the right one to use) the process will fail because $f$ is a non-normal subgroup.
+
++++
+
+> (d) $\frac{G⋊_{\theta}H}{G} ≅ H$
+
++++
+
+See [Group extension § Classifying split extensions](https://en.wikipedia.org/wiki/Group_extension#Classifying_split_extensions) and the relationship $\pi \circ s = id$ described there.
+
++++
+
+### Exercise 8.38 (📑)
+
++++
+
+> Which of the following equations is true for any $G$ and $H$? If the statement is true, describe the isomorphism map. If the statement is false, find a particular $G$ and $H$ that make it false and explain why.
+>
+> (a) If $H ⊲ G$ then $\frac{G}{H} × H ≅ G$.
+
++++
+
+False for $H = C_2$ and $G = Q_4$, where $\frac{G}{H} \cong V_4$ and $V_4 × C_2 \cong C_2^3$.
+
++++
+
+> (b) If $H ⊲ G$ then $\frac{G}{H} ⋊_θ H ≅ G$ for any $θ: \frac{G}{H} → Aut(H)$.
+
++++
+
+False for $H = C_2$ and $G = C_6$, where $\frac{G}{H} \cong C_3$ and $C_3 ⋊_θ C_2 \cong S_3$.
+
++++
+
+> (c) If $H ⊲ G$ then $\frac{G}{H} ⋊_θ H ≅ G$ for some $θ: \frac{G}{H} → Aut(H)$.
+
++++
+
+False, same example as part (a). It's not possible to construct $Q_4$ as a semidirect product.
+
++++
+
+### Exercise 8.39
+
++++
+
+> (a) Explain why $Q_4$ is not isomorphic to any member of any of the families of groups we met in Chapter 5.
+
++++
+
+It contains elements that are abelian and that are cyclic, but doesn't fit any family.
+
++++
+
+> (b) Explain why the $C_4 ⋊_θ C_3$ from Exercise 8.30 is not isomorphic to any member of any of the families of groups we met in Chapter 5.
+
++++
+
+It's closest to the abelian groups, but is not isomorphic because the semidirect product reverses the direction of the red arrows.
+
++++
+
+### Exercise 8.40 (⚠)
+
++++
+
+The following question is fixed based on the errata. It's also fixed to indicate that $Q^+$ is a group under multiplication, not addition (📌).
+
++++
+
+> Recall the group $Q^+$ (under multiplication) and the group $Q^*$ (under multiplication) introduced in Exercise 4.33. Show that $Q^+ × C_2 ≅ Q^*$ by specifying the isomorphism, and explaining why the function you give is indeed an isomorphism.
+
++++
+
+The two elements $\{-1,1\}$ in $C_2$ will effectively hold a sign bit, so the relationship can be described:
+$$
+ϕ((q,c)) = c×q
+$$
+
++++
+
+It is a homomorphism because:
+$$
+ϕ((q_3,c_3))= ϕ((q_1,c_1)·(q_2,c_2)) = ϕ((q_1,c_1))×ϕ((q_2,c_2)) = c_3×q_3 = c_1×q_1×c_2×q_2 = (c_1×c_2)×q_1×q_2
+$$
+
++++
+
+It's also clearly injective and surjective.
+
++++
+
+### Exercise 8.41
+
++++
+
+> The group $U_n$ contains the numbers between $1$ and $n$ that are relatively prime to $n$, with the operation of multiplication mod $n$. So, for example, $U_8 = \{1, 3, 5, 7\}$, and has the following multiplication table:
+>
+> ![x](08-6-ex-41-ques.svg)
+>
+> Notice that $1⋅3 = 3$ as you would expect, but for instance $5⋅7 = 35$, because we work $\bmod 8$, and the remainder of $35 ÷ 8$ is $3$.
+
++++
+
+These groups are also known as the [Multiplicative group of integers modulo $n$](https://en.wikipedia.org/wiki/Multiplicative_group_of_integers_modulo_n).
+
++++
+
+> (a) To what more familiar group is $U_8$ isomorphic?
+
++++
+
+The Klein four-group.
+
++++
+
+> (b) What are the orders of the groups $U_b$ for $n ≤ 10$?
+
++++
+
+From [Computing Eulers Totient Function - SO](https://stackoverflow.com/questions/18114138/computing-eulers-totient-function/18114286#18114286):
+
+```{code-cell} ipython3
+from math import gcd
+
+def phi(n):
+    amount = 0
+    for k in range(1, n + 1):
+        if gcd(n, k) == 1:
+            amount += 1
+    return amount
+```
+
+```{code-cell} ipython3
+[phi(n) for n in range(11)]
+```
+
+> (c) What is the relationship between $U_5$ and $U_{10}$?
+
++++
+
+The group $U_5$:
+
+```
+  1 2 3 4
+1 1 2 3 4
+2 2 4 1 3
+3 3 1 4 2
+4 4 3 2 1
+```
+
+Arranging the columns/rows so it is more clearly cyclic:
+
+```
+  1 2 4 3
+1 1 2 4 3
+2 2 4 3 1
+4 4 3 1 2
+3 3 1 2 4
+```
+
++++
+
+The group $U_{10}$:
+
+```
+  1 3 7 9
+1 1 3 7 9
+3 3 9 1 7
+7 7 1 9 3
+9 9 7 3 1
+```
+
++++
+
+They are isomorphic.
+
++++
+
+> (d) Examine $U_p$ for the first few primes $p$. What conjecture do you make about $U_p$ for any prime?
+
++++
+
+The group $U_7$:
+
+```
+  1 2 3 4 5 6
+1 1 2 3 4 5 6
+2 2 4 6 1 3 5
+3 3 6 2 5 1 4
+4 4 1 5 2 6 3
+5 5 3 1 6 4 2
+6 6 5 4 3 2 1
+```
+
++++
+
+Cyclic of order $p - 1$. From [Multiplicative group of integers modulo n](https://en.wikipedia.org/wiki/Multiplicative_group_of_integers_modulo_n):
+
++++
+
+> The order of the multiplicative group of integers modulo $n$ is the number of integers in $\{0,1, ... , n - 1\}$ coprime to $n$. It is given by [Euler's totient function](https://en.wikipedia.org/wiki/Euler%27s_totient_function "Euler's totient function"): $|(ℤ/nℤ)^×|= φ (n)$ (sequence [A000010](https://oeis.org/A000010 "oeis:A000010") in the [OEIS](https://en.wikipedia.org/wiki/On-Line_Encyclopedia_of_Integer_Sequences "On-Line Encyclopedia of Integer Sequences")). For prime *p*, $φ ( p ) = p - 1$.
+
++++
+
+See also Exercise 7.14(c).
+
++++
+
+> (e) All the groups $U_n$ belong in which of the families of groups we met in Chapter 5?
+
++++
+
+Abelian
+
++++
+
+> The family of groups $U_n$ has several interesting properties. For instance, every finite abelian group is isomorphic to a subgroup of some $U_n$.
+
++++
+
+### Exercise 8.42 (📑)
+
++++
+
+> This exercise assumes knowledge of matrix multiplication. If that topic is new to you or if you would like a refresher, refer to the hint for this problem in the Appendix.
+>
+> For each part below, consider the group generated by the two matrices shown, using matrix multiplication as the binary operator. To what common group is it isomorphic? What is the isomorphism?
+>
+> (a) `[[0, -1],[-1, 0]]`, `[[0, 1],[1, 0]]`
+
+```{code-cell} ipython3
+import numpy as np
+
+I = np.identity(2)
+A = np.array([[0, -1],[-1, 0]])
+B = np.array([[0,  1],[ 1, 0]])
+C = -I
+I,A,B,C
+```
+
+```{code-cell} ipython3
+(A @ A == I).all(), (B @ B == I).all(), (A @ B == C).all()
+```
+
+```{code-cell} ipython3
+(C @ B == A).all()
+```
+
+This group is isomorphic to the [Klein four-group](https://en.wikipedia.org/wiki/Klein_four-group) (using element names from the Wikipedia article) with isomorphism:
+
+```
+I → e
+A → a
+B → b
+C → c
+```
+
++++
+
+> (b) `[[0, -1],[-1, 0]]`, `[[0, i],[i, 0]]`
+
+```{code-cell} ipython3
+import numpy as np
+
+I = np.identity(2)
+A = np.array([[0, -1],[-1, 0]])
+assert (A @ A == I).all()
+```
+
+Introduce a new word to the language by combining it first with itself:
+
+```{code-cell} ipython3
+B = np.array([[0, 1j],[1j, 0]])
+assert (B @ B == -I).all()
+B2 = -I
+B3 = B2 @ B
+assert (B @ B3 == I).all()
+```
+
+And then with other words:
+
+```{code-cell} ipython3
+A @ B
+assert (A @ B == -1j * I).all()
+AB = -1j * I
+assert (AB @ A == B).all()
+assert (B @ A == AB).all()  # Commutative
+AB @ B
+assert (AB @ B == -A).all()
+AB2 = -A
+assert (B2 @ A == AB2).all()
+AB3 = AB2 @ B
+assert (B3 @ A == AB3).all()
+```
+
+```{code-cell} ipython3
+I,A
+```
+
+```{code-cell} ipython3
+B,B2,B3
+```
+
+```{code-cell} ipython3
+AB,AB2,AB3
+```
+
+The group is isomorphic to $C_2×C_4$ with isomorphism:
+
+```
+(0,0) → I
+(0,1) → B
+(0,2) → B²
+(0,3) → B³
+(1,0) → A
+(1,1) → AB
+(1,2) → AB²
+(1,3) → AB³
+```
+
++++
+
+> (b) `[[0, 1, 0],[1, 0, 0],[0, 0, 1]]`, `[[1, 0, 0],[0, 0, 1],[0, 1, 0]]`
+
++++
+
+Call the first matrix $A$ and the second $B$. These are permutation matrices where $A$ and $B$ both correspond to [transpositions](https://en.wikipedia.org/wiki/Cyclic_permutation#Transpositions) (e.g. $(12)$) in cycle notation. We can expect these to generate $S_3$.
+
+```{code-cell} ipython3
+import numpy as np
+
+I = np.identity(3)
+A = np.array([[0, 1, 0],[1, 0, 0],[0, 0, 1]])
+assert (A @ A == I).all()
+```
+
+```{code-cell} ipython3
+B = np.array([[1, 0, 0],[0, 0, 1],[0, 1, 0]])
+assert (B @ B == I).all()
+AB = A @ B
+BA = B @ A
+BAB = BA @ B
+assert (B @ AB == BAB).all()
+```
+
+```{code-cell} ipython3
+I,A,B
+```
+
+```{code-cell} ipython3
+AB,BA,BAB
+```
+
+The group is isomorphic to S₃ with isomorphism:
+
+```
+I → e
+A → f
+AB → r
+BA → r²
+B → rf
+BAB → fr
+```
+
++++
+
+### Exercise 8.43 (⚠, 📑)
+
++++
+
+The following question is fixed based on the errata.
+
++++
+
+> If a group $G$ has two subgroups $H$ and $K$, we write $HK$ to mean the set of elements obtained by multiplying any $h ∈ H$ by any $k ∈ K$, as in $hk$. In other words, combine all the elements of all the left cosets $hK$ for any $h ∈ H$; this is the same as combining all the right cosets $Hk$ for all the $k ∈ K$.
+>
+> This problem deals with the special case when $H$ and $K$ are both normal subgroups. Consider the function $θ: H×K → G$ by $θ(h,k) = hk$, which takes pairs of elements from $H × K$ and multiplies them in $G$. Notice that $Im(θ) = HK$.
+>
+> (a) If $H$ and $K$ intersect only at the identity element, explain why $θ$ is an isomorphism (and thus $H×K ≅ HK$).
+
++++
+
+For this function to be an isomorphism we first need it to be a homomorphism, and for it to be a homomorphism we need both the domain and codomain to be groups. In the codomain $G$, do the elements $hk$ for all $h \in H$ and $k \in K$ correspond to a subgroup? The main issue we're likely to run into is that the result is not closed; think of the subgroups $⟨f⟩,⟨rf⟩$ of $S_3$. In this example, the product $HK$ (a set, not a group) will be $\{e,f,rf,frf\}$. It's important to distinguish the product of subsets $HK = ⟨f⟩⟨rf⟩$ from the group generated by the subsets i.e. $⟨f,rf⟩$ (in this case, the whole group).
+
++++
+
+How can we ensure we have a subgroup rather than just a set? One way to see the problem is that we're "pulling in" elements into the set $HK$ that aren't part of either subgroup; in the example $HK = ⟨f⟩⟨rf⟩$ of $S_3$ we're pulling in $r^2$ which wasn't part of either of the original subgroups. These undesirable inclusions are the difference between the elements generated by $H$ and $K$ and the elements in $HK$; any pair of elements $h,k$ will be able to generate arbitrary elements of the larger group $G$ if they are included in $HK$.
+
++++
+
+Each subgroup $H,K$ obviously doesn't already include elements that aren't part of them. The only new elements are going to occur when an $h,k$ generate not just an $hk$ but a $kh$. So we must include all $kh$ in $HK$ if we are to have a group. This boils down the the requirement that we must have $HK = KH$ (both considered as unordered sets).
+
++++
+
+Let's say that $H$ is a normal subgroup of $G$, so that for all $g \in G$ we have that $g^{-1}hg \in H$. These $g$ include the elements of $K$, so for arbitrary $k_1,h_1$ we should have some $h_2$ such that $h_2 = k_1h_1k_1^{-1}$ or $h_2k_1 = k_1h_1$. This shows we can produce an arbitrary $k_1h_1$ in $HK$, because $h_2k_1 \in HK$. So if either $H$ or $K$ is a normal subgroup of $G$ we should have that $HK$ is a subgroup.
+
++++
+
+Consider the two subgroups $HK = ⟨r⟩⟨f⟩$ in $S_3$, the first of which is normal. $HK$ is indeed a group (all of $S_3$), but $θ$ does not define a homomorphism from $H×K → HK$ because e.g. we have:
+
+$$
+\begin{align}
+θ((r^2,f)) = θ((r,f)·(r,e)) = r²f \neq θ((r,f))θ((r,e)) = (rf)(r) = f \\
+θ((e,e)) = θ((r²,f)·(r,f)) = e \neq θ((r²,f))θ((r,f)) = (r²f)(rf) = r
+\end{align}
+$$
+
++++
+
+In more general terms:
+
+$$
+θ((h_3,k_3)) = θ((h_1,k_1)·(h_2,k_2)) = h_3k_3 = h_1h_2k_1k_2 \neq θ((h_1,k_1))θ((h_2,k_2)) = (h_1k_1)(h_2k_2)
+$$
+
++++
+
+So we need $h_2k_1 = k_1h_2$ or in general for elements of $H$ and $K$ to commute.
+
++++
+
+There's a one-to-one relationship between $H×K$ and the strings $hk$, where $hk$ are literal strings rather than elements of a group (which may have other word representations). Similarly, there's a one-to-one relationship to the strings $kh$. The set of strings $hk$ and $kh$ are of the same size, so a bijection is possible.
+
++++
+
+Consider the two tables below. On the left we have $HK$, which defines the canonical name for every element of the group. On the right we have $KH$, which is full of only aliases to elements in the first table. Both tables, however, should have a unique representative for every element of the group.
+
++++
+
+![x](08-6-ex-43.svg)
+
++++
+
+We know that for arbitrary $k$ we have have $kH = Hk$, because $H$ is a normal subgroup (red boxes above). Similarly, for arbitrary $h$ we have have $Kh = hK$, because $K$ is a normal subgroup (blue boxes above). Since every item is uniquely represented in both tables, we must have some bijection between the red boxes and a bijection between the blue boxes. This forces $h_ik_i = k_ih_i$ for arbitrary $h_i,k_i$.
+
++++
+
+The homomorphism is surjective because we covered all of the subgroup $HK$, and it's injective because we have a unique $hk$ to represent every element of the codomain, so we have an isomorphism. If $K$ and $H$ intersected somewhere other than the identity, you'd have some $h_1 = k_1$ so that $h_1k_1 = h_1^2$, which was already an element of the first subgroup.
+
++++
+
+Can we confirm from examples that the product of two normal subgroups that only intersect at the identity commutes with respect to the elements of each subgroup? Notice we never assumed that either normal subgroup was abelian, so we could potentially find a group that is non-abelian (if one of these groups is non-abelian). There's no need to check abelian groups, so let's review the list of non-abelian groups in [List of small groups § List of small non-abelian groups](https://en.wikipedia.org/wiki/List_of_small_groups#List_of_small_non-abelian_groups) (or [Non-abelian groups](https://people.maths.bris.ac.uk/~matyd/GroupNames/NA.html)):
+- See [Q8 - GroupNames](https://people.maths.bris.ac.uk/~matyd/GroupNames/1/Q8.html). We can't take the normal $i,j$ subgroups out of the [Quaternion group](https://en.wikipedia.org/wiki/Quaternion_group) because they intersect at more than the identity.
+- See [D6 - GroupNames](https://people.maths.bris.ac.uk/~matyd/GroupNames/1/D6.html). It looks like $D_6$ has $D_3$ as a normal subgroup, but there's no other normal subgroup to combine with it.
+- See [S4 - GroupNames](https://people.maths.bris.ac.uk/~matyd/GroupNames/1/S4.html). All the normal subgroups intersect at more than the identity.
+
++++
+
+<!--
+Do we need to use the fact that the product of two normal subgroups is a normal subgroup? We may not need to, given we have the extra information that we have a trivial intersection.
+
+For arbitrary $k_1,h_1$ we should have some $h_2$ such that $h_2 = k_1^{-1}h_1k_1$ or $k_1h_2 = h_1k_1$. We can continue this to $h_3$ such that $h_3 = k_1^{-1}h_2k_1$ or $k_1h_3 = h_2k_1$. See the columns of the $S_4$ conjugacy table in [Symmetric group S4; conjugacy table - Conjugacy class - Wikipedia](https://en.wikipedia.org/wiki/Conjugacy_class#/media/File:Symmetric_group_S4;_conjugacy_table.svg); you don't even cover the whole conjugacy class.
+
+What about a group that has a normal non-abelian subgroup? Why not create your own example, by a semidirect product? That'd create a product that has one non-normal subgroup, however. It looks like you'd need a special kind of product.
+-->
+
++++
+
+> (b) Is the reverse also true? That is, if $H × K ≅ HK$, must $H$ and $K$ only overlap at $e$?
+
++++
+
+Yes. The size of the group $H×K$ is exactly $|H||K|$. The size of the set $HK$ is exactly $\frac{|H||K|}{|H∩K|}$. Unless the intersection of the sets is of size one, then they cannot be of the same size, and therefore there can't be an isomorphism between them.
+
++++
+
+## 8.7.10 Finite Abelian Groups (🔨)
