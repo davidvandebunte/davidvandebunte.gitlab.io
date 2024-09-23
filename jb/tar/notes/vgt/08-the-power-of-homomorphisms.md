@@ -168,7 +168,7 @@ Notice that this theorem does not imply that every finite abelian group is isomo
 
 How do the terms "direct sum" and "direct product" differ in a context other than abelian groups? There doesn't seem to be clear consensus on this topic. According to [Direct sum § Examples](https://en.wikipedia.org/wiki/Direct_sum#Examples):
 
->  In the case of groups, if the group operation is written as + the phrase "direct sum" is used, while if the group operation is written ∗ the phrase "direct product" is used. When the index set is infinite, the direct sum is not the same as the direct product since the direct sum has the extra requirement that all but finitely many coordinates must be zero. 
+>  In the case of groups, if the group operation is written as + the phrase "direct sum" is used, while if the group operation is written ∗ the phrase "direct product" is used. When the index set is infinite, the direct sum is not the same as the direct product since the direct sum has the extra requirement that all but finitely many coordinates must be zero.
 
 +++
 
@@ -180,4 +180,12 @@ The introduction to the article and the section [Direct sum § Direct sum of abe
 
 +++
 
-See also [Automorphism](https://en.wikipedia.org/wiki/Automorphism).
+There are two versions of the symbol ⋊ (left and right). A helpful comment in [Semidirect product § Notation](https://en.wikipedia.org/wiki/Semidirect_product#Notation):
+
++++
+
+> One way of thinking about the $N ⋊ H$ symbol is as a combination of the symbol for normal subgroup ($◁$) and the symbol for the product ($×$).
+
++++
+
+See also [Automorphism](https://en.wikipedia.org/wiki/Automorphism) and [Automorphism group](https://en.wikipedia.org/wiki/Automorphism_group).

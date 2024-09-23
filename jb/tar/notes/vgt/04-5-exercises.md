@@ -1638,4 +1638,4 @@ Yes: It's closed, associative, has an identity element (1), and every element ha
 
 +++
 
-It's hard to know what part of them to show since they're infinite in two directions, both the numerator and the denominator. Besides that, they have have "holes" for irrational numbers like π (see [Compact space](https://en.wikipedia.org/wiki/Compact_space)) which will not be consistent or symmetric (will appear almost random).
+It's hard to know what part of them to show since they're infinite in two directions, both the numerator and the denominator. Besides that, they have have "holes" for irrational numbers like $\pi$ (see [Compact space](https://en.wikipedia.org/wiki/Compact_space)) which will not be consistent or symmetric (will appear almost random).
