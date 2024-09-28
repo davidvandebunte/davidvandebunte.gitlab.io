@@ -39,7 +39,19 @@ Compare [Semidirect product](https://en.wikipedia.org/wiki/Semidirect_product).
 
 +++
 
-Compare [Quotient group](https://en.wikipedia.org/wiki/Quotient_group). Per that article, we should read $G/N$ as "G mod N" which makes sense given that essentially all of the examples under [Quotient group § Examples](https://en.wikipedia.org/wiki/Quotient_group#Examples) can be seen as a generalization of modular arithmetic. See also [Congruence relation](https://en.wikipedia.org/wiki/Congruence_relation). Unfortunately this clashes with the typical "G divided by N" most people will come to the subject with, and that we'll all continue to use most of the time for the symbol `/`. It's important to mentally pronounce this correctly so you say it and recall the concept correctly; practice with some kind of reminder.
+Compare [Quotient group](https://en.wikipedia.org/wiki/Quotient_group). Per that article, we should read $G/N$ as "G mod N" which makes sense given that essentially all of the examples under [Quotient group § Examples](https://en.wikipedia.org/wiki/Quotient_group#Examples) can be seen as a generalization of modular arithmetic. See also [Congruence relation](https://en.wikipedia.org/wiki/Congruence_relation). Unfortunately this clashes with the typical "G divided by N" most people with a regular education will come to the subject with, and that we'll all continue to use most of the time for the symbol `/`. It's important to mentally pronounce this correctly so you say it and recall the concept correctly; practice with some kind of reminder.
+
++++
+
+However, the [Quotient group](https://en.wikipedia.org/wiki/Quotient_group) article also mentions:
+
+> The notation ⁠$G/H$ should be interpreted with caution, as some authors (e.g., Vinberg[[1]](https://en.wikipedia.org/wiki/Quotient_group#cite_note-1)) use it to represent the left cosets of $H$ in $G$ for *any* subgroup $H$, even though these cosets do not form a group if $H$ is not normal in $G$. Others (e.g., Dummit and Foote[[2]](https://en.wikipedia.org/wiki/Quotient_group#cite_note-2)) only use this notation to refer to the quotient group, with the appearance of this notation implying the normality of $H$ in $G$.
+
++++
+
+The article [Coset](https://en.wikipedia.org/wiki/Coset) mentions the same issue. Wikipedia articles aren't consistent; in parts of [Group action § Examples](https://en.wikipedia.org/wiki/Group_action#Examples_2) they seem to assume this means only a set of cosets:
+
+> In every group $G$ with subgroup $H$, left multiplication is an action of $G$ on the set of cosets $G / H: g⋅aH = gaH$ for all $g, a$ in $G$.
 
 +++
 
@@ -87,7 +99,13 @@ The smallest nonabelian simple group is the [alternating group](https://en.wikip
 
 +++
 
-Compare [Centralizer and normalizer](https://en.wikipedia.org/wiki/Centralizer_and_normalizer). The [Center (group theory)](https://en.wikipedia.org/wiki/Center_(group_theory)) concept is arguably easier to start with, and also widely used.
+Compare [Centralizer and normalizer](https://en.wikipedia.org/wiki/Centralizer_and_normalizer). The [Center (group theory)](https://en.wikipedia.org/wiki/Center_(group_theory)) concept is arguably easier to start with, and also widely used. This article defines the normalizer differently than the author, in particular making it more general by defining it on a set $S$ rather than a group $H$. The author focuses on the following lemma from this article in [Centralizer and normalizer § Groups](https://en.wikipedia.org/wiki/Centralizer_and_normalizer#Groups):
+
+> If $H$ is a subgroup of $G$, then the largest subgroup of $G$ in which $H$ is normal is the subgroup $N_G(H)$.
+
++++
+
+For the smallest, see [Normal closure (group theory)](https://en.wikipedia.org/wiki/Normal_closure_(group_theory)).
 
 +++
 

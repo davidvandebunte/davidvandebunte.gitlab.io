@@ -524,7 +524,7 @@ The only automorphisms are $ϕ(n) = mn$ for $m \in \{1,-1\}$, as discussed in Ex
 
 +++
 
-$ϕ(n) = n \mod 3$
+$ϕ(n) = n \bmod 3$
 
 +++
 

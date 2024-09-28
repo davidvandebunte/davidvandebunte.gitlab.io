@@ -729,7 +729,7 @@ $n = 5$: D₅ and ⟨f⟩, so $[G : H] = 10 / 2$
 
 +++
 
-> This exercise investigates subgroups of A₄. By Lagrange's Theorem, the only sizes possible for subgroups of A₄ are 1, 2, 3, 4, 6, and 12. You can either do the work of this exercise using permutations, or using the following multiplication table for A₄. In it, the elements are colored according to their order:
+> This exercise investigates subgroups of $A_4$. By Lagrange's Theorem, the only sizes possible for subgroups of $A_4$ are 1, 2, 3, 4, 6, and 12. You can either do the work of this exercise using permutations, or using the following multiplication table for $A_4$. In it, the elements are colored according to their order:
 >
 > ![x](06-6-ex-31-ques.svg)
 >

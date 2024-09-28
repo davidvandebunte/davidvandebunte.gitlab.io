@@ -754,7 +754,7 @@ Collapse the sub-tables into a multiplication table (using the assigned sub-tabl
 
 +++
 
-Let's take the quotient of S₃ by the subgroup H = ⟨r⟩, using the table on the left above:
+Let's take the quotient of $S_3$ by the subgroup $H = ⟨r⟩$, using the table on the left above:
 
 +++
 
@@ -762,7 +762,7 @@ Let's take the quotient of S₃ by the subgroup H = ⟨r⟩, using the table on 
 
 +++
 
-The quotient group is C₂:
+The quotient group is $C_2$:
 
 +++
 
