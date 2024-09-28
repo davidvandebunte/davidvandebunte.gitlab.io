@@ -75,7 +75,7 @@ These answers are also included inline in this Jupyer Book, partially because th
 
 +++
 
-### ⚠: Known issue
+### ⚠ (or ⚠️): Known issue
 
 +++
 
@@ -103,7 +103,7 @@ Some questions don't have complete answers, either because we decided it didn't 
 
 +++
 
-Some content still appears to be incorrect, and the issue is not mentioned in the errata. Can you help verify there's a problem?
+Some content still appears to be incorrect, and the issue is not mentioned in the errata. Although these are often not critical enough to bring up to the author to be posted in the errata, if you feel they are an issue as well then you may do so.
 
 +++
 

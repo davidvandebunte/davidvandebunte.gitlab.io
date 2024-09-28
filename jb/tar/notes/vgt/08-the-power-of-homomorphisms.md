@@ -140,7 +140,7 @@ The term "coprime" never appears in this book; the author uses the term "relativ
 
 +++
 
-What the author calls the "Fundamental Theorem of Abelian Groups" is known elsewhere as the [fundamental theorem of *finite* abelian groups](https://en.wikipedia.org/wiki/Fundamental_theorem_of_finite_abelian_groups "Fundamental theorem of finite abelian groups"), which is distinct from the [fundamental theorem of *finitely generated* abelian groups](https://en.wikipedia.org/wiki/Fundamental_theorem_of_finitely_generated_abelian_groups "Fundamental theorem of finitely generated abelian groups"). From that article:
+What the author calls the "Fundamental Theorem of Abelian Groups" is known elsewhere as the [Fundamental theorem of finite abelian groups](https://en.wikipedia.org/wiki/Fundamental_theorem_of_finite_abelian_groups "Fundamental theorem of finite abelian groups") (emphasis on *finite*), which is distinct from the [Fundamental theorem of finitely generated abelian groups](https://en.wikipedia.org/wiki/Fundamental_theorem_of_finitely_generated_abelian_groups "Fundamental theorem of finitely generated abelian groups") ((emphasis on *finitely generated*). From that article:
 
 +++
 
