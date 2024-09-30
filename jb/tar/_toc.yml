@@ -158,6 +158,8 @@ parts:
         sections:
         - file: notes/vgt/09-5-exercises.md
       - file: notes/vgt/10-galois-theory.md
+        sections:
+        - file: notes/vgt/10-8-exercises.md
   - caption: Book of Why
     chapters:
       - file: notes/bow-review.md
