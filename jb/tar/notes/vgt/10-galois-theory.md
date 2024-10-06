@@ -160,6 +160,10 @@ To be clear, the three groups the author is referring to at the end of this sect
 
 +++
 
+Compare Theorem 10.7 to [Degree of a field extension § The multiplicativity formula for degrees](https://en.wikipedia.org/wiki/Degree_of_a_field_extension#The_multiplicativity_formula_for_degrees).
+
++++
+
 In the caption of Figure 10.12, the author refers to the automorphism group as the Galois group. The Wikipedia article [Galois group § Definition](https://en.wikipedia.org/wiki/Galois_group#Definition) would refer to this as the Galois group, but strictly speaking the author's Definition 10.6 would not call this the Galois group.
 
 +++
@@ -222,15 +226,33 @@ From the errata (⚠️):
 
 > Page 249, paragraph above 10.7.2: The following sentence is inaccurate:
 >
-> > Furthermore, no group containing A5 can be solvable, because the smallest first step in any chain of normal subgroups in such a group would be the invalid step {e} ⊲ A5.
+> > Furthermore, no group containing $A_5$ can be solvable, because the smallest first step in any chain of normal subgroups in such a group would be the invalid step ${e} ⊲ A_5$.
 >
 > It should be rewritten along the following lines:
 >
-> > Furthermore, no group containing A5 can be solvable. No step A ⊲ B in such a chain can have the quotient B/A isomorphic to A5, because it is not abelian. And yet it can also be shown that a step in the chain including just "part" of A5 could be used to reveal a normal subgroup in A5, an impossibility.
+> > Furthermore, no group containing $A_5$ can be solvable. No step $A ⊲ B$ in such a chain can have the quotient $B/A$ isomorphic to $A_5$, because it is not abelian. And yet it can also be shown that a step in the chain including just "part" of $A_5$ could be used to reveal a normal subgroup in $A_5$, an impossibility.
 
 +++
 
 ### 10.7.2 An unsolvable polynomial
+
++++
+
+The author claims:
+
+> The Galois group must also contain the complex conjugacy automorphism, as all Galois groups do. How this automorphism permutes the five roots depends on how many of those roots are real numbers.
+
++++
+
+This statement is potentially confusing because the complex conjugacy automorphism can be trivial. For more details, see [Complex conjugation in the Galois group of a polynomial - MSE](https://math.stackexchange.com/questions/103716/complex-conjugation-in-the-galois-group-of-a-polynomial/103730#103730).
+
++++
+
+See [Proving that a polynomial is not solvable by radicals. - MSE](https://math.stackexchange.com/questions/837948/proving-that-a-polynomial-is-not-solvable-by-radicals?rq=1) for almost the same logic as the author's applied to a similar polynomial; it also suggests a shorter solution using a different theorem.
+
++++
+
+#### Avoiding unnecessary solutions
 
 +++
 
@@ -239,3 +261,11 @@ It may seem "unsatisfying" to only refer to the roots $\{r_1,r_2,\dots,r_5\}$ vi
 +++
 
 If it wasn't for radicals being invented, we could have referred to the solutions to e.g. $3x^2 + x + 1$ without having to write them out (which takes more space than "the solutions to $3x^2 + x + 1$"). If it's more satisfying to refer to it symbolically, then define $f(x) = 3x^2 + x + 1$ and refer to $f^{-1}(0)$ (the kernel of $f$, see [Zero of a function](https://en.wikipedia.org/wiki/Zero_of_a_function)).
+
++++
+
+#### Solutions beyond radicals
+
++++
+
+See comments at the bottom of [The Cubic Formula](https://math.vanderbilt.edu/schectex/courses/cubic/) for a helpful perspective on this result; it also suggests another way to solve a quintic is via the inverse of the function $f(x)=x^5+x$. The section [Quintic function § Beyond radicals](https://en.wikipedia.org/wiki/Quintic_function#Beyond_radicals) suggests solutions in terms of [elliptic functions](https://en.wikipedia.org/wiki/Elliptic_function), as well as [Algebraic equation § Higher-degree equations](https://en.wikipedia.org/wiki/Algebraic_equation#Higher-degree_equations). Per [Why do we make such big deal about the 'unsolvability' of the quintic? - MO](https://mathoverflow.net/questions/413468/why-do-we-make-such-big-deal-about-the-unsolvability-of-the-quintic) we can solve the cubic equation with trigonometric functions rather than radicals, as discussed in [Cubic equation § Trigonometric and hyperbolic solutions](https://en.wikipedia.org/wiki/Cubic_equation#Trigonometric_and_hyperbolic_solutions).

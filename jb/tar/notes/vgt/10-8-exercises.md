@@ -159,7 +159,7 @@ False. The equation $x^6 = 0$ is solvable (it's zero).
 
 +++
 
-False. The field extension $ℚ(\sqrt{2})$ does not include the complex conjugacy operation.
+False. The field extension $ℚ(\sqrt{2})$ includes the complex conjugacy operation, but it's trivial. See [Complex conjugation in the Galois group of a polynomial](https://math.stackexchange.com/questions/103716/complex-conjugation-in-the-galois-group-of-a-polynomial/103730#103730) for details.
 
 +++
 
@@ -1400,4 +1400,609 @@ See Exercise 10.15; the short answer is that an automorphism doesn't touch what 
 
 +++
 
-In general what we'd like to show is that $ϕ(q) = q$ for all $q \in ℚ$. See also [Fixed-point subring](https://en.wikipedia.org/wiki/Fixed-point_subring), which has notation that inspires the notation in the article [Fundamental theorem of Galois theory](https://en.wikipedia.org/wiki/Fundamental_theorem_of_Galois_theory). The author's hint in the appendix suggests he is looking for a more complicated proof because it's not clear what this is (🔨).
+In general what we'd like to show is that $ϕ(q) = q$ for all $q \in ℚ$. See also [Fixed-point subring](https://en.wikipedia.org/wiki/Fixed-point_subring), which has notation that inspires the notation in the article [Fundamental theorem of Galois theory](https://en.wikipedia.org/wiki/Fundamental_theorem_of_Galois_theory). The author's hint in the appendix suggests he is looking for a more complicated proof but it's not clear what this is (🔨).
+
++++
+
+## 10.8.3 Polynomials and solvability
+
++++
+
+### Exercise 10.22 (📑)
+
++++
+
+> Find the irreducible polynomial for each of the following algebraic numbers.
+>
+> (a) $\sqrt{15}$
+
++++
+
+$f(x) = x^2 - 15$
+
++++
+
+We'll check our answers with tools from [Simplification - SymPy](https://docs.sympy.org/latest/tutorials/intro-tutorial/simplification.html):
+
+```{code-cell} ipython3
+from sympy import *
+
+x = symbols('x')
+init_printing(use_unicode=True)
+factor(x**2 - 15)
+```
+
+> (b) $\sqrt[5]{1 + \sqrt{2}}$
+
++++
+
+From the errata (⚠️):
+
++++
+
+> Page 258, Exercise 10.22. See the erratum for the solution to part (c), below. The same problem does not appear in any of the other three parts of this exercise, because in each case, arguments that are not too difficult can be made for the irreducibility of the resulting polynomial.
+
++++
+
+This part of the errata refers to part (c) but it should likely be referring to part (b) (see below) (📌). We'll try to solve the original with some outside help.
+
++++
+
+$$
+\begin{align}
+r                 &= \sqrt[5]{1 + \sqrt{2}}  \\
+r^5               &= 1 + \sqrt{2}   \\
+(r^5 - 1)         &= \sqrt{2}  \\
+(r^5 - 1)²        &= 2   \\
+r^{10} - 2r^5 + 1 &= 2   \\
+r^{10} - 2r^5 - 1 &= 0
+\end{align}
+$$
+
++++
+
+Per the [Rational root theorem](https://en.wikipedia.org/wiki/Rational_root_theorem), the only possible rational solutions are $±1$. Neither of these are solutions.
+
+```{code-cell} ipython3
+factor(x**10 - 2*x**5 - 1)
+```
+
+From the errata (🕳️):
+
++++
+
+> Page 282, Answer to Exercise 10.22(b). The polynomial I create may be irreducible, but it is not obvious whether it is or not. I should have designed the exercise better; consider instead changing the $1$ to a $2$, so that $r$ is the fifth root of $2+\sqrt{2}$. Then the polynomial created is $r^{10} - 4r^5 + 2$, which is irreducible by the Eisenstein Criterion (Theorem 10.4).
+
++++
+
+Checking the author's answer:
+
++++
+
+$$
+\begin{align}
+r                 &= \sqrt[5]{2 + \sqrt{2}}  \\
+r^5               &= 2 + \sqrt{2}   \\
+(r^5 - 2)         &= \sqrt{2}  \\
+(r^5 - 2)²        &= 2   \\
+r^{10} - 4r^5 + 4 &= 2   \\
+r^{10} - 4r^5 + 2 &= 0
+\end{align}
+$$
+
++++
+
+> (c) $\sqrt{10} + \sqrt{11}$
+
++++
+
+$$
+\begin{align}
+r                 &= \sqrt{10} + \sqrt{11}  \\
+r^2               &= (\sqrt{10} + \sqrt{11})^2 = 10 + 2\sqrt{10}\sqrt{11} + 11  \\
+r^2 - 21          &= 2\sqrt{110}  \\
+(r^2 - 21)^2      &= 4·110  \\
+r^4 - 42r^2 + 441 &= 440  \\
+r^4 - 42r^2 + 1   &= 0  \\
+\end{align}
+$$
+
++++
+
+Per the [Rational root theorem](https://en.wikipedia.org/wiki/Rational_root_theorem), the only possible rational solutions are $±1$. Neither of these are solutions.
+
+```{code-cell} ipython3
+factor(x**4 - 42*x**2 + 1)
+```
+
+> (c) $\sqrt[3]{2} + 10$
+
++++
+
+$$
+\begin{align}
+r                         &= \sqrt[3]{2} + 10  \\
+r - 10                    &= \sqrt[3]{2}  \\
+(r - 10)^3                &= 2  \\
+(r^2 - 20r + 100)(r - 10) &= 2  \\
+r^3 - 30r^2 + 300r - 1000 &= 2  \\
+r^3 - 30r^2 + 300r - 1002 &= 0  \\
+\end{align}
+$$
+
++++
+
+Irreducible by the Eisenstein criterion with $p = 2$.
+
+```{code-cell} ipython3
+factor(x**3 - 30*x**2 + 300*x - 1002)
+```
+
+### Exercise 10.23
+
++++
+
+> (a) Create a polynomial with these four roots.
+>
+> ![x](10-8-ex-23-q.svg)
+
++++
+
+$$
+\begin{align}
+(x - (1 + 3i))(x - (1 - 3i))(x - (1 + 2i))(x - (1 - 2i)) &= 0  \\
+(x^2 - 2x + (1 + 10))(x^2 - 2x + (1 + 4))                &= 0  \\
+(x^2 - 2x + 11)(x^2 - 2x + 5)                            &= 0  \\
+x^4 - (2+2)x^3 + (5+4+11)x^2 - (10+22)x + 55             &= 0  \\
+x^4 - 4x^3 + 20x^2 - 32x + 55                            &= 0
+\end{align}
+$$
+
++++
+
+> (b) Is it irreducible?
+
++++
+
+No, you can factor it into $(x^2 - 2x + 11)(x^2 - 2x + 5) = 0$.
+
++++
+
+> (c) What is its Galois group?
+
++++
+
+$C_2$, all we can do is flip the imaginary axis (complex conjugation). Both irreducible polynomials associated with this polynomial contribute the same automorphism.
+
++++
+
+> (d) Write an equation of arithmetic that distinguishes the inner two roots from the outer two.
+
++++
+
+Let $r_1 = 1 + 3i$ and $r_2 = 1 + 2i$. Then:
+
+$$
+3r_2 - 2r_1 = 1
+$$
+
++++
+
+### Exercise 10.24 (📑)
+
++++
+
+> Consider the cubic polynomial on the top right of Figure 10.6.
+>
+> (a) Write an equation of arithmetic that distinguishes one of its roots from the other two.
+
++++
+
+Let $r_1 = 2 + \frac{i}{2}$ and $r_3 = -\frac{1}{3}$. Then:
+
++++
+
+$$
+r_1^2 - 2r_1 - 1/12 = r_3
+$$
+
++++
+
+An even simpler answer is that one of the roots satisfies the following equation, which is no longer true when they are interchanged:
+
++++
+
+$$
+x + \frac{1}{3} = 0
+$$
+
++++
+
+> (b) Can an equation of arithmetic distinguish one of the roots of $x^3 - 5$ from the other two?
+
++++
+
+No. Expressing the solution $\sqrt[3]{5}$ (required for all three roots) requires a cubic root, which you must describe in a dimension perpendicular to the rationals.
+
++++
+
+> (c) Compute the Galois group of the polynomial in part (a).
+
++++
+
+$C_2$, all we can do is flip the imaginary axis (complex conjugation).
+
++++
+
+### Exercise 10.25 (📑)
+
++++
+
+> Given the roots $r_1$, $r_2$, and $r_3$ of $x^3 - 2$ defined in Section 10.5.5, recall the non-normal extension $ℚ(r_1)$ of $ℚ$, and the normal extension $ℚ(r_1, r_2, r_3)$. In the text we found that $[ℚ(r_1, r_2, r_3) : ℚ] = 6$ and $[ℚ(r_1) : ℚ] = 3$, so it must be the case that $[ℚ(r_1, r_2, r_3) : ℚ(r_1) ] = 2$. Find the corresponding degree-2 polynomial with coefficients from $ℚ(r_1)$ whose two roots are $r_2$ and $r_3$.
+
++++
+
+The extension $ℚ(r_1)$ lets us express $r_1 = \sqrt[3]{2}$ so we can factor $x - \sqrt[3]{2}$ out of $x^3 - 2$:
+
++++
+
+![x](10-8-ex-25.svg)
+
++++
+
+### Exercise 10.26
+
++++
+
+> Every subgroup of $S_5$ (except $A_5$) is isomorphic to one of the following groups. Show that each is solvable. \
+> &ensp; Cyclic groups: $C_1, C_2, C_3, C_4, C_5, C_6$ \
+> &ensp; Dihedral groups: $D_2$ (which is $V_4$), $D_3$ (which is $S_3$), $D_4$, $D_6$ \
+> &ensp; Other groups: $A_4$ (Cayley diagrams for which appear in Exercise 4.6 and Figure 5.27),
+a 20-element group whose Cayley diagram appears on the left of Exercise 5.15, and the
+24-element group whose Cayley diagram appears below.
+>
+> ![x](10-8-ex-26-q.svg)
+
++++
+
+We know that the cyclic groups are solvable because they are abelian. We've already seen that $D_2$ ($V_4$) and $D_3$ ($S_3$) are solvable in examples in this chapter. The other dihedral groups have a subgroup path through $⟨r⟩$ that make them solvable.
+
++++
+
+Exercise 4.6 and Figure 5.27 do not show the $V_4$ subgroup of $A_4$, which is the only normal subgroup (use Group Explorer if you want to see it). The path is:
+
+$$
+{e} ⊲ ⟨(03)(12)⟩ ⊲ A_4
+$$
+
++++
+
+Confirming the quotient groups on this path are abelian:
+
++++
+
+$$
+\begin{align}
+\frac{A_4}{⟨(03)(12)⟩} &= C_3 \\
+\frac{⟨(03)(12)⟩}{{e}} &= V_4
+\end{align}
+$$
+
++++
+
+See Exercise 5.15 for that 20-element subgroup. This Cayley diagram makes it obvious how a quotient operation on the subgroup generated by the blue arrows (isomorphic to $C_5$) will result in $C_3$. Both these subgroups (⟨blue arrow⟩ then $\{e\}$) are normal because the quotient operations succeeded, and each quotient is abelian ($C_3$ then $C_5$).
+
++++
+
+The 24-element group shown above is similar to the 20-element subgroup in Exercise 5.15.
+
++++
+
+Compare this list to the ones in:
+- [S5 - GroupNames](https://people.maths.bris.ac.uk/~matyd/GroupNames/97/S5.html)
+- [Using basic knowledge about the roots of a quintic polynomial to determine if the polynomial is solvable by radicals - MSE](https://math.stackexchange.com/questions/1553698/using-basic-knowledge-about-the-roots-of-a-quintic-polynomial-to-determine-if-th?rq=1)
+- [Calculating the Galois group of an (irreducible) quintic - MSE](https://math.stackexchange.com/questions/38896/calculating-the-galois-group-of-an-irreducible-quintic)
+
++++
+
+### Exercise 10.27 (📑)
+
++++
+
+> How can calculus be used to show that there are three real and two imaginary roots of $x^5 + 10x^4 - 2$? Hint: Set the derivative equal to zero to find the peaks and valleys in the curve.
+
++++
+
+$$
+\begin{align}
+y(x)   &= x^5 + 10x^4 - 2 \\
+y'(x)  &= 5x^4 + 40x^3    \\
+y''(x) &= 20x^3 + 120x^2
+\end{align}
+$$
+
++++
+
+The derivative is zero at $x = \{-8, 0\}$. Because $y$ goes to $-∞$ as $x$ goes to $-∞$, we know that $x = -8$ corresponds to a maxima (also notice $y''(-8) < 0$). Therefore we have a real zero between $x = -∞$ and $x = -8$ because $y(-8) > 0$. Because $y(0) < 0$ we must also have a real zero between $x = -8 and x = 0$. Because $y$ goes to $∞$ as $x$ goes to $∞$, we must have a real zero between $x = 0$ and $x = ∞$. Therefore there are a total of three real roots.
+
++++
+
+By the fundamental theorem of algebra we must have five roots total, so the two roots we haven't discovered must be imaginary.
+
++++
+
+### Exercise 10.28 (📑)
+
++++
+
+> Create irreducible polynomials of degree 5, as assigned here.
+>
+> (a) Make one with only one real root.
+
++++
+
+The general strategy for all parts of this question is going to be start with a degree-4 polynomial that will be the derivative of a degree-5 polynomial that will be our result. We can design this degree-4 polynomial with a certain number of zeros (either one, two, or four) to get a degree-5 polynomial with one, three, or five zeros (with one, two, or four inflection points that are properly placed).
+
++++
+
+The equation $f(x) = 5x^4$ has a zero at $x = 0$ and nowhere else. The [antiderivative](https://en.wikipedia.org/wiki/Antiderivative) is (where $c$ is a constant):
+
+$$
+f(x) = x^5 + c
+$$
+
++++
+
+We need to select $c$ so the equation is irreducible by [Eisenstein's criterion](https://en.wikipedia.org/wiki/Eisenstein%27s_criterion). One example is $f(x) = x^5 - 7$.
+
+```{code-cell} ipython3
+factor(x**5 - 7)
+```
+
+This and similar examples have a field extension whose symmetries can be described by a properly scaled primitive fifth root of unity, and hence are solvable (see [!wolf roots x^5 - 7](https://www.wolframalpha.com/input?i=roots+x%E2%81%B5+-+7) for the actual list). See also Exercise 10.17 and Section 10.5.5 for symmetries based on roots of unity.
+
++++
+
+It should be possible to create an unsolvable example with one real root as well; we won't create one ourselves but see part (c) below for the example $x^5 - x - 1$.
+
++++
+
+<!--
+You can use (x - a)⁴ for the derivative where `a` is constant to get more examples.
+
+Notice (x + 1)⁴ = x⁴ + 4x³ + 6x² + 4x + 1
+Antiderivative: x⁵ + 4x⁴ + 6x³ + 4x² + x + c
+Irreducible via Eisenstein's criterion with p = 2.
+
+Another option is to simply insert an x term into a quintic that makes it unsolvable. That is, use this general form and make it irreducible:
+x⁵ + bx + c
+
+Example: x⁵ + 5x + 5
+-->
+
++++
+
+> (b) Make one with exactly three real roots.
+
++++
+
+Design a derivative that has two zeros at $\{-2, 0\}$:
+$$
+y'(x) = 5(x^3 + 8)x = 5x^4 + 40x
+$$
+
++++
+
+So that:
+
++++
+
+$$
+y(x) = x^5 + 20x^2 + c
+$$
+
++++
+
+We want to select $c$ so:
+- $y(-2) = -32 + 80 + c = 48 + c > 0$ i.e. $c > -48$.
+- $y( 0) = c < 0$
+- The polynomial is irreducible by [Eisenstein's criterion](https://en.wikipedia.org/wiki/Eisenstein%27s_criterion).
+
++++
+
+$c = -2$ makes the following irreducible with $p = 2$:
+
++++
+
+$$
+y(x) = x^5 + 20x^2 - 2
+$$
+
+```{code-cell} ipython3
+factor(x**5 + 20*x**2 - 2)
+```
+
+This is unsolvable by the logic in Section 10.7.2.
+
++++
+
+> (c) Make one with five real roots.
+
++++
+
+Design a derivative that has four zeros at $\{-3, -2, -1, 0\}$:
+$$
+\begin{align}
+y'(x) &= 5(x + 3)(x + 2)(x + 1)x = 5(x⁴ + (3 + 2 + 1)x³ + (3·2 + 3·1 + 2·1)x² + 3·2·1·x) \\
+      &= 5x⁴ + 30x³ + 55x² + 30x
+\end{align}
+$$
+
++++
+
+So that:
+
++++
+
+$$
+y(x) = x^5 + \frac{15}{2}x^4 + \frac{55}{3}x^3 + 15x^2 + c
+$$
+
++++
+
+To get integer coefficients (required by [Eisenstein's criterion](https://en.wikipedia.org/wiki/Eisenstein%27s_criterion)), multiply by $6$:
+
++++
+
+$$
+y(x) = 6x^5 + 45x^4 + 110x^3 + 90x^2 + c
+$$
+
++++
+
+We want to select $c$ so:
+- $y(-3) = 6(-3)^5 + 45(-3)^4 + 110(-3)^3 + 90(-3)^2 + c = 27 + c > 0$ or $c > -27$
+- $y(-2) = 6(-2)^5 + 45(-2)^4 + 110(-2)^3 + 90(-2)^2 + c = 84 + c < 0$ or $c < -8$
+- $y(-1) = 6(-1)^5 + 45(-1)^4 + 110(-1)^3 + 90(-1)^2 + c = 19 + c > 0$ or $c > -19$
+- $y(0 ) = c < 0$
+- The polynomial is irreducible by [Eisenstein's criterion](https://en.wikipedia.org/wiki/Eisenstein%27s_criterion).
+
++++
+
+$c = -10$ makes the following irreducible with $p = 5$:
+
++++
+
+$$
+y(x) = 6x^5 + 45x^4 + 110x^3 + 90x^2 - 10
+$$
+
+```{code-cell} ipython3
+factor(6*x**5 + 45*x**4 + 110*x**3 + 90*x**2 - 10)
+```
+
+> (d) Are any of the polynomials you created unsolvable?
+
++++
+
+We can see the polynomial from part (a) is solvable because we've factored it into terms that use radicals, and the example in part (b) is unsolvable by the logic in Section 10.7.2. In general, it's far from trivial to determine the Galois group of a polynomial (and hence whether it's solvable); see [How to find the Galois group of a polynomial? - MSE](https://math.stackexchange.com/questions/45893/how-to-find-the-galois-group-of-a-polynomial?noredirect=1&lq=1) for a list of tricks. From that page:
+
+> Although Galois groups are computable, computation of Galois groups, both by computer systems and by students in Galois theory courses, does not proceed along a single algorithm, but rather involves a smorgasboard of methods which are used to prove facts about the group $G$, until enough facts are accumulated to single out a particular group.
+
++++
+
+From a probabilistic perspective it's likely that our polynomial from part (c) is also unsolvable; from the same page:
+
+> A random polynomial over $ℚ$ has very high probability of having Galois group $𝑆_n$. (See [this paper of Cohen](http://www.ams.org/mathscinet-getitem?mr=628276) for a precise bound.)
+
++++
+
+For our purposes, the paper [RECOGNIZING GALOIS GROUPS $S_n$ AND $A_n$ (Keith Conrad)](https://kconrad.math.uconn.edu/blurbs/galoistheory/galoisSnAn.pdf) seems to be the reference that many Math Stack Exchange questions are coming back to. It clearly defines the critical Dedekind's theorem and walks through a fistful of good examples.
+
++++
+
+Here's another good example from [Abel–Ruffini theorem § Explicit example](https://en.wikipedia.org/wiki/Abel%E2%80%93Ruffini_theorem#Explicit_example):
+
+> Let $q$ be $x^5 - x - 1$. Let $G$ be its Galois group, which acts faithfully on the set of complex roots of $q$. Numbering the roots lets one identify $G$ with a subgroup of the symmetric group $S_5$. Since $q \bmod 2$ factors as $(x^2 + x + 1)(x^3 + x^2 + 1)$ in $𝔽_2[x]$, the group $G$ contains a permutation $g$ that is a product of disjoint cycles of lengths 2 and 3 (in general, when a monic integer polynomial reduces modulo a prime to a product of distinct monic irreducible polynomials, the degrees of the factors give the lengths of the disjoint cycles in some permutation belonging to the Galois group); then $G$ also contains $g^3$, which is a [transposition](https://en.wikipedia.org/wiki/Transposition_(mathematics) "Transposition (mathematics)"). Since $q \bmod 3$ is irreducible in $𝔽_3[x]$, the same principle shows that $G$ contains a [5-cycle](https://en.wikipedia.org/wiki/Cyclic_permutation "Cyclic permutation"). Because 5 is prime, any transposition and 5-cycle in $S_5$ generate the whole group; see [Symmetric group § Generators and relations](https://en.wikipedia.org/wiki/Symmetric_group#Generators_and_relations "Symmetric group"). Thus $G = S_5$. Since the group $S_5$ is not solvable, the equation $x^5 - x - 1 = 0$ is not solvable in radicals.
+
++++
+
+See also [Finite field § Polynomial factorization](https://en.wikipedia.org/wiki/Finite_field#Polynomial_factorization).
+
++++
+
+Let's use WolframAlpha to do factorization over finite fields; see [factor 6x^5 + 45x^4 + 110x^3 + 90x^2 - 10](https://www.wolframalpha.com/input?i=factor+6x%5E5+%2B+45x%5E4+%2B+110x%5E3+%2B+90x%5E2+-+10). In the "Factorizations over finite fields" section hit the "More" button to get a bunch of factorizations for small primes. You'll see several examples that show the group has a 5-cycle (e.g. GF(43)) and several that show we have roots with cycle type (2,3) (e.g. GF(23)), which indicates we're covering all of $S_5$. So our polynomial from part (c) is also unsolvable.
+
++++
+
+For the Wikipedia example above, see [factor x^5 - x - 1](https://www.wolframalpha.com/input?i=factor+x%5E5+-+x+-+1) (which shows essentially what it claims). For the author's example from Section 10.7.2 see [factor x^5 +10x^4 - 2](https://www.wolframalpha.com/input?i=factor+x%5E5+%2B10x%5E4+-+2), which again shows a 5-cycle and a transposition.
+
++++
+
+For our example from part (a) see [factor x^5 - 7](https://www.wolframalpha.com/input?i=factor+x%5E5+-+7). Notice the finite field factorizations show we have a 5-cycle, but you won't find any transpositions. You will find double transpositions and 4-cycles, but strictly speaking it doesn't seem that these require that the Galois group is $A_n$ or $S_n$ (see "Statement of Theorems and Some Applications" in [RECOGNIZING GALOIS GROUPS $S_n$ AND $A_n$ (Keith Conrad)](https://kconrad.math.uconn.edu/blurbs/galoistheory/galoisSnAn.pdf)). However, per the answer to [Finding the Galois group of a quintic - MSE](https://math.stackexchange.com/questions/1917302/finding-the-galois-group-of-a-quintic?rq=1) we should have at least $A_5$ (though the answer doesn't provide a reference); there may be more to investigate here (🔨).
+
++++
+
+## 10.8.4 Finite fields
+
++++
+
+See also [Finite field](https://en.wikipedia.org/wiki/Finite_field).
+
++++
+
+### Exercise 10.29
+
++++
+
+Fixing the question based on the following from the errata (⚠️):
+
++++
+
+> Pages 259-260, Exercise 10.29. The exercise claims to show the diagrams of finite fields of orders 5 and 8, but from the diagrams it is clear that this is a typo; they show the finite fields of orders 4 and 8. Thus when part (b) of the problem asks you to create the diagram for the finite field of order 4, this does not make sense since you were already given it. Consider instead creating the diagram for the finite field of order 5.
+
++++
+
+> Here are diagrams of the finite fields of orders 4 and 8. Each is shown as two Cayley diagrams overlaid on the same set of nodes; the solid arrows are the Cayley diagram for addition, and the dashed ones are the Cayley diagram for multiplication. The diagrams for multiplication do not include zero.
+>
+> ![x](10-8-ex-29-q.svg)
+>
+> (a) Are the addition and multiplication operations in finite fields addition and multiplication $\bmod$ some number?
+
++++
+
+No; this is only true of finite fields of prime order (which are the most commonly considered) not those of prime-power order. The author's diagram for $\mathbb{F}_4$ is a bit confusing in naming the elements after the natural numbers; here's an alternative:
+
++++
+
+![x](https://upload.wikimedia.org/wikipedia/commons/f/f5/Cayley-diagram-F4.svg)
+
++++
+
+> (b) There is never more than one finite field of a given order. Create the Cayley diagrams for the finite fields of orders 3, 5, 7, and 11.
+
++++
+
+The larger diagrams seem like busy work, so we'll limit this answer to the order 3 and 5 fields:
+
++++
+
+![x](10-8-ex-29-b.svg)
+
++++
+
+### Exercise 10.30
+
++++
+
+> Why can the group $C_4$ under addition not be made into a finite field by overlaying a multiplicative structure on $\{1,2,3\}$? Why do $C_6$ and $C_{15}$ have the same problem?
+
++++
+
+Consider the proposed multiplicative structure:
+
++++
+
+![x](10-8-ex-30.svg)
+
++++
+
+We must consider multiplication by both $2$ and $3$:
+
++++
+
+1×2 = 2 \
+2×2 = 3 \
+3×2 = 1
+
+1×3 = 3 \
+2×3 = 1 \
+3×3 = 2
+
++++
+
+The distributive property (a requirement on the definition of a field) no longer holds. For example:
+
+$$
+(1 + 1)×2 = 2×2 = 3 ≠ (1 + 1)×2 = 1×2 + 1×2 = 2 + 2 = 0
+$$
