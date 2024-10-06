@@ -116,4 +116,5 @@ These are also often called group libraries. The author points to [Group Explore
   - See in particular [List of small groups § Small Groups Library](https://en.wikipedia.org/wiki/List_of_small_groups#Small_Groups_Library), a part of GAP.
 - [GroupNames (maintained by Tim Dokchitser)](https://people.maths.bris.ac.uk/~matyd/GroupNames/)
   - Includes subgroup lattices within the articles on specific groups, including the [Lattice of normal subgroups](https://en.wikipedia.org/wiki/Normal_subgroup#Lattice_of_normal_subgroups) in red.
+- [Category:Particular groups - Groupprops](https://groupprops.subwiki.org/wiki/Category:Particular_groups) (multiple pages)
 - [ProofWiki](https://proofwiki.org/wiki/Main_Page)
