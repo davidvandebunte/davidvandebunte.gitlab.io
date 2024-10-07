@@ -125,6 +125,18 @@ Compare Theorem 10.5 to the following from [Field extension § Algebraic extensi
 
 +++
 
+The author's approach in this section is similar to that of [Galois theory § Permutation group approach](https://en.wikipedia.org/wiki/Galois_theory#Permutation_group_approach). This is apparently how Galois originally approached the problem.
+
+See the following from [Galois theory § Quadratic equation](https://en.wikipedia.org/wiki/Galois_theory#Quadratic_equation):
+
+> If the polynomial has rational roots, for example $x^2 - 4x + 4 = (x - 2)^2$, or $x^2 - 3x + 2 = (x - 2)(x - 1)$, then the Galois group is trivial; that is, it contains only the identity permutation. In this example, if *$A = 2$ and $B = 1$ then $A - B = 1$ is no longer true when $A$ and $B$ are swapped.
+
++++
+
+It't not clear that the first example is correct here (the one with a root of multiplicity two). It seems like a repeated root would lead to some symmetry (🔨).
+
++++
+
 Compare Definition 10.6 to [Galois group § Definition](https://en.wikipedia.org/wiki/Galois_group#Definition):
 > Suppose that $E$ is an extension of the [field](https://en.wikipedia.org/wiki/Field_(mathematics) "Field (mathematics)") $F$ (written as  $E/F$ and read "$E$ over $F$"). An [automorphism](https://en.wikipedia.org/wiki/Automorphism "Automorphism") of $E/F$ is defined to be an automorphism of $E$ that fixes $F$ pointwise. In other words, an automorphism of $E/F$ is an [isomorphism](https://en.wikipedia.org/wiki/Isomorphism "Isomorphism") $α: E → E$ such that $α(x) = x$ for each $x ∈ F$. The [set](https://en.wikipedia.org/wiki/Set_(mathematics) "Set (mathematics)") of all automorphisms of $E/F$ forms a group with the operation of [function composition](https://en.wikipedia.org/wiki/Function_composition "Function composition"). This group is sometimes denoted by $Aut(E/F)$.
 >
@@ -156,6 +168,12 @@ To be clear, the three groups the author is referring to at the end of this sect
 
 +++
 
+The author does not consistently use one definition, as we'll see below. Neither do authors on Wikipedia; see this use of the term in [Galois theory § Permutation group approach](https://en.wikipedia.org/wiki/Galois_theory#Permutation_group_approach):
+
+> These permutations together form a [permutation group](https://en.wikipedia.org/wiki/Permutation_group "Permutation group"), also called the [Galois group](https://en.wikipedia.org/wiki/Galois_group "Galois group") of the polynomial, which is explicitly described in the following examples.
+
++++
+
 ### 10.5.4 The symmetries of ℚ(√2,√3)
 
 +++
@@ -173,6 +191,10 @@ From the errata (⚠️):
 > Page 241, Figure 10.13: The figure uses red and blue backwards. In order to be consistent with Figure 10.12, the red should be blue and vice versa. Here is a corrected version.
 >
 > ![x](static/Figure_10_13_correction.png)
+
++++
+
+Recall how the degree of an extension $E/F$ is equivalent to the dimension of a vector space over $F$. This suggests that we could visualize elements of the field extension $ℚ(\sqrt[3]{2}$ in three dimensions, which would be perfectly possible. In the imaginary plane we can add imaginary numbers, and we could do the same in this space. The utility is a bit limited when it comes to multiplication however; in the imaginary plane we can see multiplication as a rotation, but there isn't anything quite equivalent in every field extension.
 
 +++
 

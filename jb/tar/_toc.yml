@@ -4,6 +4,41 @@
 format: jb-book
 root: notes/about
 parts:
+  - caption: Visual Group Theory
+    chapters:
+      - file: notes/review-vgt.md
+      - file: notes/vgt/01-what-is-a-group.md
+        sections:
+        - file: notes/vgt/01-5-exercises.md
+      - file: notes/vgt/02-what-do-groups-look-like.md
+        sections:
+        - file: notes/vgt/02-6-exercises.md
+      - file: notes/vgt/03-why-study-groups.md
+        sections:
+        - file: notes/vgt/03-4-exercises.md
+      - file: notes/vgt/04-algebra-at-last.md
+        sections:
+        - file: notes/vgt/04-5-exercises.md
+      - file: notes/vgt/05-five-families.md
+        sections:
+        - file: notes/vgt/05-5-exercises.md
+      - file: notes/vgt/06-subgroups.md
+        sections:
+        - file: notes/vgt/06-6-exercises.md
+      - file: notes/vgt/07-products-and-quotients.md
+        sections:
+        - file: notes/vgt/07-6-exercises.md
+      - file: notes/vgt/08-the-power-of-homomorphisms.md
+        sections:
+        - file: notes/vgt/08-7-exercises.md
+          sections:
+          - file: notes/chp8-q32.md
+      - file: notes/vgt/09-sylow-theory.md
+        sections:
+        - file: notes/vgt/09-5-exercises.md
+      - file: notes/vgt/10-galois-theory.md
+        sections:
+        - file: notes/vgt/10-8-exercises.md
   - caption: Seven Sketches
     chapters:
       - file: notes/review-seven-sketches.md
@@ -125,41 +160,6 @@ parts:
     chapters:
       - file: notes/se/relationship-between-svd-and-pca.md
       - file: notes/se/what-exactly-are-keys-queries-and-values.md
-  - caption: Visual Group Theory
-    chapters:
-      - file: notes/review-vgt.md
-      - file: notes/vgt/01-what-is-a-group.md
-        sections:
-        - file: notes/vgt/01-5-exercises.md
-      - file: notes/vgt/02-what-do-groups-look-like.md
-        sections:
-        - file: notes/vgt/02-6-exercises.md
-      - file: notes/vgt/03-why-study-groups.md
-        sections:
-        - file: notes/vgt/03-4-exercises.md
-      - file: notes/vgt/04-algebra-at-last.md
-        sections:
-        - file: notes/vgt/04-5-exercises.md
-      - file: notes/vgt/05-five-families.md
-        sections:
-        - file: notes/vgt/05-5-exercises.md
-      - file: notes/vgt/06-subgroups.md
-        sections:
-        - file: notes/vgt/06-6-exercises.md
-      - file: notes/vgt/07-products-and-quotients.md
-        sections:
-        - file: notes/vgt/07-6-exercises.md
-      - file: notes/vgt/08-the-power-of-homomorphisms.md
-        sections:
-        - file: notes/vgt/08-7-exercises.md
-          sections:
-          - file: notes/chp8-q32.md
-      - file: notes/vgt/09-sylow-theory.md
-        sections:
-        - file: notes/vgt/09-5-exercises.md
-      - file: notes/vgt/10-galois-theory.md
-        sections:
-        - file: notes/vgt/10-8-exercises.md
   - caption: Book of Why
     chapters:
       - file: notes/bow-review.md
