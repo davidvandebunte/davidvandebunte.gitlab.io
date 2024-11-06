@@ -225,6 +225,12 @@ parts:
       - file: notes/set-deep-goal.md
       - file: notes/set-subgoal.md
       - file: notes/set-wide-goal.md
+  - caption: Tools
+    chapters:
+      - file: notes/rclone.md
+      - file: notes/inkscape.md
+      - file: notes/jupyter.md
+      - file: notes/zathura.md
   - caption: Drafts
     chapters:
       - file: notes/improve-install.md
