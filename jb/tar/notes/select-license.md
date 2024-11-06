@@ -6,7 +6,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.11.2
+    jupytext_version: 1.16.1
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
@@ -15,9 +15,7 @@ kernelspec:
 
 # Select license
 
-[sn]: ./share-notes.md
-
-Part of [Share Notes][sn].
++++
 
 Selecting a license may be a trivial activity when it comes to notes. If you want to use any GPL
 content (e.g. a picture of an assembly line in an article on performance optimization) then you also
