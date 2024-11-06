@@ -6,7 +6,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.11.2
+    jupytext_version: 1.16.1
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
@@ -15,22 +15,27 @@ kernelspec:
 
 # Share comment
 
-[sn]: ./share-notes.md
-
-Specializes [Share Notes][sn].
++++
 
 ## Test
 
-Comment on other articles, [StackExchange][se], or by writing an article that is essentially a large
-comment on another article.
++++
 
-[se]: https://stackexchange.com/
+Comment on other articles, [StackExchange](https://stackexchange.com/), or by writing an article that is essentially a large comment on another article.
+
++++
 
 ## Value
 
++++
+
 You'll likely get a response from the original author.
 
++++
+
 ## Cost
+
++++
 
 Comments can usually be deleted or directed to a smaller audience (even one person).
 

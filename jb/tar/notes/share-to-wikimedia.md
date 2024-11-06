@@ -6,7 +6,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.11.2
+    jupytext_version: 1.16.1
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
@@ -15,21 +15,29 @@ kernelspec:
 
 # Share to Wikimedia
 
-[sn]: ./share-notes.md
-
-Generalizes [Share Notes][sn].
++++
 
 ## Value
 
++++
+
 In order of value.
 
++++
+
 ### Fast Feedback
+
++++
 
 Let's say you post crappy content to Wikipedia. Expect to get feedback from the maintainers of the
 page; at worst you need to revert what you added and you learned something (even how to edit on
 Wikipedia).
 
++++
+
 ### Language
+
++++
 
 The longer you spend in your own notes, the more tied you'll be to your own wording rather than
 publicly available shared notes (like Wikipedia). Are you learning new words in your own notes? Are
@@ -40,11 +48,19 @@ theories. Should you develop personal theories in personal notes when you could 
 adding to theories others have developed? Don't give up when you see a theory you don't understand
 in "their" shared notes.
 
++++
+
 ## Cost
+
++++
 
 In order of cost.
 
++++
+
 ### Version Control
+
++++
 
 When there are issues in a Wikipedia article, it's not easy to check history to gain confidence that
 some content is not as it should be. Because Wikipedia preceded `git` (and likely many other version
@@ -60,21 +76,23 @@ https://webmasters.stackexchange.com/questions/137722/)
 
 In a real-world test of WikiBlame, finding the insertion took 22 seconds.
 
++++
+
 ### Speed
+
++++
 
 It's slower to type on Wikipedia (in a browser) than to type in plain text.
 
++++
+
 ### Form
 
-Wikipedia is fundamentally oriented around nouns rather than verbs. If you prefer functional
-programming rather than an everything-is-a-noun language like Java, it's easier to think in verbs.
-In fact, a verb-oriented site (like this one) provides a good complement to that approach because
-you can assume links to verbs are internal to the site, and links to nouns are to Wikipedia.
++++
 
-When you contribute to a "Talk" page, you're essentially contributing to an "improve define x"
-article if you see the original article as a "define x" page (thinking in terms of verbs). Thinking
-in terms of "define x" can make it clear that many of these articles are similar to mathematical
-axioms. Where's the bottom, though?
+Wikipedia is fundamentally oriented around nouns rather than verbs. If you prefer functional programming rather than an everything-is-a-noun language like Java, it's easier to think in verbs. In fact, a verb-oriented site (like this one) provides a good complement to that approach because you can assume links to verbs are internal to the site, and links to nouns are to Wikipedia.
+
+When you contribute to a "Talk" page, you're essentially contributing to an "improve define x" article if you see the original article as a "define x" page (thinking in terms of verbs). Thinking in terms of "define x" can make it clear that many of these articles are similar to mathematical axioms. Where's the bottom, though?
 
 % ## Additional Training Data
 %

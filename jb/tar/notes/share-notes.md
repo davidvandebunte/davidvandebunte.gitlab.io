@@ -6,7 +6,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.11.2
+    jupytext_version: 1.16.1
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
@@ -15,6 +15,8 @@ kernelspec:
 
 # Share notes
 
++++
+
 [sc]: ./share-comment.md
 [stse]: ./share-to-stack-exchange.md
 [stw]: ./share-to-wikimedia.md
@@ -22,18 +24,23 @@ kernelspec:
 [stjh]: ./share-to-jupyter-html.md
 [stjb]: ./share-to-jupyter-book.md
 [stjira]: ./share-to-jira.md
-[rd]: ./redact.md
 
 Generalizes:
 - [Share Comment][sc]
 - [Share to Stack Exchange][stse]
 - [Share to Wikimedia][stw]
 - [Share to Blog][stb]
+
+% See also:
 % - [Share to Jupyter HTML][stjh]
 % - [Share to Jupyter Book][stjb]
 % - [Share to JIRA][stjira]
 
++++
+
 ## Test
+
++++
 
 Share personal content to a (more) public medium. There are multiple levels of public. For example,
 you can publish to:
@@ -45,11 +52,19 @@ How open should you be with your thoughts?
 
 ![x](./more-public-domain.svg)
 
++++
+
 ## Value
+
++++
 
 In order of value.
 
++++
+
 ### Correction
+
++++
 
 [ts]: https://stackoverflow.com/a/6556453/622049
 [ref]: https://unix.stackexchange.com/questions/688195/
@@ -98,7 +113,11 @@ For the special case of working through a textbook sharing your answers lets oth
 answers against yours. This lets you self-grade against theirs if they also publish or comment on
 your answers.
 
++++
+
 #### Correction by Computers
+
++++
 
 [aei]: https://docs.gitlab.com/ee/ci/yaml/#artifactsexpire_in
 [odaz]: https://azure.microsoft.com/en-us/services/open-datasets/#overview
@@ -117,7 +136,11 @@ for free:
 - [Open Datasets | Microsoft Azure][odaz]
 - [Open Data on AWS][odam]
 
++++
+
 ### Credit
+
++++
 
 Open source contributions look good on a resume. Have you ever searched for someone on LinkedIn,
 StackOverflow, or elsewhere before interviewing them? In fact, a blog is like a resume. Is what
@@ -129,7 +152,11 @@ raise your own visibility or your code's visibility. At the least, share your op
 individual coworkers, spouse, or kids. To "publish" code is to release it to production, in the
 context of your job (continuous deployment).
 
++++
+
 ### Politick
+
++++
 
 [tb]: https://en.wikipedia.org/wiki/Textbook
 
@@ -156,7 +183,11 @@ less likely to be reused in the namespace. If Shannon would have used the generi
 instead of "entropy" for [Entropy (information theory)](
 https://en.wikipedia.org/wiki/Entropy_(information_theory)) the idea may not have taken off.
 
++++
+
 ### Web Linking
+
++++
 
 Do you want to link to your notes from e.g. Google Calendar reminders? If you publish them you can
 read them on your phone rather than needing to be at your computer to start rereading your own
@@ -167,7 +198,11 @@ your phone on a trip, for example. What do you look up on your phone when you've
 time? What if you reviewed your last blog post? This keeps you in focused work, better than a
 long-term recommended reading list you or some other site maintain.
 
++++
+
 ### Simplified Searching
+
++++
 
 Prefer sharing to personal notes so you have one place to search: the web. One way to think about
 sharing notes is as organizing notes by deleting them from your private repositories if they don't
@@ -177,12 +212,15 @@ efficiency (pedagogical efficiency) as the speed at which the notes help you rec
 notes will be less efficient only if you use different internal language than the average English
 speaker.
 
++++
+
 ### Transparency
+
++++
 
 [stow]: https://en.wikipedia.org/wiki/Security_through_obscurity#Obscurity_in_architecture_vs._technique
 
-Obscurity is a limited way to achieve personal and communal security; see [Security through
-obscurity][stow]. For the advantages of security through obscurity, see [Redact][rd].
+Obscurity is a limited way to achieve personal and communal security; see [Security through obscurity][stow]. For the advantages of security through obscurity, see [Redact](./redact.md).
 
 Who are you already sharing with? Do you take notes in Google Docs? Public notes are better than
 notes you share with Google (in Docs) because other major companies (Amazon, Apple) will have access
@@ -224,13 +262,23 @@ more likely to happen.
 
 ## Cost
 
++++
+
 In order of cost.
 
-### [Redact][rd]
++++
+
+### [Redact](./redact.md)
+
++++
 
 ### [Select License](./select-license.md)
 
++++
+
 ### Avoid indirection
+
++++
 
 On stack exchange sites, a "link" answer is generally not encouraged. On Wikipedia, you should not
 be referencing your own content. In Confluence (another wiki) users often aren't prepared to follow
