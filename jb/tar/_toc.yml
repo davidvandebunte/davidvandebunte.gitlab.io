@@ -227,9 +227,10 @@ parts:
       - file: notes/set-wide-goal.md
   - caption: Tools
     chapters:
-      - file: notes/rclone.md
       - file: notes/inkscape.md
       - file: notes/jupyter.md
+      - file: notes/latex.md
+      - file: notes/rclone.md
       - file: notes/zathura.md
   - caption: Drafts
     chapters:
