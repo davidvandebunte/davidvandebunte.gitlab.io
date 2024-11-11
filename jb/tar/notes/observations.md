@@ -505,3 +505,13 @@ The problem is that the compression is lossy; you can't easily go back (even mor
 We often talk about infinite in a way where we could easily just define a maximum instead, but don't because then we would have to deal with all the bugs etc. associated with corner cases. No one wants to talk about that issues when you can just say that something extends to infinite.
 
 For example, how long should you plan out to? If you just plan to infinite, you don't have to accept that what you're working on may never pay back (it's too far-looking).
+
++++
+
+## In your own words
+
++++
+
+The question of whether to write your own implementation of some logic (to avoid excessive library dependencies) is essentially equivalent to that of whether to take your own notes (that is, derive it at least once yourself). If you can't write your own version, then you may not understand it (if you can't build it, you don't understand it). At the same time, your own version will take much longer to develop and will likely have a lot of (often boring) defects that you'll need to fix yourself.
+
+It seems that whether to incorporate a library or not then depends primarily on whether you think you *could* build something yourself, with enough time. If you expect it to be "boring" then it likely will be.

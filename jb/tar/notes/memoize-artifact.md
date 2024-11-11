@@ -6,7 +6,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.11.5
+    jupytext_version: 1.16.1
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
@@ -15,39 +15,35 @@ kernelspec:
 
 # Memoize artifact
 
-[mz]: https://en.wikipedia.org/wiki/Memoization
-[wrpr]: https://en.wikipedia.org/wiki/Reproducibility
++++
 
 Generalizes:
-- [](./memoize-docker-image.md)
-- [](./memoize-jupyter-book.md)
+- [Memoize Docker image](./memoize-docker-image.md)
+- [Memoize Jupyter Book](./memoize-jupyter-book.md)
+
++++
 
 ## Test
 
-[asd]: https://en.wikipedia.org/wiki/Artifact_(software_development)
-[bar]: https://docs.bazel.build/versions/4.2.1/glossary.html#artifact
-[cc]: https://en.wikipedia.org/wiki/Cache_(computing)
-[ccad]: https://docs.bazel.build/versions/main/build-ref.html#actual_and_declared_dependencies
++++
 
 An "artifact" is stored in a persistent storage medium to avoid recomputation later.
 
-We use the term "artifact" here partially because it's so ill-defined and therefore easy to redefine
-(see the terrible article [Artifact (software development)][asd]). We also use the term because it's
-so common, such as in the "Artifactory" tool. In GitLab, you can think of all the items under
-"Packages and Registries" (such as the container registry) as places to store artifacts.
+We use the term "artifact" here partially because it's so ill-defined and therefore easy to redefine (see [Artifact (software development)](https://en.wikipedia.org/wiki/Artifact_(software_development))). We also use the term because it's so common, such as in the "Artifactory" tool. In GitLab, you can think of all the items under "Packages and Registries" (such as the container registry) as places to store artifacts.
 
-Some examples of artifacts are Docker images, libraries, packages, .pth files, .html files (manually
-or non-manually constructed), C++ files, and .py files, and test results (e.g. pass/fail boolean).
-In the language of Bazel, the equivalent concept is a Target (see [Core concepts - Actual and
-declared dependencies][ccad]), which is slightly different from how they define an [Artifact][bar].
-In the definition used here, you could take any English text (i.e. notes) as artifacts that e.g. may
-depend on concepts from other English text.
++++
 
-We prefer the word [Memoization][mz] to [Caching][cc] because the former is a special case of the
-latter, and we specifically intend to refer to the latter, more special case. That is, we won't
-consider data locality or spatial locality here, only whether to build a data artifact at all.
+Some examples of artifacts are Docker images, libraries, packages, .pth files, .html files (manually or non-manually constructed), C++ files, and .py files, and test results (e.g. pass/fail boolean). In the language of Bazel, the equivalent concept is a Target (see [Core concepts - Actual and declared dependencies](https://docs.bazel.build/versions/main/build-ref.html#actual_and_declared_dependencies)), which is slightly different from how they define an [Artifact](https://docs.bazel.build/versions/4.2.1/glossary.html#artifact). In the definition used here, you could take any English text (i.e. notes) as artifacts that e.g. may depend on concepts from other English text.
+
++++
+
+We prefer the word [Memoization](https://en.wikipedia.org/wiki/Memoization) to [Caching](https://en.wikipedia.org/wiki/Cache_(computing)) because the former is a special case of the latter, and we specifically intend to refer to the latter, more special case. That is, we won't consider data locality or spatial locality here, only whether to build a data artifact at all.
+
++++
 
 ### Stability
+
++++
 
 [stb]: https://en.wikipedia.org/wiki/Stability
 
@@ -90,20 +86,17 @@ problem. If a software package we thought was "reusable" and therefore depend on
 bad version, we'll let others who are actively upgrading handle the issue and catch the next truly
 stable version.
 
-In the language of [Attention][at], we're limiting the amount of state we must attend to if we must
-[](./investigate-root-cause.md). If we want to continue to partially attend to lower-reliability
-(less likely to be reproducible) parts of our build networks, then we can get notifications at e.g.
-night using spare computing resources. See [](./regularly-stress-test.md).
+In the language of [Attention][at], we're limiting the amount of state we must attend to if we must [Investigate a root cause](./investigate-root-cause.md). If we want to continue to partially attend to lower-reliability (less likely to be reproducible) parts of our build networks, then we can get notifications at e.g. night using spare computing resources. See [Regularly stress test](./regularly-stress-test.md).
+
++++
 
 ### Recursive artifacts
 
-[boot]: https://en.wikipedia.org/wiki/Bootstrapping
++++
+
 [shc]: https://en.wikipedia.org/wiki/Self-hosting_(compilers)
 
-The idea of artifacts is closely tied to the concept of [Bootstrapping][boot]. Examples of recursive
-artifacts are [Self-hosting compilers][shc] and operating systems (it's likely the Ubuntu 20.04
-developers were using an earlier version of Ubuntu). You can use a docker-in-docker image to build a
-docker image with `docker-py` installed, then use that image to build further docker images.
+The idea of artifacts is closely tied to the concept of [Bootstrapping](https://en.wikipedia.org/wiki/Bootstrapping). Examples of recursive artifacts are [Self-hosting compilers][shc] and operating systems (it's likely the Ubuntu 20.04 developers were using an earlier version of Ubuntu). You can use a docker-in-docker image to build a docker image with `docker-py` installed, then use that image to build further docker images.
 
 Some of these recursive artifacts are recursive environments. At each level of a bootstrap, you
 create a new environment, then enter it and use it to get something done (such as building an
@@ -120,7 +113,11 @@ on some small dataset, running inference on a larger dataset, having annotators 
 dataset up, and training the model again on the larger dataset. The recursive artifact in this case
 is *both* the model and the datasets.
 
++++
+
 ### Analogies
+
++++
 
 To analogize to the human experience, an artifact is a result we write down. The same impulse that
 drives us to save a file we generated by running a script is the one that drives us to record an
@@ -134,7 +131,11 @@ teach them everything you know about computers, because there won't be one to de
 were also never taught the process of how to rebuild society; it was likely a recursive process that
 it would be hard to define the base case for.
 
++++
+
 ## Value
+
++++
 
 Saving an artifact creates a more efficient environment for optimization, assuming the artifact
 represents reality (is reproducible). Consider the common case in machine learning where a model
@@ -146,16 +147,15 @@ Consider how this last paragraph relates to [Bazel](https://bazel.build/)'s joke
 
 > {Fast, Correct} - Choose two
 
++++
+
 ### Reproducibility
+
++++
 
 [bv]: https://docs.bazel.build/versions/main/bazel-vision.html
 
-These concepts are closely tied to those of [Reproducibility][wrpr]. Bazel in fact defines "Correct"
-to mean reproducible, given you are allowed to pin yourself to the past world where the cache was
-created. That is, if running a clean build does not produce the same result as an incremental build
-(a build based on a cache) then the code is not correct. See the [Bazel vision - Bazel main][bv].
-We'll use Correct (with a capital C) to capture this concept of perfect (or pinned) reproducibility.
-For more on perfect reproducibility, see [](record-dependencies).
+These concepts are closely tied to those of [Reproducibility](https://en.wikipedia.org/wiki/Reproducibility). Bazel in fact defines "Correct" to mean reproducible, given you are allowed to pin yourself to the past world where the cache was created. That is, if running a clean build does not produce the same result as an incremental build (a build based on a cache) then the code is not correct. See the [Bazel vision - Bazel main][bv]. We'll use Correct (with a capital C) to capture this concept of perfect (or pinned) reproducibility. For more on perfect reproducibility, see [](record-dependencies).
 
 Reproducibility is not always important; sometimes it is sufficient to save history. Many (valuable)
 published papers don't include every step necessary to reproduce figures. Once books are published
@@ -171,7 +171,11 @@ agreement that groups of developers often need to make when they work together. 
 any of the code in a particular area of a shared codebase, can you merge your code before waiting
 for a long-running test covering with the untouched code?
 
++++
+
 #### Estimation
+
++++
 
 How do you put a numerical estimate on the value of reproducibility? The first step is to estimate
 how long your custom software product will run, and then how often it will need to be upgraded (when
@@ -186,7 +190,11 @@ Consider instead a research environment. The data product (e.g. a publication) m
 reproduced a few times if the research produces negative results (in this case, a publication
 indicating negative results).
 
++++
+
 ### Fast
+
++++
 
 Developers need fast feedback, on local systems, and from remote systems.
 
@@ -218,7 +226,11 @@ developers are submitting code at the same time, this problem gets significantly
 A system for easy management of dependencies often encourages developers to create more checkpoints
 (more artifacts) for faster feedback, besides making your existing system faster.
 
++++
+
 #### Estimation
+
++++
 
 How do you put a numerical estimate on the value of fast feedback? First, how much feedback is there
 for the computer to give? If developers have written many tests, it will take a long time to provide
@@ -230,9 +242,15 @@ Consider a production and research environment again. In a production environmen
 will be critical to fast releases of software to customers, and the code will be well-tested. In a
 research environment, customers may only get updates infrequently, and there may be no tests yet.
 
++++
+
 ## Cost
 
++++
+
 ### Learn Reusable Tools
+
++++
 
 [faqb]: https://bazel.build/faq.html
 [fbbr]: https://nicolovaligi.com/articles/faster-bazel-remote-caching-benchmark/
@@ -257,21 +275,16 @@ developer always has to start with a clean build with Make. See also:
 - [Correct incremental rebuilds](
 https://docs.bazel.build/versions/main/guide.html#correct-incremental-rebuilds)
 
-Google tried to make Make work for as long as possible when it built Bazel; see [FAQ - Bazel][faqb].
-Like many algorithms that do [Memoization][mz], Bazel does this by hashing the inputs to the
-functions that create artifacts (e.g. [`functools.lru_cache`][flru]). To learn Bazel is effectively
-to learn how to record more of what you relied on to build an artifact.
+Google tried to make Make work for as long as possible when it built Bazel; see [FAQ - Bazel][faqb]. Like many algorithms that do [Memoization](https://en.wikipedia.org/wiki/Memoization), Bazel does this by hashing the inputs to the functions that create artifacts (e.g. [`functools.lru_cache`][flru]). To learn Bazel is effectively to learn how to record more of what you relied on to build an artifact.
 
-Some tools automatically record or reconstruct dependency trees. In PyTorch, Theano, Tensorflow,
-etc. you can see the net activations as artifacts, and the backpropagation graph as a record of how
-all the artifacts connect. The `import` and `#include` statements in python and C++, respectively,
-are essentially a record of dependencies between files. These dependencies are typically parsed by
-tools from C++, but not in python. Some languages are designed to make parsing these dependencies
-faster; see for example [performance - How does Go compile so quickly? - Stack
-Overflow](https://stackoverflow.com/questions/2976630).
+Some tools automatically record or reconstruct dependency trees. In PyTorch, Theano, Tensorflow, etc. you can see the net activations as artifacts, and the backpropagation graph as a record of how all the artifacts connect. The `import` and `#include` statements in python and C++, respectively, are essentially a record of dependencies between files. These dependencies are typically parsed by tools from C++, but not in python. Some languages are designed to make parsing  these dependencies faster; see for example [performance - How does Go compile so quickly? - Stack Overflow](https://stackoverflow.com/questions/2976630).
+
++++
 
 (record-dependencies)=
 ### Record Dependencies
+
++++
 
 [ac]: https://en.wikipedia.org/wiki/Approximate_computing
 [cd]: https://en.wikipedia.org/wiki/Concept_drift
@@ -287,10 +300,7 @@ rays and the power turning off. To get more reproducible results often means to 
 information about an experiment; what are you forgetting to record? We rely on probability when
 certain inputs are too expensive to record.
 
-Our belief that we can ultimately get a perfectly reproducible result is related to the idea that
-there is no such thing as probability and [Determinism][det]. See also [Approximate computing][ac].
-In some sense [Reproducibility][wrpr] is a promise (or a belief about the future) rather than
-something we can say we have in our hand; see the [Problem of induction][wpoi].
+Our belief that we can ultimately get a perfectly reproducible result is related to the idea that there is no such thing as probability and [Determinism][det]. See also [Approximate computing][ac]. In some sense [Reproducibility](https://en.wikipedia.org/wiki/Reproducibility) is a promise (or a belief about the future) rather than something we can say we have in our hand; see the [Problem of induction][wpoi].
 
 In fact, pinning artifacts can be a problem. When the artifact is a dataset, we refer to the problem
 as [Concept drift][cd]. When the artifact is a package or library (e.g. specified in a Dockerfile)
@@ -310,13 +320,21 @@ goal, though, and you should think about the long-term cost of your shortcuts. I
 recording all your dependencies, the answers you build on top of your artifact will be more
 inCorrect the more those unrecorded dependencies change in a significant way under you.
 
++++
+
 ### Update Dependencies
+
++++
 
 A perfectly reproducible build, by definition, requires that cached artifacts remain "Correct" for
 an indefinite amount of time. By disallowing concept drift, we effectively freeze ourselves at some
 point in the past. How do we catch up?
 
++++
+
 #### Estimation
+
++++
 
 As part of any decision about how much to memoize and how much to let float (unpinned), you should
 estimate the cost of upgrades. For example, let's say in your particular domain you estimate you
