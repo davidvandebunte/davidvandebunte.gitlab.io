@@ -515,3 +515,11 @@ For example, how long should you plan out to? If you just plan to infinite, you 
 The question of whether to write your own implementation of some logic (to avoid excessive library dependencies) is essentially equivalent to that of whether to take your own notes (that is, derive it at least once yourself). If you can't write your own version, then you may not understand it (if you can't build it, you don't understand it). At the same time, your own version will take much longer to develop and will likely have a lot of (often boring) defects that you'll need to fix yourself.
 
 It seems that whether to incorporate a library or not then depends primarily on whether you think you *could* build something yourself, with enough time. If you expect it to be "boring" then it likely will be.
+
++++
+
+## Avoid monster SVG
+
++++
+
+These may be useful, but consider [In Inkscape, can I link to a pdf/svg instead of embedding its content?](https://graphicdesign.stackexchange.com/questions/70963/in-inkscape-can-i-link-to-a-pdf-svg-instead-of-embedding-its-content) instead. If you embed one SVG in another you should still be able to see the "big picture" from one while making the content of others available.

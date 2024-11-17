@@ -16,6 +16,41 @@ kernelspec:
 
 +++
 
+## Install
+
++++
+
+Use the `ppa` to install Inkscape (see [Installing Inkscape - Inkscape Wiki](https://wiki.inkscape.org/wiki/Installing_Inkscape)). If you install the snap package the file browser (save dialog) won't be integrated with your system and therefore won't let you save a new file in e.g. a recently opened directory or create a new file in the same directory the file you are currently working with is saved in.
+
+See [CONTRIBUTING.md · Inkscape · GitLab](https://gitlab.com/inkscape/inkscape/-/blob/master/CONTRIBUTING.md?ref_type=heads) to potentially add this to your monorepo and build it yourself. Why have the source to be able to read it? You'd like to understand the `preferences.xml` file better (the `dotf` changes seem random). Change into the source directory, run ctags, and per [Preferences subsystem](https://wiki.inkscape.org/wiki/index.php/Preferences_subsystem) find the `Preferences` class in `preferences.h`.
+
+See also "Feature requests" in `draw.md`. You could implement these yourself, but why not get some feedback from others first?
+
++++
+
+## Configuration
+
++++
+
+Based on following [How to use the xdg-mime command](https://stackoverflow.com/questions/2060284/how-to-use-the-xdg-mime-command):
+
+```bash
+$ ls /usr/share/applications | grep -i inkscape
+org.inkscape.Inkscape.desktop
+```
+
++++
+
+So run the command:
+
++++
+
+```
+xdg-mime default org.inkscape.Inkscape.desktop image/svg+xml
+```
+
++++
+
 ## Search first
 
 +++

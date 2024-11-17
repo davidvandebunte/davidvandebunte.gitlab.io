@@ -169,7 +169,7 @@ parts:
       - file: notes/memoize-docker-image.md
       - file: notes/memoize-jupyter-book.md
       - file: notes/regularly-stress-test.md
-  - caption: Notes
+  - caption: Computer Science
     chapters:
       - file: notes/containerize-application.md
       - file: notes/investigate-root-cause.md
@@ -177,6 +177,12 @@ parts:
       - file: notes/push-for-feedback.md
       - file: notes/split-vcs-repository.md
       - file: notes/update-dependencies.md
+        sections:
+        - file: notes/inkscape.md
+        - file: notes/jupyter.md
+        - file: notes/latex.md
+        - file: notes/rclone.md
+        - file: notes/zathura.md
   - caption: Share
     chapters:
       - file: notes/convert-to-plain-text.md
@@ -225,13 +231,6 @@ parts:
       - file: notes/set-deep-goal.md
       - file: notes/set-subgoal.md
       - file: notes/set-wide-goal.md
-  - caption: Tools
-    chapters:
-      - file: notes/inkscape.md
-      - file: notes/jupyter.md
-      - file: notes/latex.md
-      - file: notes/rclone.md
-      - file: notes/zathura.md
   - caption: Drafts
     chapters:
       - file: notes/improve-install.md
