@@ -340,6 +340,10 @@ Version names of the form `x.y.z` where each of the three variables are integers
 
 +++
 
+Although `SemVer` provides one possible interpretation of these three digits, if you're versioning something other than software with a public API then you'll have your own interpretation of every digit. For example, imagine you were providing versions on a PDF you distribute to others. You may want to increment the major version for chapter rearrangements, the minor version for paragraph rearrangenments, and the patch version for typos or fixing broken links.
+
++++
+
 ### SemVer (🗿, 🩲, ➡️, ◀️, ⌚, 📏, 📜, 📅)
 
 +++
