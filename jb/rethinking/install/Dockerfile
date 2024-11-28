@@ -1,4 +1,4 @@
-FROM quay.io/jupyter/datascience-notebook@sha256:74ac2eba08657329acb78556ea4875bafad8bd891e2331561009fb676770e2d4
+FROM quay.io/jupyter/datascience-notebook@sha256:3e71e948d5d299b4ad21dd3780397e441e12f573ce519cfa50832501e0265f93
 # TODO-mpd: Move pip and conda dependencies to notebooks
 RUN conda install jira pint uncertainties cmdstan r-ragg && \
     pip install jupyter-book jupytext tables dvc
