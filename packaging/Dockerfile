@@ -6,6 +6,6 @@ USER root
 RUN apt-get install curl
 RUN curl https://rclone.org/install.sh | sudo bash
 RUN rclone config create aws s3 provider=AWS env_auth=true
-COPY . /rethinking
+ADD packaging/tmp/rethinking_tar.tar /rethinking
 RUN chmod 775 /rethinking/install/with-system-packages && /rethinking/install/with-system-packages
 USER jovyan
