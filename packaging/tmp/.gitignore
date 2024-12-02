@@ -1,0 +1,3 @@
+# To inspect the container.log files dumped into this directory consider `less -r` (retains color).
+*
+!.gitignore

@@ -2,12 +2,16 @@
 set -o errexit -o nounset -o xtrace
 
 bazel build //jb:rethinking_tar
-tar_fpath="$(bazel info bazel-bin)/jb/rethinking_tar.tar"
+# The bazel path is outside the build context, so must be copied into it.
+#
+# We use `install` rather than `cp` to change permissions because the file is not writable (this
+# script will fail to rewrite it if run twice).
+install -m 660 $(bazel info bazel-bin)/jb/rethinking_tar.tar packaging/tmp/
 log_fpath=$(mktemp -u -p $(pwd)/packaging/logs -t buildXXXXXX).log
 DOCKER_BUILDKIT=1 docker build --progress=plain \
     -t $(./packaging/tag) \
-    -f install/Dockerfile \
-    - < "$tar_fpath" 2>&1 | tee $log_fpath
+    --file ./packaging/Dockerfile . \
+    2>&1 | tee ${log_fpath}
 # Push after verifying a build.
 # docker login registry.gitlab.com -u davidvandebunte --password-stdin < ~/.gitlab_access_token
 # docker push $(./packaging/tag)
