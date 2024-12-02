@@ -6,3 +6,4 @@ bazelisk
 .ipython/
 .jupyter/
 .local/
+Session.vim
