@@ -6,7 +6,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.16.1
+    jupytext_version: 1.16.4
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
@@ -46,3 +46,13 @@ Part of the reason that Wikipedia authors don't post to SE is that we often want
 +++
 
 A high score on different SE sites looks good on a resume (you should link all your social profiles on your website, including emphasizing which SE sites you are most active on). You'll also reach more people; let them do the SEO for you.
+
++++
+
+## Stale
+
++++
+
+The content on Stack Exchange is much more likely to go stale than e.g. Wikipedia because it doesn't have as many maintainers, and because no one can possibly maintain votes. You can remove votes you've made that you no longer agree with yourself, but no one else is going to do that. You could even downvote bad answers, but that takes reputation.
+
+See for example [LaTeX Editors/IDEs](https://tex.stackexchange.com/questions/339/latex-editors-ides), with the new tool `vimtex` way at the bottom. It simply hasn't had time to get votes because this question is so old; however a large number of people would prefer to it options with more votes.

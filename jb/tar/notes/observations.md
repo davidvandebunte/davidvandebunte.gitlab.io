@@ -4,7 +4,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.16.1
+    jupytext_version: 1.16.4
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
@@ -267,36 +267,6 @@ A docker image that takes a "cmd" as a parameter is a lot like an HTTP service. 
 
 +++
 
-The `dvc` tool does support 18:04:
-
-```
-apt update && apt install python3 python3-pip -y && python3 -m pip install --upgrade "pip<21.0" && python3 -m pip install dvc[s3]
-```
-
-The `dvc` tool does not support 16.04:
-
-```bash
-$ apt update && apt install python3 python3-pip -y && python3 -m pip install --upgrade "pip<21.0" && python3 -m pip install --upgrade setuptools && python3 -m pip install dvc[s3]
-...
-Collecting flufl.lock>=3.2
-  Downloading flufl.lock-4.0.tar.gz (23 kB)
-    ERROR: Command errored out with exit status 1:
-     command: /usr/bin/python3 -c 'import sys, setuptools, tokenize; sys.argv[0] = '"'"'/tmp/pip-install-x9nl1t14/flufl-lock_6627e4ef6c0f459b93ebb455d4edc7b8/setup.py'"'"'; __file__='"'"'/tmp/pip-install-x9nl1t14/flufl-lock_6627e4ef6c0f459b93ebb455d4edc7b8/setup.py'"'"';f=getattr(tokenize, '"'"'open'"'"', open)(__file__);code=f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' egg_info --egg-base /tmp/pip-pip-egg-info-7x96q495
-         cwd: /tmp/pip-install-x9nl1t14/flufl-lock_6627e4ef6c0f459b93ebb455d4edc7b8/
-    Complete output (1 lines):
-    Python 3.6.0 or better is required
-    ----------------------------------------
-...
-```
-
-Until you can get to 18.04, you can use rclone as a replacement. It will require manually uploading artifacts you generate, essentially adding the extra work of needing to come up with names for all your artifacts. It will also lead to more duplication of data in s3 (which dvc would otherwise handle with its internal SHA) and less efficient caching on your local machine (for the same reasons).
-
-This approach might be better for the future though, only because outside of docker (where you need to pull docker images you saved with `docker save`) you may not want to need to install python3. It's much easier to install a binary in e.g. alpine linux. But, you've already installed dvc in alpine linux in the past.
-
-Does the fact that you need to install dvc outside of docker anyways (in order to pull docker images) imply you shouldn't install it inside?
-
-+++
-
 ## Prefer fact to answer
 
 Rather than "q-" and "a-" should you think in terms of "q-" and "f-" where f stands for fact? You like how this contrasts with counterfactual. It's also a fact that "Son child Dad" not so much an answer (the fact can exist without someone asking the question). You can also state the same fact in the opposite way with "Dad parent Son" without regard to any question. It also makes it clear you rely on these "facts" being absolutely true, with no uncertainty. This is related to your recent approach where many experiments (facts) are required to answer a question more confidently (never completely, if the question is large at all). That is, you can really only answer really specific questions fully confidently. See:
@@ -523,3 +493,27 @@ It seems that whether to incorporate a library or not then depends primarily on 
 +++
 
 These may be useful, but consider [In Inkscape, can I link to a pdf/svg instead of embedding its content?](https://graphicdesign.stackexchange.com/questions/70963/in-inkscape-can-i-link-to-a-pdf-svg-instead-of-embedding-its-content) instead. If you embed one SVG in another you should still be able to see the "big picture" from one while making the content of others available.
+
++++
+
+## Why is [Russell's paradox](https://en.wikipedia.org/wiki/Russell%27s_paradox) important?
+
++++
+
+Formal languages and logic are naturally closely associated with programming languages and computability. If you see Russell's paradox as a failure of a formal language (see [Formal presentation](https://en.wikipedia.org/wiki/Russell%27s_paradox#Formal_presentation)), then it becomes a little bit more interesting.
+
+In that article, Russell's paradox is analogized to the barber paradox, from To Mock a Mockingbird (forget that book and learn from here).
+
++++
+
+## Practice to learn a language
+
++++
+
+See [List of logic symbols](https://en.wikipedia.org/wiki/List_of_logic_symbols). When you use the term [Logic](https://en.wikipedia.org/wiki/Logic) you're referring to [Logic - Formal logic](https://en.wikipedia.org/wiki/Logic#Formal_logic). See [Formal system](https://en.wikipedia.org/wiki/Formal_system).
+
+If you simply replace "there exists" with ∃ in every sentence you write, and similarly for other logical symbols, then you won't be forgetting what they mean so often. Once you're doing that you'll come up with something close to a formal language, naturally and experimentally, that should be close to first-order logic (or whatever). The goal here is to try to reduce logical work that you would otherwise do to only symbol manipulation. If you can do that, then you can have a computer do the logical work. Or, you can do the logical work much more quickly yourself (because symbol manipulation is easy). It's like memoizing a bunch of relationships, rather than re-thinking through all of them every time you come back to them. How many times have you re-thought through e.g. ${\displaystyle \lnot \forall xP(x)\to \exists x\lnot P(x)}$?
+
+That is, just like learning a new programming language, you need to just start speaking the language. Unlike a programming language, this formal language will not actually run on a computer often (unless you look up a way to execute it) and you'll need to rely on people to evaluate it.
+
+While reading [Predicate (mathematical logic)](https://en.wikipedia.org/wiki/Predicate_(mathematical_logic)), something became apparent: the term "relation" is short for relationship. The term relationship comes from family relationships, so the motivating example for the idea of relations is essentially family relationships (as in all the examples). The "set" in this case is all people. To be clear a "predicate" is not only a unary relation as some people assume; the preceding article does use P for the unary relation (and R for the binary relation).

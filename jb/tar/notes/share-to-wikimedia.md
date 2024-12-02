@@ -6,7 +6,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.16.1
+    jupytext_version: 1.16.4
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
@@ -22,6 +22,24 @@ kernelspec:
 +++
 
 In order of value.
+
++++
+
+### High-quality content
+
++++
+
+You're not allowed to put original work on Wikipedia, i.e. anything that you created yourself. That means that it's built completely from people reading other people's content and considering it valuable; a minimum of two people need to approve of all content (the creator and a person referencing the creator's work). It's this approach that likely makes everything higher quality.
+
+If you can't find a solution that you've come up with on Wikipedia, then it's "original" research in your opinion. You need to publish it and then try to get someone else to reference it from Wikipedia so it isn't lost forever.
+
+Still, this critically requires researchers to not inspect Wikipedia and reference it, to avoid circular references. A researcher should only make statements that can in theory be verified from earlier published papers. That is, Wikipedia articles should effectively be "research review" or "review of the research" articles written by experts in a field.
+
++++
+
+Human knowledge increases systematically with some people being more exploratory, and some being more practical. It seems in general that research papers get conglomerated (or referenced) into other research papers but primarily textbooks (pedagogical material). You might say that "engineers" reference higher-level material like Wikipedia and textbooks, and "researchers" can write textbooks and papers. Engineers discover what's useful out of the material that researchers create (they find a use).
+
+For example, the answers to many of the advanced textbook questions in e.g. [Visual Group Theory](https://bookstore.ams.org/clrm-32/) were once only available in research papers that would have been hard to find. Wikipedia references both research papers and textbooks but primarily textbooks.
 
 +++
 
@@ -78,11 +96,23 @@ In a real-world test of WikiBlame, finding the insertion took 22 seconds.
 
 +++
 
+### Age
+
++++
+
+Wikipedia may become irrelevant as definitions change. Even worse, it may even prevent valuable changes to definitions. In a system with no one in charge, it's hard to be sure that it will be maintained.
+
+For example, see [Dihedral group](https://en.wikipedia.org/wiki/Dihedral_group). There are two conventions for the subscript $D_n$ that conflict with each other in different areas of mathematics. It'd be good to standardize, but who could lead such an effort? You can pick a standard in your own thoughts and notes, to help. By picking a standard yourself, you effectively provide a vote to Wikipedia to move in a particular direction (if anyone ever takes your thoughts as authoritative or includes them in peer-reviewed material).
+
+Some people claim the nLab is the "new way" and that many professional mathematicians work in this world. A point against this is that, unless history is lost (documentation is lost), then the non-mathematical articles on Wikipedia will dominate long-term and prevent other less general systems from replacing it in a particular area (until e.g. strong consensus on nLab is reached and makes it to Wikipedia). If the historical Wikipedia article on e.g. Euclid is always better than the nLab article (if there was one) then it's unlikely that Wikipedia will get a competitor that takes it out unless they effectively fork it. See [List of forks of Wikipedia](https://en.wikipedia.org/wiki/List_of_forks_of_Wikipedia). It does seem that all those forks (Russia and China) are associated with rewriting history.
+
++++
+
 ### Speed
 
 +++
 
-It's slower to type on Wikipedia (in a browser) than to type in plain text.
+It's slower to type on Wikipedia (in a browser) than to type in plain text. However, developers could use [👻 GhostText](https://ghosttext.fregante.com/) if this ever became a serious concern.
 
 +++
 
