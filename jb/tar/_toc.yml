@@ -4,7 +4,7 @@
 format: jb-book
 root: notes/about
 parts:
-  - caption: Visual Group Theory
+  - caption: Group Theory
     chapters:
       - file: notes/review-vgt.md
       - file: notes/vgt/01-what-is-a-group.md
@@ -39,7 +39,7 @@ parts:
       - file: notes/vgt/10-galois-theory.md
         sections:
         - file: notes/vgt/10-8-exercises.md
-  - caption: Seven Sketches
+  - caption: Category Theory
     chapters:
       - file: notes/review-seven-sketches.md
       - file: notes/ssc/1-0.md
@@ -143,7 +143,7 @@ parts:
           - file: notes/ssc/exercise-7-77.md
           - file: notes/ssc/exercise-7-80.md
         - file: notes/ssc/7-6.md
-  - caption: Statistical Rethinking
+  - caption: Bayesian Inference
     chapters:
       - file: notes/sr2-review.md
       - file: notes/rethinking/practice-6.md

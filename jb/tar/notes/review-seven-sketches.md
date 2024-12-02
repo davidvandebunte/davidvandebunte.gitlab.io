@@ -4,22 +4,24 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.16.1
+    jupytext_version: 1.16.4
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
   name: python3
 ---
 
-# Review
+# Introduction
 
 +++
 
-## Why category theory (CT)?
+## Why [Category theory](https://en.wikipedia.org/wiki/Category_theory) (CT)?
 
 +++
 
 Category theory is ubiquitous in mathematics; it's difficult to read mathematical articles on Wikipedia without an understanding of the topic. See also [Mathematical subjects you wish you learned earlier - MSE](https://math.stackexchange.com/questions/213/mathematical-subjects-you-wish-you-learned-earlier). This may reflect the fact that more mathematicians are using category theory as a basis for mathematics rather than set theory; see [Topos § Elementary topoi (topoi in logic)](https://en.wikipedia.org/wiki/Topos#Elementary_topoi_(topoi_in_logic)) and [nLab](https://ncatlab.org/nlab/show/HomePage).
+
++++
 
 Category theory is also fundamental to programming, and in particular to functional programming. See
 [Is Category Theory useful for learning functional programming? - CS
@@ -27,6 +29,8 @@ SE](https://cs.stackexchange.com/questions/3028) and [Cats |
 Semigroup](https://www.scala-exercises.org/cats/semigroup). For the formal relationship between category theory and programming, see [Curry–Howard
 correspondence](https://en.wikipedia.org/wiki/Curry%E2%80%93Howard_correspondence) and [Cartesian
 closed category](https://en.wikipedia.org/wiki/Cartesian_closed_category). These are at least partially addressed by the end of the book.
+
++++
 
 We use CT for category theory following `math.CT` in [arXiv - Mathematics](https://arxiv.org/archive/math.CT).
 

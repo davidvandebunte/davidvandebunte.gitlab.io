@@ -4,77 +4,74 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.16.1
+    jupytext_version: 1.16.4
 kernelspec:
   display_name: R
   language: R
   name: ir
 ---
 
-# Review
+# Introduction
 
 +++
 
-## Summary
+## Why [Bayesian inference](https://en.wikipedia.org/wiki/Bayesian_inference)?
 
-[err]: https://github.com/rmcelreath/rethinking/blob/master/ERRATA.md
-[iss]: https://github.com/rmcelreath/rethinking/issues
++++
 
-There are a *lot* of typos and errors in the second edition. Take the attitude of ignoring these
-early on or finding a way to only mark them for your own sake. In the more detailed review below,
-you will see obvious errors marked with **ERROR**. This list is largely incomplete; it misses many
-minor errors (i.e. typos) later in the book as they become too tiresome to collect. If you don't
-believe me, see all the unresolved [open issues][iss] in the author's GitHub repository.
+The primary competitor to Bayesian inference is [Frequentist inference](https://en.wikipedia.org/wiki/Frequentist_inference) (but see [Statistical inference § Paradigms for inference](https://en.wikipedia.org/wiki/Statistical_inference#Paradigms_for_inference)). Although older and more well-established, frequentist inference leaves no space for the inclusion of information from human experts in a field (see [Bayesian probability § Personal probabilities and objective methods for constructing priors](https://en.wikipedia.org/wiki/Bayesian_probability#Personal_probabilities_and_objective_methods_for_constructing_priors)).
 
-The [ERRATA][err] is empty because (of course) GitHub issues are not being addressed. The absolute
-number of errors is probably also part of the problem. This is a shame because even an incomplete
-errata makes reading a book easier; you should often keep an errata open when you read a textbook to
-avoid puzzling over an issue someone else has already identified and explained. If a book doesn't
-have an errata, either the author never makes mistakes or they don't have the time.
+The result of a Bayesian approach can also be a [probability distribution](https://en.wikipedia.org/wiki/Probability_distribution "Probability distribution") for what is known about the parameters given the results of the experiment or study, which is much more interpretable than frequentist analysis products. This advantage leads to the possibility of [Sequential analysis](https://en.wikipedia.org/wiki/Sequential_analysis) and [Optimal stopping](https://en.wikipedia.org/wiki/Optimal_stopping) to reduce costs.
 
-### VitalSource
++++
 
-[vs]: https://bookshelf.vitalsource.com/reader/books/9780429639142
+## Why [Statistical Rethinking 2nd Edition](https://xcelab.net/rm/) (SR2) for Bayesian inference?
 
-The ebook format ([VitalSource][vs]) is quite limited. The VitalSource pages are painfully slow to
-load; I would load several chapters in different tabs at once (in Firefox, use `Alt-D` then
-`Alt-Enter` to duplicate a tab). You'll need a tab for global search in the book as well.
++++
 
-The VitalSource format doesn't display page numbers well and can only be navigated with a mouse
-(unlike an HTML page). Some errors only appear in the VitalSource and not in the pbook (printed
-book). If you're reading the VitalSource (as you must if you want to use a digital copy) then you're
-also going to need to get used to its rendering of equations, which is horrendous (see e.g. section
-**4.4.1** or **12.3.2**).
+This book is a bit lighter weight (aimed at practitioners) than more standard textbooks on Bayesian analysis such as [BDA3](http://www.stat.columbia.edu/~gelman/book/). The author seems to be heavily influenced by Gelman, based on both his references and how the book relies on Stan (developed by Gelman). It's a good start to the field, though we'll also reference many other sources in this course.
 
-In my experience, it was best to 'Reset to Publisher Format' and use my browser to change the text
-size.
-
-Other publishers (like MAA) provide you with a PDF that is clearly marked with your name to prevent
-distribution. You can find one bootlegged pdf version of Statistical Rethinking Ed. 2 (SR2) online
-(from Dec. 2019), missing significant content and with even more errors. The author has apparently
-offered online courses in the past to get a pdf.
-
-All external links are broken in the VitalSource version of this book. That is, you must copy and
-paste links rather than click on them. That is, the blue links internal to the book are functional,
-but blue links to external websites are broken.
++++
 
 ### Strengths
 
-[we]: https://en.wikipedia.org/wiki/Worked-example_effect#Worked_example
-[bda3]: http://www.stat.columbia.edu/~gelman/book/
++++
 
-The book is entertaining, which can make it easier to remember concepts. As advertised, it's driven
-by many [Worked examples][we]. In general, it also focuses on the forest rather than the trees.
-These are the primary ways it tries to distinguish itself from more standard textbooks on Bayesian
-analysis such as [BDA3][bda3]. The author seems to be heavily influenced by Gelman, based on both
-his references and how the book relies on Stan (developed by Gelman).
+The book is entertaining, which can make it easier to remember concepts. As advertised, it's driven by many [Worked examples](https://en.wikipedia.org/wiki/Worked-example_effect#Worked_example). In general, it also focuses on the forest rather than the trees.
 
-The chapter layouts, with **Rcode** text boxes interspersed, is similar to a Jupyter notebook but
-without being directly executable. Unfortunately not being executable means the chapter code doesn't
-actually run without a number of fixes. The advantage to this approach is users can work in a plain
-text editor rather than a browser, but this doesn't in itself imply the code shouldn't be runnable.
+The chapter layouts, with **Rcode** text boxes interspersed, is similar to a Jupyter notebook but without being directly executable. Unfortunately not being executable means the chapter code doesn't actually run without a number of fixes. The advantage to this approach is users can work in a plain text editor rather than a browser, but this doesn't in itself imply the code shouldn't be runnable.
+
++++
+
+### VitalSource
+
++++
+
+The ebook format ([VitalSource](https://bookshelf.vitalsource.com/reader/books/9780429639142)) is quite limited. The VitalSource pages are painfully slow to load; I load several chapters in different tabs at once (in Firefox, use `Alt-D` then `Alt-Enter` to duplicate a tab). You'll need a tab for global search in the book as well.
+
+The VitalSource format doesn't display page numbers well and can only be navigated with a mouse (unlike an HTML page). Some errors only appear in the VitalSource and not in the pbook (printed book). If you're reading the VitalSource (as you must if you want to use a digital copy) then you're also going to need to get used to its rendering of equations, which is horrendous (see e.g. section **4.4.1** or **12.3.2**).
+
+In my experience, it was best to 'Reset to Publisher Format' and use my browser to change the text size.
+
+Other publishers (like MAA) provide you with a PDF that is clearly marked with your name to prevent distribution. You can find one bootlegged pdf version of Statistical Rethinking Ed. 2 (SR2) online (from Dec. 2019), missing significant content and with even more errors. The author has apparently offered online courses in the past to get a pdf.
+
+All external links are broken in the VitalSource version of this book. That is, you must copy and paste links rather than click on them. That is, the blue links internal to the book are functional, but blue links to external websites are broken.
+
++++
+
+### Errors
+
++++
+
+There are a *lot* of typos and errors in the second edition. Take the attitude of ignoring these early on or finding a way to only mark them for your own sake. In the more detailed review below, you will see obvious errors marked with **ERROR**. This list is largely incomplete; it misses many minor errors (i.e. typos) later in the book as they become too tiresome to collect. If you don't believe me, see all the unresolved [open issues](https://github.com/rmcelreath/rethinking/issues) in the author's GitHub repository.
+
+The [ERRATA](https://github.com/rmcelreath/rethinking/blob/master/ERRATA.md) is empty because (of course) GitHub issues are not being addressed. The absolute number of errors is probably also part of the problem. This is a shame because even an incomplete errata makes reading a book easier; you should often keep an errata open when you read a textbook to avoid puzzling over an issue someone else has already identified and explained. If a book doesn't have an errata, either the author never makes mistakes or they don't have the time.
+
++++
 
 ## Personal Workflow
+
++++
 
 [drh]: https://github.com/davidvandebunte/rethinking
 
@@ -86,6 +83,8 @@ Prefer to `source` R files from the shell rather than running the publish script
 debugging issues. Many errors/warnings are swallowed otherwise.
 
 See also [davidvandebunte/rethinking: GitHub][drh].
+
++++
 
 ## 2.3. Components of the model
 
