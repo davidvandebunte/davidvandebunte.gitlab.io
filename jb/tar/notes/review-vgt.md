@@ -4,24 +4,40 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.16.1
+    jupytext_version: 1.16.4
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
   name: python3
 ---
 
-# Review
+# Introduction
 
 +++
 
-We'll use "VGT" as an acronym for Visual Group Theory. See the [VGT Website](http://web.bentley.edu/empl/c/ncarter/vgt/) for a quick summary of the book.
-
-This review will rely on Inkscape heavily to construct answers; it's not clear what tool the author used for his drawings but it would work as well.
+## Why [Group theory](https://en.wikipedia.org/wiki/Group_theory)?
 
 +++
 
-## Why VGT for group theory?
+From the Wikipedia article:
+
+> The concept of a group is central to abstract algebra: other well-known algebraic structures, such as [rings](https://en.wikipedia.org/wiki/Ring_(mathematics) "Ring (mathematics)"), [fields](https://en.wikipedia.org/wiki/Field_(mathematics) "Field (mathematics)"), and [vector spaces](https://en.wikipedia.org/wiki/Vector_space "Vector space"), can all be seen as groups endowed with additional [operations](https://en.wikipedia.org/wiki/Operation_(mathematics) "Operation (mathematics)") and [axioms](https://en.wikipedia.org/wiki/Axiom "Axiom").
+
++++
+
+Abstract algebra is central not only to traditional mathematics but to the interpretation of deep learning models.
+
++++
+
+Additionally we'll see that group theory is a way to model all kinds of symmetry (clearly a lofty goal).
+
++++
+
+We'll heavily rely on Inkscape to construct answers; see [Inkscape](./inkscape.md) for tips and tricks.
+
++++
+
+## Why [Visual Group Theory](http://web.bentley.edu/empl/c/ncarter/vgt/) (VGT) for group theory?
 
 +++
 
