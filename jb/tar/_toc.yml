@@ -146,6 +146,10 @@ parts:
   - caption: Bayesian Inference
     chapters:
       - file: notes/sr2-review.md
+        sections:
+        - file: notes/sr2/Preface.ipynb
+      - file: notes/sr2/01.ipynb
+      - file: notes/sr2/02-R.ipynb
       - file: notes/rethinking/practice-6.md
       - file: notes/rethinking/practice-7.md
       - file: notes/rethinking/practice-8.md

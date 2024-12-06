@@ -86,22 +86,6 @@ See also [davidvandebunte/rethinking: GitHub][drh].
 
 +++
 
-## 2.3. Components of the model
-
-### 2.3.2. Definitions
-
-By far the most confusing definition given here is for the likelihood. In this book, a 'likelihood'
-will refer to a distribution function assigned to an observed variable. In this section, for
-example, the 'likelihood' is the binomial distribution. According to the author, this is the
-language used in 'conventional' statistics as well. The author often calls this the 'likelihood' but
-it is a function, of course, because any probability distribution is a function.
-
-[lf]: https://en.wikipedia.org/wiki/Likelihood_function
-
-In non-Bayesian statistics and in particular on Wikipedia the definition of the likelihood function
-is completely different and denoted with $\mathcal{L}$. See the author's footnote and [Likelihood
-function][lf].
-
 ## 3.3. Sampling to simulate prediction
 
 ### 3.3.1. Dummy data
