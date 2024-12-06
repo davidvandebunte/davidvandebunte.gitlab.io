@@ -73,53 +73,11 @@ The errata is clean and up-to-date; see [VGT - Errata](http://web.bentley.edu/em
 
 +++
 
-## Tags
+### Solutions
 
 +++
 
-We'll use these tags throughout this review:
-
-+++
-
-### 📑: Available answer
-
-+++
-
-This review uses 📑 on questions to indicate an answer to the question is available at the end of the book. Other books mark questions that have an answer available in the back of the book with an asterisk or some other symbol, but for some reason this author chose not to do so.
-
-These answers are also included inline in this Jupyer Book, partially because this review is essentially an answer key already (with another student's answers). A second benefit to providing these solutions inline is an opportunity to fix the author's answers (based on in particular, the errata) or comment on them. The third benefit is providing these answers directly next to the solution, to avoid the [Split attention effect](https://en.wikipedia.org/wiki/Split_attention_effect) (when that might be desired).
-
-+++
-
-### ⚠ (or ⚠️): Known issue
-
-+++
-
-We'll mark questions and sections with a ⚠ if one should reference the errata before starting. We won't do this for typos but only non-trivial problems where it would be helpful to see the errata before reading or trying to answer a question.
-
-+++
-
-### 🕳️: Appendix issue
-
-+++
-
-Sometimes both a question and its answer have issues (the author was having a bad day). We'll use 🕳️ rather than 📑 when an answer has issues so we don't check the errata only when we start the question (see [VGT Errata § Appendix](http://web.bentley.edu/empl/c/ncarter/vgt/errata.html#appendix)).
-
-+++
-
-### 🔨: Work in progress
-
-+++
-
-Some questions don't have complete answers, either because we decided it didn't seem valuable to finish answering the question (there was little insight to be gained) or the question was simply too difficult. Comments on how to move forward are always welcome!
-
-+++
-
-### 📌: Unresolved issue
-
-+++
-
-Some content still appears to be incorrect, and the issue is not mentioned in the errata. Although these are often not critical enough to bring up to the author to be posted in the errata, if you feel they are an issue as well then you may do so.
+Other books mark questions that have an answer available in the back of the book with an asterisk or some other symbol, but for some reason this author chose not to do so.
 
 +++
 
