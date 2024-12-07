@@ -6,7 +6,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.11.5
+    jupytext_version: 1.16.4
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
@@ -15,7 +15,11 @@ kernelspec:
 
 # Split VCS repository
 
++++
+
 ## Test
+
++++
 
 A new version control repository exists, with code/notes split out from another repository. Implicit
 in starting a new project is making a decision whether to create a new repository or work in a new
@@ -36,11 +40,19 @@ If you feel uncertain about what your non-split options are, consider these Duck
 - `!glab`
 - `!gh`
 
++++
+
 ## Value
+
++++
 
 In general, this approach encourages independence and isolation.
 
++++
+
 ### Dependency Management
+
++++
 
 [ca]: ./containerize-application.md
 
@@ -52,44 +64,35 @@ for code that has nearly zero special dependencies. For example:
 - git
 - python (without packages)
 
++++
+
 ### Speed
+
++++
 
 [mpdn]: https://medium.com/@mattklein123/monorepos-please-dont-e9a279be011b
 [mvm]: https://chengl.com/multirepo-vs-monorepo/
 
-Search. You can expect `git grep` and `git log -G` to slow down as the size of a repository
-increases. What if you limit your search to a directory, though?
+Search. You can expect `git grep` and `git log -G` to slow down as the size of a repository increases.
 
-Pulls. How long does it take to pull the repository to a new developer's machine? If your `.git`
-directory is large, then it will take a long time. The more repos you merge (the bigger your
-monorepo), the slower this gets. So you have to take more time to think about keeping history small.
+Pulls. How long does it take to pull the repository to a new developer's machine? If your `.git` directory is large, then it will take a long time. The more repos you merge (the bigger your monorepo), the slower this gets. So you have to take more time to think about keeping history small.
 
 See also "VCS Scalability" in [Monorepos: Please don’t!][mpdn], "Tooling" in [Multirepo vs
 Monorepo][mvm], and "Scalability Challenges" in `!w Monorepo`.
 
-### Publication
-
-[sn]: ./share-notes.md
-
-See [Share Notes][sn]. We often need to split across the public/private divide. You can do this
-without splitting repositories; instead fork the public repository and create a private "backup"
-repository to push to.
-
-The downside is if you are regularly using your fork/branch, you'll be constantly rebasing that code
-on the upstream until it is merged.
++++
 
 ## Cost
 
-[aom]: https://danluu.com/monorepo/
++++
 
 In general, this approach encourages shared responsibility and centralization.
 
-### Search
-
-For example, so you can search only your personal notes repo for some thought you had. A web search
-is much less effective and flexible than `git grep` (even if you know which site to search).
++++
 
 ### Modularization Premium
+
++++
 
 [smb]: https://martinfowler.com/articles/microservice-trade-offs.html#boundaries
 [mp]: https://martinfowler.com/bliki/MicroservicePremium.html
@@ -117,7 +120,7 @@ to contribute to because it has so many "conceptual" dependencies.
 
 [mmm]: https://notes.burke.libbey.me/metarepo/
 
-See "Tooling" in [Monorepo, Manyrepo, Metarepo][mmm] and [Advantages of monorepos][aom]. An
+See "Tooling" in [Monorepo, Manyrepo, Metarepo][mmm] and [Advantages of monorepos](https://danluu.com/monorepo/). An
 unmentioned advantage to the monorepo approach potentially lets you use only git rather than the
 cross-project options offered by GitLab and GitHub (tying you to their platforms).
 
@@ -132,9 +135,9 @@ They have separate repositories so they can have their own code formatting stand
 
 ### Simpler Reorganization
 
-See "Simplified organization" in [Advantages of monorepos][aom]. When you want to reorganize docker
+See "Simplified organization" in [Advantages of monorepos](https://danluu.com/monorepo/). When you want to reorganize docker
 boundaries or "projects" in general you can do so without going to GitLab or GitHub. Consider the
-value in organizing notes in general; see [](./organize-notes.md).
+value in organizing notes in general; see [Organize notes](./organize-notes.md).
 
 ### Forced Collaboration
 
@@ -146,10 +149,5 @@ See [Monorepo: please do!][mpd].
 
 If you only have one or a few repos, it's much easier to review all the commits that one person or
 the team did in a sprint.
-
-% ### vim
-
-% In a manyrepo setup you should have one vim instance per repo, in a monorepo setup you have a vim
-% instance per directory.
 
 % TODO: improve-split-vcs-repository.md

@@ -3,7 +3,7 @@ let s:so_save = &g:so | let s:siso_save = &g:siso | setg so=0 siso=0 | setl so=-
 let v:this_session=expand("<sfile>:p")
 silent only
 silent tabonly
-cd ~/repo1_public
+cd ~/davidvandebunte.gitlab.io
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
@@ -108,14 +108,14 @@ keepjumps exe s:l
 normal! zt
 keepjumps 17
 normal! 03|
-lcd ~/repo1_public
+lcd ~/davidvandebunte.gitlab.io
 wincmd w
 argglobal
-if bufexists(fnamemodify("~/repo1_public/packaging/Dockerfile", ":p")) | buffer ~/repo1_public/packaging/Dockerfile | else | edit ~/repo1_public/packaging/Dockerfile | endif
+if bufexists(fnamemodify("~/davidvandebunte.gitlab.io/packaging/Dockerfile", ":p")) | buffer ~/davidvandebunte.gitlab.io/packaging/Dockerfile | else | edit ~/davidvandebunte.gitlab.io/packaging/Dockerfile | endif
 if &buftype ==# 'terminal'
-  silent file ~/repo1_public/packaging/Dockerfile
+  silent file ~/davidvandebunte.gitlab.io/packaging/Dockerfile
 endif
-balt ~/repo1_public/packaging/build-image
+balt ~/davidvandebunte.gitlab.io/packaging/build-image
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -132,12 +132,12 @@ keepjumps exe s:l
 normal! zt
 keepjumps 9
 normal! 044|
-lcd ~/repo1_public
+lcd ~/davidvandebunte.gitlab.io
 wincmd w
 argglobal
-if bufexists(fnamemodify("~/repo1_public/jb/rethinking/install/with-system-packages", ":p")) | buffer ~/repo1_public/jb/rethinking/install/with-system-packages | else | edit ~/repo1_public/jb/rethinking/install/with-system-packages | endif
+if bufexists(fnamemodify("~/davidvandebunte.gitlab.io/jb/rethinking/install/with-system-packages", ":p")) | buffer ~/davidvandebunte.gitlab.io/jb/rethinking/install/with-system-packages | else | edit ~/davidvandebunte.gitlab.io/jb/rethinking/install/with-system-packages | endif
 if &buftype ==# 'terminal'
-  silent file ~/repo1_public/jb/rethinking/install/with-system-packages
+  silent file ~/davidvandebunte.gitlab.io/jb/rethinking/install/with-system-packages
 endif
 setlocal fdm=manual
 setlocal fde=0
@@ -155,14 +155,14 @@ keepjumps exe s:l
 normal! zt
 keepjumps 20
 normal! 037|
-lcd ~/repo1_public
+lcd ~/davidvandebunte.gitlab.io
 wincmd w
 argglobal
-if bufexists(fnamemodify("~/repo1_public/packaging/tag", ":p")) | buffer ~/repo1_public/packaging/tag | else | edit ~/repo1_public/packaging/tag | endif
+if bufexists(fnamemodify("~/davidvandebunte.gitlab.io/packaging/tag", ":p")) | buffer ~/davidvandebunte.gitlab.io/packaging/tag | else | edit ~/davidvandebunte.gitlab.io/packaging/tag | endif
 if &buftype ==# 'terminal'
-  silent file ~/repo1_public/packaging/tag
+  silent file ~/davidvandebunte.gitlab.io/packaging/tag
 endif
-balt ~/repo1_public/packaging/build-image
+balt ~/davidvandebunte.gitlab.io/packaging/build-image
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -179,14 +179,14 @@ keepjumps exe s:l
 normal! zt
 keepjumps 3
 normal! 0
-lcd ~/repo1_public
+lcd ~/davidvandebunte.gitlab.io
 wincmd w
 argglobal
-if bufexists(fnamemodify("~/repo1_public/WORKSPACE", ":p")) | buffer ~/repo1_public/WORKSPACE | else | edit ~/repo1_public/WORKSPACE | endif
+if bufexists(fnamemodify("~/davidvandebunte.gitlab.io/WORKSPACE", ":p")) | buffer ~/davidvandebunte.gitlab.io/WORKSPACE | else | edit ~/davidvandebunte.gitlab.io/WORKSPACE | endif
 if &buftype ==# 'terminal'
-  silent file ~/repo1_public/WORKSPACE
+  silent file ~/davidvandebunte.gitlab.io/WORKSPACE
 endif
-balt ~/repo1_public/packaging/build-image
+balt ~/davidvandebunte.gitlab.io/packaging/build-image
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -205,11 +205,11 @@ keepjumps 46
 normal! 0
 wincmd w
 argglobal
-if bufexists(fnamemodify("~/repo1_public/BUILD", ":p")) | buffer ~/repo1_public/BUILD | else | edit ~/repo1_public/BUILD | endif
+if bufexists(fnamemodify("~/davidvandebunte.gitlab.io/BUILD", ":p")) | buffer ~/davidvandebunte.gitlab.io/BUILD | else | edit ~/davidvandebunte.gitlab.io/BUILD | endif
 if &buftype ==# 'terminal'
-  silent file ~/repo1_public/BUILD
+  silent file ~/davidvandebunte.gitlab.io/BUILD
 endif
-balt ~/repo1_public/packaging/build-image
+balt ~/davidvandebunte.gitlab.io/packaging/build-image
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -226,14 +226,14 @@ keepjumps exe s:l
 normal! zt
 keepjumps 2
 normal! 05|
-lcd ~/repo1_public
+lcd ~/davidvandebunte.gitlab.io
 wincmd w
 argglobal
-if bufexists(fnamemodify("~/repo1_public/jb/BUILD", ":p")) | buffer ~/repo1_public/jb/BUILD | else | edit ~/repo1_public/jb/BUILD | endif
+if bufexists(fnamemodify("~/davidvandebunte.gitlab.io/jb/BUILD", ":p")) | buffer ~/davidvandebunte.gitlab.io/jb/BUILD | else | edit ~/davidvandebunte.gitlab.io/jb/BUILD | endif
 if &buftype ==# 'terminal'
-  silent file ~/repo1_public/jb/BUILD
+  silent file ~/davidvandebunte.gitlab.io/jb/BUILD
 endif
-balt ~/repo1_public/packaging/build-image
+balt ~/davidvandebunte.gitlab.io/packaging/build-image
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -250,14 +250,14 @@ keepjumps exe s:l
 normal! zt
 keepjumps 27
 normal! 08|
-lcd ~/repo1_public
+lcd ~/davidvandebunte.gitlab.io
 wincmd w
 argglobal
-if bufexists(fnamemodify("~/repo1_public/jb/tar/_toc.yml", ":p")) | buffer ~/repo1_public/jb/tar/_toc.yml | else | edit ~/repo1_public/jb/tar/_toc.yml | endif
+if bufexists(fnamemodify("~/davidvandebunte.gitlab.io/jb/tar/_toc.yml", ":p")) | buffer ~/davidvandebunte.gitlab.io/jb/tar/_toc.yml | else | edit ~/davidvandebunte.gitlab.io/jb/tar/_toc.yml | endif
 if &buftype ==# 'terminal'
-  silent file ~/repo1_public/jb/tar/_toc.yml
+  silent file ~/davidvandebunte.gitlab.io/jb/tar/_toc.yml
 endif
-balt ~/repo1_public/build_scripts/build-bazel
+balt ~/davidvandebunte.gitlab.io/build_scripts/build-bazel
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -276,11 +276,11 @@ keepjumps 3
 normal! 07|
 wincmd w
 argglobal
-if bufexists(fnamemodify("~/repo1_public/build_scripts/build-bazel", ":p")) | buffer ~/repo1_public/build_scripts/build-bazel | else | edit ~/repo1_public/build_scripts/build-bazel | endif
+if bufexists(fnamemodify("~/davidvandebunte.gitlab.io/build_scripts/build-bazel", ":p")) | buffer ~/davidvandebunte.gitlab.io/build_scripts/build-bazel | else | edit ~/davidvandebunte.gitlab.io/build_scripts/build-bazel | endif
 if &buftype ==# 'terminal'
-  silent file ~/repo1_public/build_scripts/build-bazel
+  silent file ~/davidvandebunte.gitlab.io/build_scripts/build-bazel
 endif
-balt ~/repo1_public/WORKSPACE
+balt ~/davidvandebunte.gitlab.io/WORKSPACE
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -299,11 +299,11 @@ keepjumps 24
 normal! 018|
 wincmd w
 argglobal
-if bufexists(fnamemodify("~/repo1_public/build_scripts/build-bazel", ":p")) | buffer ~/repo1_public/build_scripts/build-bazel | else | edit ~/repo1_public/build_scripts/build-bazel | endif
+if bufexists(fnamemodify("~/davidvandebunte.gitlab.io/build_scripts/build-bazel", ":p")) | buffer ~/davidvandebunte.gitlab.io/build_scripts/build-bazel | else | edit ~/davidvandebunte.gitlab.io/build_scripts/build-bazel | endif
 if &buftype ==# 'terminal'
-  silent file ~/repo1_public/build_scripts/build-bazel
+  silent file ~/davidvandebunte.gitlab.io/build_scripts/build-bazel
 endif
-balt ~/repo1_public/WORKSPACE
+balt ~/davidvandebunte.gitlab.io/WORKSPACE
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -322,11 +322,11 @@ keepjumps 26
 normal! 018|
 wincmd w
 argglobal
-if bufexists(fnamemodify("~/repo1_public/build_scripts/build-bazel", ":p")) | buffer ~/repo1_public/build_scripts/build-bazel | else | edit ~/repo1_public/build_scripts/build-bazel | endif
+if bufexists(fnamemodify("~/davidvandebunte.gitlab.io/build_scripts/build-bazel", ":p")) | buffer ~/davidvandebunte.gitlab.io/build_scripts/build-bazel | else | edit ~/davidvandebunte.gitlab.io/build_scripts/build-bazel | endif
 if &buftype ==# 'terminal'
-  silent file ~/repo1_public/build_scripts/build-bazel
+  silent file ~/davidvandebunte.gitlab.io/build_scripts/build-bazel
 endif
-balt ~/repo1_public/WORKSPACE
+balt ~/davidvandebunte.gitlab.io/WORKSPACE
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
