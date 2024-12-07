@@ -94,12 +94,17 @@ See also [davidvandebunte/rethinking: GitHub][drh].
 
 Bayesian models are always generative, capable of simulating *observations*.
 
-If you search for *generative* you'll see the author "defines" it again at the start of section
-3.3.2 (correctly this time). See also [](./define-generative-model.md).
+If you search for *generative* you'll see the author "defines" it again at the start of section 3.3.2 (correctly this time). See also [Define generative model](./define-generative-model.md).
+
++++
 
 ## 4.3. Gaussian model of height
 
++++
+
 ### 4.3.1. The data
+
++++
 
 [aap]: https://en.wikipedia.org/wiki/Accuracy_and_precision
 
@@ -109,7 +114,11 @@ distributions later on:
 This function is not introduced or documented well; it will be taught by example. The name refers to
 precision as in [Accuracy and precision][aap].
 
++++
+
 ### 4.4.3. Interpreting the posterior distribution
+
++++
 
 [si]: https://en.wikipedia.org/wiki/Statistical_inference
 
@@ -144,6 +153,8 @@ It should be (see [Issue #319][319]):
 # draw PI region for line
 shade( mu.PI , weight.seq )
 ```
+
++++
 
 ## 4.5. Curves from lines
 
@@ -188,6 +199,8 @@ See also this comment in section **14.3**:
 
 > We standardized the variables, so we can use our default priors for standardized linear
 > regression.
+
++++
 
 ## 5.1. Spurious assocation
 

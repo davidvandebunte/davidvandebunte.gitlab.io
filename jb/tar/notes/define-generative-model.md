@@ -6,7 +6,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.11.2
+    jupytext_version: 1.16.4
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
@@ -15,13 +15,23 @@ kernelspec:
 
 # Define generative model
 
++++
+
 ## Value
+
++++
 
 The term is popular. Does it provide a useful abstraction?
 
++++
+
 ## Cost
 
++++
+
 ### In practice
+
++++
 
 The term is part of the name GAN, which is a model, so it must be one (at least to the author in
 2014):
@@ -42,7 +52,11 @@ According to [SR2](./sr2-review.md), all Bayesian models are generative. It's li
 "generative" was initially created to provide a hypernym (umbrella term) for both Bayesian models
 and GANs, which both generate observations (later AR models like PixelRNN were added to the mix).
 
++++
+
 ### Tertiary definition
+
++++
 
 In the following article, Wikipedia defines (going back to 2002, 2004 references) what a generative
 model is and at least two things it is not:
