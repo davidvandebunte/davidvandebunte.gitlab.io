@@ -15,15 +15,16 @@ else
 endif
 badd +48 WORKSPACE
 badd +2 BUILD
-badd +25 build_scripts/build-bazel
+badd +26 build_scripts/build-bazel
 badd +1 build_scripts
 badd +5 packaging/tag
-badd +9 packaging/build-image
+badd +1 packaging/build-image
 badd +1 jb/BUILD
 badd +1 jb/rethinking/install/with-system-packages
 badd +4 jb/rethinking/install/rethinking.R
-badd +0 packaging/Dockerfile
-badd +0 jb/tar/_toc.yml
+badd +1 packaging/Dockerfile
+badd +1 jb/tar/_toc.yml
+badd +8 start-jln
 argglobal
 %argdel
 $argadd WORKSPACE
@@ -62,6 +63,10 @@ wincmd w
 wincmd w
 wincmd w
 wincmd w
+wincmd _ | wincmd |
+split
+1wincmd k
+wincmd w
 wincmd w
 wincmd w
 let &splitbelow = s:save_splitbelow
@@ -88,9 +93,12 @@ exe 'vert 6resize ' . ((&columns * 120 + 360) / 720)
 exe '7resize ' . ((&lines * 121 + 96) / 193)
 exe 'vert 7resize ' . ((&columns * 120 + 360) / 720)
 exe 'vert 8resize ' . ((&columns * 120 + 360) / 720)
+exe '9resize ' . ((&lines * 95 + 96) / 193)
 exe 'vert 9resize ' . ((&columns * 120 + 360) / 720)
+exe '10resize ' . ((&lines * 95 + 96) / 193)
 exe 'vert 10resize ' . ((&columns * 120 + 360) / 720)
-exe 'vert 11resize ' . ((&columns * 115 + 360) / 720)
+exe 'vert 11resize ' . ((&columns * 120 + 360) / 720)
+exe 'vert 12resize ' . ((&columns * 115 + 360) / 720)
 argglobal
 setlocal fdm=manual
 setlocal fde=0
@@ -139,6 +147,7 @@ if bufexists(fnamemodify("~/davidvandebunte.gitlab.io/jb/rethinking/install/with
 if &buftype ==# 'terminal'
   silent file ~/davidvandebunte.gitlab.io/jb/rethinking/install/with-system-packages
 endif
+balt ~/davidvandebunte.gitlab.io/packaging/build-image
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -244,12 +253,12 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 27 - ((26 * winheight(0) + 60) / 121)
+let s:l = 14 - ((13 * winheight(0) + 60) / 121)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 27
-normal! 08|
+keepjumps 14
+normal! 0
 lcd ~/davidvandebunte.gitlab.io
 wincmd w
 argglobal
@@ -276,6 +285,75 @@ keepjumps 3
 normal! 07|
 wincmd w
 argglobal
+if bufexists(fnamemodify("~/davidvandebunte.gitlab.io/start-jln", ":p")) | buffer ~/davidvandebunte.gitlab.io/start-jln | else | edit ~/davidvandebunte.gitlab.io/start-jln | endif
+if &buftype ==# 'terminal'
+  silent file ~/davidvandebunte.gitlab.io/start-jln
+endif
+balt ~/davidvandebunte.gitlab.io/build_scripts/build-bazel
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+silent! normal! zE
+let &fdl = &fdl
+let s:l = 8 - ((7 * winheight(0) + 47) / 95)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 8
+normal! 0
+wincmd w
+argglobal
+if bufexists(fnamemodify("~/davidvandebunte.gitlab.io/packaging/tag", ":p")) | buffer ~/davidvandebunte.gitlab.io/packaging/tag | else | edit ~/davidvandebunte.gitlab.io/packaging/tag | endif
+if &buftype ==# 'terminal'
+  silent file ~/davidvandebunte.gitlab.io/packaging/tag
+endif
+balt ~/davidvandebunte.gitlab.io/start-jln
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+silent! normal! zE
+let &fdl = &fdl
+let s:l = 4 - ((3 * winheight(0) + 47) / 95)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 4
+normal! 0
+wincmd w
+argglobal
+if bufexists(fnamemodify("~/davidvandebunte.gitlab.io/packaging/tag", ":p")) | buffer ~/davidvandebunte.gitlab.io/packaging/tag | else | edit ~/davidvandebunte.gitlab.io/packaging/tag | endif
+if &buftype ==# 'terminal'
+  silent file ~/davidvandebunte.gitlab.io/packaging/tag
+endif
+balt ~/davidvandebunte.gitlab.io/build_scripts/build-bazel
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+silent! normal! zE
+let &fdl = &fdl
+let s:l = 5 - ((4 * winheight(0) + 95) / 191)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 5
+normal! 0
+wincmd w
+argglobal
 if bufexists(fnamemodify("~/davidvandebunte.gitlab.io/build_scripts/build-bazel", ":p")) | buffer ~/davidvandebunte.gitlab.io/build_scripts/build-bazel | else | edit ~/davidvandebunte.gitlab.io/build_scripts/build-bazel | endif
 if &buftype ==# 'terminal'
   silent file ~/davidvandebunte.gitlab.io/build_scripts/build-bazel
@@ -298,53 +376,7 @@ normal! zt
 keepjumps 24
 normal! 018|
 wincmd w
-argglobal
-if bufexists(fnamemodify("~/davidvandebunte.gitlab.io/build_scripts/build-bazel", ":p")) | buffer ~/davidvandebunte.gitlab.io/build_scripts/build-bazel | else | edit ~/davidvandebunte.gitlab.io/build_scripts/build-bazel | endif
-if &buftype ==# 'terminal'
-  silent file ~/davidvandebunte.gitlab.io/build_scripts/build-bazel
-endif
-balt ~/davidvandebunte.gitlab.io/WORKSPACE
-setlocal fdm=manual
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-silent! normal! zE
-let &fdl = &fdl
-let s:l = 26 - ((25 * winheight(0) + 95) / 191)
-if s:l < 1 | let s:l = 1 | endif
-keepjumps exe s:l
-normal! zt
-keepjumps 26
-normal! 018|
-wincmd w
-argglobal
-if bufexists(fnamemodify("~/davidvandebunte.gitlab.io/build_scripts/build-bazel", ":p")) | buffer ~/davidvandebunte.gitlab.io/build_scripts/build-bazel | else | edit ~/davidvandebunte.gitlab.io/build_scripts/build-bazel | endif
-if &buftype ==# 'terminal'
-  silent file ~/davidvandebunte.gitlab.io/build_scripts/build-bazel
-endif
-balt ~/davidvandebunte.gitlab.io/WORKSPACE
-setlocal fdm=manual
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-silent! normal! zE
-let &fdl = &fdl
-let s:l = 24 - ((23 * winheight(0) + 95) / 191)
-if s:l < 1 | let s:l = 1 | endif
-keepjumps exe s:l
-normal! zt
-keepjumps 24
-normal! 018|
-wincmd w
-7wincmd w
+11wincmd w
 exe '1resize ' . ((&lines * 47 + 96) / 193)
 exe 'vert 1resize ' . ((&columns * 120 + 360) / 720)
 exe '2resize ' . ((&lines * 47 + 96) / 193)
@@ -360,9 +392,12 @@ exe 'vert 6resize ' . ((&columns * 120 + 360) / 720)
 exe '7resize ' . ((&lines * 121 + 96) / 193)
 exe 'vert 7resize ' . ((&columns * 120 + 360) / 720)
 exe 'vert 8resize ' . ((&columns * 120 + 360) / 720)
+exe '9resize ' . ((&lines * 95 + 96) / 193)
 exe 'vert 9resize ' . ((&columns * 120 + 360) / 720)
+exe '10resize ' . ((&lines * 95 + 96) / 193)
 exe 'vert 10resize ' . ((&columns * 120 + 360) / 720)
-exe 'vert 11resize ' . ((&columns * 115 + 360) / 720)
+exe 'vert 11resize ' . ((&columns * 120 + 360) / 720)
+exe 'vert 12resize ' . ((&columns * 115 + 360) / 720)
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
