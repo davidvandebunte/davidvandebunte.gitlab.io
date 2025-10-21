@@ -17,7 +17,7 @@ badd +48 WORKSPACE
 badd +2 BUILD
 badd +26 build_scripts/build-bazel
 badd +1 build_scripts
-badd +5 packaging/tag
+badd +1 packaging/tag
 badd +1 packaging/build-image
 badd +1 jb/BUILD
 badd +1 jb/rethinking/install/with-system-packages
@@ -25,6 +25,7 @@ badd +4 jb/rethinking/install/rethinking.R
 badd +1 packaging/Dockerfile
 badd +1 jb/tar/_toc.yml
 badd +8 start-jln
+badd +0 jb/tar/notes/zathura.md
 argglobal
 %argdel
 $argadd WORKSPACE
@@ -79,26 +80,26 @@ set winheight=1
 set winminwidth=0
 set winwidth=1
 exe '1resize ' . ((&lines * 47 + 96) / 193)
-exe 'vert 1resize ' . ((&columns * 120 + 360) / 720)
+exe 'vert 1resize ' . ((&columns * 119 + 360) / 720)
 exe '2resize ' . ((&lines * 47 + 96) / 193)
-exe 'vert 2resize ' . ((&columns * 120 + 360) / 720)
+exe 'vert 2resize ' . ((&columns * 119 + 360) / 720)
 exe '3resize ' . ((&lines * 47 + 96) / 193)
-exe 'vert 3resize ' . ((&columns * 120 + 360) / 720)
+exe 'vert 3resize ' . ((&columns * 119 + 360) / 720)
 exe '4resize ' . ((&lines * 47 + 96) / 193)
-exe 'vert 4resize ' . ((&columns * 120 + 360) / 720)
+exe 'vert 4resize ' . ((&columns * 119 + 360) / 720)
 exe '5resize ' . ((&lines * 63 + 96) / 193)
-exe 'vert 5resize ' . ((&columns * 120 + 360) / 720)
-exe '6resize ' . ((&lines * 5 + 96) / 193)
-exe 'vert 6resize ' . ((&columns * 120 + 360) / 720)
-exe '7resize ' . ((&lines * 121 + 96) / 193)
-exe 'vert 7resize ' . ((&columns * 120 + 360) / 720)
-exe 'vert 8resize ' . ((&columns * 120 + 360) / 720)
+exe 'vert 5resize ' . ((&columns * 119 + 360) / 720)
+exe '6resize ' . ((&lines * 63 + 96) / 193)
+exe 'vert 6resize ' . ((&columns * 119 + 360) / 720)
+exe '7resize ' . ((&lines * 63 + 96) / 193)
+exe 'vert 7resize ' . ((&columns * 119 + 360) / 720)
+exe 'vert 8resize ' . ((&columns * 119 + 360) / 720)
 exe '9resize ' . ((&lines * 95 + 96) / 193)
-exe 'vert 9resize ' . ((&columns * 120 + 360) / 720)
+exe 'vert 9resize ' . ((&columns * 119 + 360) / 720)
 exe '10resize ' . ((&lines * 95 + 96) / 193)
-exe 'vert 10resize ' . ((&columns * 120 + 360) / 720)
+exe 'vert 10resize ' . ((&columns * 119 + 360) / 720)
 exe 'vert 11resize ' . ((&columns * 120 + 360) / 720)
-exe 'vert 12resize ' . ((&columns * 115 + 360) / 720)
+exe 'vert 12resize ' . ((&columns * 119 + 360) / 720)
 argglobal
 setlocal fdm=manual
 setlocal fde=0
@@ -158,7 +159,7 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 20 - ((19 * winheight(0) + 23) / 47)
+let s:l = 20 - ((2 * winheight(0) + 23) / 47)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
@@ -229,7 +230,7 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 2 - ((1 * winheight(0) + 2) / 5)
+let s:l = 2 - ((1 * winheight(0) + 31) / 63)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
@@ -253,7 +254,7 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 31 - ((30 * winheight(0) + 60) / 121)
+let s:l = 31 - ((3 * winheight(0) + 31) / 63)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
@@ -277,12 +278,12 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 1 - ((0 * winheight(0) + 95) / 191)
+let s:l = 189 - ((188 * winheight(0) + 95) / 191)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 1
-normal! 03|
+keepjumps 189
+normal! 023|
 wincmd w
 argglobal
 if bufexists(fnamemodify("~/davidvandebunte.gitlab.io/start-jln", ":p")) | buffer ~/davidvandebunte.gitlab.io/start-jln | else | edit ~/davidvandebunte.gitlab.io/start-jln | endif
@@ -300,11 +301,11 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 10 - ((9 * winheight(0) + 47) / 95)
+let s:l = 1 - ((0 * winheight(0) + 47) / 95)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 10
+keepjumps 1
 normal! 0
 wincmd w
 argglobal
@@ -323,19 +324,19 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 5 - ((4 * winheight(0) + 47) / 95)
+let s:l = 1 - ((0 * winheight(0) + 47) / 95)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 5
+keepjumps 1
 normal! 0
 wincmd w
 argglobal
-if bufexists(fnamemodify("~/davidvandebunte.gitlab.io/packaging/tag", ":p")) | buffer ~/davidvandebunte.gitlab.io/packaging/tag | else | edit ~/davidvandebunte.gitlab.io/packaging/tag | endif
+if bufexists(fnamemodify("~/davidvandebunte.gitlab.io/jb/tar/notes/zathura.md", ":p")) | buffer ~/davidvandebunte.gitlab.io/jb/tar/notes/zathura.md | else | edit ~/davidvandebunte.gitlab.io/jb/tar/notes/zathura.md | endif
 if &buftype ==# 'terminal'
-  silent file ~/davidvandebunte.gitlab.io/packaging/tag
+  silent file ~/davidvandebunte.gitlab.io/jb/tar/notes/zathura.md
 endif
-balt ~/davidvandebunte.gitlab.io/build_scripts/build-bazel
+balt ~/davidvandebunte.gitlab.io/packaging/tag
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -346,12 +347,12 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 5 - ((4 * winheight(0) + 95) / 191)
+let s:l = 9 - ((8 * winheight(0) + 95) / 191)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 5
-normal! 017|
+keepjumps 9
+normal! 0
 wincmd w
 argglobal
 if bufexists(fnamemodify("~/davidvandebunte.gitlab.io/build_scripts/build-bazel", ":p")) | buffer ~/davidvandebunte.gitlab.io/build_scripts/build-bazel | else | edit ~/davidvandebunte.gitlab.io/build_scripts/build-bazel | endif
@@ -369,35 +370,35 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 24 - ((23 * winheight(0) + 95) / 191)
+let s:l = 1 - ((0 * winheight(0) + 95) / 191)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 24
-normal! 018|
+keepjumps 1
+normal! 017|
 wincmd w
-7wincmd w
+8wincmd w
 exe '1resize ' . ((&lines * 47 + 96) / 193)
-exe 'vert 1resize ' . ((&columns * 120 + 360) / 720)
+exe 'vert 1resize ' . ((&columns * 119 + 360) / 720)
 exe '2resize ' . ((&lines * 47 + 96) / 193)
-exe 'vert 2resize ' . ((&columns * 120 + 360) / 720)
+exe 'vert 2resize ' . ((&columns * 119 + 360) / 720)
 exe '3resize ' . ((&lines * 47 + 96) / 193)
-exe 'vert 3resize ' . ((&columns * 120 + 360) / 720)
+exe 'vert 3resize ' . ((&columns * 119 + 360) / 720)
 exe '4resize ' . ((&lines * 47 + 96) / 193)
-exe 'vert 4resize ' . ((&columns * 120 + 360) / 720)
+exe 'vert 4resize ' . ((&columns * 119 + 360) / 720)
 exe '5resize ' . ((&lines * 63 + 96) / 193)
-exe 'vert 5resize ' . ((&columns * 120 + 360) / 720)
-exe '6resize ' . ((&lines * 5 + 96) / 193)
-exe 'vert 6resize ' . ((&columns * 120 + 360) / 720)
-exe '7resize ' . ((&lines * 121 + 96) / 193)
-exe 'vert 7resize ' . ((&columns * 120 + 360) / 720)
-exe 'vert 8resize ' . ((&columns * 120 + 360) / 720)
+exe 'vert 5resize ' . ((&columns * 119 + 360) / 720)
+exe '6resize ' . ((&lines * 63 + 96) / 193)
+exe 'vert 6resize ' . ((&columns * 119 + 360) / 720)
+exe '7resize ' . ((&lines * 63 + 96) / 193)
+exe 'vert 7resize ' . ((&columns * 119 + 360) / 720)
+exe 'vert 8resize ' . ((&columns * 119 + 360) / 720)
 exe '9resize ' . ((&lines * 95 + 96) / 193)
-exe 'vert 9resize ' . ((&columns * 120 + 360) / 720)
+exe 'vert 9resize ' . ((&columns * 119 + 360) / 720)
 exe '10resize ' . ((&lines * 95 + 96) / 193)
-exe 'vert 10resize ' . ((&columns * 120 + 360) / 720)
+exe 'vert 10resize ' . ((&columns * 119 + 360) / 720)
 exe 'vert 11resize ' . ((&columns * 120 + 360) / 720)
-exe 'vert 12resize ' . ((&columns * 115 + 360) / 720)
+exe 'vert 12resize ' . ((&columns * 119 + 360) / 720)
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf

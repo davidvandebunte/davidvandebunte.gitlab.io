@@ -6,7 +6,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.16.4
+    jupytext_version: 1.16.6
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
@@ -133,17 +133,31 @@ content in 10 places).
 Worse, one team (thinking of a person, actually) wants to use `yapf`. Another wants to use `black`.
 They have separate repositories so they can have their own code formatting standard.
 
++++
+
 ### Simpler Reorganization
+
++++
 
 See "Simplified organization" in [Advantages of monorepos](https://danluu.com/monorepo/). When you want to reorganize docker
 boundaries or "projects" in general you can do so without going to GitLab or GitHub. Consider the
 value in organizing notes in general; see [Organize notes](./organize-notes.md).
+
++++
+
+Can you delete code? Ideally a monorepo puts all your code in one place, so you can quickly find all users of a function and make sure some code is unused. How do you prevent anyone from using the code, though, without it being "registered" in your central monorepo? You're assuming the monorepo has no interface that needs to be maintained; if code is self-contained it's not useful.
+
+What about customer code in the context of a business; do you need to integrate all of that? There's always an outside, as long as we have separate "teams" in one way or another. No one person or team can understand everything.
+
++++
 
 ### Forced Collaboration
 
 [mpd]: https://medium.com/@adamhjk/monorepo-please-do-3657e08a4b70
 
 See [Monorepo: please do!][mpd].
+
++++
 
 ### Simpler Retrospective
 
