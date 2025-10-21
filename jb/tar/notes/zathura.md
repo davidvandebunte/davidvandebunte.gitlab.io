@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.16.1
+    jupytext_version: 1.16.6
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
@@ -30,7 +30,9 @@ Based on [zathura](https://wiki.archlinux.org/title/Zathura), as part of machine
 xdg-mime default org.pwmt.zathura.desktop application/pdf
 ```
 
-Then you can use `xdg-open` to open a PDF from the command line, and if you click on a PDF in a file browser it will open in zathura.
+Then you can use `xdg-open` to open a PDF from the command line, and if you click on a PDF in a file browser it will open in zathura. When you download a file via Firefox, for example, you can "Show in Folder" to get it open in zathura quickly.
+
+Unfortunately zathura has no equivalent to `:Ex` in `vim` so opening Nautilus on a directory of PDF files is often the closest you can get. You can stay on your keyboard with Nautilus, it's just an annoying second window.
 
 +++
 

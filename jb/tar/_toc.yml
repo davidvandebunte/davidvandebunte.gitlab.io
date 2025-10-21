@@ -187,6 +187,7 @@ parts:
         - file: notes/latex.md
         - file: notes/rclone.md
         - file: notes/zathura.md
+        - file: notes/blender.ipynb
   - caption: Share
     chapters:
       - file: notes/convert-to-plain-text.md
