@@ -278,12 +278,12 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 189 - ((188 * winheight(0) + 95) / 191)
+let s:l = 191 - ((190 * winheight(0) + 95) / 191)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 189
-normal! 023|
+keepjumps 191
+normal! 018|
 wincmd w
 argglobal
 if bufexists(fnamemodify("~/davidvandebunte.gitlab.io/start-jln", ":p")) | buffer ~/davidvandebunte.gitlab.io/start-jln | else | edit ~/davidvandebunte.gitlab.io/start-jln | endif

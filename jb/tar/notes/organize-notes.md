@@ -6,7 +6,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.16.4
+    jupytext_version: 1.16.6
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
@@ -289,11 +289,7 @@ Have you ever noticed how easy it is to focus when you're organizing notes? Or c
 
 +++
 
-You've re-read a (pre-determined) section of your notes, modifying it as necessary.
-
-+++
-
-Alternatively, you've specified some amount of time to give to searching for the same term you're thinking about in your notes.
+You've re-read a (pre-determined) section of your notes, modifying it as necessary. Alternatively, you've specified some amount of time to give to searching for the same term you're thinking about in your notes.
 
 +++
 
@@ -301,17 +297,15 @@ Alternatively, you've specified some amount of time to give to searching for the
 
 +++
 
-This document uses "[organize](https://en.wikipedia.org/wiki/Organizing)" without clearly defining what that means. The typical human will picture a transformation similar to the following; both pictures coming from [Professional organizing](https://en.wikipedia.org/wiki/Professional_organizing):
+This document uses "[organize](https://en.wikipedia.org/wiki/Organizing)" without clearly defining what that means. The problem with using the unadorned word is that there's no one right way to organize (a principle often stated in category theory). We must always organize around some defining [Organizing principle](https://en.wikipedia.org/wiki/Organizing_principle), that is, the way we think that organization should be done.
 
 +++
 
-![x](https://upload.wikimedia.org/wikipedia/commons/2/2a/Basement_before.jpg) | ![x](https://upload.wikimedia.org/wikipedia/commons/6/6b/Basement-after.jpg)
+Imagine a physical transformation of e.g. a basement: <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Basement_before.jpg" alt="x" width="200"/> to <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Basement-after.jpg" alt="x" width="120"/> (both pictures come from [Professional organizing](https://en.wikipedia.org/wiki/Professional_organizing)). We say there is no right way to organize, but that's almost always said in the context of physical objects. Imagine you're a kid with more construction toys (e.g. LEGOs) that can fit in one box. You could organize them by color, shape, or the set they came in ([Construction set](https://en.wikipedia.org/wiki/Construction_set)). The best way to organize in this case is based on what you're trying to achieve, and unfortunately you'll need to reorganize if your purpose changes. For example, if you wanted to build a particular set you'd obviously sort by set so that you find the set you're interested in and build it. If you're looking to build something totally creative, you may organize by shape. If you were looking to make something rainbow, you'd organize by color.
 
 +++
 
-The problem with using the unadorned word is that there's no one right way to organize (a principle often stated in category theory). We must always organize around some defining [Organizing principle](https://en.wikipedia.org/wiki/Organizing_principle), that is, the way we think that organization should be done.
-
-This implies that you are really just regularly doing a rewrite of your notes (build one to throw away). There's nothing necessarily wrong with this, but it does imply that you can never reach some final correct state. We consider a few optional organizing principles below to select from.
+When you're organizing conceptually you can afford to organize in every way. A [Convolutional neural network](https://en.wikipedia.org/wiki/Convolutional_neural_network) filters the original image in a variety of ways and uses all these organizations (edges, lines, background, foreground) (see for example [Visualize Filters and Feature Maps in Convolutional Neural Networks](https://machinelearningmastery.com/how-to-visualize-filters-and-feature-maps-in-convolutional-neural-networks/)). In the construction toy example, we can think of a table with the distinguishing features (columns) being the three given previously. In an LLM, the organizational unit is often a word, but sometimes sentences and paragraphs. The features are learnt based on the task ([word2vec](https://en.wikipedia.org/wiki/Word2vec)). In general, different priorities have different loss functions and the loss function builds much of the network.
 
 +++
 
@@ -319,7 +313,7 @@ This implies that you are really just regularly doing a rewrite of your notes (b
 
 +++
 
-If possible, organize [visuo-spatially](https://en.wikipedia.org/wiki/Spatial_ability). This is a natural way for people to organize and makes it easy to create mental links, in a compressed form (see [Spatial memory § Long-term spatial memory](https://en.wikipedia.org/wiki/Spatial_memory#Long-term_spatial_memory) and [Visual memory](https://en.wikipedia.org/wiki/Visual_memory)). One killer application for this kind of organization is house floor plans; these are useful for placing both permanent structures such as walls and impermanent structures like furniture. Even if e.g. you're only moving between apartments, planning where to put furniture in the new apartment with a floor plan can save time.
+If possible, organize [visuo-spatially](https://en.wikipedia.org/wiki/Spatial_ability). This is a natural way for people to organize and makes it easy to create mental links, in a compressed form (see [Spatial memory § Long-term spatial memory](https://en.wikipedia.org/wiki/Spatial_memory#Long-term_spatial_memory) and [Visual memory](https://en.wikipedia.org/wiki/Visual_memory)). One killer application for this kind of organization is house floor plans; these are useful for placing both permanent structures such as walls and impermanent structures like furniture. Even if e.g. you're only moving between apartments, planning where to put furniture in the new apartment with a floor plan can save time. You could organize down to every item you have to define a "right" place for everything. It's easy to forget what the "right" place for some obscure item like extra sunglasses or a laser measure is unless you have a map.
 
 +++
 
@@ -328,6 +322,46 @@ This is also a reasonable strategy for medical documents; eye care documents and
 +++
 
 For abstract logic, you often can't do this. Processes and procedures can be converted to a visual form (such as a wiring diagram) but are often better documented first directly as text. In a textual form, processes can be more quickly and efficiently reorganized into new processes and can be individually executed. Once a process is well-established, it may be reasonable to document it in a visual form in addition to the textual form (perhaps a third redundant form, if it's already documented in English and a programming language).
+
++++
+
+### Word
+
++++
+
+Wikipedia obviously organizes by word, and LLMs as previously discussed. In our construction toy example we also naturally organized by word: the names of the three columns of the table. If we had organized our "notes" or "book" on our toys by word, we would not have created documentation on each toy but on the organizing principles (the three columns). Too many organizing principles, and we aren't compressing the original information at all. Not enough, and we have to make deeper layers that organize the original principles into their own organizing principles.
+
++++
+
+Just as you need multiple visual maps for a house (electrical plan, foundation plan, etc.), you need multiple organizations of the same words/logic. All these aspects can go into an article, with links to cross-concepts.
+
++++
+
+Let's say you organize all your notes as commentary on Wikipedia articles. That is, you make all your articles definition articles that just comment on Wikipedia. Would it be possible to "consolidate" your notes by searching for some word (how you use the word in all articles) and then combine your independent thoughts from the various articles into a better article on the word? If your notes were well-organized, this wouldn't be possible because the all secondary articles wouldn't be defining anything about the word; they would only be linking back to the article on the word and using it in a compressed way.
+
++++
+
+We can change definitions to make them represent reality; we care about reality rather than what a bunch of words mean (a rose would smell as sweet, you can talk in German or English as long as it makes sense and we can translate). The map from words to reality is often determined by human history, but the history of category theory makes it clear that to make forward progress sometimes the definition of words needs to change.
+
++++
+
+Many websites (e.g. blogs) organize around the concept of "tags" which are single words. This approach effectively defines a word by the articles on it, but misses that the word's definition may be changing over time. The latest articles likely define the word "best" with older articles eventually becoming less relevant. The major issue with this approach is that a well-compressed truth for the meaning of the word can only discovered by a long read of many articles.
+
++++
+
+### Time (History)
+
++++
+
+Once someone has invented (or precisely defined) an English word in some useful way, it's unlikely that future human development will redefine the word significantly rather than define a new one (many short words are unused or available for reuse). For this reason, pedagogical material often ends up being organized historically and it's helpful to understand the [History of mathematics](https://en.wikipedia.org/wiki/History_of_mathematics) to understand math. One way to define "learn" is to gain the ability to reuse words others have invented rather than inefficiently re-invent them yourself (likely based on the "wrong" word).
+
++++
+
+The ubiquity of `git` is a testament to the value of retaining historical versions of records for the sake of reusing them (on discovering the new "better" way isn't better). Wikipedia is organized around words, and how a word is defined is based on the collective understanding of many humans, typically a product of history. Many times, the reasoning behind a definition isn't fully captured in the present and a full historical record is the best way to work out the full meaning.
+
++++
+
+Organizing "historically" also lets you put notes you want to read at some point in the future on the same timeline (though the future timeline may look like a DAG, because of uncertainty).
 
 +++
 
@@ -343,19 +377,15 @@ Organzing by action is also useful when you need to document a process or proced
 
 +++
 
-### Time (History)
+Often actions (when planning) are uncertain and many are rejected in the end as priorities change. From this perspective it often makes sense to refer to them and between them in a less rigid way (without links). If an action (represented as a heading) changes, then it's often not hard to find it again with a search or by looking at `git` history. Some actions are more like processes, however, and effectively serve as a definition of how to achieve some goal (code is full or function definitions).
 
 +++
 
-Once someone has invented (or precisely defined) an English word in some useful way, it's unlikely that future human development will redefine the word significantly rather than define a new one (many short words are unused or available for reuse). For this reason, pedagogical material often ends up being organized historically and it's helpful to understand the [History of mathematics](https://en.wikipedia.org/wiki/History_of_mathematics) to understand math. One way to define "learn" is to gain the ability to reuse words others have invented rather than inefficiently re-invent them yourself (likely based on the "wrong" word).
+### Operation
 
 +++
 
-The ubiquity of `git` is a testament to the value of retaining historical versions of records for the sake of reusing them (on discovering the new "better" way isn't better). Wikipedia is organized around words, and how a word is defined is based on the collective understanding of many humans, typically a product of history.
-
-+++
-
-Organizing "historically" also lets you put notes you want to read at some point in the future on the same timeline (though the future timeline may look like a DAG, because of uncertainty).
+Software often lets you undo (Ctrl-Z) or redo (Ctrl-Shift-Z) your previous operation. Most of a particular piece of software has to be organized by these predefined actions. In Jupyter, this is the cell (like a sentence or paragraph). In Inkscape, this is a 2D transformation. In Blender, this is a 3D transformation. Text editors usually undo a word or sentence.
 
 +++
 
