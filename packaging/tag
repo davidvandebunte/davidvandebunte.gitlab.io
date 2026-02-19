@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-image_name=install_rethinking
+image_name=2.0.0
 image_repo=registry.gitlab.com/davidvandebunte/davidvandebunte.gitlab.io
 image_tag=${image_repo}:${image_name}
 echo ${image_tag}

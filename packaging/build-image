@@ -12,6 +12,6 @@ DOCKER_BUILDKIT=1 docker build --progress=plain \
     -t $(./packaging/tag) \
     --file ./packaging/Dockerfile . \
     2>&1 | tee ${log_fpath}
-# Push after verifying a build.
+# Increment the `image_name` in packaging/tag and push after verifying a build.
 # docker login registry.gitlab.com -u davidvandebunte --password-stdin < ~/.gitlab_access_token
 # docker push $(./packaging/tag)
