@@ -14,7 +14,6 @@
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
   GIT_SUBMODULE_FORCE_HTTPS: "true"
-  NO_PROXY: "gitlab.com"
 
 test:
   <<: *dind_login
