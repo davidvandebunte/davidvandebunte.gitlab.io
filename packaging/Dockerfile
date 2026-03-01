@@ -1,7 +1,8 @@
-FROM quay.io/jupyter/datascience-notebook@sha256:00d82dbe3440004756616ef9b49984a3053687fa0b9ddf5542273a36741b1bb3
+FROM quay.io/jupyter/datascience-notebook
 # TODO-mpd: Move pip and conda dependencies to notebooks
+# TODO: See "Upgrade to JB2"
 RUN conda install pint uncertainties r-ragg && \
-    pip install jupyter-book jupytext tables dvc
+    pip install 'jupyter-book<2.0' torch torchvision jupytext tables dvc
 USER root
 RUN apt-get install curl
 RUN curl https://rclone.org/install.sh | sudo bash

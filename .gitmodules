@@ -19,3 +19,6 @@
 [submodule "github/jupyter/docker-stacks"]
 	path = github/jupyter/docker-stacks
 	url = https://github.com/jupyter/docker-stacks.git
+[submodule "public"]
+	path = public
+	url = https://gitlab.com/davidvandebunte/public.git

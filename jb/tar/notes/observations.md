@@ -4,7 +4,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.16.6
+    jupytext_version: 1.19.1
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
@@ -95,8 +95,7 @@ New developers don't have to sit around for days waiting for access before they 
 
 We ensure our build system works even if a repo is moved/renamed.
 
-Reduces clutter in the primary repository:
-- https://stackoverflow.com/questions/3611256
+Per [Forking vs. Branching in GitHub - SO](https://stackoverflow.com/questions/3611256/forking-vs-branching-in-github), reduces clutter in the primary repository.
 
 One downside to a forking working flow is that when you hit "fork" on a GitLab repo you get a duplicate of all the branches. You really want to just create a blank project, and submit branches as you create them.
 

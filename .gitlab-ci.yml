@@ -7,7 +7,6 @@
     - docker:20.10.16-dind
   script:
     - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
-    - ./build-notes
   artifacts:
     paths:
       - public

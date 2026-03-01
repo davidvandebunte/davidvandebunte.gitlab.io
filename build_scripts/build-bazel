@@ -22,5 +22,6 @@ docker run --name build_jb \
     --entrypoint /bin/bash \
     --workdir /home/jovyan/work \
     $(./packaging/tag) /home/jovyan/work/jb-build
+rm -rf public/executable-notes
 docker cp build_jb:/tmp/_build/html public/executable-notes
 docker rm build_jb
