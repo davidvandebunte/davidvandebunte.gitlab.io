@@ -114,11 +114,11 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 15 - ((14 * winheight(0) + 23) / 47)
+let s:l = 17 - ((16 * winheight(0) + 23) / 47)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 15
+keepjumps 17
 normal! 03|
 lcd ~/davidvandebunte.gitlab.io
 wincmd w
@@ -138,11 +138,11 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 10 - ((9 * winheight(0) + 23) / 47)
+let s:l = 13 - ((12 * winheight(0) + 23) / 47)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 10
+keepjumps 13
 normal! 011|
 lcd ~/davidvandebunte.gitlab.io
 wincmd w
@@ -162,12 +162,12 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 16 - ((15 * winheight(0) + 23) / 46)
+let s:l = 18 - ((17 * winheight(0) + 23) / 46)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 16
-normal! 0
+keepjumps 18
+normal! 05|
 lcd ~/davidvandebunte.gitlab.io
 wincmd w
 argglobal
@@ -186,12 +186,12 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 31 - ((30 * winheight(0) + 24) / 48)
+let s:l = 14 - ((13 * winheight(0) + 24) / 48)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 31
-normal! 012|
+keepjumps 14
+normal! 0
 lcd ~/davidvandebunte.gitlab.io
 wincmd w
 argglobal
@@ -210,11 +210,11 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 1 - ((0 * winheight(0) + 31) / 63)
+let s:l = 3 - ((2 * winheight(0) + 31) / 63)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 1
+keepjumps 3
 normal! 0
 wincmd w
 argglobal
@@ -327,12 +327,12 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 22 - ((21 * winheight(0) + 95) / 191)
+let s:l = 27 - ((26 * winheight(0) + 95) / 191)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 22
-normal! 017|
+keepjumps 27
+normal! 018|
 wincmd w
 argglobal
 if bufexists(fnamemodify("~/davidvandebunte.gitlab.io/jb/tar/_toc.yml", ":p")) | buffer ~/davidvandebunte.gitlab.io/jb/tar/_toc.yml | else | edit ~/davidvandebunte.gitlab.io/jb/tar/_toc.yml | endif
@@ -380,7 +380,7 @@ normal! zt
 keepjumps 73
 normal! 039|
 wincmd w
-7wincmd w
+4wincmd w
 exe '1resize ' . ((&lines * 47 + 96) / 193)
 exe 'vert 1resize ' . ((&columns * 119 + 360) / 720)
 exe '2resize ' . ((&lines * 47 + 96) / 193)
