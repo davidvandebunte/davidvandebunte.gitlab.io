@@ -6,7 +6,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.16.1
+    jupytext_version: 1.19.1
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
@@ -27,7 +27,7 @@ The major advantage of libraries is that you do not need to write them yourself,
 
 For all the same reasons, you probably want to upgrade regularly so you can work with the same open source (more general) software out there on the internet. Going through an upgrade of your dependencies often gives you an opportunity to learn about what is happening in the outside world rather than chasing after your project's idiosyncratic needs. Said another way, taking the initial dependency on a library is often the smallest step in a relationship. If a library is available, how much of the API you use should expand and contract as your trust relationship with it changes.
 
-More than ever, the software you need to perform a task is being created quickly in an open domain on the internet. This is driven not only by an increasing number of software developers, but by the simple fact that there has been more time for consumers to replace proprietry with open source dependencies. Software developers should spend more and more time evaluating libraries and incorporating them than writing their own version, assuming this trend continues.
+More than ever, the software you need to perform a task is being created quickly in an open domain on the internet. This is driven not only by an increasing number of software developers, but by the simple fact that there has been more time for consumers to replace proprietary with open source dependencies. Software developers should spend more and more time evaluating libraries and incorporating them than writing their own version, assuming this trend continues.
 
 Sitting on the old side of a library's stable version means you'll always be looking up the old documentation online, because you know the "stable" version may be different than what you're using (see e.g. [PyTorch 1.3.1](https://pytorch.org/docs/1.3.1/)). It's often only through accidentally reading the stable documentation on a project that we discover there are features we want from it.
 
@@ -49,7 +49,7 @@ We'll use the term "stable" in this article to mean the fraction of automatic an
 
 +++
 
-We could expand this defintion to mean "stability" for a given dependency configuration, or the sum of the fraction we expect to pass across a range of dependency configurations. Usually this is a belief statement, that is, a prior given what we know about a particular library. It may depend on our past experience with the library.
+We could expand this definition to mean "stability" for a given dependency configuration, or the sum of the fraction we expect to pass across a range of dependency configurations. Usually this is a belief statement, that is, a prior given what we know about a particular library. It may depend on our past experience with the library.
 
 +++
 
@@ -189,7 +189,7 @@ A versioning logic doesn't allow for the release of any branches until the intro
 
 +++
 
-There may be multiple branches in `git` for different major versions, but the latest version of `2` should be mergable into `3` (often this must be a [no-op merge](https://git-scm.com/docs/git-merge#Documentation/git-merge.txt-ours-1)). In this way, we should be able to make our version control system reflect the linear order of our version numbers.
+There may be multiple branches in `git` for different major versions, but the latest version of `2` should be mergeable into `3` (often this must be a [no-op merge](https://git-scm.com/docs/git-merge#Documentation/git-merge.txt-ours-1)). In this way, we should be able to make our version control system reflect the linear order of our version numbers.
 
 +++
 
@@ -233,7 +233,7 @@ Said another way, version numbers are essentially a way to communicate a history
 
 +++
 
-When you're updating version numbers ask yourself whether it's easier to actually read the source code or continue to learn the idiosyncracies of a library that you clearly need.
+When you're updating version numbers ask yourself whether it's easier to actually read the source code or continue to learn the idiosyncrasies of a library that you clearly need.
 
 +++
 
@@ -316,7 +316,7 @@ If you want immutability (🗿) then version numbers of this kind will not be br
 
 +++
 
-However, see some of the examples in [Software versioning § Date of release](https://en.wikipedia.org/wiki/Software_versioning#Date_of_release); clearly `18.04` is succint enough. It's possible to accomplish something like this by asking users to refer to a version software by when it was "initially" released, meaning that they refer to it by a version name rather than an artifact name.
+However, see some of the examples in [Software versioning § Date of release](https://en.wikipedia.org/wiki/Software_versioning#Date_of_release); clearly `18.04` is succinct enough. It's possible to accomplish something like this by asking users to refer to a version software by when it was "initially" released, meaning that they refer to it by a version name rather than an artifact name.
 
 +++
 
@@ -340,7 +340,7 @@ Version names of the form `x.y.z` where each of the three variables are integers
 
 +++
 
-Although `SemVer` provides one possible interpretation of these three digits, if you're versioning something other than software with a public API then you'll have your own interpretation of every digit. For example, imagine you were providing versions on a PDF you distribute to others. You may want to increment the major version for chapter rearrangements, the minor version for paragraph rearrangenments, and the patch version for typos or fixing broken links.
+Although `SemVer` provides one possible interpretation of these three digits, if you're versioning something other than software with a public API then you'll have your own interpretation of every digit. For example, imagine you were providing versions on a PDF you distribute to others. You may want to increment the major version for chapter rearrangements, the minor version for paragraph rearrangements, and the patch version for typos or fixing broken links.
 
 +++
 
@@ -372,11 +372,96 @@ The article [Best practices for tagging and versioning docker images – Steve L
 
 +++
 
-In this particular system, there are actually two versioning logics running alongside each other. Humans maintain the stable tags (with `SemVer`), and a centralized computer maintains the unique tags (an integer version number corresponding to a build ID).
+In this particular system, there are actually two versioning logics running alongside each other. Humans maintain the stable tags (with `SemVer`), and a centralized computer maintains the unique tags (an integer version number corresponding to a build ID). In almost all git projects you'll see a similar approach where the annotated tags in the repository are maintained (i.e. manually picked) by humans:
+- [aws/aws-sdk-cpp](https://github.com/aws/aws-sdk-cpp/tags)
+- [opencv/opencv](https://github.com/opencv/opencv/tags)
+- [blender/blender](https://github.com/blender/blender/tags)
+- Exception: [pytorch/pytorch](https://github.com/pytorch/pytorch/tags)
+
++++
+
+You can then use [git describe](https://git-scm.com/docs/git-describe) to come up with names for your artifacts. Separating the name use for artifacts from the release number managed by humans is critical to avoid humans incrementing the wrong version number in the interest of retaining namespace. If you're pushing a change that may not work for downstream consumers (e.g. a toolchain image or external library package) it's tempting to increment the first of the three version numbers (e.g. `3.0.0` to `4.0.0`) only because this leaves you space to try two other experiments with `3.1.0` and `3.0.1` if the first fails. It may be appropriate in this situation to always increment the first number because the package is so extensive, but it shouldn't be a requirement.
 
 +++
 
 Another common example of a dual system is where marketing and engineering maintain their own versioning logics. See [Software versioning § Internal version numbers](https://en.wikipedia.org/wiki/Software_versioning#Internal_version_numbers).
+
++++
+
+## Git tags
+
++++
+
+Should you store your human-managed version number in a file and have automation publish that to the git repository, or push git tags to the repository and have automation pull the tag and push it into files? The disadvantage of the first approach is that you can sometimes fail to push the tag to the git repository if someone else already pushed that tag or ran automation on a commit that produced the tag.
+
++++
+
+The disadvantage of the second approach is that your build system is tied to `git`, meaning that someone manually pushing tags can break it. Other developers may push tags that don't fit the expected format (e.g. `1.0.0` vs `v1.0.0`) or push tags rather than branches only to indicate development has stopped on a branch (e.g. `fix-dataset-partitioning`). Since automation is pulling from a mutable system (the git repository) it's possible that the name that an artifact is given (e.g. based on `git describe`) may not be the same name that `git describe` would assign the commit later with new tags available. This doesn't make `git describe` useless for describing artifacts because it's not meant to be reproducible. To determine the current version number in an effort to decide the next version number, however, pulling from the git repository is dangerous (whether parsing `git describe` for the version number or assuming all tags are formatted correctly).
+
++++
+
+Going back to the first approach, if you're willing to let your automatic `git tag` fail when this happens (which only saves 10 seconds of a developer time pushing the tag manually) then its limitation may be acceptable. Based on [How do I push to a repo from within a GitLab CI pipeline?](https://stackoverflow.com/questions/51716044/how-do-i-push-to-a-repo-from-within-a-gitlab-ci-pipeline/79045854#79045854):
+
++++
+
+```bash
+git config --local user.email "no-reply@here.com"
+git config --local user.name "CI/CD Pipeline"
+git remote set-url --push origin $CI_REPOSITORY_URL
+git tag --annotate $(./print-version) --message "Auto-tag" || true
+git push origin $(./print-version)
+```
+
++++
+
+You can see a tag as a file with a single line in it that could have been stored in the repository rather than as metadata on it. Imagine, for example, a file named `tag` at the root of the repository. Besides not tying you to `git` as a VCS (which no one cares about anymore), using a file lets you assign more structure to your version number (e.g. construct it from `MAJOR`, `MINOR`, `PATCH`). Although this may not seem necessary at first, in some cases you really do need additional structure in a defined format in your version numbers to live up to some standard. See `parse_version` in [Specifying Your Project’s Version - setuptools](https://setuptools.pypa.io/en/latest/userguide/distribution.html) for a standard you must follow when providing version numbers in e.g. `setup.py`, as well as [Version specifiers - Python Packaging User Guide](https://packaging.python.org/en/latest/specifications/version-specifiers/#version-specifiers). Even if you don't have customers who will complain if you don't exactly follow `SemVer`, you can communicate to other developers (or your future self) with meaningful version numbers. It's much easier to ensure your version numbers aren't going backwards with a file on a master branch.
+
++++
+
+This reasoning is similar to the logic behind putting scripts into local files rather than CI/CD so that developers can experiment without being tied to e.g. running code in `GitLab`. A version number in a file is a simple script, analogous to a nullary function that always produces the same result.
+
++++
+
+Many developers are looking for tags in the git repository to:
+1. Select meaningfully-named commits to bisect a defect (points of major change). These users rely on semantic versioning, and can do better than a bisect when it's followed.
+1. To decide what point to upgrade to next. These users rely on semantic versioning, often stopping e.g. immediately before an API change. They'll use `version:refname` as described in [How to list all Git tags?](https://stackoverflow.com/questions/1064499/how-to-list-all-git-tags/1064505#1064505) to find where to stop.
+1. Visually bisect when an artifact was produced. These users want regular version numbers to map to dates.
+
++++
+
+To alleviate the first and second needs, you can bubble-merge MRs. These bubble-merge points and version numbers both indicate where the code is "stable" in the sense of having gone through more manual testing. In fact, random commits often don't build if you're trying to e.g. explain something in multiple steps. In practice all commits don't pass all tests because it also requires more work and computing resources.
+
++++
+
+If you run `git tag -n` in many public repositories (looking at `aws-sdk-cpp`, `opencv`, `VTK`) you'll see that many annotated tags are "Auto commit from CI" (an unhelpful message). You can always delete these auto-commit tags and replace them with something more meaningful e.g. describing all the changes since the previous version. The descriptions could then be continuously improved as e.g. you discover defects in the code. To alleviate the last need, use `git describe` or a combination of version numbers and SHA to describe artifacts (and dates, and whatever else).
+
++++
+
+## Manual version increments
+
++++
+
+If there's a human-managed version number, do you increment it at the start or end of a development cycle? You could release version `1.2.0` and immediately change it to `1.3.0` so that `1.3.0-sha` indicates you are providing a prelease version of `1.3.0`. Or you could continue to label all your commits as `1.2.0-sha` so that the addition of a SHA indicates you are providing some post-release version.
+
++++
+
+See [Specifying Your Project’s Version - setuptools](https://setuptools.pypa.io/en/latest/userguide/distribution.html) for a standard allowing you to explicitly specify either post-release or pre-release. [Semantic Versioning](https://semver.org/) unfortunately only allows pre-release, but build metadata effectively allows post-release. With [git-describe](https://git-scm.com/docs/git-describe), you can only get post-release. Whether you choose post-release or pre-release, be explicit when possible.
+
++++
+
+The major problem with prelease versioning is that you need to know what you're going to release next. Are you going to work on a defect (increment the last number) or break the API (increment the first number)? Unless you have a plan in place and no other developer has plans to make some other change on master, then this is a hard decision. If you're committed to releasing on a regular cadence, as is best practice, then you can't be sure that you'll even get both features and bug fixes released.
+
++++
+
+In some systems, you literally start a fork for the major, minor, and patch versions (development and maintenance branches). This is common if e.g. some customers are only paying for maintenance and some are paying for a new version. The major downside to this approach is that if features and defects interact, you're producing unnecessary work resolving conflicts. This way of thinking leads to the strongly opinionated answer in [When do you change your major/minor/patch version number?](https://softwareengineering.stackexchange.com/questions/166215/when-do-you-change-your-major-minor-patch-version-number/166282#166282).
+
++++
+
+Another argument for pre-release versioning is that it avoids accidental clobbering of already-released artifacts. If `2.0.0` was released but is still the tracked version number in a file in the repository, then someone could potentially clobber re-release an artifact over the old one. This can be avoided by always including build metadata in artifact names, and only creating a copy of an artifact with build metadata in the name when you do an official release. See [Best practices for tagging and versioning docker images](https://stevelasker.blog/2018/03/01/docker-tagging-best-practices-for-tagging-and-versioning-docker-images/) for how this is done with pointers in docker repositories.
+
++++
+
+The conflict between these two systems is similar to the conflict between giving branches meaningful names to start, or only when you're ready to submit an MR. If you start with generic branch names then at the end of every day you can describe what you've done on the way to your goal in a new branch name and get constant feedback from other developers through the week. If you commit to a certain goal with your branch name, you may end up stuck on a branch until your work is complete. Both version numbers and branch names are a compression (summary) of all the work done since the last version number change or the start of the branch. With a version number, we compress the work down to only a few standardized digits.
 
 +++
 
@@ -628,7 +713,7 @@ If you had a process to delete images from the start, then when outsiders began 
 
 +++
 
-Alternatively, you can create "throwaway" or "contextual" names for build artifacts (e.g. based on the GitLab build number) and only give these artifacts "real" version names if you decide to manually promote them. This approach is efectively equivalent to manual memory management, but you can usually afford to leak memory because memory allocation takes manual development effort (and therefore little is allocated). The versioning logic you use for the "throwaway" names should be different than the one you use for "real" version names so that anyone using throwaway names cannot be the list bit surprised when their artifact disappears.
+Alternatively, you can create "throwaway" or "contextual" names for build artifacts (e.g. based on the GitLab build number) and only give these artifacts "real" version names if you decide to manually promote them. This approach is effectively equivalent to manual memory management, but you can usually afford to leak memory because memory allocation takes manual development effort (and therefore little is allocated). The versioning logic you use for the "throwaway" names should be different than the one you use for "real" version names so that anyone using throwaway names cannot be the list bit surprised when their artifact disappears.
 
 +++
 
@@ -698,7 +783,7 @@ If that configuration doesn't work you have to manually edit your pinning, anywa
 tools can provide a starting point. These tools also can't intelligently set dependency ranges, etc.
 
 Pinning may include freezing external dependencies, such as the source you depend on in a `.tar.gz`
-file. Saving these artifacts as files is manual work as well, work you must do every you time you
+file. Saving these artifacts as files is manual work as well, work you must do every time you
 upgrade them.
 
 Generally speaking, the more reproducible your builds, the more work it is to upgrade them. You can
