@@ -6,48 +6,127 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.14.1
+    jupytext_version: 1.19.1
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
   name: python3
 ---
 
-# KQV attention
+# QKV attention
 
-Supplementary material to the questions and answers in [What exactly are keys, queries, and values
-in attention mechanisms? - CV](https://stats.stackexchange.com/questions/421935). Indirectly,
-commentary on [Attention is All You Need (AIAYN)](https://arxiv.org/abs/1706.03762).
++++
 
-Why is this question important? Many versions of attention are used with older RNN-based models, and
-it's not clear they are being used in practice any more. On the other hand, the KQV (or QKV) method
-seems to still be used extensively. See [An Overview of Attention | Papers With Code](
-https://paperswithcode.com/methods/category/attention-mechanisms). Besides being common, see
-comments on the value of all attention mechanisms (not just KQV) in
-[](../add-attention-mechanism.md).
+Supplementary material to the questions and answers in [What exactly are keys, queries, and values in attention mechanisms? - Cross Validated](https://stats.stackexchange.com/questions/421935). Indirectly, commentary on [Attention is All You Need (Vaswani2017)](https://arxiv.org/abs/1706.03762).
 
-The QKV attention mechanism is particularly interesting because it's used in Perceivers. That is,
-QKV lets you easily connect two different modalities (i.e. text and image) because e.g. QK can both
-be text and V can be an image (image search in web browsers).
++++
+
+## Why this question?
+
++++
+
+Why is this question important? Many versions of attention are used with older RNN-based models, and are not used in practice any more. On the other hand, the KQV (or QKV) method seems to still be used extensively. Besides being common, see comments on the value of all attention mechanisms (not just KQV) in [Add attention mechanism](../add-attention-mechanism.md).
+
++++
+
+The QKV attention mechanism is particularly interesting because it's used in Perceivers. That is, QKV lets you easily connect two different modalities (i.e. text and image) because e.g. QK can both be text and V can be an image (image search in web browsers).
+
++++
 
 ## Library versions
 
-```{code-cell}
+```{code-cell} ipython3
 %pip install numpy pandas
 ```
 
-## Sam's answer
+## Answer
 
-[sa]: https://stats.stackexchange.com/a/463320/189415
-[lsi]: https://en.wikipedia.org/wiki/Latent_semantic_analysis#Derivation
++++
 
-The YouTube video [Sam's answer][sa] links to seems to have changed since the author added the
-reference. It also leaves a lot to be desired, only covering the topic for a few minutes. If you
-want to avoid the YouTube paywall (or advertisements) an arguably better resource to learn from is
-the ["Derivation" section of Latent semantic analysis - Wikipedia][lsi]. Using the same data from
-the image in Sam's answer but following the logic in the Wikipedia page on LSA:
+To answer the OP's question (what $Q$, $K$, $V$ are), here are the queries and keys from **Figure 3** in Bahdanau2014:
 
-```{code-cell}
++++
+
+![x](https://i.sstatic.net/ZBNUJwmS.png)
+
++++
+
+You won't find the term "query" or "key" anywhere in this paper, as these terms were introduced in Vaswani2017, but the English words in the columns are the keys. The French words in the rows are the queries. The better a query matches a key, the whiter a box. The whiter a box, the more a "value" is passed through from one layer to another. Said another way, the more downstream layers pay attention to or "attend to" a value.
+
++++
+
+Here's an example from Figure 5 of Vaswani2017:
+
+![x](https://i.sstatic.net/ykDmvbQ0.png)
+
++++
+
+What was previously a matrix is now presented as shading on lines, but we are merely presenting the matrix in a different way. The more red a line, the more a query is associated with a key. Since we're now talking about "self-attention" the queries and keys are both in English. See [Tensor2Tensor Intro - Colab](https://colab.research.google.com/github/tensorflow/tensor2tensor/blob/master/tensor2tensor/notebooks/hello_t2t.ipynb#scrollTo=OJKU36QAfqOC) for a live demo of the tool the authors apparently used to produce this visualization.
+
++++
+
+In the context of this paper, we're looking at $QK^T$ from equation (1):
+
++++
+
+$$
+\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V
+$$
+
++++
+
+$QK^T$ is often called the "attention scores matrix" and as you can probably infer, is square. Diverging a bit, notice that the size of it scales as $O(n²)$ where $n$ is the sequence length (e.g. 512). Since Vaswani2017 was published, the [flash-attention](https://github.com/Dao-AILab/flash-attention) innovation has seriously optimized the calculation of this matrix.
+
++++
+
+### References
+
++++
+
+Reference papers:
+
++++
+
+| Short name | Arxiv | Author | Date | Semantic Scholar |
+| --- | --- | --- | --- | --- |
+| Bahdanau2014 | [NEURAL MACHINE TRANSLATION BY JOINTLY LEARNING TO ALIGN AND TRANSLATE](https://arxiv.org/pdf/1409.0473) | Bahdanau et al. | 2014-09-01 | [link](https://www.semanticscholar.org/reader/fa72afa9b2cbc8f0d7b05d52548906610ffbb9c5)
+| Sutskever2014 | [Sequence to Sequence Learning with Neural Networks](https://arxiv.org/pdf/1409.3215) | Sutskever et al. | 2014-09-10 | [link](https://www.semanticscholar.org/paper/Sequence-to-Sequence-Learning-with-Neural-Networks-Sutskever-Vinyals/cea967b59209c6be22829699f05b8b1ac4dc092d)
+| Vaswani2017 | [Attention Is All You Need](https://arxiv.org/pdf/1706.03762.pdf) | Vaswani et al. | 2017-06-12 | [link](https://www.semanticscholar.org/reader/204e3073870fae3d05bcbc2f6a8e263d9b72e776)
+
++++
+
+It's easier to navigate between papers with Semantic Scholar than Arxiv as it adds clickable links to every reference in a paper. See Connected Papers for a denser graph, though CP is not a citation graph (see [Connected Papers | About](https://www.connectedpapers.com/about)). See [this link](https://www.connectedpapers.com/main/fa72afa9b2cbc8f0d7b05d52548906610ffbb9c5+204e3073870fae3d05bcbc2f6a8e263d9b72e776+cea967b59209c6be22829699f05b8b1ac4dc092d/Connected-Papers-|-Find-and-explore-academic-papers/graph) for a custom graph with three of these papers as origins. Although CP is now heavily paywalled, it still helps to see the size of paper bubbles.
+
++++
+
+More links, advancing from the softest introductions to the most technical (compressed) material:
+
++++
+
+| Name | Author | Papers | Grade |
+| --- | --- | --- | --- |
+| [Visualizing A NMT Model](https://jalammar.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention/) | Alammar | Bahdanau2014 | A |
+| [Attention illustrated in GIFs](https://medium.com/data-science/attn-illustrated-attention-5ec4ad276ee3#ba24) | Karim | Bahdanau2014 | B |
+| [additive attention](https://en.wikipedia.org/wiki/Attention_(machine_learning)#Bahdanau_(additive)_attention) | Wikipedia | Bahdanau2014 | A |
+| [Attention Is All You Need](https://en.wikipedia.org/wiki/Attention_Is_All_You_Need) | Wikipedia | Vaswani2017 | A |
+| [Seq2seq](https://en.wikipedia.org/wiki/Seq2seq#cite_note-sequence-1) | Wikipedia | Sutskever2014 | A |
+| [Neural machine translation](https://en.wikipedia.org/wiki/Neural_machine_translation) | Wikipedia | Bahdanau2014 | B |
+| [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/) | Alammar | Vaswani2017 | A |
+| [Sam Tseng's answer](https://stats.stackexchange.com/a/463320/189415) | Tseng | Bahdanau2014, Vaswani2017 | C |
+
++++
+
+My personal opinion on the quality of the commentary is given as a grade in the rightmost column. For commentary on other commentary, see below.
+
++++
+
+### [Sam Tseng's answer](https://stats.stackexchange.com/a/463320/189415)
+
++++
+
+An alternative to the YouTube video is the ["Derivation" section of Latent semantic analysis - Wikipedia](https://en.wikipedia.org/wiki/Latent_semantic_analysis#Derivation). Using the same data from the image in Sam's answer but following the logic in the Wikipedia page on LSA:
+
+```{code-cell} ipython3
 import numpy as np
 import pandas as pd
 
@@ -65,7 +144,7 @@ pd.DataFrame(X,
     columns=["Star Wars", "The Matrix", "Iron man", "U got mail", "Titanic"])
 ```
 
-```{code-cell}
+```{code-cell} ipython3
 from numpy import linalg as la
 
 np.set_printoptions(precision=2, suppress=True, floatmode='maxprec_equal')
@@ -74,14 +153,14 @@ U, s, Vt = la.svd(X, full_matrices=False)
 U, s, Vt
 ```
 
-```{code-cell}
+```{code-cell} ipython3
 k = 2
 U_k, s_k, Vt_k = U[:, :k], s[:k], Vt[:k, :]
 V_k = Vt_k.T
 U_k, s_k, V_k
 ```
 
-```{code-cell}
+```{code-cell} ipython3
 P8 = np.array([5, 0, 0, 0, 0])
 P9 = np.array([0, 4, 5, 0, 0])
 cos_sim = P8.dot(P9) / (la.norm(P8) * la.norm(P9))
@@ -110,7 +189,7 @@ $$
 
 Initially we'll drop the $\Sigma_k^{-1}$ term:
 
-```{code-cell}
+```{code-cell} ipython3
 P8_hat = P8 @ V_k
 P9_hat = P9 @ V_k
 cos_sim = P8_hat.dot(P9_hat) / (la.norm(P8_hat) * la.norm(P9_hat))
@@ -119,7 +198,7 @@ P8_hat, P9_hat, cos_sim
 
 Re-adding the $\Sigma_k^{-1}$ term:
 
-```{code-cell}
+```{code-cell} ipython3
 P8_hat = P8 @ V_k @ np.diag(1 / s_k)
 P9_hat = P9 @ V_k @ np.diag(1 / s_k)
 P8_hat, P9_hat
@@ -127,13 +206,13 @@ P8_hat, P9_hat
 
 Notice these 2 new $\textbf{t}_i^T$ are on the same scale as the original 7 $\textbf{t}_i^T$:
 
-```{code-cell}
+```{code-cell} ipython3
 U_k
 ```
 
 We also end up with (in general) a different cosine similarity measure:
 
-```{code-cell}
+```{code-cell} ipython3
 cos_sim = P8_hat.dot(P9_hat) / (la.norm(P8_hat) * la.norm(P9_hat))
 cos_sim
 ```
@@ -159,23 +238,11 @@ and because the network's loss function is not always L2. To avoid confusion ove
 term is implied, don't use the two words [Linear
 function](https://en.wikipedia.org/wiki/Linear_function) together.
 
-Sam's answer mentions the SVD; it would probably improve the answer to reference PCA as well.
-For more details see [](./relationship-between-svd-and-pca.md). You interpet point `2.` in Sam's
-answer as a reference to [Feature learning -
-PCA](https://en.wikipedia.org/wiki/Feature_learning#Principal_component_analysis) and `3.` as a
-reference to [Dimensionality reduction - PCA](
-https://en.wikipedia.org/wiki/Dimensionality_reduction#Principal_component_analysis_(PCA)). See the
-comments following "Feature extraction and dimension reduction can be combined in one step" in
-[Dimensionality reduction - Dimension reduction](
-https://en.wikipedia.org/wiki/Dimensionality_reduction#Dimension_reduction) for other techniques for
-doing both these steps at once.
+Sam's answer mentions the SVD; it would probably improve the answer to reference PCA as well. For more details see [Relationship between SVD and PCA](./relationship-between-svd-and-pca.md). You interpet point `2.` in Sam's answer as a reference to [Feature learning - PCA](https://en.wikipedia.org/wiki/Feature_learning#Principal_component_analysis) and `3.` as a reference to [Dimensionality reduction - PCA](https://en.wikipedia.org/wiki/Dimensionality_reduction#Principal_component_analysis_(PCA)). See the comments following "Feature extraction and dimension reduction can be combined in one step" in [Dimensionality reduction - Dimension reduction](https://en.wikipedia.org/wiki/Dimensionality_reduction#Dimension_reduction) for other techniques for doing both these steps at once.
 
 [vs]: https://en.wikipedia.org/wiki/Vector_space
 
-Sam's answer provides a decent common-sense explanation in point `1.` for why we need at least one
-of the $W_Q$ or $W_K$ matrices; so that we don't leave our input embeddings (the $x$ in each row of
-$X$) in the same vector space. To use a little cleaner syntax than Sam's answer does, for each head
-we have that:
+Sam's answer provides a decent common-sense explanation in point `1.` for why we need at least one of the $W_Q$ or $W_K$ matrices; so that we don't leave our input embeddings (the $x$ in each row of $X$) in the same vector space. To use a little cleaner syntax than Sam's answer does, for each head we have that:
 
 $$
 \begin{align}
@@ -191,23 +258,15 @@ representation. There would be no need for multiple heads (it'd be hard to justi
 each, the only remaining changeable component) and the mechanism would include no contextualization.
 See further comments about eliminating weight matrices below.
 
-## mon's answer
++++
 
-[mona]: https://stats.stackexchange.com/a/531971/189415
-[pelt]: https://peltarion.com/blog/data-science/self-attention-video
+## [mon's answer](https://stats.stackexchange.com/a/531971/189415)
 
-See [mon's answer][mona] for a conversation more focused on the "meaning" of KQV attention rather
-than the mechanics. The answer is relatively high-level, however, and doesn't even try to address
-multi-head attention. It references [Self-attention: step-by-step video | Peltarion][pelt], which
-provides a similar high-level discussion.
++++
 
-[al]: https://en.wikipedia.org/wiki/Anaphora_(linguistics)
-[aia14]: https://arxiv.org/pdf/1706.03762.pdf#page=14
+This answer is more focused on the "meaning" of KQV attention rather than the mechanics. The answer is relatively high-level, however, and doesn't even try to address multi-head attention.
 
-A single-head KQV attention mechanism can really only provide a guess at what other words are
-important to include in a "contextualized" embedding of a more generic word. That is, it can pick
-out only one kind of generic [Anaphora (linguistics)][al] to include; see also an anaphora head in
-[AIAYN - Pg14][aia14]. Hence, mon's answer simply says K/Q is about finding the "most related" word.
+A single-head KQV attention mechanism can really only provide a guess at what other words are important to include in a "contextualized" embedding of a more generic word. That is, it can pick out only one kind of generic [Anaphora (linguistics)](https://en.wikipedia.org/wiki/Anaphora_(linguistics)) to include; see also an anaphora head in [Vaswani2017 - Pg14](https://arxiv.org/pdf/1706.03762.pdf#page=14). Hence, mon's answer simply says K/Q is about finding the "most related" word.
 
 The answer implies single-head attention is about where you *should* look for the most useful word.
 That is, that attention provides a probabilistic estimate of "value" for understanding. Is this
@@ -216,7 +275,11 @@ results of an attention mechanism? Arguably a search engine provides the same si
 scores (what you should pay attention to, what's "valuable" for understanding) based on training on
 e.g. web links.
 
++++
+
 ### Multi-headed attention
+
++++
 
 [wmh]: https://stackoverflow.com/a/66652733/622049
 
@@ -234,7 +297,11 @@ anaphora you need aren't part of your sentence, you're out of luck. You can see 
 providing a "feature" on top of your word, to help contextualize it (add or refine information for
 e.g. a polyseme) or disambiguate it (change its default meaning for e.g. a homonym).
 
++++
+
 ### Why do we need both a $W_Q$ and $W_K$ matrix?
+
++++
 
 Do the $W_K$ and $W_Q$ matrices learn to project to the same "semantic" or "contextualized" vector
 space? If so, perhaps there is no need to keep both of them. Let's say we applied this single matrix
@@ -293,7 +360,11 @@ boy's name that is a proper noun because e.g. it's capitalized (and is *not* a p
 (grammar)](https://en.wikipedia.org/wiki/Article_(grammar)) head may be able to strip gender
 information if the only concern is e.g. the multiplicity of the reference word.
 
++++
+
 ### Why do we need a $W_V$ matrix?
+
++++
 
 Could we skip the $W_V$ matrix if all we are doing is forwarding the original word to the next
 layer? Once we've identified the word as e.g. a pronoun it seems the attention layer has done its
@@ -328,7 +399,11 @@ attention head that recognizes these particular two-word tuples then it can chan
 the noun to include the information in the adjective. You could then build up higher level concepts
 like phrases through multiple layers.
 
++++
+
 ## The Annotated Transformer
+
++++
 
 [atov]: http://nlp.seas.harvard.edu/2018/04/03/attention.html#applications-of-attention-in-our-model
 [atnv]: http://nlp.seas.harvard.edu/annotated-transformer/
@@ -339,7 +414,11 @@ version is too large, but can be zoomed. It also annoyingly doesn't automaticall
 the width of a standard computer monitor; someone should republish it to automatically resize to the
 full width of the screen. A drawing of some of the classes:
 
++++
+
 ![x](../annotated-transformer-classes.svg)
+
++++
 
 [nbkq]: https://stats.stackexchange.com/questions/515477/when-calculating-self-attention-for-transformer-ml-architectures-why-do-we-need#comment982038_515552
 
@@ -462,12 +541,11 @@ def attention(query, key, value, mask=None, dropout=None):
 % TODO: It'd be nice to republish full width but you only have one GPU (they use eight) so your
 % results are especially poor. Images also aren't centered unless you use jb.
 
++++
+
 ## Other annotations
 
-See [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/) and
-[Visualizing A Neural Machine Translation Model (Mechanics of Seq2seq Models With Attention)](
-https://jalammar.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention/)
-for parts of the model translated to visualizations.
++++
 
 The tutorials [Language Modeling with nn.Transformer and TorchText](
 https://pytorch.org/tutorials/beginner/transformer_tutorial.html) and [Language Translation with
@@ -476,6 +554,3 @@ are more focused on the details of implementing a Transformer model than how or 
 example they don't describe "attention" in detail and only mention [MultiheadAttention - PyTorch](
 https://pytorch.org/docs/stable/generated/torch.nn.MultiheadAttention.html) rather than use it in
 the code (much less look at its internals).
-
-The other answers on this SE question weren't particularly helpful to me (2022-08). See
-[](../about.md) if you want me to review your answer again.

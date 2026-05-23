@@ -184,8 +184,6 @@ parts:
         sections:
         - file: notes/inkscape.md
         - file: notes/jupyter.md
-        - file: notes/latex.md
-        - file: notes/rclone.md
         - file: notes/zathura.md
         - file: notes/blender.ipynb
   - caption: Share

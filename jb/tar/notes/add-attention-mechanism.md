@@ -4,7 +4,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.14.1
+    jupytext_version: 1.19.1
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
@@ -13,10 +13,16 @@ kernelspec:
 
 # Add attention mechanism
 
++++
+
 [aml]: https://en.wikipedia.org/wiki/Attention_(machine_learning)
 [atnv]: http://nlp.seas.harvard.edu/annotated-transformer/
 
++++
+
 ## Estimate value
+
++++
 
 Should you add an "attention" mechanism to your model? For one argument, see the "Why
 Self-Attention" section of "Attention is All You Need" ([1706.03762.pdf - Why
@@ -43,7 +49,11 @@ The original authors were probably smart enough to keep it to three points becau
 practioners have a short [Attention span](https://en.wikipedia.org/wiki/Attention_span), but I'll
 add a fourth goal for attention mechanisms: Generalizability.
 
++++
+
 ### Generalizability
+
++++
 
 The attention mechanism is useful across both NLP and CV (like e.g. residual connections). They only
 touched on this in [1706.03762.pdf - Conclusion](https://arxiv.org/pdf/1706.03762.pdf#section.7),
@@ -56,16 +66,21 @@ https://arxiv.org/abs/2105.07197)
 - [Can CNNs Be More Robust Than Transformers?](https://arxiv.org/abs/2206.03452)
 - [Vision transformer - Wikipedia](https://en.wikipedia.org/wiki/Vision_transformer)
 
++++
+
 #### Attention vs. Self-Attention
+
++++
 
 [dasa]: https://datascience.stackexchange.com/a/66431/26431
 
-See `5.` in [What's the difference between Attention vs Self-Attention?][dasa]. The generalizability
-of attention mechanisms means that attention (in contrast to self-attention) can be used to combine
-modalities. See further comments about this application to Perceiver models in
-[](./se/what-exactly-are-keys-queries-and-values.md).
+See `5.` in [What's the difference between Attention vs Self-Attention?][dasa]. The generalizability of attention mechanisms means that attention (in contrast to self-attention) can be used to combine modalities. See further comments about this application to Perceiver models in [QKV attention](./se/what-exactly-are-keys-queries-and-values.md).
+
++++
 
 #### Soft weights
+
++++
 
 From [Attention (machine learning) - Wikipedia][aml]:
 
@@ -86,64 +101,20 @@ WK and WQ matrices). For another simple explanation, see [what's the difference 
 "self-attention mechanism" and "full-connection" layer?](
 https://stackoverflow.com/questions/64218678/).
 
++++
+
 ## Test
+
++++
 
 [wat]: https://en.wikipedia.org/wiki/Attention
 [lilaa]: https://lilianweng.github.io/posts/2018-06-24-attention/
 
-The term "attention" is used in this article following the definition in [Attention (machine
-learning) - Wikipedia][aml]. Does [Attention (machine learning)][aml] compress everything the word
-[Attention][wat] means to humans? Not even close. The self-attention mechanism can at best be
-described as a tool to help a model decide what to weigh highly (pay "attention" to), given what it
-is currently processing. For another simple definition, see the start of [Attention? Attention! |
-Lil'Log][lilaa]. ML practitioners love the phrase "attend to" though.
+The term "attention" is used in this article following the definition in [Attention (machine learning) - Wikipedia][aml]. Does [Attention (machine learning)][aml] compress everything the word [Attention][wat] means to humans? Not even close. The self-attention mechanism can at best be described as a tool to help a model decide what to weigh highly (pay "attention" to), given what it is currently processing. For another simple definition, see the start of [Attention? Attention! | Lil'Log][lilaa]. ML practitioners love the phrase "attend to" though.
 
-We may need to start inventing new words. In my opinion there is already little to no distinction
-between the words "attention" and "focus" except perhaps that the former is often treated as a
-resource; see [etymology - Attention, focus, and respect as distributable
-resources](https://english.stackexchange.com/questions/13899/) and [Attention economy](
-https://en.wikipedia.org/wiki/Attention_economy). See also [Focus (linguistics)](
-https://en.wikipedia.org/wiki/Focus_(linguistics)), which has some clear parallels to [Attention
-(machine learning)][aml]. The term [Hyperfocus](https://en.wikipedia.org/wiki/Hyperfocus) is defined
-in terms of attention. The word concentrate is even less independent of the word focus than
-attention. In [concentrate - Wiktionary](https://en.wiktionary.org/wiki/concentrate), the verb is
-defined in terms of [focus - Wiktionary](https://en.wiktionary.org/wiki/focus) (and vice-versa).
+We may need to start inventing new words. In my opinion there is already little to no distinction between the words "attention" and "focus" except perhaps that the former is often treated as a resource; see [etymology - Attention, focus, and respect as distributable resources](https://english.stackexchange.com/questions/13899/) and [Attention economy](https://en.wikipedia.org/wiki/Attention_economy). See also [Focus (linguistics)](https://en.wikipedia.org/wiki/Focus_(linguistics)), which has some clear parallels to [Attention (machine learning)][aml]. The term [Hyperfocus](https://en.wikipedia.org/wiki/Hyperfocus) is defined in terms of attention. The word concentrate is even less independent of the word focus than attention. In [concentrate - Wiktionary](https://en.wiktionary.org/wiki/concentrate), the verb is defined in terms of [focus - Wiktionary](https://en.wiktionary.org/wiki/focus) (and vice-versa).
 
-The following graph shows the development history of variants of attention mechanisms, linking
-papers that reference each other and removing transitive dependencies. Dates match the original
-publication to Arxiv, not the original publication. The list is roughly based on:
-- [Attention (machine learning) - Variants](
-https://en.wikipedia.org/wiki/Attention_(machine_learning)#Variants).
-- [A Family of Attention Mechanisms  | Lil'Log](
-https://lilianweng.github.io/posts/2018-06-24-attention/#a-family-of-attention-mechanisms)
-- [Different types of Attention in Neural Networks - gotensor](
-https://gotensor.com/2019/07/06/different-types-of-attention-in-neural-networks/)
-
-% To regenerate this file:
-% watch -n0 dot -O -Tsvg jb/tar/notes/attention-history.gv
-
-```{image} ./attention-history.gv.svg
-:height: 0px
-```
-
-% Based on the hack suggested here:
-% https://github.com/executablebooks/MyST-Parser/issues/176
-
-<object width="100%" data="../_images/attention-history.gv.svg" type="image/svg+xml"></object>
-
-+++
-
-The nodes in this graph are clickable links that default to Wikipedia (a collection of links). Otherwise links are to the abstract of every paper in Arxiv (in the same order)
-to make it easy to get the latest (e.g. v7 for some papers) version even if the author adds an
-update.
-
-[cpa]: https://www.connectedpapers.com/about
-[cusg]: https://www.connectedpapers.com/main/fa72afa9b2cbc8f0d7b05d52548906610ffbb9c5+204e3073870fae3d05bcbc2f6a8e263d9b72e776+cea967b59209c6be22829699f05b8b1ac4dc092d/Connected-Papers-|-Find-and-explore-academic-papers/graph
-
-See Connected Papers for a denser graph, though CP is not a citation graph (see [Connected Papers |
-About][cpa]). See [this link][cusg] for a custom graph with three of these papers as origins.
-
-## Estimated cost
-
-See [](./se/what-exactly-are-keys-queries-and-values.md) for community-sourced annotations to AIAYN
-and references to code implementations of KQV attention mechanisms.
+Attention variants:
+- [Attention (machine learning) - Variants](https://en.wikipedia.org/wiki/Attention_(machine_learning)#Variants).
+- [A Family of Attention Mechanisms  | Lil'Log](https://lilianweng.github.io/posts/2018-06-24-attention/#a-family-of-attention-mechanisms)
+- [Different types of Attention in Neural Networks - gotensor](https://gotensor.com/2019/07/06/different-types-of-attention-in-neural-networks/)
